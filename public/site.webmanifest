@@ -1,0 +1,22 @@
+{
+  "name": "Global Visa Internationals",
+  "short_name": "Global Visa",
+  "description": "Visa and immigration consultancy in Bangalore. Get help with study, work, PR, and travel visas to Canada, USA, UK, Australia, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/globalvisainternationals.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
