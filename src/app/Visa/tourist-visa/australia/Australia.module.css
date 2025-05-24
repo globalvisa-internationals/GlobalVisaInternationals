@@ -116,18 +116,18 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #1eac02;
+    color: #01ac28;
 }
 .subTitle{
     display: flex;
     text-align: left;
-    color: #1eac02;
+    color: #01ac28;
 }
 .note {
     font-size: 0.95rem;
     color: #63834e;
     padding: 1rem;
-    border-left: 4px solid #1eac02;
+    border-left: 4px solid #01ac28;
     max-width: 800px;
     margin: auto;
   }
@@ -191,7 +191,7 @@
 .submittingBtn {
   display: block;
   max-width: 250px;
-  background-color: #1eac02;
+  background-color: #01ac28;
   font-size: 16px;
   font-weight: bold;
   padding: 12px;
@@ -221,7 +221,7 @@ z-index: 9999;
 }
 
 .popupContent {
-background: #1eac02; /* Bootstrap green */
+background: #01ac28; /* Bootstrap green */
 padding: 1.5rem 2.5rem;
 border-radius: 12px;
 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -242,8 +242,8 @@ gap: 0.6rem;
 }
 
 .popupContent button {
-color: #1eac02;
-border: 2px solid #1eac02;
+color: #01ac28;
+border: 2px solid #01ac28;
 border-radius: 6px;
 padding: 0.5rem 1.2rem;
 font-weight: bold;
@@ -274,7 +274,7 @@ to {
   .heading {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #1eac02;
+    color: #01ac28;
   }
   
   .description {
@@ -284,7 +284,7 @@ to {
   }
   
   .link {
-    color: #1eac02;
+    color: #01ac28;
     font-weight: 600;
     margin-left: 0.3rem;
     text-decoration: underline;
