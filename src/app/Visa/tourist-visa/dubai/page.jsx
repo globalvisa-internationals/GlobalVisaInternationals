@@ -73,166 +73,166 @@ export default function Dubai() {
   }, []);
   return (
     <>
-     <head>
-  <title>Dubai Tourist Visa From India | Cost, Process & Top Attractions</title>
-  <meta name="description" content="Apply for a Dubai Tourist Visa with expert guidance from Global Visa Internationals. Know the visa process, fees, documents required, and explore top tourist destinations in Dubai." />
-  <meta name="keywords" content="Dubai tourist visa, apply for Dubai tourist visa from India, Dubai visa cost, flight to Dubai cost, Dubai visa consultants in India, tourist attractions in Dubai, Dubai visa process, Dubai visa fees" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Global Visa Internationals" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" />
-  <meta name="theme-color" content="#0a66c2" />
-  <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" imagesrcset="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png 1x" />
+      <head>
+        <title>Dubai Tourist Visa From India | Cost, Process & Top Attractions</title>
+        <meta name="description" content="Apply for a Dubai Tourist Visa with expert guidance from Global Visa Internationals. Know the visa process, fees, documents required, and explore top tourist destinations in Dubai." />
+        <meta name="keywords" content="Dubai tourist visa, apply for Dubai tourist visa from India, Dubai visa cost, flight to Dubai cost, Dubai visa consultants in India, tourist attractions in Dubai, Dubai visa process, Dubai visa fees" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Global Visa Internationals" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" />
+        <meta name="theme-color" content="#0a66c2" />
+        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" imagesrcset="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png 1x" />
 
-  {/* Open Graph / Facebook */}
-  <meta property="og:title" content="Apply for Dubai Tourist Visa From India | Global Visa Internationals" />
-  <meta property="og:description" content="Planning to visit Dubai? Get expert assistance for your tourist visa application, flight booking, cost estimate, and must-visit places. Start your Dubai journey with Global Visa Internationals." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
-  <meta property="og:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:locale:alternate" content="en_US" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Apply for Dubai Tourist Visa From India | Global Visa Internationals" />
+        <meta property="og:description" content="Planning to visit Dubai? Get expert assistance for your tourist visa application, flight booking, cost estimate, and must-visit places. Start your Dubai journey with Global Visa Internationals." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
+        <meta property="og:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:locale:alternate" content="en_US" />
 
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dubai Tourist Visa | Application, Cost & Documents Needed" />
-  <meta name="twitter:description" content="Explore Dubai with the right tourist visa. Get visa application support and travel cost breakdown from Global Visa Internationals." />
-  <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" />
-  <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
-  <meta name="twitter:site" content="@GlobalVisaIntl" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dubai Tourist Visa | Application, Cost & Documents Needed" />
+        <meta name="twitter:description" content="Explore Dubai with the right tourist visa. Get visa application support and travel cost breakdown from Global Visa Internationals." />
+        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" />
+        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
+        <meta name="twitter:site" content="@GlobalVisaIntl" />
 
-  {/* Geo Location Tags */}
-  <meta name="geo.region" content="AE" />
-  <meta name="geo.placename" content="Dubai" />
-  <meta name="geo.region" content="IN-KA" />
-  <meta name="geo.placename" content="Bengaluru" />
-  <meta name="ICBM" content="12.9716,77.5946" />
+        {/* Geo Location Tags */}
+        <meta name="geo.region" content="AE" />
+        <meta name="geo.placename" content="Dubai" />
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="12.9716,77.5946" />
 
-  {/* Local Business Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Global Visa Internationals",
-      "url": "https://www.globalvisainternationals.com",
-      "logo": "https://www.globalvisainternationals.com/logo.png",
-      "description": "Leading visa consultancy offering expert Dubai tourist visa assistance from India. We help with visa application, documentation, and more.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "MG Road",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "KA",
-        "postalCode": "560025",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-7022213466",
-        "contactType": "Customer Support"
-      },
-      "sameAs": [
-        "https://www.facebook.com/globalvisainternationals/",
-        "https://www.instagram.com/globalvisa_internationals/",
-        "https://www.linkedin.com/company/global-visa-internationals/",
-        "https://x.com/GLOBALVISA1505",
-        "https://www.youtube.com/@globalVisaInternationals",
-        "https://www.google.com/maps/place/Global+Visa+Internationals/@12.967478,77.6035421,17z"
-      ]
-    })
-  }} />
+        {/* Local Business Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Global Visa Internationals",
+            "url": "https://www.globalvisainternationals.com",
+            "logo": "https://www.globalvisainternationals.com/logo.png",
+            "description": "Leading visa consultancy offering expert Dubai tourist visa assistance from India. We help with visa application, documentation, and more.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "MG Road",
+              "addressLocality": "Bengaluru",
+              "addressRegion": "KA",
+              "postalCode": "560025",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-7022213466",
+              "contactType": "Customer Support"
+            },
+            "sameAs": [
+              "https://www.facebook.com/globalvisainternationals/",
+              "https://www.instagram.com/globalvisa_internationals/",
+              "https://www.linkedin.com/company/global-visa-internationals/",
+              "https://x.com/GLOBALVISA1505",
+              "https://www.youtube.com/@globalVisaInternationals",
+              "https://www.google.com/maps/place/Global+Visa+Internationals/@12.967478,77.6035421,17z"
+            ]
+          })
+        }} />
 
-  {/* BreadcrumbList Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.globalvisainternationals.com"
-        },
-        // {
-        //   "@type": "ListItem",
-        //   "position": 2,
-        //   "name": "Tourist Visa",
-        //   "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
-        // },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Dubai"
-        }
-      ]
-    })
-  }} />
+        {/* BreadcrumbList Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.globalvisainternationals.com"
+              },
+              // {
+              //   "@type": "ListItem",
+              //   "position": 2,
+              //   "name": "Tourist Visa",
+              //   "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
+              // },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Dubai"
+              }
+            ]
+          })
+        }} />
 
-  {/* FAQPage Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the cost of a Dubai Tourist Visa from India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It typically ranges from ₹6,500 to ₹9,000 depending on visa type and duration."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What documents are required for a Dubai tourist visa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Valid passport, recent photograph, bank statements, confirmed flight ticket, and hotel booking are usually required."
-          }
-        }
-      ]
-    })
-  }} />
+        {/* FAQPage Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the cost of a Dubai Tourist Visa from India?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It typically ranges from ₹6,500 to ₹9,000 depending on visa type and duration."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What documents are required for a Dubai tourist visa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Valid passport, recent photograph, bank statements, confirmed flight ticket, and hotel booking are usually required."
+                }
+              }
+            ]
+          })
+        }} />
 
-  {/* Service Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Dubai Tourist Visa Application Assistance",
-      "provider": {
-        "@type": "Organization",
-        "name": "Global Visa Internationals",
-        "url": "https://www.globalvisainternationals.com"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Visa Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "14 Days Tourist Visa"
+        {/* Service Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Dubai Tourist Visa Application Assistance",
+            "provider": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Visa Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "14 Days Tourist Visa"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "30 Days Tourist Visa"
+                  }
+                }
+              ]
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "30 Days Tourist Visa"
-            }
-          }
-        ]
-      }
-    })
-  }} />
-</head>
+          })
+        }} />
+      </head>
 
 
 
@@ -433,10 +433,12 @@ export default function Dubai() {
           <h2 className={styles.subTitle}> Flight Costs from India to Japan (2025)</h2>
           <table className={styles.table}>
             <thead>
-              <th>Destination</th>
-              <th>Flight Type</th>
-              <th>Starting Price (INR)</th>
-              <th>Notes</th>
+              <tr>
+                <th>Destination</th>
+                <th>Flight Type</th>
+                <th>Starting Price (INR)</th>
+                <th>Notes</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -472,10 +474,12 @@ export default function Dubai() {
           <p>Japan offers a range of accommodations to suit various budgets.</p>
           <table className={styles.table}>
             <thead>
-              <th>Accommodation Type</th>
-              <th>Price Range (JPY)</th>
-              <th>Price Range (INR)</th>
-              <th>Description</th>
+              <tr>
+                <th>Accommodation Type</th>
+                <th>Price Range (JPY)</th>
+                <th>Price Range (INR)</th>
+                <th>Description</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -510,10 +514,12 @@ export default function Dubai() {
           <p>Japanese cuisine caters to all budgets, from street food to fine dining.</p>
           <table className={styles.table}>
             <thead>
-              <th>Meal Type</th>
-              <th>Price Range (JPY)</th>
-              <th>Price Range (INR)</th>
-              <th>Description</th>
+              <tr>
+                <th>Meal Type</th>
+                <th>Price Range (JPY)</th>
+                <th>Price Range (INR)</th>
+                <th>Description</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -549,10 +555,12 @@ export default function Dubai() {
           <h3>Local Travel in Japan</h3>
           <table className={styles.table}>
             <thead>
-              <th>Mode</th>
-              <th>Cost (JPY)</th>
-              <th>Cost (INR)</th>
-              <th>Notes</th>
+              <tr>
+                <th>Mode</th>
+                <th>Cost (JPY)</th>
+                <th>Cost (INR)</th>
+                <th>Notes</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -572,10 +580,12 @@ export default function Dubai() {
           <h3>Long-Distance Travel in Japan</h3>
           <table className={styles.table}>
             <thead>
-              <th>Mode</th>
-              <th>Cost (JPY)</th>
-              <th>Cost (INR)</th>
-              <th>Notes</th>
+              <tr>
+                <th>Mode</th>
+                <th>Cost (JPY)</th>
+                <th>Cost (INR)</th>
+                <th>Notes</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -596,10 +606,12 @@ export default function Dubai() {
           <h2>Estimated Total Trip Cost to Japan (Excluding Flights)</h2>
           <table className={styles.table}>
             <thead>
-              <th>Expense Category</th>
-              <th>Budget Traveler (INR)</th>
-              <th>Mid-Range Traveler (INR)</th>
-              <th>Luxury Traveler (INR)</th>
+              <tr>
+                <th>Expense Category</th>
+                <th>Budget Traveler (INR)</th>
+                <th>Mid-Range Traveler (INR)</th>
+                <th>Luxury Traveler (INR)</th>
+              </tr>
             </thead>
             <tbody>
               <tr>

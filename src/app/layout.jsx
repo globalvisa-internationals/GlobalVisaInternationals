@@ -4,6 +4,7 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
 import Script from "next/script";
+import './globals.css'
 
 export default function RootLayout({ children }) {
   const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
@@ -53,7 +54,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="p:domain_verify" content="eb589ecd94088c14d3f8566f395cf4b7"/>
       </head>
-      <body>
+      <body className='body'>
         {/* Google Analytics */}
         {gaId && (
           <>

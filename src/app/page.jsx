@@ -177,18 +177,8 @@ export default function Home() {
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   // services section
-  const visaTypes = [
-    { type: "Tourist Visa", image: "/images/visa.webp", link: "/tourist-visa", countries: ["canada", "australia", "usa", "uk", "europe", "japan", "dubai", "new-zealand", "singapore"] },
-    { type: "Student Visa", image: "/images/visa.webp", link: "/student-visa", countries: ["canada", "australia", "usa", "uk", "europe", "new-zealand"] },
-    { type: "Business Visa", image: "/images/visa.webp", link: "/business-visa", countries: ["canada", "australia", "uk", "europe", "new-zealand"] },
-    { type: "Permanent Residency Visa", image: "images/visa.webp", link: "/permanent-residency-visa", countries: ["canada", "australia"] },
-    { type: "Work Visa", image: "/images/visa.webp", link: "/work-visa", countries: ["canada", "australia", "uk", "europe", "new-zealand"] },
-    { type: "Dependent Visa", image: "/images/visa.webp", link: "/dependent-visa", countries: ["canada", "australia", "uk", "europe", "new-zealand"] },
-    { type: "Refusal Visa", image: "/images/visa.webp", link: "/refusal-visa", countries: ["canada", "australia", "usa", "uk", "europe", "new-zealand"] },
-    // { type: "Trade Visa",image:"/images/visa.webp" , comingSoon: true },
-    { type: "Golden Visa", image: "/images/visa.webp", comingSoon: true }
-  ];
 
 
 
@@ -302,7 +292,7 @@ export default function Home() {
       </head>
 
 
-      <main>
+      <main className={styles.HomeSec}>
 
 
         {/* Background Image with Correct Styling */}
@@ -510,49 +500,165 @@ export default function Home() {
         </section>
 
         {/* Our Visa & Immigration Services */}
-        <section id="services">
-          <h2 className={styles.subtitle}>Our Visa & Immigration Services</h2>
-
-          <div className={styles.visaCardContainer}>
-            {visaTypes.map((visa, index) => (
-              <div key={index} className={styles.visaCard}>
-                <div className={styles.visaCardInner}>
-
-                  {/* Front Side */}
-                  <div className={styles.visaCardFront}>
-                    <img
-                      className={styles.responsiveImage}
-                      src={visa.image}
-                      loading="lazy"
-                      alt={`${visa.type} Services`}
-                    />
-                    <div className={styles.textOverlay}>{visa.type}</div>
-                  </div>
-
-                  {/* Back Side */}
-                  <div className={styles.visaCardBack}>
-                    <strong className={styles.visaType}>{visa.type}</strong>
-                    {visa.comingSoon ? (
-                      <div className={styles.comingSoon}>
-                        <strong>🚧 Coming Soon 🚧</strong>
-                      </div>
-                    ) : (
-                      <ul>
-                        {visa.countries.map((country, i) => (
-                          <li key={i}>
-                            <a href={`/Visa/${visa.type.toLowerCase().replace(/ /g, "-")}/${country.toLowerCase().replace(/ /g, "-")}`}>
-                              {country.replace("-", " ").toUpperCase()}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                </div>
+        
+      <section className={styles.services}>
+        <div className={styles.visaCard}>
+          <div className={styles.cardInner}>
+            <div className={styles.cardFront}>
+              <div className={styles.top1}>
+                <img src="/svg/Tourist-Visa.webp" alt="Business Visa" />
+                <h3>Tourist Visa Assistance</h3>
               </div>
-            ))}
+              <div className={styles.top2}>
+                Contact Global Visa Internationals For Business Visa assistance
+              </div>
+            </div>
+
+            <div className={styles.cardBack}>
+              <h3>Tourist Visa</h3>
+              <ul>
+                <li><a href="/Visa/tourist-visa/canada">CANADA</a></li>
+                <li> <a href="/Visa/tourist-visa/australia">AUSTRALIA</a></li>
+                <li><a href="/Visa/tourist-visa/usa">USA</a></li>
+                <li><a href="/Visa/tourist-visa/uk">UK</a></li>
+                <li><a href="/Visa/tourist-visa/europe">EUROPE</a></li>
+                <li><a href="/Visa/tourist-visa/japan">JAPAN</a></li>
+                <li><a href="/Visa/tourist-visa/dubai">DUBAI</a></li>
+                <li><a href="/Visa/tourist-visa/singapore">SINGAPORE</a></li>
+              </ul>
+            </div>
           </div>
-        </section>
+        </div>
+
+        <div className={styles.visaCard}>
+          <div className={styles.cardInner}>
+            <div className={styles.cardFront}>
+              <div className={styles.top1}>
+                <img src="/svg/business-visa.webp" alt="Business Visa" />
+                <h3>Business Visa Assistance</h3>
+              </div>
+              <div className={styles.top2}>
+                Contact Global Visa Internationals For Business Visa assistance
+              </div>
+            </div>
+
+            <div className={styles.cardBack}>
+              <h3>Business Visa</h3>
+              <ul>
+                <li > <a href="/Visa/business/canada">CANADA</a></li>
+                <li><a href="/Visa/business/australia">AUSTRALIA</a></li>
+                <li><a href="/Visa/business/uk">UK</a></li>
+                <li><a href="/Visa/business/europe">EUROPE</a></li>
+                <li><a href="/Visa/business/new-zealand">NEW-ZEALAND</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.visaCard}>
+          <div className={styles.cardInner}>
+            <div className={styles.cardFront}>
+              <div className={styles.top1}>
+                <img src="/svg/PR-Visa.webp" alt="Permanent Resident Visa" />
+                <h3>PR visa Assistance</h3>
+              </div>
+              <div className={styles.top2}>
+                Contact Global Visa Internationals For Permanent Resident visa assistance
+              </div>
+            </div>
+
+            <div className={styles.cardBack}>
+              <h4>Permanent Resident visa</h4>
+              <ul>
+
+                <li ><a href="/Visa/permanent-residency-visa/canada">CANADA</a></li>
+                <li><a href="/Visa/permanent-residency-visa/australia">AUSTRALIA</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.visaCard}>
+          <div className={styles.cardInner}>
+            <div className={styles.cardFront}>
+              <div className={styles.top1}>
+                <img src="/svg/student-visa.webp" alt="Student Visa" />
+                <h3>Student Visa Assistance</h3>
+              </div>
+              <div className={styles.top2}>
+                Contact Global Visa Internationals For Student Visa assistance
+              </div>
+            </div>
+
+            <div className={styles.cardBack}>
+              <h3>Student Visa</h3>
+              <ul>
+                <li><a href="/Visa/student-visa/canada">CANADA</a></li>
+                <li><a href="/Visa/student-visa/australia">AUSTRALIA</a></li>
+                <li><a href="/Visa/student-visa/usa">USA</a></li>
+                <li><a href="/Visa/student-visa/uk">UK</a></li>
+                <li><a href="/Visa/student-visa/europe">EUROPE</a></li>
+                <li><a href="/Visa/student-visa/new-zealand">NEW-ZEALAND</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.visaCard}>
+          <div className={styles.cardInner}>
+            <div className={styles.cardFront}>
+              <div className={styles.top1}>
+                <img src="/svg/Dependent Visa.webp" alt="Business Visa" />
+                <h3>Dependent Visa Assistance</h3>
+              </div>
+              <div className={styles.top2}>
+                Contact Global Visa Internationals For Dependent Visa assistance
+              </div>
+            </div>
+
+            <div className={styles.cardBack}>
+              <h2>Dependent Visa</h2>
+              <ul>
+                <li><a href="/Visa/Dependent/canada">CANADA</a></li>
+                <li><a href="/Visa/Dependent/australia">AUSTRALIA</a></li>
+                <li><a href="/Visa/Dependent/uk">UK</a></li>
+                <li><a href="/Visa/Dependent/europe">EUROPE</a></li>
+                <li><a href="/Visa/Dependent/new-zealand">NEW-ZEALAND</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.visaCard}>
+          <div className={styles.cardInner}>
+            <div className={styles.cardFront}>
+              <div className={styles.top1}>
+                <img src="/svg/refusal visa.webp" alt="Refusal Visa" />
+                <h3>Refusal Visa Assistance</h3>
+              </div>
+              <div className={styles.top2}>
+                Contact Global Visa Internationals For Business Visa assistance
+              </div>
+            </div>
+
+            <div className={styles.cardBack}>
+              <h3>Refusal Visa</h3>
+              <ul>
+                <li><a href="/Visa/refusal-visa/canada">CANADA</a></li>
+                <li><a href="/Visa/refusal-visa/australia">AUSTRALIA</a></li>
+                <li><a href="/Visa/refusal-visa/usa">USA</a></li>
+                <li><a href="/Visa/refusal-visa/uk">UK</a></li>
+                <li><a href="/Visa/refusal-visa/europe">EUROPE</a></li>
+                <li><a href="/Visa/refusal-visa/japan">JAPAN</a></li>
+                <li><a href="/Visa/refusal-visa/dubai">DUBAI</a></li>
+                <li><a href="/Visa/refusal-visa/singapore">SINGAPORE</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
 
 
         <h2 className={styles.subtitle}> Contact</h2>

@@ -362,8 +362,10 @@ export default function Dubai() {
           <p>Planning your travel budget? Here's an average breakdown for a 10-day trip to New Zealand from India:</p>
           <table className={styles.table}>
             <thead>
-              <th>Category</th>
+              <tr>
+                <th>Category</th>
               <th>Estimated Cost (INR)</th>
+              </tr>
             </thead>
             <tbody>
               <tr>

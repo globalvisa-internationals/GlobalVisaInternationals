@@ -580,7 +580,8 @@ export default function Canada() {
           <h2 className={styles.subTitle}>Everyday Expenses: Average Daily Living Costs</h2>
           <p>The average daily living expenses for tourists in Canada can vary based on your travel style and spending habits.</p>
           <table className={styles.table}>
-            <tr>
+            <thead>
+              <tr>
               <th>City	</th>
               <th>Food (Budget)</th>
               <th>Food (Moderate)</th>
@@ -588,6 +589,7 @@ export default function Canada() {
               <th>Public Transport (Single Fare)</th>
               <th>Public Transport (Day Pass)</th>
             </tr>
+            </thead>
             <tbody>
               <tr>
                 <td>Toronto</td>
@@ -961,10 +963,7 @@ export default function Canada() {
           </ul>
           <p>With our support, you can focus on the excitement of your upcoming Canadian adventure while we handle the complexities of the visa process. Contact us today to embark on your journey to Canada with confidence!</p>
           <p>Let Global Visa Internationals be your trusted partner in transforming your Canadian dream into a reality. Contact us today, and allow our experienced team to expertly guide you through the visa application process, so you can focus on the excitement of planning your incredible Canadian adventure.</p>
-          <section id='Client Reviews'>
-            <h2 className={styles.subtitle}>Client Reviews</h2>
-            <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-          </section>
+          
         </div>
         <div className={styles.formSection}>
 
@@ -1040,8 +1039,13 @@ export default function Canada() {
             </div>
           )}
         </div>
+        
 
       </div>
+      <section id='Client Reviews'>
+            <h2 className={styles.subtitle}>Client Reviews</h2>
+            <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+          </section>
     </>
   );
 }

@@ -278,7 +278,7 @@ export default function Australia() {
 
           <div className={styles.formSection1}>
             <h4>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
-            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
+            <h1 className={styles.subTitle}>Visa And Immigration Inquiry Form</h1>
             <form id="inquiry-form" onSubmit={handleSubmit}>
               <div className={styles.row}>
                 <div>
@@ -459,7 +459,7 @@ export default function Australia() {
 
           <div className={styles.formSection1}>
             <h4>Contact Global Visa Internationals for Visa and Documentation Assistance:</h4>
-            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
+            <h1 className={styles.subTitle}>Visa And Immigration Inquiry Form</h1>
             <form id="inquiry-form" onSubmit={handleSubmit}>
               <div className={styles.row}>
                 <div>
@@ -569,7 +569,7 @@ export default function Australia() {
 
         <div className={styles.formSection}>
 
-          <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
+          <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
           <form id="inquiry-form" onSubmit={handleSubmit}>
             <div className={styles.row}>
               <div>
@@ -642,8 +642,9 @@ export default function Australia() {
           )}
         </div>
       </div>
+      <h2 className={styles.subtitle}>Client Reviews</h2>
       <section id='Client Reviews'>
-        <h2 className={styles.subtitle}>Client Reviews</h2>
+        
         <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
       </section>
     </>

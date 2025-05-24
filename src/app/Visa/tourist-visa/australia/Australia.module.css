@@ -1,3 +1,78 @@
+/* ----------- Dark Mode ----------- */
+@media (prefers-color-scheme: dark) {
+  .AustraliaSec,
+  .AustraliaData {
+    color: #e0e0e0;
+  }
+
+  .Title,
+  .subTitle,
+  .heading {
+    color: #a6e988;
+  }
+
+  .formSection,
+  .formSection1 {
+    color: #141414;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+
+  .input,
+  .select {
+    color: #1a1919;
+    border: 1px solid #a6e988;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+  }
+
+  .input::placeholder,
+  .select option {
+    color: #202020;
+  }
+
+  .table {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  .table th {
+    background-color: #478537;
+    color: #fff;
+  }
+
+  .table td {
+    border-color: #555;
+  }
+
+  .table tr:nth-child(even) {
+    background-color: #313030;
+    color: #f0f0f0;
+  }
+
+  .note {
+    background-color: #1c1c1c;
+    color: #d0d0d0;
+    border-left-color: #a6e988;
+  }
+
+  .popupContent {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #478537;
+  }
+
+  .popupContent button {
+    background-color: transparent;
+    color: #a6e988;
+    border-color: #a6e988;
+  }
+
+  .popupContent button:hover {
+    background-color: #1e1e1e;
+  }
+
+
+}
+
 .imageContainer{
     display: flex;
     justify-content: center;
@@ -32,7 +107,6 @@
     flex: 1; /* Takes available space */
     min-width: 60%;
     max-width: 65%;
-    color: #000000;
     padding: 10px;
     gap: 10px;
     overflow-y: auto; /* Enables scrolling */
@@ -42,19 +116,18 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #057e05;
+    color: #1eac02;
 }
 .subTitle{
     display: flex;
     text-align: left;
-    color: #1d7e0a;
+    color: #1eac02;
 }
 .note {
     font-size: 0.95rem;
     color: #63834e;
-    background: #eef3f7;
     padding: 1rem;
-    border-left: 4px solid #1d7e0a;
+    border-left: 4px solid #1eac02;
     max-width: 800px;
     margin: auto;
   }
@@ -118,8 +191,7 @@
 .submittingBtn {
   display: block;
   max-width: 250px;
-  background-color: #277a00;
-  color: #fff;
+  background-color: #1eac02;
   font-size: 16px;
   font-weight: bold;
   padding: 12px;
@@ -149,8 +221,7 @@ z-index: 9999;
 }
 
 .popupContent {
-background: #28a745; /* Bootstrap green */
-color: white;
+background: #1eac02; /* Bootstrap green */
 padding: 1.5rem 2.5rem;
 border-radius: 12px;
 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -171,9 +242,8 @@ gap: 0.6rem;
 }
 
 .popupContent button {
-background: white;
-color: #28a745;
-border: 2px solid #28a745;
+color: #1eac02;
+border: 2px solid #1eac02;
 border-radius: 6px;
 padding: 0.5rem 1.2rem;
 font-weight: bold;
@@ -199,13 +269,12 @@ to {
     padding: 2rem;
     max-width: 1200px;
     margin: auto;
-    color: #333;
   }
   
   .heading {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #1d7e0a;
+    color: #1eac02;
   }
   
   .description {
@@ -215,7 +284,7 @@ to {
   }
   
   .link {
-    color: #1d7e0a;
+    color: #1eac02;
     font-weight: 600;
     margin-left: 0.3rem;
     text-decoration: underline;
@@ -227,7 +296,6 @@ to {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1.5rem;
-    background-color: #fff;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   }
   
@@ -268,19 +336,7 @@ to {
       white-space: nowrap;
     }
   }
-  .faqQuestion {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #1d7e0a;
-  }
-  
-  .faqAnswer {
-    margin: 0.5rem 0 1rem;
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-  }
+
   
   
 

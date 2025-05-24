@@ -300,10 +300,12 @@ export default function Australia() {
           <h2 className={styles.subTitle}> Flight Costs from India to Japan (2025)</h2>
           <table className={styles.table}>
             <thead>
-              <th>Destination</th>
+              <tr>
+                <th>Destination</th>
               <th>Flight Type</th>
               <th>Starting Price (INR)</th>
               <th>Notes</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -339,10 +341,12 @@ export default function Australia() {
           <p>Japan offers a range of accommodations to suit various budgets.</p>
           <table className={styles.table}>
             <thead>
-              <th>Accommodation Type</th>
+              <tr>
+                <th>Accommodation Type</th>
               <th>Price Range (JPY)</th>
               <th>Price Range (INR)</th>
               <th>Description</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -377,10 +381,12 @@ export default function Australia() {
           <p>Japanese cuisine caters to all budgets, from street food to fine dining.</p>
           <table className={styles.table}>
             <thead>
-              <th>Meal Type</th>
+              <tr>
+                <th>Meal Type</th>
               <th>Price Range (JPY)</th>
               <th>Price Range (INR)</th>
               <th>Description</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -416,10 +422,12 @@ export default function Australia() {
           <h3>Local Travel</h3>
           <table className={styles.table}>
             <thead>
-              <th>Mode</th>
+              <tr>
+                <th>Mode</th>
               <th>Cost (JPY)</th>
               <th>Cost (INR)</th>
               <th>Notes</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -439,10 +447,12 @@ export default function Australia() {
           <h3>Long-Distance Travel</h3>
           <table className={styles.table}>
             <thead>
-              <th>Mode</th>
+              <tr>
+                <th>Mode</th>
               <th>Cost (JPY)</th>
               <th>Cost (INR)</th>
               <th>Notes</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -463,10 +473,12 @@ export default function Australia() {
           <h2>Estimated Total Trip Cost (Excluding Flights)</h2>
           <table className={styles.table}>
             <thead>
-              <th>Expense Category</th>
+              <tr>
+                <th>Expense Category</th>
               <th>Budget Traveler (INR)</th>
               <th>Mid-Range Traveler (INR)</th>
               <th>Luxury Traveler (INR)</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -661,7 +673,7 @@ export default function Australia() {
 
         <div className={styles.formSection}>
 
-          <h1 className={styles.subTitle}>Visa And Immigration Inquiry Form</h1>
+          <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
           <form id="inquiry-form" onSubmit={handleSubmit}>
             <div className={styles.row}>
               <div>

@@ -13,7 +13,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: #7de98b;
+  background: #79d862;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   padding: 0;
@@ -32,13 +32,14 @@
 .logo {
   width: 120px;
   height: auto;
-  margin-right: 10px;
-  padding-top:15px ;
+  
+  
 }
 
 /* Navigation Links */
 .navLinks {
   display: flex;
+  justify-content: center;
   gap: 10px;
   align-items: center;
   list-style: none;
@@ -211,5 +212,66 @@
   .showMenu {
     opacity: 1;
     pointer-events: all;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .navContainer {
+    background: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+
+  .navLinks a {
+    color: #f0f0f0;
+  }
+
+  .navLinks a:hover,
+  .navLinks a:focus {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .submenuToggle {
+    color: #f0f0f0;
+  }
+
+  .submenuToggle:hover,
+  .submenuToggle:focus {
+    color: #90ee90;
+  }
+
+  .submenu {
+    background: #2c2c2c;
+    border: 1px solid #444;
+  }
+
+  .submenu li a {
+    color: #f0f0f0;
+  }
+
+  .submenu li a:hover {
+    background-color: #333;
+    color: #90ee90;
+  }
+
+  .menu span {
+    background-color: #f0f0f0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .navContainer {
+      background-color: #2c2c2c;
+    }
+
+    .navLinks {
+      background: #2c2c2c;
+    }
+
+    .submenu {
+      background: #333;
+    }
+
+    .submenuOpen {
+      background: #333;
+    }
   }
 }

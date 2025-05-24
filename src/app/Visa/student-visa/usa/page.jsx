@@ -418,47 +418,50 @@ export default function USA(){
                       <p>Studying in the USA can be more expensive than in other developed countries, but students benefit from excellent facilities and services. Many universities offer part-time job opportunities to help offset expenses. Below is an estimated cost breakdown for 2024:
                       </p>
                       <table className={styles.table}>
-                          <tr className={styles.tableHeader}>
+                          <thead>
+                            <tr>
                             <th >Nature of Expenses</th>
                             <th>Cost (USD)</th>
                             <th>	Cost (INR Approx.)</th>
                           </tr>
-                          <tr className={styles.tableRow}>
+                          </thead>
+                          <tbody>
+                            <tr>
                             <td>One-Way Flight</td>
                             <td>$700 – $1,000</td>
                             <td>INR 55,000 - 75,000</td>
                           </tr>
-                          <tr className={styles.tableRow}>
+                          <tr>
                             <td>Work Permit Application</td>
                             <td>$410</td>
                             <td>₹33,600</td>
                           </tr>
-                          <tr className={styles.tableRow}>
+                          <tr>
                             <td>IELTS Test</td>
                             <td>	N/A</td>
                             <td>INR 14,700</td>
                           </tr>
-                          <tr className={styles.tableRow}>
+                          <tr>
                             <td>University Tuition Feest</td>
                             <td>	$18,000 – $50,000</td>
                             <td>₹14,76,000 – ₹41,00,000</td>
                           </tr>
-                          <tr className={styles.tableRow}>
+                          <tr>
                             <td>Books & Study Material</td>
                             <td>$900 – $2,000</td>
                             <td>₹73,800 – ₹1,64,000</td>
                           </tr>
-                          <tr className={styles.tableRow}>
+                          <tr>
                             <td>Accommodation</td>
                             <td>$9,800 – $11,100</td>
                             <td>₹8,03,600 – ₹9,10,200</td>
                           </tr>
-                          <tr className={styles.tableRow}>
+                          <tr>
                             <td>Travel Costs(Monthly)</td>
                             <td>$80 – $150</td>
                             <td>₹6,560 – ₹12,300</td>
                           </tr>
-                          <tr className={styles.tableRow}>
+                          <tr>
                             <td>Food(Monthly)</td>
                             <td>$250 – $600</td>
                             <td>₹20,500 – ₹49,200</td>
@@ -470,11 +473,12 @@ export default function USA(){
                             </tr>
 
                           
-                          <tr className={styles.tableRow}>
+                          <tr>
                             <td>Miscellaneous Expenses (Monthly)</td>
                             <td>$700 – $1,000</td>
                             <td>₹57,400 – ₹82,000</td>
                           </tr>
+                          </tbody>
                         </table>
                         <p>With proper planning and financial management, studying in the USA is a rewarding investment for a successful career.</p>
                         <h3 className={styles.subTitle}>Types of USA Student Visas</h3>

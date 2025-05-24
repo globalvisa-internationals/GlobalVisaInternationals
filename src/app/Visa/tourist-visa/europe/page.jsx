@@ -298,10 +298,12 @@ export default function Australia() {
           <h2 className={styles.subTitle}>Europe Trip Cost Breakdown from India (2025)</h2>
           <table className={styles.table}>
             <thead>
-              <th>Expense Category</th>
+              <tr>
+                <th>Expense Category</th>
               <th>Budget Traveler</th>
               <th>Mid-Range Traveler</th>
               <th>Luxury Traveler</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
