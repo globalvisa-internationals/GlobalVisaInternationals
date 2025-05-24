@@ -1,3 +1,26 @@
+@media (prefers-color-scheme: dark){
+    .aboutSec{
+        color: #fff;
+    }
+    .whydata h2{
+        color: #fff;
+    }
+    .whydata ul li strong{
+        color: #ffff;
+    }
+    .aboutUsContainer{
+        color: #fff;
+    }
+    .subTitle{
+        color: #fff;
+    }
+    .subTitle1{
+        color: #fff;
+    }
+    .subTitle2{
+        color: #f7f7f7;
+    }
+}
 .aboutUsContainer{
     align-items: center;
     justify-content: center;
@@ -5,6 +28,9 @@
     margin-top: 80px;
     padding: 10px;
     gap: 10px;
+     font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 
 }
 .storyContainer{
@@ -38,12 +64,11 @@
 .textContent{
     max-width: 60%;
     font-size: 16px;
-    color: #201e1e;
     line-height: 1.5;
 }
 .textContent h2{
     font-size: 24px;
-     color: #277a00;
+     color: #01ac28;
     align-items: center;
     text-align: center;
 }
@@ -53,18 +78,21 @@
     justify-content: center;
     max-width: 90%;
     margin: 0 auto;
+     font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     
 }
 .subTitle{
     text-align: center;
-    color: #277a00;
+    color: #01ac28;
     font-size: 28px;
 }
 .subTitle2{
-    color: #277a00;
+    color: #01ac28;
 }
 .subTitle1{
-    color: #277a00;
+    color: #01ac28;
 }
 .whydata {
     flex: 1; /* Takes available space */
@@ -79,7 +107,7 @@
 
 .whydata h2 {
     font-size: 24px;
-    color: #277a00;
+    color: #01ac28;
     align-items: center;
     text-align: center;
 }
@@ -101,7 +129,7 @@
 }
 .whydata ul li strong {
     font-weight: 900;
-    color: #277a00;
+    color: #01ac28;
 }
 
 
@@ -154,8 +182,7 @@
 .submittingBtn {
   display: block;
   max-width: 250px;
-  background-color: #277a00;
-  color: #fff;
+  background-color: #01ac28;
   font-size: 16px;
   font-weight: bold;
   padding: 12px;
@@ -185,7 +212,7 @@ z-index: 9999;
 }
 
 .popupContent {
-background: #28a745; /* Bootstrap green */
+background: #01ac28; /* Bootstrap green */
 color: white;
 padding: 1.5rem 2.5rem;
 border-radius: 12px;
@@ -208,8 +235,8 @@ gap: 0.6rem;
 
 .popupContent button {
 background: white;
-color: #28a745;
-border: 2px solid #28a745;
+color: #01ac28;
+border: 2px solid #01ac28;
 border-radius: 6px;
 padding: 0.5rem 1.2rem;
 font-weight: bold;

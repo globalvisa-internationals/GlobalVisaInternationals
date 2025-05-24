@@ -163,7 +163,7 @@
 }
 
 .cardTitle a:hover {
-  color: #007e33;
+  color: #01ac28;
 }
 
 .cardMeta {
@@ -195,13 +195,13 @@
   font-weight: 600;
   border: none;
   border-radius: 9999px;
-  background-color: #007e33;
+  background-color: #01ac28;
   text-decoration: none;
   transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .readMore:hover {
-  background-color: #005d25;
+  background-color: #01ac28;
   transform: scale(1.05);
 }
 .pageWrapper {
@@ -240,20 +240,20 @@
   border-radius: 20px;
   border: 1px solid #ccc;
   font-size: 0.85rem;
-  color: #209615;
+  color: #01ac28;
   cursor: pointer;
   user-select: none;
   transition: all 0.3s ease;
 }
 
 .categoryList li:hover {
-  border-color: #209615;
+  border-color: #01ac28;
 }
 
 .activeCategory {
   font-weight: 600;
-  background-color: #209615;
-  border-color: #209615;
+  background-color: #01ac28;
+  border-color: #01ac28;
 }
 
 /* Pagination */
@@ -282,13 +282,13 @@
   cursor: not-allowed;
 }
 .pagination .activePage {
-  background-color: #209615;
+  background-color: #01ac28;
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2);
 }
 .categoryList li:focus,
 .pagination button:focus {
-  outline: 2px dashed #209615;
+  outline: 2px dashed #01ac28;
   outline-offset: 4px;
 }
 .readMoreWrapper {
