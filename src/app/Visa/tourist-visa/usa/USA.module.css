@@ -17,7 +17,6 @@
   .formSection,
   .formSection1 {
     color: #141414;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   }
 
   .input,
@@ -88,13 +87,15 @@
     margin: 0 auto;
 }
 .USAImage{
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 auto;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 10px;
     height: auto;
-    width: 800px;
+    width: 90%;
+    /* Adjusts image width for smaller screens */
+    max-width: 400px;
+    /* Limits max size */
 }
 .USASec {
     display: flex;

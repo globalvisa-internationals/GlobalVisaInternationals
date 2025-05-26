@@ -83,22 +83,27 @@ export default function Dubai() {
         <meta name="theme-color" content="#0a66c2" />
         <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" imagesrcset="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png 1x" />
+        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.webp" imagesrcset="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.webp 1x" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:title" content="Apply for Dubai Tourist Visa From India | Global Visa Internationals" />
         <meta property="og:description" content="Planning to visit Dubai? Get expert assistance for your tourist visa application, flight booking, cost estimate, and must-visit places. Start your Dubai journey with Global Visa Internationals." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" />
+        <meta property="og:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.webp" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:locale:alternate" content="en_US" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/webp" />
+        <meta property="og:site_name" content="Global Visa Internationals" />
+        <meta property="og:type" content="website" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dubai Tourist Visa | Application, Cost & Documents Needed" />
         <meta name="twitter:description" content="Explore Dubai with the right tourist visa. Get visa application support and travel cost breakdown from Global Visa Internationals." />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.png" />
+        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.webp" />
         <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
         <meta name="twitter:site" content="@GlobalVisaIntl" />
 
@@ -237,7 +242,7 @@ export default function Dubai() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/Dubai-Turist-Visa-Global-Visa-Internationals.png" alt="Dubai-Turist-Visa-Global-Visa-Internationals" className={styles.JapanImage} />
+        <img src="/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp" alt="Dubai-Turist-Visa-Global-Visa-Internationals" className={styles.JapanImage} />
       </div>
 
       <div className={styles.JapanSec}>

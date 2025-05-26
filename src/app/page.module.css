@@ -193,12 +193,12 @@
     /* Changed from absolute to allow it to sit in flow */
     width: 90%;
     max-width: 400px;
-    max-height: fit-content;
+    height: auto;
     aspect-ratio: 3 / 2;
     /*Maintain image ratio */
     border-radius: 15px;
     overflow: hidden;
-    z-index: -1;
+    z-index: 1;
   }
 
   .backgroundImage {
