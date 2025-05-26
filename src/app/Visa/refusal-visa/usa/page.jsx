@@ -334,7 +334,7 @@ export default function Canada() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/USA-travel.jpeg" alt="Canada Image" className={styles.CanadaImage} />
+        <img src="/images/USA1.png" alt="USA Image" className={styles.CanadaImage} />
       </div>
 
       <div className={styles.CanadaSec}>
