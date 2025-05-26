@@ -476,7 +476,7 @@ export default function Canada() {
           <p>After completing your studies, you may be eligible for a Post-Graduation Work Permit (PGWP), allowing you to work in Canada for up to three years. This valuable experience can enhance your employability and provide a pathway to permanent residency.</p>
           <h3 className={styles.subTitle}>Conclusion</h3>
           <p>Studying in Canada is an incredible opportunity to gain a world-class education while immersing yourself in a multicultural society. At Global Visa Internationals, we are committed to helping you navigate the complexities of the student visa process, ensuring you have the best chance of success. Contact us today to start your journey toward a brighter future in Canada!</p>
-         
+          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
         <div className={styles.formSection}>

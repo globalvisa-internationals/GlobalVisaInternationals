@@ -512,7 +512,7 @@ export default function UK() {
             <p>Your passport should be valid for the duration of your intended stay in the UK. It's generally recommended to have at least 6 months of validity remaining on your passport beyond your planned departure date from the UK.</p>
 
           </ol>
-
+ <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
 

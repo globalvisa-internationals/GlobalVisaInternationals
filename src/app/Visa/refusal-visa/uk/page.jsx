@@ -401,6 +401,7 @@ export default function Canada() {
               <li><strong>End-to-End Support:</strong> From the moment you contact us until your visa is approved, we provide continuous, transparent support. This includes answering your questions, preparing you for potential interviews (if required), and liaising with relevant authorities on your behalf where possible.</li>
             </ul>
             <p className={styles.note}>Don't let a visa refusal put an end to your aspirations of a life or visit to the UK. The journey might seem daunting, but with Global Visa Internationals by your side, it becomes manageable and hopeful. Contact Global Visa Internationals today for a comprehensive consultation! We are dedicated to helping you turn your "No" into a "Yes." <strong>Let us take the burden off your shoulders, navigate the complexities of UKVI procedures, and guide you every step of the way towards your successful UK journey.</strong></p>
+           <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
           </div>
 
           <div className={styles.formSection}>

@@ -1834,7 +1834,7 @@ export default function Australia() {
             <p>Having a low academic score may affect your chances of obtaining a student visa. However, you can still apply and provide additional documentation to demonstrate your genuine intention to study and your commitment to improving your academic performance.</p>
           </ol>
 
-
+ <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
         <div className={styles.formSection}>

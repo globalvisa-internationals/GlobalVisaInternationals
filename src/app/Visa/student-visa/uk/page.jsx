@@ -330,7 +330,7 @@ export default function UK() {
           <p>To apply for a UK student visa, you need to complete the online application form, pay the visa fee, provide biometric information, and submit supporting documents, including proof of acceptance from a UK university.</p>
           <h4>17. What is the duration of a UK student visa?</h4>
           <p>The duration of a UK student visa depends on the length of your course. Generally, it covers the duration of your studies plus an additional period for post-study work.</p>
-
+ <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
 

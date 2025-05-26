@@ -666,7 +666,7 @@ export default function Dubai() {
           <h3 className={styles.subTitle}> Serving clients PAN India – with a strong presence in Bangalore.</h3>
           <h2 className={styles.subTitle}>Get in Touch for New Zealand Tourist Visa Assistance</h2>
 
-
+ <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
 

@@ -337,6 +337,8 @@ export default function Home() {
               <p>Our Visa Support Services Include: Student Visa Assistance for higher education abroad
                 ,Work Visa Guidance for professionals aiming to grow internationally, Tourist & Visitor Visa Help for hassle-free travel, Business Visa Consultation for entrepreneurs and professionals, PR & Skilled Immigration Advice for long-term relocation goals, Family / Dependent Visa Support to reunite loved ones, Visa Refusal Assistance and reapplication guidance
               </p>
+              <p>Global Visa Internationals is a private consultancy and is not affiliated with any government or embassy. We offer independent visa and immigration advisory services.</p>
+
             </div>
           </section>
 
@@ -800,6 +802,7 @@ export default function Home() {
 
           </div>
         </section>
+         <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
 
 
 

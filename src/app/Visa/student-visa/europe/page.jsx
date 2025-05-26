@@ -511,7 +511,7 @@ export default function Europe() {
             <script src="https://static.elfsight.com/platform/platform.js" async></script>
             <div class="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
           </section>
-          
+          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p> 
         </div>
         <div className={styles.formSection}>
           <h2>Immigration Inquiry Form</h2>

@@ -537,7 +537,7 @@ export default function Australia() {
                     </ul>
                     <p className={styles.note}>Don't let a visa refusal derail your dreams. Contact Global Visa Internationals today for a comprehensive consultation! We are dedicated to helping you turn your "No" into a "Yes."</p>
 
-
+ <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
 
                 </div>
 

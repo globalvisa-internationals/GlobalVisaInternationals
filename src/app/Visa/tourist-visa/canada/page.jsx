@@ -963,7 +963,7 @@ export default function Canada() {
           </ul>
           <p>With our support, you can focus on the excitement of your upcoming Canadian adventure while we handle the complexities of the visa process. Contact us today to embark on your journey to Canada with confidence!</p>
           <p>Let Global Visa Internationals be your trusted partner in transforming your Canadian dream into a reality. Contact us today, and allow our experienced team to expertly guide you through the visa application process, so you can focus on the excitement of planning your incredible Canadian adventure.</p>
-          
+           <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
         <div className={styles.formSection}>
 

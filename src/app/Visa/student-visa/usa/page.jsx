@@ -497,7 +497,7 @@ export default function USA(){
                         <li><strong>Texas – </strong>Affordable tuition, lower cost of living, and strong job prospects.</li>
                         <li><strong>ennsylvania –</strong> Home to University of Chicago, UIUC, and a growing tech industry.</li>
                         <li><strong>Pennsylvania –</strong> Hosts University of Pennsylvania, Carnegie Mellon, and diverse industries.</li></ul>
-
+ <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
                     </div>
                         <div className={styles.formSection}>
                                            <h2>Immigration Inquiry Form</h2>

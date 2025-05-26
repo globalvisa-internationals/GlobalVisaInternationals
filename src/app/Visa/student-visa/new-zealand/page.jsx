@@ -539,7 +539,7 @@ export default function newzeland() {
           <p>The visa requirements for studying in New Zealand depend on your academic program and the duration of your stay. Generally, you will need a New Zealand student visa, which can be obtained through the New Zealand Immigration Service.</p>
 
           
-
+ <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
 
