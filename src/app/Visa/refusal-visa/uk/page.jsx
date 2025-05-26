@@ -1,5 +1,5 @@
 "use client";
-import styles from './UK.module.css';
+import styles from './Uk.module.css';
 import React, { useState, useEffect } from 'react';
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { NextSeo, LocalBusinessJsonLd, FAQPageJsonLd } from 'next-seo';
