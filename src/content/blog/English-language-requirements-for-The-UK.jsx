@@ -125,36 +125,66 @@ export default function SchengenVisaCascadeLongTermGuide() {
                     }}
                 />
                 <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.globalvisainternationals.com/blog/English-language-requirements-for-The-UK/"
-      },
-      "headline": metadata.title,
-      "description": metadata.excerpt,
-      "image": "https://www.globalvisainternationals.com/images/English-language-requirements-for-The-UK.png",
-      "author": {
-        "@type": "Organization",
-        "name": "Global Visa Internationals",
-        "url": "https://www.globalvisainternationals.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Global Visa Internationals",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.globalvisainternationals.com/gvilogo.png"
-        }
-      },
-      "datePublished": "2025-05-17", 
-      "dateModified": "2025-05-17 "   
-    })
-  }}
-/>
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Article",
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": "https://www.globalvisainternationals.com/blog/English-language-requirements-for-The-UK/"
+                            },
+                            "headline": metadata.title,
+                            "description": metadata.excerpt,
+                            "image": "https://www.globalvisainternationals.com/images/English-language-requirements-for-The-UK.png",
+                            "author": {
+                                "@type": "Organization",
+                                "name": "Global Visa Internationals",
+                                "url": "https://www.globalvisainternationals.com"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Global Visa Internationals",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://www.globalvisainternationals.com/gvilogo.png"
+                                }
+                            },
+                            "datePublished": "2025-05-17",
+                            "dateModified": "2025-05-17 "
+                        })
+                    }}
+
+                />
+                <script type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://www.globalvisainternationals.com"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://www.globalvisainternationals.com/blog"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "English Language Requirements for The UK",
+                                    "item": "https://www.globalvisainternationals.com/blog/English-language-requirements-for-The-UK/"
+                                }
+                            ]
+                        })
+                    }}
+                />
+
 
             </Head>
             <main className="prose lg:prose-xl max-w-4xl mx-auto px-4 py-12">
