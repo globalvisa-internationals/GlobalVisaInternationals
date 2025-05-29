@@ -88,6 +88,8 @@ export default function USGreenCard2025Rules() {
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preload" as="image" href={fullImageUrl} />
+  <link rel="canonical" href="https://www.globalvisainternationals.com/blog/us-green-card-2025-rules" />
+
 
   {/* Open Graph */}
   <meta property="og:locale" content="en_US" />
