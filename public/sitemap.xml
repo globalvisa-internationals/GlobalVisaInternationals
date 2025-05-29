@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.globalvisainternationals.com/sitemap-pages.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.globalvisainternationals.com/sitemap-blogs.xml</loc>
+  </sitemap>
+</sitemapindex>
+
   <url>
     <loc>https://www.globalvisainternationals.com/</loc>
     <lastmod>2025-05-15</lastmod>
@@ -323,29 +332,29 @@
     <loc>https://www.globalvisainternationals.com/blog/schengen-visa-fee-refund-hacka</loc>
     <lastmod>2025-04-29</lastmod>
     <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://www.globalvisainternationals.com/blog/us-green-card-2025-rules</loc>
     <lastmod>2025-05-29</lastmod>
     <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://www.globalvisainternationals.com/blog/English-language-requirements-for-The-UK</loc>
     <lastmod>2025-05-29</lastmod>
     <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://www.globalvisainternationals.com/blog/Schengen-Visa-Cascade</loc>
     <lastmod>2025-05-29</lastmod>
     <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <url>
-    <loc>https://www.globalvisainternationals.com/career</loc>
-    <lastmod>2025-05-29</lastmod>
-    <priority>0.80</priority>
-  </url>
+  
 
 </urlset>
