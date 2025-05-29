@@ -25,82 +25,146 @@ export const metadata = {
 };
 
 export default function USGreenCard2025Rules() {
+  const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
+  const pageUrl = "https://www.globalvisainternationals.com/blog/us-green-card-2025-rules/";
+
+  const blogStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: metadata.title,
+    image: fullImageUrl,
+    datePublished: metadata.date,
+    dateModified: metadata.date,
+    author: {
+      "@type": "Organization",
+      name: metadata.author
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.globalvisainternationals.com/gvilogo.png"
+      }
+    },
+    description: metadata.excerpt,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl
+    }
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.globalvisainternationals.com/blog"
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: metadata.title,
+        item: pageUrl
+      }
+    ]
+  };
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.excerpt} />
-        <meta name="keywords" content={metadata.keywords.join(", ")} />
-        <meta name="author" content={metadata.author} />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preload" as="image" href={`https://www.globalvisainternationals.com${metadata.image}`} />
+    <Head>
+  <title>{metadata.title}</title>
+  <meta name="description" content={metadata.excerpt} />
+  <meta name="keywords" content={metadata.keywords.join(", ")} />
+  <meta name="author" content={metadata.author} />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" as="image" href={fullImageUrl} />
 
-        {/* Open Graph */}
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.excerpt} />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/blog/us-green-card-2025-rules/" />
-        <meta property="og:image" content={`https://www.globalvisainternationals.com${metadata.image}`} />
-        <meta property="og:image:alt" content={metadata.title} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Global Visa Internationals" />
+  {/* Open Graph */}
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={metadata.title} />
+  <meta property="og:description" content={metadata.excerpt} />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:image" content={fullImageUrl} />
+  <meta property="og:image:alt" content={metadata.title} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Global Visa Internationals" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@GlobalVisaIntern" />
-        <meta name="twitter:creator" content="@GlobalVisaIntern" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/blog/us-green-card-2025-rules/" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.excerpt} />
-        <meta name="twitter:image" content={`https://www.globalvisainternationals.com${metadata.image}`} />
-        <meta name="twitter:image:alt" content={metadata.title} />
-        <meta property="og:image:type" content="image/png" />
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@GlobalVisaIntern" />
+  <meta name="twitter:creator" content="@GlobalVisaIntern" />
+  <meta name="twitter:url" content={pageUrl} />
+  <meta name="twitter:title" content={metadata.title} />
+  <meta name="twitter:description" content={metadata.excerpt} />
+  <meta name="twitter:image" content={fullImageUrl} />
+  <meta name="twitter:image:alt" content={metadata.title} />
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com",
-              "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-              "description":
-                "Helping Indian residents navigate complex U.S. immigration and Green Card regulations with expert consultancy.",
-              "founder": { "@type": "Person", "name": "Naveen Kumar J" },
-              "foundingDate": "2016",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "MG Road",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "Karnataka",
-                "postalCode": "560025",
-                "addressCountry": "IN"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-7022213466",
-                "contactType": "Customer Support",
-                "areaServed": "IN",
-                "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
-              },
-              "areaServed": ["IN", "US", "CA", "UK", "EU"],
-              "sameAs": [
-                "https://www.facebook.com/globalvisainternationals/",
-                "https://www.instagram.com/globalvisa_internationals/",
-                "https://www.linkedin.com/company/global-visa-internationals/",
-                "https://twitter.com/GlobalVisaIntern",
-                "https://www.youtube.com/@globalVisaInternationals",
-                "https://www.google.com/maps/place/Global+Visa+Internationals"
-              ]
-            })
-          }}
-        />
-      </Head>
+  {/* Structured Data: Organization */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Global Visa Internationals",
+        "url": "https://www.globalvisainternationals.com",
+        "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+        "description": "Helping Indian residents navigate complex U.S. immigration and Green Card regulations with expert consultancy.",
+        "founder": { "@type": "Person", "name": "Naveen Kumar J" },
+        "foundingDate": "2016",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "MG Road",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "postalCode": "560025",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-7022213466",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
+        },
+        "areaServed": ["IN", "US", "CA", "UK", "EU"],
+        "sameAs": [
+          "https://www.facebook.com/globalvisainternationals/",
+          "https://www.instagram.com/globalvisa_internationals/",
+          "https://www.linkedin.com/company/global-visa-internationals/",
+          "https://twitter.com/GlobalVisaIntern",
+          "https://www.youtube.com/@globalVisaInternationals",
+          "https://www.google.com/maps/place/Global+Visa+Internationals"
+        ]
+      })
+    }}
+  />
+
+  {/* Structured Data: BlogPosting */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
+  />
+
+  {/* Structured Data: BreadcrumbList */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+  />
+</Head>
+
 
       <main className="prose lg:prose-xl max-w-4xl mx-auto px-4 py-12">
         <div className={Styles.meta}>
@@ -116,7 +180,14 @@ export default function USGreenCard2025Rules() {
         </div>
 
         <div className={Styles.imageCard}>
-          <img src={metadata.image} alt={metadata.title} className={Styles.image} />
+          <img
+            src={metadata.image}
+            alt={metadata.title}
+            className={Styles.image}
+            loading="lazy"
+            width="1200"
+            height="630"
+          />
         </div>
 
         <h1>{metadata.title}</h1>
