@@ -1,5 +1,37 @@
 User-agent: *
 Disallow: /admin/
 Disallow: /private/
+Allow: /career
+Allow: /blog
+Allow: /contact
+Allow: /blog/us-green-card-2025-rules
+Allow: /blog/English-language-requirements-for-The-UK
+Allow: /blog/Schengen-Visa-Cascade
+Allow: /blog/Visa-Fee-Hack-for-Indian-Travelers
+Allow: /Visa/tourist-visa/canada
+Allow: /Visa/tourist-visa/australia
+Allow: /Visa/tourist-visa/usa
+Allow: /Visa/tourist-visa/uk
+Allow: /Visa/tourist-visa/europe
+Allow: /Visa/tourist-visa/japan
+Allow: /Visa/tourist-visa/dubai
+Allow: /Visa/tourist-visa/singapore
+Allow: /Visa/tourist-visa/new-zealand
+Allow: /Visa/student-visa/canada
+Allow: /Visa/student-visa/australia
+Allow: /Visa/student-visa/usa
+Allow: /Visa/student-visa/uk
+Allow: /Visa/student-visa/europe
+Allow: /Visa/student-visa/new-zealand
+Allow: /Visa/permanent-residency-visa/australia
+Allow: /Visa/permanent-residency-visa/canada
+Allow: /Visa/refusal-visa/canada
+Allow: /Visa/refusal-visa/australia
+Allow: /Visa/refusal-visa/usa
+Allow: /Visa/refusal-visa/uk
+Allow: /Visa/refusal-visa/europe
+Allow: /Visa/refusal-visa/new-zealand
+
+
 
 Sitemap: https://globalvisainternationals.com/sitemap.xml
