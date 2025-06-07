@@ -29,6 +29,9 @@
   font-size: 1.125rem;
   line-height: 1.75;
 }
+.subtitle{
+  color: #008000;
+}
 
 .imageCard {
   display: flex;

@@ -206,31 +206,31 @@ export default function SchengenVisaCascadeLongTermGuide() {
                         className={Styles.image}
                     />
                 </div>
-                <h1>{metadata.title}</h1>
+                <h1 className={Styles.subtitle}>{metadata.title}</h1>
                 <p>The United Kingdom is implementing significant changes to its immigration policies, placing a greater emphasis on English language proficiency for individuals aspiring to study, work, or settle within its borders. These new regulations, outlined in the recent UK White Paper on Immigration presented to Parliament, signify a move towards ensuring a higher level of English fluency among newcomers. For skilled workers, international students, and their families, understanding these updated requirements is crucial for a smooth immigration process.</p>
-                <h2>Stricter Language Standards for Main Applicants</h2>
+                <h2 className={Styles.subtitle}>Stricter Language Standards for Main Applicants</h2>
 
                 <p>For many individuals already subject to English language assessments, the bar is being raised. The UK government is increasing the required proficiency level from B1 (Independent User) to B2 (Independent User) of the Common European Framework of Reference for Languages (CEFR). This change will directly impact applicants for the Skilled Worker visa and other similar routes. Achieving a B2 level demonstrates a greater ability to understand complex texts, interact with a degree of fluency and spontaneity, and produce clear, detailed writing on a wide range of subjects.</p>
 
-                <h2>New English Language Requirements for Adult Dependants</h2>
+                <h2 className={Styles.subtitle}>New English Language Requirements for Adult Dependants</h2>
                 <p>A significant aspect of these new immigration laws is the introduction of an English language requirement for adult dependants of workers and students. Previously, spouses, partners, and other adult dependants arriving via many UK work and student routes faced no formal language proficiency assessments. Now, all adult dependants will need to demonstrate English language ability at level A1 (Basic User). This level indicates a basic understanding and use of familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type. This brings the requirements for dependants in line with those already in place for spousal and partner visa routes.</p>
 
-                <h2>Progressive Language Requirements for Visa Extensions and Settlement</h2>
+                <h2 className={Styles.subtitle}>Progressive Language Requirements for Visa Extensions and Settlement</h2>
                 <p>Prime Minister Keir Starmer’s proposals within the White Paper highlight a progressive approach to language acquisition during an individual’s time in the UK. The new regulations will mandate that visa holders demonstrate continuous improvement in their English language skills. Specifically, applicants seeking visa extensions will need to show progression to level A2 (Basic User), indicating an ability to understand sentences and frequently used expressions related to areas of most immediate relevance. Furthermore, for those pursuing settlement (Indefinite Leave to Remain) and eventually citizenship, the required English language proficiency will be raised to level B2 (Independent User) across many immigration routes, aligning it with the initial requirement for main applicants. The aim is to encourage and ensure that individuals actively develop their English skills throughout their stay in the UK.</p>
 
-                <h2>Impact on Indian Students and Workers with Dependants</h2>
+                <h2 className={Styles.subtitle}>Impact on Indian Students and Workers with Dependants</h2>
                 <p>These changes are particularly relevant for Indian students and Indian workers who often plan to bring their families with them to the UK. The new requirement for adult dependants to meet the A1 English language standard will necessitate preparation and testing for family members who might not have previously been subject to such assessments. Additionally, the increased requirements for visa extensions and settlement will mean that both the main applicant and their dependants need to focus on improving their English language skills over time.</p>
 
-                <h2>Current English Language Requirements and the CEFR</h2>
+                <h2 className={Styles.subtitle}>Current English Language Requirements and the CEFR</h2>
                 <p>Currently, the UK already requires English proficiency for many categories of migrants, but these requirements primarily apply to the main applicant. The level of proficiency, measured against the CEFR, varies depending on the specific visa route. For example, the Skilled Worker route currently demands at least a B1 (intermediate) level. It’s important to note that a separate English language test is also required when applying for settlement in the UK or citizenship for individuals aged 18 and over. The new regulations will now harmonize and, in many cases, elevate these standards.</p>
 
-                <h2>Survey Insights on Graduate Visa Holders</h2>
+                <h2 className={Styles.subtitle}>Survey Insights on Graduate Visa Holders</h2>
                 <p>A recent survey of nearly 3,000 Graduate visa holders provided interesting insights into their perceived English language abilities. While a significant 83% believed they spoke English very well or fluently, this figure dropped to 73% for Graduate dependant partners. This highlights the potential impact of the new regulations on dependants who may have varying levels of English proficiency.</p>
 
-                <h2>Heightened Requirements for Citizenship</h2>
+                <h2 className={Styles.subtitle}>Heightened Requirements for Citizenship</h2>
                 <p>The path to becoming a UK citizen will also see stricter English language requirements. The existing standards for settlement, which are currently at B1 (Independent User) for many immigration routes, will be raised to B2 (Independent User). This change underscores the government’s commitment to ensuring that individuals seeking permanent residency and citizenship possess a strong command of the English language to facilitate their integration into British society.</p>
 
-                <h2>Navigating the Changes: Contact Global Visa Internationals for Assistance</h2>
+                <h2 className={Styles.subtitle}>Navigating the Changes: Contact Global Visa Internationals for Assistance</h2>
                 <p>Understanding and meeting these new English language requirements is paramount for a successful UK immigration journey. The increased scrutiny on language proficiency for both main applicants and their dependants necessitates careful preparation.</p>
 
                 <p>Contact Global Visa Internationals or click here to get expert visa assistance and guidance on navigating these evolving immigration rules. Our experienced team can provide you with the latest information, support you in understanding the specific requirements for your visa category, and help you prepare for the necessary English language tests.</p>

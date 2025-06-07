@@ -192,13 +192,13 @@ export default function USGreenCard2025Rules() {
           />
         </div>
 
-        <h1>{metadata.title}</h1>
+        <h1 className={Styles.subtitle}>{metadata.title}</h1>
 
         <p>
           As of 2025, the U.S. government has introduced several critical updates to its Green Card regulations. If you are a <strong>Lawful Permanent Resident (LPR)</strong> or planning to become one, it's important to understand these changes to protect your status and avoid costly mistakes.
         </p>
 
-        <h2> 1. Updated Form I-90 Requirement</h2>
+        <h2 className={Styles.subtitle}> 1. Updated Form I-90 Requirement</h2>
         <p>
           <strong>Effective May 29, 2025</strong>, USCIS mandates that Green Card holders must use the <em>latest version</em> of <strong>Form I-90</strong> to apply for a replacement. This applies if your card is:
         </p>
@@ -210,7 +210,7 @@ export default function USGreenCard2025Rules() {
         </ul>
         <p> <strong>Important</strong>: Ensure all pages are from the same edition to avoid rejection.</p>
 
-        <h2> 2. Mandatory USCIS Registration</h2>
+        <h2 className={Styles.subtitle}> 2. Mandatory USCIS Registration</h2>
         <p>
           Starting <strong>April 11, 2025</strong>, some non-citizens—including Green Card holders—must <strong>register with USCIS</strong> as part of new national security initiatives.
         </p>
@@ -219,12 +219,12 @@ export default function USGreenCard2025Rules() {
           <li> Non-compliance may result in civil fines or criminal charges</li>
         </ul>
 
-        <h2> 3. Green Card Revocation Under Review</h2>
+        <h2 className={Styles.subtitle}> 3. Green Card Revocation Under Review</h2>
         <p>
           The U.S. DOJ has reinforced that Green Cards can be <strong>revoked at any time</strong>, regardless of how long you’ve held it. Stay compliant—even after decades.
         </p>
 
-        <h2> 4. “Gold Card” Visa for Investors</h2>
+        <h2 className={Styles.subtitle}> 4. “Gold Card” Visa for Investors</h2>
         <p>
           Launching in 2025, the U.S. will offer a <strong>$5 million “Gold Card” visa</strong> for high-net-worth investors. Benefits include:
         </p>
@@ -233,13 +233,13 @@ export default function USGreenCard2025Rules() {
           <li> Global mobility for elite entrepreneurs</li>
         </ul>
 
-        <h2> 5. Social Media Screening</h2>
+        <h2 className={Styles.subtitle}> 5. Social Media Screening</h2>
         <p>
           USCIS now monitors social media for extremist content. Posts deemed hateful may result in <strong>visa denials</strong>.
         </p>
         <p> Tip: Be mindful—your online presence is now immigration evidence.</p>
 
-        <h2> What You Should Do Now</h2>
+        <h2 className={Styles.subtitle}> What You Should Do Now</h2>
         <ul>
           <li> Use the correct USCIS forms</li>
           <li> Stay informed about mandatory updates</li>
@@ -248,7 +248,7 @@ export default function USGreenCard2025Rules() {
           <li> <strong>Consult a visa expert</strong> to stay safe</li>
         </ul>
 
-        <h2> Need Help? Global Visa Internationals is Here</h2>
+        <h2 className={Styles.subtitle}> Need Help? Global Visa Internationals is Here</h2>
         <p>
           Our experts at <strong>Global Visa Internationals</strong> assist with:
         </p>

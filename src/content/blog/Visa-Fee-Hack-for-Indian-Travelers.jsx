@@ -146,13 +146,13 @@ export default function SchengenVisaFeeHack() {
             className={Styles.image}
           />
         </div>
-        <h1>Schengen Visa Fee Refund for Indian Travelers: Smart Travel Insurance</h1>
+        <h1 className={Styles.subtitle}>Schengen Visa Fee Refund for Indian Travelers: Smart Travel Insurance</h1>
        <p> Planning your ultimate European trip but concerned about the non-refundable Schengen visa cost? What if your application is rejected? For Indian travelers, the €90 (about ₹8,500) visa cost can be a heavy burden. But there's a clever travel tip: by purchasing a special travel insurance rider, you may be able to get a 100% refund of your Schengen visa cost if your application is rejected due to circumstances beyond your control.</p>
        <p>This tutorial, inspired by travel magazine know-how, takes you through how to use PolicyBazaar's app for this savvy trick and offers important bonus tips that boost your prospects for getting a visa. So, ready to travel smarter and with greater confidence? Let's get started!</p>
 
 
 
-        <h2>Step-by-Step Guide: Claiming Your Schengen Visa Fee Back</h2>
+        <h2 className={Styles.subtitle}>Step-by-Step Guide: Claiming Your Schengen Visa Fee Back</h2>
         <ol>
           <li><strong>Launch the PolicyBazaar App:</strong>  Open the travel insurance tab on the PolicyBazaar website or app. Provide your travel information (destination in Europe, travel dates, and age of all the travelers) to select appropriate Schengen-compliant insurance policies.</li>
           <li><strong>Choose Care Travel Insurance:</strong> From the listed options, search for Care Explore (International Travel) or other travel insurance policies by Care (previously known as Religare). Their policies are usually suggested for traveling to Europe.
@@ -171,7 +171,7 @@ export default function SchengenVisaFeeHack() {
         <p>By taking these steps, you can make the financial risk of a Schengen visa application much lower. This "Refund of Visa Fees" add-on serves as a safety net for your travel budget.
         </p>
 
-        <h2>Bonus Visa Tips: Improve Your Approval Likelihood
+        <h2 className={Styles.subtitle}>Bonus Visa Tips: Improve Your Approval Likelihood
         Protecting your investment is wise, but getting your visa approved is the ultimate outcome. Here are some tips to make your Schengen application from India stronger:</h2>
         <ul>
           <li><strong>Show Strong Financial Stability:</strong> Submit strong proof of your financial standing. Attach bank statements for the past 3-6 months with regular and healthy balances, recent salary receipts or a letter of employment, Income Tax Returns (Form 16/ITR), and information about any fixed deposits or investments. Visa officials give priority to applicants who have a good financial record. A frequent cause of rejection is "insufficient bank balance," so make sure you have more than the required minimum amount and that your account activity is clean.</li>
@@ -184,7 +184,7 @@ export default function SchengenVisaFeeHack() {
         </ul>
         <p>By adding these strong preparation techniques to the visa-fee refund insurance, you're prepared for a smarter and safer way to your European travel adventures.</p>
 
-        <h2>Need Expert Schengen Visa Assistance? Contact Global Visa Internationals</h2>
+        <h2 className={Styles.subtitle}>Need Expert Schengen Visa Assistance? Contact Global Visa Internationals</h2>
         <p>It may be confusing to navigate the Schengen visa process. To have a tailored approach and assistance, contact the expert team at Global Visa Internationals.</p>
         
         <p>📞 <a href="https://wa.me/+917022213466">+91 70222 13466 (WhatsApp)</a></p>
@@ -198,7 +198,7 @@ export default function SchengenVisaFeeHack() {
           <li><a href="https://www.google.com/maps/place/Global+Visa+Internationals/@12.967478,77.6035421,17z">Google Maps</a></li>
         </ul>
 
-        <h2>Safe Travels and Last Thoughts</h2>
+        <h2 className={Styles.subtitle}>Safe Travels and Last Thoughts</h2>
         <p>
         Going on a European adventure shouldn't be marred by the concern of losing your visa fee. This insurance workaround provides a worthwhile financial safety net. Look at the modest premium for the "Refund of Visa Fees" add-on as a worthwhile investment for increased peace of mind when making your non-refundable travel arrangements.
         </p>

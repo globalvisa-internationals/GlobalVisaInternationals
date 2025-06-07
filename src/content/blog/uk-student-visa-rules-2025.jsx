@@ -189,24 +189,24 @@ export default function UKStudentVisa2025Rules() {
           />
         </div>
 
-        <h1>{metadata.title}</h1>
+        <h1 className={Styles.subtitle}>{metadata.title}</h1>
 
-        <p>The UK government is set to introduce tighter immigration rules for international students as part of a broader strategy to reduce net migration while continuing to attract highly skilled individuals. The new proposals, outlined in a May 2025 white paper titled <strong>"Restoring Control Over the Immigration System,"</strong> will bring significant changes to visa requirements, post-study work options, and the ability of students to bring family members to the UK.</p>
+        <p >The UK government is set to introduce tighter immigration rules for international students as part of a broader strategy to reduce net migration while continuing to attract highly skilled individuals. The new proposals, outlined in a May 2025 white paper titled <strong>"Restoring Control Over the Immigration System,"</strong> will bring significant changes to visa requirements, post-study work options, and the ability of students to bring family members to the UK.</p>
 
-        <h2>More Rigorous Student Visa Process</h2>
+        <h2  className={Styles.subtitle}>More Rigorous Student Visa Process</h2>
         <p>The application process for student visas will become more stringent. Universities and colleges will face stricter compliance checks, including more demanding benchmarks for visa-related assessments and increased oversight of international recruitment agents. Institutions will also be categorized using a <strong>red, amber, or green rating system</strong> based on their visa sponsorship performance and student outcomes.</p>
         <p>Government data indicates a 49% rise in student visa numbers at lower-ranked universities between 2021 and 2023, contrasting with a 7% decrease at top universities during the same period. The new regulations aim to ensure that only academically credible institutions are permitted to enroll international students.</p>
 
-        <h2>Post-Study Work Period Shortened</h2>
+        <h2 className={Styles.subtitle}>Post-Study Work Period Shortened</h2>
         <p>The <strong>Graduate Route</strong>, which currently allows international students to remain in the UK for two years after graduation, will be reduced to <strong>18 months</strong>. Additionally, universities will be required to pay a levy on tuition income generated from international students. This revenue will be used to support domestic skills development, aligning with the government's goal of reducing reliance on foreign workers.</p>
 
-        <h2>Restrictions on Dependent Visas</h2>
+        <h2 className={Styles.subtitle}>Restrictions on Dependent Visas</h2>
         <p>Further limitations will be placed on international students bringing dependents, particularly those pursuing postgraduate taught courses. The government has expressed concerns regarding English language proficiency and integration. Notably, the number of dependent visas issued rose dramatically from 16,000 in 2019 to 143,000 in 2023. Additional restrictions are anticipated.</p>
 
-        <h2>Increased English Language Requirements</h2>
+        <h2 className={Styles.subtitle}>Increased English Language Requirements</h2>
         <p>English language standards for visa applicants will be raised. While current requirements are at level B1, main visa holders will eventually need to meet level <strong>B2</strong>. Adult dependents will be required to demonstrate a minimum of <strong>A1</strong> level English upon entry, with higher proficiency levels necessary for later settlement.</p>
 
-        <h2>Pathways for High-Skilled Individuals Remain Open</h2>
+        <h2 className={Styles.subtitle}>Pathways for High-Skilled Individuals Remain Open</h2>
         <p>Despite the overall tightening of rules, the UK will expand opportunities for applicants in high-demand sectors such as artificial intelligence and life sciences. The <strong>Global Talent visa</strong> will provide greater flexibility for researchers, PhD holders, and other skilled professionals. The government also intends to raise the cap on overseas business transfers.</p>
 
       </main>
