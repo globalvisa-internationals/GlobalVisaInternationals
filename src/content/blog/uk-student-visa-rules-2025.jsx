@@ -110,6 +110,19 @@ export default function UKStudentVisa2025Rules() {
         <meta name="twitter:description" content={metadata.excerpt} />
         <meta name="twitter:image" content={fullImageUrl} />
         <meta name="twitter:image:alt" content={metadata.title} />
+        {/* Mobile SEO */}
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+        {/* GEO Tags for Local SEO (Bangalore, India example) */}
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="geo.position" content="12.9716;77.5946" />
+        <meta name="ICBM" content="12.9716, 77.5946" />
 
         {/* Structured Data: Organization */}
         <script
@@ -193,7 +206,7 @@ export default function UKStudentVisa2025Rules() {
 
         <p >The UK government is set to introduce tighter immigration rules for international students as part of a broader strategy to reduce net migration while continuing to attract highly skilled individuals. The new proposals, outlined in a May 2025 white paper titled <strong>"Restoring Control Over the Immigration System,"</strong> will bring significant changes to visa requirements, post-study work options, and the ability of students to bring family members to the UK.</p>
 
-        <h2  className={Styles.subtitle}>More Rigorous Student Visa Process</h2>
+        <h2 className={Styles.subtitle}>More Rigorous Student Visa Process</h2>
         <p>The application process for student visas will become more stringent. Universities and colleges will face stricter compliance checks, including more demanding benchmarks for visa-related assessments and increased oversight of international recruitment agents. Institutions will also be categorized using a <strong>red, amber, or green rating system</strong> based on their visa sponsorship performance and student outcomes.</p>
         <p>Government data indicates a 49% rise in student visa numbers at lower-ranked universities between 2021 and 2023, contrasting with a 7% decrease at top universities during the same period. The new regulations aim to ensure that only academically credible institutions are permitted to enroll international students.</p>
 
