@@ -1,8 +1,8 @@
 /* ----------- Dark Mode ----------- */
 @media (prefers-color-scheme: dark) {
 
-    .EuropeSec,
-    .EuropeData {
+    .canadaSec,
+    .canadaData {
         color: #e0e0e0;
     }
 
@@ -91,7 +91,7 @@
     margin: 0 auto;
 }
 
-.EuropeImage {
+.canadaImage {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -101,7 +101,7 @@
     width: 800px;
 }
 
-.EuropeSec {
+.canadaSec {
     display: flex;
     justify-content: center;
     padding: 40px;
@@ -113,7 +113,7 @@
 }
 
 
-.EuropeData {
+.canadaData {
     flex: 1;
     /* Takes available space */
     min-width: 60%;
@@ -380,7 +380,7 @@
         width: 100%;
     }
 
-    .EuropeImage {
+    .canadaImage {
         flex-wrap: wrap;
         justify-content: center;
         padding: 10px;
@@ -392,14 +392,14 @@
         /* Limits max size */
     }
 
-    .EuropeSec {
+    .canadaSec {
         flex-direction: column;
         align-items: center;
         padding: 20px;
         max-width: 95%;
     }
 
-    .EuropeData {
+    .canadaData {
         min-width: 95%;
         text-align: justify;
         /* Centers text for better readability */
