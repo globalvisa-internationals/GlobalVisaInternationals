@@ -206,6 +206,12 @@ export default async function sitemap() {
       changefreq: 'monthly',
       priority: 0.8,
     },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/uk-student-visa-rules-2025',
+      lastModified: new Date('2025-06-07'),
+      changefreq: 'monthly',
+      priority: 1,
+    },
     // add more URLs here
   ]
 }
