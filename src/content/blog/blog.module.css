@@ -195,14 +195,14 @@
   
   .table th,
   .table td {
-    border: 1px solid #dddddd;
+    border: 1px solid #000000;
     padding: 0.75rem 1rem;
     text-align: left;
     font-size: 0.95rem;
   }
   
   .table th {
-    background-color: #b5fcab;
+    background-color: #7e807e;
     font-weight: 600;
   }
   @media (max-width: 768px) {
