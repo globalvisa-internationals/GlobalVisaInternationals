@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const categories = [
   "All", "Study", "Visit", "Work", "Events", "PR-Visa", "Travel",
   "VFS Global", "Travel Tips", "Indian Culture & Festivals", "Visa Information"];
-const POSTS_PER_PAGE = 9;
+const POSTS_PER_PAGE = 8;
 
 export default function BlogList({ posts }) {
   const [filteredCategory, setFilteredCategory] = useState("All");
