@@ -25,21 +25,87 @@ export const metadata = {
 
 export default function USVisaBulletinJuly2025() {
   const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
-  const pageUrl = "https://www.globalvisainternationals.com/blog/us-visa-bulletin-july-2025/";
+  const pageUrl = "https://www.globalvisainternationals.com/blog/July-2025-USCIS-Visa/";
 
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.excerpt} />
-        <meta name="keywords" content={metadata.keywords.join(', ')} />
-        <meta name="author" content={metadata.author} />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preload" as="image" href={fullImageUrl} />
-        <link rel="canonical" href={pageUrl} />
-        {/* Open Graph & Twitter tags omitted for brevity */}
-      </Head>
+   <Head>
+    <title>July 2025 USCIS Visa Bulletin: Relief for Indian Applicants in EB-3, F2A & F4 Categories</title>
+    <meta name="description" content="Significant progress in the July 2025 USCIS Visa Bulletin brings relief for Indian applicants in EB-3, F2A, and F4 categories. Understand the latest updates and how they impact your U.S. green card application." />
+    <meta name="keywords" content="July 2025 Visa Bulletin, USCIS Visa Bulletin, Indian Applicants, EB-3 Visa India, F2A Visa India, F4 Visa India, Green Card India, Visa Bulletin Predictions, US Immigration News, Priority Dates India" />
+    <meta name="author" content="Global Visa Internationals" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/uscis-visa-bulletin-update.webp" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="July 2025 USCIS Visa Bulletin: Relief for Indian Applicants in EB-3, F2A & F4 Categories" />
+    <meta property="og:description" content="The July 2025 USCIS Visa Bulletin shows promising advancements for Indian green card hopefuls in the employment-based third preference (EB-3) and family-sponsored F2A and F4 categories. Get detailed insights here." />
+    <meta property="og:url" content="https://www.globalvisainternationals.com/blog/july-2025-uscis-visa-bulletin-india/" />
+    <meta property="og:image" content="https://www.globalvisainternationals.com/images/uscis-visa-bulletin-update.webp" />
+    <meta property="og:image:alt" content="USCIS Visa Bulletin Update for Indian Applicants" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:site_name" content="Global Visa Internationals" />
+    <meta property="og:image:type" content="image/webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GlobalVisaIntern" />
+    <meta name="twitter:creator" content="@GlobalVisaIntern" />
+    <meta name="twitter:url" content="https://www.globalvisainternationals.com/blog/july-2025-uscis-visa-bulletin-india/" />
+    <meta name="twitter:title" content="July 2025 USCIS Visa Bulletin: Positive Outlook for India's EB-3, F2A, F4" />
+    <meta name="twitter:description" content="Indian applicants in EB-3, F2A, and F4 categories see significant movement in the July 2025 USCIS Visa Bulletin. Stay informed about the latest immigration updates." />
+    <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/uscis-visa-bulletin-update.webp" />
+    <meta name="twitter:image:alt" content="USCIS Visa Bulletin News for Indian Green Card Applicants" />
+
+    <meta itemProp="name" content="July 2025 USCIS Visa Bulletin: Relief for Indian Applicants in EB-3, F2A & F4 Categories" />
+    <meta itemProp="description" content="Explore the key updates from the July 2025 USCIS Visa Bulletin offering relief and forward movement for Indian applicants in the EB-3, F2A, and F4 preference categories." />
+    <meta itemProp="image" content="https://www.globalvisainternationals.com/images/uscis-visa-bulletin-update.webp" />
+
+    {/* Organization Schema */}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Global Visa Internationals",
+          "url": "https://www.globalvisainternationals.com",
+          "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+          "description": "Global Visa Internationals provides the latest updates and expert insights on U.S. immigration, including the monthly USCIS Visa Bulletin.",
+          "founder": {
+            "@type": "Person",
+            "name": "Naveen Kumar J"
+          },
+          "foundingDate": "2016",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "MG Road",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560025",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-7022213466",
+            "contactType": "Customer Support",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
+          },
+          "areaServed": ["IN", "CA", "UK", "EU"],
+          "sameAs": [
+            "https://www.facebook.com/globalvisainternationals/",
+            "https://www.instagram.com/globalvisa_internationals/",
+            "https://www.linkedin.com/company/global-visa-internationals/",
+            "https://twitter.com/GlobalVisaIntern",
+            "https://www.youtube.com/channel/YOUR_YOUTUBE_CHANNEL_ID_HERE",
+            "https://www.google.com/maps/place/Global+Visa+Internationals+Pvt+Ltd/@YOUR_LATITUDE,YOUR_LONGITUDE,YOUR_ZOOM_LEVELz"
+          ]
+        })
+      }}
+    />
+  </Head>
 
       <main className="prose lg:prose-xl max-w-4xl mx-auto px-4 py-12">
         <div className={Styles.meta}>

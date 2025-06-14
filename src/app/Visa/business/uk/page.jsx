@@ -237,7 +237,7 @@ export default function newzealand() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/new-zealand-business-visa-banner.jpg" alt="new-zealand Business Visa Image" className={styles.newzealandImage} />
+        <img src="/visa/Europe-business-visa-banner.webp" alt="new-zealand Business Visa Image" className={styles.newzealandImage} />
       </div>
 
       <div class={styles.ukSec}>

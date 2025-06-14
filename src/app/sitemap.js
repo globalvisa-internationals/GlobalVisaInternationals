@@ -213,5 +213,26 @@ export default async function sitemap() {
       priority: 1,
     },
     // add more URLs here
+    {
+      url: 'https://www.globalvisainternationals.com/blog/US-Visa-got-rejected-dont-wory',
+      lastModified: new Date('2025-06-07'),
+      changefreq: 'monthly',
+      priority: 1,
+    },
+    // add more URLs here
+    {
+      url: 'https://www.globalvisainternationals.com/blog/uk-student-visa-rules-2025',
+      lastModified: new Date('2025-06-07'),
+      changefreq: 'monthly',
+      priority: 1,
+    },
+    // add more URLs here
+    {
+      url: 'https://www.globalvisainternationals.com/blog/uk-student-visa-rules-2025',
+      lastModified: new Date('2025-06-07'),
+      changefreq: 'monthly',
+      priority: 1,
+    },
+    // add more URLs here
   ]
 }

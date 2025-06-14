@@ -70,7 +70,7 @@ export default function newzealand() {
   return (
     <>
       <head>
-        <title>New Zealand Business Visa Assistance from India | Requirements, Process & Cost</title>
+        <title>New Zealand Business Visa Assistance| Requirements, Process & Cost</title>
         <meta name="description" content="Apply for a New Zealand Business Visa with expert help from Global Visa Internationals. Learn about visa requirements, eligibility, documentation, and the application process." />
         <meta name="keywords" content="New Zealand business visa, apply business visa New Zealand, New Zealand business visa from India, investor visa, entrepreneur visa, business migration to New Zealand" />
         <meta name="robots" content="index, follow" />
@@ -241,7 +241,7 @@ export default function newzealand() {
 
       <div className={styles.newzealandSec}>
         <div className={styles.newzealandData}>
-          <h1 className={styles.newzealandGuide}>Your Comprehensive Guide to New Zealand Business Visas | Global Visa Internationals</h1>
+          <h1 className={styles.newzealandGuide}> New Zealand Business Visas & Immigration Assistance | Global Visa Internationals</h1>
           <p>Dreaming of expanding your business horizons or investing in a dynamic economy? New Zealand, a land of stable economic growth, strategic global connections, and abundant opportunities, is calling! Securing a New Zealand Business Visa opens doors to an exceptional environment for entrepreneurs, investors, and business professionals. It's more than just a visa; it's a chance to establish a brighter future for your enterprise and potentially your family in the Land of the Long White Cloud.</p>
 
           <h3 className={styles.subTitle}>Why Choose New Zealand for Business? What Makes It So Special?</h3>
