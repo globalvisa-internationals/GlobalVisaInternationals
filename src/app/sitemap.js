@@ -219,20 +219,14 @@ export default async function sitemap() {
       changefreq: 'monthly',
       priority: 1,
     },
+  
     // add more URLs here
     {
-      url: 'https://www.globalvisainternationals.com/blog/uk-student-visa-rules-2025',
+      url: 'https://www.globalvisainternationals.com/blog/10-Plus-Countries-You-Can-Visit-With-A-USA-Visa',
       lastModified: new Date('2025-06-07'),
       changefreq: 'monthly',
       priority: 1,
-    },
-    // add more URLs here
-    {
-      url: 'https://www.globalvisainternationals.com/blog/uk-student-visa-rules-2025',
-      lastModified: new Date('2025-06-07'),
-      changefreq: 'monthly',
-      priority: 1,
-    },
+    }
     // add more URLs here
   ]
 }
