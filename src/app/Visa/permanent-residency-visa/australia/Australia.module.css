@@ -319,6 +319,11 @@ to {
     font-weight: 600;
   }
   @media (max-width: 768px) {
+    .AustraliaSec h1{
+      font-size: 25px;
+      color: #01ac28;
+      text-align: left;
+    }
     .heading {
       font-size: 1.5rem;
     }

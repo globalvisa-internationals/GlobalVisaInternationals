@@ -102,8 +102,8 @@ export default function USVisaBulletinJuly2025() {
                 "https://www.facebook.com/globalvisainternationals/",
                 "https://www.instagram.com/globalvisa_internationals/",
                 "https://www.linkedin.com/company/global-visa-internationals/",
-                "https://twitter.com/GlobalVisaIntern",
-                "https://www.youtube.com/channel/YOUR_YOUTUBE_CHANNEL_ID_HERE",
+                "https://twitter.com/GLOBALVISA1505",
+                "https://www.youtube.com/channel/@globalVisaInternationals",
                 "https://www.google.com/maps/place/Global+Visa+Internationals+Pvt+Ltd/@YOUR_LATITUDE,YOUR_LONGITUDE,YOUR_ZOOM_LEVELz"
               ]
             })

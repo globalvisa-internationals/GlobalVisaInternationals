@@ -319,6 +319,7 @@ to {
     font-weight: 600;
   }
   @media (max-width: 768px) {
+
     .heading {
       font-size: 1.5rem;
     }
@@ -326,7 +327,10 @@ to {
     .description {
       font-size: 0.95rem;
     }
-  
+        .CanadaGuide{
+      text-align: center;
+      font-size: 25px;
+    }
     .table th,
     .table td {
       font-size: 0.85rem;
@@ -351,6 +355,12 @@ to {
 
 
 @media screen and (max-width: 768px) {
+  .CanadaData h1{
+    text-align: left;
+    color: #01ac28;
+    font-size: 25px;
+  }
+
     .imageContainer {
         justify-content: center;
         padding-top: 70px;
