@@ -249,7 +249,7 @@ export default function Australia() {
 
       <div className={styles.AustraliaSec}>
         <div className={styles.AustraliaData}>
-          <h1 className={styles.AustraliaGuide}>Your Comprehensive Guide to Australian Business Visas | Global Visa Internationals</h1>
+          <h1 className={styles.AustraliaGuide}> Australian Business Visas Assistancs | Global Visa Internationals</h1>
           <p>Dreaming of expanding your business horizons or investing in a thriving economy? Australia, a land of robust economic growth, strategic global connections, and abundant opportunities, is calling! Securing an Australian Business Visa opens doors to an exceptional environment for entrepreneurs, investors, and business professionals. It's more than just a visa; it's a chance to establish a brighter future for your enterprise and potentially your family down under.</p>
 
           <h3 className={styles.subTitle}>Why Choose Australia for Business? What Makes It So Special?</h3>
