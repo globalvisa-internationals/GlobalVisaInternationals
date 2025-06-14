@@ -368,10 +368,85 @@ export default function Canada() {
 
         <div className={styles.CanadaData}>
           <h1 classNam={styles.CanadaGuide}>Canada PR Visa Consultants in Bangalore | Your Trusted Guide to Canadian Immigration | Global Visa Internationals</h1>
-          <p>Dreaming of a new beginning? Canada, a land of breathtaking landscapes, a vibrant multicultural society, and endless opportunities, is calling! If you're based in Bangalore and seeking expert **Canada PR visa consultants**, Global Visa Internationals is your dedicated partner. Securing Permanent Residency (PR) in Canada opens doors to an exceptional quality of life, access to world-class healthcare, top-tier education, and a thriving job market. It's more than just a visa; it's a chance to build a brighter future for you and your family.</p>
+          <p>Dreaming of a new beginning? Canada, a land of breathtaking landscapes, a vibrant multicultural society, and endless opportunities, is calling! If you're based in Bangalore and seeking expert Canada PR visa consultants, Global Visa Internationals is your dedicated partner. Securing Permanent Residency (PR) in Canada opens doors to an exceptional quality of life, access to world-class healthcare, top-tier education, and a thriving job market. It's more than just a visa; it's a chance to build a brighter future for you and your family.</p>
           <p></p>
           <h3 className={styles.subTitle}>Why Choose Canada for Permanent Residency? What Makes It So Special?</h3>
           <p>Canada isn't just another country; it's a promise of a better life. Here's what makes it a premier destination for Canadian immigration:</p>
+
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
 
           <ul>
             <li><strong>High Quality of Life:</strong> Canada consistently ranks among the top countries globally for its high quality of life. You'll find a safe, stable environment with abundant amenities, making it ideal for families and individuals alike.</li>
@@ -382,6 +457,82 @@ export default function Canada() {
             <li><strong>Stunning Natural Beauty:</strong> Imagine living surrounded by majestic mountains, pristine coastlines, and vast, untouched forests. Canada offers incredible natural beauty and endless opportunities for outdoor adventures.</li>
             <li><strong>Path to Citizenship:</strong> Your Canada PR is just the first step! After meeting residency requirements, you can apply for Canadian citizenship, gaining full rights and privileges in your new home.</li>
           </ul>
+
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
+
           <h3 className={styles.subTitle}>Key Canadian Cities and Regions for PR Seekers</h3>
           <p>While opportunities for immigrating to Canada exist nationwide, some cities and provinces are particularly popular for newcomers due to their thriving job markets and strong community support. Consider these top destinations for your Canada PR journey:</p>
           <ol>
@@ -400,10 +551,158 @@ export default function Canada() {
 
           </ol>
 
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
           ---
           <h2 className={styles.subTitle}>Tailor Your Canadian PR Pathway with Expert Assistance in Bangalore!</h2>
-          <p>Feeling overwhelmed by the options for Canada PR? Don't worry! As leading **Canada PR visa consultants in Bangalore**, we can help you navigate the various Canadian immigration programs. Take our quick quiz to discover your ideal Canadian immigration route – it's designed to point you in the right direction!</p>
+          <p>Feeling overwhelmed by the options for Canada PR? Don't worry! As leading Canada PR visa consultants in Bangalore, we can help you navigate the various Canadian immigration programs. Take our quick quiz to discover your ideal Canadian immigration route – it's designed to point you in the right direction!</p>
 
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
           ---
           <h2 className={styles.subTitle}>Understanding the Cost of Canadian Permanent Residency</h2>
           <p>Investing in your future in Canada is worth every penny, but it's good to know what to expect. The total cost of applying for Canadian Permanent Residency can vary based on the specific program, your family size, and other associated expenses. Here's a general breakdown of potential costs for immigrating to Canada:</p>
@@ -415,6 +714,82 @@ export default function Canada() {
                 <li>Dependent child: CAD 230 per child (approximately INR 14,000)</li>
                 <li>Right of Permanent Residence Fee (RPRF): CAD 515 per adult (approximately INR 31,500) - this crucial fee is paid after your application is approved, right before your Canada PR is confirmed.</li>
               </ul>
+
+              <div className={styles.formSection1}>
+
+                <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+                <form id="inquiry-form" onSubmit={handleSubmit}>
+                  <div className={styles.row}>
+                    <div>
+                      <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                    </div>
+                    <div>
+                      <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                    </div>
+                  </div>
+
+                  <div className={styles.row}>
+                    <div>
+                      <select className={styles.select} name="country" required>
+                        <option value="">Select Country</option>
+                        {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                          <option key={country} value={country}>{country}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <select className={styles.select} name="immigration_type" required>
+                        <option value="">Select Immigration Type</option>
+                        {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                          <option key={type} value={type}>{type}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className={styles.row}>
+                    <div>
+                      <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                    </div>
+                    <div>
+                      <select className={styles.select} name="age" required>
+                        <option value="">Select Age</option>
+                        <option value="18-45">18-45</option>
+                        <option value="45+">45+</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className={styles.row}>
+                    <div>
+                      <select className={styles.select} name="education" required>
+                        <option value="">Select Qualification</option>
+                        {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                          <option key={edu} value={edu}>{edu}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                    </div>
+                  </div>
+
+
+                  <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Submitting..." : "Submit"}
+                  </button>
+
+                </form>
+                {showPopup && (
+                  <div className={styles.popupOverlay}>
+                    <div className={styles.popupContent}>
+                      <p>✅ Your form has been submitted successfully!</p>
+                      <button onClick={() => setShowPopup(false)}>Close</button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
             </li>
             <br />
             <li><strong>Educational Credential Assessment (ECA):</strong> If your academic qualifications are from outside Canada, you'll need an ECA to verify their equivalency. The cost varies by organization (e.g., WES, IQAS), typically ranging from CAD 200-250 (approximately INR 12,200 - INR 15,300).</li>
@@ -431,6 +806,82 @@ export default function Canada() {
             <br />
             <li><strong>Consultancy Fees (if applicable):</strong> If you choose to leverage the expertise of an immigration consultant like Global Visa Internationals, their professional fees will be an additional cost. These fees vary based on the comprehensive services provided to guide you through your Canada PR journey.</li>
           </ul>
+
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
+
           <h2 className={styles.subTitle}>Example Estimated Total Out-of-Pocket Costs (for a single applicant, excluding consultancy fees and proof of funds):</h2>
           <ul>
             <li>Application Fees: CAD 850 (PR Fee) + CAD 515 (RPRF) = CAD 1365</li>
@@ -440,7 +891,7 @@ export default function Canada() {
             <li>Police Certificates: Variable</li>
             <li>Total Estimated Out-of-Pocket Costs: Approximately CAD 2,000 - CAD 2,500 (approximately INR 1.2 Lakhs - INR 1.5 Lakhs) + Proof of Funds.</li>
           </ul>
-          <p>Please remember, these are rough estimates, and actual costs can vary. It's always essential to check the official IRCC website for the most up-to-date fees and requirements. For a personalized cost breakdown, reach out to Global Visa Internationals, your trusted **Canada PR consultants in Bangalore**!</p>
+          <p>Please remember, these are rough estimates, and actual costs can vary. It's always essential to check the official IRCC website for the most up-to-date fees and requirements. For a personalized cost breakdown, reach out to Global Visa Internationals, your trusted Canada PR consultants in Bangalore!</p>
           ---
           <h2 className={styles.subTitle}>Tips for a Successful Canadian PR Application: Your Pathway to Success with Global Visa Internationals Bangalore</h2>
 
@@ -487,6 +938,81 @@ export default function Canada() {
             </li>
           </ul>
           ---
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
+
           <h2 className={styles.subTitle}>Additional Tips for Your Canadian Journey: Making the Most of Your PR</h2>
           <ol>
             <li><strong>Stay Updated:</strong> Canadian immigration policies can change. Regularly check the official IRCC website for the latest information and updates to ensure your application remains compliant.</li>
@@ -497,6 +1023,80 @@ export default function Canada() {
             <li><strong>Embrace the Adventure:</strong> Moving to a new country is a significant step, full of challenges and incredible opportunities. Embrace the journey, learn from new experiences, and enjoy building your new life in Canada!</li>
           </ol>
 
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
           ---
           <h2 className={styles.subTitle}>Applying for Canadian Permanent Residency: Your Pathways to Canada with Global Visa Internationals</h2>
           <p>Navigating the various routes to Canadian Permanent Residency can seem daunting, but we're here to simplify it. The most common programs for skilled workers seeking Canada PR include:</p>
@@ -514,6 +1114,81 @@ export default function Canada() {
             <li><strong>Quebec Skilled Worker Program (QSWP):</strong> Quebec has its own distinct immigration programs, separate from federal programs. Applicants wishing to reside in Quebec must apply through the QSWP.</li>
           </ul>
           <p><strong>Key Requirements (General for Skilled Worker Programs):</strong></p>
+
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
           <ul>
             <li><strong>Age:</strong> Generally, younger applicants score more points under the CRS.</li>
             <li><strong>Education:</strong> Higher education qualifications earn more points. An Educational Credential Assessment (ECA) is often required to prove your foreign credentials are valid in Canada.</li>
@@ -522,20 +1197,169 @@ export default function Canada() {
             <li><strong>Adaptability Factors:</strong> These factors can earn you additional points, and include things like previous Canadian work experience, Canadian education, having relatives in Canada, and your spouse's qualifications.</li>
             <li><strong>Proof of Funds:</strong> Demonstrating sufficient funds to support yourself and your family upon arrival in Canada is a non-negotiable requirement for many programs (unless you have a valid job offer in Canada).</li>
           </ul>
-          <p>Providing accurate information and all necessary documents is paramount to avoid delays or even rejection of your Canada PR application. That's where expert guidance from our **Canada PR visa consultants in Bangalore** comes in handy!</p>
+          <p>Providing accurate information and all necessary documents is paramount to avoid delays or even rejection of your Canada PR application. That's where expert guidance from our Canada PR visa consultants in Bangalore comes in handy!</p>
 
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
           ---
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals? Your Trusted Partner for Canada PR in Bangalore</h2>
-          <p>At Global Visa Internationals, we understand that the Canada PR application process can feel complex and overwhelming. That's why we're dedicated to making your journey to Canadian immigration smooth and stress-free. As leading **Canada PR visa consultants in Bangalore**, we offer comprehensive support, making us the preferred choice for aspiring permanent residents:</p>
+          <p>At Global Visa Internationals, we understand that the Canada PR application process can feel complex and overwhelming. That's why we're dedicated to making your journey to Canadian immigration smooth and stress-free. As leading Canada PR visa consultants in Bangalore, we offer comprehensive support, making us the preferred choice for aspiring permanent residents:</p>
           <ul>
-            <li><strong>Personalized Guidance:</strong> Our team of experienced **Canada PR consultants in Bangalore** provides tailored support throughout your entire application journey, from your initial eligibility assessment to the final submission of your documents.</li>
+            <li><strong>Personalized Guidance:</strong> Our team of experienced Canada PR consultants in Bangalore provides tailored support throughout your entire application journey, from your initial eligibility assessment to the final submission of your documents.</li>
             <li><strong>Expert Knowledge:</strong> The world of Canadian immigration is constantly evolving. We stay rigorously up-to-date with the latest visa regulations and program changes to ensure your application is always accurate, compliant, and complete.</li>
             <li><strong>Hassle-Free Process:</strong> Say goodbye to paperwork headaches! We handle the intricacies, guide you through each step, and assist with meticulous document preparation, saving you invaluable time and stress.</li>
             <li><strong>High Success Rate:</strong> Your success is our priority. We are committed to maximizing your chances of a successful Canada PR outcome with our meticulous approach and deep understanding of the immigration landscape.</li>
             <li><strong>Additional Services:</strong> Beyond core application support, we offer valuable services like strategies for CRS score improvement, practical job search assistance, and essential settlement advice to help you thrive in Canada.</li>
           </ul>
-          <p>We at Global Visa Internationals are proud to be India's finest visa consultants. We're dedicated to turning your dreams of Canada PR into reality. With over 11+ years of experience as leading **visa consultants in Bangalore**, we have successfully processed over 55,000+ visas and offered over 75,000 expert visa advice sessions to date. You can confidently rely on our vast experience in **Canada immigration consulting in India and specifically in Bangalore**.</p>
-          <p>Don't let the complexities of the Canada PR process hold you back! Let Global Visa Internationals, your trusted **Canada PR visa consultants in Bangalore**, be your partner in navigating the application and planning your exciting new life in Canada. Contact us today for a free consultation and take the first step towards your Canadian dream!</p>
+          <div className={styles.formSection1}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <p>We at Global Visa Internationals are proud to be India's finest visa consultants. We're dedicated to turning your dreams of Canada PR into reality. With over 11+ years of experience as leading visa consultants in Bangalore, we have successfully processed over 55,000+ visas and offered over 75,000 expert visa advice sessions to date. You can confidently rely on our vast experience in Canada immigration consulting in India and specifically in Bangalore.</p>
+          <p>Don't let the complexities of the Canada PR process hold you back! Let Global Visa Internationals, your trusted Canada PR visa consultants in Bangalore, be your partner in navigating the application and planning your exciting new life in Canada. Contact us today for a free consultation and take the first step towards your Canadian dream!</p>
           <br />
           <p><strong>Global Visa Internationals - Bangalore Office:</strong></p>
           <p>[Insert your full Bangalore Address here]</p>
@@ -618,6 +1442,7 @@ export default function Canada() {
             </div>
           )}
         </div>
+
       </div>
       <section id='Client Reviews'>
 
