@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { title: "STUDENT", path: "student-visa", countries: ["Canada", "Australia", "USA", "UK", "Europe", "New-Zealand"] },
   { title: "BUSINESS", path: "business", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
   { title: "PERMANENT RESIDENCY", path: "permanent-residency-visa", countries: ["Canada", "Australia"] },
-  { title: "WORK", path: "work", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
+  // { title: "WORK", path: "work", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
   { title: "REFUSAL VISA", path: "refusal-visa", countries: ["Canada", "Australia", "USA", "UK", "Europe", "New-Zealand"] },
 ];
 

@@ -244,12 +244,12 @@ export default function Australia() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/canada1.png" alt="Australia Image" className={styles.AustraliaImage} />
+        <img src="/visa/Canada-Business-Visa-Assistance.png" alt="Canada Business Visa Assistance.png" className={styles.AustraliaImage} />
       </div>
 
       <div class={styles.canadaSec}>
         <div class={styles.canadaData}>
-          <h1 class={styles.canadaGuide}>Your Comprehensive Guide to Canada Business Visas | Global Visa Internationals</h1>
+          <h1 class={styles.canadaGuide}> Canada Business Visas Assistance | Global Visa Internationals</h1>
           <p>Dreaming of expanding your business horizons or investing in a thriving, welcoming economy? Canada, a land of robust economic growth, strategic global connections, and abundant opportunities, is calling! Securing a Canada Business Visa opens doors to an exceptional environment for entrepreneurs, investors, and business professionals. It's more than just a visa; it's a chance to establish a brighter future for your enterprise and potentially your family in the Great White North.</p>
 
           <h3 class={styles.subTitle}>Why Choose Canada for Business? What Makes It So Special?</h3>

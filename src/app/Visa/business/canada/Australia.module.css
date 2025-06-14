@@ -374,6 +374,11 @@
 
 
 @media screen and (max-width: 768px) {
+    .canadaGuide{
+        text-align: center;
+        font-size: 25px;
+        color: #01ac28;
+    }
     .imageContainer {
         justify-content: center;
         padding-top: 70px;

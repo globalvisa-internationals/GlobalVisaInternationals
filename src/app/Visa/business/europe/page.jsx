@@ -242,12 +242,12 @@ export default function Europe() {
       </head>
 
       <div className={styles.imageContainer}>
-        <img src="/images/europe-business-visa-banner.jpg" alt="Europe Business Visa Image" className={styles.EuropeImage} />
+        <img src="/visa/Europe-Business-Visa-Assistance.png" alt="Europe Business Visa Image" className={styles.EuropeImage} />
       </div>
 
       <div className={styles.EuropeSec}>
         <div className={styles.EuropeData}>
-          <h1 className={styles.EuropeGuide}>Your Comprehensive Guide to Europe Business Visas | Global Visa Internationals</h1>
+          <h1 className={styles.EuropeGuide}>Europe Business Visas and Immigration Assistance | Global Visa Internationals</h1>
           <p>Dreaming of expanding your business horizons or investing in a dynamic economy? Europe, a continent of rich economic diversity, strategic global connections, and abundant opportunities, is calling! Securing a Europe Business Visa opens doors to an exceptional environment for entrepreneurs, investors, and business professionals. It's more than just a visa; it's a chance to establish a brighter future for your enterprise and potentially your family across various European nations.</p>
 
           <h3 className={styles.subTitle}>Why Choose Europe for Business? What Makes It So Special?</h3>

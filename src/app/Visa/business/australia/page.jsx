@@ -71,7 +71,7 @@ export default function Australia() {
   return (
     <>
       <head>
-        <title>Australia Business Visa Assistance from India | Requirements, Process & Cost</title>
+        <title>Australia Business Visa and Immigration Assistance </title>
         <meta name="description" content="Apply for an Australia Business Visa with expert help from Global Visa Internationals. Learn about business visa requirements, eligibility, fees, and the application process." />
         <meta name="keywords" content="Australia business visa, apply business visa Australia, Australia business visa from India, Australia investor visa, business visa consultants, business migration to Australia" />
         <meta name="robots" content="index, follow" />
@@ -244,7 +244,7 @@ export default function Australia() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/Australia1.png" alt="Australia Image" className={styles.AustraliaImage} />
+        <img src="/visa/Australia-Business-Visa-Assistance.png" alt="Australia Business Visa Assistance Image" className={styles.AustraliaImage} />
       </div>
 
       <div className={styles.AustraliaSec}>

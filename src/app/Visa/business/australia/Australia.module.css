@@ -342,6 +342,10 @@
 }
 
 @media (max-width: 768px) {
+    .AustraliaGuide{
+        text-align: center;
+        font-size: 25px;
+    }
     .heading {
         font-size: 1.5rem;
     }
