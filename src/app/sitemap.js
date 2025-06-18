@@ -226,6 +226,12 @@ export default async function sitemap() {
       lastModified: new Date('2025-06-07'),
       changefreq: 'monthly',
       priority: 1,
+    },
+        {
+      url: 'https://www.globalvisainternationals.com/blog/uk-evisa-digital-visa-replacement-2025',
+      lastModified: new Date('2025-06-18'),
+      changefreq: 'monthly',
+      priority: 1,
     }
     // add more URLs here
   ]
