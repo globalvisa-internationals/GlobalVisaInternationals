@@ -232,7 +232,13 @@ export default async function sitemap() {
       lastModified: new Date('2025-06-18'),
       changefreq: 'monthly',
       priority: 1,
-    }
+    },
+        {
+      url: 'https://www.globalvisainternationals.com/blog/germany-steady-harbor-indian-students',
+      lastModified: new Date('2025-06-18'),
+      changefreq: 'monthly',
+      priority: 1,
+    },
     // add more URLs here
   ]
 }
