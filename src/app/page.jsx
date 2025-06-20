@@ -8,6 +8,7 @@ import { NextSeo, LocalBusinessJsonLd, FAQPageJsonLd } from 'next-seo';
 import Head from "next/head";
 
 
+const text = "Global Visa Internationals | The Visa And Immigration Assistance Experts | We Deal With All Type Of Visas";
 
 const slides = [
   "/gallery/1.jpg",
@@ -181,7 +182,6 @@ export default function Home() {
   // services section
 
 
-
   return (
     <>
       <head>
@@ -308,9 +308,9 @@ export default function Home() {
           </div>
         </section>
 
-        <h1 className={styles.mainHeading}>
-          Leading Visa and Immigration Consultants in Bangalore – Global Visa Internationals Consultancy Experts
-        </h1>
+        <h1 className={styles.waveText}>
+      Global Visa Internationals | The Visa And Immigration Assistance Experts | We Deal With All Type Of Visas
+    </h1>
 
         {/* About Us Section */}
         <section id="aboutUs">
@@ -330,15 +330,14 @@ export default function Home() {
             {/* Text Section */}
             <div className={styles.textContent}>
               <h2 className={styles.subtitle}>Our Story</h2>
-              <p>Global Visa Internationals is one of India’s leading private visa consultancies, providing expert visa guidance to individuals and families planning to study, work, or travel abroad. With over 9 years of experience, we’ve successfully assisted with 55,000+ visa applications and conducted 75,000+ expert consultations, helping our clients achieve their international goals.</p>
+              <p>Global Visa Internationals is one of Finest private visa consultancy, provides expert visa assistance to individuals and families planning to study, work, or travel abroad. With over 7+ years of experience, we’ve successfully assisted with 55,000+ visa applications and conducted 75,000+ expert consultations, helping our clients achieve their international goals.</p>
 
-              <p>We are a private immigration consultancy based in Bangalore, offering personalized advisory services to simplify complex visa procedures. Our support covers a wide range of categories — from education and employment to travel and relocation — all with a commitment to clarity, transparency, and results.</p>
+              <p>We are the private visa and immigration consultancy wchich is located in Bangalore, offering personalized Visa assistance to simplify complex visa procedures. Our support covers a wide range of categories — including education, employment, travel, and relocation. We are committed to offering clarity, transparency, and results in all our services.</p>
 
               <p>Our Visa Support Services Include: Student Visa Assistance for higher education abroad
-                ,Work Visa Guidance for professionals aiming to grow internationally, Tourist & Visitor Visa Help for hassle-free travel, Business Visa Consultation for entrepreneurs and professionals, PR & Skilled Immigration Advice for long-term relocation goals, Family / Dependent Visa Support to reunite loved ones, Visa Refusal Assistance and reapplication guidance
+                ,Work Visa assistance for professionals aiming to grow internationally, Tourist & Visitor Visa Help for stress-free travel, Business Visa Consultation for entrepreneurs and professionals, PR & Skilled Immigration Advice for long-term relocation goals, Family / Dependent Visa Support to reunite loved ones, Visa Refusal Assistance and reapplication guidance
               </p>
-              <p>Global Visa Internationals is a private consultancy and is not affiliated with any government or embassy. We offer independent visa and immigration advisory services.</p>
-
+              <p>Global Visa Internationals is a private Visa consultancy which is not affiliated with any government or embassy. We offer independent visa and immigration assistance & services.</p>
             </div>
           </section>
 
@@ -353,30 +352,31 @@ export default function Home() {
 
             <h3><li> Our Services Include Expert Assistance With:</li></h3>
             <ul>
-              <li>Study Abroad Planning / Student Visa Guidance</li>
-              <li>Work Abroad Visa Consultation </li>
-              <li>Tourist & Visitor Visa Help for Indian Citizens</li>
-              <li>Business Travel Visa Support</li>
-              <li>PR (Permanent Residency) Advisory Services</li>
-              <li>Skilled Migration Pathway Consulting</li>
-              <li>Spouse / Dependent Visa Support </li>
-              <li>Refused Visa Case Reviews & Reapplication Guidance</li>
+              <li>Study Abroad Planning / Student Visa Assistance </li>
+              <li>Work  Visa Assistance </li>
+              <li>Tourist & Visitor Visa Assistance for Indian Citizens</li>
+              <li>Business Travel Visa Assistancet</li>
+              <li>PR (Permanent Residency) Assistance </li>
+              <li>Skilled Migration Assistance</li>
+              <li>Spouse / Dependent Visa Assistancet </li>
+              <li>Refused Visa Case Reviews & Reapplication Assistance</li>
               and more
             </ul>
-            <li>We offer end-to-end private visa consultation, ensuring that your documents, eligibility, and goals are aligned with your chosen country’s requirements.</li>
+            <li>We offer end-to-end private visa consultation, ensuring that your documents, eligibility, and goals are aligned with your chosen and country's requirements.</li>
             <h3><li>Popular Destinations We Support:</li></h3>
             <ul>
-              <li>Canada visa consultants </li>
-              <li>Australia immigration consultants </li>
-              <li>UK study visa consultants </li>
-              <li>USA visitor visa help</li>
-              <li>Europe visa consultants </li>
+              <li>Canada visa Assistance </li>
+              <li>Australia PR Visa Assistance </li>
+              <li>Canada PR Visa Assistance</li>
+              <li>UK Student visa Assistance </li>
+              <li>USA visitor visa Assistance</li>
+              <li>Europe visa Assistance </li>
               <li>And more…</li>
             </ul>
 
-            <li>Whether you're aiming to work in Australia, study in Canada, or explore Europe, our independent team offers step-by-step assistance tailored to your goals.</li>
+            <li>Whether you're aiming to work in Australia, study in Canada, or explore Europe, our independent team offers step-by-step Guidence according to your goals.</li>
 
-            <li>Our Experienced & Certified Consultants are dedicated to guiding you every step of the way in your visa journey from India.
+            <li>Our Experienced & Certified Team are dedicated to guiding you every step of the way in your visa journey from India.
             </li>
             <li>We offer Personalized Immigration Solutions for individuals, students, professionals, and families seeking visas from India</li>
             <li>Experience a Transparent and Trustworthy Process with complete support from start to finish for your visa needs in India.</li>
@@ -520,7 +520,7 @@ export default function Home() {
                 <h3>Tourist Visa</h3>
                 <ul>
                   <li><a href="/Visa/tourist-visa/canada">CANADA</a></li>
-                  <li> <a href="/Visa/tourist-visa/australia">AUSTRALIA</a></li>
+                  <li><a href="/Visa/tourist-visa/australia">AUSTRALIA</a></li>
                   <li><a href="/Visa/tourist-visa/usa">USA</a></li>
                   <li><a href="/Visa/tourist-visa/uk">UK</a></li>
                   <li><a href="/Visa/tourist-visa/europe">EUROPE</a></li>
@@ -802,9 +802,7 @@ export default function Home() {
 
           </div>
         </section>
-         <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
-
-
+        <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
 
       </main>
 

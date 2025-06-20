@@ -139,6 +139,30 @@
   justify-content: center;
   color: #277a00;
 }
+.mainHeadingWrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.mainHeading {
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  text-align: center;
+  
+}
+.waveText {
+  color: #047a20;
+   font-size: 23px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
 
 
 .thoughtSection {
@@ -1101,3 +1125,12 @@
     padding: 5px;
   }
 }
+.note {
+    font-size: 18px;
+    color: #2f3d26;
+    padding: 18px;
+    margin: auto;
+    border-left: 4px solid #01ac28;
+    max-width: 1100px;
+    margin: auto;
+  }
