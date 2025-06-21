@@ -25,7 +25,7 @@ export const metadata = {
 
 export default function USGreenCard2025Rules() {
   const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
-  const pageUrl = "https://www.globalvisainternationals.com/blog/J-1-Visa-Cancelled-Heres-What-Really-Happened-and-How-You-Can-Bounce-Back/";
+  const pageUrl = "https://www.globalvisainternationals.com/blog/Marrying-a-U.S.-Citizen-No-Longer-Guarantees-a-Green-Card-What-You-Need-to-Know-in-2025/";
 
   const blogStructuredData = {
     "@context": "https://schema.org",
@@ -262,8 +262,6 @@ export default function USGreenCard2025Rules() {
             Some people get waivers, but it’s risky and totally up to their mood. Don’t rely on luck, ya.
           </ul>
 
-
-
           <h2 className={Styles.subtitle}><li>Overseas Marriages Are Under Scanner</li></h2>
           <ul>
             If your marriage happened outside the U.S., expect more headache:
@@ -287,9 +285,6 @@ export default function USGreenCard2025Rules() {
         Earlier, marrying an American felt like express entry. But now? It’s like a long, unpredictable game with paperwork, interviews, and full drama.
         <br />
         If you’re serious about building a life together, do it the right way. Otherwise, you’ll waste time, money, and emotional energy. And trust me, once you get into trouble with USCIS, it’s tough to come back.
-
-
-
         <h2 className={Styles.subtitle}>Need Help With Your Visa Now?</h2>
         <p>At Global Visa Internationals, Bangalore, we handle complex U.S. visa cases just like this every day. Whether your J-1 got revoked, your visa got denied, or you're applying fresh – we're here to help you.</p>
         <h4 className={Styles.subtitle}>Why choose us?</h4>
