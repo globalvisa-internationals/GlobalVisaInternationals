@@ -174,7 +174,6 @@ export default function CareerPage() {
 
             <h3 className={styles.subTitle}>What We're Looking For:</h3>
             <ul>
-              <li>Education: Minimum PUC or Diploma; graduates are preferred.</li>
               <li>Experience: Fresher</li>
               <li>Skills: Strong communication, basic computer knowledge, and attention to detail.</li>
               <li>Qualities: Organized, patient, and willing to grow along with our company.</li>
@@ -200,8 +199,8 @@ export default function CareerPage() {
 
             <h3 className={styles.subTitle}>What You Bring:</h3>
             <ul>
-              <li>Education:Minimum PUC or Diploma; graduates are preferred.</li>
-              <li>Experience:Freshers, ideally within education, immigration, or customer-facing roles.</li>
+              
+              <li>Experience:Freshers,</li>
               <li>Skills: Great communication and persuasion, and ability to manage time well.</li>
             </ul>
 
