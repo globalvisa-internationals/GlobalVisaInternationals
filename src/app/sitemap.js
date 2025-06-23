@@ -239,6 +239,12 @@ export default async function sitemap() {
       changefreq: 'monthly',
       priority: 1,
     },
+        {
+      url: 'https://www.globalvisainternationals.com/blog/US-Introduces-Sweeping-New-Rules-for-Foreign-Students-What-Indians-Need-to-Know',
+      lastModified: new Date('2025-06-23'),
+      changefreq: 'monthly',
+      priority: 1,
+    }
     // add more URLs here
   ]
 }
