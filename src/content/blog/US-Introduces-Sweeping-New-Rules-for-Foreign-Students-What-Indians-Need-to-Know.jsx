@@ -2,7 +2,7 @@ import Styles from './blog.module.css';
 import Head from 'next/head';
 
 export const metadata = {
- title: "U.S. Introduces Sweeping New Rules for Foreign Students – What Indians Need to Know",
+  title: "USA Student Visa New Rules 2025: What Indian Students Must Know About F1, J1 & OPT Changes",
   date: "Jun 23, 2025",
   category: "Visa Information",
   author: "Global Visa Internationals Team",
@@ -34,7 +34,7 @@ export default function USGreenCard2025Rules() {
       "@type": "WebPage",
       "@id": pageUrl
     },
-    "headline": "U.S. Introduces Sweeping New Rules for Foreign Students – What Indians Need to Know",
+    "headline": "USA Student Visa New Rules 2025: What Indian Students Must Know About F1, J1 & OPT Changes",
     "description": "Major changes in U.S. student visa rules affect Indian applicants: Find out what's new, how it impacts F-1, J-1, and OPT status, and what steps to take next.",
     "image": fullImageUrl,
     "author": {
@@ -208,86 +208,88 @@ export default function USGreenCard2025Rules() {
         <h1 className={Styles.subtitle}>{metadata.title}</h1>
 
         <p>With recent policy shifts, the United States has dramatically tightened visa protocols for international students—especially those from India. Here's a thorough breakdown:
-          </p>
+        </p>
 
         <ol>
-          <h2 className={Styles.subtitle}><li>U.S. F-1 Visa Process Resumes with Stricter Screening in 2025</li></h2>
-          
+          <h2 className={Styles.subtitle}><li>USA F1 Visa 2025: Stricter Process Resumes with New Screening Rules</li></h2>
           <ul>
-            <li>May 27, 2025: The State Department abruptly halted all F, M, and J visa interviews worldwide to prepare for enhanced security vetting</li>
-            <li>June 18, 2025: Interviews resumed—but now under mandatory social media disclosure rules</li>
-            
-          </ul>
-          
-
-          <h2 className={Styles.subtitle}><li>Mandatory Social Media Disclosure for U.S. Student Visa Applicants</li></h2>
-          <ul>
-           <li>Applicants for F (student), M (vocational), and J (exchange) visas must:
-            <ul>
-              <li>Provide actual social media handles.</li>
-              <li>Set all profiles to public (no private settings).</li>
-              <li>Consular officers will scrutinize posts for signs of anti‑U.S. sentiment, extremism, antisemitism, or terrorist support </li>
-            </ul>
-           </li>
-           <li>Refusing the disclosure or privacy setting may result in visa refusal or revocation </li>
-
+            <li>May 27, 2025: U.S. embassies paused all F1, M1, and J1 visa interviews globally to prepare for tighter security checks.</li>
+            <li>June 18, 2025: Interviews restarted, but now with strict rules—especially about online behavior and social media activity.</li>
           </ul>
 
-          <h2 className={Styles.subtitle}><li>Visa Appointment Delays and Prioritization for U.S. Universities in 2025</li></h2>
-          
+          <h2 className={Styles.subtitle}><li>F1 Visa Social Media Rules: Mandatory Disclosure for Indian Students</li></h2>
           <ul>
-            
-            <li>Consular posts are instructed to prioritize applicants to schools with  15% international students—likely delaying or limiting slots for top-tier universities with high foreign enrollment</li>
-            <li>The added workload from comprehensive vetting may cause fewer interview slots and longer wait times</li>
-            
+            <li>Students applying for F1, M1, or J1 visas now need to:
+              <ul>
+                <li>Share real social media usernames (no skipping).</li>
+                <li>Keep all profiles public—private accounts may lead to issues.</li>
+                <li>Officers will check for any anti-U.S. content, extreme views, or suspicious activities.</li>
+              </ul>
+            </li>
+            <li>If students deny access or hide profiles, their visa could be delayed, rejected, or even cancelled.</li>
           </ul>
 
-          <h2 className={Styles.subtitle}><li>New U.S. Visa Rules Impact Indian Students in 2025</li></h2>
+          <h2 className={Styles.subtitle}><li>USA Visa Appointment Delays: How It Affects Indian Students</li></h2>
           <ul>
-           
-            <li>Since Spring 2025, thousands of visas have been revoked, often citing mild infractions—traffic tickets, minor offenses, or political activism, particularly pro‑Palestinian demonstrations</li>
-            <li>Hundreds of Indian students have been affected, fueling widespread fear</li>
+            <li>In 2025, U.S. consulates are focusing on universities with fewer international students.</li>
+            <li>This may delay slots for top U.S. universities like NYU, USC, or Columbia—where many Indians apply.</li>
+            <li>With added checks, fewer interviews are being scheduled, and wait times are getting longer.</li>
           </ul>
 
-          <h2 className={Styles.subtitle}><li>How Indian Students Can Safely Navigate U.S. Visa Changes in 2025</li></h2>
+          <h2 className={Styles.subtitle}><li>New U.S. Visa Rules Hit Indian Students Hard</li></h2>
           <ul>
-            
-          <li>Enrollment figures dipped sharply: ~330,000 Indian students in 2024, now projected to decline significantly as applicants defer or choose alternatives like Canada, Australia, or Europe</li>
-          <li>Delays in interview scheduling, visa denials, and bureaucratic uncertainty are prompting students to seek early entry slots or alternate pathways.</li>
+            <li>Since early 2025, thousands of F1/J1 visas have been cancelled—some even for small mistakes like traffic fines or political social media posts.</li>
+            <li>Many Indian students, especially from Andhra, Telangana, and Karnataka, have faced visa issues or sudden deportation.</li>
+          </ul>
+
+          <h2 className={Styles.subtitle}><li>How Indian Students from Bangalore Can Handle 2025 USA Visa Changes</li></h2>
+          <ul>
+            <li>Indian student numbers are dropping—around 3.3 lakh in 2024, but 2025 is seeing many students delay or shift to Canada, Australia, or Germany.</li>
+            <li>If you're applying now, try to:
+              <ul>
+                <li>Book visa slots as early as possible.</li>
+                <li>Clean up your digital footprint (public profiles, no political content).</li>
+                <li>Keep university documents, SEVIS receipts, and intent-to-return proofs ready.</li>
+              </ul>
+            </li>
           </ul>
         </ol>
 
-        <h2 className={Styles.subtitle}> Get Expert U.S. Visa Help from Global Visaa Internationals</h2>
- <ol>
-  <li><strong>Immediate Action on Social Media </strong><br />
-Clean up all profiles: remove or hide any content that could be construed as anti-U.S., politically controversial, or extremist.</li>
-  
-  <li><strong>Prepare Thoroughly for Interviews</strong>
-    <br />
-    Expect questions about your online history. Be honest—not defensive—and explain any prior posts or affiliations clearly.
-  </li>
-  <li><strong>Strategize University Selection</strong>
-    <br />
-    Where possible, apply to institutions with lower international student ratios to increase your chances of securing an interview.
-  </li>
-  <li><strong>Expect Delays & Have Backups</strong> <br />Apply early, prepare for administrative processing, and explore alternate intakes or destinations in parallel.</li>
-  <li><strong>Know Your Rights & Stay Compliant</strong><br />
-  Familiarize yourself with SEVP rules: maintaining full-time enrollment, avoiding unapproved work, and obeying laws is critical. Even small infractions could trigger visa issues.</li>
- </ol>
-<h2 className={Styles.subtitle}>Why Partner with Global Visaa Internationals?</h2>
-<p>Navigating these complex changes can feel overwhelming. That’s where trusted expert support makes a difference:</p>
-<ul>
-  <li> Proactive Social Media Audits</li>
-  <li> Document Preparation & Mock Interviews</li>
-  <li>University & Timing Guidance (focusing on priority-safe schools)</li>
-  <li>Ongoing Support & Follow‑up</li>
-</ul>
-<p>Global Visaa Internationals has deep expertise across all U.S. visa categories and supports students through every phase—application, interview, and visa maintenance. For your blog and LinkedIn readers, this is the <strong>one resource that brings clarity, confidence, and success </strong>in a turbulent landscape.</p>
-<h2 className={Styles.subtitle}>Final Take: Stay Vigilant, Stay Ahead</h2>
-<p>The U.S. has adopted unprecedented transparency demands from international students—social media exposure, ideological review, and preferential treatment systems are now standard. But with strategic planning, preparation, and expert help, your audience can still thrive and secure their American dreams.</p>
-<h2 className={Styles.subtitle}>Kickstart Your Journey</h2>
-<p>Encourage your readers:</p>
-<p className={Styles.note}>“Don’t wait—reach out to Global Visaa Internationals now for a personalized assessment and start your successful U.S. visa journey today!”</p>
+        <h2 className={Styles.subtitle}>Get Expert Help for USA Student Visa 2025 – From Global Visa Internationals</h2>
+        <ol>
+          <li><strong>Clean Up Social Media Before Visa Interview</strong><br />
+            Remove posts that may be seen as political, controversial, or anti-U.S. Make sure your Instagram, Facebook, LinkedIn, etc., look clean and professional.
+          </li>
+          <li><strong>Be Prepared for Digital History Questions</strong><br />
+            U.S. visa officers now check your online presence. Be honest and stay calm if they ask about anything from your past posts.
+          </li>
+          <li><strong>Pick the Right University Smartly</strong><br />
+            Try applying to universities with fewer international students. This can improve your chances of faster visa slot availability.
+          </li>
+          <li><strong>Start Early – Keep Plan B Ready</strong><br />
+            Visa delays are real. Apply early, and always keep backup options like Canada, Germany, or Australia in mind.
+          </li>
+          <li><strong>Follow Visa Rules After Arrival</strong><br />
+            Stick to full-time study, avoid off-campus jobs without permission, and follow all SEVP rules. Even small mistakes can cost you your visa.
+          </li>
+        </ol>
+
+        <h2 className={Styles.subtitle}>Why Choose Global Visa Internationals in Bangalore?</h2>
+        <p>With U.S. visa rules changing rapidly, having the right support matters. Here's why thousands of students from Bangalore trust us:</p>
+        <ul>
+          <li>Social Media Profile Check & Cleanup</li>
+          <li>Perfect Document Guidance & Mock Interviews</li>
+          <li>Help with University Selection (based on visa slot success rates)</li>
+          <li>Full Support Even After Visa – Including CPT, OPT & SEVIS compliance</li>
+        </ul>
+        <p>At Global Visa Internationals, we understand Indian students' dreams. From choosing your university to getting your F1 visa stamped and beyond—we’re with you at every step.</p>
+
+        <h2 className={Styles.subtitle}>Final Thoughts: Be Smart, Be Ready</h2>
+        <p>U.S. student visa requirements in 2025 are tougher than ever. From checking your Instagram to analysing what you post online, the system is more alert. But with the right planning and expert help, Indian students can still achieve their study abroad dreams.</p>
+
+        <h2 className={Styles.subtitle}>Let’s Begin Your Study Abroad Journey</h2>
+        <p>If you're serious about studying in the USA, don’t leave anything to chance.</p>
+        <p className={Styles.note}><strong>“Message Global Visa Internationals today for a free, personalized U.S. visa assessment – and take the first confident step toward your dream university!”</strong></p>
         <p>
           <strong className={Styles.subtitle}>Don’t risk. Contact us now!</strong><br />
           <a href="https://www.globalvisainternationals.com/contact">Schedule a Call</a> | 📧 <a href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a>
