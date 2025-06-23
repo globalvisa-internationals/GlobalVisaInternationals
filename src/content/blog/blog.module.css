@@ -212,6 +212,15 @@
     background-color: #7e807e;
     font-weight: 600;
   }
+  
+  .note {
+        font-size: 0.95rem;
+    color: #235004;
+    padding: 1rem;
+    border-left: 4px solid #1c8108;
+    max-width: 800px;
+    margin: auto;
+  }
   @media (max-width: 768px) {
     .heading {
       font-size: 1.5rem;
