@@ -185,7 +185,7 @@ export default function Home() {
   return (
     <>
       <head>
-        <title>Global Visa Internationals | Trusted Immigration Consultants in Bangalore</title>
+        <title>Top Visa Consultants in Bangalore | USA, Canada, UK,Australia, Europe Visa assistance Experts</title>
         <meta name="description" content="Leading immigration consultants in Bangalore offering expert visa services for Canada PR, USA, UK, Australia, Schengen, and more. Over 75,000 happy clients. Fast, genuine guidance and transparent pricing!" />
         <meta name="keywords" content="immigration consultants in bangalore, visa agents, canada pr, study abroad, work visa, visitor visa, dependent visa, business visa, refusal visa, fast visa services, immigration consultants, visa agents near me, canada immigration consultants, visa consultants near me, immigration agent, immigration agent near me, canada immigration consultants in bangalore, migration agents, visa consultancy services, visa consultants in bangalore, canada immigration services, canada immigration agency, spouse visa consultants, student visa consultants near me, canada immigration consultants near me, agent for visa application, study visa consultants near me, pr immigration consultants, work permit visa, immigration consulting services, study visa consultants, student visa consultants, student visa agent, spouse visa consultants near me, student visa agents near me, visa immigration consultants, australia immigration consultants in bangalore, tourist visa agents near me, visa agents in bangalore, canada pr immigration consultants, visa consultancy services near me, canada pr consultancy, immigration and visa consultants, golden visa consultancy, canada pr consultants in bangalore, visa application agents near me, work visa consultants near me, spouse visa agent, work visa consultants, visa travel agency" />
         <link rel="canonical" href="https://www.globalvisainternationals.com/" />
@@ -319,7 +319,7 @@ export default function Home() {
             <div className={styles.imageWrapper}>
               <Image
                 src="/images/story.webp"
-                alt="Our Story Image"
+                alt="Best visa agents in Bangalore"
                 fill
                 quality={100}
                 className={styles.responsiveImage1}

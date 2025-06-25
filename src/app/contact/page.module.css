@@ -18,14 +18,14 @@
 
   .input,
   .select {
-    color: #1a1919;
-    border: 1px solid #a6e988;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    
+    
+    /* box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1); */
   }
 
   .input::placeholder,
   .select option {
-    color: #202020;
+    /* color: #202020; */
   }
 
   .table {
@@ -130,7 +130,6 @@
     align-items: center;
     flex-direction: column;
     width: 400px; 
-    box-shadow: 0 5px 10px #000;
     border-radius: 10px;
     padding: 20px;
     margin-top: 40px;
