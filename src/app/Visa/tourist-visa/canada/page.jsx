@@ -118,13 +118,13 @@ export default function Canada() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Canada Tourist Visa Assistence: Requirements, Application & Top Places | Global Visa Internationals</title>
             <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgSchema) }}
         />
-      </Head>
+      </Head> */}
 
       <NextSeo
         title="Canada Tourist Visa Assistence: Requirements, Application & Top Places | Global Visa Internationals"
