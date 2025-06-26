@@ -2,16 +2,20 @@
 import styles from './Canada.module.css';
 import React, { useState, useEffect } from 'react';
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LocalBusinessJsonLd } from 'next-seo';
+import Head from 'next/head';
+
 
 export default function Canada() {
 
-  const jsonLd = {
+  const educationalOrgSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Global Visa Internationals",
     "url": "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
     "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Unlock Your Canada Adventure! Global Visa Internationals provides expert guidance for your Canada tourist visa application. Simplify the process and explore Canada's wonders. Contact us today!",
+    "description":
+      "Unlock Your Canada Adventure! Global Visa Internationals provides expert guidance for your Canada tourist visa application. Simplify the process and explore Canada's wonders. Contact us today!",
     "founder": {
       "@type": "Organization",
       "name": "Naveen Kumar J"
@@ -34,13 +38,15 @@ export default function Canada() {
     },
     "areaServed": ["IN", "Canada", "EU"],
     "sameAs": [
-      "https://www.facebook.com/GlobalVisaInternationals",
+      "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/globalvisainternationals"
-      // Add more links if you have Twitter, YouTube, etc.
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
     ]
-
   };
+
   //review
 
   useEffect(() => {
@@ -111,43 +117,121 @@ export default function Canada() {
   };
 
   return (
-  <>
+    <>
       <head>
-        <title> Canada Tourist Visa: Requirements, Application & Top Places | Global Visa Internationals</title>
-        <meta name="description" content="Planning a trip to Canada? Global Visa Internationals offers expert guidance on Canada tourist visa requirements and the application process. Discover the top places to visit in Canada." />
-        <meta name="keywords" content="Canada tourist visa, Canada visitor visa, Canada visa requirements, apply for Canada tourist visa, Canada travel visa, tourist visa for Canada, visit Canada, top places to visit in Canada, Canada tourism, Canada travel guide, Canada visa application process" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/canada" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Canada Tourist Visa: Requirements, Application & Top Places | Global Visa Internationals" />
-        <meta property="og:description" content="Planning a trip to Canada? Global Visa Internationals offers expert guidance on Canada tourist visa requirements and the application process. Discover the top places to visit in Canada." />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/canada" />
-        <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content="URL_TO_YOUR_Canada_TOURIST_IMAGE" /> */}
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Tourist Visa: Requirements, Application & Top Places | Global Visa Internationals" />
-        <meta name="twitter:description" content="Planning a trip to Canada? Global Visa Internationals offers expert guidance on Canada tourist visa requirements and the application process. Discover the top places to visit in Canada." />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/canada" />
-        {/* <meta name="twitter:image" content="URL_TO_YOUR_Canada_TOURIST_IMAGE" /> */}
-
-        {/* Geo-related meta tags */}
-        <meta name="geo.region" content="AU" />
-        <meta name="geo.placename" content="Canada" />
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-
-        {/* Structured Data - EducationalOrganization Schema */}
+        <title>Canada Tourist Visa Assistence: Requirements, Application & Top Places | Global Visa Internationals</title>
+      </head>
+      <Head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgSchema) }}
         />
-      </head>
+      </Head>
+      <NextSeo
+        title="Canada Tourist Visa Assistence: Requirements, Application & Top Places | Global Visa Internationals"
+        description="Apply for a Canada Tourist Visa with Global Visa Internationals. Get expert help with requirements, visa application process, and discover must-visit Canadian destinations."
+        canonical="https://www.globalvisainternationals.com/visa/tourist-visa/canada"
+        openGraph={{
+          type: 'website',
+          url: 'https://www.globalvisainternationals.com/visa/tourist-visa/canada',
+          title: 'Canada Tourist Visa: Requirements, Application & Top Places',
+          description:
+            'Get expert help from Global Visa Internationals on applying for a Canada tourist visa. Learn about requirements, costs, and destinations.',
+          images: [
+            {
+              url: 'https://www.globalvisainternationals.com/visa-banner/Canada-Tourist-Visa-assistence-banner.webp',
+              width: 1200,
+              height: 630,
+              alt: 'Canada Tourist Visa Banner',
+            },
+          ],
+          siteName: 'Global Visa Internationals',
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+          site: '@globalvisainternationals',
+          handle: '@globalvisainternationals',
+        }}
+        additionalMetaTags={[
+          {
+            name: 'geo.region',
+            content: 'IN-KA',
+          },
+          {
+            name: 'geo.placename',
+            content: 'Bengaluru',
+          },
+          {
+            name: 'ICBM',
+            content: '12.9716,77.5946',
+          },
+          {
+            name: 'keywords',
+            content:
+              'Canada tourist visa, apply Canada visitor visa, Canada visa consultant, Canada travel guide, visa for Canada from India, top places in Canada, Canadian immigration',
+          },
+        ]}
+      />
+
+      {/* 🧭 Breadcrumbs Schema */}
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'Home',
+            item: 'https://www.globalvisainternationals.com',
+          },
+          // {
+          //   position: 2,
+          //   name: 'Tourist Visa',
+          //   item: 'https://www.globalvisainternationals.com/visa/tourist-visa',
+          // },
+          {
+            position: 2,
+            name: 'Canada',
+            item: 'https://www.globalvisainternationals.com/visa/tourist-visa/canada',
+          },
+        ]}
+      />
+
+      {/* 🏢 Organization Schema */}
+      <LocalBusinessJsonLd
+        type="TravelAgency"
+        id="https://www.globalvisainternationals.com"
+        name="Global Visa Internationals"
+        description="Visa & Immigration Consultants based in Bangalore. Trusted since 2017."
+        url="https://www.globalvisainternationals.com"
+        telephone="+91-7022213466"
+        address={{
+          streetAddress: 'MG Road',
+          addressLocality: 'Bengaluru',
+          addressRegion: 'Karnataka',
+          postalCode: '560025',
+          addressCountry: 'IN',
+        }}
+        geo={{
+          latitude: 12.9716,
+          longitude: 77.5946,
+        }}
+        sameAs={[
+          "https://www.facebook.com/globalvisainternationals/",
+          "https://www.instagram.com/globalvisa_internationals/",
+          "https://www.linkedin.com/company/global-visa-internationals/",
+          "https://x.com/GLOBALVISA1505",
+          "https://www.youtube.com/@globalVisaInternationals",
+          "https://www.google.com/maps/place/Global+Visa+Internationals"
+        ]}
+        openingHours={[
+          {
+            opens: '10:00',
+            closes: '18:00',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          },
+        ]}
+      />
+
       <div className={styles.imageContainer}>
-        <img src="/images/Canada1.png" alt="Canada Image" className={styles.CanadaImage} />
+        <img src="/visa-banner/Canada-Tourist-Visa-assistence-banner.webp" alt="Canada Image" className={styles.CanadaImage} />
       </div>
 
       <div className={styles.CanadaSec}>
@@ -1092,91 +1176,92 @@ export default function Canada() {
             <b>Disclaimer:</b> Global Visa Internationals is a private consultancy and is not affiliated with the Canadian government or IRCC.
           </p>
 
-         
+
 
 
         </div >
-         <div className={styles.formSection}>
+        <div className={styles.formSection}>
 
-            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
+          <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
+          <form id="inquiry-form" onSubmit={handleSubmit}>
+            <div className={styles.row}>
+              <div>
+                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
               </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Canada", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
+              <div>
+                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
               </div>
+            </div>
 
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
+            <div className={styles.row}>
+              <div>
+                <select className={styles.select} name="country" required>
+                  <option value="">Select Country</option>
+                  {["newzeland", "USA", "UK", "Canada", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                    <option key={country} value={country}>{country}</option>
+                  ))}
+                </select>
               </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
+              <div>
+                <select className={styles.select} name="immigration_type" required>
+                  <option value="">Select Immigration Type</option>
+                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                    <option key={type} value={type}>{type}</option>
+                  ))}
+                </select>
               </div>
+            </div>
 
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
+            <div className={styles.row}>
+              <div>
+                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
               </div>
-            )}
-          </div>
+              <div>
+                <select className={styles.select} name="age" required>
+                  <option value="">Select Age</option>
+                  <option value="18-45">18-45</option>
+                  <option value="45+">45+</option>
+                </select>
+              </div>
+            </div>
+
+            <div className={styles.row}>
+              <div>
+                <select className={styles.select} name="education" required>
+                  <option value="">Select Qualification</option>
+                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                    <option key={edu} value={edu}>{edu}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+              </div>
+            </div>
+
+
+            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Submitting..." : "Submit"}
+            </button>
+
+          </form>
+          {showPopup && (
+            <div className={styles.popupOverlay}>
+              <div className={styles.popupContent}>
+                <p>✅ Your form has been submitted successfully!</p>
+                <button onClick={() => setShowPopup(false)}>Close</button>
+              </div>
+            </div>
+          )}
         </div>
-        <section id='Client Reviews'>
-          <h2 className={styles.subtitle}>Client Reviews</h2>
-          <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-        </section>
-      
-    
+      </div>
+      <section id='Client Reviews'>
+        <h2 className={styles.subtitle}>Client Reviews</h2>
+        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+      </section>
 
-</>
-)}
+
+
+    </>
+  )
+}

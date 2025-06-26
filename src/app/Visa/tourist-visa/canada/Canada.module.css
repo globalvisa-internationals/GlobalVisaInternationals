@@ -76,23 +76,20 @@
 }
 
 .imageContainer {
-  display: flex;
-  justify-content: center;
-  padding-top: 70px;
-  width: 100%;
-  border-radius: 20px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
 }
 
 .CanadaImage {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 10px;
-  height: auto;
-  width: 90%;
-  max-width: 800px;
+    height: 400px;
+    width: 80%;
+    border-radius: 20px;
+    object-fit:fill; /* or 'contain' based on desired behavior */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional styling */
 }
 
 .CanadaSec {
@@ -321,13 +318,13 @@
 }
 
 @media (max-width: 768px) {
-  .heading {
-    font-size: 1.5rem;
+  .Title{
+    font-size: 20px;
+  }
+  .subTitle{
+    font-size: 18px;
   }
 
-  .description {
-    font-size: 0.95rem;
-  }
 
   .table th,
   .table td {
@@ -352,13 +349,11 @@
   }
 
   .CanadaImage {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
     height: auto;
     width: 90%;
-    max-width: 400px;
+    border-radius: 20px;
+    object-fit:fill; /* or 'contain' based on desired behavior */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional styling */
   }
 
   .CanadaSec {

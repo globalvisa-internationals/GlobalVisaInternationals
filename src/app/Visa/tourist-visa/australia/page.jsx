@@ -5,7 +5,7 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { NextSeo, LocalBusinessJsonLd, FAQPageJsonLd } from 'next-seo';
 
 export default function Australia() {
- 
+
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -74,211 +74,240 @@ export default function Australia() {
     document.body.appendChild(script);
   }, []);
   return (
-    <>
-     <head>
-  <title>Australia Tourist Visa From India | Cost, Documents & Visa Process</title>
-  <meta name="description" content="Apply for an Australia Tourist Visa with Global Visa Internationals. Get expert support on visa process, fees, documentation, and plan your visit to top Australian destinations." />
-  <meta name="keywords" content="Australia tourist visa, apply for Australia visa from India, Australia visa cost, Australia visa consultants in India, tourist attractions in Australia, Australia visa process, Australia visit visa fees" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Global Visa Internationals" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0a66c2" />
-  <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
+   <>
+      <head>
+        <title>Australia Tourist Visa From India | Cost, Documents & Visa Process</title>
+        <meta name="description" content="Apply for an Australia Tourist Visa with Global Visa Internationals. Get expert support on visa process, fees, documentation, and plan your visit to top Australian destinations." />
+        <meta name="keywords" content="Australia tourist visa, apply for Australia visa from India, Australia visa cost, Australia visa consultants in India, tourist attractions in Australia, Australia visa process, Australia visit visa fees" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Global Visa Internationals" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0a66c2" />
+        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
 
-  {/* Open Graph / Facebook */}
-  <meta property="og:title" content="Apply for Australia Tourist Visa From India | Global Visa Internationals" />
-  <meta property="og:description" content="Planning a trip to Australia? Get expert visa application assistance, cost breakdown, and travel guidance from Global Visa Internationals." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
-  <meta property="og:image" content="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:locale:alternate" content="en_US" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Apply for Australia Tourist Visa From India | Global Visa Internationals" />
+        <meta property="og:description" content="Planning a trip to Australia? Get expert visa application assistance, cost breakdown, and travel guidance from Global Visa Internationals." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
+        <meta property="og:image" content="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:locale:alternate" content="en_US" />
 
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Australia Tourist Visa | Application, Cost & Documents Needed" />
-  <meta name="twitter:description" content="Visit Australia with ease. Get full visa support, process guidance, and cost estimate from Global Visa Internationals." />
-  <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
-  <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Australia Tourist Visa | Application, Cost & Documents Needed" />
+        <meta name="twitter:description" content="Visit Australia with ease. Get full visa support, process guidance, and cost estimate from Global Visa Internationals." />
+        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
+        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
 
-  {/* Geo Location Tags */}
-  <meta name="geo.region" content="AU" />
-  <meta name="geo.placename" content="Sydney" />
-  <meta name="geo.region" content="IN-KA" />
-  <meta name="geo.placename" content="Bengaluru" />
-  <meta name="ICBM" content="12.9716,77.5946" />
+        {/* Geo Location Tags */}
+        <meta name="geo.region" content="AU" />
+        <meta name="geo.placename" content="Sydney" />
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="12.9716,77.5946" />
 
-  {/* Local Business Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Global Visa Internationals",
-      "url": "https://www.globalvisainternationals.com",
-      "logo": "https://www.globalvisainternationals.com/logo.png",
-      "description": "Trusted visa consultants helping Indian travelers with Australia tourist visa applications, document verification, and expert support.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "MG Road",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "KA",
-        "postalCode": "560025",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-7022213466",
-        "contactType": "Customer Support"
-      },
-      "sameAs": [
-        "https://www.facebook.com/GlobalVisaInternationals",
-        "https://www.linkedin.com/company/globalvisainternationals",
-        "https://twitter.com/GlobalVisaIntl"
-      ]
-    })
-  }} />
+        {/* Local Business Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Global Visa Internationals",
+            "url": "https://www.globalvisainternationals.com",
+            "logo": "https://www.globalvisainternationals.com/logo.png",
+            "description": "Trusted visa consultants helping Indian travelers with Australia tourist visa applications, document verification, and expert support.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "MG Road",
+              "addressLocality": "Bengaluru",
+              "addressRegion": "KA",
+              "postalCode": "560025",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-7022213466",
+              "contactType": "Customer Support"
+            },
+            "sameAs": [
+              "https://www.facebook.com/GlobalVisaInternationals",
+              "https://www.linkedin.com/company/globalvisainternationals",
+              "https://twitter.com/GlobalVisaIntl"
+            ]
+          })
+        }} />
 
-  {/* BreadcrumbList Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.globalvisainternationals.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Tourist Visa",
-          "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Australia"
-        }
-      ]
-    })
-  }} />
+        {/* BreadcrumbList Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.globalvisainternationals.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tourist Visa",
+                "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Australia"
+              }
+            ]
+          })
+        }} />
 
-  {/* FAQPage Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does an Australia Tourist Visa cost from India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The cost of an Australia tourist visa from India is approximately ₹11,000 to ₹14,000 including the visa fee and service charges."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What documents are required for an Australia tourist visa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You need a valid passport, recent photo, bank statements, ITR, travel itinerary, hotel bookings, and an invitation letter (if applicable)."
-          }
-        }
-      ]
-    })
-  }} />
+        {/* FAQPage Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does an Australia Tourist Visa cost from India?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The cost of an Australia tourist visa from India is approximately ₹11,000 to ₹14,000 including the visa fee and service charges."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What documents are required for an Australia tourist visa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You need a valid passport, recent photo, bank statements, ITR, travel itinerary, hotel bookings, and an invitation letter (if applicable)."
+                }
+              }
+            ]
+          })
+        }} />
 
-  {/* Service Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Australia Tourist Visa Application Assistance",
-      "provider": {
-        "@type": "Organization",
-        "name": "Global Visa Internationals",
-        "url": "https://www.globalvisainternationals.com"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Visa Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Australia Visitor Visa (Tourist Stream)"
+        {/* Service Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Australia Tourist Visa Application Assistance",
+            "provider": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Visa Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Australia Visitor Visa (Tourist Stream)"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Australia Family-Sponsored Visitor Visa"
+                  }
+                }
+              ]
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Australia Family-Sponsored Visitor Visa"
-            }
-          }
-        ]
-      }
-    })
-  }} />
-</head>
+          })
+        }} />
+      </head>
 
-      
-    
+
+
       <div className={styles.imageContainer}>
-        <img src="/visa-banner/Australia-Bannar-GlobalVisaInternationals.webp" alt="Australia Image" className={styles.AustraliaImage} />
+        <img src="/visa-banner/Australia-Bannar-GlobalVisaInternationals.webp" alt="Australia Visa assistence Bannar Global Visa Internationals" className={styles.AustraliaImage} />
       </div>
 
       <div className={styles.AustraliaSec}>
 
 
         <div className={styles.AustraliaData}>
-          <h1 className={styles.Title}>Australia Tourist Visa assistance | Global visa internationals</h1>
-          <p>Australia, a land of breathtaking landscapes, unique wildlife, and vibrant cities, beckons travelers from all corners of the globe. A tourist visa allows you to explore this magnificent country for leisure, offering an unforgettable experience filled with natural beauty and cultural richness.
-          </p>
-          <p></p>
-          <h3 className={styles.subTitle}>Why Choose Australia for Tourism? What Makes It Special?</h3>
-          <p>Australia offers a plethora of unique experiences that set it apart as a top tourist destination:</p>
+          <h1 className={styles.Title}>Australia Tourist Visa Agents in Bangalore | Best Australia Visitor Visa Consultants | Global Visa Internationals</h1>
+          <p>Planning a trip to Australia? Whether you're dreaming of the Sydney Opera House, the Great Barrier Reef, or the rugged Outback, <strong>Global Visa Internationals</strong> provides expert assistance to simplify your <strong>Australia Tourist Visa application</strong>. Our team of professional <strong>Australia visa consultants</strong> helps you navigate the process with ease, making your journey stress-free and exciting.</p>
+
+          <h3 className={styles.subTitle}>Why Visit Australia? Top Reasons Tourists Love It</h3>
+
+          <p>Australia is a premier tourist destination, offering unforgettable experiences for every type of traveler. Here’s why:</p>
 
           <ul>
-            <li><strong>Diverse Landscapes: </strong>From the iconic Outback with its red deserts and ancient rock formations like Uluru to lush rainforests, pristine beaches, and the underwater wonders of the Great Barrier Reef, Australia boasts an incredibly varied natural environment.
+            <li>
+              <strong>Diverse Landscapes:</strong> Discover Australia’s stunning natural beauty—from the red deserts of the Outback and ancient rock formations like Uluru to lush rainforests, scenic coastal drives, and the world-famous <strong>Great Barrier Reef</strong>.
             </li>
-            <li><strong>Unique Wildlife:</strong> Encounter iconic animals found nowhere else on Earth, such as kangaroos, koalas, wombats, and the elusive platypus. Explore national parks and wildlife sancWorld-Class Cities: Experience the cosmopolitan flair of Sydney with its iconic Opera House and Harbour Bridge, the cultural heart of Melbourne with its laneways and vibrant arts scene, and the laid-back charm of Brisbane and Perth.</li>
-            <li><strong>Aboriginal Culture:</strong> Discover the rich and ancient culture of Australia's Aboriginal people, the oldest living culture in the world. Explore sacred sites, learn about Dreamtime stories, and witness traditional art and ceremonies.</li>
-            <li><strong>Adventure Activities:</strong> Whether you're into surfing world-famous breaks, diving or snorkeling in the Great Barrier Reef, hiking through stunning national parks, or exploring the vast Outback, Australia offers endless opportunities for adventure.</li>
-            <li><strong>Stunning Beaches:</strong> Relax on the golden sands of Bondi Beach, explore the silica white shores of Whitehaven Beach in the Whitsundays, or discover countless other breathtaking coastal havens.</li>
+            <li>
+              <strong>Unique Wildlife:</strong> Meet Australia’s one-of-a-kind animals like kangaroos, koalas, wombats, and the platypus. Visit national parks and wildlife sanctuaries across the country.
+            </li>
+            <li>
+              <strong>World-Class Cities:</strong> Enjoy the modern attractions of Sydney, Melbourne, Brisbane, and Perth. From harbor cruises to culinary delights and cultural festivals, Australia’s cities blend lifestyle and adventure.
+            </li>
+            <li>
+              <strong>Aboriginal Culture:</strong> Explore one of the oldest living cultures in the world. Learn about Dreamtime stories, traditional art, and sacred Indigenous landmarks with cultural tours and experiences.
+            </li>
+            <li>
+              <strong>Adventure Tourism:</strong> Surf iconic beaches, snorkel or dive in the <strong>Great Barrier Reef</strong>, hike through Blue Mountains or Tasmania, or explore the open roads of the Outback. Adventure awaits in every corner.
+            </li>
+            <li>
+              <strong>Beautiful Beaches:</strong> Relax on Bondi Beach, visit Whitehaven Beach in the Whitsundays, or uncover hundreds of hidden coastal gems. Australia’s beaches are among the best in the world.
+            </li>
           </ul>
-          <h3 className={styles.subTitle}>Must-Visit Tourist Spots in Australia</h3>
-          <p>Australia is brimming with incredible places to explore. Here are some of the main tourist spots you shouldn't miss:</p>
-          <ol>
-            <li>Sydney: Home to the iconic Sydney Opera House and Harbour Bridge. Explore Bondi Beach, the historic Rocks district, and enjoy a ferry ride across the harbor.</li>
-            <br />
-            <li><strong>Great Barrier Reef:</strong> The world's largest coral reef system, offering unparalleled snorkeling and diving experiences amidst diverse marine life. Located off the coast of Queensland.</li>
-            <br />
-            <li><strong>MUluru (Ayers Rock):</strong> A massive sandstone monolith in the heart of the Northern Territory, sacred to the Aboriginal Anangu people. Witness stunning sunsets and learn about its cultural significance.</li>
-            <br />
-            <li><strong>The Whitsunday Islands:</strong> A group of idyllic islands off the coast of Queensland, famous for their pristine beaches, turquoise waters, and sailing opportunities.</li>
-            <br />
-            <li><b>Kakadu National Park:</b> A UNESCO World Heritage site in the Northern Territory, rich in Aboriginal culture, diverse wildlife (including crocodiles and kangaroos), and stunning landscapes.</li>
-            <br />
-            <li><b>Gold Coast: </b>A vibrant city in Queensland known for its beautiful beaches, surfing spots (like Surfers Paradise), theme parks, and lively nightlife.</li>
-            <br />
-            <li><b>Perth:</b> A sunny coastal city in Western Australia with beautiful beaches like Cottesloe and Scarborough, and Kings Park offering panoramic city views. Don't miss a trip to Rottnest Island to see the adorable quokkas.</li>
-            <br />
-            <li><b>Brisbane:</b> A laid-back city in Queensland with the South Bank Parklands, a cultural and recreational hub, and the Lone Pine Koala Sanctuary.</li>
-            <br />
-            <li><b>Adelaide: </b>A charming city in South Australia known for its museums, galleries, and festivals. Explore the Adelaide Botanic Garden and the historic Port Adelaide. The Barossa Valley and McLaren Vale wine regions are also nearby.</li>
+          <p><strong>Need help applying for your Australia Tourist Visa?</strong> Trust Global Visa Internationals — your reliable <strong>Australia visa consultant in Bangalore</strong>. Our experts assist with document preparation, visa filing, travel planning, and more.</p>
+          <p className={styles.note}><strong>Get in touch today</strong> and turn your dream trip into reality!</p>
 
+
+          <h3 className={styles.subTitle}>Top Tourist Places in Australia You Must Visit</h3>
+
+          <p>Planning your trip with an <strong>Australia Tourist Visa</strong>? Discover the most iconic and unforgettable destinations across the country. This curated <strong>Australia travel guide</strong> highlights the best places to explore—from coastal cities to natural wonders.</p>
+
+          <ol>
+            <li>
+              <strong>Sydney:</strong> Australia's most popular city for tourists. Visit the <strong>Sydney Opera House</strong>, walk across the <strong>Harbour Bridge</strong>, relax on <strong>Bondi Beach</strong>, and explore The Rocks historic district. A must for every tourist applying for an <strong>Australia visitor visa</strong>.
+            </li>
+            <li>
+              <strong>Great Barrier Reef:</strong> A UNESCO World Heritage Site and the world's largest coral reef system. Dive or snorkel to experience vibrant marine life—an essential destination in any <strong>Australia tour package</strong>.
+            </li>
+            <li>
+              <strong>Uluru (Ayers Rock):</strong> A sacred Aboriginal site located in the Northern Territory. This giant sandstone monolith is one of the most culturally significant and visually stunning landmarks in Australia.
+            </li>
+            <li>
+              <strong>The Whitsunday Islands:</strong> Located near the Great Barrier Reef, these islands offer white-sand beaches, turquoise waters, and sailing adventures. Ideal for honeymooners and beach lovers.
+            </li>
+            <li>
+              <strong>Kakadu National Park:</strong> One of Australia’s largest national parks, rich in Aboriginal heritage, wetlands, crocodiles, and waterfalls. A great pick for nature and wildlife enthusiasts.
+            </li>
+            <li>
+              <strong>Gold Coast:</strong> Famous for its beaches, surfing hotspots like Surfers Paradise, theme parks, and energetic nightlife. Perfect for both family vacations and adventure travelers.
+            </li>
+            <li>
+              <strong>Perth:</strong> A sun-soaked city in Western Australia known for scenic beaches like <strong>Cottesloe</strong>, <strong>Scarborough</strong>, and the nearby <strong>Rottnest Island</strong>, home to the smiling quokka.
+            </li>
+            <li>
+              <strong>Brisbane:</strong> Queensland’s capital, offering cultural attractions like South Bank Parklands, riverfront walks, and wildlife experiences at Lone Pine Koala Sanctuary.
+            </li>
+            <li>
+              <strong>Adelaide:</strong> Known for its arts scene, botanical gardens, and access to nearby wine regions like <strong>Barossa Valley</strong> and <strong>McLaren Vale</strong>. Great for those looking for a relaxed and cultured Australia vacation.
+            </li>
           </ol>
+
+          <p>Each of these destinations showcases the incredible diversity of experiences Australia has to offer. <strong>Global Visa Internationals</strong>, a trusted <strong>Australia visa consultant</strong>, helps you get the right visa and plan your dream itinerary. Let us guide your journey—stress-free and expertly handled.</p>
 
           <div className={styles.formSection1}>
             <h4>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
@@ -354,110 +383,139 @@ export default function Australia() {
               </div>
             )}
           </div>
-          <h2 className={styles.subTitle}>Tailor Your Australian Adventure</h2>
-          <p>Not sure where to start? Take our quick quiz to discover your perfect Australian getaway!</p>
 
-          <h2 className={styles.subTitle}>Sample Itineraries</h2>
-          <p>Get inspired with these sample itineraries:</p>
+          <h2 className={styles.subTitle}>Plan Your Dream Australian Vacation</h2>
+          <p>Planning to visit Australia on a <strong>tourist visa</strong> but not sure where to begin? Start with our personalized travel quiz and discover the ideal itinerary for your perfect Australian getaway. Whether you're seeking beaches, culture, or adventure — we’ve got you covered.</p>
+
+          <h2 className={styles.subTitle}>Sample Australia Travel Itineraries</h2>
+          <p>Explore hand-picked <strong>Australia trip itineraries</strong> designed for different travel styles and visa durations:</p>
           <ul>
-            <li>7-Day East Coast Highlights: Sydney, Brisbane, Gold Coast, Great Barrier Reef</li>
-            <li>14-Day Best of Australia: Sydney, Melbourne, Uluru, Great Barrier Reef</li>
-            <li>10-Day West Coast Adventure: Perth, Exmouth, Broome</li>
+            <li><strong>7-Day East Coast Highlights:</strong> Visit Sydney, Brisbane, Gold Coast, and the Great Barrier Reef.</li>
+            <li><strong>14-Day Best of Australia:</strong> Discover Sydney, Melbourne, Uluru (Ayers Rock), and tropical Queensland.</li>
+            <li><strong>10-Day West Coast Adventure:</strong> Experience Perth, Exmouth, and Broome with pristine beaches and outback vibes.</li>
           </ul>
 
-          <h2>Cost of Traveling to Australia</h2>
-          <p>The cost of a trip to Australia can vary significantly depending on your travel style, duration of stay, and preferences. Here's a general breakdown of potential expenses:</p>
+          <h2 className={styles.subTitle}>Cost of Traveling to Australia from India (2025)</h2>
+          <p>Understanding the estimated <strong>cost of Australia trip from India</strong> helps in planning your budget effectively. Here's a breakdown of typical expenses for tourists applying for an <strong>Australia visitor visa (subclass 600)</strong>:</p>
+
           <ul>
-            <li>Visa Cost: The current fee for an Australian tourist visa (subclass 600) is approximately AUD 190 (around INR 10,500), but this is subject to change.</li>
-            <br />
-            <li>Flight Charges: Return flights from India to Australia can range significantly based on the time of booking, airline, and route. On average, you might expect to pay anywhere from INR 22,000 to INR 50,000 or more for a round-trip ticket per person. Prices can be lower or higher depending on the season and availability.</li>
-            <br />
-            <li>Living Expenses: Daily living expenses for a tourist in Australia can vary widely based on your accommodation choices, dining preferences, and activities. Here's a general estimate:
+            <li>
+              <strong>Visa Fees:</strong> The Australia tourist visa (subclass 600) costs approximately <strong>AUD 190</strong> (around <strong>INR 10,500</strong>). Note that visa fees may vary based on currency rates and government revisions.
+            </li>
+            <li>
+              <strong>Flight Costs:</strong> Return airfare from India to Australia generally ranges between <strong>INR 22,000 to INR 50,000</strong> or more, depending on booking time, airline, and travel season.
+            </li>
+            <li>
+              <strong>Estimated Daily Living Expenses:</strong> Depending on your travel style, here’s what you might expect to spend per day:
               <ul>
-                <li>Budget Traveler: AUD 89 - AUD 100 per day (approx. INR 4,900 - INR 5,500), potentially staying in hostels, cooking some meals, and using public transport.</li>
-                <li>Mid-Range Traveler: AUD 230 - AUD 259 per day (approx. INR 12,700 - INR 14,300), staying in comfortable hotels or Airbnb, eating out occasionally, and participating in some tours.</li>
-                <li>Luxury Traveler: AUD 621 - AUD 699 per day (approx. INR 34,200 - INR 38,500), staying in high-end accommodations, dining at top restaurants, and engaging in exclusive experiences.</li>
+                <li><strong>Budget Travelers:</strong> AUD 89 - AUD 100/day (~INR 4,900 - 5,500): Stay in hostels, cook meals, use public transport.</li>
+                <li><strong>Mid-Range Travelers:</strong> AUD 230 - AUD 259/day (~INR 12,700 - 14,300): Comfortable hotels, occasional dining out, guided tours.</li>
+                <li><strong>Luxury Travelers:</strong> AUD 621 - AUD 699/day (~INR 34,200 - 38,500): 5-star hotels, gourmet dining, private experiences.</li>
               </ul>
-              For a moderate trip, you should budget at least AUD 150 - AUD 300 per day (approximately INR 8,250 - INR 16,500) per person for living expenses, excluding flights and visa costs. This would cover accommodation, food, local transport, and some sightseeing.
-              <h2 className={styles.subTitle}>Example Costs:</h2>
+              <p><strong>Average Australia trip cost per person:</strong> Budget at least <strong>AUD 150 - 300/day</strong> (~INR 8,250 - 16,500) excluding visa and flight costs.</p>
+            </li>
+
+            <li>
+              <h3 className={styles.subTitle}>Breakdown of Example Expenses</h3>
               <ul>
-                <li>Accommodation (per night): Budget hostels (AUD 37-42), mid-range hotels (AUD 100-112), luxury hotels (AUD 270+).</li>
-                <li>Meals: Budget meal (AUD 10-15), mid-range restaurant (AUD 25-50), fine dining (AUD 80+).</li>
-                <li>Local Transport (daily): Public transport pass (AUD 8-16 in major cities), individual taxi ride (AUD 3-7 base fare).</li>
+                <li><strong>Accommodation:</strong> Hostels (AUD 37–42), mid-range hotels (AUD 100–112), luxury hotels (AUD 270+).</li>
+                <li><strong>Meals:</strong> Budget meals (AUD 10–15), mid-range dining (AUD 25–50), fine dining (AUD 80+).</li>
+                <li><strong>Local Transport:</strong> Public transport pass (AUD 8–16/day), taxi fares start from AUD 3–7 base fare.</li>
               </ul>
             </li>
-            <li>Activities and Tours: Costs for tours and activities will vary greatly depending on what you choose to do. For example, a day trip to the Great Barrier Reef can cost anywhere from AUD 150 to AUD 300 or more.</li>
+
+            <li>
+              <strong>Activities & Tours:</strong> Costs vary. For example, a full-day <strong>Great Barrier Reef tour</strong> can range between <strong>AUD 150–300</strong>. Always pre-book to secure better rates and availability.
+            </li>
           </ul>
-          <h2 className={styles.subTitle}>Budget Calculator:</h2>
+
+          <p >Need help budgeting or booking your Australia visa? <strong>Global Visa Internationals</strong> is your trusted <strong>visa consultant in India</strong> for seamless <strong>tourist visa application</strong> and travel planning support. Contact us today for expert guidance!</p>
+
+          <h2 className={styles.subTitle}>Australia Trip Budget Calculator</h2>
+          <p>Planning your budget in advance is essential for a stress-free holiday. Here’s an estimated cost breakdown for a 10-day trip to Australia (excluding visa and airfare):</p>
           <ul>
-            <li>Therefore, for a 10-day trip to Australia, excluding flights and visa, you might budget:
+            <li><strong>Budget Travel:</strong> AUD 890 – 1,000 (approx. INR 49,000 – 55,000)</li>
+            <li><strong>Mid-Range Travel:</strong> AUD 2,300 – 2,590 (approx. INR 126,500 – 142,500)</li>
+            <li><strong>Luxury Travel:</strong> AUD 6,210 – 6,990 (approx. INR 341,500 – 384,500)</li>
+          </ul>
+          <p>Note: These are estimated costs and may vary based on season, city, and personal preferences. Always plan with a buffer.</p>
+
+          <h2 className={styles.subTitle}>Top Tips for a Successful Australia Tour</h2>
+          <ol>
+            <li><strong>Plan in Advance:</strong> Research the best seasons to visit Australia, tourist visa requirements, and recommended routes.</li>
+            <li><strong>Book Early:</strong> Lock in flights, accommodation, and Australia tourist visa slots to avoid last-minute rush.</li>
+            <li><strong>Stay Secure:</strong> Keep your travel documents safe and be aware of local customs and safety guidelines.</li>
+            <li><strong>Be Flexible:</strong> Australia is vast. Embrace surprises and leave space for spontaneous experiences.</li>
+            <li><strong>Enjoy Every Moment:</strong> Capture memories, relax, and experience Australia’s diverse landscapes and cultures to the fullest.</li>
+          </ol>
+
+          <h2 className={styles.subTitle}>Top Attractions & Unique Australian Experiences</h2>
+          <ul>
+            <li><strong>Hidden Gems & Local Experiences:</strong>
               <ul>
-                <li>Budget: AUD 890 - AUD 1000 (approx. INR 49,000 - INR 55,000)</li>
-                <li>Mid-Range: AUD 2300 - AUD 2590 (approx. INR 126,500 - INR 142,500)</li>
-                <li>Luxury: AUD 6210 - AUD 6990 (approx. INR 341,500 - INR 384,500)</li>
+                <li>Admire ancient Aboriginal rock art in the remote Kimberley region.</li>
+                <li>Swim with whale sharks at Ningaloo Reef – a lesser-known alternative to the Great Barrier Reef.</li>
+                <li>Hike Tasmania’s Overland Track, a stunning multi-day trek through wild landscapes.</li>
               </ul>
             </li>
-            <li>Keep in mind that these are rough estimates, and actual costs can vary.</li>
+            <li><strong>Cultural Snippets to Know Before You Go:</strong>
+              <ul>
+                <li>"G'day" is Aussie slang for hello!</li>
+                <li>Australians enjoy “barbies” — barbecues with family and friends.</li>
+                <li>Vegemite on toast is a local favorite — try it at least once!</li>
+              </ul>
+            </li>
+            <li><strong>Food & Drink Highlights:</strong>
+              <ul>
+                <li>Enjoy freshly shucked Sydney rock oysters and barramundi.</li>
+                <li>Sample premium Australian wines in the Barossa and Yarra Valleys.</li>
+                <li>Don’t miss an authentic Aussie BBQ with grilled meats and seafood.</li>
+              </ul>
+            </li>
+            <li><strong>Responsible & Sustainable Travel Tips:</strong>
+              <ul>
+                <li>Choose eco-certified operators for tours and wildlife experiences.</li>
+                <li>Respect Aboriginal cultural sites and learn about Indigenous heritage.</li>
+                <li>Minimize plastic use and follow local waste disposal guidelines.</li>
+              </ul>
+            </li>
           </ul>
-          <h2 className={styles.subTitle}>Tips for a Successful Australian Trip:</h2>
+
+          <p>Whether you’re a budget traveler or luxury seeker, planning ahead helps you make the most of your <strong>Australia tourist visa</strong> journey. Need expert guidance? Contact <strong>Global Visa Internationals</strong> for visa support and personalized travel planning.</p>
 
           <ol>
-            <li>Plan Ahead: Research the best time to visit, popular tourist attractions, and budget-friendly accommodations.</li>
-            <li>Book in Advance: Reserve flights and accommodations to avoid last-minute hassles.</li>
-            <li>Stay Safe: Be aware of local customs and laws, and carry necessary documents and valuables.</li>
-            <li>Be Flexible: Adjust your plans based on unexpected events or changes in the itinerary.</li>
-            <li>Enjoy the Journey: Take breaks, relax, and immerse yourself in the beauty of Australia.</li>
-          </ol>
-          <h2 className={styles.subTitle}>Top Attractions in Australia:</h2>
+            <li><strong>Great Barrier Reef:</strong> A UNESCO World Heritage Site and the world's largest coral reef system, offering breathtaking snorkeling and diving experiences. It's one of the top tourist attractions in Australia.</li>
 
-          <ul>
-            <li>Local Insights & Hidden Gems:
-              <ul>
-                <li>Explore the ancient Aboriginal rock art in the Kimberley region.</li>
-                <li>Swim with whale sharks on Ningaloo Reef.</li>
-                <li>Hike the Overland Track in Tasmania's pristine wilderness.</li>
-              </ul>
-            </li>
-            <li>Cultural Snippets:
-              <ul>
-                <li>"G'day" means hello!</li>
-                <li>Australians love their "barbies" (barbecues).</li>
-                <li>Don't forget to try some "Vegemite" on toast!</li>
-              </ul>
-            </li>
-            <li>Food & Drink Highlights:
-              <ul>
-                <li>Indulge in fresh seafood like Sydney rock oysters.</li>
-                <li>Taste world-class wines in the Barossa Valley.</li>
-                <li>Experience a traditional Aussie barbecue with friends.</li>
-              </ul>
-            </li>
-            <li>Sustainability & Responsible Tourism Tips:
-              <ul>
-                <li>Choose eco-certified tour operators.</li>
-                <li>Respect Aboriginal sacred sites and cultural practices.</li>
-                <li>Reduce your plastic consumption and dispose of waste responsibly.</li>
-              </ul>
-            </li>
-          </ul>
-          <ol>
-            <li>Great Barrier Reef: A UNESCO World Heritage site, the world's largest coral reef system, and a paradise for divers and snorkelers.</li>
-            <li>Uluru (Ayers Rock): A sacred site for Aboriginal Australians, known for its stunning sunsets and cultural significance.</li>
-            <li>Sydney Opera House: A masterpiece of modern architecture, home to some of the world's most famous operas.</li>
-            <li>Melbourne Cricket Ground: A historic stadium where the Australian national team plays.</li>
-            <li>Wagga Wagga: A charming town known for its apple orchards and scenic views.</li>
-            <li>Mount Kosciuszko National Park: A stunning national park offering hiking trails, waterfalls, and scenic drives.</li>
-            <li>Gold Coast: A tropical paradise with world-class beaches, surfing, and live music festivals.</li>
+            <li><strong>Uluru (Ayers Rock):</strong> A culturally significant landmark in the heart of the Outback, sacred to the Aboriginal Anangu people. Best known for its fiery red hues at sunrise and sunset.</li>
+
+            <li><strong>Sydney Opera House:</strong> An architectural marvel and one of the most iconic places to visit in Australia. Attend world-class performances or take a guided tour along Sydney Harbour.</li>
+
+            <li><strong>Melbourne Cricket Ground (MCG):</strong> A historic and world-renowned sports venue, ideal for cricket and AFL fans. A must-visit spot for sports tourism in Australia.</li>
+
+            <li><strong>Wagga Wagga:</strong> A picturesque regional town in New South Wales, offering peaceful landscapes, vibrant cultural festivals, and scenic apple orchards.</li>
+
+            <li><strong>Mount Kosciuszko National Park:</strong> Home to Australia’s highest peak, this park features alpine hiking trails, snow sports in winter, and breathtaking nature throughout the year.</li>
+
+            <li><strong>Gold Coast:</strong> A coastal gem in Queensland famous for its stunning beaches, surfing hot spots, luxury resorts, and vibrant nightlife. One of the most popular destinations for international tourists in Australia.</li>
           </ol>
-          <h2 className={styles.subTitle}>Additional Tips:</h2>
+
+          <h2 className={styles.subTitle}>Additional Travel Tips for Your Australia Tourist Visa Journey</h2>
           <ol>
-            <li>Be Prepared for Weather: Australia experiences a diverse climate, with hot summers and cold winters. Pack accordingly and be prepared for unexpected weather changes.</li>
-            <li>Learn Local Languages: Knowing a few words in the local language can go a long way in making your trip more enjoyable.</li>
-            <li>Stay Hydrated: Australia's hot climate can make dehydration a concern. Drink plenty of water, especially during hot weather.</li>
-            <li>Consider a Visa Extension: If you plan to stay longer than your visa allows, consider applying for a visa extension before your current visa expires.</li>
-            <li>Respect Local Customs: Australia has a rich cultural heritage, and it's important to respect local customs and traditions.</li>
-            <li>Enjoy the Adventure: Australia offers a wide range of outdoor activities, from hiking to surfing, and it's a great place to experience the outdoors.</li>
+            <li><strong>Prepare for Australia’s Diverse Weather:</strong> From tropical heat in the north to cooler climates in the south, Australia’s weather varies widely. Pack appropriate clothing and check seasonal forecasts before your trip.</li>
+
+            <li><strong>Understand Local Culture & Etiquette:</strong> Australians are friendly and casual, but respecting Aboriginal traditions and local customs will enrich your experience. Global Visa Internationals can brief you on cultural dos and don’ts before you fly.</li>
+
+            <li><strong>Stay Hydrated & Sun-Safe:</strong> Australia's sun is strong—even in cooler months. Use SPF sunscreen, wear hats, and drink plenty of water, especially during outdoor tours and sightseeing.</li>
+
+            <li><strong>Plan for Visa Validity & Extensions:</strong> Ensure your Australian tourist visa (subclass 600) remains valid for your entire stay. If you wish to extend your trip, consult trusted visa consultants like <strong>Global Visa Internationals</strong> to guide you through the visa extension process smoothly.</li>
+
+            <li><strong>Learn Local Slang & Phrases:</strong> English is the official language, but Aussies have unique slang like “arvo” (afternoon) and “mate.” Learning a few phrases helps you connect better with locals during your trip.</li>
+
+            <li><strong>Explore Outdoor Adventures Safely:</strong> From surfing in Byron Bay to bushwalking in Tasmania, Australia is an outdoor paradise. Always follow safety guidelines and consult our travel advisors for the best nature-friendly travel options.</li>
+
+            <li><strong>Need Help Planning?</strong> Whether it's choosing destinations, understanding visa rules, or budgeting your trip, <strong>Global Visa Internationals</strong> provides complete end-to-end support for your Australia travel planning. Contact us for expert visa assistance and personalized travel tips.</li>
           </ol>
+
 
 
 
@@ -535,122 +593,134 @@ export default function Australia() {
               </div>
             )}
           </div>
-          <h2 className={styles.subTitle}>Applying for an Australian Tourist Visa</h2>
-          <p>Indian citizens need to apply for a Tourist Stream (subclass 600) visa to visit Australia for tourism. Here are the key requirements and steps:</p>
+
+          <h2 className={styles.subTitle}>How to Apply for an Australian Tourist Visa from India</h2>
+          <p>Planning a trip to Australia? Indian citizens must apply for the <strong>Australia Tourist Visa – Visitor Visa (Subclass 600)</strong> under the Tourist Stream. This visa allows travelers to explore Australia for leisure, holidays, or visiting family and friends. Here’s a step-by-step guide to ensure your application is smooth and successful:</p>
+
           <ul>
-            <li>Eligibility: You must genuinely intend to visit Australia for tourism purposes only, have sufficient funds for your stay, and not intend to work in Australia. You must be outside Australia when you apply and when the visa is decided.</li>
-            <li>Online Application: The application must be submitted online through the Department of Home Affairs website (ImmiAccount).</li>
-            <li>Required Documents: You will generally need to provide:
+            <li><strong>Visa Eligibility Criteria:</strong> Applicants must demonstrate genuine intentions to visit Australia for tourism purposes only. You must have sufficient funds, be outside Australia during application and decision stages, and not plan to work during your stay.</li>
+
+            <li><strong>Online Application Process:</strong> All tourist visa applications must be submitted through the Australian Government’s official <em>ImmiAccount</em> portal.</li>
+
+            <li><strong>Key Documents Required:</strong>
               <ul>
-                <li>A valid passport with at least six months of validity.</li>
-                <li>Proof of sufficient funds (e.g., bank statements for the last 3 months showing a minimum balance of approximately AUD 5,000 or INR 3.5 Lakhs per person).</li>
-                <li>Evidence of your intention to return to your home country (e.g., a letter from your employer, proof of study, family ties, property ownership).</li>
-                <li>Details of your planned itinerary in Australia.</li>
-                <li>A copy of your national identity card (e.g., Aadhaar card, PAN card).</li>
-                <li>Passport-sized photographs.</li>
-                <li>Other supporting documents may be required based on your individual circumstances.</li>
+                <li>Valid passport with a minimum of six months’ validity.</li>
+                <li>Recent bank statements (3 months) showing a minimum balance of approx. <strong>AUD 5,000</strong> (₹3.5 lakhs).</li>
+                <li>Proof of strong ties to India – such as employment letter, college ID, property documents, or family evidence.</li>
+                <li>Detailed travel itinerary and accommodation bookings.</li>
+                <li>National ID proof (Aadhaar, PAN card).</li>
+                <li>Recent passport-size photographs (as per Australia visa photo guidelines).</li>
+                <li>Additional documents may be required based on your profile.</li>
               </ul>
             </li>
-            <li>Visa Fee: The current visa application fee is approximately AUD 190.</li>
-            <li>Processing Time: The processing time for an Australian tourist visa can vary but is generally around 3 to 4 weeks after submission of all required documents. It's advisable to apply well in advance of your intended travel dates.</li>
-          </ul>
-          <p>It is crucial to provide accurate information and all necessary documents to avoid delays or rejection of your visa application.</p>
 
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <p>At Global Visa Internationals, we understand that the visa application process can be complex and time-consuming. That's why we offer:</p>
+            <li><strong>Visa Fee:</strong> Approx. <strong>AUD 190</strong> (subject to change by the Department of Home Affairs).</li>
+            <li><strong>Processing Time:</strong> Standard processing time is 3–4 weeks. Early application is strongly recommended.</li>
+          </ul>
+
+          <p><strong>Accuracy matters.</strong> Even minor errors can delay or jeopardize your visa approval. Partnering with an expert <strong>Australia visa consultant</strong> can significantly improve your chances of success.</p>
+
+          <h2 className={styles.subTitle}>Why Trust Global Visa Internationals for Your Australian Visa?</h2>
+
+          <p>At <strong>Global Visa Internationals</strong>, we specialize in providing <strong>end-to-end tourist visa support</strong> for travelers across India. Our expertise in <em>Australia visitor visas</em> ensures your journey begins hassle-free.</p>
+
           <ul>
-            <li>Personalized Guidance: Our experienced consultants provide tailored support throughout your application journey</li>
-            <li>Expert Knowledge: We stay up-to-date with the latest visa regulations to ensure your application is accurate and complete.</li>
-            <li>Hassle-Free Process: We handle the paperwork and guide you through each step, saving you time and stress.</li>
-            <li>High Success Rate: We are committed to maximizing your chances of a successful visa outcome.</li>
-            <li>Additional Services: We also take Mock Interviews to prepare you for the visa interview process.</li>
+            <li><strong>Personalized Support:</strong> Every client receives dedicated visa assistance tailored to their travel profile.</li>
+            <li><strong>Expert Documentation Help:</strong> We guide you through paperwork, financials, and requirements to avoid rejections.</li>
+            <li><strong>Stress-Free Process:</strong> We manage the process so you can focus on planning your trip, not the formalities.</li>
+            <li><strong>Mock Interview Sessions:</strong> Preparing for visa interviews? We help you face it confidently with expert coaching.</li>
+            <li><strong>Proven Success:</strong> With <strong>55,000+ visas processed</strong> and <strong>75,000+ consultations</strong> completed, our clients trust us for a reason.</li>
           </ul>
-          <p>We at Global Visa Internationals, proud to be India's finest visa consultants, are dedicated to making your dreams into reality. With our 11+ years of experience as leading visa consultants in Bangalore, we have successfully managed to process over 55,000+ visas and offer over 75,000 expert visa advice sessions till date. You can confidently rely on our vast visa and immigration consulting experience in India.</p>
-          <p>Let Global Visa Internationals assist you in navigating the visa application process and planning your dream Australian adventure!</p>
 
- <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p>Whether it’s your first international trip or a family vacation to Sydney or Melbourne, <strong>Global Visa Internationals</strong> ensures your <strong>Australia travel visa</strong> experience is smooth, secure, and successful.</p>
+
+          <p><strong>With over 11+ years of experience</strong> as leading <strong>visa consultants in Bangalore</strong>, we’re proud to be India’s preferred choice for <strong>tourist visa guidance</strong>. Our team stays updated on Australia’s latest visa policies to give you a competitive edge.</p>
+
+          <p>Let <strong>Global Visa Internationals</strong> help you explore the wonders of Australia — from the Great Barrier Reef to the Outback — with expert visa guidance and personalized travel support.</p>
+
+          <p className={styles.note}><em>Disclaimer:</em> Global Visa Internationals is an independent visa consultancy and is not affiliated with the Australian Government or any embassy. We provide advisory services to make your visa process efficient and accurate.</p>
+
+</div>
+          <div className={styles.formSection}>
+
+            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
+
         </div>
+ <section id='Client Reviews'>
 
-        <div className={styles.formSection}>
-
-          <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-      <h2 className={styles.subtitle}>Client Reviews</h2>
-      <section id='Client Reviews'>
-        
-        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-      </section>
-    </>
-  );
-}
+          <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+        </section>
+       
+      </>
+      )}
