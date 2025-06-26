@@ -67,7 +67,7 @@ export default function Page() {
   return (
     <>
       <head>
-        <title>Best Immigration Consultants in Bangalore | Global Visa Internationals</title>
+        <title>Best Visa agency in Bangalore | Global Visa Internationals</title>
         <meta name="description" content="Looking for the best visa immigration consultants in Bangalore? Global Visa Internationals offers expert guidance for Canada PR, Australia PR, student visa applications, and business immigration. With over 13 years of experience, we are your trusted immigration consultants in Bangalore."
         />
         <meta  name="keywords" content="immigration consultants Bangalore, visa immigration consultants in bangalore, Canada PR, Australia PR, student visa Bangalore, business immigration, visa consultancy Bangalore, Global Visa Internationals"
@@ -81,7 +81,7 @@ export default function Page() {
         />
         <meta property="og:url" content="https://www.globalvisainternationals.com/immigration-consultants/bangalore" />
         <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content="URL_TO_YOUR_IMAGE" /> */}
+        <meta property="og:image" content="https://www.globalvisainternationals.com/contact/Visa-and-immigration-Contact.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -89,7 +89,7 @@ export default function Page() {
         <meta name="twitter:description" content="Find the best immigration consultants in Bangalore for your Canada PR, Australia PR, student visa, or business immigration needs. Contact Global Visa Internationals today!"
         />
         <meta name="twitter:url" content="https://www.globalvisainternationals.com/immigration-consultants/bangalore" />
-        {/* <meta name="twitter:image" content="URL_TO_YOUR_IMAGE" /> */}
+        <meta name="twitter:image" content="https://www.globalvisainternationals.com/contact/Visa-and-immigration-Contact.webp" />
 
         {/* Geo-related meta tags */}
         <meta name="geo.region" content="IN-KA" />
@@ -131,7 +131,7 @@ export default function Page() {
       </head>
       <div className={styles.imageContainer}>
         <Image
-          src="/banner.webp"
+          src="/contact/Visa-and-immigration-Contact.webp"
           alt="World Map Background"
           fill
           quality={100}
@@ -140,22 +140,22 @@ export default function Page() {
       </div>
       <div className={styles.ContactSec}>
         <main className={styles.container}>
-          <h1 className={styles.heading}>Best Immigration Consultants in Bangalore</h1>
+          <h1 className={styles.heading}>Best Visa agency in Bangalore</h1>
           <p className={styles.paragraph}>
             With over 13 years of experience, Global Visa Internationals has established itself as one of the leading <strong>immigration consultants in Bangalore</strong>. Our dedicated team specializes in providing comprehensive <strong>visa immigration consultancy</strong> for individuals seeking <strong>Canada PR</strong> and <strong>Australia PR</strong>. If you're looking for reliable guidance on your <strong>student visa</strong> application in <strong>Bangalore</strong> or require expert assistance with <strong>business immigration</strong>, you've come to the right place.
           </p>
 
           <h2 className={styles.subheading}>Our Expert Visa Immigration Services</h2>
           <ul className={styles.list}>
-            <li>Canada – Express Entry and Provincial Nominee Programs (PNPs) for <strong>Canada PR</strong></li>
-            <li>Australia – SkillSelect for <strong>Australia PR</strong></li>
-            <li><strong>Student Visas</strong> for USA, UK, Europe, and more – Your pathway to international education from <strong>Bangalore</strong></li>
-            <li>Comprehensive <strong>Business Immigration Services</strong> – Explore global opportunities</li>
+            <li>Canada - Express Entry and Provincial Nominee Programs (PNPs) for <strong>Canada PR</strong></li>
+            <li>Australia - SkillSelect for <strong>Australia PR</strong></li>
+            <li><strong>Student Visas</strong> for USA, UK, Europe, and more - Your pathway to international education from <strong>Bangalore</strong></li>
+            <li>Comprehensive <strong>Business Immigration Services</strong> - Explore global opportunities</li>
             <li>Legal Outsourcing for International Visa Law Firms</li>
           </ul>
           <h2 className={styles.subheading}>Contact Our Immigration Consultants in Bangalore</h2>
           <address className={styles.address}>
-            <li> <strong>Address:</strong> GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore, 560025, Karnataka</li>
+            <li><strong>Address:</strong> GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore, 560025, Karnataka</li>
             
             <li><strong>Phone:</strong> <a href="tel:+917022213466"> +91-7022213466</a></li>
             <li><strong>Email:</strong> <a href="mailto:operations@globalvisa-internationalscom">operations@globalvisa-internationals.com</a></li>
