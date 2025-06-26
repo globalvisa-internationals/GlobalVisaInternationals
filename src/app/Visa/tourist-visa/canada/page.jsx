@@ -111,7 +111,7 @@ export default function Canada() {
   };
 
   return (
-    <>
+  <>
       <head>
         <title> Canada Tourist Visa: Requirements, Application & Top Places | Global Visa Internationals</title>
         <meta name="description" content="Planning a trip to Canada? Global Visa Internationals offers expert guidance on Canada tourist visa requirements and the application process. Discover the top places to visit in Canada." />
@@ -154,8 +154,15 @@ export default function Canada() {
 
 
         <div className={styles.CanadaData}>
-          <h1 className={styles.Title}>Discovering Canada: A Traveler's Paradise</h1>
-          <p>Canada, a land of immense natural beauty and vibrant multicultural cities, stands as a premier destination for travelers from around the globe. From the towering peaks of the Rocky Mountains to the historic streets of Quebec City and the bustling metropolis of Toronto, Canada offers a diverse range of experiences to captivate every visitor. This guide aims to provide comprehensive information for planning your tourist visit to this extraordinary country, ensuring you are well-prepared to discover its many wonders. At Global Visa Internationals, we understand that embarking on an international journey involves careful planning, and we are here to partner with you to ensure your experience in Canada is smooth, seamless, and truly unforgettable. </p>
+          <h1 className={styles.Title}>
+            Canada Tourist Visa Agents in Bangalore | Best Canada Visitor Visa Consultants | Global Visa Internationals
+          </h1>
+          <p>
+            Planning to explore Canada? As one of the most trusted <strong>Canada Tourist Visa Consultants in Bangalore</strong>, Global Visa Internationals helps you secure your <strong>Canada visitor visa</strong> with ease. Canada is a land of breathtaking natural beauty, iconic landmarks, and multicultural cities. From the majestic <strong>Rocky Mountains</strong> and <strong>Niagara Falls</strong> to the historic charm of Quebec City and the vibrant life of Toronto and Vancouver, this country offers something for every traveler. Our expert team provides complete guidance on <strong>Canada tourist visa requirements, processing time, eligibility, and document checklist</strong>. Whether you're planning a family vacation, a solo trip, or a honeymoon, we ensure your visa process is smooth and stress-free. Trust Global Visa Internationals – your reliable partner for <strong>Canada tourist visa application support</strong> – to turn your travel dreams into reality.
+          </p>
+
+
+
           <div className={styles.formSection1}>
             <h4 className={styles.subTitle}>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
             <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
@@ -230,20 +237,47 @@ export default function Canada() {
               </div>
             )}
           </div>
-          <h2 className={styles.subTitle}>Discover the Wonders of Canada: A Tourist's Paradise</h2>
-          <p>Canada boasts a wealth of iconic landmarks and must-visit attractions, each offering a unique glimpse into the country's diverse landscapes and rich heritage.</p>
-          <strong className={styles.subTitle}>Iconic Landmarks and Must-Visit Attractions</strong>
+
+          <h2 className={styles.subTitle}>
+            Explore Top Places to Visit in Canada – A Complete Guide for Tourist Visa Applicants
+          </h2>
+          <p>
+            Planning a trip to Canada on a <strong>Canada tourist visa</strong>? Discover some of the most iconic landmarks and top-rated attractions that make Canada a dream destination for travelers worldwide. Whether you're applying for a <strong>Canada visitor visa from India</strong> or consulting with <strong>expert Canada tourist visa agents</strong>, this travel guide will help you plan an unforgettable experience.
+          </p>
+
+          <strong className={styles.subTitle}>Must-Visit Attractions for Canada Tourist Visa Holders</strong>
           <ul>
-            <li><h4 className={styles.subTitle}>Banff National Park</h4>
-              Nestled in the heart of the Canadian Rockies, Banff National Park is a jewel of natural beauty, renowned for its breathtaking turquoise lakes and majestic mountains. The park's iconic Lake Louise, with its emerald waters reflecting the surrounding glaciers, and Moraine Lake, set in the Valley of the Ten Peaks, are sights that leave a lasting impression on all who visit. Key attractions within the park include the serene Lake Louise Lakeshore, the picturesque Moraine Lake and Valley of the Ten Peaks, and the vividly colored Peyto Lake. Visitors can also relax in the Banff Upper Hot Springs, explore the fascinating Johnston Canyon with its waterfalls, and drive along the scenic Icefields Parkway, which connects Banff to Jasper National Park, offering stunning views of glaciers and emerald lakes. For a glimpse into the park's history, the Cave and Basin National Historic Site and the Banff Park Museum National Historic Site are well worth a visit. Seasonal activities abound, with hiking and canoeing popular in the summer months, while winter transforms the park into a snowy wonderland perfect for skiing and snowshoeing. The Icefields Parkway, a 230 km route, provides a breathtaking journey through glaciers, lakes, and valleys, making it a must-do for any visitor to the region</li>
-            <li><h4 className={styles.subTitle}>Quebec City</h4>
-              Steeped in history and boasting a distinct European charm, Quebec City offers a culturally rich experience unlike any other in Canada. Its historic Old Quebec, a UNESCO World Heritage site, is a treasure trove of cobblestone streets, charming boutiques, and architectural marvels. Dominating the skyline is the majestic Château Frontenac, an iconic hotel that embodies the city's grandeur. Other must-see sites include the historic Plains of Abraham, the site of a pivotal battle, and the stunning Notre-Dame Cathedral Basilica. Quebec City experiences four distinct seasons, each bringing its own unique enchantment and a range of exciting activities. </li>
-            <li><h4 className={styles.subTitle}>Toronto</h4>
-              As Canada's largest city, Toronto pulsates with urban excitement and stands as a vibrant, multicultural hub. Defining its skyline is the iconic CN Tower, offering unparalleled panoramic views of the city, thrilling experiences like the EdgeWalk, and fine dining at its revolving 360 Restaurant. Culture enthusiasts will be captivated by the Royal Ontario Museum, showcasing extensive collections of art, world culture, and natural history. Other notable attractions include the historic Distillery Historic District, with its Victorian-era architecture and vibrant atmosphere, and the Art Gallery of Ontario, home to a significant collection of artwork. </li>
-            <li><h4 className={styles.subTitle}>Niagara Falls</h4>A natural wonder of immense power and beauty, Niagara Falls is an awe-inspiring sight that attracts visitors from around the world. On the Canadian side, key attractions include Journey Behind the Falls, offering an up-close experience of the falls' thunderous power, Niagara City Cruises, taking visitors into the mist at the base of the falls, and the Whirlpool Aero Car, providing stunning aerial views of the Niagara Whirlpool. Visitors also have the option to experience the falls from the US side, offering different perspectives and attractions.   </li>
-            <li><h4 className={styles.subTitle}>Jasper National</h4> ParkAdjacent to Banff, Jasper National Park is the largest national park in the Canadian Rockies, celebrated for its vast wilderness, majestic mountains, and abundant wildlife. Must-see locations and activities include the serene Maligne Lake, home to the iconic Spirit Island, the powerful Athabasca Falls, and the breathtaking Icefields Parkway. Visitors can also explore the stunning Mount Edith Cavell, embark on numerous hiking trails catering to all skill levels, and enjoy exceptional opportunities for wildlife viewing. The Icefields Parkway seamlessly connects Jasper and Banff, allowing for an extended exploration of the Canadian Rockies.   </li>
-            <li><h4 className={styles.subTitle}>Historic Sites in Ottawa</h4>As the capital city of Canada, Ottawa holds significant historical and political importance, offering a wealth of historic sites for tourists to explore. Dominating the city's landscape is Parliament Hill, home to Canada's federal government, featuring the iconic Parliament Buildings, the Peace Tower, and the Centennial Flame. The Rideau Canal National Historic Site, a UNESCO World Heritage site, offers scenic waterways and historical significance. Other key sites include the Canadian War Museum, showcasing Canada's military history, the National Gallery of Canada, housing an impressive collection of art, and the beautiful Notre-Dame Cathedral Basilica. The city's architecture showcases a stunning blend of Gothic Revival and Victorian styles.   </li>
+            <li>
+              <h4 className={styles.subTitle}>Banff National Park</h4>
+              Located in the heart of the Canadian Rockies, Banff is a must-visit for anyone traveling on a <strong>Canada visitor visa</strong>. With scenic spots like Lake Louise, Moraine Lake, and the Icefields Parkway, this park offers hiking, sightseeing, and photography opportunities. A favorite for <strong>tourist visa travelers</strong>, it’s perfect for both summer and winter adventures.
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}>Quebec City</h4>
+              Quebec City offers a European vibe with cobblestone streets, French architecture, and historical landmarks. It's a great destination for cultural tourism under a <strong>Canada tourist visa</strong>. Visit Château Frontenac, Old Quebec (UNESCO World Heritage Site), and enjoy seasonal festivals and local cuisine.
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}>Toronto</h4>
+              For tourists holding a <strong>Canada travel visa</strong>, Toronto offers iconic city experiences like the CN Tower, the Royal Ontario Museum, and the Distillery District. It's one of the most visited cities in Canada, ideal for shopping, nightlife, and cultural tours.
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}>Niagara Falls</h4>
+              A global tourist magnet, Niagara Falls is a bucket-list destination for anyone applying for a <strong>Canada visitor visa</strong>. Get up-close through Journey Behind the Falls or take the Niagara City Cruise to experience the majestic beauty of one of the world’s most powerful waterfalls.
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}>Jasper National Park</h4>
+              Adjacent to Banff, Jasper offers serene beauty and less crowded natural escapes. With attractions like Maligne Lake, Athabasca Falls, and Spirit Island, it’s a top choice for nature lovers applying for a <strong>Canadian tourist visa</strong>.
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}>Historic Sites in Ottawa</h4>
+              As Canada’s capital, Ottawa is rich in history and perfect for educational and leisure tourism. Visit Parliament Hill, Rideau Canal (UNESCO Site), and the Canadian War Museum. Ideal for families and solo travelers on a <strong>Canada visa for tourism</strong>.
+            </li>
           </ul>
+
 
           <div className={styles.formSection1}>
             <h4>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
@@ -319,101 +353,143 @@ export default function Canada() {
               </div>
             )}
           </div>
-          <h3 className={styles.subTitle}>A Year of Adventure: Best Times to Visit Canada</h3>
-          <p>Canada's diverse climate offers unique experiences throughout the year, making it a year-round destination for tourism.</p>
+
+
+          <h3 className={styles.subTitle}>Best Time to Visit Canada for Tourist Visa Holders – A Season-by-Season Guide</h3>
+          <p>
+            Canada is a year-round destination for travelers applying for a <strong>Canada tourist visa</strong>. With its diverse seasons, each part of the year offers unique experiences – from snow-covered adventures in winter to colorful foliage in fall. Knowing the best time to visit Canada can help you plan your trip better and increase your chances of <strong>Canada visitor visa approval</strong> if tied to a specific season or event.
+          </p>
+
           <ul>
-            <li><h3 className={styles.subTitle}>Summer (June to August)</h3>Summer in Canada, from June to August, brings warm weather and clear skies, creating ideal conditions for a wide range of outdoor adventures. This is the perfect time for hiking through the stunning trails of Banff and Jasper National Parks, canoeing or kayaking on the pristine lakes, and camping under the vast Canadian skies. With long daylight hours and pleasant temperatures, popular sites like Lake Louise and Moraine Lake are fully accessible, allowing visitors to fully immerse themselves in their breathtaking beauty.   </li>
-            <li><h3 className={styles.subTitle}>Winter (December to February)</h3>For snow enthusiasts, winter in Canada, particularly from December to February, offers a magical experience. The Canadian Rockies, including Banff, Lake Louise, and Sunshine Village, become a haven for skiing and snowboarding, boasting prime conditions with fluffy, dry powder, especially in February. Beyond the slopes, visitors can enjoy ice skating on frozen lakes and embark on serene snowshoeing adventures through the winter landscapes. The sight of snow-capped peaks and vast lakes covered in ice creates a truly unforgettable winter wonderland.   </li>
-            <li><h3 className={styles.subTitle}>Shoulder Seasons (Spring: March to May; Fall: September to November)</h3>The shoulder seasons in Canada, spring (March to May) and fall (September to November), offer a unique blend of pleasant weather, fewer crowds, and distinct seasonal attractions. Spring sees the return of life to the landscapes, making it a good time for camping, hiking, and wildlife spotting as animals emerge from hibernation. With fewer tourists before the summer rush, visitors can enjoy a more tranquil experience. March brings the sweet tradition of maple syrup season in Quebec , while Vancouver bursts into color with its stunning cherry blossoms. Fall transforms Canada into a tapestry of vibrant colors, making it an ideal time for hiking and admiring the autumn foliage, particularly in Quebec City and the Rockies. With the summer crowds having departed, a more serene atmosphere prevails. September also offers a chance to witness the mesmerizing Northern Lights in regions like the Yukon.   </li>
+            <li>
+              <h3 className={styles.subTitle}>☀️ Summer (June to August)</h3>
+              Summer in Canada offers ideal weather for outdoor activities, sightseeing, and festivals. Popular with international tourists on a <strong>Canada visitor visa</strong>, it's the perfect season for exploring Banff and Jasper National Parks, canoeing on crystal-clear lakes, and visiting iconic landmarks like Lake Louise and Moraine Lake. Book early – this is peak <strong>Canada tourist season</strong>.
+            </li>
+
+            <li>
+              <h3 className={styles.subTitle}>❄️ Winter (December to February)</h3>
+              Traveling to Canada in winter gives you the chance to enjoy snow sports, winter carnivals, and magical scenery. Tourist visa holders can ski in Banff, go ice skating on frozen lakes, or visit the world-famous <strong>Carnaval de Québec</strong>. Winter is perfect for those seeking adventure and snowy landscapes.
+            </li>
+
+            <li>
+              <h3 className={styles.subTitle}>🍁 Shoulder Seasons (Spring: March–May | Fall: September–November)</h3>
+              Spring and fall are excellent times to apply for a <strong>Canada travel visa</strong> if you prefer fewer crowds, lower costs, and unique seasonal experiences. Spring features cherry blossoms in Vancouver and maple syrup tours in Quebec. Fall offers breathtaking foliage in the Rockies and is ideal for Northern Lights viewing in the Yukon. These off-peak seasons are perfect for smooth <strong>tourist visa processing</strong> and relaxed exploration.
+            </li>
           </ul>
-          <h3 className={styles.subTitle}>Immerse Yourself in Canadian Culture: Festivals and Events</h3>
-          <p>Canada's vibrant cultural scene comes alive throughout the year with a diverse array of festivals and events.</p>
+
+          <h3 className={styles.subTitle}>🎉 Experience Canadian Culture: Must-See Festivals & Events</h3>
+          <p>
+            Tourists on a <strong>Canada visitor visa</strong> can experience the country's rich culture through its vibrant festivals held all year round. From music and food to history and film, Canada’s festivals offer something for everyone.
+          </p>
+
           <ul>
-            <li><h3 className={styles.subTitle}>Summer Festivals</h3>During the summer months, Canada hosts numerous festivals celebrating a wide range of interests. Music lovers can enjoy the renowned Montreal International Jazz Festival. Vancouver lights up with the spectacular Celebration of Light, an international fireworks competition. Toronto comes alive with the vibrant Toronto Caribbean Carnival , while Calgary hosts the iconic Calgary Stampede, a celebration of rodeo and cowboy culture. Winnipeg showcases its multiculturalism with Folkorama , and Cape Breton Island in Nova Scotia celebrates its Celtic heritage with the Celtic Colours International Festival.   </li>
+            <li>
+              <h3 className={styles.subTitle}>🎶 Summer Festivals</h3>
+              Summer is packed with world-class events like the <strong>Montreal International Jazz Festival</strong>, <strong>Toronto Caribbean Carnival</strong>, and <strong>Calgary Stampede</strong>. Visitors also enjoy the <strong>Celebration of Light</strong> in Vancouver and <strong>Folklorama</strong> in Winnipeg. These events attract thousands of international travelers with valid <strong>Canada tourist visas</strong>.
+            </li>
 
-            <li><h3 className={styles.subTitle}>Winter Festivals</h3>Winter in Canada is far from dull, with numerous festivals embracing the snowy season. Quebec City hosts the world-famous Carnaval de Québec, a grand winter carnival featuring ice sculptures and parades. Ottawa celebrates winter with Winterlude, offering ice sculptures and skating along the Rideau Canal. Niagara Falls illuminates with the Winter Festival of Lights , while Winnipeg celebrates French Canadian and Métis culture at the Festival du Voyageur. Jasper in Alberta offers a range of winter activities, music, and food during Jasper in January.   </li>
+            <li>
+              <h3 className={styles.subTitle}>🌨️ Winter Festivals</h3>
+              Winter highlights include <strong>Carnaval de Québec</strong>, <strong>Ottawa Winterlude</strong>, <strong>Niagara Winter Festival of Lights</strong>, and <strong>Festival du Voyageur</strong> in Winnipeg. If you're visiting Canada in winter, these festivals are a must.
+            </li>
 
-            <li><h3 className={styles.subTitle}>Spring Festivals</h3>Spring brings a sense of renewal and celebration across Canada. Ottawa bursts into color with the Canadian Tulip Festival , while Vancouver showcases its beautiful cherry blossoms during the Vancouver Cherry Blossom Festival. Quebec celebrates its maple syrup season with visits to Sugar Shacks , and Stratford, Ontario, hosts the renowned Stratford Spring Theatre Season.   </li>
-            <li><h3 className={styles.subTitle}>Fall Festivals</h3>As the leaves turn golden, Canada continues its festival season with a variety of events. Toronto hosts the prestigious Toronto International Film Festival (TIFF) , while Cape Breton Island comes alive with the Celtic Colours International Festival. Kitchener-Waterloo, Ontario, celebrates its German heritage with Oktoberfest , and Jasper National Park offers a celestial experience at the Jasper Dark Sky Festival. Wine enthusiasts can indulge in the Fall Okanagan Wine Festival in British Columbia.   </li>
-            <div className={styles.formSection1}>
-              <h4 className={styles.subTitle}>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
-              <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
-              <form id="inquiry-form" onSubmit={handleSubmit}>
-                <div className={styles.row}>
-                  <div>
-                    <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                  </div>
-                  <div>
-                    <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                  </div>
-                </div>
+            <li>
+              <h3 className={styles.subTitle}>🌸 Spring Festivals</h3>
+              Spring is known for the <strong>Canadian Tulip Festival</strong> in Ottawa, the <strong>Vancouver Cherry Blossom Festival</strong>, and Quebec’s maple syrup season. It’s a great time to travel to Canada with fewer crowds and colorful backdrops.
+            </li>
 
-                <div className={styles.row}>
-                  <div>
-                    <select className={styles.select} name="country" required>
-                      <option value="">Select Country</option>
-                      {["newzeland", "USA", "UK", "Canada", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                        <option key={country} value={country}>{country}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <select className={styles.select} name="immigration_type" required>
-                      <option value="">Select Immigration Type</option>
-                      {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                        <option key={type} value={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                <div className={styles.row}>
-                  <div>
-                    <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                  </div>
-                  <div>
-                    <select className={styles.select} name="age" required>
-                      <option value="">Select Age</option>
-                      <option value="18-45">18-45</option>
-                      <option value="45+">45+</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className={styles.row}>
-                  <div>
-                    <select className={styles.select} name="education" required>
-                      <option value="">Select Qualification</option>
-                      {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                        <option key={edu} value={edu}>{edu}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                  </div>
-                </div>
-
-
-                <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Submitting..." : "Submit"}
-                </button>
-
-              </form>
-              {showPopup && (
-                <div className={styles.popupOverlay}>
-                  <div className={styles.popupContent}>
-                    <p>✅ Your form has been submitted successfully!</p>
-                    <button onClick={() => setShowPopup(false)}>Close</button>
-                  </div>
-                </div>
-              )}
-            </div>
+            <li>
+              <h3 className={styles.subTitle}>🍂 Fall Festivals</h3>
+              Fall includes major events like the <strong>Toronto International Film Festival (TIFF)</strong>, <strong>Celtic Colours International Festival</strong>, and <strong>Oktoberfest</strong> in Kitchener-Waterloo. Don’t miss the <strong>Jasper Dark Sky Festival</strong> or <strong>Okanagan Wine Festival</strong> for unforgettable seasonal experiences.
+            </li>
           </ul>
-          <h2 className={styles.subTitle}>Planning Your Canadian Journey: Essential Travel Information</h2>
-          <p>To help you plan your trip to Canada, here is essential information regarding travel costs and daily expenses.</p>
-          <h3 className={styles.subTitle}>Navigating the Skies: Average Flight Costs to Canada</h3>
-          <p>The cost of flights to Canada varies depending on your departure location, the specific Canadian city you are flying into, the airline you choose, and the time of year you plan to travel.</p>
+
+
+          <div className={styles.formSection1}>
+            <h4 className={styles.subTitle}>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
+            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Canada", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <h2 className={styles.subTitle}>Planning Your Trip to Canada – Cost, Flights & Accommodation Guide for Tourist Visa Applicants</h2>
+          <p>
+            If you're applying for a <strong>Canada tourist visa</strong>, having a clear understanding of travel expenses can help you budget your trip effectively. From flight costs to accommodation options, here's essential information for planning a smooth and affordable visit to Canada.
+          </p>
+
+          <h3 className={styles.subTitle}>✈️ Flight Costs to Canada – Average Round-Trip Fares by Region</h3>
+          <p>
+            Flight fares to Canada vary based on season, departure country, airline, and destination city. If you're searching for the <strong>cheapest time to fly to Canada</strong> or wondering about <strong>flight ticket prices from India to Canada</strong>, use this table as a reference to plan ahead.
+          </p>
+
           <table className={styles.table}>
             <thead>
               <tr>
@@ -440,13 +516,13 @@ export default function Canada() {
                 <td>Asia</td>
                 <td>Vancouver</td>
                 <td>$577 - $914+</td>
-                <td>-</td>
+                <td>October, November</td>
               </tr>
               <tr>
-                <td>Southeast</td>
-                <td>Asia</td>
-                <td>Vancouver	$673+</td>
-                <td>-</td>
+                <td>Southeast Asia</td>
+                <td>Vancouver</td>
+                <td>$673+</td>
+                <td>–</td>
               </tr>
               <tr>
                 <td>South America</td>
@@ -456,52 +532,61 @@ export default function Canada() {
               </tr>
             </tbody>
           </table>
-          <p className={styles.note}><b>Note:</b> These are average estimates and actual prices may vary.</p>
 
-          <h2 className={styles.subTitle}>Your Home Away From Home: Accommodation Options in Canada</h2>
-          <p>Canada offers a wide range of accommodation options to suit every budget and preference.</p>
+          <p className={styles.note}><b>Note:</b> Prices are approximate and may change based on availability, booking time, and seasonality.</p>
+
+          <h2 className={styles.subTitle}>🏨 Accommodation Costs in Canada – Budget, Mid-Range & Luxury Options</h2>
+          <p>
+            Wondering <strong>where to stay in Canada</strong> during your visit? From backpacker-friendly hostels to luxury 5-star hotels, Canada offers a wide range of accommodations to suit all travel styles and visa durations. Here's an overview of <strong>hotel prices in major Canadian cities</strong> to help you plan your stay while on a <strong>Canada visitor visa</strong>.
+          </p>
+
           <table className={styles.table}>
             <thead>
               <tr>
                 <th>City</th>
-                <th>Budget (Hostels/Budget Hotels)</th>
-                <th>Mid-Range Hotels</th>
-                <th>Luxury Hotels (4-5 Stars)</th>
+                <th>Budget (Hostels / 1-Star)</th>
+                <th>Mid-Range (2–3 Star Hotels)</th>
+                <th>Luxury (4–5 Star Hotels)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Toronto	</td>
-                <td>$28 - $100</td>
-                <td>$100 - $250</td>
-                <td>$200 - $500+</td>
+                <td>Toronto</td>
+                <td>$28 – $100</td>
+                <td>$100 – $250</td>
+                <td>$200 – $500+</td>
               </tr>
               <tr>
                 <td>Montreal</td>
-                <td>	$18 - $70</td>
-                <td>$70 - $200</td>
-                <td>$200 - $500+</td>
+                <td>$18 – $70</td>
+                <td>$70 – $200</td>
+                <td>$200 – $500+</td>
               </tr>
               <tr>
                 <td>Vancouver</td>
-                <td>	$28 - $100</td>
-                <td>$100 - $300</td>
-                <td>$300 - $700+</td>
+                <td>$28 – $100</td>
+                <td>$100 – $300</td>
+                <td>$300 – $700+</td>
               </tr>
               <tr>
                 <td>Banff</td>
-                <td>$44 - $150</td>
-                <td>$150 - $300	</td>
-                <td>$300 - $1000+</td>
+                <td>$44 – $150</td>
+                <td>$150 – $300</td>
+                <td>$300 – $1000+</td>
               </tr>
               <tr>
                 <td>Quebec City</td>
-                <td>$28 - $70</td>
-                <td>$70 - $180</td>
-                <td>$180 - $400+</td>
+                <td>$28 – $70</td>
+                <td>$70 – $180</td>
+                <td>$180 – $400+</td>
               </tr>
             </tbody>
           </table>
+
+          <p className={styles.note}>
+            <b>Tip:</b> Booking early and choosing shoulder seasons can help reduce overall costs. Also consider vacation rentals, B&Bs, and Airbnb for long stays during your <strong>Canada tourist visit</strong>.
+          </p>
+
 
           <div className={styles.formSection1}>
             <h4>Contact Global Visa Internationals for Visa and Documentation Assistance:</h4>
@@ -577,18 +662,23 @@ export default function Canada() {
               </div>
             )}
           </div>
-          <h2 className={styles.subTitle}>Everyday Expenses: Average Daily Living Costs</h2>
-          <p>The average daily living expenses for tourists in Canada can vary based on your travel style and spending habits.</p>
+          <h2 className={styles.subTitle}>
+            Average Daily Expenses in Canada – Budget Planning for Tourist Visa Holders
+          </h2>
+          <p>
+            Understanding the average cost of daily living in Canada is crucial for those applying for a <strong>Canada tourist visa</strong>. Your travel budget will depend on your style—backpacker, mid-range, or luxury. Here's a breakdown of typical food and public transport costs in major Canadian cities.
+          </p>
+
           <table className={styles.table}>
             <thead>
               <tr>
-              <th>City	</th>
-              <th>Food (Budget)</th>
-              <th>Food (Moderate)</th>
-              <th>Food (Luxury)</th>
-              <th>Public Transport (Single Fare)</th>
-              <th>Public Transport (Day Pass)</th>
-            </tr>
+                <th>City</th>
+                <th>Food (Budget)</th>
+                <th>Food (Moderate)</th>
+                <th>Food (Luxury)</th>
+                <th>Public Transport (Single Fare)</th>
+                <th>Public Transport (Day Pass)</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -596,7 +686,7 @@ export default function Canada() {
                 <td>$50 CAD</td>
                 <td>$85 CAD</td>
                 <td>$125 CAD</td>
-                <td>$3.30 - $3.35 CAD</td>
+                <td>$3.30 – $3.35 CAD</td>
                 <td>$13.50 CAD</td>
               </tr>
               <tr>
@@ -609,40 +699,58 @@ export default function Canada() {
               </tr>
               <tr>
                 <td>Vancouver</td>
-                <td>$50 - $100 CAD</td>
-                <td>$85 - $150 CAD</td>
-                <td>$125 - $200+ CAD</td>
-                <td>$2.60 - $3.20 CAD</td>
+                <td>$50 – $100 CAD</td>
+                <td>$85 – $150 CAD</td>
+                <td>$125 – $200+ CAD</td>
+                <td>$2.60 – $3.20 CAD</td>
                 <td>$11.50 CAD</td>
               </tr>
               <tr>
-                <td>Banff	</td>
-                <td>$40 - $80 CAD</td>
-                <td>$70 - $120 CAD</td>
-                <td>$100 - $200+ CAD</td>
-                <td>$5 - $25 CAD</td>
-                <td>$12 - $35 CAD</td>
+                <td>Banff</td>
+                <td>$40 – $80 CAD</td>
+                <td>$70 – $120 CAD</td>
+                <td>$100 – $200+ CAD</td>
+                <td>$5 – $25 CAD</td>
+                <td>$12 – $35 CAD</td>
               </tr>
               <tr>
                 <td>Quebec City</td>
-                <td>$40 - $70 CAD</td>
-                <td>$70 - $120 CAD</td>
-                <td>$100 - $180+ CAD</td>
-                <td>$3.50 - $3.75 CAD</td>
+                <td>$40 – $70 CAD</td>
+                <td>$70 – $120 CAD</td>
+                <td>$100 – $180+ CAD</td>
+                <td>$3.50 – $3.75 CAD</td>
                 <td>$10.00 CAD</td>
               </tr>
             </tbody>
           </table>
 
-          <p className={styles.note}><b>Note:</b> These are average estimates and actual costs may vary.</p>
-          <h2 className={styles.subTitle}>Why Canada? Unveiling the Allure of a Top Tourist Destination</h2>
-          <p>Canada's desirability as a tourist destination stems from a multitude of factors that cater to a wide range of travelers.</p>
+          <p className={styles.note}><b>Note:</b> These costs are averages and can vary by season, location, and spending style.</p>
+
+          <h2 className={styles.subTitle}>
+            Why Choose Canada for Your Next Vacation? – Top Reasons for Tourist Visa Travelers
+          </h2>
+          <p>
+            If you're considering applying for a <strong>Canada visitor visa</strong>, here’s why Canada consistently ranks among the world’s top tourist destinations. From natural beauty to safety and cultural diversity, it offers everything you need for a memorable international trip.
+          </p>
+
           <ul>
-            <li><h4 className={styles.subTitle}>Breathtaking Landscapes and Natural Beauty</h4>From coast to coast, Canada is blessed with breathtaking landscapes and iconic natural wonders. The majestic mountains of the Rockies, with their snow-capped peaks and turquoise lakes like Lake Louise and Moraine Lake, offer unparalleled scenic beauty. The sheer power of Niagara Falls captivates millions of visitors each year. The rugged coastlines of Nova Scotia, the vast forests of Ontario, and the unique tidal phenomena of the Bay of Fundy showcase Canada's diverse geography. In the northern territories, the mesmerizing Northern Lights dance across the night sky, offering a truly unforgettable spectacle. This natural beauty provides endless opportunities for outdoor activities, including hiking, canoeing, kayaking, skiing, snowboarding, and wildlife viewing.   </li>
-            <li><h4 className={styles.subTitle}>Rich Cultural Experiences and Warm Hospitality</h4>Beyond its natural wonders, Canada offers rich cultural experiences and is renowned for its warm and welcoming hospitality. As a multicultural nation, Canada embraces diversity, with vibrant cities like Vancouver, Toronto, Montreal, and Quebec City showcasing a blend of Indigenous traditions, French and British heritage, and influences from around the world. Canadians are known for their politeness and friendly nature, making visitors feel at home. Throughout the year, numerous festivals celebrate music, art, food, and culture, providing immersive experiences into Canada's diverse heritage.   </li>
-            <li><h4 className={styles.subTitle}>Safety and Security: Your Worry-Free Destination</h4>
-              Canada consistently ranks as one of the safest countries in the world, offering a secure and stable environment for travelers. Major Canadian cities are known for their low crime rates and visible policing, ensuring visitors can explore with peace of mind. The country boasts a reliable healthcare system, providing access to quality medical services if needed. Canada also has safe and well-maintained transportation systems, including public transit and roads. Additionally, most tourist areas in Canada experience a low risk of major natural disasters, contributing to a worry-free travel experience.</li>
+            <li>
+              <h4 className={styles.subTitle}>🌲 Breathtaking Landscapes and Natural Beauty</h4>
+              Canada is home to world-renowned natural attractions like the <strong>Rocky Mountains</strong>, <strong>Niagara Falls</strong>, and <strong>Banff National Park</strong>. Whether you're visiting Lake Louise, hiking in Jasper, or watching the <strong>Northern Lights</strong> in Yukon, the country’s scenic beauty is unmatched.
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}>🎭 Rich Cultural Experiences and Warm Hospitality</h4>
+              Canada’s multicultural society welcomes visitors from around the world. Cities like <strong>Toronto</strong>, <strong>Montreal</strong>, and <strong>Vancouver</strong> celebrate diversity through art, food, festivals, and heritage. Canada is a great destination for <strong>cultural tourism</strong>, offering immersive experiences for travelers.
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}>🛡️ Safe and Secure Travel Environment</h4>
+              Canada ranks among the safest countries globally, with low crime rates and stable governance. Public transport is reliable, healthcare is accessible, and infrastructure is well-maintained — making it a stress-free choice for international travelers on a <strong>Canada tourist visa</strong>.
+            </li>
           </ul>
+
+
           <div className={styles.formSection1}>
             <h4 className={styles.subTitle}>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
             <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
@@ -717,84 +825,103 @@ export default function Canada() {
               </div>
             )}
           </div>
-          <h2 className={styles.subTitle}>Smooth Sailing: Understanding the Canadian Tourist Visa Process</h2>
-          <p>For many international travelers, a Canadian tourist visa is required to enter the country. Understanding the process can help ensure a smooth journey.</p>
-          <h3 className={styles.subTitle}>Eligibility and Requirements for a Canadian Tourist Visa:</h3>
-          <p>To be eligible for a Canadian tourist visa, you generally need to meet the following detailed requirements:</p>
+          <h2 className={styles.subTitle}>Canada Tourist Visa Requirements: Complete Checklist & Eligibility Guide (2025)</h2>
+          <p>
+            Planning a trip to Canada? Before applying for a <strong>Canada Tourist Visa (Temporary Resident Visa)</strong>, it's essential to understand the eligibility criteria and required documents to increase your chances of visa approval. Here's a detailed breakdown to help you prepare a strong and complete application.
+          </p>
+
+          <h3 className={styles.subTitle}>✅ Who is Eligible to Apply for a Canadian Visitor Visa?</h3>
+          <p>
+            To be eligible for a Canadian tourist visa, applicants must meet several key requirements set by <strong>Immigration, Refugees and Citizenship Canada (IRCC)</strong>.
+          </p>
+
           <ul>
-            <li><strong className={styles.subTitle}>Valid Passport:</strong>
+            <li>
+              <strong className={styles.subTitle}>✔ Valid Passport:</strong>
               <ul>
-                <li>You must hold a valid passport.</li>
-                <li>The passport must be valid for the entire duration of your intended stay in Canada. It's often recommended that your passport have at least six months of validity beyond your planned departure date from Canada.</li>
-                <li>Ensure there are sufficient blank pages in your passport for any necessary visa stamps.</li>
+                <li>Must be valid for the duration of your stay.</li>
+                <li>At least 6 months validity is recommended beyond your return date.</li>
+                <li>Ensure blank pages are available for visa stamps.</li>
               </ul>
             </li>
-            <li><strong className={styles.subTitle}>Good Health:</strong>
+
+            <li>
+              <strong className={styles.subTitle}>✔ Good Health:</strong>
               <ul>
-                <li>You must be in good health.</li>
-                <li>You may be required to undergo a medical examination by a panel physician designated by Immigration, Refugees and Citizenship Canada (IRCC), depending on your country of origin and intended length of stay.</li>
-                <li>Certain medical conditions may render you inadmissible to Canada.</li>
+                <li>You must be medically fit to travel.</li>
+                <li>A medical exam may be required based on your nationality or stay duration.</li>
+                <li>Medical conditions that may be considered inadmissible must be disclosed.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>No Criminal Record:</b>
+
+            <li>
+              <strong className={styles.subTitle}>✔ No Criminal Record:</strong>
               <ul>
-                <li>You must not have any criminal record or be involved in any criminal activity.</li>
-                <li>You may be required to provide police certificates from your country of residence and any other country where you have lived for six months or more since the age of 18.</li>
-                <li>Past criminal convictions could lead to your visa application being refused.</li>
+                <li>Provide a clean police record.</li>
+                <li>Past convictions can affect your visa approval.</li>
+                <li>Police clearance certificates may be required for all countries you’ve lived in for 6+ months since age 18.</li>
               </ul>
             </li>
-            <li><strong className={styles.subTitle}>Demonstrate Strong Ties to Your Home Country:</strong>
+
+            <li>
+              <strong className={styles.subTitle}>✔ Strong Ties to Your Home Country:</strong>
               <ul>
-                <li>You must convince the immigration authorities that you will leave Canada at the end of your authorized stay. This is crucial to demonstrate you are a genuine temporary resident. Strong ties can include:
+                <li>You must prove that you will return after your visit.</li>
+                <li>Accepted ties include:
                   <ul>
-                    <li><strong className={styles.subTitle}>Ongoing Studies:</strong> Enrollment verification from an educational institution in your home country. A letter from your employer confirming your position, salary, and that you are expected to return to your job.</li>
-                    <li><strong className={styles.subTitle}>Property Ownership:</strong> Documents proving ownership of a house, land, or other significant assets in your home country.</li>
-                    <li><strong className={styles.subTitle}>Financial Assets:</strong> Bank statements, investment records, or other financial documents demonstrating your economic stability in your home country.</li>
-                    <li><strong className={styles.subTitle}>Family Ties: </strong>Marriage certificate, birth certificates of dependent children residing in your home country, or other documents demonstrating significant family responsibilities.</li>
-                    <li><strong className={styles.subTitle}>Ongoing Studies:</strong> Enrollment verification from an educational institution in your home country.</li>
+                    <li><b>Employment proof</b>: Job letter or NOC from employer.</li>
+                    <li><b>Ongoing studies</b>: Enrollment verification letter.</li>
+                    <li><b>Property ownership</b>: Land/house ownership documents.</li>
+                    <li><b>Financial assets</b>: Fixed deposits, mutual funds, savings.</li>
+                    <li><b>Family responsibilities</b>: Marriage certificate, child’s birth certificate, elderly dependents.</li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Proof of Sufficient Funds:</b>
+
+            <li>
+              <strong className={styles.subTitle}>✔ Proof of Sufficient Funds:</strong>
               <ul>
-                <li>You must demonstrate that you have enough money to support yourself during your stay in Canada and to return home.</li>
-                <li>The required amount of funds will vary depending on:
+                <li>You must show you can financially support yourself in Canada.</li>
+                <li>Documents may include:
                   <ul>
-                    <li>The length of your intended stay.</li>
-                    <li>Your accommodation arrangements (e.g., staying with family/friends vs. staying in hotels).</li>
-                    <li>Your travel companions (if any).
-                    </li>
+                    <li>Recent 3–6 months bank statements</li>
+                    <li>ITR (Income Tax Returns)</li>
+                    <li>Fixed deposits or investment proofs</li>
+                    <li>If sponsored: sponsor’s financial documents + letter of support</li>
                   </ul>
                 </li>
-                <li><b className={styles.subTitle}>Acceptable proof of funds may include:</b>
-                  <ul>
-                    <li>Bank statements for the past few months.</li>
-                    <li>Fixed deposit certificates.</li>
-                    <li>Evidence of other liquid assets.</li>
-                    <li>If you are being supported by someone in Canada, a letter of support and their financial documents may be required.</li>
-
-                  </ul>
-                </li>
-
               </ul>
             </li>
 
-            <li><b className={styles.subTitle}>Letter of Invitation (If Applicable):</b>
+            <li>
+              <strong className={styles.subTitle}>✔ Letter of Invitation (Optional but Helpful):</strong>
               <ul>
-                <li>If you are visiting family or friends in Canada, a letter of invitation from them can be helpful.</li>
-                <li>The letter should include details about the inviter (their status in Canada, contact information, relationship to you), details about you (your name, date of birth, purpose and duration of visit), and details about accommodation and financial support, if any.</li>
-                <li>While a letter of invitation is not mandatory in all cases, it can strengthen your application by providing additional context for your visit.</li>
+                <li>If visiting friends or family, an invitation letter from the Canadian host can strengthen your application.</li>
+                <li>It should include:
+                  <ul>
+                    <li>Host's full name, address, and legal status in Canada</li>
+                    <li>Your purpose of visit, duration, relationship, and accommodation plan</li>
+                    <li>Whether they will sponsor your stay (if applicable)</li>
+                  </ul>
+                </li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Biometric Information (If Required):</b>
+
+            <li>
+              <strong className={styles.subTitle}>✔ Biometrics (If Required):</strong>
               <ul>
-                <li>Citizens from certain countries are required to provide biometric information (fingerprints and a photograph) as part of their visa application.</li>
-                <li>You will typically need to attend an appointment at a Visa Application Centre (VAC) in your country of residence to provide your biometrics.</li>
-                <li>A biometric instruction letter will be issued after you submit your online application and pay the fee.</li>
+                <li>Most applicants from Asia, Africa, and the Middle East need to give biometrics.</li>
+                <li>Fingerprinting and photo are taken at the nearest Visa Application Centre (VAC).</li>
+                <li>A biometric instruction letter is issued after online application and payment.</li>
               </ul>
             </li>
           </ul>
+
+          <p>
+            Meeting these <strong>Canada visitor visa eligibility criteria</strong> and submitting a complete file improves your chances of approval. For expert assistance with document preparation, financial justification, or travel bookings, reach out to <strong>Global Visa Internationals</strong> – your trusted Canada tourist visa agents in India.
+          </p>
+
           <div className={styles.formSection1}>
 
             <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
@@ -869,183 +996,187 @@ export default function Canada() {
               </div>
             )}
           </div>
-          <h2 className={styles.subTitle}>Steps Involved in the Visa Application Process:</h2>
-          <p>The process of applying for a Canadian tourist visa involves the following detailed steps:</p>
+          <h2 className={styles.subTitle}>Step-by-Step Canada Tourist Visa Application Process (2025)</h2>
+          <p>
+            Planning a trip to Canada? Here's a complete guide to the <strong>Canada visitor visa application process</strong> to help you navigate every step with confidence. Whether you're visiting for tourism, to meet family, or explore Canadian culture, these steps ensure your journey starts smoothly.
+          </p>
+
           <ol type='I'>
-            <li><b className={styles.subTitle}>Determine Visa Requirements:</b>
+            <li><b className={styles.subTitle}>Check Visa Eligibility:</b>
               <ul>
-                <li>First and foremost, determine if you actually need a tourist visa to travel to Canada.</li>
-                <li>Citizens of certain countries are visa-exempt and may only require an Electronic Travel Authorization (eTA) for air travel.</li>
-                <li>Use the official Government of Canada website (IRCC) to check the visa requirements based on your citizenshi</li>
+                <li>Determine if you require a <strong>Temporary Resident Visa (TRV)</strong> or just an <strong>Electronic Travel Authorization (eTA)</strong>, based on your nationality.</li>
+                <li>Use the IRCC official tool to check your requirement based on citizenship.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Gather Necessary Supporting Documents:</b>
+
+            <li><b className={styles.subTitle}>Collect Required Documents:</b>
               <ul>
-                <li>Collect all the required documents to support your application. This may include:
-                  <ul>
-                    <li><strong className={styles.subTitle}>Passport:</strong> Ensure it meets the validity requirements mentioned earlier. Include copies of the bio-data page and any previous visas or entry stamps.</li>
-                    <li><strong className={styles.subTitle}>Proof of Financial Resources:</strong> Gather bank statements, fixed deposit certificates, investment records, or letters of support and financial documents from your host in Canada, as applicable. Ensure these documents are recent and clearly show sufficient funds.</li>
-                    <li><strong className={styles.subTitle}>Proof of Ties to Home Country:</strong> Collect employment letters, property ownership documents, marriage certificate, birth certificates of dependents, school enrollment letters, etc.</li>
-                    <li><strong className={styles.subTitle}>Travel History: </strong>Include copies of previous visas, entry/exit stamps in your passport, and any other evidence of your travel history.</li>
-                    <li><strong className={styles.subTitle}>Letter of Invitation (If Applicable):</strong> Obtain a detailed letter of invitation from your host in Canada, along with their proof of status in Canada (e.g., copy of their Permanent Resident card, citizenship certificate, or valid visa).</li>
-                    <li><strong className={styles.subTitle}>Purpose of Travel:</strong> Provide details about your intended trip, such as flight bookings (if available, but not recommended to purchase before visa approval), hotel reservations (if applicable), and a detailed itinerary of your planned activities in Canada.</li>
-                    <li><strong className={styles.subTitle}>Family Information Form:</strong> Complete the required family information form accurately and comprehensively.</li>
-                    <li>Digital Photo: Ensure you have a digital photograph that meets the specific requirements of IRCC.</li>
-                    <li><strong className={styles.subTitle}>Any Other Supporting Documents:</strong> Depending on your individual circumstances, you may need to provide additional documents as requested1 by IRCC.</li>
-                  </ul>
-                </li>
+                <li><b>Passport:</b> Valid for at least 6 months beyond your travel dates with blank pages for visa stamps.</li>
+                <li><b>Financial Proof:</b> Bank statements, fixed deposits, sponsor letter (if applicable).</li>
+                <li><b>Proof of Strong Home Ties:</b> Job letter, property documents, family records, school enrollment, etc.</li>
+                <li><b>Travel History:</b> Copies of old visas and entry/exit stamps.</li>
+                <li><b>Letter of Invitation:</b> If visiting someone in Canada, include their PR/citizenship proof and invitation letter.</li>
+                <li><b>Purpose of Visit:</b> Flight itinerary (not mandatory), hotel bookings, or a planned tour schedule.</li>
+                <li><b>Photograph:</b> As per IRCC digital photo specifications.</li>
+                <li><b>Family Information Form & Any Additional Documents:</b> Depending on your profile.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Complete the Online Application:</b>
+
+            <li><b className={styles.subTitle}>Submit Online Application on IRCC Portal:</b>
               <ul>
-                <li>The primary method for applying for a Canadian tourist visa is online through the official IRCC website.</li>
-                <li>Create an account on the IRCC portal.</li>
-                <li>Follow the instructions to complete the online application form accurately and truthfully. Ensure all fields are filled out completely.</li>
-                <li>Upload all the required supporting documents in the specified formats and sizes. Ensure the scanned documents are clear and legible.</li>
+                <li>Create an account at <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank">IRCC website</a>.</li>
+                <li>Fill out the tourist visa application form (IMM 5257) and supporting documents.</li>
+                <li>Upload all documents in PDF or JPG format, clearly scanned and under the required size limits.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Pay the Application Fee:</b>
+
+            <li><b className={styles.subTitle}>Pay the Visa Fee:</b>
               <ul>
-                <li>A non-refundable application fee of $100 CAD per person is required.</li>
-                <li>Payment is typically made online using a credit card or other accepted methods.</li>
-                <li>Keep a record of your payment confirmation.</li>
+                <li><strong>$100 CAD</strong> application fee (non-refundable).</li>
+                <li>Pay online using a credit card or IRCC-approved method.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Pay the Biometric Fee (If Applicable):</b>
+
+            <li><b className={styles.subTitle}>Pay Biometric Fee (If Applicable):</b>
               <ul>
-                <li>If you are required to provide biometrics, an additional fee of $85 CAD per person may apply.</li>
-                <li>This fee is usually paid online at the same time as the application fee.</li>
+                <li><strong>$85 CAD</strong> for biometric submission.</li>
+                <li>Payment is generally done together with the application fee online.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Submit the Application:</b>
+
+            <li><b className={styles.subTitle}>Submit Your Application:</b>
               <ul>
-                <li>Once you have completed the online form, uploaded all documents, and paid the necessary fees, you can submit your application electronically.</li>
+                <li>Review and submit the completed online visa application with uploaded documents and paid fees.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Provide Biometrics (If Required):</b>
+
+            <li><b className={styles.subTitle}>Biometric Appointment:</b>
               <ul>
-                <li>After submitting your online application and paying the biometric fee (if applicable), you will receive a biometric instruction letter.</li>
-                <li>You will need to schedule an appointment at an authorized Visa Application Centre (VAC) in your country of residence to provide your fingerprints and photograph.</li>
-                <li>Ensure you bring a copy of your biometric instruction letter and your passport to your appointment.</li>
+                <li>After submission, receive a <strong>Biometric Instruction Letter (BIL)</strong> to attend a nearby <strong>Visa Application Centre (VAC)</strong>.</li>
+                <li>Carry your passport and BIL to your VAC appointment for fingerprinting and photograph.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Processing of the Application:</b>
+
+            <li><b className={styles.subTitle}>Visa Processing by IRCC:</b>
               <ul>
-                <li>Once your application and biometrics (if required) are received, IRCC will begin processing your application.</li>
-                <li>Processing times can vary significantly based on factors such as your country of residence, the volume of applications being processed, and the complexity of your case. It can take anywhere from a few weeks to several months.</li>
-                <li>You can usually track the status of your application through your IRCC online account.</li>
+                <li>After biometrics, your file will be reviewed by IRCC officers.</li>
+                <li><strong>Processing time:</strong> 2 to 6 weeks on average, depending on your country and application load.</li>
+                <li>You can track the status of your application on your IRCC account.</li>
               </ul>
             </li>
-            <li><b className={styles.subTitle}>Passport Request:</b>
+
+            <li><b className={styles.subTitle}>Passport Request & Visa Stamping:</b>
               <ul>
-                <li>If your application is approved, you will receive a passport request letter from IRCC.</li>
-                <li>You will need to submit your original passport to the designated VAC or Canadian visa office to have the visa counterfoil (sticker) placed in it.</li>
-                <li>Follow the instructions provided in the passport request letter carefully regarding how and where to submit your passport.</li>
-              </ul>
-            </li>
-            <li><b className={styles.subTitle}>Visa Stamping and Return of Passport:</b>
-              <ul>
-                <li>Once your passport is received, the visa will be printed and affixed to one of the blank pages.</li>
-                <li>Your passport will then be returned to you. Ensure you check the details on the visa sticker for any errors.</li>
+                <li>If approved, you’ll receive a <strong>Passport Request (PPR)</strong> email.</li>
+                <li>Submit your original passport to the VFS center as per instructions.</li>
+                <li>Visa will be affixed and passport returned via courier or in-person pickup.</li>
               </ul>
             </li>
           </ol>
-          <h2 className={styles.subTitle}>Conclusion: Your Canadian Adventure Starts Here - Let Global Visa Internationals Be Your Guide</h2>
-          <p>Canada beckons with its breathtaking landscapes, diverse cultures, and warm hospitality, promising an unforgettable travel experience. From the towering peaks of the Rockies to the charming historical sites of Quebec and the dynamic urban life of Toronto, a Canadian adventure offers something for every traveler. While the anticipation of exploring this vast and welcoming nation is thrilling, navigating the visa application process can sometimes feel overwhelming.</p>
-          <p>At Global Visa Internationals, we are dedicated to simplifying this journey for you. Our team possesses the in-depth knowledge and expertise regarding Canadian visa regulations to provide comprehensive guidance through each stage of the application. We are committed to ensuring a seamless and stress-free experience by offering invaluable assistance with:</p>
+
+          <h2 className={styles.subTitle}>Start Your Canada Visa Application With Experts</h2>
+          <p>
+            At <strong>Global Visa Internationals</strong>, we provide personalized guidance to ensure your <strong>Canada visitor visa application</strong> is complete, accurate, and professionally presented. We assist with:
+          </p>
           <ul>
-            <li>Understanding eligibility requirements specific to your situation.</li>
-            <li>Compiling and organizing your essential documentation meticulously.</li>
-            <li>Navigating the online application process with precision.</li>
-            <li>Providing guidance on biometric requirements and appointment scheduling.</li>
-            <li>Keeping you informed throughout the processing timeline.</li>
-
+            <li>Document preparation & checklist verification</li>
+            <li>Online form assistance & uploads</li>
+            <li>Biometric appointment booking</li>
+            <li>Mock interviews (if called for one)</li>
+            <li>Real-time updates on your visa progress</li>
           </ul>
-          <p>With our support, you can focus on the excitement of your upcoming Canadian adventure while we handle the complexities of the visa process. Contact us today to embark on your journey to Canada with confidence!</p>
-          <p>Let Global Visa Internationals be your trusted partner in transforming your Canadian dream into a reality. Contact us today, and allow our experienced team to expertly guide you through the visa application process, so you can focus on the excitement of planning your incredible Canadian adventure.</p>
-           <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p>
+            Get peace of mind with expert help — contact us today and make your Canadian travel dream a reality!
+          </p>
+          <p className={styles.note}>
+            <b>Disclaimer:</b> Global Visa Internationals is a private consultancy and is not affiliated with the Canadian government or IRCC.
+          </p>
+
+         
+
+
+        </div >
+         <div className={styles.formSection}>
+
+            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
+            <form id="inquiry-form" onSubmit={handleSubmit}>
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div>
+                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="country" required>
+                    <option value="">Select Country</option>
+                    {["newzeland", "USA", "UK", "Canada", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <select className={styles.select} name="immigration_type" required>
+                    <option value="">Select Immigration Type</option>
+                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
+                </div>
+                <div>
+                  <select className={styles.select} name="age" required>
+                    <option value="">Select Age</option>
+                    <option value="18-45">18-45</option>
+                    <option value="45+">45+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.row}>
+                <div>
+                  <select className={styles.select} name="education" required>
+                    <option value="">Select Qualification</option>
+                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
+                      <option key={edu} value={edu}>{edu}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+
+            </form>
+            {showPopup && (
+              <div className={styles.popupOverlay}>
+                <div className={styles.popupContent}>
+                  <p>✅ Your form has been submitted successfully!</p>
+                  <button onClick={() => setShowPopup(false)}>Close</button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-        <div className={styles.formSection}>
+        <section id='Client Reviews'>
+          <h2 className={styles.subtitle}>Client Reviews</h2>
+          <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+        </section>
+      
+    
 
-          <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "USA", "UK", "Canada", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
-        </div>
-        
-
-      </div>
-      <section id='Client Reviews'>
-            <h2 className={styles.subtitle}>Client Reviews</h2>
-            <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-          </section>
-    </>
-  );
-}
+</>
+)}

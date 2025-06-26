@@ -71,26 +71,24 @@
 
 
 }
-
-.imageContainer{
+.imageContainer {
     display: flex;
     justify-content: center;
-    padding-top:70px ;
+    padding-top: 70px;
     width: 100%;
-    border-radius: 20px;
     margin: 0 auto;
+    border-radius: 20px;
 }
-.AustraliaImage{
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 10px;
-    height: auto;
-    width: 90%;
-    /* Adjusts image width for smaller screens */
-    max-width: 800px;
-    /* Limits max size */
+
+.AustraliaImage {
+    height: 400px;
+    width: 80%;
+    border-radius: 20px;
+    object-fit:fill; /* or 'contain' based on desired behavior */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional styling */
 }
+
+
 .AustraliaSec {
     display: flex;
     justify-content: center;
@@ -347,13 +345,13 @@ to {
     .imageContainer {
         justify-content: center;
         padding-top: 70px;
+        border-radius: 20px;
         width: 100%;
     }
     .AustraliaImage {
         flex-wrap: wrap;
         justify-content: center;
-        padding: 10px;
-        border-radius: 10px;
+        border-radius: 20px;
         height: auto;
         width: 90%; /* Adjusts image width for smaller screens */
         max-width: 400px; /* Limits max size */

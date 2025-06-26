@@ -235,14 +235,14 @@ export default function Australia() {
       
     
       <div className={styles.imageContainer}>
-        <img src="/images/Australia1.png" alt="Australia Image" className={styles.AustraliaImage} />
+        <img src="/visa-banner/Australia-Bannar-GlobalVisaInternationals.webp" alt="Australia Image" className={styles.AustraliaImage} />
       </div>
 
       <div className={styles.AustraliaSec}>
 
 
         <div className={styles.AustraliaData}>
-          <h1 className={styles.Title}> Your Comprehensive Guide to the Australia Tourist Visa | Global visa internationals</h1>
+          <h1 className={styles.Title}>Australia Tourist Visa assistance | Global visa internationals</h1>
           <p>Australia, a land of breathtaking landscapes, unique wildlife, and vibrant cities, beckons travelers from all corners of the globe. A tourist visa allows you to explore this magnificent country for leisure, offering an unforgettable experience filled with natural beauty and cultural richness.
           </p>
           <p></p>
@@ -250,8 +250,7 @@ export default function Australia() {
           <p>Australia offers a plethora of unique experiences that set it apart as a top tourist destination:</p>
 
           <ul>
-            <li>Diverse Landscapes: From the iconic Outback with its red deserts and ancient rock formations like Uluru to lush rainforests, pristine beaches, and the underwater wonders of the Great Barrier Reef, Australia boasts an incredibly varied natural environment.
-
+            <li><strong>Diverse Landscapes: </strong>From the iconic Outback with its red deserts and ancient rock formations like Uluru to lush rainforests, pristine beaches, and the underwater wonders of the Great Barrier Reef, Australia boasts an incredibly varied natural environment.
             </li>
             <li><strong>Unique Wildlife:</strong> Encounter iconic animals found nowhere else on Earth, such as kangaroos, koalas, wombats, and the elusive platypus. Explore national parks and wildlife sancWorld-Class Cities: Experience the cosmopolitan flair of Sydney with its iconic Opera House and Harbour Bridge, the cultural heart of Melbourne with its laneways and vibrant arts scene, and the laid-back charm of Brisbane and Perth.</li>
             <li><strong>Aboriginal Culture:</strong> Discover the rich and ancient culture of Australia's Aboriginal people, the oldest living culture in the world. Explore sacred sites, learn about Dreamtime stories, and witness traditional art and ceremonies.</li>
@@ -263,16 +262,21 @@ export default function Australia() {
           <ol>
             <li>Sydney: Home to the iconic Sydney Opera House and Harbour Bridge. Explore Bondi Beach, the historic Rocks district, and enjoy a ferry ride across the harbor.</li>
             <br />
-            <li>Great Barrier Reef: The world's largest coral reef system, offering unparalleled snorkeling and diving experiences amidst diverse marine life. Located off the coast of Queensland.</li>
+            <li><strong>Great Barrier Reef:</strong> The world's largest coral reef system, offering unparalleled snorkeling and diving experiences amidst diverse marine life. Located off the coast of Queensland.</li>
             <br />
-            <li>MUluru (Ayers Rock): A massive sandstone monolith in the heart of the Northern Territory, sacred to the Aboriginal Anangu people. Witness stunning sunsets and learn about its cultural significance.</li>
+            <li><strong>MUluru (Ayers Rock):</strong> A massive sandstone monolith in the heart of the Northern Territory, sacred to the Aboriginal Anangu people. Witness stunning sunsets and learn about its cultural significance.</li>
             <br />
-            <li>The Whitsunday Islands: A group of idyllic islands off the coast of Queensland, famous for their pristine beaches, turquoise waters, and sailing opportunities.</li>
-            <li>Kakadu National Park: A UNESCO World Heritage site in the Northern Territory, rich in Aboriginal culture, diverse wildlife (including crocodiles and kangaroos), and stunning landscapes.</li>
-            <li>Gold Coast: A vibrant city in Queensland known for its beautiful beaches, surfing spots (like Surfers Paradise), theme parks, and lively nightlife.</li>
-            <li>Perth: A sunny coastal city in Western Australia with beautiful beaches like Cottesloe and Scarborough, and Kings Park offering panoramic city views. Don't miss a trip to Rottnest Island to see the adorable quokkas.</li>
-            <li>Brisbane: A laid-back city in Queensland with the South Bank Parklands, a cultural and recreational hub, and the Lone Pine Koala Sanctuary.</li>
-            <li>Adelaide: A charming city in South Australia known for its museums, galleries, and festivals. Explore the Adelaide Botanic Garden and the historic Port Adelaide. The Barossa Valley and McLaren Vale wine regions are also nearby.</li>
+            <li><strong>The Whitsunday Islands:</strong> A group of idyllic islands off the coast of Queensland, famous for their pristine beaches, turquoise waters, and sailing opportunities.</li>
+            <br />
+            <li><b>Kakadu National Park:</b> A UNESCO World Heritage site in the Northern Territory, rich in Aboriginal culture, diverse wildlife (including crocodiles and kangaroos), and stunning landscapes.</li>
+            <br />
+            <li><b>Gold Coast: </b>A vibrant city in Queensland known for its beautiful beaches, surfing spots (like Surfers Paradise), theme parks, and lively nightlife.</li>
+            <br />
+            <li><b>Perth:</b> A sunny coastal city in Western Australia with beautiful beaches like Cottesloe and Scarborough, and Kings Park offering panoramic city views. Don't miss a trip to Rottnest Island to see the adorable quokkas.</li>
+            <br />
+            <li><b>Brisbane:</b> A laid-back city in Queensland with the South Bank Parklands, a cultural and recreational hub, and the Lone Pine Koala Sanctuary.</li>
+            <br />
+            <li><b>Adelaide: </b>A charming city in South Australia known for its museums, galleries, and festivals. Explore the Adelaide Botanic Garden and the historic Port Adelaide. The Barossa Valley and McLaren Vale wine regions are also nearby.</li>
 
           </ol>
 
