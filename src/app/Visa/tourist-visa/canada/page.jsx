@@ -4,6 +4,41 @@ import React, { useState, useEffect } from 'react';
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LocalBusinessJsonLd } from 'next-seo';
 import Head from 'next/head';
+export const metadata = {
+  title: "Canada Tourist Visa Assistance: Requirements, Application & Top Places | Global Visa Internationals",
+  description:
+    "Apply for a Canada Tourist Visa with Global Visa Internationals. Get expert help with requirements, visa application process, and discover must-visit Canadian destinations.",
+  keywords:
+    "Canada tourist visa, apply Canada visitor visa, Canada visa consultant, Canada travel guide, visa for Canada from India, top places in Canada, Canadian immigration",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
+  },
+  openGraph: {
+    title: "Canada Tourist Visa: Requirements, Application & Top Places",
+    description:
+      "Get expert help from Global Visa Internationals on applying for a Canada tourist visa. Learn about requirements, costs, and destinations.",
+    url: "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/visa-banner/Canada-Tourist-Visa-assistence-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Canada Tourist Visa Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@globalvisainternationals",
+    title: "Canada Tourist Visa: Requirements, Application & Top Places",
+    description:
+      "Apply for your Canada tourist visa with confidence. Learn the process, costs, and top attractions with Global Visa Internationals.",
+    images: ["https://www.globalvisainternationals.com/visa-banner/Canada-Tourist-Visa-assistence-banner.webp"],
+  },
+};
 
 
 export default function Canada() {
@@ -126,109 +161,86 @@ export default function Canada() {
         />
       </Head> */}
 
-      <NextSeo
-        title="Canada Tourist Visa Assistence: Requirements, Application & Top Places | Global Visa Internationals"
-        description="Apply for a Canada Tourist Visa with Global Visa Internationals. Get expert help with requirements, visa application process, and discover must-visit Canadian destinations."
-        canonical="https://www.globalvisainternationals.com/visa/tourist-visa/canada"
-        openGraph={{
-          type: 'website',
-          url: 'https://www.globalvisainternationals.com/visa/tourist-visa/canada',
-          title: 'Canada Tourist Visa: Requirements, Application & Top Places',
-          description:
-            'Get expert help from Global Visa Internationals on applying for a Canada tourist visa. Learn about requirements, costs, and destinations.',
-          images: [
-            {
-              url: 'https://www.globalvisainternationals.com/visa-banner/Canada-Tourist-Visa-assistence-banner.webp',
-              width: 1200,
-              height: 630,
-              alt: 'Canada Tourist Visa Banner',
-            },
-          ],
-          siteName: 'Global Visa Internationals',
-        }}
-        twitter={{
-          cardType: 'summary_large_image',
-          site: '@globalvisainternationals',
-          handle: '@globalvisainternationals',
-        }}
-        additionalMetaTags={[
-          {
-            name: 'geo.region',
-            content: 'IN-KA',
-          },
-          {
-            name: 'geo.placename',
-            content: 'Bengaluru',
-          },
-          {
-            name: 'ICBM',
-            content: '12.9716,77.5946',
-          },
-          {
-            name: 'keywords',
-            content:
-              'Canada tourist visa, apply Canada visitor visa, Canada visa consultant, Canada travel guide, visa for Canada from India, top places in Canada, Canadian immigration',
-          },
-        ]}
-      />
+     <Head>
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="12.9716,77.5946" />
 
-      {/* 🧭 Breadcrumbs Schema */}
-      <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: 'Home',
-            item: 'https://www.globalvisainternationals.com',
-          },
-          // {
-          //   position: 2,
-          //   name: 'Tourist Visa',
-          //   item: 'https://www.globalvisainternationals.com/visa/tourist-visa',
-          // },
-          {
-            position: 2,
-            name: 'Canada',
-            item: 'https://www.globalvisainternationals.com/visa/tourist-visa/canada',
-          },
-        ]}
-      />
+        {/* Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.globalvisainternationals.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Canada",
+                  "item": "https://www.globalvisainternationals.com/visa/tourist-visa/canada"
+                }
+              ]
+            }),
+          }}
+        />
 
-      {/* 🏢 Organization Schema */}
-      <LocalBusinessJsonLd
-        type="TravelAgency"
-        id="https://www.globalvisainternationals.com"
-        name="Global Visa Internationals"
-        description="Visa & Immigration Consultants based in Bangalore. Trusted since 2017."
-        url="https://www.globalvisainternationals.com"
-        telephone="+91-7022213466"
-        address={{
-          streetAddress: 'MG Road',
-          addressLocality: 'Bengaluru',
-          addressRegion: 'Karnataka',
-          postalCode: '560025',
-          addressCountry: 'IN',
-        }}
-        geo={{
-          latitude: 12.9716,
-          longitude: 77.5946,
-        }}
-        sameAs={[
-          "https://www.facebook.com/globalvisainternationals/",
-          "https://www.instagram.com/globalvisa_internationals/",
-          "https://www.linkedin.com/company/global-visa-internationals/",
-          "https://x.com/GLOBALVISA1505",
-          "https://www.youtube.com/@globalVisaInternationals",
-          "https://www.google.com/maps/place/Global+Visa+Internationals"
-        ]}
-        openingHours={[
-          {
-            opens: '10:00',
-            closes: '18:00',
-            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-          },
-        ]}
-      />
-
+        {/* Local Business Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "TravelAgency",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com",
+              "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+              "description": "Visa & Immigration Consultants based in Bangalore. Trusted since 2017.",
+              "telephone": "+91-7022213466",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "MG Road",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560025",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.9716,
+                "longitude": 77.5946
+              },
+              "openingHoursSpecification": [{
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "10:00",
+                "closes": "18:00"
+              }],
+              "sameAs": [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+                "https://www.google.com/maps/place/Global+Visa+Internationals"
+              ]
+            }),
+          }}
+        />
+      </Head>
       <div className={styles.imageContainer}>
         <img src="/visa-banner/Canada-Tourist-Visa-assistence-banner.webp" alt="Canada Image" className={styles.CanadaImage} />
       </div>
