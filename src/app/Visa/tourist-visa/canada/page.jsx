@@ -3,7 +3,7 @@ import styles from './Canada.module.css';
 import React, { useState, useEffect } from 'react';
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LocalBusinessJsonLd } from 'next-seo';
-
+import Head from 'next/head';
 
 
 export default function Canada() {
@@ -118,13 +118,13 @@ export default function Canada() {
 
   return (
     <>
-      <head>
+      <Head>
         <title>Canada Tourist Visa Assistence: Requirements, Application & Top Places | Global Visa Internationals</title>
             <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgSchema) }}
         />
-      </head>
+      </Head>
 
       <NextSeo
         title="Canada Tourist Visa Assistence: Requirements, Application & Top Places | Global Visa Internationals"
