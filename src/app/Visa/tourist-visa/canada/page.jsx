@@ -130,7 +130,7 @@ export default function Canada() {
             }),
           }}
         />
-
+ <script src="https://static.elfsight.com/platform/platform.js" async></script>
         {/* Local Business Schema */}
         <script
           type="application/ld+json"
@@ -713,22 +713,8 @@ export default function Canada() {
         </div>
       </div>
      <section id="ClientReviews" className={styles.reviewSection}>
-  <h2 className={styles.subtitle}>Client Reviews</h2>
-  <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `
-        (function () {
-          var script = document.createElement("script");
-          script.src = "https://static.elfsight.com/platform/platform.js";
-          script.async = true;
-          script.defer = true;
-          document.body.appendChild(script);
-        })();
-      `,
-    }}
-  />
+ 
+<div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
 </section>
 
 
