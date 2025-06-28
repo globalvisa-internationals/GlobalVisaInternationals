@@ -93,9 +93,8 @@
     border-radius: 20px;
     height: auto;
     width: 90%;
-    /* Adjusts image width for smaller screens */
     max-width: 800px;
-    /* Limits max size */
+    
 }
 .USASec {
     display: flex;

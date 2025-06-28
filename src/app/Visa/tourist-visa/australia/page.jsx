@@ -1,241 +1,153 @@
-"use client";
+
 import styles from './Australia.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { NextSeo, LocalBusinessJsonLd, FAQPageJsonLd } from 'next-seo';
+import React from 'react';
+import Head from 'next/head';
+import VisaForm from '@/Components/VisaForm';
+// import { BreadcrumbJsonLd, LocalBusinessJsonLd, WebPageJsonLd, } from 'next-seo';
+
+export const metadata = {
+  title: "Australia Tourist Visa Consultants: Requirements, Application & Costs | Global Visa Internationals",
+  description:
+    "Apply for your Australia Tourist Visa with expert help from Global Visa Internationals. Learn visa requirements, estimated costs, and top Australian attractions.",
+  keywords:
+    "Australia tourist visa, apply Australia visitor visa, Australia visa consultant, Australia travel guide, visa for Australia from India, Australia immigration, best tourist places in Australia",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/visa/tourist-visa/australia",
+  },
+  openGraph: {
+    title: "Australia Tourist Visa: Application, Requirements & Top Travel Tips",
+    description:
+      "Get expert help from Global Visa Internationals on applying for an Australia tourist visa. Learn about visa process, travel costs, and iconic Australian destinations.",
+    url: "https://www.globalvisainternationals.com/visa/tourist-visa/australia",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/visa-banner/Australia-Tourist-Visa-assistance-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Australia Tourist Visa Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "Australia Tourist Visa: Application, Requirements & Top Places",
+    description:
+      "Plan your dream trip to Australia. Discover visa requirements, estimated expenses, and top attractions. Trusted consultants since 2017.",
+    images: [
+      "https://www.globalvisainternationals.com/visa-banner/Australia-Tourist-Visa-assistance-banner.webp",
+    ],
+  },
+};
+
+
 
 export default function Australia() {
 
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
-  };
-  //reviews
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
   return (
-   <>
-      <head>
-        <title>Australia Tourist Visa From India | Cost, Documents & Visa Process</title>
-        <meta name="description" content="Apply for an Australia Tourist Visa with Global Visa Internationals. Get expert support on visa process, fees, documentation, and plan your visit to top Australian destinations." />
-        <meta name="keywords" content="Australia tourist visa, apply for Australia visa from India, Australia visa cost, Australia visa consultants in India, tourist attractions in Australia, Australia visa process, Australia visit visa fees" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Global Visa Internationals" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0a66c2" />
+    <>
+      <Head>
+        {/* Canonical & Geo Tags */}
         <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Apply for Australia Tourist Visa From India | Global Visa Internationals" />
-        <meta property="og:description" content="Planning a trip to Australia? Get expert visa application assistance, cost breakdown, and travel guidance from Global Visa Internationals." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:locale:alternate" content="en_US" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Australia Tourist Visa | Application, Cost & Documents Needed" />
-        <meta name="twitter:description" content="Visit Australia with ease. Get full visa support, process guidance, and cost estimate from Global Visa Internationals." />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/australia-tourist-visa-banner.jpg" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
-
-        {/* Geo Location Tags */}
-        <meta name="geo.region" content="AU" />
-        <meta name="geo.placename" content="Sydney" />
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
 
-        {/* Local Business Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com",
-            "logo": "https://www.globalvisainternationals.com/logo.png",
-            "description": "Trusted visa consultants helping Indian travelers with Australia tourist visa applications, document verification, and expert support.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "MG Road",
-              "addressLocality": "Bengaluru",
-              "addressRegion": "KA",
-              "postalCode": "560025",
-              "addressCountry": "IN"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-7022213466",
-              "contactType": "Customer Support"
-            },
-            "sameAs": [
-              "https://www.facebook.com/GlobalVisaInternationals",
-              "https://www.linkedin.com/company/globalvisainternationals",
-              "https://twitter.com/GlobalVisaIntl"
-            ]
-          })
-        }} />
+        {/* Elfsight (if reviews used) */}
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
 
-        {/* BreadcrumbList Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.globalvisainternationals.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Tourist Visa",
-                "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Australia"
-              }
-            ]
-          })
-        }} />
-
-        {/* FAQPage Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How much does an Australia Tourist Visa cost from India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The cost of an Australia tourist visa from India is approximately ₹11,000 to ₹14,000 including the visa fee and service charges."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What documents are required for an Australia tourist visa?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "You need a valid passport, recent photo, bank statements, ITR, travel itinerary, hotel bookings, and an invitation letter (if applicable)."
-                }
-              }
-            ]
-          })
-        }} />
-
-        {/* Service Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Australia Tourist Visa Application Assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com"
-            },
-            "areaServed": {
-              "@type": "Country",
-              "name": "India"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Visa Services",
+        {/* Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
               "itemListElement": [
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Australia Visitor Visa (Tourist Stream)"
-                  }
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.globalvisainternationals.com"
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Australia Family-Sponsored Visitor Visa"
-                  }
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Tourist Visa",
+                  "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Australia",
+                  "item": "https://www.globalvisainternationals.com/visa/tourist-visa/australia"
                 }
               ]
-            }
-          })
-        }} />
-      </head>
+            })
+          }}
+        />
+
+        {/* Local Business / Travel Agency Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "TravelAgency",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com",
+              "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+              "description": "Trusted Australia Tourist & Visitor Visa consultants in Bangalore. End-to-end visa assistance, documentation, and interview prep.",
+              "telephone": "+91-7022213466",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "MG Road",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560025",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.9716,
+                "longitude": 77.5946
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                  ],
+                  "opens": "10:00",
+                  "closes": "18:00"
+                }
+              ],
+              "sameAs": [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+                "https://www.google.com/maps/place/Global+Visa+Internationals"
+              ]
+            })
+          }}
+        />
+      </Head>
+
 
 
 
       <div className={styles.imageContainer}>
-        <img src="/visa-banner/Australia-Bannar-GlobalVisaInternationals.webp" alt="Australia Visa assistence Bannar Global Visa Internationals" className={styles.AustraliaImage} />
+        <img src="/visa-banner/Australia-Tourist-Visa-assistance-banner.webp" alt="Australia Visa assistence Bannar Global Visa Internationals" className={styles.AustraliaImage} />
       </div>
 
       <div className={styles.AustraliaSec}>
@@ -310,78 +222,7 @@ export default function Australia() {
           <p>Each of these destinations showcases the incredible diversity of experiences Australia has to offer. <strong>Global Visa Internationals</strong>, a trusted <strong>Australia visa consultant</strong>, helps you get the right visa and plan your dream itinerary. Let us guide your journey—stress-free and expertly handled.</p>
 
           <div className={styles.formSection1}>
-            <h4>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
-            <h1 className={styles.subTitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
           <h2 className={styles.subTitle}>Plan Your Dream Australian Vacation</h2>
@@ -520,78 +361,7 @@ export default function Australia() {
 
 
           <div className={styles.formSection1}>
-            <h4>Contact Global Visa Internationals for Visa and Documentation Assistance:</h4>
-            <h1 className={styles.subTitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
           <h2 className={styles.subTitle}>How to Apply for an Australian Tourist Visa from India</h2>
@@ -640,87 +410,18 @@ export default function Australia() {
 
           <p className={styles.note}><em>Disclaimer:</em> Global Visa Internationals is an independent visa consultancy and is not affiliated with the Australian Government or any embassy. We provide advisory services to make your visa process efficient and accurate.</p>
 
-</div>
-          <div className={styles.formSection}>
-
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-
         </div>
- <section id='Client Reviews'>
+        <div className={styles.formSection}>
 
-          <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-        </section>
-       
-      </>
-      )}
+          <VisaForm />
+        </div>
+
+      </div>
+      <section id='Client Reviews'>
+
+        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+      </section>
+
+    </>
+  )
+}

@@ -1,474 +1,209 @@
-"use client";
+
+import VisaForm from '@/Components/VisaForm';
 import styles from './USA.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import React from 'react';
+import dynamic from 'next/dynamic';
+import SeoSchemaUSA from "@/components/SeoSchemaUSA";
+
+export const metadata = {
+  title: "USA Tourist Visa Consultants | Global Visa Internationals",
+  description:
+    "Apply for your USA Tourist Visa with Global Visa Internationals. Expert help with B2 visa process, costs, and travel planning from India.",
+  keywords:
+    "USA tourist visa, B2 visa consultants, USA visa from India, US travel visa application, apply for visitor visa USA",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/visa/tourist-visa/usa",
+  },
+  openGraph: {
+    title: "USA Tourist Visa: Application, Requirements & Top Travel Tips",
+    description:
+      "Plan your USA trip with expert visa support. Learn about B2 visa process, travel costs, and top U.S. destinations. Trusted since 2017.",
+    url: "https://www.globalvisainternationals.com/visa/tourist-visa/usa",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/visa-banner/USA-Tourist-Visa-assistance-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "USA Tourist Visa Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "USA Tourist Visa: Application, Requirements & Top Places",
+    description:
+      "Explore the USA with a B-2 Tourist Visa. Get expert help from Global Visa Internationals. Trusted U.S. visa consultants based in Bangalore.",
+    images: [
+      "https://www.globalvisainternationals.com/visa-banner/USA-Tourist-Visa-assistance-banner.webp",
+    ],
+  },
+};
+
 
 export default function Australia() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Unlock Your Australia Adventure! Global Visa Internationals provides expert guidance for your Australia tourist visa application. Simplify the process and explore Australia's wonders. Contact us today!",
-    "founder": {
-      "@type": "Organization",
-      "name": "Naveen Kumar J"
-    },
-    "foundingDate": "2016",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-7022213466",
-      "contactType": "Customer Support",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
-    },
-    "areaServed": ["IN", "Australia", "EU"],
-    "sameAs": [
-      "https://www.facebook.com/GlobalVisaInternationals",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/globalvisainternationals"
-      // Add more links if you have Twitter, YouTube, etc.
-    ]
 
-  };
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
-  };
-  //reviews
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
   return (
-    <>
-      <head>
-        <title>USA Tourist Visa From India | Cost, Process & Top Attractions</title>
-        <meta
-          name="description"
-          content="Apply for a USA Tourist Visa (B-2) with expert guidance from Global Visa Internationals. Know the visa process, fees, documents required, and explore top tourist destinations in the USA."
-        />
-        <meta
-          name="keywords"
-          content="USA tourist visa, apply for US tourist visa from India, B2 visa USA, cost of USA trip, flight to USA cost, US visa consultants in India, tourist attractions in USA, visa process USA, USA visa fees"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/usa" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Apply for USA Tourist Visa From India | Global Visa Internationals" />
-        <meta
-          property="og:description"
-          content="Planning to visit the USA? Get expert assistance for your B-2 visa application, flight booking, cost estimate, and must-visit places. Start your USA journey with Global Visa Internationals."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/usa" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/usa-tourist-visa-banner.jpg" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="USA Tourist Visa | Application, Cost & Documents Needed" />
-        <meta
-          name="twitter:description"
-          content="Explore the USA with the right tourist visa. Get visa application support, interview preparation, and travel cost breakdown from Global Visa Internationals."
-        />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/usa-tourist-visa-banner.jpg" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/usa" />
-
-        {/* Geo Location Tags */}
-        <meta name="geo.region" content="US" />
-        <meta name="geo.placename" content="USA" />
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-
-        {/* Structured Data - Local Business / Organization */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com",
-              "logo": "https://www.globalvisainternationals.com/logo.png",
-              "description": "Leading visa consultancy offering expert USA tourist visa assistance from India. We help with B-2 visa application, documentation, interview prep, and more.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "MG Road",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "KA",
-                "postalCode": "560025",
-                "addressCountry": "IN"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-7022213466",
-                "contactType": "Customer Support"
-              },
-              "sameAs": [
-                "https://www.facebook.com/GlobalVisaInternationals",
-                "https://www.linkedin.com/company/globalvisainternationals",
-                "https://twitter.com/GlobalVisaIntl"
-              ]
-            })
-          }}
-        />
-      </head>
+    <> 
+  <SeoSchemaUSA />
 
       <div className={styles.imageContainer}>
-        <img src="/images/USA1.png" alt="USA Image" className={styles.USAImage} />
+        <img src="/visa-banner/USA-Tourist-Visa-assistance-banner.webp" alt="USA Tourist Visa assistance banner" className={styles.USAImage} />
       </div>
 
       <div className={styles.USASec}>
 
 
         <div className={styles.USAData}>
-          <h1 className={styles.Title}> Explore the Wonders of the USA: Your Dream Tourist Visa Awaits!</h1>
-          <p>Dreaming of experiencing the vibrant energy of New York City, the breathtaking landscapes of the Grand Canyon, or the glitz and glamour of Hollywood? The United States of America offers a kaleidoscope of experiences for every traveler. From iconic landmarks and bustling cities to stunning natural wonders and diverse cultures, a USA tourist visa opens the door to unforgettable adventures.</p>
+          <h1 className={styles.Title}>USA Tourist Visa Consultants | Explore America with Global Visa Internationals</h1>
+          <p>Planning to visit the United States? Whether it's the towering skyline of New York City, the breathtaking Grand Canyon, or the glamour of Hollywood, the USA offers an unforgettable mix of culture, nature, and excitement. With a USA tourist visa, you can experience world-class cities, iconic landmarks, and diverse landscapes across this incredible country.</p>
 
-          <h3 className={styles.subTitle}>Why Choose USA for Tourism? What Makes It Special?</h3>
-          <p>The USA is more than just a destination; it's a melting pot of cultures, a land of innovation, and a showcase of unparalleled beauty. Here's what makes it so special:</p>
+          <h3 className={styles.subTitle}>Why Visit the USA? Top Reasons to Apply for a Tourist Visa</h3>
+          <p>As one of the most popular travel destinations in the world, the USA attracts millions of tourists every year. Here's why you should explore it with a valid visitor visa:</p>
 
           <ul>
-            <li>Iconic Landmarks: Stand in awe of the Statue of Liberty, walk across the Golden Gate Bridge, and witness the power of Niagara Falls. These are just a few of the world-famous landmarks that will leave you spellbound.
-
-            </li>
-            <li><b className={styles.subTitle}>Diverse Landscapes:</b> From the snow-capped peaks of the Rocky Mountains and the vast plains of the Midwest to the sunny beaches of California and the lush forests of the Pacific Northwest, the USA boasts a breathtaking variety of natural landscapes. Adventure awaits at every turn, whether you're hiking, skiing, or simply soaking in the scenery.</li>
-
-            <li><b className={styles.subTitle}>Vibrant Cities:</b> Immerse yourself in the fast-paced life of New York City, explore the cultural richness of Boston, experience the music scene in Nashville, or enjoy the laid-back vibes of Los Angeles. Each American city has its own unique character and charm.</li>
-
-            <li><b className={styles.subTitle}>World-Class Entertainment:</b> Catch a Broadway show in New York, explore the movie studios in Hollywood, experience the thrill of Las Vegas, or enjoy the magic of Disneyland. The USA offers endless entertainment options for all ages.</li>
-
-            <li><b className={styles.subTitle}>Rich History and Culture:</b> Discover the nation's history in Washington D.C., explore the jazz heritage of New Orleans, or delve into the Native American cultures of the Southwest. The USA's diverse history and cultural tapestry offer fascinating insights.</li>
+            <li><strong>Iconic Landmarks:</strong> From the Statue of Liberty and Golden Gate Bridge to Niagara Falls and the White House, the USA is home to some of the world’s most recognizable attractions.</li>
+            <li><strong>Diverse Landscapes:</strong> Experience everything from deserts and beaches to mountains, forests, and national parks. Whether you're into adventure or relaxation, the USA has something for every traveler.</li>
+            <li><strong>Vibrant Cities:</strong> Explore the hustle of New York City, the movie magic of Los Angeles, the tech buzz in San Francisco, and the cultural pulse of Chicago and Boston.</li>
+            <li><strong>World-Class Entertainment:</strong> Catch Broadway shows, attend music festivals, visit Disneyland or Universal Studios, and experience live events across the country.</li>
+            <li><strong>Rich Culture & History:</strong> Visit the Smithsonian in Washington D.C., explore jazz in New Orleans, or connect with Native American heritage in the Southwest.</li>
           </ul>
-          <h3 className={styles.subTitle}>Must-Visit Tourist Spots in USA</h3>
-          <p>Your USA adventure wouldn't be complete without visiting some of these incredible destinations:</p>
+
+          <h3 className={styles.subTitle}>Top 10 Must-Visit Places in the USA for Indian Travelers</h3>
+          <p>When planning your USA tourist trip, don’t miss these iconic destinations:</p>
           <ol>
-            <li>New York City, New York: Experience the iconic skyline, visit Times Square, explore Central Park, and immerse yourself in world-class museums and theaters.</li>
-            <br />
-            <li>Los Angeles, California: Discover Hollywood glamour, stroll along the Walk of Fame, relax on the beaches of Santa Monica and Malibu, and visit world-famous theme parks.</li>
-            <br />
-            <li>San Francisco, California: Ride a cable car, visit Alcatraz Island, walk across the Golden Gate Bridge, and explore the city's unique neighborhoods.</li>
-            <br />
-            <li>Grand Canyon National Park, Arizona: Witness the awe-inspiring beauty and vastness of one of the world's natural wonders. Hike along the rim or take a mule ride into the canyon.</li>
-
-            <li>Yellowstone National Park, Wyoming, Montana, Idaho: Explore geysers, hot springs, and abundant wildlife in America's first national park.</li>
-
-            <li>Miami, Florida: Enjoy the vibrant nightlife, beautiful beaches, Art Deco architecture, and Latin American culture.</li>
-
-            <li>Washington D.C.: Explore the nation's capital, visit iconic monuments and memorials, and delve into history at the Smithsonian museums.</li>
-
-            <li>Las Vegas, Nevada: Experience the dazzling lights, world-class entertainment, and vibrant casino scene.</li>
-
-            <li>Niagara Falls, New York: Witness the sheer power and beauty of these majestic waterfalls.</li>
-            <li>Orlando, Florida: Discover the magic of world-renowned theme parks like Walt Disney World and Universal Studios.</li>
-
+            <li><strong>New York City, NY:</strong> Times Square, Central Park, Empire State Building, and Statue of Liberty.</li>
+            <li><strong>Los Angeles, CA:</strong> Hollywood, Universal Studios, Beverly Hills, and Santa Monica Pier.</li>
+            <li><strong>San Francisco, CA:</strong> Golden Gate Bridge, Alcatraz, and Fisherman's Wharf.</li>
+            <li><strong>Grand Canyon, AZ:</strong> One of the Seven Natural Wonders of the World.</li>
+            <li><strong>Yellowstone National Park:</strong> Geysers, hot springs, wildlife, and stunning nature.</li>
+            <li><strong>Miami, FL:</strong> Beaches, nightlife, Cuban cuisine, and colorful Art Deco vibes.</li>
+            <li><strong>Washington D.C.:</strong> White House, National Mall, Lincoln Memorial, and free museums.</li>
+            <li><strong>Las Vegas, NV:</strong> Casinos, nightlife, live performances, and The Strip.</li>
+            <li><strong>Niagara Falls, NY:</strong> A powerful natural wonder on the U.S.-Canada border.</li>
+            <li><strong>Orlando, FL:</strong> Walt Disney World, Universal Studios, and family attractions.</li>
           </ol>
 
+          <h3 className={styles.subTitle}>Apply for Your USA Tourist Visa with Global Visa Internationals</h3>
+          <p>At <strong>Global Visa Internationals</strong>, we specialize in assisting Indian travelers with successful USA tourist visa applications. From <strong>DS-160 form filling</strong> to interview preparation, we ensure a hassle-free process and a high approval success rate.</p>
+
+          <ul>
+            <li>End-to-End Visa Assistance by Certified Consultants</li>
+            <li>Personalized Documentation Guidance</li>
+            <li>Mock Interview Sessions to Boost Confidence</li>
+            <li>11+ Years of Experience & 55,000+ Visas Processed</li>
+          </ul>
+
+          <p><strong>Book your USA visa consultation</strong> today with Global Visa Internationals — your trusted partner in international travel since 2017.</p>
+
+          <p className={styles.note}><em>Disclaimer: We are a private consultancy and not affiliated with the U.S. Embassy or Government. All visa approvals are at the sole discretion of the U.S. immigration authorities.</em></p>
+
+
           <div className={styles.formSection1}>
-            <h4 className={styles.subTitle}>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
-            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
-          <h2 className={styles.subTitle}>Planning Your Trip: Understanding the Costs</h2>
-          <p>Traveling to the USA can be an exciting adventure, but it's essential to plan your budget wisely. Here are some key cost considerations:</p>
-          <p className={styles.subTitle}>Cost Breakdown: How Much Does a USA Trip Cost from India?</p>
+          <h2 className={styles.subTitle}>USA Tourist Visa Trip Cost from India – A Complete Breakdown</h2>
+          <p>Planning a trip to the United States? Understanding the overall cost is crucial for a smooth and enjoyable experience. Whether you're traveling solo or with family, budgeting properly ensures a stress-free journey. Here’s a detailed overview of estimated expenses for Indian travelers applying for a <strong>USA tourist visa (B-2)</strong>.</p>
+
+          <h3 className={styles.subTitle}>USA Travel Cost Overview</h3>
           <table className={styles.table}>
             <thead>
               <tr>
                 <th>Expense Category</th>
                 <th>Estimated Cost</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Flight Charges</td>
-                <td>₹70,000 – ₹1,50,000+ (return airfare)</td>
-                <td>Varies by season, airline, and destination</td>
-              </tr>
-              <tr>
-                <td>Accommodation</td>
-                <td>See detailed table below</td>
-                <td>From hostels to luxury hotels</td>
-              </tr>
-              <tr>
-                <td>Food</td>
-                <td>$20 – $100+ per day</td>
-                <td>Budget to fine dining</td>
-              </tr>
-              <tr>
-                <td>Transportation</td>
-                <td>$30 – $100+ per day</td>
-                <td>Includes car rental, public transport, ride-sharing</td>
-              </tr>
-              <tr>
-                <td>Attractions & Activities</td>
-                <td>$5 – $50+ per activity</td>
-                <td>Museums, theme parks, guided tours, etc.</td>
-              </tr>
-              <tr>
-                <td>Visa Fee (B-2)</td>
-                <td>	$185</td>
-                <td>Paid online or at authorized banks</td>
-              </tr>
-              <tr>
-                <td>Travel Insurance</td>
-                <td>$50 – $200+</td>
-                <td>Highly recommended</td>
-              </tr>
-              <tr>
-                <td>Miscellaneous</td>
-                <td>Varies</td>
-                <td>Shopping, souvenirs, unforeseen expenses</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3 className={styles.subTitle}>Accommodation Costs in the USA</h3>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Average Price per Night (USD)</th>
                 <th>Details</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Hotels</td>
-                <td>$100 – $500+</td>
-                <td>Depends on city, location, and star rating</td>
+                <td> Flight Charges</td>
+                <td>₹70,000 – ₹1,50,000+ (round-trip)</td>
+                <td>Varies by airline, booking date, season, and destination city in the USA</td>
               </tr>
               <tr>
-                <td>Airbnb/Vacation Rentals</td>
-                <td>$80 – $300+</td>
-                <td>Ideal for families or longer stays</td>
+                <td> Accommodation</td>
+                <td>See table below</td>
+                <td>Costs vary by city, hotel category, and booking method</td>
               </tr>
               <tr>
-                <td>Hostels (Dorm Beds)</td>
-                <td>$30 – $80</td>
-                <td>Great for solo travelers and budget-conscious visitors</td>
+                <td> Food</td>
+                <td>$20 – $100 per day</td>
+                <td>From budget meals to fine dining in cities like NYC or LA</td>
+              </tr>
+              <tr>
+                <td> Local Transport</td>
+                <td>$30 – $100 per day</td>
+                <td>Includes metro, buses, taxis, or car rentals</td>
+              </tr>
+              <tr>
+                <td> Attractions & Activities</td>
+                <td>$5 – $50+ per activity</td>
+                <td>Museums, theme parks (Disney, Universal), tours, and events</td>
+              </tr>
+              <tr>
+                <td> Visa Fee (B-2)</td>
+                <td>$185</td>
+                <td>Mandatory tourist visa application fee for Indian citizens</td>
+              </tr>
+              <tr>
+                <td> Travel Insurance</td>
+                <td>$50 – $200</td>
+                <td>Highly recommended for medical emergencies and trip protection</td>
+              </tr>
+              <tr>
+                <td> Miscellaneous</td>
+                <td>Varies</td>
+                <td>Shopping, souvenirs, tips, and emergency expenses</td>
               </tr>
             </tbody>
           </table>
-          <p className={styles.note}>Planning Tip: A 10-day trip to the USA (excluding flights) can cost anywhere between $1,500 and $5,000+ per person, depending on your travel style and choices.</p>
+
+          <h3 className={styles.subTitle}>Accommodation Costs Across the USA</h3>
+          <p>Hotel rates differ based on location, quality, and time of year. Here's a typical range for Indian tourists:</p>
+
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th>Accommodation Type</th>
+                <th>Average Price per Night (USD)</th>
+                <th>Ideal For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> Hotels</td>
+                <td>$100 – $500+</td>
+                <td>Best for families, couples, and business travelers</td>
+              </tr>
+              <tr>
+                <td> Airbnb / Vacation Rentals</td>
+                <td>$80 – $300+</td>
+                <td>Suitable for long stays or group travel</td>
+              </tr>
+              <tr>
+                <td> Hostels / Dorms</td>
+                <td>$30 – $80</td>
+                <td>Perfect for solo travelers or backpackers</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p className={styles.note}><strong>Budget Tip:</strong> A 10-day tourist trip to the USA (excluding flights) can cost approximately $1,500 – $5,000+ per person depending on your travel style (budget, mid-range, or luxury).</p>
+
+          <p>Need expert help with your <strong>USA visa application</strong> and travel planning? Contact <strong>Global Visa Internationals</strong> — India's most trusted USA tourist visa consultants with 55,000+ success stories.</p>
 
 
           <div className={styles.formSection1}>
-            <h4 className={styles.subTitle}>Contact Global Visa Internationals for Visa and Documentation Assistance:</h4>
-            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
-          <h2 className={styles.subTitle}> USA Tourist Visa Process from India (B-2 Visa)</h2>
+          <h2 className={styles.subTitle}>USA Tourist Visa Process from India (B-2 Visa Guide)</h2>
+          <p>Planning to explore the United States? Here’s a step-by-step breakdown of the official B-2 <strong>USA Tourist Visa process for Indian citizens</strong>:</p>
+
           <table className={styles.table}>
             <thead>
               <tr>
@@ -479,165 +214,120 @@ export default function Australia() {
             <tbody>
               <tr>
                 <td>1. Check Eligibility</td>
-                <td>You must have temporary intent, sufficient funds, and strong ties to India</td></tr>
+                <td>Ensure you intend to visit temporarily for tourism, have strong financials, and ties to India.</td>
+              </tr>
               <tr>
                 <td>2. Fill DS-160 Form</td>
-                <td>Online visa application form. Accuracy is crucial</td>
+                <td>Complete the U.S. visa application form online. Accuracy is critical for approval.</td>
               </tr>
               <tr>
-                <td>3.Pay Visa Fee</td>
-                <td>	$185 (non-refundable)</td>
+                <td>3. Pay Visa Fee</td>
+                <td>Non-refundable fee of $185 paid online or at authorized bank centers.</td>
               </tr>
               <tr>
-                <td>4.Schedule Interview</td>
-                <td>Book appointment at U.S. Embassy/Consulates (Delhi, Mumbai, Chennai, Kolkata, Hyderabad)</td>
+                <td>4. Schedule Visa Interview</td>
+                <td>Book a B-2 visa interview at U.S. Embassy or Consulates in Mumbai, Delhi, Chennai, Hyderabad, or Kolkata.</td>
               </tr>
               <tr>
                 <td>5. Prepare Documents</td>
-                <td>Passport, DS-160 confirmation, fee receipt, proof of funds, ties to India, etc.</td>
+                <td>Gather your passport, DS-160 confirmation, proof of funds, purpose of visit, and ties to India.</td>
               </tr>
               <tr>
-                <td>6. Attend Visa Interview</td>
-                <td>Be honest and confident. The officer will evaluate your intent and documentation</td>
+                <td>6. Attend Interview</td>
+                <td>Appear for a face-to-face interview. Be confident, clear, and honest in your responses.</td>
               </tr>
               <tr>
                 <td>7. Wait for Processing</td>
-                <td>If approved, your passport will be returned with the visa stamped</td>
+                <td>If approved, your passport will be stamped with the B-2 visa and returned to you.</td>
               </tr>
             </tbody>
           </table>
-          <h3 className={styles.subTitle}>Need Help With the DS-160 or Interview Prep?</h3>
-          <p>Traveling the USA on tourist visa (B-2) process can feel overwhelming — but you don’t have to do it alone. At Global Visa Internationals, we offer end-to-end support to ensure your application is error-free and your interview is successful.</p>
-          <b className={styles.subTitle}>Here’s how we make your USA visa journey seamless:</b>
-          <ol>
-            <h3><li className={styles.subTitle}>Expert DS-160 Form Filling Assistance</li></h3>
-            <p>Filling out the DS-160 form incorrectly is one of the most common reasons for visa delays or denials. Our experts will help you:</p>
-            <ul>
-              <li>Complete the form accurately, avoiding costly mistakes</li>
-              <li>Review all sections (travel history, background, purpose of visit)</li>
-              <li>Upload the correct digital photo as per U.S. embassy requirements</li>
-            </ul>
-            <h3> <li className={styles.subTitle}> One-on-One Personalized Visa Consultation</li></h3>
-            <p>Your case is unique — so we offer customized guidance based on:</p>
-            <ul>
-              <li>Your travel plans and itinerary</li>
-              <li>Financial documents and proof of funds</li>
-              <li>Employment and family ties in India</li>
-              <p>You’ll have a dedicated visa expert to answer all your questions.</p>
-            </ul>
-            <h3><li className={styles.subTitle}> Mock Interviews with Real Consulate Questions</li></h3>
-            <p>Get real-time practice with visa interview questions asked at:</p>
-            <ul>
-              <li className={styles.subTitle}>U.S. Consulates in Mumbai, Delhi, Chennai, Kolkata & Hyderabad
-                Our mock sessions include:</li>
-              <li>Behavioral coaching on how to answer confidently</li>
-              <li>Commonly asked B-2 visa questions (and how to respond)</li>
-              <li>Realistic role-playing with personalized feedback</li>
-            </ul>
-            <h3><li className={styles.subTitle}>Complete Document Checklist & Review</li></h3>
-            <p>We’ll guide you on gathering all required documents, including:</p>
-            <ul>
-              <li>Valid passport, DS-160 confirmation, fee receipts</li>
-              <li>Proof of finances, return intent, hotel bookings, flight details</li>
-              <li>Sponsorship or invitation letters (if applicable)</li>
-              <p>We’ll review everything to ensure it meets U.S. consulate standards.</p>
-            </ul>
+
+          <h3 className={styles.subTitle}>Need Help With DS-160 or B-2 Visa Interview?</h3>
+          <p>Applying for a <strong>USA tourist visa</strong> can be confusing — but you're not alone. At <strong>Global Visa Internationals</strong>, our visa consultants provide end-to-end assistance to maximize your chances of approval.</p>
+
+          <h3 className={styles.subTitle}>How Global Visa Internationals Supports Your USA Visa Application</h3>
+          <ol className={styles.numberedList}>
+            <li>
+              <h4 className={styles.subTitle}> DS-160 Form Filling Assistance</h4>
+              <p>We ensure your DS-160 form is:</p>
+              <ul>
+                <li>Filled correctly with verified details</li>
+                <li>Free from common mistakes that lead to rejections</li>
+                <li>Accompanied by a compliant digital photo</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}> Personalized Visa Consultation</h4>
+              <p>Every case is unique. We assess your situation and guide you on:</p>
+              <ul>
+                <li>Financial documentation and bank balance requirements</li>
+                <li>Family or job ties that demonstrate return intent</li>
+                <li>Supporting itinerary or sponsor letters</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}> Mock Interview Preparation (U.S. Consulate Based)</h4>
+              <p>We conduct practice sessions with real B-2 visa questions asked at:</p>
+              <ul>
+                <li>U.S. Embassy (Delhi) & Consulates (Mumbai, Chennai, Hyderabad, Kolkata)</li>
+                <li>Behavioral coaching to answer with confidence</li>
+                <li>Customized feedback based on your answers</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4 className={styles.subTitle}> Complete Document Checklist & Review</h4>
+              <p>We’ll guide and verify all required documents like:</p>
+              <ul>
+                <li>Passport, DS-160, visa fee receipt</li>
+                <li>Proof of funds, hotel bookings, travel insurance</li>
+                <li>Sponsor letters or invitation (if applicable)</li>
+              </ul>
+            </li>
           </ol>
 
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <p>At Global Visa Internationals, we understand that the visa application process can be complex and time-consuming. That's why we offer:</p>
+          <p className={styles.note}>
+            <strong>Global Visa Internationals</strong> has helped over <strong>55,000+ travelers</strong> secure their USA tourist visas. With our expertise in <strong>B-2 visa filing, documentation, and interview training</strong>, we ensure your American dream begins with confidence.
+          </p>
+
+          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Tourist Visa?</h2>
+
+          <p>
+            Navigating the visa process can be overwhelming — but with <strong>Global Visa Internationals</strong>, you're never alone. As one of the leading <strong>visa consultants in Bangalore</strong>, we provide end-to-end assistance to ensure your application is smooth, accurate, and stress-free.
+          </p>
+
           <ul>
-            <li>Personalized Guidance: Our experienced consultants provide tailored support throughout your application journey</li>
-            <li>Expert Knowledge: We stay up-to-date with the latest visa regulations to ensure your application is accurate and complete.</li>
-            <li>Hassle-Free Process: We handle the paperwork and guide you through each step, saving you time and stress.</li>
-            <li>High Success Rate: We are committed to maximizing your chances of a successful visa outcome.</li>
-            <li>Additional Services: We also take Mock Interviews to prepare you for the visa interview process.</li>
+            <li><strong>Personalized Guidance:</strong> Our expert consultants offer one-on-one support, tailored to your specific visa requirements and travel goals.</li>
+            <li><strong>Up-to-Date Expertise:</strong> We stay current with changing visa rules and ensure your documents meet the latest immigration standards.</li>
+            <li><strong>End-to-End Documentation Help:</strong> From filling out forms to compiling financial and travel documents, we manage everything for you.</li>
+            <li><strong>Mock Interviews for Success:</strong> Prepare with confidence through our realistic <strong>visa interview training sessions</strong>.</li>
+            <li><strong>High Visa Success Rate:</strong> With thousands of approved visas, we’re trusted by travelers across India for proven results.</li>
           </ul>
-          <p>We at Global Visa Internationals, proud to be India's finest visa consultants, are dedicated to making your dreams into reality. With our 11+ years of experience as leading visa consultants in Bangalore, we have successfully managed to process over 55,000+ visas and offer over 75,000 expert visa advice sessions till date. You can confidently rely on our vast visa and immigration consulting experience in India.</p>
-          <p>Let Global Visa Internationals assist you in navigating the visa application process and planning your dream Australian adventure!</p>
 
- <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p>
+            At <strong>Global Visa Internationals</strong>, we take pride in being recognized as <strong>India’s most trusted visa consultancy</strong>. With over <strong>11+ years of experience</strong>, we've successfully processed more than <strong>55,000 visas</strong> and conducted over <strong>75,000 visa consultations</strong> to date.
+          </p>
+
+          <p>
+            Whether you're applying for a <strong>tourist visa to Australia</strong>, the USA, Canada, or any other destination — we’re here to make your dream trip a reality.
+          </p>
+
+          <p className={styles.note}>
+            <em>Note: Global Visa Internationals is an independent visa consultancy and is not affiliated with the Australian Government or any embassy.</em>
+          </p>
+</div>
+          <div className={styles.formSection}>
+
+            <VisaForm />
+          </div>
         </div>
-
-        <div className={styles.formSection}>
-
-          <h1 className={styles.subTitle}>Visa And Immigration Inquiry Form</h1>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-      <section id='Client Reviews'>
-        <h2 className={styles.subtitle}>Client Reviews</h2>
-        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-      </section>
-    </>
-  );
+        <section id='Client Reviews'>
+          
+          <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+        </section>
+      </>
+      );
 }

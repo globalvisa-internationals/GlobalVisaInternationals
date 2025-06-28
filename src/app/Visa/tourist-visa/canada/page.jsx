@@ -1,22 +1,28 @@
 
 import styles from './Canada.module.css';
-import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LocalBusinessJsonLd } from 'next-seo';
+// import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LocalBusinessJsonLd, } from 'next-seo';
 import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
+import {
+  BreadcrumbJsonLd,
+  LocalBusinessJsonLd,
+  WebPageJsonLd,
+} from "next-seo";
+
 export const metadata = {
   title: "Canada Tourist Visa Assistance: Requirements, Application & Top Places | Global Visa Internationals",
   description:
-    "Apply for a Canada Tourist Visa with Global Visa Internationals. Get expert help with requirements, visa application process, and discover must-visit Canadian destinations.",
+    "Apply for a Canada Tourist Visa with expert help from Global Visa Internationals. Learn visa requirements, estimated travel expenses, and must-visit places in Canada.",
   keywords:
-    "Canada tourist visa, apply Canada visitor visa, Canada visa consultant, Canada travel guide, visa for Canada from India, top places in Canada, Canadian immigration",
+    "Canada tourist visa, apply Canada visitor visa, Canada visa consultant, Canada travel guide, visa for Canada from India, Canada immigration, top tourist places in Canada",
   robots: "index, follow",
   alternates: {
     canonical: "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
   },
   openGraph: {
-    title: "Canada Tourist Visa: Requirements, Application & Top Places",
+    title: "Canada Tourist Visa: Application, Requirements & Top Travel Tips",
     description:
-      "Get expert help from Global Visa Internationals on applying for a Canada tourist visa. Learn about requirements, costs, and destinations.",
+      "Get expert help from Global Visa Internationals on applying for a Canada tourist visa. Learn the visa process, documents needed, and explore popular Canadian destinations.",
     url: "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
     siteName: "Global Visa Internationals",
     images: [
@@ -31,75 +37,22 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@globalvisainternationals",
-    title: "Canada Tourist Visa: Requirements, Application & Top Places",
+    site: "@GLOBALVISA1505",
+    title: "Canada Tourist Visa: Application, Requirements & Top Places",
     description:
-      "Apply for your Canada tourist visa with confidence. Learn the process, costs, and top attractions with Global Visa Internationals.",
-    images: ["https://www.globalvisainternationals.com/visa-banner/Canada-Tourist-Visa-assistence-banner.webp"],
+      "Plan your dream trip to Canada. Discover visa requirements, costs, and must-see destinations with help from Global Visa Internationals.",
+    images: [
+      "https://www.globalvisainternationals.com/visa-banner/Canada-Tourist-Visa-assistence-banner.webp",
+    ],
   },
 };
 
 
 export default function Canada() {
 
-  const educationalOrgSchema = {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description":
-      "Unlock Your Canada Adventure! Global Visa Internationals provides expert guidance for your Canada tourist visa application. Simplify the process and explore Canada's wonders. Contact us today!",
-    "founder": {
-      "@type": "Organization",
-      "name": "Naveen Kumar J"
-    },
-    "foundingDate": "2016",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-7022213466",
-      "contactType": "Customer Support",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
-    },
-    "areaServed": ["IN", "Canada", "EU"],
-    "sameAs": [
-      "https://www.facebook.com/globalvisainternationals/",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/global-visa-internationals/",
-      "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
-    ]
-  };
-
-  //review
-
-  // useEffect(() => {
-  //   const script = document.createElement('script');
-  //   script.src = 'https://static.elfsight.com/platform/platform.js';
-  //   script.async = true;
-  //   document.body.appendChild(script);
-  // }, []);
-  
-
   return (
     <>
-      {/* <Head>
-        <title>Canada Tourist Visa Assistence: Requirements, Application & Top Places | Global Visa Internationals</title>
-            <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgSchema) }}
-        />
-      </Head> */}
+
 
      <Head>
         <meta name="geo.region" content="IN-KA" />
@@ -181,6 +134,7 @@ export default function Canada() {
           }}
         />
       </Head>
+
       <div className={styles.imageContainer}>
         <img src="/visa-banner/Canada-Tourist-Visa-assistence-banner.webp" alt="Canada Image" className={styles.CanadaImage} />
       </div>
