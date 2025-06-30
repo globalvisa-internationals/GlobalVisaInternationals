@@ -2,6 +2,7 @@
 import VisaForm from '@/Components/VisaForm';
 import styles from './Japan.module.css';
 import React from 'react';
+import Head from 'next/head';
 
 export const metadata = {
   title: "Japan Tourist Visa Consultants in Bangalore | Global Visa Internationals",
@@ -35,7 +36,7 @@ export const metadata = {
 
 
 
-export default function Australia() {
+export default function JapanTouristVisa() {
   const pageUrl = metadata.alternates.canonical;
 
   const breadcrumbJsonLd = {
