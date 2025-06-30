@@ -256,26 +256,24 @@ export async function GET() {
       priority: 1,
     },
 
-  ];
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+  ]; const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
-      .map(
-        ({ loc, lastmod, changefreq, priority }) => `
+  .map(
+    ({ loc, lastmod, changefreq, priority }) => `
   <url>
     <loc>${loc}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`
-      )
-      .join('')}
+  )
+  .join('')}
 </urlset>`;
 
-  return new Response(sitemapXml, {
+  return new Response(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
     },
   });
-
 }
