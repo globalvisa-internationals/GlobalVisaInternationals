@@ -100,7 +100,7 @@ export default function JapanTouristVisa() {
   };
   return (
     <>
-       <Head>
+      <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
@@ -485,10 +485,10 @@ export default function JapanTouristVisa() {
 
           </div>
 
-          <div className={styles.formSection}>
 
-            <VisaForm />
-          </div>
+        </div>
+        <div className={styles.formSection}>
+          <VisaForm />
         </div>
       </div>
       <section id='Client Reviews'>
