@@ -454,9 +454,7 @@ export default function JapanTouristVisa() {
               <VisaForm />
             </div>
 
-            <div className={styles.formSection1}>
-              <VisaForm />
-            </div>
+         
 
             <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Japan Tourist Visa?</h2>
             <p>
