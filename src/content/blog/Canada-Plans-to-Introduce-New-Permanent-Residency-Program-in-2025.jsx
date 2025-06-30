@@ -3,25 +3,27 @@ import Head from 'next/head';
 
 export const metadata = {
   title: "Canada Plans to Introduce New Permanent Residency Program in 2025 for Skilled Refugees and Displaced Individuals",
-  date: "Jun 30, 2025",
+  date: "2025-06-30",
   category: "Visa Information",
   author: "Global Visa Internationals Team",
-  excerpt: "In 2025, Canada will begin a new program that allows skilled refugees and displaced individuals to live and work in the country permanently. This program builds on a previous successful initiative called the Economic Mobility Pathways Pilot (EMPP). The details were shared in the IRCC Departmental Plan for 2025-2026.",
+  excerpt:
+    "In 2025, Canada will begin a new program that allows skilled refugees and displaced individuals to live and work in the country permanently. This program builds on a previous successful initiative called the Economic Mobility Pathways Pilot (EMPP). The details were shared in the IRCC Departmental Plan for 2025-2026.",
   image: "/Blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025.webp",
   keywords: [
     "Canada visa",
-    "Canada PR Visa ",
-    "Canada PR visa assistence",
-    "Visa assistence",
-    "Canada visa assistence",
-    "Canada",
-    "Canada visa update 2025"
+    "Canada PR Visa",
+    "Canada PR visa assistance",
+    "Visa assistance",
+    "Canada visa update 2025",
+    "Skilled Refugees Canada",
+    "EMPP Canada 2025"
   ]
 };
 
-export default function UKFamilyVisaTaxOnLove() {
+export default function CanadaResidencyBlog() {
   const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
-  const pageUrl = "https://www.globalvisainternationals.com/blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025/";
+  const pageUrl =
+    "https://www.globalvisainternationals.com/blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025/";
 
   const blogStructuredData = {
     "@context": "https://schema.org",
@@ -46,8 +48,10 @@ export default function UKFamilyVisaTaxOnLove() {
         "url": "https://www.globalvisainternationals.com/gvilogo.png"
       }
     },
-    "datePublished": "2025-06-25",
-    "dateModified": "2025-06-25"
+    "datePublished": metadata.date,
+    "dateModified": metadata.date,
+    "inLanguage": "en",
+    "articleSection": metadata.category
   };
 
   const breadcrumbStructuredData = {
@@ -74,9 +78,12 @@ export default function UKFamilyVisaTaxOnLove() {
       }
     ]
   };
+
+
+
   return (
     <>
-      <Head>
+   <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.excerpt} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
@@ -107,6 +114,7 @@ export default function UKFamilyVisaTaxOnLove() {
         <meta name="twitter:description" content={metadata.excerpt} />
         <meta name="twitter:image" content={fullImageUrl} />
         <meta name="twitter:image:alt" content={metadata.title} />
+
         {/* Mobile SEO */}
         <meta name="format-detection" content="telephone=no" />
         <meta name="theme-color" content="#ffffff" />
@@ -115,11 +123,11 @@ export default function UKFamilyVisaTaxOnLove() {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-        {/* GEO Tags for Local SEO (Bangalore, India example) */}
+        {/* Local SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="geo.position" content="12.9716;77.5946" />
-        <meta name="ICBM" content="12.9716, 77.5946" />
+        <meta name="ICBM" content="12.9716,77.5946" />
 
         {/* Structured Data: Organization */}
         <script
@@ -131,7 +139,8 @@ export default function UKFamilyVisaTaxOnLove() {
               "name": "Global Visa Internationals",
               "url": "https://www.globalvisainternationals.com",
               "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-              "description": "Helping Indian residents navigate complex UK immigration and student visa regulations with expert consultancy.",
+              "description":
+                "Helping Indian residents navigate complex UK, Canada, and USA immigration with expert visa consulting services.",
               "founder": { "@type": "Person", "name": "Naveen Kumar J" },
               "foundingDate": "2016",
               "address": {
