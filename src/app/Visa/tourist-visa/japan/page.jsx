@@ -1,21 +1,70 @@
-"use client";
+
+import VisaForm from '@/Components/VisaForm';
 import styles from './Japan.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import React from 'react';
+
+export const metadata = {
+  title: "Japan Tourist Visa Consultants in Bangalore | Global Visa Internationals",
+  description: "Apply for a Japan Tourist Visa with expert support from Global Visa Internationals. 11+ years of experience. Smooth documentation, fast process, and mock interviews.",
+  keywords: "Japan tourist visa, Japan visa consultants in Bangalore, Japan visitor visa from India, how to apply for Japan visa, Japan travel visa assistance",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan",
+  },
+  openGraph: {
+    type: "website",
+    title: "Apply for Japan Tourist Visa from India | Global Visa Internationals",
+    description: "Trusted visa agents for Japan in Bangalore. Expert documentation, embassy interview prep, and high visa success rate.",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/images/japan-visa-banner.jpg",
+        alt: "Japan Tourist Visa Assistance",
+      }
+    ],
+    siteName: "Global Visa Internationals"
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@globalvisainternationals",
+    title: "Japan Tourist Visa Experts – Global Visa Internationals",
+    description: "Planning to travel to Japan? Get full visa support from trusted consultants in Bangalore.",
+    images: ["https://www.globalvisainternationals.com/images/japan-visa-banner.jpg"]
+  }
+};
+
+
 
 export default function Australia() {
-  const jsonLd = {
+  const pageUrl = metadata.alternates.canonical;
+
+  const breadcrumbJsonLd = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Japan Tourist Visa",
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
     "name": "Global Visa Internationals",
     "url": "https://www.globalvisainternationals.com",
     "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Unlock Your Australia Adventure! Global Visa Internationals provides expert guidance for your Australia tourist visa application. Simplify the process and explore Australia's wonders. Contact us today!",
-    "founder": {
-      "@type": "Organization",
-      "name": "Naveen Kumar J"
-    },
-    "foundingDate": "2016",
+    "description": "Expert Japan Tourist Visa Consultants in Bangalore. We assist with complete Japan visa documentation, application submission, and personalized guidance.",
+    "telephone": "+91-7022213466",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "MG Road",
@@ -24,164 +73,69 @@ export default function Australia() {
       "postalCode": "560025",
       "addressCountry": "IN"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-7022213466",
-      "contactType": "Customer Support",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
     },
-    "areaServed": ["IN", "Australia", "EU"],
-    "sameAs": [
-      "https://www.facebook.com/GlobalVisaInternationals",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/globalvisainternationals"
-      // Add more links if you have Twitter, YouTube, etc.
-    ]
-
-  };
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
       }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ]
   };
-  //reviews
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
   return (
     <>
-      <head>
-        <title>Europe Tourist Visa From India | Cost, Process & Top Attractions</title>
-        <meta
-          name="description"
-          content="Apply for a Europe Tourist Visa (B-2) with expert guidance from Global Visa Internationals. Know the visa process, fees, documents required, and explore top tourist destinations in the Europe."
-        />
-        <meta
-          name="keywords"
-          content="Europe tourist visa, apply for US tourist visa from India, B2 visa Europe, cost of Europe trip, flight to Europe cost, US visa consultants in India, tourist attractions in Europe, visa process Europe, Europe visa fees"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/usa" />
+       <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Apply for Europe Tourist Visa From India | Global Visa Internationals" />
-        <meta
-          property="og:description"
-          content="Planning to visit the Europe? Get expert assistance for your B-2 visa application, flight booking, cost estimate, and must-visit places. Start your Europe journey with Global Visa Internationals."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/usa" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/usa-tourist-visa-banner.jpg" />
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Europe Tourist Visa | Application, Cost & Documents Needed" />
-        <meta
-          name="twitter:description"
-          content="Explore the Europe with the right tourist visa. Get visa application support, interview preparation, and travel cost breakdown from Global Visa Internationals."
-        />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/usa-tourist-visa-banner.jpg" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/usa" />
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        {/* Geo Location Tags */}
-        <meta name="geo.region" content="US" />
-        <meta name="geo.placename" content="Europe" />
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Structured Data - Local Business / Organization */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com",
-              "logo": "https://www.globalvisainternationals.com/logo.png",
-              "description": "Leading visa consultancy offering expert Europe tourist visa assistance from India. We help with B-2 visa application, documentation, interview prep, and more.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "MG Road",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "KA",
-                "postalCode": "560025",
-                "addressCountry": "IN"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-7022213466",
-                "contactType": "Customer Support"
-              },
-              "sameAs": [
-                "https://www.facebook.com/GlobalVisaInternationals",
-                "https://www.linkedin.com/company/globalvisainternationals",
-                "https://twitter.com/GlobalVisaIntl"
-              ]
-            })
-          }}
-        />
-      </head>
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
+      </Head>
 
       <div className={styles.imageContainer}>
         <img src="/images/Japan1.png" alt="Europe Image" className={styles.JapanImage} />
@@ -191,559 +145,349 @@ export default function Australia() {
 
 
         <div className={styles.JapanData}>
-          <h1 className={styles.Title}> Discover the Wonders of Japan: Your Tourist Visa Guide</h1>
-          <p>Japan, the Land of the Rising Sun, beckons with its captivating blend of ancient traditions and modern marvels. From bustling cityscapes to serene natural beauty, Japan offers an unforgettable travel experience. Let Global Visa Internationals guide you through the process of obtaining your Japan Tourist Visa so you can embark on this incredible journey.</p>
+          <h1 className={styles.Title}>Japan Tourist Visa Assistance – Travel with Confidence</h1>
+          <p>
+            Planning a trip to the Land of the Rising Sun? Global Visa Internationals is your trusted partner for
+            <strong> Japan tourist visa assistance</strong>. We simplify the entire process, from documentation to submission,
+            helping you explore Japan's cultural wonders, futuristic cities, and natural beauty with ease.
+          </p>
 
-          <h3 className={styles.subTitle}>Must-See Japan Tourist Spots</h3>
-          <p>Prepare to be enchanted by Japan's diverse attractions:</p>
-
+          <h2 className={styles.subTitle}>Top Tourist Attractions in Japan</h2>
+          <p>Experience the highlights of Japan with these must-see destinations:</p>
           <ul>
-            <li>Tokyo Tower: An iconic symbol of Tokyo, offering panoramic views of the sprawling metropolis.</li>
-            <li>Historic Temples of Kyoto: Immerse yourself in Japan's rich cultural heritage by exploring the countless stunning temples and shrines of Kyoto, such as Kinkaku-ji (the Golden Pavilion) and Fushimi Inari-taisha with its thousands of vibrant red torii gates.</li>
-
-            <li>Cherry Blossoms in Spring (Sakura): Witness the breathtaking beauty of Japan during cherry blossom season, typically from late March to mid-April. Enjoy hanami (flower viewing) picnics under the delicate pink blooms.</li>
-
-            <li>Stunning Landscapes of Mount Fuji: Marvel at the majestic Mount Fuji, Japan's highest peak and a UNESCO World Heritage site. Capture its iconic silhouette from various vantage points, including the Fuji Five Lakes region.</li>
+            <li><strong>Tokyo Tower:</strong> Enjoy panoramic city views from this iconic landmark in Japan’s capital.</li>
+            <li><strong>Kyoto’s Historic Temples:</strong> Visit Kinkaku-ji (Golden Pavilion) and Fushimi Inari-taisha, famous for its red torii gates.</li>
+            <li><strong>Cherry Blossom Season (Sakura):</strong> Celebrate spring with a hanami picnic under blooming cherry trees from March to April.</li>
+            <li><strong>Mount Fuji:</strong> Capture breathtaking views of Japan’s tallest peak from the Fuji Five Lakes region.</li>
           </ul>
-          <p>Beyond these highlights, Japan offers a wealth of experiences, from the vibrant street food scene of Osaka to the serene beauty of the Japanese Alps and the historical significance of Hiroshima.</p>
+          <p>
+            Beyond these, discover Osaka's vibrant street food, Hiroshima’s historical landmarks, and the tranquil beauty of the Japanese Alps.
+          </p>
 
-
-          <h3 className={styles.subTitle}>Why Visit Japan? Unveiling Its Unique Allure</h3>
-          <p> Japan captivates travelers for countless reasons:</p>
+          <h2 className={styles.subTitle}>Why Choose Japan for Your Next Trip?</h2>
           <ol>
-            <li>Rich History and Traditions: Explore ancient castles, serene gardens, and participate in traditional tea ceremonies to immerse yourself in Japan's fascinating past.</li>
-            <br />
-            <li>Diverse Cultures: Experience the unique blend of ancient customs and cutting-edge modernity, from the respectful etiquette to the vibrant pop culture.</li>
-            <br />
-            <li>World-Renowned Cuisine: Indulge in Japan's exquisite culinary scene, from delicate sushi and flavorful ramen to intricate kaiseki multi-course meals.</li>
-            <br />
-            <li>Breathtaking Landscapes: Discover dramatic coastlines, towering mountains, tranquil forests, and picturesque rural villages. Japan's natural beauty is truly awe-inspiring.</li>
-            <li>Exceptional Hospitality (Omotenashi): Experience the renowned Japanese hospitality, characterized by thoughtfulness, politeness, and attention to detail.</li>
-            <li>Safety and Cleanliness: Japan is known for its low crime rates and impeccably clean environment, making it a comfortable and secure travel destination.</li>
+            <li><strong>Rich History:</strong> Explore ancient castles, shrines, and traditions like tea ceremonies.</li>
+            <li><strong>Diverse Culture:</strong> Experience a blend of ancient customs and cutting-edge innovation.</li>
+            <li><strong>World-Class Cuisine:</strong> Enjoy sushi, ramen, tempura, and multi-course kaiseki meals.</li>
+            <li><strong>Stunning Landscapes:</strong> From beaches to mountains, Japan’s natural beauty is unforgettable.</li>
+            <li><strong>Omotenashi Hospitality:</strong> Renowned politeness and excellent service everywhere you go.</li>
+            <li><strong>Safety & Cleanliness:</strong> One of the world’s safest, cleanest travel destinations.</li>
           </ol>
-          <p>These are just a few of the many compelling reasons to visit Japan. The country offers a unique and enriching experience for every type of traveler..</p>
+          <p>Whether you're a solo traveler, couple, or family – Japan promises something special for everyone.</p>
+
+          <h2 className={styles.subTitle}>Need Help with Your Japan Tourist Visa?</h2>
+          <p>
+            Global Visa Internationals is a reliable <strong>Japan tourist visa consultancy</strong> offering end-to-end guidance:
+          </p>
+          <ul>
+            <li>Document verification & checklist preparation</li>
+            <li>Visa application form filling</li>
+            <li>Cover letter and travel plan assistance</li>
+            <li>Appointment scheduling & submission guidance</li>
+          </ul>
 
           <div className={styles.formSection1}>
-            <h4 className={styles.subTitle}>Contact Global visa Internationals for Visa Documentation Assistance:</h4>
-            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
-          <h2 className={styles.subTitle}> Flight Costs from India to Japan (2025)</h2>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Destination</th>
-              <th>Flight Type</th>
-              <th>Starting Price (INR)</th>
-              <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Tokyo</td>
-                <td>1+ stops</td>
-                <td>₹29,759</td>
-                <td>Cheapest in September</td>
-              </tr>
-              <tr>
-                <td>Osaka</td>
-                <td>1+ stops</td>
-                <td>₹31,702</td>
-                <td>Competitive fares available</td>
-              </tr>
-              <tr>
-                <td>Nagoya</td>
-                <td>	1+ stops</td>
-                <td>₹32,437</td>
-                <td>		Slightly higher fares</td>
-              </tr>
-              <tr>
-                <td>Fukuoka</td>
-                <td>	1+ stops</td>
-                <td>	₹33,021</td>
-                <td>Affordable options</td>
-              </tr>
 
-            </tbody>
-          </table>
-          <p className={styles.note}>Note: Costs are approximate and can vary based on exchange rates, specific cities visited, and personal spending habits.</p>
+          <p><strong>🎌 Ready to apply for your Japan Tourist Visa?</strong> Let our experts handle the process while you focus on planning your dream trip!</p>
 
-          <h2>Accommodation Costs in Japan</h2>
-          <p>Japan offers a range of accommodations to suit various budgets.</p>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Accommodation Type</th>
-              <th>Price Range (JPY)</th>
-              <th>Price Range (INR)</th>
-              <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Hostels</td>
-                <td>1,500–4,000</td>
-                <td>₹900–₹2,400</td>
-                <td>Budget-friendly, shared facilities</td>
-              </tr>
-              <tr>
-                <td>Capsule Hotels</td>
-                <td>5,000–15,000</td>
-                <td>₹3,000–₹9,000</td>
-                <td>Mid-range, convenient locations</td>
-              </tr>
-              <tr>
-                <td>Minshuku</td>
-                <td>5,000–20,000</td>
-                <td>	₹3,000–₹12,000</td>
-                <td>Traditional guesthouses with meals</td>
-              </tr>
-              <tr>
-                <td>Luxury Hotels/Ryokans</td>
-                <td>30,000–300,000</td>
-                <td>₹18,000–₹180,000</td>
-                <td>High-end stays with premium services</td>
-              </tr>
-
-            </tbody>
-          </table>
-
-          <h2>Food and Dining Expenses</h2>
-          <p>Japanese cuisine caters to all budgets, from street food to fine dining.</p>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Meal Type</th>
-              <th>Price Range (JPY)</th>
-              <th>Price Range (INR)</th>
-              <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Hostels</td>
-                <td>	300–1,500</td>
-                <td>	₹180–₹900</td>
-                <td>Ramen, onigiri, and snacks</td>
-              </tr>
-              <tr>
-                <td>Casual Dining</td>
-                <td>	1,000–1,500</td>
-                <td>₹600–₹900</td>
-                <td>	Chain restaurants and izakayas</td>
-              </tr>
-              <tr>
-                <td>Daily Food Budget</td>
-                <td>~10,000</td>
-                <td>~₹6,000</td>
-                <td>Three meals and snacks</td>
-              </tr>
-              <tr>
-                <td>Fine Dining</td>
-                <td>10,000–50,000</td>
-                <td>₹6,000–₹30,000</td>
-                <td>	Sushi, kaiseki experiences</td>
-              </tr>
-
-            </tbody>
-          </table>
-
-          <h2>Transportation Costs</h2>
-          <p>Efficient transportation is a hallmark of Japan, with options for every traveler.</p>
-          <h3>Local Travel</h3>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Mode</th>
-              <th>Cost (JPY)</th>
-              <th>Cost (INR)</th>
-              <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Metro/Bus Fare</td>
-                <td>200–500</td>
-                <td>₹120–₹300</td>
-                <td>Per ride</td>
-              </tr>
-              <tr>
-                <td>Day Pass</td>
-                <td>~1,600</td>
-                <td>	~₹960</td>
-                <td>Unlimited daily travel</td>
-              </tr>
-            </tbody>
-          </table>
-          <h3>Long-Distance Travel</h3>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Mode</th>
-              <th>Cost (JPY)</th>
-              <th>Cost (INR)</th>
-              <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Shinkansen (Tokyo-Kyoto)</td>
-                <td>~14,000</td>
-                <td>~₹8,400</td>
-                <td>One-way ticket</td>
-              </tr>
-              <tr>
-                <td>Japan Rail Pass (7-day)</td>
-                <td>50,000</td>
-                <td>	~₹30,000</td>
-                <td>Unlimited JR trains</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2>Estimated Total Trip Cost (Excluding Flights)</h2>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Expense Category</th>
-              <th>Budget Traveler (INR)</th>
-              <th>Mid-Range Traveler (INR)</th>
-              <th>Luxury Traveler (INR)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Accommodation</td>
-                <td>₹900–₹3,000/night</td>
-                <td>₹3,000–₹9,000/night</td>
-                <td>	₹18,000–₹180,000/night</td>
-              </tr>
-              <tr>
-                <td>Food</td>
-                <td>₹1,800–₹3,000/day</td>
-                <td>₹3,000–₹6,000/day</td>
-                <td>₹6,000–₹30,000/day</td>
-              </tr>
-              <tr>
-                <td>Transportation</td>
-                <td>₹600–₹1,800/day</td>
-                <td>	₹1,800–₹6,000/day</td>
-                <td>₹6,000–₹30,000/day</td>
-              </tr>
-              <tr>
-                <td>Sightseeing/Shopping</td>
-                <td>₹1,200–₹3,000/day</td>
-                <td>₹3,000–₹6,000/day</td>
-                <td>	₹6,000–₹30,000/day</td>
-              </tr>
-              <tr>
-                <td>Total (7 days)</td>
-                <td>₹28,000–₹70,000</td>
-                <td>	₹70,000–₹140,000</td>
-                <td>	₹140,000–₹700,000</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p className={styles.note}>Note: Costs are approximate and can vary based on exchange rates, specific cities visited, and personal spending habits.</p>
-
-          <h2 className={styles.subTitle}>Navigating the Japan Tourist Visa Process</h2>
-          <p>Obtaining a tourist visa for Japan involves several key steps. While the specific requirements may vary based on your nationality, the general process typically includes:</p>
-          <ol>
-            <li>Determining Visa Requirements: Check the website of the Japanese Ministry of Foreign Affairs or the Japanese embassy/consulate in your country to confirm if you need a visa and the specific requirements for your nationality.</li>
-            <li>Gathering Required Documents: This usually includes a valid passport, visa application form, passport-sized photographs, proof of sufficient funds, travel itinerary, and hotel booking confirmations. Additional documents may be required depending on your circumstances.</li>
-            <li>Submitting Your Application: You will typically need to submit your application in person at the Japanese embassy or consulate in your country. Some countries may have authorized visa application centers.</li>
-            <li>Visa Interview (if required): In some cases, you may be required to attend an interview as part of the visa application process.1 </li>
-            <li>Visa Processing: The processing time for a Japan tourist visa can vary. It's crucial to apply well in advance of your intended travel dates.</li>
-            <li>Receiving Your Visa: Once your application is approved, your visa will be affixed to your passport.</li>
-          </ol>
-          <p>The Japan visa process can seem complex, but Global Visa Internationals is here to simplify it for you.</p>
-
-          <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your Guide to Japan</h3>
-          <p>Planning your dream trip to Japan should be exciting, not stressful. At Global Visa Internationals, we provide comprehensive assistance to ensure a smooth and successful Japan tourist visa application process.</p>
-          <b className={styles.subTitle}>Our services include:</b>
-          <ul>
-            <li>Personalized guidance on Japan visa requirements based on your nationality.</li>
-            <li>Assistance with gathering and preparing the necessary documentation for your Japan tourist visa.</li>
-            <li>Thorough review of your application to minimize errors and delays.</li>
-            <li>Mock interviews for visa applications to help you feel confident and prepared.</li>
-            <li>One-on-one consultations to address all your questions and concerns about traveling to Japan and the visa process.</li>
-
-          </ul>
-          <p className={styles.note}>Don't let the complexities of the Japan visa application stand in the way of your adventure. Contact Global Visa Internationals today for expert support and personalized assistance. Let us help you turn your dream of exploring Japan into a reality!</p>
-
+          <a href="/contact" className={styles.ctaButton}>
+            Get Expert Visa Assistance Now
+          </a>
 
           <div className={styles.formSection1}>
-            <h4 className={styles.subTitle}>Contact Global Visa Internationals for Visa and Documentation Assistance:</h4>
-            <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
+            <VisaForm />
+            <h2 className={styles.subTitle}>Japan Travel Costs in 2025 – Plan Your Budget Smartly</h2>
+            <p>
+              Understanding the estimated travel costs is crucial when applying for your <strong>Japan Tourist Visa</strong>. Here's a detailed breakdown of the major expenses including flights, accommodations, food, transport, and more—helping you plan better with the support of a trusted <strong>Japan tourist visa consultancy</strong>.
+            </p>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
+            <h3>✈️ Flight Costs from India to Japan (2025)</h3>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Destination</th>
+                  <th>Flight Type</th>
+                  <th>Starting Price (INR)</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Tokyo</td><td>1+ stops</td><td>₹29,759</td><td>Cheapest in September</td></tr>
+                <tr><td>Osaka</td><td>1+ stops</td><td>₹31,702</td><td>Competitive fares available</td></tr>
+                <tr><td>Nagoya</td><td>1+ stops</td><td>₹32,437</td><td>Slightly higher fares</td></tr>
+                <tr><td>Fukuoka</td><td>1+ stops</td><td>₹33,021</td><td>Affordable options</td></tr>
+              </tbody>
+            </table>
 
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
+            <h3>🏨 Accommodation Costs on Japan tourist visa</h3>
+            <p>Whether you’re backpacking or enjoying a luxury trip, Japan offers stays for all budgets:</p>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Type</th><th>Price (JPY)</th><th>Price (INR)</th><th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Hostels</td><td>1,500–4,000</td><td>₹900–₹2,400</td><td>Budget-friendly, shared facilities</td></tr>
+                <tr><td>Capsule Hotels</td><td>5,000–15,000</td><td>₹3,000–₹9,000</td><td>Compact & modern, great for solo travel</td></tr>
+                <tr><td>Minshuku</td><td>5,000–20,000</td><td>₹3,000–₹12,000</td><td>Traditional Japanese guesthouses</td></tr>
+                <tr><td>Luxury Hotels / Ryokans</td><td>30,000–300,000</td><td>₹18,000–₹180,000</td><td>Top-tier services with cultural experiences</td></tr>
+              </tbody>
+            </table>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
+            <h3>🍣 Food & Dining in Japan</h3>
+            <p>Japanese cuisine fits every pocket—from street food to Michelin-star sushi bars:</p>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Meal Type</th><th>JPY</th><th>INR</th><th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Street Food</td><td>300–1,500</td><td>₹180–₹900</td><td>Ramen, onigiri, takoyaki</td></tr>
+                <tr><td>Casual Dining</td><td>1,000–1,500</td><td>₹600–₹900</td><td>Izakayas & chain restaurants</td></tr>
+                <tr><td>Daily Food Budget</td><td>~10,000</td><td>~₹6,000</td><td>3 meals + snacks</td></tr>
+                <tr><td>Fine Dining</td><td>10,000–50,000</td><td>₹6,000–₹30,000</td><td>Kaiseki meals & sushi experiences</td></tr>
+              </tbody>
+            </table>
 
+            <h3>🚆 Transportation Costs for japan tourist visa</h3>
+            <h4>Local Travel</h4>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Mode</th><th>JPY</th><th>INR</th><th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Metro/Bus</td><td>200–500</td><td>₹120–₹300</td><td>Single ride</td></tr>
+                <tr><td>Day Pass</td><td>~1,600</td><td>~₹960</td><td>Unlimited travel for a day</td></tr>
+              </tbody>
+            </table>
 
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
+            <h4>Long-Distance Travel on japan Tourist visa</h4>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Mode</th><th>JPY</th><th>INR</th><th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Shinkansen (Tokyo–Kyoto)</td><td>~14,000</td><td>~₹8,400</td><td>One-way</td></tr>
+                <tr><td>Japan Rail Pass (7-day)</td><td>50,000</td><td>~₹30,000</td><td>Unlimited JR trains nationwide</td></tr>
+              </tbody>
+            </table>
 
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <h3> Total Estimated Trip Cost (7 Days, Excl. Flights) For Japan </h3>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Budget (INR)</th>
+                  <th>Mid-Range (INR)</th>
+                  <th>Luxury (INR)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Accommodation</td><td>₹900–₹3,000/night</td><td>₹3,000–₹9,000/night</td><td>₹18,000–₹180,000/night</td></tr>
+                <tr><td>Food</td><td>₹1,800–₹3,000/day</td><td>₹3,000–₹6,000/day</td><td>₹6,000–₹30,000/day</td></tr>
+                <tr><td>Transport</td><td>₹600–₹1,800/day</td><td>₹1,800–₹6,000/day</td><td>₹6,000–₹30,000/day</td></tr>
+                <tr><td>Sightseeing/Shopping</td><td>₹1,200–₹3,000/day</td><td>₹3,000–₹6,000/day</td><td>₹6,000–₹30,000/day</td></tr>
+                <tr><td><strong>Total (7 Days)</strong></td><td>₹28,000–₹70,000</td><td>₹70,000–₹140,000</td><td>₹140,000–₹700,000</td></tr>
+              </tbody>
+            </table>
+
+            <p className={styles.note}>
+              <strong>Note:</strong> These estimates are approximate and can vary depending on personal preferences, seasonality, and exchange rates.
+            </p>
+
+            <div className={styles.formSection1}>
+              <VisaForm />
+            </div>
+
+            <p className={styles.ctaText}>
+              ✈️ <strong>Start your journey to Japan with confidence!</strong> For expert <strong>Japan tourist visa assistance</strong> and documentation, reach out to Global Visa Internationals today.
+            </p>
+            <a href="/contact" className={styles.ctaButton}>
+              Get Expert Visa Help
+            </a>
+            <div className={styles.formSection1}>
+              <VisaForm />
+            </div>
+            <h2 className={styles.subTitle}>Navigating the Japan Tourist Visa Process</h2>
+            <p>
+              Planning a trip to Japan? Understanding the <strong>Japan tourist visa</strong> process is the first step toward your dream vacation. While the specific requirements may vary by nationality, here's a simplified overview of how to <strong>apply for a Japan visa from India</strong> or any other country.
+            </p>
+
+            <ol>
+              <li><strong>Determine Eligibility:</strong> Visit the Japanese Ministry of Foreign Affairs website or your local embassy/consulate to check if you need a <strong>Japan visa for Indian citizens</strong> or other nationalities.</li>
+
+              <li><strong>Collect Required Documents:</strong> Prepare key documents including your valid passport, completed <strong>Japan visa application form</strong>, passport-size photos, financial proof, hotel booking, and travel itinerary. Depending on your case, additional documents may be needed.</li>
+
+              <li><strong>Submit at Japan Visa Application Center:</strong> Submit your documents at the <strong>Japan visa application center</strong> or Japanese embassy/consulate. Appointments may be required in some cases.</li>
+
+              <li><strong>Attend Interview (if applicable):</strong> Some applicants may be asked to attend a short visa interview, especially for first-time travelers or unusual cases.</li>
+
+              <li><strong>Wait for Visa Processing:</strong> <strong>Japan tourist visa processing time</strong> typically ranges from 3–7 working days. Apply early to avoid last-minute issues.</li>
+
+              <li><strong>Receive Your Japan Visa:</strong> Once approved, your visa will be stamped in your passport. You're now ready to experience Japan!</li>
+            </ol>
+
+            <p>
+              The <strong>Japan tourist visa requirements</strong> may seem detailed, but Global Visa Internationals is here to make it simple. From understanding the rules to submitting the paperwork—we help you every step of the way.
+            </p>
+
+            <div className={styles.formSection1}>
+              <VisaForm />
+            </div>
+
+            <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your Guide to Japan</h3>
+            <p>
+              Don’t let complex forms or long embassy queues get in your way. As a trusted <strong>visa agent for Japan</strong>, Global Visa Internationals offers expert guidance for a smooth and hassle-free experience.
+            </p>
+
+            <b className={styles.subTitle}>Our Japan Tourist Visa Services Include:</b>
+            <ul>
+              <li>Personalized guidance on <strong>Japan visa requirements</strong> based on your nationality.</li>
+              <li>Expert support in organizing and verifying all documents for your <strong>Japan tourist visa</strong>.</li>
+              <li>Pre-submission review to minimize errors and avoid delays in processing.</li>
+              <li>Mock interview preparation to boost your confidence for embassy questions.</li>
+              <li>End-to-end assistance from a leading <strong>Japan visa consultancy</strong> in India.</li>
+            </ul>
+
+            <p className={styles.note}>
+              ✨ Don’t let the complexities of the Japan visa process stop you from visiting one of the most beautiful countries in the world. Whether you're applying solo or with family, we’re here to help. Contact us today for the best <strong>Japan tourist visa assistance</strong>.
+            </p>
+
+            <div className={styles.formSection1}>
+              <VisaForm />
+            </div>
+
+            <h3 className={styles.subTitle}>Need Help With the Japan Tourist Visa Process?</h3>
+            <p>
+              Applying for a <strong>Japan tourist visa</strong> from India can seem complex—but you're not alone. At Global Visa Internationals, we offer full-service <strong>Japan tourist visa assistance</strong> to make your journey hassle-free and successful.
+            </p>
+
+            <b className={styles.subTitle}>Here’s how we simplify your Japan visa application:</b>
+            <ol className={styles.serviceList}>
+              <li>
+                <h4 className={styles.subTitle}>✅ Personalized Visa Consultation</h4>
+                <p>
+                  Every traveler's case is different. Our <strong>Japan visa consultancy</strong> team provides tailored guidance based on:
+                </p>
+                <ul>
+                  <li>Your travel history and purpose of visit</li>
+                  <li>Proof of funds and employment details</li>
+                  <li>Return intent and sponsorship (if applicable)</li>
+                </ul>
+                <p>We’ll help you understand exactly <strong>how to apply for Japan visa from India</strong> based on your unique case.</p>
+              </li>
+
+              <li>
+                <h4 className={styles.subTitle}>✅ Document Checklist & Review</h4>
+                <p>
+                  Incorrect or missing documents are a major reason for visa rejection. Our experts help you gather and review:
+                </p>
+                <ul>
+                  <li>Valid passport, completed visa form, photographs</li>
+                  <li>Bank statements and financial proof</li>
+                  <li>Confirmed hotel bookings and itinerary</li>
+                  <li>Invitation or cover letters (if needed)</li>
+                </ul>
+                <p>We ensure your paperwork meets <strong>Japan tourist visa requirements</strong> and embassy standards.</p>
+              </li>
+
+              <li>
+                <h4 className={styles.subTitle}>✅ Application Form Assistance</h4>
+                <p>
+                  Struggling with the Japan visa application form? Our team will:
+                </p>
+                <ul>
+                  <li>Help you fill the form correctly</li>
+                  <li>Guide you on the latest embassy requirements</li>
+                  <li>Check for consistency across all submitted details</li>
+                </ul>
+                <p>Leave no room for rejection with expert assistance from a trusted <strong>visa agent for Japan</strong>.</p>
+              </li>
+
+              <li>
+                <h4 className={styles.subTitle}>✅ Embassy Appointment Support</h4>
+                <p>
+                  Some applicants need to schedule appointments at a <strong>Japan visa application center</strong> or consulate. We help with:
+                </p>
+                <ul>
+                  <li>Booking embassy/VFS appointments</li>
+                  <li>Preparing documents in the required format</li>
+                  <li>Step-by-step guidance until submission</li>
+                </ul>
+              </li>
+
+              <li>
+                <h4 className={styles.subTitle}>✅ Travel & Budget Planning (Bonus)</h4>
+                <p>
+                  As part of our comprehensive <strong>Japan tourist visa consultancy</strong>, we also help you:
+                </p>
+                <ul>
+                  <li>Estimate trip costs including flights, stay, and daily expenses</li>
+                  <li>Get guidance on the best times to visit Japan</li>
+                  <li>Explore city-specific travel tips for Tokyo, Kyoto, Osaka, and more</li>
+                </ul>
+              </li>
+            </ol>
+
+            <div className={styles.formSection1}>
+              <VisaForm />
+            </div>
+
+            <p className={styles.note}>
+              🌸 Ready to explore Japan? Get expert help from Global Visa Internationals—your trusted <strong>Japan tourist visa consultancy</strong>. From paperwork to peace of mind, we’re here every step of the way.
+            </p>
+
+            <a href="/contact" className={styles.ctaButton}>
+              Get Japan Visa Help Now
+            </a>
+
+            <div className={styles.formSection1}>
+              <VisaForm />
+            </div>
+
+            <div className={styles.formSection1}>
+              <VisaForm />
+            </div>
+
+            <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Japan Tourist Visa?</h2>
+            <p>
+              At Global Visa Internationals, we specialize in simplifying the complex <strong>Japan tourist visa process</strong> for travelers from India. With years of experience and a client-first approach, we ensure you receive the right guidance at every step.
+            </p>
+
+            <ul>
+              <li><strong>🔍 Personalized Guidance:</strong> Our experienced <strong>visa consultants in Bangalore</strong> offer one-on-one assistance tailored to your travel goals and background.</li>
+              <li><strong>📋 Expert Documentation Help:</strong> We ensure your application is complete, error-free, and compliant with current <strong>Japan visa requirements</strong>.</li>
+              <li><strong>🚀 Hassle-Free Processing:</strong> We handle the paperwork and logistics so you can focus on planning your dream trip to Japan.</li>
+              <li><strong>🎯 High Approval Rate:</strong> Our strong track record and deep embassy insights significantly boost your visa success chances.</li>
+              <li><strong>🗣️ Mock Interviews & Prep:</strong> We conduct visa mock interviews so you feel confident, especially for in-person consulate appointments.</li>
+            </ul>
+
+            <p>
+              With over <strong>11+ years of experience</strong> as one of the most trusted <strong>visa consultancies in India</strong>, Global Visa Internationals has helped <strong>55,000+ clients</strong> secure visas and delivered <strong>75,000+ expert consultations</strong>. Whether you're traveling for leisure, family visits, or solo exploration, we provide unmatched support every step of the way.
+            </p>
+
+            <p>
+              Let Global Visa Internationals assist you in navigating the <strong>Japan tourist visa application</strong> smoothly—and help you turn your dream of exploring Japan into a reality!
+            </p>
+
+            <p className={styles.note}>
+              <strong>Disclaimer:</strong> This service is provided by Global Visa Internationals, an independent visa consultancy. We are not affiliated with the Japanese Government or its official embassy.
+            </p>
+
           </div>
 
+          <div className={styles.formSection}>
 
-          <h3 className={styles.subTitle}>Need Help With the DS-160 or Interview Prep?</h3>
-          <p>Traveling the Europe on tourist visa  process can feel overwhelming — but you don’t have to do it alone. At Global Visa Internationals, we offer end-to-end support to ensure your application is error-free and your interview is successful.</p>
-          <b className={styles.subTitle}>Here’s how we make your Europe visa journey seamless:</b>
-          <ol>
-            <h3 className={styles.subTitle}><li className={styles.subTitle}>Expert DS-160 Form Filling Assistance</li></h3>
-            <p>Filling out the DS-160 form incorrectly is one of the most common reasons for visa delays or denials. Our experts will help you:</p>
-            <ul>
-              <li>Complete the form accurately, avoiding costly mistakes</li>
-              <li>Review all sections (travel history, background, purpose of visit)</li>
-              <li>Upload the correct digital photo as per U.S. embassy requirements</li>
-            </ul>
-            <h3> <li className={styles.subTitle}> One-on-One Personalized Visa Consultation</li></h3>
-            <p>Your case is unique — so we offer customized guidance based on:</p>
-            <ul>
-              <li>Your travel plans and itinerary</li>
-              <li>Financial documents and proof of funds</li>
-              <li>Employment and family ties in India</li>
-              <p>You’ll have a dedicated visa expert to answer all your questions.</p>
-            </ul>
-            <h3><li className={styles.subTitle}> Mock Interviews with Real Consulate Questions</li></h3>
-            <p>Get real-time practice with visa interview questions asked at:</p>
-            <ul>
-              <li className={styles.subTitle}>U.S. Consulates in Mumbai, Delhi, Chennai, Kolkata & Hyderabad
-                Our mock sessions include:</li>
-              <li>Behavioral coaching on how to answer confidently</li>
-              <li>Commonly asked B-2 visa questions (and how to respond)</li>
-              <li>Realistic role-playing with personalized feedback</li>
-            </ul>
-            <h3><li className={styles.subTitle}>Complete Document Checklist & Review</li></h3>
-            <p>We’ll guide you on gathering all required documents, including:</p>
-            <ul>
-              <li>Valid passport, DS-160 confirmation, fee receipts</li>
-              <li>Proof of finances, return intent, hotel bookings, flight details</li>
-              <li>Sponsorship or invitation letters (if applicable)</li>
-              <p>We’ll review everything to ensure it meets U.S. consulate standards.</p>
-            </ul>
-          </ol>
-
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <p>At Global Visa Internationals, we understand that the visa application process can be complex and time-consuming. That's why we offer:</p>
-          <ul>
-            <li>Personalized Guidance: Our experienced consultants provide tailored support throughout your application journey</li>
-            <li>Expert Knowledge: We stay up-to-date with the latest visa regulations to ensure your application is accurate and complete.</li>
-            <li>Hassle-Free Process: We handle the paperwork and guide you through each step, saving you time and stress.</li>
-            <li>High Success Rate: We are committed to maximizing your chances of a successful visa outcome.</li>
-            <li>Additional Services: We also take Mock Interviews to prepare you for the visa interview process.</li>
-          </ul>
-          <p>We at Global Visa Internationals, proud to be India's finest visa consultants, are dedicated to making your dreams into reality. With our 11+ years of experience as leading visa consultants in Bangalore, we have successfully managed to process over 55,000+ visas and offer over 75,000 expert visa advice sessions till date. You can confidently rely on our vast visa and immigration consulting experience in India.</p>
-          <p>Let Global Visa Internationals assist you in navigating the visa application process and planning your dream Australian adventure!</p>
-
- <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
-        </div>
-
-        <div className={styles.formSection}>
-
-          <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+            <VisaForm />
+          </div>
         </div>
       </div>
       <section id='Client Reviews'>
