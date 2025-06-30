@@ -251,7 +251,7 @@ export async function GET() {
     },
     {
       loc: 'https://www.globalvisainternationals.com/blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025/',
-      lastmod: '2025-06-23',
+      lastmod: '2025-06-30',
       changefreq: 'monthly',
       priority: 1,
     },
