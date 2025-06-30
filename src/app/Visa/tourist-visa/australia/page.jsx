@@ -5,6 +5,7 @@ import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
 // import { BreadcrumbJsonLd, LocalBusinessJsonLd, WebPageJsonLd, } from 'next-seo';
 
+
 export const metadata = {
   title: "Australia Tourist Visa Consultants: Requirements, Application & Costs | Global Visa Internationals",
   description:
@@ -13,13 +14,13 @@ export const metadata = {
     "Australia tourist visa, apply Australia visitor visa, Australia visa consultant, Australia travel guide, visa for Australia from India, Australia immigration, best tourist places in Australia",
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/visa/tourist-visa/australia",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
   },
   openGraph: {
     title: "Australia Tourist Visa: Application, Requirements & Top Travel Tips",
     description:
       "Get expert help from Global Visa Internationals on applying for an Australia tourist visa. Learn about visa process, travel costs, and iconic Australian destinations.",
-    url: "https://www.globalvisainternationals.com/visa/tourist-visa/australia",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
     siteName: "Global Visa Internationals",
     images: [
       {
@@ -46,102 +47,108 @@ export const metadata = {
 
 
 export default function Australia() {
+const pageUrl = metadata.alternates.canonical;
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.globalvisainternationals.com"
+      },
+      
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Australia",
+        item: pageUrl
+      }
+    ]
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Trusted Australia Tourist & Visitor Visa consultants in Bangalore. End-to-end visa assistance, documentation, and interview prep.",
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ]
+  };
   return (
     <>
-      <Head>
-        {/* Canonical & Geo Tags */}
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/australia" />
+     <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Elfsight (if reviews used) */}
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-
-        {/* Breadcrumb Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://www.globalvisainternationals.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Tourist Visa",
-                  "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Australia",
-                  "item": "https://www.globalvisainternationals.com/visa/tourist-visa/australia"
-                }
-              ]
-            })
-          }}
-        />
-
-        {/* Local Business / Travel Agency Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "TravelAgency",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com",
-              "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-              "description": "Trusted Australia Tourist & Visitor Visa consultants in Bangalore. End-to-end visa assistance, documentation, and interview prep.",
-              "telephone": "+91-7022213466",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "MG Road",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "Karnataka",
-                "postalCode": "560025",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 12.9716,
-                "longitude": 77.5946
-              },
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday"
-                  ],
-                  "opens": "10:00",
-                  "closes": "18:00"
-                }
-              ],
-              "sameAs": [
-                "https://www.facebook.com/globalvisainternationals/",
-                "https://www.instagram.com/globalvisa_internationals/",
-                "https://www.linkedin.com/company/global-visa-internationals/",
-                "https://x.com/GLOBALVISA1505",
-                "https://www.youtube.com/@globalVisaInternationals",
-                "https://www.google.com/maps/place/Global+Visa+Internationals"
-              ]
-            })
-          }}
-        />
+        {/* Structured Data: JSON-LD */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
       </Head>
+
 
 
 
