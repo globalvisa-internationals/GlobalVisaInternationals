@@ -3,7 +3,8 @@ import VisaForm from '@/Components/VisaForm';
 import styles from './USA.module.css';
 import React from 'react';
 import dynamic from 'next/dynamic';
-import SeoSchemaUSA from '@/Components/SeoSchemaUSA';
+import Head from 'next/head';
+// import SeoSchemaUSA from '@/Components/SeoSchemaUSA';
 
 
 export const metadata = {
@@ -49,7 +50,86 @@ export default function Australia() {
 
   return (
     <> 
-  <SeoSchemaUSA />
+<Head>
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="12.9716,77.5946" />
+
+        {/* Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.globalvisainternationals.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Canada",
+                  "item": "https://www.globalvisainternationals.com/visa/tourist-visa/usa"
+                }
+              ]
+            }),
+          }}
+        />
+ <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        {/* Local Business Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "TravelAgency",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com",
+              "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+              "description": "Visa & Immigration Consultants based in Bangalore. Trusted since 2017.",
+              "telephone": "+91-7022213466",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "MG Road",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560025",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.9716,
+                "longitude": 77.5946
+              },
+              "openingHoursSpecification": [{
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "10:00",
+                "closes": "18:00"
+              }],
+              "sameAs": [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+                "https://www.google.com/maps/place/Global+Visa+Internationals"
+              ]
+            }),
+          }}
+        />
+      </Head>
 
       <div className={styles.imageContainer}>
         <img src="/visa-banner/USA-Tourist-Visa-assistance-banner.webp" alt="USA Tourist Visa assistance banner" className={styles.USAImage} />
