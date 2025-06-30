@@ -244,7 +244,19 @@ export default async function sitemap() {
       lastModified: new Date('2025-06-23'),
       changefreq: 'monthly',
       priority: 1,
-    }
+    },
+        {
+      url: 'https://www.globalvisainternationals.com/blog/UK-Family-Visa-Tax-on-Love-2025',
+      lastModified: new Date('2025-06-25'),
+      changefreq: 'monthly',
+      priority: 1,
+    },
+        {
+      url: 'https://www.globalvisainternationals.com/blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025/',
+      lastModified: new Date('2025-06-23'),
+      changefreq: 'monthly',
+      priority: 1,
+    },
     // add more URLs here
   ]
 }

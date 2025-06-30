@@ -3,7 +3,8 @@ import VisaForm from '@/Components/VisaForm';
 import styles from './USA.module.css';
 import React from 'react';
 import dynamic from 'next/dynamic';
-import SeoSchemaUSA from "@/components/SeoSchemaUSA";
+import SeoSchemaUSA from '@/Components/SeoSchemaUSA';
+
 
 export const metadata = {
   title: "USA Tourist Visa Consultants | Global Visa Internationals",
