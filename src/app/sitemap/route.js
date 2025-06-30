@@ -1,221 +1,222 @@
-// app/sitemap.js
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { Readable } from 'stream';
 
-export default async function sitemap() {
-  return [
-    {
+export async function GET() {
+  const links = [
+     {
       url: 'https://www.globalvisainternationals.com/',
-      lastModified: new Date('2025-05-15'),
+      lastmod: '2025-05-15',
       changefreq: 'weekly',   // all lowercase
       priority: 1.0,
     },
     {
       url: 'https://www.globalvisainternationals.com/about-us',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/canada',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/australia',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/usa',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/uk',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/europe',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/japan',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/dubai',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/singapore',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/canada',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/australia',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/usa',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/uk',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/europe',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/new-zealand',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/refusal-visa/canada',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/refusal-visa/australia',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/refusal-visa/usa',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/refusal-visa/uk',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/europe',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/refusal-visa/new-zealand',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/us-green-card-2025-rules',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/English-language-requirements-for-The-UK',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Schengen-Visa-Cascade',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Basava-Jayanti-2025',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Visa-Fee-Hack-for-Indian-Travelers',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Australia-PR-Visa',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/career',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/contact',
-      lastModified: new Date('2025-05-24'),
+      lastmod: '2025-05-24',
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/uk-student-visa-rules-2025',
-      lastModified: new Date('2025-06-07'),
+      lastmod: '2025-06-07',
       changefreq: 'monthly',
       priority: 1,
     },
     
     {
       url: 'https://www.globalvisainternationals.com/blog/US-Visa-got-rejected-dont-wory',
-      lastModified: new Date('2025-06-07'),
+      lastmod: '2025-06-07',
       changefreq: 'monthly',
       priority: 1,
     },
@@ -223,40 +224,49 @@ export default async function sitemap() {
     
     {
       url: 'https://www.globalvisainternationals.com/blog/10-Plus-Countries-You-Can-Visit-With-A-USA-Visa',
-      lastModified: new Date('2025-06-07'),
+      lastmod: '2025-06-07',
       changefreq: 'monthly',
       priority: 1,
     },
         {
       url: 'https://www.globalvisainternationals.com/blog/uk-evisa-digital-visa-replacement-2025',
-      lastModified: new Date('2025-06-18'),
+      lastmod: '2025-06-18',
       changefreq: 'monthly',
       priority: 1,
     },
         {
       url: 'https://www.globalvisainternationals.com/blog/germany-steady-harbor-indian-students',
-      lastModified: new Date('2025-06-18'),
+      lastmod: '2025-06-18',
       changefreq: 'monthly',
       priority: 1,
     },
         {
       url: 'https://www.globalvisainternationals.com/blog/US-Introduces-Sweeping-New-Rules-for-Foreign-Students-What-Indians-Need-to-Know',
-      lastModified: new Date('2025-06-23'),
+      lastmod: '2025-06-23',
       changefreq: 'monthly',
       priority: 1,
     },
         {
       url: 'https://www.globalvisainternationals.com/blog/UK-Family-Visa-Tax-on-Love-2025',
-      lastModified: new Date('2025-06-25'),
+      lastmod: '2025-06-25',
       changefreq: 'monthly',
       priority: 1,
     },
         {
       url: 'https://www.globalvisainternationals.com/blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025/',
-      lastModified: new Date('2025-06-23'),
+      lastmod: '2025-06-23',
       changefreq: 'monthly',
       priority: 1,
     },
     
-  ]
+   ];
+
+  const stream = new SitemapStream({ hostname: 'https://www.globalvisainternationals.com' });
+  const xml = await streamToPromise(Readable.from(links).pipe(stream)).then(data => data.toString());
+
+  return new Response(xml, {
+    headers: {
+      'Content-Type': 'application/xml',
+    },
+  });
 }

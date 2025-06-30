@@ -32,7 +32,8 @@
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "resend": "^4.2.0"
+    "resend": "^4.2.0",
+    "sitemap": "^8.0.0"
   },
   "devDependencies": {
     "next-sitemap": "^4.2.3"
