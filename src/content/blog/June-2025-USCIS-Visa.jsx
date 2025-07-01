@@ -2,7 +2,7 @@ import Styles from './blog.module.css';
 import Head from 'next/head';
 
 export const metadata = {
-  title: "July 2025 USCIS Visa Bulletin: Relief for Indian Applicants in EB-3, F2A & F4 Categories",
+  title: "June 2025 USCIS Visa Bulletin: Relief for Indian Applicants in EB-3, F2A & F4 Categories",
   date: "June 11, 2025",
   category: "U.S. Immigration News",
   author: "Global Visa Internationals Team",
