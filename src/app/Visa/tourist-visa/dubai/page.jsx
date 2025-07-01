@@ -99,171 +99,43 @@ export default function DubaiVisaPage() {
 
   return (
     <>
-      <head>
-        <title>Dubai Tourist Visa From India | Cost, Process & Top Attractions</title>
-        <meta name="description" content="Apply for a Dubai Tourist Visa with expert guidance from Global Visa Internationals. Know the visa process, fees, documents required, and explore top tourist destinations in Dubai." />
-        <meta name="keywords" content="Dubai tourist visa, apply for Dubai tourist visa from India, Dubai visa cost, flight to Dubai cost, Dubai visa consultants in India, tourist attractions in Dubai, Dubai visa process, Dubai visa fees" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Global Visa Internationals" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" />
-        <meta name="theme-color" content="#0a66c2" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.webp" imagesrcset="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.webp 1x" />
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Apply for Dubai Tourist Visa From India | Global Visa Internationals" />
-        <meta property="og:description" content="Planning to visit Dubai? Get expert assistance for your tourist visa application, flight booking, cost estimate, and must-visit places. Start your Dubai journey with Global Visa Internationals." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.webp" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:locale:alternate" content="en_US" />
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:site_name" content="Global Visa Internationals" />
-        <meta property="og:type" content="website" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Dubai Tourist Visa | Application, Cost & Documents Needed" />
-        <meta name="twitter:description" content="Explore Dubai with the right tourist visa. Get visa application support and travel cost breakdown from Global Visa Internationals." />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/Dubai-Tourist-Visa-Global-Visa-Internationals.webp" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/dubai" />
-        <meta name="twitter:site" content="@GlobalVisaIntl" />
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        {/* Geo Location Tags */}
-        <meta name="geo.region" content="AE" />
-        <meta name="geo.placename" content="Dubai" />
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Local Business Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com",
-            "logo": "https://www.globalvisainternationals.com/logo.png",
-            "description": "Leading visa consultancy offering expert Dubai tourist visa assistance from India. We help with visa application, documentation, and more.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "MG Road",
-              "addressLocality": "Bengaluru",
-              "addressRegion": "KA",
-              "postalCode": "560025",
-              "addressCountry": "IN"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-7022213466",
-              "contactType": "Customer Support"
-            },
-            "sameAs": [
-              "https://www.facebook.com/globalvisainternationals/",
-              "https://www.instagram.com/globalvisa_internationals/",
-              "https://www.linkedin.com/company/global-visa-internationals/",
-              "https://x.com/GLOBALVISA1505",
-              "https://www.youtube.com/@globalVisaInternationals",
-              "https://www.google.com/maps/place/Global+Visa+Internationals/@12.967478,77.6035421,17z"
-            ]
-          })
-        }} />
-
-        {/* BreadcrumbList Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.globalvisainternationals.com"
-              },
-              // {
-              //   "@type": "ListItem",
-              //   "position": 2,
-              //   "name": "Tourist Visa",
-              //   "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
-              // },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Dubai"
-              }
-            ]
-          })
-        }} />
-
-        {/* FAQPage Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is the cost of a Dubai Tourist Visa from India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "It typically ranges from ₹6,500 to ₹9,000 depending on visa type and duration."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What documents are required for a Dubai tourist visa?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Valid passport, recent photograph, bank statements, confirmed flight ticket, and hotel booking are usually required."
-                }
-              }
-            ]
-          })
-        }} />
-
-        {/* Service Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Dubai Tourist Visa Application Assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com"
-            },
-            "areaServed": {
-              "@type": "Country",
-              "name": "India"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Visa Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "14 Days Tourist Visa"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "30 Days Tourist Visa"
-                  }
-                }
-              ]
-            }
-          })
-        }} />
-      </head>
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
+      </Head>
 
 
 
@@ -294,9 +166,9 @@ export default function DubaiVisaPage() {
             <li>Global Village: Experience the cultures and cuisines of over 90 countries in one exciting location (seasonal).</li>
             <li>Dubai Desert Conservation Reserve: Embark on a desert safari, experiencing Bedouin culture, camel rides, and stunning sunsets.</li>
           </ul>
-       <div className={styles.formSection1}>
-              <VisaForm/>
-            </div>
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
 
           <h3 className={styles.subTitle}>Why Choose Dubai for Your Next Holiday?</h3>
           <p>Dubai is more than just a city of skyscrapers; it's a captivating destination that offers a unique blend of:</p>
@@ -316,8 +188,8 @@ export default function DubaiVisaPage() {
 
           <p>Dubai is a city that seamlessly blends tradition and modernity, making it an ideal destination for travelers seeking both adventure and relaxation.</p>
           <div className={styles.formSection1}>
-              <VisaForm />
-            </div>
+            <VisaForm />
+          </div>
 
           <h2 className={styles.subTitle}> Flight Costs from India to Japan (2025)</h2>
           <table className={styles.table}>
@@ -538,8 +410,8 @@ export default function DubaiVisaPage() {
 
           <p className={styles.note}>Note: Costs are approximate and can vary based on exchange rates, specific cities visited, and personal spending habits.</p>
           <div className={styles.formSection1}>
-              <VisaForm />
-            </div>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>Navigating the Japan Tourist Visa Process</h2>
           <p>Obtaining a tourist visa for Japan involves several key steps. While the specific requirements may vary based on your nationality, the general process typically includes:</p>
           <ol>
@@ -566,8 +438,8 @@ export default function DubaiVisaPage() {
           <p className={styles.note}>Don't let the complexities of the Japan visa application stand in the way of your adventure. Contact Global Visa Internationals today for expert support and personalized assistance. Let us help you turn your dream of exploring Japan into a reality!</p>
 
           <div className={styles.formSection1}>
-              <VisaForm />
-            </div>
+            <VisaForm />
+          </div>
           <h3 className={styles.subTitle}>Need Help With the DS-160 or Interview Prep for Your Europe Tourist Visa?</h3>
           <p>Traveling the Europe on tourist visa  process can feel overwhelming — but you don’t have to do it alone. At Global Visa Internationals, we offer end-to-end support to ensure your application is error-free and your interview is successful.</p>
           <b className={styles.subTitle}>Here’s how we make your Europe visa journey seamless:</b>
@@ -606,8 +478,8 @@ export default function DubaiVisaPage() {
             </ul>
           </ol>
           <div className={styles.formSection1}>
-                        <VisaForm />
-                      </div>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Visa Needs?</h2>
           <p>At Global Visa Internationals, we understand that the visa application process can be complex and time-consuming. That's why we offer:</p>
           <ul>
@@ -619,13 +491,13 @@ export default function DubaiVisaPage() {
           </ul>
           <p>We at Global Visa Internationals, proud to be India's finest visa consultants, are dedicated to making your dreams into reality. With our 11+ years of experience as leading visa consultants in Bangalore, we have successfully managed to process over 55,000+ visas and offer over 75,000 expert visa advice sessions till date. You can confidently rely on our vast visa and immigration consulting experience in India.</p>
           <p>Let Global Visa Internationals assist you in navigating the visa application process and planning your dream Australian adventure!</p>
-         <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
 
-       <div className={styles.formSection}>
-              <VisaForm />
-            </div>
+        <div className={styles.formSection}>
+          <VisaForm />
+        </div>
       </div>
       <section id='Client Reviews'>
         <h2 className={styles.subtitle}>Client Reviews</h2>
