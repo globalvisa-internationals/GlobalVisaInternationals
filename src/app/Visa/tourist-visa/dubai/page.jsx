@@ -1,76 +1,102 @@
-"use client";
+
 import styles from './Dubai.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import React from 'react';
+import Head from 'next/head';
+import VisaForm from '@/Components/VisaForm';
 
-export default function Dubai() {
-
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
+export const metadata = {
+  title: "Dubai Tourist Visa Consultants in Bangalore | Global Visa Internationals",
+  description: "Get expert Dubai Tourist Visa assistance in Bangalore. Fast process, complete documentation, 11+ years of visa experience at Global Visa Internationals.",
+  keywords: "Dubai tourist visa, Dubai visa consultants in Bangalore, visa for Dubai from India, how to apply for Dubai tourist visa, Dubai travel visa assistance",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/dubai",
+  },
+  openGraph: {
+    type: "website",
+    title: "Apply for Dubai Tourist Visa from India | Global Visa Internationals",
+    description: "Fast & reliable Dubai tourist visa consultants in Bangalore. Get end-to-end assistance, mock interviews, and expert documentation support.",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/dubai",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp",
+        alt: "Dubai Tourist Visa Assistance",
       }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
+    ],
+    siteName: "Global Visa Internationals"
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@globalvisainternationals",
+    title: "Dubai Tourist Visa Experts – Global Visa Internationals",
+    description: "Planning to visit Dubai? We provide fast and reliable visa services with expert guidance.",
+    images: ["https://www.globalvisainternationals.com/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp"]
+  }
+};
+
+export default function DubaiVisaPage() {
+  const pageUrl = metadata.alternates.canonical;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Dubai Tourist Visa",
+        "item": pageUrl
+      }
+    ]
   };
-  //reviews
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Expert Dubai Tourist Visa Consultants in Bangalore. Complete visa support, documentation, and consultation for UAE visit visas.",
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ]
+  };
+
+
+
   return (
     <>
       <head>
@@ -242,12 +268,12 @@ export default function Dubai() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp" alt="Dubai-Turist-Visa-Global-Visa-Internationals" className={styles.JapanImage} />
+        <img src="/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp" alt="Dubai-Turist-Visa-Global-Visa-Internationals" className={styles.DubaiImage} />
       </div>
 
-      <div className={styles.JapanSec}>
+      <div className={styles.DubaiSec}>
 
-        <div className={styles.JapanData}>
+        <div className={styles.DubaiData}>
           <h1 className={styles.Title}>Discover the Wonders of Dubai: Your Guide to a Tourist Visa</h1>
           <p>Dubai, a dazzling jewel in the Middle East, beckons travelers with its futuristic skyline, rich cultural heritage, and unparalleled experiences. Whether you dream of scaling the Burj Khalifa, exploring traditional souks, or relaxing on pristine beaches, Dubai offers an unforgettable adventure.</p>
 
@@ -269,7 +295,7 @@ export default function Dubai() {
             <li>Dubai Desert Conservation Reserve: Embark on a desert safari, experiencing Bedouin culture, camel rides, and stunning sunsets.</li>
           </ul>
        <div className={styles.formSection1}>
-              <VisaForm />
+              <VisaForm/>
             </div>
 
           <h3 className={styles.subTitle}>Why Choose Dubai for Your Next Holiday?</h3>
