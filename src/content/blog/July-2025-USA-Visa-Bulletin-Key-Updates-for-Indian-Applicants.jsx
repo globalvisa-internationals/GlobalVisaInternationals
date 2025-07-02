@@ -1,24 +1,30 @@
 import Styles from './blog.module.css';
 import Head from 'next/head';
-
 export const metadata = {
   title: "July 2025 USA Visa Bulletin: Key Updates for Indian Applicants",
   date: "2025-07-01",
   category: "Visa Information",
   author: "Global Visa Internationals Team",
   excerpt:
-    "The U.S. Visa Bulletin for July 2025 outlines green card priority dates for family-based, employment-based, and diversity visa categories.Check Final Action and Filing Dates for countries including India, China, Mexico, and the Philippines.Stay updated on visa number availability, DV-2025 cut-offs, and green card processing timelines.",
+    "Get the latest U.S. Visa Bulletin updates for July 2025. Track green card priority dates for Indian applicants across family-based, employment-based, and diversity visa categories. Understand Final Action and Filing Dates, DV-2025 cut-offs, and immigration backlogs.",
   image: "/Blog/US-Visa-Bulletin-July-2025-Green-Card-and-Immigration-Priority-Dates.webp",
   keywords: [
-    "Canada visa",
-    "Canada PR Visa",
-    "Canada PR visa assistance",
-    "Visa assistance",
-    "Canada visa update 2025",
-    "Skilled Refugees Canada",
-    "EMPP Canada 2025"
+    "USA visa bulletin July 2025",
+    "Green card priority dates India",
+    "July 2025 immigration updates",
+    "Family-based visa July 2025",
+    "Employment-based green card India",
+    "DV 2025 cut off dates",
+    "USCIS visa filing dates",
+    "Final Action Dates July 2025",
+    "USA green card timeline India",
+    "Global Visa Internationals USA visa",
+    'US News Updates',
+    "USA NEWS",
+    "American news"
   ]
 };
+
 
 export default function CanadaResidencyBlog() {
   const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
