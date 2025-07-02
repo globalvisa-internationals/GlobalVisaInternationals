@@ -1,12 +1,31 @@
 /* blog.module.css */
 
 .article {
-  max-width: 768px;
+  max-width: 780px;
   margin: 10px auto 0 auto;
   padding: 3rem 1.5rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
+}
+
+/* .ArticalSec {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 700px;
+  justify-content: center;
+} */
+
+.VisaForm {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.VisaForm1 {
+  display: none;
 }
 
 .blogTitle {
@@ -24,22 +43,24 @@
   margin-bottom: 20px;
   gap: 0.5rem;
   flex-wrap: wrap;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
 }
 
 .content {
   font-size: 1.125rem;
   line-height: 1.75;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
 }
-.subtitle{
+
+.subtitle {
   color: #077907;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
 }
-.bold{
+
+.bold {
   font-weight: 600;
   color: #1a1a1a;
 }
@@ -195,66 +216,76 @@
 
 
 
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 15px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  border: 1px solid #000000;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background-color: #7e807e;
+  font-weight: 600;
+}
+
+.note {
+  font-size: 0.95rem;
+  color: #235004;
+  padding: 1rem;
+  border-left: 4px solid #1c8108;
+  max-width: 800px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .VisaForm1 {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .table th,
-  .table td {
-    border: 1px solid #000000;
-    padding: 0.75rem 1rem;
-    text-align: left;
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .description {
     font-size: 0.95rem;
   }
-  
-  .table th {
-    background-color: #7e807e;
-    font-weight: 600;
-  }
-  
-  .note {
-        font-size: 0.95rem;
-    color: #235004;
-    padding: 1rem;
-    border-left: 4px solid #1c8108;
-    max-width: 800px;
-    margin: auto;
-  }
-  @media (max-width: 768px) {
-    .heading {
-      font-size: 1.5rem;
-    }
 
-    .description {
-      font-size: 0.95rem;
-    }
-  
-    .table th,
-    .table td {
-      font-size: 0.85rem;
-      padding: 0.5rem;
-    }
-  
-    .table {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-    }
-  
-    .table thead {
-      white-space: nowrap;
-    }
+  .table th,
+  .table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
   }
-  .a{
-    text-decoration: none;
-    font-style: italic;
-    color: #8d8b04;
+
+  .table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
   }
+
+  .table thead {
+    white-space: nowrap;
+  }
+}
+
+.a {
+  text-decoration: none;
+  font-style: italic;
+  color: #8d8b04;
+}
+
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .gridWrapper {
@@ -288,6 +319,7 @@
     line-height: 1.6;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   .article {
     color: #fff;
@@ -304,9 +336,11 @@
   .content {
     color: #fff;
   }
-.subtitle{
-  color: #8d8b04;
-}
+
+  .subtitle {
+    color: #8d8b04;
+  }
+
   .card {
     background-color: #1e1e1e;
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.06);
