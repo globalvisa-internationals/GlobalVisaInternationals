@@ -62,7 +62,7 @@ export default function VisaForm() {
 
   return (
     <div className={styles.formSection}>
-      <h1 className={styles.formtitle}>Visa And Immigration Inquiry Form</h1>
+      <h1 className={styles.formtitle}>Visa Inquiry Form</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.row}>
           <input className={styles.input} name="name" placeholder="Enter your name" required />
