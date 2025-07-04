@@ -265,7 +265,7 @@ export default async function sitemap() {
     },
         {
       url: 'https://www.globalvisainternationals.com/blog/https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/',
-      lastModified: new Date('2025-067-04'),
+      lastModified: new Date('2025-07-04'),
       changefreq: 'monthly',
       priority: 1,
     },
