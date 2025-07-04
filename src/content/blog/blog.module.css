@@ -240,7 +240,8 @@
 
 .note {
   font-size: 0.95rem;
-  color: #235004;
+  color: #40910b;
+font-weight: 500;
   padding: 1rem;
   border-left: 4px solid #1c8108;
   max-width: 800px;
@@ -283,7 +284,7 @@
 .a {
   text-decoration: none;
   font-style: italic;
-  color: #8d8b04;
+  color: #13770a;
 }
 
 /* Mobile responsive adjustments */
@@ -321,6 +322,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .bold{
+    color: #fff;
+  }
+
   .article {
     color: #fff;
   }
@@ -338,7 +343,7 @@
   }
 
   .subtitle {
-    color: #8d8b04;
+    color: #127909;
   }
 
   .card {
