@@ -153,7 +153,7 @@ export default function JapanTouristVisa() {
             helping you explore Japan's cultural wonders, futuristic cities, and natural beauty with ease.
           </p>
 
-          <h2 className={styles.subTitle}>Top Tourist Attractions in Japan</h2>
+          <h2 className={styles.subTitle}>Japan Top Tourist Attractions </h2>
           <p>Experience the highlights of Japan with these must-see destinations:</p>
           <ul>
             <li><strong>Tokyo Tower:</strong> Enjoy panoramic city views from this iconic landmark in Japan’s capital.</li>
@@ -165,7 +165,7 @@ export default function JapanTouristVisa() {
             Beyond these, discover Osaka's vibrant street food, Hiroshima’s historical landmarks, and the tranquil beauty of the Japanese Alps.
           </p>
 
-          <h2 className={styles.subTitle}>Why Choose Japan for Your Next Trip?</h2>
+          <h2 className={styles.subTitle}>Why Japan Visa for Your Next Trip?</h2>
           <ol>
             <li><strong>Rich History:</strong> Explore ancient castles, shrines, and traditions like tea ceremonies.</li>
             <li><strong>Diverse Culture:</strong> Experience a blend of ancient customs and cutting-edge innovation.</li>
@@ -196,7 +196,7 @@ export default function JapanTouristVisa() {
           <div className={styles.formSection1}>
             <VisaForm />
             </div>
-            <h2 className={styles.subTitle}>Japan Travel Costs in 2025 – Plan Your Budget Smartly</h2>
+            <h2 className={styles.subTitle}>Japan Visa and Travel Costs in 2025 – Plan Your Budget Smartly</h2>
             <p>
               Understanding the estimated travel costs is crucial when applying for your <strong>Japan Tourist Visa</strong>. Here's a detailed breakdown of the major expenses including flights, accommodations, food, transport, and more—helping you plan better with the support of a trusted <strong>Japan tourist visa consultancy</strong>.
             </p>
@@ -308,13 +308,9 @@ export default function JapanTouristVisa() {
             <p className={styles.ctaText}>
               <strong>Start your journey to Japan with confidence!</strong> For expert <strong>Japan tourist visa assistance</strong> and documentation, reach out to Global Visa Internationals today.
             </p>
-            <a href="/contact" className={styles.ctaButton}>
-              Get Expert Visa Help
-            </a>
-            <div className={styles.formSection1}>
-              <VisaForm />
-            </div>
-            <h2 className={styles.subTitle}>Navigating the Japan Tourist Visa Process</h2>
+            <a href="/contact" className={styles.ctaButton}>Get Expert Visa Help </a>
+            
+            <h2 className={styles.subTitle}>Traveling to Japan on Tourist Visa Process</h2>
             <p>
               Planning a trip to Japan? Understanding the <strong>Japan tourist visa</strong> process is the first step toward your dream vacation. While the specific requirements may vary by nationality, here's a simplified overview of how to <strong>apply for a Japan visa from India</strong> or any other country.
             </p>
@@ -341,7 +337,7 @@ export default function JapanTouristVisa() {
               <VisaForm />
             </div>
 
-            <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your Guide to Japan</h3>
+            <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your assistance to Japan tourist Visa</h3>
             <p>
               Don’t let complex forms or long embassy queues get in your way. As a trusted <strong>visa agent for Japan</strong>, Global Visa Internationals offers expert guidance for a smooth and hassle-free experience.
             </p>
@@ -371,7 +367,7 @@ export default function JapanTouristVisa() {
             <b className={styles.subTitle}>Here’s how we simplify your Japan visa application:</b>
             <ol className={styles.serviceList}>
               <li>
-                <h4 className={styles.subTitle}> Personalized Visa Consultation</h4>
+                <h4 className={styles.subTitle}> Personalized Japan Visa Consultation</h4>
                 <p>
                   Every traveler's case is different. Our <strong>Japan visa consultancy</strong> team provides tailored guidance based on:
                 </p>
@@ -398,10 +394,8 @@ export default function JapanTouristVisa() {
               </li>
 
               <li>
-                <h4 className={styles.subTitle}>Application Form Assistance</h4>
-                <p>
-                  Struggling with the Japan visa application form? Our team will:
-                </p>
+                <h4 className={styles.subTitle}>Japan Visa Application Form Assistance</h4>
+                <p>Struggling with the Japan visa application form? Our team will:</p>
                 <ul>
                   <li>Help you fill the form correctly</li>
                   <li>Guide you on the latest embassy requirements</li>
@@ -411,7 +405,7 @@ export default function JapanTouristVisa() {
               </li>
 
               <li>
-                <h4 className={styles.subTitle}> Embassy Appointment Support</h4>
+                <h4 className={styles.subTitle}>Japan Visa Embassy Appointment Support</h4>
                 <p>
                   Some applicants need to schedule appointments at a <strong>Japan visa application center</strong> or consulate. We help with:
                 </p>
@@ -423,7 +417,7 @@ export default function JapanTouristVisa() {
               </li>
 
               <li>
-                <h4 className={styles.subTitle}> Travel & Budget Planning (Bonus)</h4>
+                <h4 className={styles.subTitle}>Japan Visa, Travel & Budget Planning (Bonus)</h4>
                 <p>
                   As part of our comprehensive <strong>Japan tourist visa consultancy</strong>, we also help you:
                 </p>
@@ -447,12 +441,6 @@ export default function JapanTouristVisa() {
               Get Japan Visa Help Now
             </a>
 
-            <div className={styles.formSection1}>
-              <VisaForm />
-            </div>
-
-         
-
             <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Japan Tourist Visa?</h2>
             <p>
               At Global Visa Internationals, we specialize in simplifying the complex <strong>Japan tourist visa process</strong> for travelers from India. With years of experience and a client-first approach, we ensure you receive the right guidance at every step.
@@ -466,20 +454,11 @@ export default function JapanTouristVisa() {
               <li><strong> Mock Interviews & Prep:</strong> We conduct visa mock interviews so you feel confident, especially for in-person consulate appointments.</li>
             </ul>
 
-            <p>
-              With over <strong>11+ years of experience</strong> as one of the most trusted <strong>visa consultancies in India</strong>, Global Visa Internationals has helped <strong>55,000+ clients</strong> secure visas and delivered <strong>75,000+ expert consultations</strong>. Whether you're traveling for leisure, family visits, or solo exploration, we provide unmatched support every step of the way.
-            </p>
+            <p>With over <strong>11+ years of experience</strong> as one of the most trusted <strong>visa consultancies in India</strong>, Global Visa Internationals has helped <strong>55,000+ clients</strong> secure visas and delivered <strong>75,000+ expert consultations</strong>. Whether you're traveling for leisure, family visits, or solo exploration, we provide unmatched support every step of the way.</p>
 
-            <p>
-              Let Global Visa Internationals assist you in navigating the <strong>Japan tourist visa application</strong> smoothly—and help you turn your dream of exploring Japan into a reality!
-            </p>
+            <p>Let Global Visa Internationals assist you in navigating the <strong>Japan tourist visa application</strong> smoothly—and help you turn your dream of exploring Japan into a reality!</p>
 
-            <p className={styles.note}>
-              <strong>Disclaimer:</strong> This service is provided by Global Visa Internationals, an independent visa consultancy. We are not affiliated with the Japanese Government or its official embassy.
-            </p>
-
-          
-
+            <p className={styles.note}><strong>Disclaimer:</strong> This service is provided by Global Visa Internationals, an independent visa consultancy. We are not affiliated with the Japanese Government or its official embassy.</p>
 
         </div>
         <div className={styles.formSection}>

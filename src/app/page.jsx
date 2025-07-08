@@ -774,11 +774,14 @@ export default function Home() {
           <div className={styles.videoContainer}>
             <div className={styles.videoCarousel}>
               <div className={styles.carouselTrack}>
-                <div className={styles.videoTestimonial}><video src="/Videos/1.mp4" controls loop autoPlay muted loading="lazy"></video></div>
-                <div className={styles.videoTestimonial}><video src="/Videos/2.mp4" controls loop autoPlay muted loading="lazy"></video></div>
-                <div className={styles.videoTestimonial}><video src="/Videos/3.mp4" controls loop autoPlay muted loading="lazy"></video></div>
-                <div className={styles.videoTestimonial}><video src="/Videos/4.mp4" controls loop autoPlay muted loading="lazy"></video></div>
-                <div className={styles.videoTestimonial}><video src="/Videos/5.mp4" controls loop autoPlay muted loading="lazy" ></video></div>
+                <div className={styles.videoTestimonial}><video src="/Videos/A-Big-Win-We-are-thrilled-to-announce-that-our-client-has-successfully-obtained-their-Spain-Tourist-UK-Business-visa.webm" controls loop autoPlay muted loading="lazy"></video></div>
+                <div className={styles.videoTestimonial}><video src="/Videos/Another-Grateful-Client-They-trusted-Global-visa-internationals-WE-guided-them-to-get-Germany-visitor-visa-for-whole-5years.webm" controls loop autoPlay muted loading="lazy"></video></div>
+                <div className={styles.videoTestimonial}><video src="/Videos/congratulations Tenzin Gombu! For Getting Uk Visiter Visa.webm" controls loop autoPlay muted loading="lazy"></video></div>
+                <div className={styles.videoTestimonial}><video src="/Videos/Congratulations-Bhavya-and-family-For-receiving-3-Australian-visa-within-a-week.webm" controls loop autoPlay muted loading="lazy"></video></div>
+                <div className={styles.videoTestimonial}><video src="/Videos/Congratulations-on-obtaining-your-UK-visa-Praveen-We-are-pleased-to-inform-you-that-the-previous-refusal-has-been-successfully-overturned.webm" controls loop autoPlay muted loading="lazy" ></video></div>
+                <div className={styles.videoTestimonial}><video src="/Videos/Germany-Visitor-Visa-Approved-5-Years.webm" controls loop autoPlay muted loading="lazy" ></video></div>
+                <div className={styles.videoTestimonial}><video src="/Videos/Grateful-Clients-Trusted-Guidance-Another-Successful-Australian-Immigration-Journey.webm" controls loop autoPlay muted loading="lazy" ></video></div>
+                <div className={styles.videoTestimonial}><video src="/Videos/We-are-thrille- to-announce-that-our-client-has-successfully-obtained-their-Spain-Tourist-UK-Business-visa.webm" controls loop autoPlay muted loading="lazy" ></video></div>
               </div>
             </div>
           </div>
