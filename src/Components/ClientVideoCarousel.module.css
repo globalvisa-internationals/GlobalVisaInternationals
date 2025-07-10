@@ -1,0 +1,56 @@
+
+.videoContainer {
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 20px auto;
+}
+
+.videoContainer:hover .carouselTrack {
+  animation-play-state: paused;
+}
+
+/* Carousel Wrapper */
+.videoCarousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+
+}
+
+/* Carousel Track */
+.carouselTrack {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  /* Adds spacing between the reviews */
+  animation: scrollLoop 10s linear infinite;
+}
+
+
+/* Video Testimonials */
+.videoTestimonial video {
+  width: 300px;
+  height: 200px;
+  /* border: 2px solid #2f3131; */
+  border-radius: 10px;
+}
+
+
+/* Smooth Infinite Scrolling Animation */
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+  /* Moves exactly half the duplicated content */
+}

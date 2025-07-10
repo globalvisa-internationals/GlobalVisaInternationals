@@ -1,0 +1,114 @@
+/* Container for FAQ section */
+.faqSection {
+  max-width: 600px;
+  padding: 10px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Heading */
+.textXl {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #207714;
+}
+
+/* Individual FAQ Item */
+.faqItem {
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(44, 43, 43, 0.6);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+/* Question Area */
+.faqQuestion {
+  font-size: 20px;
+  padding: 12px 16px;
+  font-weight: bold;
+  color: #207714;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+/* Answer Area (hidden by default) */
+.faqAnswer {
+  font-size: 18px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-weight: 500;
+  text-align: center;
+  background-color: #fafafa;
+  border-radius: 0 0 10px 10px;
+}
+
+/* When Active */
+.faqItem.active .faqQuestion {
+  background-color: #123800;
+  color: #ffffff;
+}
+
+.faqItem.active .faqAnswer {
+  max-height: 500px;
+  padding: 10px 15px;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .faqSection {
+    padding: 15px;
+  }
+
+  .textXl {
+    font-size: 24px;
+  }
+
+  .faqQuestion {
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .faqAnswer {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .textXl {
+    color: #a6e988;
+  }
+
+  .faqItem {
+    background-color: #2b2b2b;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
+  }
+
+  .faqQuestion {
+    background-color: #3a3a3a;
+    color: #a6e988;
+  }
+
+  .faqAnswer {
+    background-color: #2c2c2c;
+    color: #eaeaea;
+  }
+
+  .faqItem.active .faqQuestion {
+    background-color: #4caf50;
+    color: #ffffff;
+  }
+
+  .faqItem.active .faqAnswer {
+    color: #ffffff;
+  }
+}

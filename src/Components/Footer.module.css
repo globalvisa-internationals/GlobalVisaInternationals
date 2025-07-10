@@ -139,7 +139,7 @@ screen and (min-width: 1118px) {
   .Footer {
     background-color: #1c1c1c;
     color: #e0e0e0;
-    border-top: 2px solid #66ccff;
+    border-top: 2px solid #66ff66;
   }
 
   .footerContent p {
@@ -147,11 +147,11 @@ screen and (min-width: 1118px) {
   }
 
   .footerContact a {
-    color: #66ccff;
+    color: #66ff66;
   }
 
   .footerContact a:hover {
-    color: #66ccff;
+    color: #66ff66;
   }
 
   .footerImg {

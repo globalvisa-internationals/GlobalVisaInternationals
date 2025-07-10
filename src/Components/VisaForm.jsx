@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import styles from './Form.module.css';
+import styles from './VisaForm.module.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export default function VisaForm() {

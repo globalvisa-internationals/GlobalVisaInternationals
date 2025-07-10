@@ -13,20 +13,20 @@
     color: #f5f5f5;
   
       .top1 {
-    color: #66ccff;
+    color: #66ff66;
   }
   .note{
-    color: #66ccff;
+    color: #66ff66;
     border-left: 4px solid #018aac;
     background-color: #404141;
 
   }
     .waveText{
-    color: #66ccff;
+    color: #66ff66;
   }
   .subtitle,
 .mainHeading {
-  color: #66ccff;
+  color: #66ff66;
 }
 
 .whyCard {
@@ -36,7 +36,7 @@
   }
 
   .whyCard strong {
-    color: #66ccff;
+    color: #66ff66;
   }
 
   .whyCard p {
@@ -63,7 +63,7 @@
   .missionCard h2,
   .visionCard h2,
   .valuesCard h2 {
-    color: #66ccff;
+    color: #66ff66;
   }
 
   .missionCard p,
@@ -73,7 +73,7 @@
   }
   .cardFront {
     background: linear-gradient(to right, #223233, #1c1c1c);
-    border: 2px solid #66ccff;
+    border: 2px solid #66ff66;
   }
 
   .cardBack {
@@ -86,7 +86,7 @@
   }
 
   .cardBack li:nth-child(even) {
-    color: #66ccff;
+    color: #66ff66;
   }
 
   .cardBack li:hover {
@@ -105,24 +105,24 @@
 
   .formSection h2,
   .faqSection h2 {
-    color: #66ccff;
+    color: #66ff66;
   }
 
   .input,
   .select {
     background-color: #2c2c2c;
     color: #f0f0f0;
-    border: 1px solid #66ccff;
+    border: 1px solid #66ff66;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   }
 
   .submittingBtn {
-    background-color: #66ccff;
+    background-color: #66ff66;
     color: #ffffff;
   }
 
   .submittingBtn:hover {
-    background-color: #66ccff;
+    background-color: #66ff66;
   }
 
   .popupContent {
@@ -144,7 +144,7 @@
 
   .faqQuestion {
     background: linear-gradient(to right, #223233, #505b5e);
-    color: #66ccff;
+    color: #66ff66;
   }
 
   .faqAnswer {
@@ -543,110 +543,6 @@
 
 
 
-/* 
-/* Gallery Carousel */
-.galleryCarouselWrapper {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.galleryCarousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 280px;
-  overflow: hidden;
-}
-
-.gallerySlide {
-  position: absolute;
-  width: 500px;
-  height: 450x;
-  transition: all 0.5s ease-in-out;
-  display: none;
-  opacity: 0;
-  transform: scale(0.8);
-  cursor: pointer;
-}
-
-.gallerySlide.active {
-  display: block;
-  opacity: 1;
-  z-index: 3;
-  transform: translateX(0) scale(1);
-}
-
-.gallerySlide.prev {
-  display: block;
-  opacity: 0.7;
-  z-index: 2;
-  transform: translateX(-60%) scale(0.85);
-}
-
-.gallerySlide.next {
-  display: block;
-  opacity: 0.7;
-  z-index: 2;
-  transform: translateX(60%) scale(0.85);
-}
-
-.gallerySlide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(82, 81, 81, 0.2);
-}
-
-.galleryNavBtn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 5;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(71, 71, 71, 0.2);
-  transition: all 0.3s ease;
-}
-
-.galleryNavBtn:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.galleryNavBtn:focus-visible {
-  outline: 1px solid #277a00;
-}
-
-.galleryPrevBtn {
-  left: 10%;
-}
-
-.galleryNextBtn {
-  right: 10%;
-}
-
-@media (max-width: 768px) {
-  .gallerySlide {
-    width: 250px;
-    height: 200px;
-  }
-
-  .galleryNavBtn {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-  }
-}
 .missionVisionValues {
   display: flex;
   justify-content: center;
@@ -753,15 +649,7 @@
   border-radius: 15px;
 }
 
-.formContent {
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  gap: 15px;
-}
+
 
 .formSection,
 .faqSection {
@@ -770,187 +658,18 @@
   padding: 10px;
 }
 
-.formSection {
-  width: 100%;
-  height: fit-content;
-  
-  flex-direction: column;
-  padding: 10px;
-  border-radius: 15px;
-}
 
-.formSection,
-.faqSection h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #277a00;
-  padding: 5px;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-}
-
-.row div {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  padding-bottom: 15px;
-}
-
-.input,
-.select {
-  width: 100%;
-  padding: 15px;
-  border-radius: 8px;
-  border: #a6e988;
-  font-size: 16px;
-  margin: 8px;
-  box-shadow: 0 4px 8px #282828;
-  text-align: left;
-}
-
-.submittingBtn {
-  display: block;
-  max-width: 250px;
-  background-color: #277a00;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-  margin: 10px auto;
-}
-
-.submittingBtn:hover {
-  background-color: #85da5d;
-}
-
-.popupOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* dim background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.popupContent {
-  background: #28a745;
-  /* Bootstrap green */
-  color: white;
-  padding: 1.5rem 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  max-width: 420px;
-  width: 90%;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.popupContent p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  gap: 0.6rem;
-}
-
-.popupContent button {
-  background: white;
-  color: #28a745;
-  box-shadow: 0 4px 8px #2c2b2b;
-  border-radius: 6px;
-  padding: 0.5rem 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.popupContent button:hover {
-  background: #e8f5e9;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 
 /* ========== FAQ SECTION ========== */
 
-.faqItem {
-  margin-bottom: 8px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px #2c2b2b;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-
-.faqQuestion {
-  font-size: 20px;
-  color: rgb(32, 119, 20);
-  padding: 10px;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.faqAnswer {
-  font-size: 18px;
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 15px;
-  transition: max-height 0.3s ease;
-  font-weight: 525;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.faqItem.active .faqQuestion {
-  background: #123800;
-  
-}
-
-.faqItem.active .faqAnswer {
-  max-height: 500px;
-  padding: 10px;
-}
 
 @media (max-width: 768px) {
   .dataForm {
     flex-direction: column;
     padding: 5px;
     margin: 5px;
-  }
-
-  .formContent {
-    margin-top: 10px;
   }
 
   .formSection,
@@ -966,56 +685,7 @@
     text-align: center;
     margin-bottom: 15px;
   }
-
-  .input,
-  .select {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-
-  }
-
-  .submittingBtn {
-    width: 100%;
-    padding: 14px;
-    font-size: 18px;
-  }
-
-  .faqItem {
-    margin-bottom: 12px;
-
-  }
-
-  .faqQuestion {
-    font-size: 18px;
-
-    text-align: left;
-  }
-
-  .faqAnswer {
-    font-size: 16px;
-    padding: 10px;
-    
-  }
-
-  .popupContent {
-    width: 90%;
-    padding: 1.2rem 1.8rem;
-  }
-
-  .popupOverlay {
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-  }
 }
-
-
-
-
 
 .containerLoc {
   display: flex;
