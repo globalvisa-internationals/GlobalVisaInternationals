@@ -25,9 +25,9 @@ export const metadata = {
     images: [
       {
         url: "https://www.globalvisainternationals.com/banner.webp",
-        width: 1200,
-        height: 630,
-        alt: "Global Visa Internationals Banner",
+      width: 1200,
+      height: 630,
+      alt: "Visa and Immigration Services - Global Visa Internationals",
       },
     ],
 },
@@ -189,6 +189,8 @@ const travelAgencyJsonLd = {
                 <meta property="og:description" content={metadata.openGraph.description} />
                 <meta property="og:url" content={metadata.openGraph.url} />
                 <meta property="og:image" content={metadata.openGraph.images[0].url} />
+                <meta property="og:image:alt" content="Visa and Immigration Services - Global Visa Internationals" />
+
                 <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
                 <meta property="og:site_name" content={metadata.openGraph.siteName} />
                 <meta property="og:image:width" content="1200" />
