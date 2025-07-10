@@ -1,4 +1,4 @@
-"use client";
+
 import Image from "next/image";
 import React from "react";
 import styles from "./page.module.css";
@@ -9,6 +9,43 @@ import AnimatedHR from "@/Components/AnimatedHR";
 import GalleryCarousel from "@/Components/GalleryCarousel";
 import ClientVideoCarousel from "@/Components/ClientVideoCarousel";
 import FAQAccordion from '@/Components/FAQAccordion';
+
+export const metadata = {
+  title: "Top Visa Consultants in Bangalore | USA, Canada, UK,Australia, Europe Visa assistance Experts",
+  description: "we are your trusted visa consultant and immigration consultant, providing professional visa services and immigration services customized to suit your travel and settlement needs. Whether you're applying for a work permit, seeking visa assistance, or starting your visa application, our experienced team ensures you meet all necessary visa requirements with ease and confidence",
+  keywords:["visa consultant","immigration consultant","visa services","immigration services","visa application","visa requirements","visa assistance","work permit","work visa consultant","student visa consultant ","Canada study visa consultant","UK study visa consultant","USA study visa consultant","visa documentation checklist","visa interview preparation","Canada tourist visa","Australia tourist visa","immigration agent qualifications","visa processing time","visa processing agents" ],
+  alternates: { canonical: "https://www.globalvisainternationals.com/"},
+  openGraph: {
+    title: "Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
+    description:
+      "Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more. Genuine, fast and transparent support.",
+    url: "https://www.globalvisainternationals.com/",
+    siteName: "Global Visa Internationals",
+    type: "website",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Global Visa Internationals Banner",
+      },
+    ],
+},
+twitter: {
+    card: "summary_large_image",
+    title: "Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
+    description:
+      "Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more.",
+    site: "@GLOBALVISA1505",
+    creator: "@GLOBALVISA1505",
+    images: ["https://www.globalvisainternationals.com/banner.webp"],
+  },
+}
+
+
+
+
+
 
 const slides = [
   "/gallery/1.jpg",
@@ -66,161 +103,117 @@ const faqs = [
 ];
 
 export default function Home() {
+const pageUrl = metadata.alternates.canonical;
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: pageUrl, // https://www.globalvisainternationals.com
+    }
+  ]
+};
+const travelAgencyJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "@id": "https://www.globalvisainternationals.com/#organization",
+  name: "Global Visa Internationals",
+  url: "https://www.globalvisainternationals.com",
+  logo: "https://www.globalvisainternationals.com/gvilogo.png",
+  description: "Global Visa Internationals is a leading visa and immigration consultancy in Bangalore, offering expert assistance for Tourist, PR, Student, Work, and Business Visas to countries like Canada, Australia, UK, USA, Europe, and more.",
+  telephone: "+91-7022213466",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "GF-9, Business Point, MG Road",
+    addressLocality: "Bengaluru",
+    addressRegion: "Karnataka",
+    postalCode: "560025",
+    addressCountry: "IN"
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 12.9716,
+    longitude: 77.5946
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      opens: "10:00",
+      closes: "18:00"
+    }
+  ],
+  sameAs: [
+    "https://www.facebook.com/globalvisainternationals/",
+    "https://www.instagram.com/globalvisa_internationals/",
+    "https://www.linkedin.com/company/global-visa-internationals/",
+    "https://x.com/GLOBALVISA1505",
+    "https://www.youtube.com/@globalVisaInternationals",
+    "https://www.google.com/maps/place/Global+Visa+Internationals"
+  ],
+  potentialAction: {
+    "@type": "ReserveAction",
+    target: "https://www.globalvisainternationals.com/contact",
+    result: {
+      "@type": "Thing",
+      name: "Book a Free Visa Consultation"
+    }
+  }
+};
 
 
 
   return (
     <>
-      <head>
-        <title>
-          Top Visa Consultants in Bangalore | USA, Canada, UK,Australia, Europe
-          Visa assistance Experts
-        </title>
-        <meta
-          name="description"
-          content="Leading immigration consultants in Bangalore offering expert visa services for Canada PR, USA, UK, Australia, Schengen, and more. Over 75,000 happy clients. Fast, genuine guidance and transparent pricing!"
-        />
-        <meta
-          name="keywords"
-          content="immigration consultants in bangalore, visa agents, canada pr, study abroad, work visa, visitor visa, dependent visa, business visa, refusal visa, fast visa services, immigration consultants, visa agents near me, canada immigration consultants, visa consultants near me, immigration agent, immigration agent near me, canada immigration consultants in bangalore, migration agents, visa consultancy services, visa consultants in bangalore, canada immigration services, canada immigration agency, spouse visa consultants, student visa consultants near me, canada immigration consultants near me, agent for visa application, study visa consultants near me, pr immigration consultants, work permit visa, immigration consulting services, study visa consultants, student visa consultants, student visa agent, spouse visa consultants near me, student visa agents near me, visa immigration consultants, australia immigration consultants in bangalore, tourist visa agents near me, visa agents in bangalore, canada pr immigration consultants, visa consultancy services near me, canada pr consultancy, immigration and visa consultants, golden visa consultancy, canada pr consultants in bangalore, visa application agents near me, work visa consultants near me, spouse visa agent, work visa consultants, visa travel agency"
-        />
-        <link
-          rel="canonical"
-          href="https://www.globalvisainternationals.com/"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Open Graph */}
-        <meta
-          property="og:url"
-          content="https://www.globalvisainternationals.com/"
-        />
-        <meta
-          property="og:title"
-          content="Global Visa Internationals - Trusted Immigration Consultants in Bangalore"
-        />
-        <meta
-          property="og:description"
-          content="Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more. Genuine, fast and transparent support."
-        />
-        <meta
-          property="og:image"
-          content="https://www.globalvisainternationals.com/banner.webp"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:site_name" content="Global Visa Internationals" />
-        <meta property="og:type" content="website" />
+      <Head>
+         <title>{metadata.title}</title>
+                <meta name="description" content={metadata.description} />
+                <meta name="keywords" content={metadata.keywords} />
+                <meta name="robots" content={metadata.robots} />
+                <link rel="canonical" href={pageUrl} />
+        
+                {/* Open Graph */}
+                <meta property="og:type" content={metadata.openGraph.type} />
+                <meta property="og:title" content={metadata.openGraph.title} />
+                <meta property="og:description" content={metadata.openGraph.description} />
+                <meta property="og:url" content={metadata.openGraph.url} />
+                <meta property="og:image" content={metadata.openGraph.images[0].url} />
+                <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+                <meta property="og:site_name" content={metadata.openGraph.siteName} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+        
+                {/* Twitter */}
+                <meta name="twitter:card" content={metadata.twitter.card} />
+                <meta name="twitter:site" content={metadata.twitter.site} />
+                <meta name="twitter:title" content={metadata.twitter.title} />
+                <meta name="twitter:description" content={metadata.twitter.description} />
+                <meta name="twitter:image" content={metadata.twitter.images[0]} />
+        
+                {/* Geo & Mobile SEO */}
+                <meta name="geo.region" content="IN-KA" />
+                <meta name="geo.placename" content="Bengaluru" />
+                <meta name="ICBM" content="12.9716,77.5946" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#ffffff" />
+                <meta name="format-detection" content="telephone=no" />
+ <link rel="icon" href="/favicon.ico" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@GLOBALVISA1505" />
-        <meta name="twitter:creator" content="@GLOBALVISA1505" />
-        <meta
-          name="twitter:title"
-          content="Global Visa Internationals - Trusted Immigration Consultants in Bangalore"
-        />
-        <meta
-          name="twitter:description"
-          content="Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.globalvisainternationals.com/banner.webp"
-        />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }}/>
 
-        {/* LocalBusiness JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LegalService",
-              "@id": "https://www.globalvisainternationals.com/#organization",
-              name: "Global Visa Internationals",
-              description:
-                "Trusted immigration consultants in Bangalore offering visa services for multiple countries including Canada, USA, UK, Australia, and Schengen.",
-              url: "https://www.globalvisainternationals.com/",
-              telephone: "+917022213466",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "GF-9, Business Point, Brigade Road",
-                addressLocality: "Bangalore",
-                addressRegion: "Karnataka",
-                postalCode: "560025",
-                addressCountry: "IN",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 12.9674808,
-                longitude: 77.606117,
-              },
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                  ],
-                  opens: "10:00",
-                  closes: "19:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Saturday",
-                  opens: "10:00",
-                  closes: "14:00",
-                },
-              ],
-              sameAs: [
-                "https://www.facebook.com/globalvisa.globalvisa",
-                "https://www.instagram.com/globalvisa_internationals/",
-                "https://x.com/GLOBALVISA1505",
-              ],
-              potentialAction: {
-                "@type": "ReserveAction",
-                target: "https://www.globalvisainternationals.com/contact",
-                result: {
-                  "@type": "Thing",
-                  name: "Book a free consultation",
-                },
-              },
-            }),
-          }}
-        />
-
-        {/* FAQPage JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "How long does Canada PR visa process take?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "The processing time for Canada PR visa varies but usually takes around 6-12 months.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "What documents are required for Australia student visa?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Documents typically include passport, admission letter, financial proof, health insurance, and police clearance certificate.",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
-      </head>
+      </Head>
 
       <main className={styles.HomeSec}>
         {/* Background Image with Correct Styling */}
