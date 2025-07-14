@@ -176,6 +176,8 @@ export default function CareerPage() {
           <ul>
 
             <li>Experience:Freshers,</li>
+            <li>English proficiency (spoken and written)</li>
+            <li>Computer skills (MS Office, Excel)</li>
             <li>Sales and Negotiation skills</li>
             <li>Client Relationship Management</li>
             <li>Strong Communication and Presentation skills</li>
