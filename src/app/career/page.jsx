@@ -152,65 +152,46 @@ export default function CareerPage() {
           }}
         />
       </head>
-      
 
 
-        <div className={styles.JobSec}>
-          <div className={styles.JobData}>
-            <h2 className={styles.Title}>Job Title: Documentation Executive</h2>
-            <p>
-              <strong className={styles.subTitle}>Job Overview:</strong>
-              Are you meticulous and detail-oriented? Join our growing team at Global Visa Internationals in Bangalore! As a <strong className={styles.subTitle}>Documentation Executive</strong>, you’ll play a vital role in helping clients complete the required documents for their visa applications. This is a great opportunity if you're looking to start your journey in <strong className={styles.subTitle}>immigration consultancy careers in India</strong>.
-            </p>
 
-            <h3 className={styles.subTitle}>What You'll Do:</h3>
-            <ul>
-              <li>Guide clients through organizing and preparing visa documentation.</li>
-              <li>Provide clear support to answer documentation-related questions.</li>
-              <li>Ensure forms and documents meet visa requirements and quality standards.</li>
-              <li>Coordinate with internal teams to validate documentation where needed.</li>
-              <li>Update clients on missing documents and the status of their application files.</li>
-            </ul>
+      <div className={styles.JobSec}>
+        <div className={styles.JobData}>
 
-            <h3 className={styles.subTitle}>What We're Looking For:</h3>
-            <ul>
-              <li>Experience: Fresher</li>
-              <li>Skills: Strong communication, basic computer knowledge, and attention to detail.</li>
-              <li>Qualities: Organized, patient, and willing to grow along with our company.</li>
-            </ul>
+          <h2 className={styles.Title}>Job Title: Sales Executive</h2>
+          <p>
+            <strong className={styles.subTitle}>Job Overview:</strong>
+            Are you a people person who enjoys building connections and hitting goals? As a <strong className={styles.subTitle}>Sales Executive</strong> at Global Visa Internationals in Bangalore, you’ll interact directly with prospective clients, convert leads, and help people take the first step in their global journey. This is an ideal role for someone exploring <strong className={styles.subTitle}>visa consultant jobs in Bangalore</strong> or looking to grow within <strong className={styles.subTitle}>immigration services careers</strong>.
+          </p>
 
-            <p><strong className={styles.subTitle}>Salary:</strong> Up to ₹15,000 per month</p>
+          <h3 className={styles.subTitle}>Your Responsibilities:</h3>
+          <ul>
+            <li>Engage with clients who inquire about visa services and provide accurate guidance.</li>
+            <li>Convert inquiries into successful applications through clear communication and follow-up.</li>
+            <li>Maintain accurate client records in the CRM system and track progress.</li>
+            <li>Collaborate with documentation and support teams to ensure smooth processing.</li>
+          </ul>
 
-            <hr className={styles.Divider} />
+          <h3 className={styles.subTitle}>Qualifications:</h3>
+          <ul>
 
-            <h2 className={styles.Title}>Job Title: Sales Executive</h2>
-            <p>
-              <strong className={styles.subTitle}>Job Overview:</strong>
-              Are you a people person who enjoys building connections and hitting goals? As a <strong className={styles.subTitle}>Sales Executive</strong> at Global Visa Internationals in Bangalore, you’ll interact directly with prospective clients, convert leads, and help people take the first step in their global journey. This is an ideal role for someone exploring <strong className={styles.subTitle}>visa consultant jobs in Bangalore</strong> or looking to grow within <strong className={styles.subTitle}>immigration services careers</strong>.
-            </p>
+            <li>Experience:Freshers,</li>
+            <li>Sales and Negotiation skills</li>
+            <li>Client Relationship Management</li>
+            <li>Strong Communication and Presentation skills</li>
+            <li>Goal-oriented and Results-driven mindset</li>
+            <li>Ability to work well in a team</li>
+            <li>Female</li>
+            <li>Degree in Business, Marketing, or related field</li>
+          </ul>
 
-            <h3 className={styles.subTitle}>Your Responsibilities:</h3>
-            <ul>
-              <li>Engage with clients who inquire about visa services and provide accurate guidance.</li>
-              <li>Convert inquiries into successful applications through clear communication and follow-up.</li>
-              <li>Maintain accurate client records in the CRM system and track progress.</li>
-              <li>Collaborate with documentation and support teams to ensure smooth processing.</li>
-            </ul>
+          <p><strong className={styles.subTitle}>Salary:</strong> Up to ₹15,000-₹20,000 per month</p>
+        </div>
 
-            <h3 className={styles.subTitle}>What You Bring:</h3>
-            <ul>
-              
-              <li>Experience:Freshers,</li>
-              <li>Skills: Great communication and persuasion, and ability to manage time well.</li>
-            </ul>
-
-            <p><strong className={styles.subTitle}>Salary:</strong> Up to ₹15,000 per month</p>
-          </div>
-       
 
         <div className={styles.formSection}>
           <h2 className={styles.subTitle}>Ready to Apply?</h2>
-          
+
           <form id="inquiry-form" onSubmit={handleSubmit} encType="multipart/form-data">
 
             {/* Full Name & Phone */}
@@ -219,7 +200,7 @@ export default function CareerPage() {
                 <label className={styles.floatingLabel} htmlFor="name">Your Full Name</label>
                 <input
                   className={styles.input}
-                  
+
                   type="text"
                   name="name"
                   placeholder="Your Full Name"
@@ -253,15 +234,12 @@ export default function CareerPage() {
                 </select>
               </div>
               <div className={styles.inputWrapper}>
-                <label className={styles.floatingLabel} htmlFor="name">Date Of Birth</label>
-                <input
-                  className={styles.input}
-                  type="date"
-                  name="dob"
-                  required
-                  max={new Date().toISOString().split("T")[0]}
-                  title="Please select your date of birth"
-                />
+                <label className={styles.floatingLabel} htmlFor="name">Gender</label>
+                <select className={styles.select} name="Gender" required>
+                  <option value="" disabled selected hidden>Select Your Gender</option>
+                  <option value="Female">Female</option>
+
+                </select>
               </div>
             </div>
 
@@ -303,7 +281,6 @@ export default function CareerPage() {
               <div className={styles.inputWrapper}>
                 <select className={styles.select} name="jobTitle" required>
                   <option value="" disabled selected hidden>Applying For</option>
-                  <option value="Documentation Executive">Documentation Executive</option>
                   <option value="Sales Executive">Sales Executive</option>
                 </select>
               </div>

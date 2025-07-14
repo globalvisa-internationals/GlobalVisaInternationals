@@ -49,8 +49,8 @@ export const metadata = {
 export default function Australia() {
 
   return (
-    <> 
-<Head>
+    <>
+      <Head>
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
@@ -79,7 +79,7 @@ export default function Australia() {
             }),
           }}
         />
- <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
         {/* Local Business Schema */}
         <script
           type="application/ld+json"
@@ -140,7 +140,13 @@ export default function Australia() {
 
         <div className={styles.USAData}>
           <h1 className={styles.Title}>USA Tourist Visa Consultants | Explore America with Global Visa Internationals</h1>
-          <p>Planning to visit the United States? Whether it's the towering skyline of New York City, the breathtaking Grand Canyon, or the glamour of Hollywood, the USA offers an unforgettable mix of culture, nature, and excitement. With a USA tourist visa, you can experience world-class cities, iconic landmarks, and diverse landscapes across this incredible country.</p>
+          <p>Planning a trip to the United States? Whether you're heading for a family visit, tourism, or short-term business travel, Global Visa Internationals is your trusted partner for USA tourist visa and B1 B2 visa support. As a leading US visa consultant and tourist visa agent in Bangalore, we assist Indian travelers with everything they need to successfully apply USA visa and complete the USA tourist visa application process without hassle. Whether it’s your first time or a reapplication, we provide step-by-step guidance for your US visitor visa, ensuring compliance with the latest 2025 requirements.</p>
+          <p>Our expert team in US visa Bangalore office ensures you're well-prepared with the complete B1 B2 visa documents checklist and all required documents for US tourist visa. From DS-160 form filling to financial proof and itinerary guidance, we help you avoid common mistakes that lead to tourist visa rejection reasons USA. We also offer personalized US visa interview tips to boost your confidence and improve your US visa success rate. With our support, many Indian travelers have successfully received USA multiple entry visa approvals without delay.</p>
+          <p>Not sure how to get USA visa or when to start the process? We’ll walk you through every step, including USA visitor visa requirements, USA visa processing time 2025, and how to book US visa appointment India through the US embassy visa appointment system. We coordinate everything from submission to final interview—ensuring a smooth experience. Our strong understanding of the US consulate visa process and years of expertise in visa assistance for USA makes us a reliable choice for travelers across India.</p>
+          <p>With over 11 years of experience and more than 55,000 successful visa applications, Global Visa Internationals is recognized as one of the most trusted visa consultants for USA. We are committed to providing transparent, affordable, and genuine support for your US travel plans. Our team is dedicated to helping you navigate the complexities of the USA tourist visa process, ensuring you have all the information and resources needed for a successful application.</p>
+          <p>Worried about costs? We provide complete transparency on the tourist visa USA cost and B1 B2 visa fees India, with no hidden charges. Our consultants are known for offering affordable and genuine support, making us one of the most genuine visa consultants for USA. Whether you’re applying for a short holiday or long-term US travel visa for Indian citizens, we’ll help you maximize your approval chances. Need help with USA visa stamping or appointment delays? We’ve got you covered there too.</p>
+          <p>At Global Visa Internationals, we understand that every traveler has unique needs. That’s why we offer personalized consultations to assess your specific situation and provide tailored advice. Our team is here to answer all your questions, from the initial application to the final interview, ensuring you feel confident and prepared at every step.</p>
+          <p>If you’re looking for the best visa agent for USA, trust Global Visa Internationals to deliver end-to-end support, from form filing to interview coaching. We also handle last-minute cases and help you secure a priority date for urgent travel. Whether you're a first-time traveler or a frequent flyer, we make travel to USA from India visa processing fast, stress-free, and affordable. Contact us today for B1 B2 visa guidance and take the first step towards your American journey with a team that cares.</p>
 
           <h3 className={styles.subTitle}>Why Visit the USA? Top Reasons to Apply for a Tourist Visa</h3>
           <p>As one of the most popular travel destinations in the world, the USA attracts millions of tourists every year. Here's why you should explore it with a valid visitor visa:</p>
@@ -399,16 +405,16 @@ export default function Australia() {
           <p className={styles.note}>
             <em>Note: Global Visa Internationals is an independent visa consultancy and is not affiliated with the Australian Government or any embassy.</em>
           </p>
-</div>
-          <div className={styles.formSection}>
-
-            <VisaForm />
-          </div>
         </div>
-        <section id='Client Reviews'>
-          
-          <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-        </section>
-      </>
-      );
+        <div className={styles.formSection}>
+
+          <VisaForm />
+        </div>
+      </div>
+      <section id='Client Reviews'>
+
+        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+      </section>
+    </>
+  );
 }

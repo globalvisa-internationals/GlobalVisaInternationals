@@ -1,7 +1,8 @@
 "use client";
+import VisaForm from '@/Components/VisaForm';
 import styles from './Uk.module.css';
-import React, { useState } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import React from 'react';
+
 
 export default function UK() {
   const jsonLd = {
@@ -40,66 +41,7 @@ export default function UK() {
     ]
 
   };
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
-  };
 
   return (
     <>
@@ -110,7 +52,7 @@ export default function UK() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/student-visa/uk" />
 
-        {/* Open Graph / Facebook */}
+
         <meta property="og:title" content="UK Student Visa: Top Universities, Courses & Application Guide | Global Visa Internationals" />
         <meta property="og:description" content="Your comprehensive guide to UK student visas, top-ranked universities, popular courses, costs, and the application process. Unlock your UK education dream with Global Visa Internationals." />
         <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/student-visa/uk" />
@@ -137,17 +79,29 @@ export default function UK() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <div className={styles.imageContainer}>
-        <img src="/images/uk-travel.jpeg" alt="UK Image" className={styles.ukImage} />
-      </div>
 
+      <div className={styles.imageContainer}>
+        <img
+          src="/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp"
+          alt="UK Image"
+          className={styles.UKImage}
+        />
+      </div>
       <div className={styles.UKSec}>
 
 
         <div className={styles.UKData}>
           <h1 className={styles.Title}>Unlock Your British Adventure: Your Comprehensive Guide to the UK Tourist Visa | Global visa internationals</h1>
-          <p>Dreaming of experiencing the iconic landmarks, rich history, and vibrant culture of the United Kingdom? From the majestic Buckingham Palace and the historic Tower of London to the scenic Scottish Highlands and the charming villages of the Cotswolds, the UK offers a diverse tapestry of experiences for every traveler.
+          <p>Planning a memorable trip to the UK? Whether it's a vacation, family visit, or sightseeing adventure, getting the right visa is your first step—and Global Visa Internationals, your trusted visa and immigration experts, is here to make it easy. As leading UK visa consultants and agents, we specialize in assisting Indians with the UK Tourist Visa and UK Visitor Visa process. From helping you apply UK visa correctly to booking your UK visa appointment, we manage the complexities so you can focus on your travel plans. Whether you're in Bangalore or any other city, our expert consultants ensure smooth documentation and timely submissions for your UK visa from India.</p>
+          <p>Understanding the UK visa requirements can be overwhelming, especially with constant updates in policies. That’s where we step in. Our team will guide you through preparing your UK visa documents, clarify the UK visa fees, and help you track your application through the UK visa application center. We’re fully aware of the expected UK tourist visa processing time, and we make sure nothing slows you down. Not sure how to apply UK visa in 2025? Don’t worry—we walk you through it all, with personalized assistance that simplifies your journey.
           </p>
+          <p>We specialize in UK tourist visa for Indians—whether it’s your first time applying or you've faced rejections before. Even if your UK visa travel history is minimal, we help build a strong profile to increase your UK visit visa success rate. Our experts also prepare you thoroughly for the UK tourist visa interview, helping you avoid common UK visa rejection reasons that many applicants face. As a top-rated tourist visa consultant UK, we offer reliable, results-driven service trusted by over 75,000 happy clients across India.
+          </p>
+          <p>Our services go beyond just submitting your form. We help you create a strong UK visa support letter, assist with UK visa sponsorship guidance, and streamline the process whether you’re applying solo or seeking a UK tourist visa for family. Want to know how long you can stay? We provide clarity on the UK tourist visa duration and ensure your travel plans align with visa validity. With regular updates on UK tourist visa new rules 2025, we keep your application fully compliant, including the latest changes to UK visitor visa biometrics 2025 and processing protocols.
+          </p>
+          <p>Still asking, "Is UK tourist visa open for Indians now?" Yes, it is! And we ensure your application through UK visa application VFS Global 2025 is accurate and fast-tracked. If you’re in a hurry, we’ll show you how to get UK tourist visa fast with our priority support. At Global Visa Internationals, we provide full-stack UK visa assistance services—from documentation and interview prep to approvals and reapplications. Whether you're visiting the UK for leisure, family, or culture, your smooth visa experience starts with us. Contact us today and let your UK dreams take flight with confidence!
+          </p>
+
           <p>Embarking on your UK journey begins with understanding the essential requirements for obtaining a UK tourist visa. While the prospect might seem intricate, a clear understanding of the process is the first step towards making your travel aspirations a reality.</p>
           <h3 className={styles.subTitle}>Navigating the UK Tourist Visa Landscape: Key Information for Your Application</h3>
           <p>The UK tourist visa, designed for individuals seeking short-term entry for leisure, tourism, visiting family or friends (without engaging in paid work), specific short educational courses, or certain permissible business activities, has specific criteria that applicants must meet.</p>
@@ -173,77 +127,7 @@ export default function UK() {
 
           </ol>
           <div className={styles.formSection1}>
-            <h2 className={styles.FormTitle}>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <p className={styles.note}><strong>Important Disclaimer:</strong> Please be aware that the information presented here is intended for general informational purposes only and does not constitute legal or immigration advice. UK visa regulations are subject to frequent updates and can vary significantly based on your nationality, individual circumstances, and the specific purpose of your visit. For the most accurate and up-to-date guidance tailored to your situation, it is crucial to consult with experienced immigration professionals.</p>
           <h3 className={styles.subTitle}>Simplifying Your UK Visa Journey: Partner with the Experts</h3>
@@ -289,77 +173,7 @@ export default function UK() {
 
           </ul>
           <div className={styles.formSection1}>
-            <h2 className={styles.FormTitle}>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h1 className={styles.subTitle}>UK Tourist Visa Fees & Travel Cost Guide (2025)</h1>
 
@@ -512,82 +326,12 @@ export default function UK() {
             <p>Your passport should be valid for the duration of your intended stay in the UK. It's generally recommended to have at least 6 months of validity remaining on your passport beyond your planned departure date from the UK.</p>
 
           </ol>
- <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
 
         <div className={styles.formSection}>
-          <h2 className={styles.FormTitle}>Immigration Inquiry Form</h2>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+          <VisaForm />
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-.HomeSec{
+.HomeSec {
   background-color: #fff;
   max-width: 95%;
   margin: 0 auto;
@@ -8,158 +8,164 @@
 
 @media (prefers-color-scheme: dark) {
 
- .HomeSec{
+  .HomeSec {
     background-color: #333;
     color: #f5f5f5;
-  
-      .top1 {
-    color: #66ff66;
-  }
-  .note{
-    color: #66ff66;
-    border-left: 4px solid #018aac;
-    background-color: #404141;
 
-  }
-    .waveText{
-    color: #66ff66;
-  }
-  .subtitle,
-.mainHeading {
-  color: #66ff66;
-}
+    .top1 {
+      color: #66ff66;
+    }
 
-.whyCard {
-    background: linear-gradient(to right, #223233, #495253);
-    color: #f1f1f1;
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
-  }
+    .note {
+      color: #66ff66;
+      border-left: 4px solid #018aac;
+      background-color: #404141;
 
-  .whyCard strong {
-    color: #66ff66;
-  }
+    }
 
-  .whyCard p {
-    color: #d1d1d1;
-  }
+    .waveText {
+      color: #66ff66;
+    }
 
-  .whyCard:hover {
-    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.12);
-  }
+    .subtitle,
+    .mainHeading {
+      color: #66ff66;
+    }
 
-  .whyImg {
-    filter: brightness(0.9) contrast(1.2);
-  }
-
-
-.missionCard,
-  .visionCard,
-  .valuesCard {
-    background: linear-gradient(to right, #223233, #1c1c1c);
-    color: #f5f5f5;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  }
-
-  .missionCard h2,
-  .visionCard h2,
-  .valuesCard h2 {
-    color: #66ff66;
-  }
-
-  .missionCard p,
-  .visionCard p,
-  .valuesCard p {
-    color: #dddddd;
-  }
-  .cardFront {
-    background: linear-gradient(to right, #223233, #1c1c1c);
-    border: 2px solid #66ff66;
-  }
-
-  .cardBack {
-    background-color: #494949;
-    color: #f5f5f5;
-  }
-
-  .cardBack li {
-    border-bottom: 1px dotted #ccc;
-  }
-
-  .cardBack li:nth-child(even) {
-    color: #66ff66;
-  }
-
-  .cardBack li:hover {
-    background: linear-gradient(to right, #204020, #3c803c);
-    color: #fff !important;
-  }
     .whyCard {
-    background-color: #4d4c4c;
-    color: #f0f0f0;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-  }
+      background: linear-gradient(to right, #223233, #495253);
+      color: #f1f1f1;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+    }
 
-  .whyCard:hover {
-    transform: translateY(-5px);
-  }
+    .whyCard strong {
+      color: #66ff66;
+    }
 
-  .formSection h2,
-  .faqSection h2 {
-    color: #66ff66;
-  }
+    .whyCard p {
+      color: #d1d1d1;
+    }
 
-  .input,
-  .select {
-    background-color: #2c2c2c;
-    color: #f0f0f0;
-    border: 1px solid #66ff66;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  }
+    .whyCard:hover {
+      box-shadow: 0 12px 32px rgba(255, 255, 255, 0.12);
+    }
 
-  .submittingBtn {
-    background-color: #66ff66;
-    color: #ffffff;
-  }
-
-  .submittingBtn:hover {
-    background-color: #66ff66;
-  }
-
-  .popupContent {
-    background: #2e7d32;
-    color: #ffffff;
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
-  }
-
-  .popupContent button {
-    background: #ffffff;
-    color: #2e7d32;
-  }
-
-  .popupContent button:hover {
-    background: #d0f0d8;
-  }
+    .whyImg {
+      filter: brightness(0.9) contrast(1.2);
+    }
 
 
+    .missionCard,
+    .visionCard,
+    .valuesCard {
+      background: linear-gradient(to right, #223233, #1c1c1c);
+      color: #f5f5f5;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
 
-  .faqQuestion {
-    background: linear-gradient(to right, #223233, #505b5e);
-    color: #66ff66;
-  }
+    .missionCard h2,
+    .visionCard h2,
+    .valuesCard h2 {
+      color: #66ff66;
+    }
 
-  .faqAnswer {
-    background-color: #2c2c2c;
-    color: #f0f0f0;
-  }
+    .missionCard p,
+    .visionCard p,
+    .valuesCard p {
+      color: #dddddd;
+    }
 
-  .faqItem.active .faqQuestion {
-    background: #4caf50;
-    color: #fff;
-  }
+    .cardFront {
+      background: linear-gradient(to right, #223233, #1c1c1c);
+      border: 2px solid #66ff66;
+    }
 
-  .iframe {
-    filter: invert(90%) hue-rotate(180deg); /* helps with dark-themed map */
-  }
+    .cardBack {
+      background-color: #494949;
+      color: #f5f5f5;
+    }
+
+    .cardBack li {
+      border-bottom: 1px dotted #ccc;
+    }
+
+    .cardBack li:nth-child(even) {
+      color: #66ff66;
+    }
+
+    .cardBack li:hover {
+      background: linear-gradient(to right, #204020, #3c803c);
+      color: #fff !important;
+    }
+
+    .whyCard {
+      background-color: #4d4c4c;
+      color: #f0f0f0;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+
+    .whyCard:hover {
+      transform: translateY(-5px);
+    }
+
+    .formSection h2,
+    .faqSection h2 {
+      color: #66ff66;
+    }
+
+    .input,
+    .select {
+      background-color: #2c2c2c;
+      color: #f0f0f0;
+      border: 1px solid #66ff66;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .submittingBtn {
+      background-color: #66ff66;
+      color: #ffffff;
+    }
+
+    .submittingBtn:hover {
+      background-color: #66ff66;
+    }
+
+    .popupContent {
+      background: #2e7d32;
+      color: #ffffff;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .popupContent button {
+      background: #ffffff;
+      color: #2e7d32;
+    }
+
+    .popupContent button:hover {
+      background: #d0f0d8;
+    }
+
+
+
+    .faqQuestion {
+      background: linear-gradient(to right, #223233, #505b5e);
+      color: #66ff66;
+    }
+
+    .faqAnswer {
+      background-color: #2c2c2c;
+      color: #f0f0f0;
+    }
+
+    .faqItem.active .faqQuestion {
+      background: #4caf50;
+      color: #fff;
+    }
+
+    .iframe {
+      filter: invert(90%) hue-rotate(180deg);
+      /* helps with dark-themed map */
+    }
   }
 }
 
@@ -174,6 +180,7 @@
   justify-content: center;
   color: #277a00;
 }
+
 .mainHeadingWrapper {
   position: relative;
   overflow: hidden;
@@ -185,11 +192,12 @@
   z-index: 2;
   font-size: 20px;
   text-align: center;
-  
+
 }
+
 .waveText {
   color: #047a20;
-   font-size: 23px;
+  font-size: 23px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -227,11 +235,12 @@
 
 
 @media (max-width: 768px) {
-.waveText{
-  padding: 0;
-  margin: 0 auto;
-  font-size: 20px;
-}
+  .waveText {
+    padding: 0;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
   .thoughtSection {
     position: relative;
     width: 100%;
@@ -266,7 +275,7 @@
   .backgroundImage {
     width: 100%;
     height: 100%;
-    
+
   }
 
   .mainHeading {
@@ -392,6 +401,7 @@
     margin: 10px 0;
   }
 }
+
 .whyGrid {
   display: flex;
   justify-content: center;
@@ -403,7 +413,8 @@
 }
 
 .whyCard {
-  background-color: #f9f9f9;
+  background: linear-gradient(to right, #cfecc2, #fefffd);
+  border: 2px solid #399f0a;
   color: #1a1a1a;
   padding: 20px;
   width: 220px;
@@ -568,8 +579,11 @@
   flex-direction: column;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
-  background-color: #ffffff; /* light mode background */
-  color: #000000; /* light mode text */
+  background: linear-gradient(to right, #cfecc2, #fefffd);
+  border: 2px solid #399f0a;
+  /* light mode background */
+  color: #000000;
+  /* light mode text */
 }
 
 .custImg {
@@ -636,6 +650,7 @@
     font-size: 13px;
   }
 }
+
 /* ========== FORM & FAQ STYLES ========== */
 .dataForm {
   display: flex;
@@ -716,6 +731,7 @@
 
   }
 }
+
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -861,12 +877,13 @@
     padding: 5px;
   }
 }
+
 .note {
-    font-size: 18px;
-    color: #2f3d26;
-    padding: 18px;
-    margin: auto;
-    border-left: 4px solid #01ac28;
-    max-width: 1100px;
-    margin: auto;
-  }
+  font-size: 18px;
+  color: #2f3d26;
+  padding: 18px;
+  margin: auto;
+  border-left: 4px solid #01ac28;
+  max-width: 1100px;
+  margin: auto;
+}

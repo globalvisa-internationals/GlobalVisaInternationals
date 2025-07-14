@@ -13,8 +13,8 @@ import FAQAccordion from '@/Components/FAQAccordion';
 export const metadata = {
   title: "Top Visa Consultants in Bangalore | USA, Canada, UK,Australia, Europe Visa assistance Experts",
   description: "we are your trusted visa consultant and immigration consultant, providing professional visa services and immigration services customized to suit your travel and settlement needs. Whether you're applying for a work permit, seeking visa assistance, or starting your visa application, our experienced team ensures you meet all necessary visa requirements with ease and confidence",
-  keywords:["visa consultant","immigration consultant","visa services","immigration services","visa application","visa requirements","visa assistance","work permit","work visa consultant","student visa consultant ","Canada study visa consultant","UK study visa consultant","USA study visa consultant","visa documentation checklist","visa interview preparation","Canada tourist visa","Australia tourist visa","immigration agent qualifications","visa processing time","visa processing agents" ],
-  alternates: { canonical: "https://www.globalvisainternationals.com/"},
+  keywords: ["visa consultant", "immigration consultant", "visa services", "immigration services", "visa application", "visa requirements", "visa assistance", "work permit", "work visa consultant", "student visa consultant ", "Canada study visa consultant", "UK study visa consultant", "USA study visa consultant", "visa documentation checklist", "visa interview preparation", "Canada tourist visa", "Australia tourist visa", "immigration agent qualifications", "visa processing time", "visa processing agents"],
+  alternates: { canonical: "https://www.globalvisainternationals.com/" },
   openGraph: {
     title: "Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
     description:
@@ -25,13 +25,13 @@ export const metadata = {
     images: [
       {
         url: "https://www.globalvisainternationals.com/banner.webp",
-      width: 1200,
-      height: 630,
-      alt: "Visa and Immigration Services - Global Visa Internationals",
+        width: 1200,
+        height: 630,
+        alt: "Visa and Immigration Services - Global Visa Internationals",
       },
     ],
-},
-twitter: {
+  },
+  twitter: {
     card: "summary_large_image",
     title: "Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
     description:
@@ -103,117 +103,117 @@ const faqs = [
 ];
 
 export default function Home() {
-const pageUrl = metadata.alternates.canonical;
+  const pageUrl = metadata.alternates.canonical;
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: pageUrl, // https://www.globalvisainternationals.com
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: pageUrl, // https://www.globalvisainternationals.com
+      }
+    ]
+  };
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "@id": "https://www.globalvisainternationals.com/#organization",
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    logo: "https://www.globalvisainternationals.com/gvilogo.png",
+    description: "Global Visa Internationals is a leading visa and immigration consultancy in Bangalore, offering expert assistance for Tourist, PR, Student, Work, and Business Visas to countries like Canada, Australia, UK, USA, Europe, and more.",
+    telephone: "+91-7022213466",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "GF-9, Business Point, MG Road",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560025",
+      addressCountry: "IN"
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 12.9716,
+      longitude: 77.5946
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        opens: "10:00",
+        closes: "18:00"
+      }
+    ],
+    sameAs: [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ],
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: "https://www.globalvisainternationals.com/contact",
+      result: {
+        "@type": "Thing",
+        name: "Book a Free Visa Consultation"
+      }
     }
-  ]
-};
-const travelAgencyJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "TravelAgency",
-  "@id": "https://www.globalvisainternationals.com/#organization",
-  name: "Global Visa Internationals",
-  url: "https://www.globalvisainternationals.com",
-  logo: "https://www.globalvisainternationals.com/gvilogo.png",
-  description: "Global Visa Internationals is a leading visa and immigration consultancy in Bangalore, offering expert assistance for Tourist, PR, Student, Work, and Business Visas to countries like Canada, Australia, UK, USA, Europe, and more.",
-  telephone: "+91-7022213466",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "GF-9, Business Point, MG Road",
-    addressLocality: "Bengaluru",
-    addressRegion: "Karnataka",
-    postalCode: "560025",
-    addressCountry: "IN"
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 12.9716,
-    longitude: 77.5946
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      opens: "10:00",
-      closes: "18:00"
-    }
-  ],
-  sameAs: [
-    "https://www.facebook.com/globalvisainternationals/",
-    "https://www.instagram.com/globalvisa_internationals/",
-    "https://www.linkedin.com/company/global-visa-internationals/",
-    "https://x.com/GLOBALVISA1505",
-    "https://www.youtube.com/@globalVisaInternationals",
-    "https://www.google.com/maps/place/Global+Visa+Internationals"
-  ],
-  potentialAction: {
-    "@type": "ReserveAction",
-    target: "https://www.globalvisainternationals.com/contact",
-    result: {
-      "@type": "Thing",
-      name: "Book a Free Visa Consultation"
-    }
-  }
-};
+  };
 
 
 
   return (
     <>
       <Head>
-         <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-                <meta name="robots" content={metadata.robots} />
-                <link rel="canonical" href={pageUrl} />
-        
-                {/* Open Graph */}
-                <meta property="og:type" content={metadata.openGraph.type} />
-                <meta property="og:title" content={metadata.openGraph.title} />
-                <meta property="og:description" content={metadata.openGraph.description} />
-                <meta property="og:url" content={metadata.openGraph.url} />
-                <meta property="og:image" content={metadata.openGraph.images[0].url} />
-                <meta property="og:image:alt" content="Visa and Immigration Services - Global Visa Internationals" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
-                <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-                <meta property="og:site_name" content={metadata.openGraph.siteName} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-        
-                {/* Twitter */}
-                <meta name="twitter:card" content={metadata.twitter.card} />
-                <meta name="twitter:site" content={metadata.twitter.site} />
-                <meta name="twitter:title" content={metadata.twitter.title} />
-                <meta name="twitter:description" content={metadata.twitter.description} />
-                <meta name="twitter:image" content={metadata.twitter.images[0]} />
-        
-                {/* Geo & Mobile SEO */}
-                <meta name="geo.region" content="IN-KA" />
-                <meta name="geo.placename" content="Bengaluru" />
-                <meta name="ICBM" content="12.9716,77.5946" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="theme-color" content="#ffffff" />
-                <meta name="format-detection" content="telephone=no" />
- <link rel="icon" href="/favicon.ico" />
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content="Visa and Immigration Services - Global Visa Internationals" />
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }}/>
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+
+        {/* Geo & Mobile SEO */}
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="icon" href="/favicon.ico" />
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
 
       </Head>
 
@@ -856,7 +856,7 @@ const travelAgencyJsonLd = {
 
           <div className={styles.faqSection}>
             <h2 className={styles.textXl}>Frequently Asked Questions</h2>
-             <FAQAccordion faqs={faqs} />
+            <FAQAccordion faqs={faqs} />
           </div>
         </section>
 
@@ -866,7 +866,7 @@ const travelAgencyJsonLd = {
           <h2 id={styles.clientVideo} className={styles.subtitle}>
             Client Testimonial{" "}
           </h2>
-          <ClientVideoCarousel  videos={testimonialVideos} />
+          <ClientVideoCarousel videos={testimonialVideos} />
         </section>
 
         <section>

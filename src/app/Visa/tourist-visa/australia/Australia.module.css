@@ -11,30 +11,14 @@
     color: #a6e988;
   }
 
-  .formSection,
-  .formSection1 {
-    color: #141414;
-  }
-
-  .input,
-  .select {
-    color: #1a1919;
-    border: 1px solid #a6e988;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
-  }
-
-  .input::placeholder,
-  .select option {
-    color: #202020;
-  }
 
   .table {
     background-color: #1e1e1e;
     color: #f0f0f0;
   }
 
-  .table th {
-    background-color: #478537;
+  .table tr th {
+    background-color: #1f6910;
     color: #fff;
   }
 
@@ -126,6 +110,7 @@
     color: #63834e;
     padding: 1rem;
     border-left: 4px solid #01ac28;
+    border-radius: 15px;
     max-width: 800px;
     margin: auto;
   }
@@ -185,6 +170,7 @@
   .table {
     width: 100%;
     border-collapse: collapse;
+    border-radius: 15px;
     margin-bottom: 1.5rem;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   }
@@ -205,7 +191,9 @@
     .heading {
       font-size: 1.5rem;
     }
-
+  .Title{
+    font-size: 16px;
+  }
     .description {
       font-size: 0.95rem;
     }
@@ -217,6 +205,7 @@
     }
   
     .table {
+      border-radius: 15px;
       display: block;
       width: 100%;
       overflow-x: auto;
