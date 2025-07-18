@@ -1,0 +1,450 @@
+import VisaForm from '@/Components/VisaForm';
+import Styles from './blog.module.css';
+import Head from 'next/head';
+
+export const metadata = {
+    title: "Visa Friday – July 18, 2025: Latest Global Visa Updates for Indian Travelers",
+    date: "2025-07-18",
+    category: "Visa Information",
+    author: "Global Visa Internationals Team",
+    excerpt:
+        "Welcome to Visa Friday, your one-stop source for the latest visa news, travel alerts, and policy updates affecting Indian passport holders. Whether you're planning a U.S. trip, European holiday, or pilgrimage abroad, stay informed and prepared with trusted insights from Global Visa Internationals—India’s most reliable visa consultancy.",
+    image: "/Blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.webp",
+    keywords: [
+        "US Visa news",
+        "Visa news",
+        "Visa appointment news",
+        "US Visa",
+        "USA Visa News",
+        "America Visa News",
+        "Visa Friday",
+        "Student Visa News",
+        "Visa News",
+        "US slots Update",
+        "Important Things to Know for Indian Students"
+    ]
+};
+
+export default function CanadaResidencyBlog() {
+    const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
+    const pageUrl =
+        "https://www.globalvisainternationals.com/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers/";
+
+    const blogStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": pageUrl
+        },
+        "headline": metadata.title,
+        "description": metadata.excerpt,
+        "image": fullImageUrl,
+        "author": {
+            "@type": "Organization",
+            "name": "Global Visa Internationals",
+            "url": "https://www.globalvisainternationals.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Global Visa Internationals",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.globalvisainternationals.com/gvilogo.png"
+            }
+        },
+        "datePublished": metadata.date,
+        "dateModified": metadata.date,
+        "inLanguage": "en",
+        "articleSection": metadata.category
+    };
+
+    const breadcrumbStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.globalvisainternationals.com"
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://www.globalvisainternationals.com/blog"
+            },
+            {
+                "@type": "ListItem",
+                position: 3,
+                name: metadata.title,
+                item: pageUrl
+            }
+        ]
+    };
+
+
+
+    return (
+        <>
+            <Head>
+                <title>{metadata.title}</title>
+                <meta name="description" content={metadata.excerpt} />
+                <meta name="keywords" content={metadata.keywords.join(", ")} />
+                <meta name="author" content={metadata.author} />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="preload" as="image" href={fullImageUrl} />
+                <link rel="canonical" href={pageUrl} />
+
+                {/* Open Graph */}
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={metadata.title} />
+                <meta property="og:description" content={metadata.excerpt} />
+                <meta property="og:url" content={pageUrl} />
+                <meta property="og:image" content={fullImageUrl} />
+                <meta property="og:image:alt" content={metadata.title} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:site_name" content="Global Visa Internationals" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@GLOBALVISA1505" />
+                <meta name="twitter:creator" content="@GLOBALVISA1505" />
+                <meta name="twitter:url" content={pageUrl} />
+                <meta name="twitter:title" content={metadata.title} />
+                <meta name="twitter:description" content={metadata.excerpt} />
+                <meta name="twitter:image" content={fullImageUrl} />
+                <meta name="twitter:image:alt" content={metadata.title} />
+
+                {/* Mobile SEO */}
+                <meta name="format-detection" content="telephone=no" />
+                <meta name="theme-color" content="#ffffff" />
+                <meta name="HandheldFriendly" content="true" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+                {/* Local SEO */}
+                <meta name="geo.region" content="IN-KA" />
+                <meta name="geo.placename" content="Bengaluru" />
+                <meta name="geo.position" content="12.9716;77.5946" />
+                <meta name="ICBM" content="12.9716,77.5946" />
+
+                {/* Structured Data: Organization */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "name": "Global Visa Internationals",
+                            "url": "https://www.globalvisainternationals.com",
+                            "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+                            "description":
+                                "Welcome to Visa Friday, your one-stop source for the latest visa news, travel alerts, and policy updates affecting Indian passport holders. Whether you're planning a U.S. trip, European holiday, or pilgrimage abroad, stay informed and prepared with trusted insights from Global Visa Internationals—India’s most reliable visa consultancy.",
+                            "founder": { "@type": "Person", "name": "Anusha" },
+                            "foundingDate": "2016",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "streetAddress": "Brigade Road",
+                                "addressLocality": "Bengaluru",
+                                "addressRegion": "Karnataka",
+                                "postalCode": "560025",
+                                "addressCountry": "IN"
+                            },
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "telephone": "+91-7022213466",
+                                "contactType": "Customer Support",
+                                "areaServed": "IN",
+                                "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
+                            },
+                            "areaServed": ["IN", "US", "CA", "UK", "EU"],
+                            "sameAs": [
+                                "https://www.facebook.com/globalvisainternationals/",
+                                "https://www.instagram.com/globalvisa_internationals/",
+                                "https://www.linkedin.com/company/global-visa-internationals/",
+                                "https://x.com/GLOBALVISA1505",
+                                "https://www.youtube.com/@globalVisaInternationals",
+                                "https://www.google.com/maps/place/Global+Visa+Internationals"
+                            ]
+                        })
+                    }}
+                />
+
+                {/* Structured Data: BlogPosting */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
+                />
+
+                {/* Structured Data: BreadcrumbList */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+                />
+            </Head>
+
+
+
+            <main>
+                <div className={Styles.meta}>
+                    <span>By {metadata.author}</span>
+                    <span>•</span>
+                    <span>
+                        {new Date(metadata.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        })}
+                    </span>
+                </div>
+
+                <div className={Styles.imageCard}>
+                    <img
+                        src={metadata.image}
+                        alt={metadata.title}
+                        className={Styles.image}
+                        loading="lazy"
+                        width="1200"
+                        height="630"
+                    />
+                </div>
+
+                <div className={Styles.ArticalSec}>
+                    <h1 className={Styles.subtitle}>{metadata.title}</h1>
+
+                    <p>
+                        Welcome to <strong>Visa Friday</strong>, your one-stop source for the
+                        <strong> latest visa news, travel alerts</strong>, and policy updates
+                        affecting <strong>Indian passport holders</strong>. Whether you're
+                        planning a <strong>U.S. trip</strong>, <strong>European holiday</strong>,
+                        or <strong>pilgrimage abroad</strong>, stay informed and prepared with
+                        trusted insights from <strong>Global Visa Internationals</strong>—
+                        India’s most reliable visa consultancy.
+                    </p>
+
+                    <h2 className={Styles.subtitle}>🇮🇳 India–China & Pilgrimage Travel News</h2>
+
+                    <h3 className={Styles.subtitle}>India–China Visa Policy Overhaul in Progress</h3>
+                    <ul>
+                        <li>Resumption of the Kailash Mansarovar Yatra</li>
+                        <li>Direct flights between India and China</li>
+                        <li>Streamlined visa options for business, tourism & religious travel</li>
+                    </ul>
+                    <p>
+                        <em>Source: The Economic Times</em><br />
+                        <strong>Planning a spiritual journey?</strong> We can help with the
+                        full Kailash Mansarovar visa & paperwork process.
+                    </p>
+
+                    <h3 className={Styles.subtitle}>Pakistan Pilgrimage Prep Ongoing</h3>
+                    <p>
+                        Though India–Pakistan travel remains paused after the Pahalgam attack,
+                        <strong>SGPC</strong> has begun collecting passports for the November
+                        <em>Guru Nanak Dev Ji Yatra</em>.
+                    </p>
+                    <p>
+                        <strong>Deadline:</strong> August 4, 2025<br />
+                        <em>Source: The Times of India</em><br />
+                        Need help with <strong>Pakistan yatra visa</strong> support?
+                        <em>Contact us today</em>—fast, accurate, secure.
+                    </p>
+
+                    <h2 className={Styles.subtitle}>🇺🇸 U.S. Visa Alerts for Indian Applicants</h2>
+
+                    <h3 className={Styles.subtitle}>Embassy Warning: Crime Can Revoke Visa</h3>
+                    <p>
+                        The U.S. Embassy reminded that even minor crimes like shoplifting or
+                        assault may lead to <strong>immediate visa cancellation</strong> and
+                        <strong>future ineligibility</strong>.
+                    </p>
+                    <p>Source: Trak.in, Economic Times, Travel and Tour World</p>
+                    <p>
+                        Looking to move abroad? The demand for <strong>Canada PR visa 2025</strong> remains high among Indian professionals. Programs like the <strong>Express Entry Canada 2025</strong> and the <strong>EMPP program Canada</strong> are helping skilled workers and refugees alike settle faster. If you're a student, the <strong>Canada student visa latest news</strong> confirms quicker decisions for Fall 2025. Considering a job? <strong>Canada work permit for Indians</strong> and <strong>Canada spouse open work permit</strong> applications are up 37% since April.
+                    </p>
+
+                    <h3 className={Styles.subtitle}>Social Media & Post-Entry Monitoring Active</h3>
+                    <ul>
+                        <li>Applies to F-1, J-1, B-1/B-2 visas</li>
+                        <li>Applicants must keep social media public</li>
+                        <li>Falsification = denial or revocation</li>
+                    </ul>
+                    <p>Source: Times of India, Trak.in</p>
+
+                    <h3 className={Styles.subtitle}>New $250 U.S. Visa Integrity Fee</h3>
+                    <p>
+                        Since <strong>July 4, 2025</strong>, all major U.S. non-immigrant visa
+                        types now include a <strong>$250 Integrity Fee</strong>.
+                    </p>
+                    <ul>
+                        <li>B-1/B-2 (Tourist)</li>
+                        <li>F-1 (Student)</li>
+                        <li>H-1B (Work)</li>
+                        <li>J-1 (Exchange)</li>
+                    </ul>
+                    <p>
+                        Need assistance navigating U.S. student, tourist or work visa
+                        categories? <strong>Book a free consultation today!</strong>
+                    </p>
+
+                    <h2 className={Styles.subtitle}>🌏 Visa-Free or Simplified Entry for Indians</h2>
+
+                    <h3 className={Styles.subtitle}>🇵🇭 Philippines Offers Visa-Free Travel</h3>
+                    <ul>
+                        <li>14-day visa-free for Indian passport holders</li>
+                        <li>Up to 30 days with valid U.S., UK, Schengen, or Canadian visa</li>
+                    </ul>
+                    <p>Source: Reuters, Wikipedia</p>
+
+                    <h3 className={Styles.subtitle}>🇷🇺 Russia & 🇵🇼 Palau: 30-Day Visa-Free Access</h3>
+                    <ul>
+                        <li>Russia: Group-based visa exemption</li>
+                        <li>Palau: Solo 30-day visa-free entry</li>
+                    </ul>
+                    <p>Source: Times of India, Indian Eagle</p>
+
+                    <p>
+                        <strong>Want more visa-free countries?</strong> We’ll help tailor a list
+                        based on your destination interests and passport type.
+                    </p>
+                    <p>
+                        The <strong>US visa appointment wait time India</strong> is improving, but the new <strong>Dropbox US visa India</strong> option remains the fastest way for repeat travelers. Students are advised to check <strong>US F1 visa slots availability</strong> regularly, especially for Fall 2025 admissions. Meanwhile, <strong>H1B 2025 updates India</strong> reflect tighter scrutiny post-lottery. Planning a quick trip? Good news — <strong>B1/B2 visa reopening India</strong> is now fully live for business and tourism.
+                    </p>
+
+                    <h2 className={Styles.subtitle}>🇩🇪 Germany Changes Visa Appeal Rules</h2>
+                    <p>
+                        Informal appeals (remonstration) are no longer accepted for rejected
+                        visas. Indians must now use formal legal channels, often slower and more
+                        expensive.
+                    </p>
+                    <p>
+                        Don’t risk rejection—<strong>let our experts review your Germany
+                            Schengen visa application</strong> before you apply.
+                    </p>
+                    <p>
+                        🇬🇧 Indians planning to study or work in the UK should act fast — <strong>UK student visa July intake</strong> approvals are closing soon. While applying, note delays in <strong>UK visa biometric appointment</strong> scheduling. For tourists, <strong>UK visitor visa from India 2025</strong> slots are still limited but manageable. Career-driven? The <strong>UK Skilled Worker Visa for Indians</strong> is ideal for IT, finance, and healthcare profiles. Be prepared — <strong>UK visa delay 2025 India</strong> is still an ongoing issue post-Brexit.
+                    </p>
+
+                    <h2 className={Styles.subtitle}>UK & Schengen Updates</h2>
+
+                    <h3 className={Styles.subtitle}>🇪🇺 Schengen EES Launching October 2025</h3>
+                    <ul>
+                        <li>Biometric entry/exit logs (EES)</li>
+                        <li>No more passport stamping</li>
+                        <li>Apply 30–60 days early to avoid bottlenecks</li>
+                    </ul>
+                    <p>Source: Reuters, Times of India</p>
+                    <p>
+                        Europe remains a top destination for Indian travelers. Applying early is key due to a rise in <strong>Schengen visa appointment India</strong> delays. France, Germany, and Italy are in demand — <strong>France tourist visa from India</strong> and <strong>Italy visa for Indians</strong> saw processing slowdowns in July. Germany's <strong>job seeker visa 2025</strong> is ideal for STEM professionals. Stay tuned to avoid disruptions from <strong>Europe visa delay news</strong> reported in Indian media.
+                    </p>
+
+                    <h3 className={Styles.subtitle}>🇬🇧 UK Young Professionals Visa Lottery Reopens</h3>
+                    <p>
+                        From <strong>July 22–24, 2025</strong>, Indian nationals aged 18–30 can
+                        apply via the free ballot system for a <strong>2-year UK work visa</strong>,
+                        even without a job offer.
+                    </p>
+                    <p><strong>We’ll handle your UK ballot visa entry for free!</strong></p>
+
+                    <h2 className={Styles.subtitle}>Quick Recap Table</h2>
+                    <table className={Styles.table}>
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>Update</th>
+                                <th>Effective Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>India–China</td>
+                                <td>Visa reforms + Kailash Yatra prep</td>
+                                <td>Ongoing (July 2025)</td>
+                            </tr>
+                            <tr>
+                                <td>Pakistan (Yatra)</td>
+                                <td>SGPC collecting passports</td>
+                                <td>Submit by Aug 4, 2025</td>
+                            </tr>
+                            <tr>
+                                <td>United States</td>
+                                <td>Integrity Fee + Visa warnings</td>
+                                <td>July 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Philippines</td>
+                                <td>14/30‑day visa-free for Indians</td>
+                                <td>Since June 8, 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Russia & Palau</td>
+                                <td>30‑day visa-free entry</td>
+                                <td>2025</td>
+                            </tr>
+                            <tr>
+                                <td>Germany</td>
+                                <td>Formal legal appeals only</td>
+                                <td>July 1, 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Schengen</td>
+                                <td>EES Biometric Entry System</td>
+                                <td>October 2025</td>
+                            </tr>
+                            <tr>
+                                <td>UK</td>
+                                <td>Young Professionals ballot</td>
+                                <td>July 22–24, 2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 className={Styles.subtitle}>Need Visa Assistance from India?</h2>
+                    <p>
+                        Whether you're applying for a <strong>U.S. student visa</strong>, a
+                        <strong>UK work permit</strong>, <strong>Schengen tourist visa</strong>,
+                        or planning a <strong>pilgrimage abroad</strong>, Global Visa
+                        Internationals is here to simplify the process.
+                    </p>
+
+                    <h3 className={Styles.subtitle}>Why Choose Us?</h3>
+                    <ul>
+                        <li>97% Visa Success Rate</li>
+                        <li>25,000+ Successful Indian Clients</li>
+                        <li>No hidden charges – Transparent pricing</li>
+                        <li>Expert documentation + real-time updates</li>
+                    </ul>
+                    <p>
+                        Whether you're applying for a <strong>visa from Bangalore, Delhi, Hyderabad, or Mumbai</strong>, our team provides end-to-end support. We assist with <strong>visa document checklist India</strong>, <strong>online visa application India</strong>, and help you find the best <strong>visa consultant near me</strong> no matter your location. Thousands search for <strong>visa assistance India</strong> every day — Global Visa Internationals is trusted by over 25,000+ clients.
+                    </p>
+
+                    <h3 className={Styles.subtitle}>Ready to Apply? Let’s Begin</h3>
+                    <p>
+                        Based in Bangalore | Serving Pan-India<br />
+                        <strong>Call Us:</strong> <a href="tel:+917022213466">+91-7022213466</a><br />
+                        <strong>Email:</strong>{" "}
+                        <a href="mailto:operations@globalvisa-internationals.com">
+                            operations@globalvisa-internationals.com
+                        </a><br />
+                        <a href="https://www.globalvisainternationals.com/contact">
+                            Schedule a Consultation
+                        </a>
+                    </p>
+
+                    <p><strong>Global Visa Internationals</strong> – India’s Trusted Visa Experts for Global Dreams.</p>
+                    <p><em>Your visa, our responsibility.</em></p>
+                </div>
+
+
+                <div className={Styles.VisaForm}>
+                    <VisaForm />
+                </div>
+            </main>
+        </>
+    );
+}
