@@ -53,24 +53,24 @@ export default function CareerPage() {
   return (
     <>
       <head>
-        <title>Careers at Global Visa Internationals | Join Our Immigration Team in Bangalore</title>
+        <title>Visa Counselor Jobs in Bangalore | Careers at Global Visa Internationals</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Kickstart your immigration career with Global Visa Internationals in Bangalore. Join our expert team and guide clients through global visa and immigration processes."
+          content="Apply for Visa Counselor roles at Global Visa Internationals, Bangalore. Help clients with global visa processes and grow your career in immigration consulting."
         />
         <meta
           name="keywords"
-          content="visa consultant job Bangalore, immigration jobs India, visa careers Bengaluru, Global Visa Internationals jobs, immigration consultant careers, visa company openings, full-time visa consultant job"
+          content="visa counselor job Bangalore, immigration jobs India, visa consultancy careers, Global Visa Internationals hiring, visa consultant openings, entry-level visa jobs"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.globalvisainternationals.com/career" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Careers at Global Visa Internationals | Visa Consultant Jobs in Bangalore" />
+        <meta property="og:title" content="Visa Counselor Jobs | Global Visa Internationals Careers in Bangalore" />
         <meta
           property="og:description"
-          content="Join Global Visa Internationals as a Visa Consultant in Bangalore. Help clients with Australia, Canada, UK immigration. Apply now for a meaningful career in immigration services."
+          content="Join Global Visa Internationals as a Visa Counselor in Bangalore. Guide clients through Australia, Canada, UK visa applications. Start your immigration career now."
         />
         <meta property="og:url" content="https://www.globalvisainternationals.com/career" />
         <meta property="og:type" content="website" />
@@ -78,10 +78,10 @@ export default function CareerPage() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Join Our Immigration Consulting Team | Global Visa Internationals Careers" />
+        <meta name="twitter:title" content="Join as a Visa Counselor | Careers at Global Visa Internationals, Bangalore" />
         <meta
           name="twitter:description"
-          content="Exciting visa consultant roles in Bangalore. Work at Global Visa Internationals and help people navigate their international immigration journeys."
+          content="Exciting opportunity for freshers as Visa Counselors in Bangalore. Work at Global Visa Internationals and build a career in global immigration services."
         />
         <meta name="twitter:image" content="https://www.globalvisainternationals.com/public/hiring/gvi-hiring-banner.webp" />
 
@@ -90,23 +90,23 @@ export default function CareerPage() {
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
 
-        {/* Structured Data */}
+        {/* Structured Data for JobPosting */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "JobPosting",
-              "title": "Visa Consultant – Immigration Services",
+              "title": "Visa Counselor – Immigration Services",
               "description":
-                "Are you passionate about helping people achieve their global dreams? Join Global Visa Internationals in Bengaluru as a Visa Consultant! You'll guide clients through the immigration process for Canada, Australia, the UK, and more. This is a fantastic opportunity for individuals eager to make a real difference in people's lives.",
+                "Join Global Visa Internationals in Bengaluru as a Visa Counselor! You will interact with clients, provide accurate visa guidance, evaluate applications, and ensure a smooth immigration process for Canada, Australia, the UK, and other destinations. Ideal for freshers passionate about immigration services and client support.",
               "identifier": {
                 "@type": "PropertyValue",
                 "name": "Global Visa Internationals",
                 "value": "GVIC-VC-2025"
               },
-              "datePosted": "2025-04-25",
-              "validThrough": "2025-06-30T23:59",
+              "datePosted": "2025-07-22",
+              "validThrough": "2025-09-30T23:59",
               "employmentType": "FULL_TIME",
               "hiringOrganization": {
                 "@type": "Organization",
@@ -130,19 +130,19 @@ export default function CareerPage() {
                 "currency": "INR",
                 "value": {
                   "@type": "QuantitativeValue",
-                  "value": 300000,
+                  "value": 180000,
                   "unitText": "YEAR"
                 }
               },
               "industry": "Immigration and Visa Services",
               "qualifications":
-                "We're looking for graduates in any stream. Prior experience in visa or immigration consulting will be a plus!",
+                "Fresh graduates with strong communication skills are welcome. Basic knowledge of MS Office and customer service is preferred.",
               "responsibilities":
-                "As a Visa Consultant, you'll be consulting with clients, meticulously reviewing their documentation, expertly handling visa applications, and providing crucial post-approval support.",
+                "Engage with visa applicants, assess profiles, provide consultation, manage documentation, and support visa application procedures across various categories including tourist, student, and PR.",
               "skills":
-                "Excellent communication skills, a keen eye for detail, a strong understanding of visa processes, and any sales experience will be highly valued.",
-              "workHours": "Our standard work hours are Monday to Saturday, from 10:00 AM to 6:00 PM.",
-              "incentiveCompensation": "Yes, we offer incentive compensation!",
+                "Communication, MS Office, teamwork, attention to detail, basic sales, and a client-focused attitude.",
+              "workHours": "Monday to Saturday, 10:00 AM to 6:00 PM",
+              "incentiveCompensation": "Incentives available based on performance",
               "applicantLocationRequirements": {
                 "@type": "Country",
                 "name": "India"
@@ -151,44 +151,125 @@ export default function CareerPage() {
             })
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What does a Visa Counselor do at Global Visa Internationals?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A Visa Counselor guides clients through the visa application process, provides accurate information, assists with documentation, and ensures a smooth and timely application experience for various countries like Canada, Australia, and the UK."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is prior experience required to apply for the Visa Counselor role?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, this position is open to freshers. Training will be provided. However, good communication skills, a basic understanding of customer service, and MS Office proficiency are expected."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the work location and timing for this role?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The position is based in Bangalore (Brigade Road). Work timings are Monday to Saturday, from 10:00 AM to 6:00 PM."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the salary range for the Visa Counselor position?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The monthly salary ranges between ₹15,000 to ₹20,000 depending on skills and experience. Additional incentives may be available based on performance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Who can apply for this Visa Counselor job?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Female graduates from any stream with strong communication and interpersonal skills are encouraged to apply."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.globalvisainternationals.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Careers",
+                  "item": "https://www.globalvisainternationals.com/career"
+                }
+              ]
+            })
+          }}
+        />
+
       </head>
+
 
 
 
       <div className={styles.JobSec}>
         <div className={styles.JobData}>
 
-          <h2 className={styles.Title}>Job Title: Sales Executive</h2>
+          <h2 className={styles.Title}>Job Title: Visa Counselor</h2>
+
           <p>
             <strong className={styles.subTitle}>Job Overview:</strong>
-            Are you a people person who enjoys building connections and hitting goals? As a <strong className={styles.subTitle}>Sales Executive</strong> at Global Visa Internationals in Bangalore, you’ll interact directly with prospective clients, convert leads, and help people take the first step in their global journey. This is an ideal role for someone exploring <strong className={styles.subTitle}>visa consultant jobs in Bangalore</strong> or looking to grow within <strong className={styles.subTitle}>immigration services careers</strong>.
+            Are you passionate about guiding individuals through their international journey? Join <strong className={styles.subTitle}>Global Visa Internationals</strong> in Bangalore as a <strong className={styles.subTitle}>Visa Counselor</strong>. In this client-facing role, you’ll assist applicants with visa procedures, documentation, and eligibility assessments. This position is perfect for candidates looking to build a career in <strong className={styles.subTitle}>visa consultancy in Bangalore</strong> or grow in the <strong className={styles.subTitle}>immigration services industry</strong>.
           </p>
 
-          <h3 className={styles.subTitle}>Your Responsibilities:</h3>
+          <h3 className={styles.subTitle}>Key Responsibilities:</h3>
           <ul>
-            <li>Engage with clients who inquire about visa services and provide accurate guidance.</li>
-            <li>Convert inquiries into successful applications through clear communication and follow-up.</li>
-            <li>Maintain accurate client records in the CRM system and track progress.</li>
-            <li>Collaborate with documentation and support teams to ensure smooth processing.</li>
+            <li>Guide clients through visa requirements, processes, and documentation for various countries.</li>
+            <li>Evaluate applicant profiles and suggest suitable visa options.</li>
+            <li>Handle walk-in inquiries, telephonic leads, and email queries professionally.</li>
+            <li>Coordinate with the documentation team to ensure timely application processing.</li>
+            <li>Maintain and update client records.</li>
+            <li>Provide end-to-end support to clients from consultation to visa approval.</li>
           </ul>
 
-          <h3 className={styles.subTitle}>Qualifications:</h3>
+          <h3 className={styles.subTitle}>Qualifications & Skills:</h3>
           <ul>
-
-            <li>Experience:Freshers,</li>
-            <li>English proficiency (spoken and written)</li>
-            <li>Computer skills (MS Office, Excel)</li>
-            <li>Sales and Negotiation skills</li>
-            <li>Client Relationship Management</li>
-            <li>Strong Communication and Presentation skills</li>
-            <li>Goal-oriented and Results-driven mindset</li>
-            <li>Ability to work well in a team</li>
-            <li>Female</li>
-            <li>Degree in Business, Marketing, or related field</li>
+            <li>Experience: Freshers are welcome (Training will be provided)</li>
+            <li>Excellent English communication skills (verbal and written)</li>
+            <li>Proficient in MS Office (Word, Excel, Outlook)</li>
+            <li>Strong interpersonal and counseling skills</li>
+            <li>Ability to build trust and rapport with clients</li>
+            <li>Detail-oriented with good organizational skills</li>
+            <li>Goal-driven and proactive approach to work</li>
+            <li>Team player with a positive attitude</li>
+            <li>Gender: Female candidates preferred</li>
+            <li>Educational Qualification: Any degree (preferred in Business, Marketing, or Humanities)</li>
           </ul>
 
-          <p><strong className={styles.subTitle}>Salary:</strong> Up to ₹15,000-₹20,000 per month</p>
+          <p><strong className={styles.subTitle}>Salary:</strong> ₹15,000 – ₹20,000 per month</p>
+
         </div>
+
 
 
         <div className={styles.formSection}>
