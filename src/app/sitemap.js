@@ -258,19 +258,19 @@ export default async function sitemap() {
       priority: 1,
     },
     {
-      url: 'https://www.globalvisainternationals.com/blog/https://www.globalvisainternationals.com/blog/10-Important-Things-to-Know-for-Indian-Students-in-Canada/',
+      url: 'https://www.globalvisainternationals.com/blog/10-Important-Things-to-Know-for-Indian-Students-in-Canada/',
       lastModified: new Date('2025-07-02'),
       changefreq: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://www.globalvisainternationals.com/blog/https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/',
+      url: 'https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/',
       lastModified: new Date('2025-07-04'),
       changefreq: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://www.globalvisainternationals.com/blog/https://www.globalvisainternationals.com/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers/',
+      url: 'https://www.globalvisainternationals.com/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers/',
       lastModified: new Date('2025-07-18'),
       changefreq: 'monthly',
       priority: 1,
