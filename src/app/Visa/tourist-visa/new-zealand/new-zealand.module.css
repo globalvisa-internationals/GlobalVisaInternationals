@@ -1,5 +1,5 @@
 /* ----------- Dark Mode ----------- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .JapanSec,
   .JapanData {
     color: #e0e0e0;
@@ -77,118 +77,132 @@
   }
 
 
+} */
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 110px;
+  border-radius: 20px;
+  margin: 0 auto;
 }
 
-.imageContainer{
-    display: flex;
-    justify-content: center;
-    padding-top: 110px;
-    border-radius: 20px;
-    margin: 0 auto;
+.JapanImage {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  height: auto;
+  width: 90%;
+  /* Adjusts image width for smaller screens */
+  max-width: 800px;
+  /* Limits max size */
 }
-.JapanImage{
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 10px;
-    height: auto;
-    width: 90%;
-    /* Adjusts image width for smaller screens */
-    max-width: 800px;
-    /* Limits max size */
-}
+
 .JapanSec {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-    max-width: 90%;
-    margin: 0 auto;
-    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 
 .JapanData {
-    flex: 1; /* Takes available space */
-    min-width: 60%;
-    max-width: 65%;
-    padding: 10px;
-    gap: 10px;
-    overflow-y: auto; /* Enables scrolling */
-}
-.Title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #1eac02;
-}
-.subTitle{
-    display: flex;
-    text-align: left;
-    color: #1eac02;
-}
-.note {
-    font-size: 0.95rem;
-    color: #63834e;
-    padding: 1rem;
-    border-left: 4px solid #1eac02;
-    max-width: 800px;
-    margin: auto;
-  }
-
-.formSection1{
-    display: none;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 15px;
-    height: fit-content;
-    
+  flex: 1;
+  /* Takes available space */
+  min-width: 60%;
+  max-width: 65%;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: auto;
+  /* Enables scrolling */
 }
 
-.FormTitle{
+.Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: #1eac02;
-   font-size: 25px;
+}
+
+.subTitle {
+  display: flex;
+  text-align: left;
+  color: #1eac02;
+}
+
+.note {
+  font-size: 0.95rem;
+  color: #63834e;
+  padding: 1rem;
+  border-left: 4px solid #1eac02;
+  max-width: 800px;
+  margin: auto;
+}
+
+.formSection1 {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 15px;
+  height: fit-content;
+
+}
+
+.FormTitle {
+  color: #1eac02;
+  font-size: 25px;
 }
 
 .formSection {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 400px; 
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 40px;
-    position: sticky;
-    top: 60px; /* Keeps the form at a fixed position */
-    height: fit-content; /* Ensures it doesn’t stretch */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  position: sticky;
+  top: 60px;
+  /* Keeps the form at a fixed position */
+  height: fit-content;
+  /* Ensures it doesn’t stretch */
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
 }
-.row{
+
+.row {
   display: flex;
   justify-content: center;
- 
+
 
 }
-.row div{
+
+.row div {
   display: flex;
   justify-content: center;
   width: 50%;
   padding-bottom: 10px;
 }
-.input, .select {
+
+.input,
+.select {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
-  border: #a6e988;;
+  border: #a6e988;
+  ;
   font-size: 16px;
   margin: 5px;
   box-shadow: 0 4px 8px #282828;
@@ -216,181 +230,198 @@
 }
 
 .popupOverlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.4); /* dim background */
-display: flex;
-align-items: center;
-justify-content: center;
-z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* dim background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
 .popupContent {
-background: #1eac02; /* Bootstrap green */
-padding: 1.5rem 2.5rem;
-border-radius: 12px;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-text-align: center;
-max-width: 420px;
-width: 90%;
-animation: fadeIn 0.3s ease-in-out;
+  background: #1eac02;
+  /* Bootstrap green */
+  padding: 1.5rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .popupContent p {
-font-size: 1.2rem;
-margin-bottom: 1rem;
-font-weight: 600;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 0.6rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
 }
 
 .popupContent button {
-color: #1eac02;
-border: 2px solid #1eac02;
-border-radius: 6px;
-padding: 0.5rem 1.2rem;
-font-weight: bold;
-cursor: pointer;
-transition: background 0.2s ease;
+  color: #1eac02;
+  border: 2px solid #1eac02;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .popupContent button:hover {
-background: #e8f5e9;
+  background: #e8f5e9;
 }
 
 @keyframes fadeIn {
-from {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-}
-.visaFeesSection {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  .heading {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #1eac02;
-  }
-  
-  .description {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .link {
-    color: #1eac02;
-    font-weight: 600;
-    margin-left: 0.3rem;
-    text-decoration: underline;
-  }
-  
 
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 15px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .table th,
-  .table td {
-    border: 1px solid #dddddd;
-    padding: 0.75rem 1rem;
-    text-align: left;
+}
+
+.visaFeesSection {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1eac02;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.link {
+  color: #1eac02;
+  font-weight: 600;
+  margin-left: 0.3rem;
+  text-decoration: underline;
+}
+
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  border: 1px solid #dddddd;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background-color: #b5fcab;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .description {
     font-size: 0.95rem;
   }
-  
-  .table th {
-    background-color: #b5fcab;
-    font-weight: 600;
-  }
-  @media (max-width: 768px) {
-    .heading {
-      font-size: 1.5rem;
-    }
 
-    .description {
-      font-size: 0.95rem;
-    }
-  
-    .table th,
-    .table td {
-      font-size: 0.85rem;
-      padding: 0.5rem;
-    }
-  
-    .table {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-    }
-  
-    .table thead {
-      white-space: nowrap;
-    }
+  .table th,
+  .table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
   }
 
-  
-  
+  .table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
 
-  
+  .table thead {
+    white-space: nowrap;
+  }
+}
+
+
+
+
+
 
 
 @media screen and (max-width: 768px) {
-    .imageContainer {
-        justify-content: center;
-        padding-top: 70px;
-        width: 100%;
-    }
-    .JapanImage {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px;
-        border-radius: 10px;
-        height: auto;
-        width: 90%; /* Adjusts image width for smaller screens */
-        max-width: 400px; /* Limits max size */
-    }
-    .JapanSec {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        max-width: 95%;
-    }
-    .JapanData {
-        min-width: 95%;
-        text-align: justify; /* Centers text for better readability */
-        padding: 10px;
-    }
-    .formSection {
-        width: 95%; /* Increases width for mobile */
-        position: relative; /* Prevents overlap */
-        margin-top: 20px;
-        margin-bottom: 80px;
-    }
-    .formtitle{
-        font-size: 17px;
-    }
-    .formSection1 {
-        display: flex;
-        position: relative; /* Prevents overlap */
-        margin-top: 20px;
-        margin-bottom: 80px;
-    }
+  .imageContainer {
+    justify-content: center;
+    padding-top: 70px;
+    width: 100%;
+  }
+
+  .JapanImage {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    height: auto;
+    width: 90%;
+    /* Adjusts image width for smaller screens */
+    max-width: 400px;
+    /* Limits max size */
+  }
+
+  .JapanSec {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .JapanData {
+    min-width: 95%;
+    text-align: justify;
+    /* Centers text for better readability */
+    padding: 10px;
+  }
+
+  .formSection {
+    width: 95%;
+    /* Increases width for mobile */
+    position: relative;
+    /* Prevents overlap */
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  .formtitle {
+    font-size: 17px;
+  }
+
+  .formSection1 {
+    display: flex;
+    position: relative;
+    /* Prevents overlap */
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
 }

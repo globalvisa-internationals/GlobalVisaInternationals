@@ -321,7 +321,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .bold {
     color: #fff;
   }
@@ -403,4 +403,4 @@
   .imageCard {
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
   }
-}
+} */

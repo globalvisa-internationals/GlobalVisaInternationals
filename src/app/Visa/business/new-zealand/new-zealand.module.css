@@ -1,5 +1,5 @@
 /* ----------- Dark Mode ----------- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
     .newzealandSec,
     .newzealandData {
@@ -81,7 +81,7 @@
     }
 
 
-}
+} */
 
 .imageContainer {
     display: flex;
@@ -342,11 +342,12 @@
 }
 
 @media (max-width: 768px) {
-    .newzealandGuide{
+    .newzealandGuide {
         font-size: 25px;
         text-align: center;
         color: #01ac28;
     }
+
     .heading {
         font-size: 1.5rem;
     }

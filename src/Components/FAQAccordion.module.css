@@ -83,7 +83,8 @@
     padding: 8px;
   }
 }
-@media (prefers-color-scheme: dark) {
+
+/* @media (prefers-color-scheme: dark) {
   .textXl {
     color: #a6e988;
   }
@@ -111,4 +112,4 @@
   .faqItem.active .faqAnswer {
     color: #ffffff;
   }
-}
+} */

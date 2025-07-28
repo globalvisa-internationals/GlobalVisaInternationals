@@ -1,5 +1,5 @@
 /* ----------- Dark Mode ----------- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
   .CanadaSec,
   .CanadaData {
@@ -78,7 +78,7 @@
   }
 
 
-}
+} */
 
 .imageContainer {
   display: flex;

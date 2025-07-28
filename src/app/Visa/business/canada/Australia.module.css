@@ -1,5 +1,5 @@
 /* ----------- Dark Mode ----------- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
     .canadaSec,
     .canadaData {
@@ -81,7 +81,7 @@
     }
 
 
-}
+} */
 
 .imageContainer {
     display: flex;
@@ -374,11 +374,12 @@
 
 
 @media screen and (max-width: 768px) {
-    .canadaGuide{
+    .canadaGuide {
         text-align: center;
         font-size: 25px;
         color: #01ac28;
     }
+
     .imageContainer {
         justify-content: center;
         padding-top: 70px;

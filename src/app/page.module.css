@@ -6,7 +6,7 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
   .HomeSec {
     background-color: #333;
@@ -164,10 +164,10 @@
 
     .iframe {
       filter: invert(90%) hue-rotate(180deg);
-      /* helps with dark-themed map */
+      
     }
   }
-}
+} */
 
 .subtitle,
 .mainHeading {

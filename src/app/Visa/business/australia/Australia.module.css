@@ -1,5 +1,5 @@
 /* ----------- Dark Mode ----------- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
     .AustraliaSec,
     .AustraliaData {
@@ -81,7 +81,7 @@
     }
 
 
-}
+} */
 
 .imageContainer {
     display: flex;
@@ -342,10 +342,11 @@
 }
 
 @media (max-width: 768px) {
-    .AustraliaGuide{
+    .AustraliaGuide {
         text-align: center;
         font-size: 25px;
     }
+
     .heading {
         font-size: 1.5rem;
     }

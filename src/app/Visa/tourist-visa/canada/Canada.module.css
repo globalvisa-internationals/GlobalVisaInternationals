@@ -1,5 +1,5 @@
 /* ----------- Dark Mode ----------- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
   .CanadaSec,
   .CanadaData {
@@ -59,7 +59,7 @@
   .popupContent button:hover {
     background-color: #1e1e1e;
   }
-}
+} */
 
 .imageContainer {
   display: flex;
