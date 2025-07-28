@@ -1,7 +1,3 @@
-
-
-
-
 .text {
   color: #1b1b1b;
   text-decoration: none;
@@ -20,9 +16,9 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .footerContent {
@@ -90,13 +86,16 @@
 .callIcon {
   left: 15px;
 }
+
 .callIcon,
 .whatsappIcon :hover {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
 }
+
 /* Responsive Icons */
 @media (max-width: 600px) {
+
   .callIcon,
   .whatsappIcon {
     width: 40px;
@@ -115,6 +114,7 @@ screen and (max-width: 768px),
 screen and (max-width: 1118px),
 screen and (max-width: 340px),
 screen and (min-width: 1118px) {
+
   .callIcon,
   .whatsappIcon {
     width: 40px;
@@ -126,8 +126,9 @@ screen and (min-width: 1118px) {
     right: 15px;
   }
 }
+
 /* 🌗 Dark Mode Styles for Footer & Icons */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .text {
     color: #e0e0e0;
   }
@@ -169,4 +170,4 @@ screen and (min-width: 1118px) {
     opacity: 0.9;
     transform: scale(1.2);
   }
-}
+} */
