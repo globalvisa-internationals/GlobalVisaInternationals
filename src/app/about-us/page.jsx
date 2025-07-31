@@ -6,6 +6,52 @@ import VisaForm from '@/Components/VisaForm';
 import Head from 'next/head';
 
 
+export const metadata = {
+  title: "About Us | Global Visa Internationals - Leading Visa & Immigration Consultants in Bangalore",
+  description:
+    "Learn more about Global Visa Internationals, a trusted visa and immigration consultancy in Bangalore. We provide expert assistance for Tourist, Student, Work, PR, and Business Visas for Canada, USA, UK, Australia, Europe, and more with 75,000+ happy clients.",
+  keywords: [
+    "about global visa internationals",
+    "visa consultants in Bangalore",
+    "immigration consultants in Bangalore",
+    "visa services Bangalore",
+    "study visa experts",
+    "tourist visa assistance",
+    "work permit consultants",
+    "Canada visa consultant",
+    "Australia visa consultant",
+    "UK visa consultant",
+    "USA visa consultant"
+  ],
+  alternates: { canonical: "https://www.globalvisainternationals.com/about-us" },
+  openGraph: {
+    title: "About Us | Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
+    description:
+      "Discover the story and services of Global Visa Internationals. Leading experts in PR, Work, Study & Visit visas for Canada, Australia, USA, UK, and more.",
+    url: "https://www.globalvisainternationals.com/about-us",
+    siteName: "Global Visa Internationals",
+    type: "website",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "About Global Visa Internationals - Visa and Immigration Consultants",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
+    description:
+      "Learn more about Global Visa Internationals, offering expert PR, Work, Study & Tourist visa services with 75,000+ satisfied clients.",
+    site: "@GLOBALVISA1505",
+    creator: "@GLOBALVISA1505",
+    images: ["https://www.globalvisainternationals.com/banner.webp"],
+  },
+};
+
+
 
 
 export default function About() {
