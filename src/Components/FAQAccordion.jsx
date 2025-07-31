@@ -12,6 +12,7 @@ const FAQAccordion = ({ faqs = [] }) => {
 
   return (
     <div className={styles.faqSection}>
+      <h2 className={styles.textXl}>Frequently Asked Questions</h2>
       {faqs.map((faq, index) => (
         <div
           key={index}
@@ -20,9 +21,12 @@ const FAQAccordion = ({ faqs = [] }) => {
           <div className={styles.faqQuestion} onClick={() => handleToggle(index)}>
             {faq.question}
           </div>
-          {activeIndex === index && (
-            <div className={styles.faqAnswer}>{faq.answer}</div>
-          )}
+          <div
+            className={styles.faqAnswer}
+            style={{ maxHeight: activeIndex === index ? '500px' : '0' }}
+          >
+            {faq.answer}
+          </div>
         </div>
       ))}
     </div>

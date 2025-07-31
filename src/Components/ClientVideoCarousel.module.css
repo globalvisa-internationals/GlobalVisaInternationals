@@ -1,4 +1,3 @@
-
 .videoContainer {
   overflow: hidden;
   padding: 20px;
@@ -11,7 +10,7 @@
 }
 
 .videoContainer:hover .carouselTrack {
-  animation-play-state: paused;
+  animation-play-state: paused !important;
 }
 
 /* Carousel Wrapper */

@@ -23,9 +23,7 @@ const ClientVideoCarousel = ({ videos = [] }) => {
 
   return (
     <section id={styles.clientReview}>
-      <h2 id={styles.clientVideo} className={styles.subtitle}>
-        Client Testimonial
-      </h2>
+
       <div className={styles.videoContainer}>
         <div className={styles.videoCarousel}>
           <div className={styles.carouselTrack} ref={videoCarouselRef}>

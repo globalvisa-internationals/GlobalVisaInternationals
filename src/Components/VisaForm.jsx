@@ -1,5 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import styles from './VisaForm.module.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
@@ -7,6 +9,8 @@ export default function VisaForm() {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [phone, setPhone] = useState('');
+  const [phoneError, setPhoneError] = useState('');
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -15,8 +19,20 @@ export default function VisaForm() {
     document.body.appendChild(script);
   }, []);
 
+  const validatePhone = (number) => {
+    // Basic validation: at least 8 digits after country code
+    return number.replace(/\D/g, '').length >= 10;
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!validatePhone(phone)) {
+      setPhoneError('❌ Please enter a valid phone number.');
+      return;
+    } else {
+      setPhoneError('');
+    }
 
     const form = event.target;
     const formData = new FormData(form);
@@ -34,11 +50,13 @@ export default function VisaForm() {
 
     const payload = {
       ...Object.fromEntries(formData.entries()),
+      phone,
       recaptchaToken: token,
     };
 
     setShowPopup(true);
     form.reset();
+    setPhone('');
 
     setTimeout(() => {
       setShowPopup(false);
@@ -64,10 +82,22 @@ export default function VisaForm() {
     <div className={styles.formSection}>
       <h1 className={styles.formtitle}>Visa Inquiry Form</h1>
       <form onSubmit={handleSubmit}>
-        <div className={styles.row}>
-          <input className={styles.input} name="name" placeholder="Enter your name" required />
-          <input className={styles.input} name="phone" placeholder="Enter your phone number" required />
+        <div className={styles.row1}><input className={styles.input} name="name" placeholder="Enter your name" required /></div>
+
+        <div className={styles.row1}>
+
+          <PhoneInput
+            country={'in'}
+            value={phone}
+            onChange={setPhone}
+            inputClass={styles.input}
+            enableSearch={true}
+            placeholder="Enter phone number"
+            inputProps={{ name: 'phone', required: true }}
+          />
         </div>
+        {phoneError && <p style={{ color: 'red', fontSize: '14px' }}>{phoneError}</p>}
+
         <div className={styles.row}>
           <select className={styles.select} name="country" required>
             <option value="">Select Country</option>
@@ -82,6 +112,7 @@ export default function VisaForm() {
             ))}
           </select>
         </div>
+
         <div className={styles.row}>
           <input className={styles.input} name="applicants" type="number" min="1" placeholder="Number of applicants" required />
           <select className={styles.select} name="age" required>
@@ -90,6 +121,7 @@ export default function VisaForm() {
             <option value="45+">45+</option>
           </select>
         </div>
+
         <div className={styles.row}>
           <select className={styles.select} name="education" required>
             <option value="">Select Qualification</option>
@@ -99,10 +131,12 @@ export default function VisaForm() {
           </select>
           <input className={styles.input} name="email" type="email" placeholder="Enter your email" required />
         </div>
+
         <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
       </form>
+
       {showPopup && (
         <div className={styles.popupOverlay}>
           <div className={styles.popupContent}>

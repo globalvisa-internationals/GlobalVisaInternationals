@@ -23,7 +23,7 @@ const AnimatedHR = ({ direction = 'left', duration = 1, delay = 0 }) => {
       }}
       style={{
         transformOrigin: isLeft ? 'left' : 'right',
-        background: '#4caf50',
+        background: '#002B5B',
         height: '2px',
         border: 'none',
         margin: '1.5rem 0',

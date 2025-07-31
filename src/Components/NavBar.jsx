@@ -48,7 +48,7 @@ const NavBar = () => {
         <Link href="/" className={styles.logoLink}>
           <Image
             className={styles.logo}
-            src="/gvilogo.png"
+            src="/Global-Visa-Internationals-Logo.svg"
             alt="Global Visa Internationals Logo"
             width={120}
             height={40}
@@ -68,7 +68,7 @@ const NavBar = () => {
 
         {/* Navigation Links */}
         <ul className={clsx(styles.navLinks, { [styles.showMenu]: menuOpen })}>
-          
+
           <li><Link href="/about-us" title="ABOUT US">ABOUT</Link></li>
 
           {/* Dropdown Menus */}

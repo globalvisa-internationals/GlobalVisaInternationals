@@ -6,3 +6,44 @@
 
 
 } */
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+:root {
+  --nav-bg: #0A1F44;
+  --nav-hover-bg: #2C3E50;
+  --nav-hover-accent: #6386c2;
+  --submenu-bg: #1449a5;
+  --primary: #002B5B;
+  --accent: #057A7E;
+  --background: #F5F6F8;
+  --text: #333333;
+}
+
+
+/* :root {
+  --nav-bg: #1C1C1E;
+  --nav-hover-bg: #333333;
+  --nav-hover-accent: #6386c2;
+  --submenu-bg: #2B2B2E;
+} */
+
+
+
+/* :root {
+  --nav-bg: #003C3C;
+  --nav-hover-bg: #005252;
+  --nav-hover-accent: #3a7a7a;
+  --submenu-bg: #024242;
+} */
+
+
+/* :root {
+  --nav-bg: #1E2A36;
+  --nav-hover-accent: #6386c2;
+  --nav-hover-bg: #2B3A47;
+  --submenu-bg: #263340;
+} */

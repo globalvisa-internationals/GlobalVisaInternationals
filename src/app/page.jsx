@@ -9,7 +9,12 @@ import AnimatedHR from "@/Components/AnimatedHR";
 import GalleryCarousel from "@/Components/GalleryCarousel";
 import ClientVideoCarousel from "@/Components/ClientVideoCarousel";
 import FAQAccordion from '@/Components/FAQAccordion';
+import { Agbalumo } from "next/font/google";
 
+const agbalumo = Agbalumo({
+  subsets: ["latin"],
+  weight: "400", // Only one weight available
+});
 export const metadata = {
   title: "Top Visa Consultants in Bangalore | USA, Canada, UK,Australia, Europe Visa assistance Experts",
   description: "we are your trusted visa consultant and immigration consultant, providing professional visa services and immigration services customized to suit your travel and settlement needs. Whether you're applying for a work permit, seeking visa assistance, or starting your visa application, our experienced team ensures you meet all necessary visa requirements with ease and confidence",
@@ -220,208 +225,186 @@ export default function Home() {
       <main className={styles.HomeSec}>
         {/* Background Image with Correct Styling */}
         <AnimatedSection direction="up" reverseOnExit={true}>
-          <section className={styles.thoughtSection}>
-            <div className={styles.imageContainer}>
-              <Image
-                src="/images/w-map.webp"
-                alt="World Map Background"
-                fill
-                quality={100}
-                className={styles.backgroundImage}
+          <div className={styles.logoCard}>
+            <img
+              src="/svg/World-Map.gif"
+              alt="World Map"
+              className={styles.worldMap}
+            />
+            <div className={styles.logoWrapper}>
+              <img
+                src="/Global-Visa-Internationals-Logo.svg"
+                alt="Global Visa Internationals Logo"
+                className={styles.logoImage}
               />
+              <p className={styles.tagline}>
+                Your Passport To The World Starts With Us
+              </p>
             </div>
-          </section>
+          </div>
         </AnimatedSection>
 
-        <AnimatedSection direction="right" reverseOnExit={true}>
+        <AnimatedSection direction="up" reverseOnExit={true}>
+
           <h1 className={styles.waveText}>
-            Global Visa Internationals | The Visa And Immigration Assistance Experts | We Deal With All Type Of Visas
+            The Visa And Immigration Assistance Experts
+            |
+            We Deal With All Type Of Visas
           </h1>
         </AnimatedSection>
 
         {/* About Us Section */}
-        <AnimatedSection direction="right" reverseOnExit={true}>
-          <section id="aboutUs">
-            <section className={styles.storyContainer}>
+        <section id="aboutUs">
+          <section className={styles.storyContainer}>
+            {/* Left Image */}
+            <AnimatedSection direction="left" reverseOnExit={true}>
               <div className={styles.imageWrapper}>
                 <Image
                   src="/images/story.webp"
                   alt="Best visa agents in Bangalore"
                   fill
-                  quality={100}
-                  className={styles.responsiveImage1}
+                  sizes="(max-width: 768px) 100vw, 380px"
+                  className={styles.responsiveImage}
                 />
               </div>
+            </AnimatedSection>
 
-              {/* Text Section */}
-              <div className={styles.textContent}>
-                <h2 className={styles.subtitle}>Our Story</h2>
-                <p>
-                  At Global Visa Internationals, we are your trusted visa
-                  consultant and immigration consultant, providing professional
-                  visa services and immigration services customized to suit your
-                  travel and settlement needs. Whether you're applying for a
-                  work permit, seeking visa assistance, or starting your visa
-                  application, our experienced team ensures you meet all
-                  necessary visa requirements with ease and confidence.
-                </p>
+            {/* Right Text */}
+            <div className={styles.textContent}>
+              <h2 className={styles.subtitle}>Our Story</h2>
 
-                <p>
-                  We specialize in student visa consultant services for aspiring
-                  international students. From guiding you through the visa
-                  documentation checklist to offering detailed visa interview
-                  preparation, we simplify the process. As a leading Canada
-                  study visa consultant, UK study visa consultant, and USA study
-                  visa consultant, we offer dedicated support to help you
-                  achieve your academic dreams abroad. We also assist with
-                  tourist visas, including Canada tourist visa and Australia
-                  tourist visa applications.
-                </p>
+              {/* Sequential Animated Cards */}
+              <AnimatedSection direction="up" delay={0.1} reverseOnExit={true}>
+                <div className={styles.storyCard}>
+                  <p>
+                    At Global Visa Internationals, we are your trusted visa consultant
+                    and immigration consultant, providing professional visa services and
+                    immigration services customized to suit your travel and settlement
+                    needs. Whether you're applying for a work permit, seeking visa
+                    assistance, or starting your visa application, our experienced team
+                    ensures you meet all necessary visa requirements with ease and
+                    confidence.
+                  </p>
+                </div>
+              </AnimatedSection>
 
-                <p>
-                  Our team of certified visa processing agents and professionals
-                  with verified immigration agent qualifications work diligently
-                  to reduce your visa processing time and increase your approval
-                  chances. Whether you're looking to study, work, or travel
-                  abroad, we deliver reliable, end-to-end solutions that open
-                  doors to global opportunities.
-                </p>
-                <p>
-                  Global Visa Internationals is a private Visa consultancy which
-                  is not affiliated with any government or embassy. We offer
-                  independent visa and immigration assistance & services.
-                </p>
-              </div>
-            </section>
+              <AnimatedSection direction="up" delay={0.2} reverseOnExit={true}>
+                <div className={styles.storyCard}>
+                  <p>
+                    We specialize in student visa consultant services for aspiring
+                    international students. From guiding you through the visa
+                    documentation checklist to offering detailed visa interview
+                    preparation, we simplify the process. As a leading Canada study visa
+                    consultant, UK study visa consultant, and USA study visa consultant,
+                    we offer dedicated support to help you achieve your academic dreams
+                    abroad. We also assist with tourist visas, including Canada tourist
+                    visa and Australia tourist visa applications.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection direction="up" delay={0.3} reverseOnExit={true}>
+                <div className={styles.storyCard}>
+                  <p>
+                    Our team of certified visa processing agents and professionals with
+                    verified immigration agent qualifications work diligently to reduce
+                    your visa processing time and increase your approval chances.
+                    Whether you're looking to study, work, or travel abroad, we deliver
+                    reliable, end-to-end solutions that open doors to global
+                    opportunities.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection direction="up" delay={0.4} reverseOnExit={true}>
+                <div className={styles.storyCard}>
+                  <p>
+                    Global Visa Internationals is a private Visa consultancy which is
+                    not affiliated with any government or embassy. We offer independent
+                    visa and immigration assistance & services.
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
           </section>
-        </AnimatedSection>
+        </section>
+
+
 
         <AnimatedHR direction="left" duration={1.2} />
 
-        <section
-          className={styles.whyChooseContainer}
-          id="Why Global Visa Internationals?"
-        >
+        <section className={styles.whyChooseContainer} id="Why Global Visa Internationals?">
           <AnimatedSection direction="down" reverseOnExit={true}>
             <h2 className={styles.subtitle}>Why Global Visa Internationals?</h2>
           </AnimatedSection>
-          <ul>
-            <AnimatedSection direction="down" reverseOnExit={true}>
-              <li>
-                At <strong>Global Visa Internationals</strong>, we specialize in
-                comprehensive <strong>visa consultation services</strong>,
-                helping individuals and families successfully navigate the
-                complex visa process for over <strong>9+ years</strong>. Based
-                in <strong>Bangalore</strong>, we've proudly processed{" "}
-                <strong>55,000+ visas</strong> and conducted over{" "}
-                <strong>75,000 expert consultations</strong> across all major
-                visa categories.
-              </li>
 
-              <li>
-                With nearly a decade of experience, our expert visa consultants have helped tens of thousands of clients confidently plan their global journeys. While we do not issue visas or represent any government body, we offer personalized advisory,{" "}
-                <strong>documentation support</strong>, and eligibility guidance
-                for all visa types.
-              </li>
+          {/* Main Description */}
+          <AnimatedSection direction="down" reverseOnExit={true}>
+            <p>
+              At <strong>Global Visa Internationals</strong>, we specialize in comprehensive
+              <strong> visa consultation services</strong>, helping individuals and families
+              successfully navigate the complex visa process for over <strong>9+ years</strong>.
+              Based in <strong>Bangalore</strong>, we've processed
+              <strong> 55,000+ visas</strong> and conducted over
+              <strong> 75,000 expert consultations</strong> across major visa categories.
+            </p>
+            <p>
+              While we do not issue visas or represent any government body, our certified
+              consultants offer <strong>personalized advisory</strong>,
+              <strong> documentation support</strong>, and <strong>eligibility guidance</strong>
+              for all visa types.
+            </p>
+          </AnimatedSection>
 
-              <li>
-                <h3>Our Services Include Expert Assistance With:</h3>
-              </li>
-              <ul>
-                <li>
-                  <strong>Student Visa Assistance</strong> & Study Abroad
-                  Planning
-                </li>
-                <li>
-                  <strong>Work Visa Consultation</strong> for Professionals
-                </li>
-                <li>
-                  <strong>Tourist & Visitor Visa</strong> Assistance for Indian
-                  Citizens
-                </li>
-                <li>
-                  <strong>Business Travel Visa</strong> Assistance
-                </li>
-                <li>
-                  <strong>Permanent Residency (PR)</strong> Visa Guidance
-                </li>
-                <li>
-                  <strong>Skilled Migration Visa</strong> Support
-                </li>
-                <li>
-                  <strong>Spouse & Dependent Visa</strong> Assistance
-                </li>
-                <li>
-                  <strong>Refused Visa Reapplication</strong> & Review Services
-                </li>
-                <li>And more customized solutions…</li>
-              </ul>
-
-              <li>
-                We provide end-to-end private visa consulting, ensuring your
-                documents, eligibility, and travel goals align with the latest
-                immigration requirements of your destination country.
-              </li>
+          {/* SIDE-BY-SIDE CARDS */}
+          <div className={styles.serviceCards}>
+            <AnimatedSection direction="left" reverseOnExit={true}>
+              <div className={styles.serviceCard}>
+                <h3>Our Services Include:</h3>
+                <ul>
+                  <li>Student Visa Assistance & Study Abroad Planning</li>
+                  <li>Work Visa Consultation for Professionals</li>
+                  <li>Tourist & Visitor Visa Assistance for Indian Citizens</li>
+                  <li>Business Travel Visa Assistance</li>
+                  <li>Permanent Residency (PR) Visa Guidance</li>
+                  <li>Skilled Migration Visa Support</li>
+                  <li>Spouse & Dependent Visa Assistance</li>
+                  <li>Refused Visa Reapplication & Review Services</li>
+                  <li>And more customized solutions…</li>
+                </ul>
+              </div>
             </AnimatedSection>
-            <AnimatedSection direction="down" reverseOnExit={true}>
-              <li>
-                <h3>Popular Visa Destinations We Support:</h3>
-              </li>
-              <ul>
-                <li>
-                  <strong>Canada Visa Assistance</strong> – Study, Work, PR
-                </li>
-                <li>
-                  <strong>Australia PR Visa Consulting</strong>
-                </li>
-                <li>
-                  <strong>UK Student Visa Assistance</strong>
-                </li>
-                <li>
-                  <strong>USA Visitor & Student Visa Guidance</strong>
-                </li>
-                <li>
-                  <strong>Europe Schengen Visa Assistance</strong>
-                </li>
-                <li>And many more global destinations…</li>
-              </ul>
 
-              <li>
-                Whether you're planning to <strong>work in Australia</strong>,{" "}
-                <strong>study in Canada</strong>, or{" "}
-                <strong>travel to Europe</strong>, our independent consultancy
-                provides step-by-step visa guidance tailored to your individual
-                goals.
-              </li>
-
-              <li>
-                Our <strong>experienced and certified consultants</strong> are
-                committed to assisting you throughout the entire visa journey,
-                ensuring clarity, compliance, and confidence at every step.
-              </li>
-
-              <li>
-                We offer <strong>personalized immigration solutions</strong> for
-                individuals, students, professionals, and families across India.
-              </li>
-
-              <li>
-                Experience a{" "}
-                <strong>transparent and trustworthy visa process</strong> with
-                complete support—from eligibility check to successful
-                application submission.
-              </li>
-
-              <li>
-                <strong>Disclaimer:</strong> Global Visa Internationals is a
-                private visa consultancy and is not affiliated with any
-                government or embassy. We provide independent assistance and
-                advisory services for visa and immigration processes.
-              </li>
+            <AnimatedSection direction="right" reverseOnExit={true}>
+              <div className={styles.serviceCard}>
+                <h3>Popular Visa Destinations:</h3>
+                <ul>
+                  <li>Canada Visa Assistance – Study, Work, PR</li>
+                  <li>Australia PR Visa Consulting</li>
+                  <li>UK Student Visa Assistance</li>
+                  <li>USA Visitor & Student Visa Guidance</li>
+                  <li>Europe Schengen Visa Assistance</li>
+                  <li>And many more global destinations…</li>
+                </ul>
+              </div>
             </AnimatedSection>
-          </ul>
+          </div>
+
+          {/* Bottom Description */}
+          <AnimatedSection direction="down" reverseOnExit={true}>
+            <p>
+              Whether you're planning to <strong>work in Australia</strong>,
+              <strong> study in Canada</strong>, or <strong>travel to Europe</strong>,
+              our consultancy provides step-by-step guidance tailored to your goals.
+            </p>
+            <p>
+              <strong>Disclaimer:</strong> Global Visa Internationals is a private visa
+              consultancy and is not affiliated with any government or embassy.
+              We provide independent visa and immigration assistance services.
+            </p>
+          </AnimatedSection>
         </section>
-        <AnimatedHR direction="left" duration={1.2} />
+
 
         <AnimatedSection direction="down" reverseOnExit={true}>
           <section>
@@ -506,361 +489,229 @@ export default function Home() {
 
         <AnimatedHR direction="left" duration={1.2} />
 
-        {/* Our Values */}
-
         <section id="Our Values">
           <h2 className={styles.subtitle}>Our Values</h2>
-          <section
-            className={styles.missionVisionValues}
-            id="missionVisionValues"
-          >
-            <AnimatedSection direction="right" reverseOnExit={true}>
+
+          <section className={styles.missionVisionValues}>
+            <AnimatedSection direction="right" reverseOnExit>
               <div className={styles.missionCard}>
-                <h2 className={styles.subtitle}>OUR MISSION</h2>
-                <div>
-                  <img
-                    className={styles.custImg}
-                    src="/images/target.png"
-                    alt="Mission Icon"
-                    loading="lazy"
-                  />
-                </div>
+                <img
+                  className={styles.custImg}
+                  src="/gviVMV/mission-icon.png"
+                  alt="Mission Icon"
+                  loading="lazy"
+                />
+                <h3>Our Mission</h3>
                 <p>
-                  At Global Visa Internationals, our mission is to simplify and
-                  streamline the complex process of international immigration
-                  and visa application services. We are committed to delivering
-                  clear, ethical, and expert visa consultancy to individuals,
-                  families, students, skilled professionals, and business
-                  travelers across the globe. <br />
-                  By combining deep immigration industry experience,
-                  personalized attention, and AI-powered visa processing tools,
-                  we enable our clients to pursue study abroad opportunities,
-                  international employment, business expansion, or personal
-                  travel with total confidence..
-                  <br /> Whether it's a tourist visa, student visa, work permit,
-                  or permanent residency, we stand by our clients at every
-                  stage, offering end-to-end support that transforms dreams into
-                  global realities.
+                  We aim to simplify international visa and immigration processes
+                  with expert guidance, ethical support, and end-to-end assistance,
+                  empowering students, professionals, and families to achieve
+                  their global aspirations with confidence.
                 </p>
               </div>
             </AnimatedSection>
 
-            <AnimatedSection direction="down" reverseOnExit={true}>
+            <AnimatedSection direction="down" reverseOnExit>
               <div className={styles.visionCard}>
-                <h2 className={styles.subtitle}>OUR VISION</h2>
-                <div>
-                  <img
-                    className={styles.custImg}
-                    src="/images/focus.png"
-                    alt="Vision Icon"
-                    loading="lazy"
-                  />
-                </div>
+                <img
+                  className={styles.custImg}
+                  src="/gviVMV/vision-icon.png"
+                  alt="Vision Icon"
+                  loading="lazy"
+                />
+                <h3>Our Vision</h3>
                 <p>
-                  Our vision at Global Visa Internationals is to become the
-                  world’s most trusted, innovative, and client-focused
-                  immigration consultancy. We believe that the future of
-                  immigration lies in breaking barriers and building global
-                  bridges—where borders are not obstacles, but gateways to
-                  opportunity, growth, and personal transformation.
-                </p>
-                <p>
-                  We aim to lead the global immigration industry through a
-                  client-centric approach, providing customized, fast, and
-                  reliable visa solutions. With a relentless focus on
-                  transparency, service excellence, and continuous improvement,
-                  we aspire to be the first choice for individuals, families,
-                  and enterprises seeking seamless global mobility across all
-                  visa categories.
+                  To be the most trusted and innovative visa consultancy, helping
+                  people overcome borders and create opportunities worldwide
+                  through reliable, transparent, and client-focused solutions.
                 </p>
               </div>
             </AnimatedSection>
-            <AnimatedSection direction="left" reverseOnExit={true}>
+
+            <AnimatedSection direction="left" reverseOnExit>
               <div className={styles.valuesCard}>
-                <h2 className={styles.subtitle}>CORE VALUES</h2>
-                <div>
-                  <img
-                    className={styles.custImg}
-                    src="/images/global-service.png"
-                    alt="Core Values Icon"
-                    loading="lazy"
-                  />
-                </div>
+                <img
+                  className={styles.custImg}
+                  src="/gviVMV/values-icon.png"
+                  alt="Core Values Icon"
+                  loading="lazy"
+                />
+                <h3>Core Values</h3>
                 <p>
-                  <strong>Transparency :</strong> We provide clear, honest, and
-                  straightforward guidance. Our clients are always informed,
-                  empowered, and in control of their immigration journey. <br />
-                  <strong>Client-First Policy : </strong>
-                  Every client matters. We personalize our services to align
-                  with your unique goals, ensuring tailored strategies for
-                  maximum success. <br />
-                  <strong>Empathy :</strong> Immigration is personal. We
-                  understand the emotions and life transitions involved, and
-                  support our clients with compassion and care.
-                  <br />
-                  <strong>Accountability</strong>
-                  We take full responsibility for every step of the process—your
-                  success is our success, and your trust is our highest
-                  priority. <br />
-                  <strong>Global Perspective</strong>
-                  We operate with a global mindset. Our advice is always
-                  informed by up-to-date immigration laws, global trends, and
-                  local nuances.
+                  Transparency, Client-First, Empathy, Accountability, and a
+                  Global Perspective guide everything we do to support your
+                  international journey.
                 </p>
               </div>
             </AnimatedSection>
           </section>
         </section>
 
-        <AnimatedHR direction="left" duration={1.2} />
-        {/* Our Visa & Immigration Services */}
 
-        <section className={styles.services}>
-          <div className={styles.visaCard}>
-            <div className={styles.cardInner}>
-              <div className={styles.cardFront}>
-                <div className={styles.top1}>
-                  <img src="/svg/Tourist-Visa.webp" alt="Business Visa" />
-                  <h3>Tourist Visa Assistance</h3>
-                </div>
-                <div className={styles.top2}>
-                  Contact Global Visa Internationals For Business Visa
-                  assistance
-                </div>
-              </div>
+        {/* <AnimatedHR direction="left" duration={1.2} /> */}
 
-              <div className={styles.cardBack}>
-                <h3>Tourist Visa</h3>
-                <ul>
-                  <li>
-                    <a href="/Visa/tourist-visa/canada">CANADA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/tourist-visa/australia">AUSTRALIA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/tourist-visa/usa">USA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/tourist-visa/uk">UK</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/tourist-visa/europe">EUROPE</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/tourist-visa/japan">JAPAN</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/tourist-visa/dubai">DUBAI</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/tourist-visa/singapore">SINGAPORE</a>
-                  </li>
-                </ul>
+
+        <AnimatedSection direction="up" reverseOnExit={true}>
+          <h2 className={styles.subtitle}>Services</h2>
+          <section className={styles.services}>
+
+            <div className={styles.visaCard}>
+              <div className={styles.cardInner}>
+                <div className={styles.cardFront}>
+                  <div className={styles.top1}>
+                    <img src="/svg/Tourist-Visa.webp" alt="Tourist Visa" />
+                    <h3>Tourist Visa</h3>
+                  </div>
+                  <div className={styles.top2}>Quick & hassle-free tourist visa assistance.</div>
+                </div>
+                <div className={styles.cardBack}>
+                  <h3>Tourist Visa</h3>
+                  <ul>
+                    <li><a href="/Visa/tourist-visa/canada">CANADA</a></li>
+                    <li><a href="/Visa/tourist-visa/australia">AUSTRALIA</a></li>
+                    <li><a href="/Visa/tourist-visa/usa">USA</a></li>
+                    <li><a href="/Visa/tourist-visa/uk">UK</a></li>
+                    <li><a href="/Visa/tourist-visa/europe">EUROPE</a></li>
+                    <li><a href="/Visa/tourist-visa/japan">JAPAN</a></li>
+                    <li><a href="/Visa/tourist-visa/dubai">DUBAI</a></li>
+                    <li><a href="/Visa/tourist-visa/singapore">SINGAPORE</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className={styles.visaCard}>
-            <div className={styles.cardInner}>
-              <div className={styles.cardFront}>
-                <div className={styles.top1}>
-                  <img src="/svg/business-visa.webp" alt="Business Visa" />
-                  <h3>Business Visa Assistance</h3>
+            {/* Business Visa */}
+            <div className={styles.visaCard}>
+              <div className={styles.cardInner}>
+                <div className={styles.cardFront}>
+                  <div className={styles.top1}>
+                    <img src="/svg/business-visa.webp" alt="Business Visa" />
+                    <h3>Business Visa</h3>
+                  </div>
+                  <div className={styles.top2}>Professional support for business visas.</div>
                 </div>
-                <div className={styles.top2}>
-                  Contact Global Visa Internationals For Business Visa
-                  assistance
+                <div className={styles.cardBack}>
+                  <h3>Business Visa</h3>
+                  <ul>
+                    <li><a href="/Visa/business/canada">CANADA</a></li>
+                    <li><a href="/Visa/business/australia">AUSTRALIA</a></li>
+                    <li><a href="/Visa/business/uk">UK</a></li>
+                    <li><a href="/Visa/business/europe">EUROPE</a></li>
+                    <li><a href="/Visa/business/new-zealand">NEW-ZEALAND</a></li>
+                  </ul>
                 </div>
-              </div>
-
-              <div className={styles.cardBack}>
-                <h3>Business Visa</h3>
-                <ul>
-                  <li>
-                    {" "}
-                    <a href="/Visa/business/canada">CANADA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/business/australia">AUSTRALIA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/business/uk">UK</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/business/europe">EUROPE</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/business/new-zealand">NEW-ZEALAND</a>
-                  </li>
-                </ul>
               </div>
             </div>
-          </div>
 
-          <div className={styles.visaCard}>
-            <div className={styles.cardInner}>
-              <div className={styles.cardFront}>
-                <div className={styles.top1}>
-                  <img src="/svg/PR-Visa.webp" alt="Permanent Resident Visa" />
-                  <h3>PR visa Assistance</h3>
+            {/* PR Visa */}
+            <div className={styles.visaCard}>
+              <div className={styles.cardInner}>
+                <div className={styles.cardFront}>
+                  <div className={styles.top1}>
+                    <img src="/svg/PR-Visa.webp" alt="PR Visa" />
+                    <h3>PR Visa</h3>
+                  </div>
+                  <div className={styles.top2}>Guidance for permanent residency visas.</div>
                 </div>
-                <div className={styles.top2}>
-                  Contact Global Visa Internationals For Permanent Resident visa
-                  assistance
+                <div className={styles.cardBack}>
+                  <h3>PR Visa</h3>
+                  <ul>
+                    <li><a href="/Visa/permanent-residency-visa/canada">CANADA</a></li>
+                    <li><a href="/Visa/permanent-residency-visa/australia">AUSTRALIA</a></li>
+                  </ul>
                 </div>
-              </div>
-
-              <div className={styles.cardBack}>
-                <h4>Permanent Resident visa</h4>
-                <ul>
-                  <li>
-                    <a href="/Visa/permanent-residency-visa/canada">CANADA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/permanent-residency-visa/australia">
-                      AUSTRALIA
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
-          </div>
 
-          <div className={styles.visaCard}>
-            <div className={styles.cardInner}>
-              <div className={styles.cardFront}>
-                <div className={styles.top1}>
-                  <img src="/svg/student-visa.webp" alt="Student Visa" />
-                  <h3>Student Visa Assistance</h3>
+            {/* Student Visa */}
+            <div className={styles.visaCard}>
+              <div className={styles.cardInner}>
+                <div className={styles.cardFront}>
+                  <div className={styles.top1}>
+                    <img src="/svg/student-visa.webp" alt="Student Visa" />
+                    <h3>Student Visa</h3>
+                  </div>
+                  <div className={styles.top2}>Study abroad made simple and fast.</div>
                 </div>
-                <div className={styles.top2}>
-                  Contact Global Visa Internationals For Student Visa assistance
+                <div className={styles.cardBack}>
+                  <h3>Student Visa</h3>
+                  <ul>
+                    <li><a href="/Visa/student-visa/canada">CANADA</a></li>
+                    <li><a href="/Visa/student-visa/australia">AUSTRALIA</a></li>
+                    <li><a href="/Visa/student-visa/usa">USA</a></li>
+                    <li><a href="/Visa/student-visa/uk">UK</a></li>
+                    <li><a href="/Visa/student-visa/europe">EUROPE</a></li>
+                    <li><a href="/Visa/student-visa/new-zealand">NEW-ZEALAND</a></li>
+                  </ul>
                 </div>
-              </div>
-
-              <div className={styles.cardBack}>
-                <h3>Student Visa</h3>
-                <ul>
-                  <li>
-                    <a href="/Visa/student-visa/canada">CANADA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/student-visa/australia">AUSTRALIA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/student-visa/usa">USA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/student-visa/uk">UK</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/student-visa/europe">EUROPE</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/student-visa/new-zealand">NEW-ZEALAND</a>
-                  </li>
-                </ul>
               </div>
             </div>
-          </div>
 
-          <div className={styles.visaCard}>
-            <div className={styles.cardInner}>
-              <div className={styles.cardFront}>
-                <div className={styles.top1}>
-                  <img src="/svg/Dependent Visa.webp" alt="Business Visa" />
-                  <h3>Dependent Visa Assistance</h3>
+            {/* Dependent Visa */}
+            <div className={styles.visaCard}>
+              <div className={styles.cardInner}>
+                <div className={styles.cardFront}>
+                  <div className={styles.top1}>
+                    <img src="/svg/Dependent Visa.webp" alt="Dependent Visa" />
+                    <h3>Dependent Visa</h3>
+                  </div>
+                  <div className={styles.top2}>Bring your family to live with you abroad.</div>
                 </div>
-                <div className={styles.top2}>
-                  Contact Global Visa Internationals For Dependent Visa
-                  assistance
+                <div className={styles.cardBack}>
+                  <h3>Dependent Visa</h3>
+                  <ul>
+                    <li><a href="/Visa/Dependent/canada">CANADA</a></li>
+                    <li><a href="/Visa/Dependent/australia">AUSTRALIA</a></li>
+                    <li><a href="/Visa/Dependent/uk">UK</a></li>
+                    <li><a href="/Visa/Dependent/europe">EUROPE</a></li>
+                    <li><a href="/Visa/Dependent/new-zealand">NEW-ZEALAND</a></li>
+                  </ul>
                 </div>
-              </div>
-
-              <div className={styles.cardBack}>
-                <h2>Dependent Visa</h2>
-                <ul>
-                  <li>
-                    <a href="/Visa/Dependent/canada">CANADA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/Dependent/australia">AUSTRALIA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/Dependent/uk">UK</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/Dependent/europe">EUROPE</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/Dependent/new-zealand">NEW-ZEALAND</a>
-                  </li>
-                </ul>
               </div>
             </div>
-          </div>
 
-          <div className={styles.visaCard}>
-            <div className={styles.cardInner}>
-              <div className={styles.cardFront}>
-                <div className={styles.top1}>
-                  <img src="/svg/refusal visa.webp" alt="Refusal Visa" />
-                  <h3>Refusal Visa Assistance</h3>
+            {/* Refusal Visa */}
+            <div className={styles.visaCard}>
+              <div className={styles.cardInner}>
+                <div className={styles.cardFront}>
+                  <div className={styles.top1}>
+                    <img src="/svg/refusal visa.webp" alt="Refusal Visa" />
+                    <h3>Refusal Visa</h3>
+                  </div>
+                  <div className={styles.top2}>Get expert help to overcome visa refusals.</div>
                 </div>
-                <div className={styles.top2}>
-                  Contact Global Visa Internationals For Business Visa
-                  assistance
+                <div className={styles.cardBack}>
+                  <h3>Refusal Visa</h3>
+                  <ul>
+                    <li><a href="/Visa/refusal-visa/canada">CANADA</a></li>
+                    <li><a href="/Visa/refusal-visa/australia">AUSTRALIA</a></li>
+                    <li><a href="/Visa/refusal-visa/usa">USA</a></li>
+                    <li><a href="/Visa/refusal-visa/uk">UK</a></li>
+                    <li><a href="/Visa/refusal-visa/europe">EUROPE</a></li>
+                    <li><a href="/Visa/refusal-visa/japan">JAPAN</a></li>
+                    <li><a href="/Visa/refusal-visa/dubai">DUBAI</a></li>
+                    <li><a href="/Visa/refusal-visa/singapore">SINGAPORE</a></li>
+                  </ul>
                 </div>
-              </div>
-
-              <div className={styles.cardBack}>
-                <h3>Refusal Visa</h3>
-                <ul>
-                  <li>
-                    <a href="/Visa/refusal-visa/canada">CANADA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/refusal-visa/australia">AUSTRALIA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/refusal-visa/usa">USA</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/refusal-visa/uk">UK</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/refusal-visa/europe">EUROPE</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/refusal-visa/japan">JAPAN</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/refusal-visa/dubai">DUBAI</a>
-                  </li>
-                  <li>
-                    <a href="/Visa/refusal-visa/singapore">SINGAPORE</a>
-                  </li>
-                </ul>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </AnimatedSection>
 
         <AnimatedHR direction="left" duration={1.2} />
-        <h2 className={styles.subtitle}> Contact</h2>
+
+        {/* <h2 className={styles.subtitle}> Contact</h2> */}
         <section className={styles.dataForm}>
           <div className={styles.formSection}>
             <VisaForm />
           </div>
 
           <div className={styles.faqSection}>
-            <h2 className={styles.textXl}>Frequently Asked Questions</h2>
             <FAQAccordion faqs={faqs} />
           </div>
         </section>
 
-        <AnimatedHR direction="left" duration={1.2} />
+        {/* <AnimatedHR direction="left" duration={1.2} /> */}
 
         <section id={styles.clientReview}>
           <h2 id={styles.clientVideo} className={styles.subtitle}>
