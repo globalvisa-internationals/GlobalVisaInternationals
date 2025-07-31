@@ -31,7 +31,6 @@
 
 .aboutUsContainer {
     display: flex;
-
     gap: 20px;
 }
 
@@ -153,6 +152,10 @@
 
 /* Responsive */
 @media screen and (max-width: 768px) {
+    .aboutUsContainer {
+        flex-wrap: wrap;
+    }
+
     .textContent {
         max-width: 100%;
     }
