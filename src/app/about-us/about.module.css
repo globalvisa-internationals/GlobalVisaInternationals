@@ -21,44 +21,41 @@
         color: #f7f7f7;
     }
 } */
-.aboutUsContainer {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 80px;
-    padding: 10px;
-    gap: 10px;
+.aboutSec {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333333;
-    /* Dark text */
+    color: #333;
 }
 
-.storyContainer {
+.aboutUsContainer {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
+
+    gap: 20px;
+}
+
+.textContent {
     font-size: 16px;
     line-height: 1.5;
-    padding: 10px;
-    gap: 10px;
-    color: #333333;
-    /* Dark text */
 }
+
+.textContent h2 {
+    font-size: 24px;
+    color: #002B5B;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
 
 .imageWrapper {
-    position: relative;
-    width: 365px;
     position: sticky;
     top: 20px;
+    width: 365px;
     height: 450px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    /* Soft shadow */
 }
 
 .responsiveImage {
@@ -68,115 +65,112 @@
     border-radius: 10px;
 }
 
-.textContent {
-    max-width: 60%;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333333;
-    /* Dark text */
-}
-
-.textContent h2 {
-    font-size: 24px;
-    color: #002B5B;
-    /* Corporate Blue */
-    text-align: center;
-}
-
-.aboutSec {
+.aboutdata {
     display: flex;
     justify-content: center;
     max-width: 90%;
     margin: 0 auto;
     font-size: 16px;
     line-height: 1.5;
-    color: #333333;
-    /* Dark text */
+    color: #333;
+    gap: 40px;
 }
 
-.subTitle,
-.subTitle1,
-.subTitle2 {
+.subTitle {
     text-align: center;
     color: #002B5B;
-    /* Corporate Blue for headings */
-    font-size: 28px;
+    /* Corporate Blue */
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.subTitle1 {
+    color: #057A7E;
+    /* Teal highlights */
+    font-weight: 700;
 }
 
 .whydata {
     flex: 1;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 10px;
     font-size: 16px;
     line-height: 1.5;
-    color: #333333;
-    /* Dark text */
 }
 
 .whydata h2 {
     font-size: 24px;
     color: #002B5B;
-    /* Corporate Blue */
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.whydata ul {
+.whydata ul,
+.whydata ol {
     list-style: none;
     padding: 0;
-    gap: 10px;
+    margin: 0;
 }
 
-.whydata ul li {
-    font-size: 16px;
-    line-height: 1.5;
+.whydata ul li,
+.whydata ol li {
     margin-bottom: 15px;
-    color: #333333;
-    /* Dark text */
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.whydata ul li strong {
-    font-weight: 900;
-    color: #057A7E;
-    /* Teal for highlights */
+/* Card Design */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 16px 20px;
+    margin: 15px 0;
+    color: #333;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Form Section */
 .formSection {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     width: 400px;
-    border-radius: 10px;
     padding: 20px;
-    margin-top: 40px;
+    border-radius: 10px;
     position: sticky;
     top: 60px;
-    height: fit-content;
-    background: #ffffff;
-    /* White card */
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    /* Soft shadow */
+
 }
-
-
 
 /* Responsive */
 @media screen and (max-width: 768px) {
     .textContent {
         max-width: 100%;
-        font-size: 16px;
     }
 
-    .aboutSec {
+    .card {
+        padding: 14px 16px;
+        margin: 12px 0;
+    }
+
+    .aboutdata {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .formSection {
         position: relative;
         width: 90%;
-        margin-bottom: 80px;
+        margin-bottom: 40px;
     }
 }
