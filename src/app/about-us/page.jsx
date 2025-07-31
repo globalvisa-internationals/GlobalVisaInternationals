@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './about.module.css';
 import React from 'react';
 import VisaForm from '@/Components/VisaForm';
+import Head from 'next/head';
 
 
 
