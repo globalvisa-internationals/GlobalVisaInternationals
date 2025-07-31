@@ -1,8 +1,8 @@
 
-import VisaForm from '@/Components/VisaForm';
-import styles from './Japan.module.css';
+import styles from '@/Components/Visa.module.css';
 import React from 'react';
 import Head from 'next/head';
+import VisaForm from '@/Components/VisaForm';
 
 export const metadata = {
   title: "Japan Tourist Visa Consultants in Bangalore | Global Visa Internationals",
