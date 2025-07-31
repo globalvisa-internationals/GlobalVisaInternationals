@@ -96,7 +96,9 @@
     max-width: 100%;
     height: auto;
     padding: 5px;
+
     margin: 0 auto;
+    margin-top: 20px;
   }
 
   .logoWrapper {
@@ -165,6 +167,8 @@
   font-size: 16px;
   line-height: 1.7;
   padding: 10px;
+  margin-top: 0;
+  padding-top: 0;
   color: var(--text);
 }
 
@@ -174,6 +178,8 @@
   text-align: center;
   color: var(--primary);
   margin-bottom: 15px;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 /* ===== STORY CARD ===== */

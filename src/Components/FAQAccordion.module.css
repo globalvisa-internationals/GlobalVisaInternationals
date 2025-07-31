@@ -13,7 +13,7 @@
   text-align: center;
   margin-bottom: 25px;
   color: #002B5B;
-  /* Corporate Dark Blue */
+  /* Corporate Blue */
 }
 
 /* FAQ Item */
@@ -37,7 +37,7 @@
   padding: 14px 18px;
   font-weight: 600;
   color: #002B5B;
-  /* Dark Blue */
+  /* Corporate Blue */
   background-color: #f8f8f8;
   cursor: pointer;
   border-radius: 12px 12px 0 0;
@@ -47,8 +47,8 @@
 }
 
 .faqItem.active .faqQuestion {
-  background-color: #005241;
-  /* Professional Teal */
+  background-color: #057A7E;
+  /* Teal */
   color: #ffffff;
 }
 
@@ -57,9 +57,10 @@
   font-size: 16px;
   max-height: 0;
   overflow: hidden;
-  padding: 0 18px;
+  padding: 0;
+  /* FIXED: Remove padding by default */
   line-height: 1.5;
-  color: #333;
+  color: #333333;
   transition: max-height 0.4s ease, padding 0.3s ease;
   background-color: #ffffff;
   border-top: 1px solid #eee;
@@ -68,9 +69,10 @@
 .faqItem.active .faqAnswer {
   max-height: 500px;
   padding: 12px 18px 16px;
+  /* Add padding only when active */
 }
 
-/* Responsive */
+/* ================= Mobile Styles ================= */
 @media (max-width: 768px) {
   .faqSection {
     margin: 0 auto;
@@ -79,6 +81,12 @@
 
   .textXl {
     font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .faqItem {
+    margin-bottom: 12px;
+    border-radius: 10px;
   }
 
   .faqQuestion {
@@ -88,6 +96,18 @@
 
   .faqAnswer {
     font-size: 15px;
+    padding: 0;
+    /* FIXED: No padding when closed */
+    line-height: 1.6;
+  }
+
+  .faqItem.active .faqAnswer {
     padding: 10px 12px;
+    /* Add padding when active */
+  }
+
+  /* Slight bounce effect for active mobile FAQ */
+  .faqItem.active {
+    transform: translateY(-2px) scale(1.01);
   }
 }

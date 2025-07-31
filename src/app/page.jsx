@@ -271,10 +271,11 @@ export default function Home() {
 
             {/* Right Text */}
             <div className={styles.textContent}>
-              <h2 className={styles.subtitle}>Our Story</h2>
+
 
               {/* Sequential Animated Cards */}
               <AnimatedSection direction="up" delay={0.1} reverseOnExit={true}>
+                <h2 className={styles.subtitle}>Our Story</h2>
                 <div className={styles.storyCard}>
                   <p>
                     At Global Visa Internationals, we are your trusted visa consultant
