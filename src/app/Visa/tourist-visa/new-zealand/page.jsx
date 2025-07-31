@@ -3,6 +3,8 @@ import VisaForm from '@/Components/VisaForm';
 import styles from './Japan.module.css';
 import React from 'react';
 import Head from 'next/head';
+
+
 export const metadata = {
   title: "New Zealand Tourist Visa Consultants in Bangalore | Global Visa Internationals",
   description:
