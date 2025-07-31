@@ -145,7 +145,7 @@
 
 
     max-width: 95%;
-    padding: 10px;
+    padding: 5px;
     position: sticky;
     top: 60px;
 
@@ -162,7 +162,7 @@
     }
 
     .imageWrapper {
-
+        margin: 0 auto;
         max-width: 80%;
 
     }
@@ -175,7 +175,7 @@
     }
 
     .textContent {
-        max-width: 100%;
+        max-width: 95%;
     }
 
     .card {

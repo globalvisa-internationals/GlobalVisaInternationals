@@ -1,0 +1,199 @@
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.VisaImage {
+    height: 400px;
+    width: 80%;
+    border-radius: 20px;
+    object-fit: fill;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.VisaSec {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    gap: 30px;
+    color: var(--text);
+}
+
+.VisaData {
+    flex: 1;
+    min-width: 60%;
+    max-width: 65%;
+    padding: 10px;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary);
+}
+
+.subTitle {
+    display: flex;
+    text-align: left;
+    color: var(--primary);
+}
+
+.note {
+    font-size: 0.95rem;
+    color: var(--accent);
+    padding: 1rem;
+    border-left: 4px solid var(--primary);
+    max-width: 800px;
+    margin: auto;
+}
+
+.formSection1 {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px;
+    height: fit-content;
+}
+
+
+.formSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+    position: sticky;
+    top: 60px;
+    height: fit-content;
+    background: #ffffff;
+}
+
+
+.visaFeesSection {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    color: var(--text);
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.link {
+    color: var(--accent);
+    font-weight: 600;
+    margin-left: 0.3rem;
+    text-decoration: underline;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    border: 1px solid #dddddd;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.table th {
+    background-color: #e0f4f8;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .Title {
+        font-size: 20px;
+    }
+
+    .subTitle {
+        font-size: 18px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    .table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .table thead {
+        white-space: nowrap;
+    }
+
+    .imageContainer {
+        justify-content: center;
+        padding-top: 70px;
+        width: 100%;
+    }
+
+    .VisaImage {
+        height: auto;
+        width: 90%;
+    }
+
+    .VisaSec {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .VisaData {
+        min-width: 95%;
+        text-align: justify;
+        padding: 10px;
+    }
+
+    .formSection {
+        width: 95%;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 80px;
+    }
+
+
+    .formSection1 {
+        display: flex;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 80px;
+    }
+}

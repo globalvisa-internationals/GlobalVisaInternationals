@@ -705,13 +705,9 @@
 /* ========== FORM & FAQ STYLES ========== */
 .dataForm {
   display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 15px;
+
+
+
 }
 
 /* ========== RESPONSIVE ========== */
