@@ -271,8 +271,6 @@ export default function Home() {
 
             {/* Right Text */}
             <div className={styles.textContent}>
-
-
               {/* Sequential Animated Cards */}
               <AnimatedSection direction="up" delay={0.1} reverseOnExit={true}>
                 <h2 className={styles.subtitle}>Our Story</h2>
