@@ -48,7 +48,7 @@ export default function JapanTouristVisa() {
         "name": "Mount Fuji",
         "description": "Japan's tallest mountain and iconic symbol, popular for hiking and photography.",
         "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Mount_Fuji_from_Yamanaka.jpg",
-        "url": "https://www.japan.travel/en/uk/uk-destinations/fuji-five-lakes-mount-fuji/"
+        "url": "https://www.Visa.travel/en/uk/uk-destinations/fuji-five-lakes-mount-fuji/"
       },
       {
         "@type": "TouristAttraction",
@@ -69,7 +69,7 @@ export default function JapanTouristVisa() {
         "name": "Arashiyama Bamboo Grove",
         "description": "A scenic bamboo forest located in Kyoto, popular for tranquil walks and photography.",
         "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Arashiyama_Bamboo_Grove.jpg",
-        "url": "https://www.japan.travel/en/spot/1207/"
+        "url": "https://www.Visa.travel/en/spot/1207/"
       },
       {
         "@type": "TouristAttraction",
@@ -185,13 +185,13 @@ export default function JapanTouristVisa() {
       </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/images/Japan1.png" alt="Europe Image" className={styles.JapanImage} />
+        <img src="/images/Japan1.png" alt="Europe Image" className={styles.VisaImage} />
       </div>
 
-      <div className={styles.JapanSec}>
+      <div className={styles.VisaSec}>
 
 
-        <div className={styles.JapanData}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>Japan Tourist Visa Assistance – Travel with Confidence</h1>
           <p>
             Planning a trip to the Land of the Rising Sun? Global Visa Internationals is your trusted partner for
