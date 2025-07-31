@@ -1,5 +1,5 @@
 
-import styles from './Dubai.module.css';
+import styles from '@/Components/Visa.module.css';
 import React from 'react';
 import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
@@ -147,12 +147,12 @@ export default function DubaiVisaPage() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp" alt="Dubai-Turist-Visa-Global-Visa-Internationals" className={styles.DubaiImage} />
+        <img src="/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp" alt="Dubai-Turist-Visa-Global-Visa-Internationals" className={styles.VisaImage} />
       </div>
 
-      <div className={styles.DubaiSec}>
+      <div className={styles.VisaSec}>
 
-        <div className={styles.DubaiData}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>Apply for Your Dubai Tourist Visa – Experience the Magic of the UAE</h1>
 
           <p>Planning a trip to the UAE? A <strong>Dubai Tourist Visa</strong> is your gateway to explore one of the world’s most exciting destinations. From luxury shopping and iconic landmarks to desert safaris and cultural gems, Dubai has something for every traveler. Our expert <strong>Dubai Tourist Visa assistance</strong> ensures a smooth and hassle-free process so you can focus on your dream holiday.</p>

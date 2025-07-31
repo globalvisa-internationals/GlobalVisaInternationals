@@ -1,8 +1,7 @@
-import styles from "./Canada.module.css";
+import styles from "@/Components/Visa.module.css";
 // import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LocalBusinessJsonLd, } from 'next-seo';
 import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
-import { BreadcrumbJsonLd, LocalBusinessJsonLd, WebPageJsonLd } from "next-seo";
 
 export const metadata = {
   title:
@@ -138,12 +137,12 @@ export default function Canada() {
         <img
           src="/visa-banner/Canada-Tourist-Visa-assistence-banner.webp"
           alt="Canada Image"
-          className={styles.CanadaImage}
+          className={styles.VisaImage}
         />
       </div>
 
-      <div className={styles.CanadaSec}>
-        <div className={styles.CanadaData}>
+      <div className={styles.VisaSec}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>
             Canada Tourist Visa Agents in Bangalore | Best Canada Visitor Visa
             Consultants | Global Visa Internationals
