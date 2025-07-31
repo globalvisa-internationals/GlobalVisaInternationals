@@ -275,6 +275,12 @@ export default async function sitemap() {
       changefreq: 'monthly',
       priority: 1,
     },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/australian-tourist-visa-for-indians-july-2025-updates',
+      lastModified: new Date('2025-07-31'),
+      changefreq: 'monthly',
+      priority: 1,
+    },
 
   ]
 }
