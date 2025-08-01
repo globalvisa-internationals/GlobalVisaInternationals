@@ -44,7 +44,126 @@ export const metadata = {
 
 export default function NewZealand() {
 
+  const pageUrl = metadata.alternates.canonical;
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.globalvisainternationals.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "New Zealand Tourist Visa",
+        item: pageUrl,
+      },
+    ],
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    logo: "https://www.globalvisainternationals.com/gvilogo.png",
+    description:
+      "Expert New Zealand Tourist Visa Consultants in Bangalore. Complete documentation, application submission, and personalized guidance.",
+    telephone: "+91-7022213466",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "MG Road",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560025",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 12.9716,
+      longitude: 77.5946,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "10:00",
+        closes: "18:00",
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals",
+    ],
+  };
+
+  const touristAttractionsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Top Tourist Attractions in New Zealand",
+    itemListElement: [
+      {
+        "@type": "TouristAttraction",
+        name: "Milford Sound",
+        description:
+          "A stunning fjord in Fiordland National Park, famous for waterfalls and boat cruises.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/4/4c/Milford_Sound_Panorama.jpg",
+        url: "https://www.fiordland.org.nz/see-and-do/milford-sound/",
+      },
+      {
+        "@type": "TouristAttraction",
+        name: "Rotorua Geothermal Parks",
+        description:
+          "Known for geysers, hot springs, and Maori culture experiences in the North Island.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/8/8c/Champagne_Pool_Wai-O-Tapu.jpg",
+        url: "https://www.rotoruanz.com/visit/explore/geothermal-wonders",
+      },
+      {
+        "@type": "TouristAttraction",
+        name: "Hobbiton Movie Set",
+        description:
+          "The iconic movie set from The Lord of the Rings and The Hobbit, located in Matamata.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hobbiton_Matamata.jpg",
+        url: "https://www.hobbitontours.com/en/",
+      },
+      {
+        "@type": "TouristAttraction",
+        name: "Mount Cook National Park",
+        description:
+          "Home to New Zealand's highest mountain, perfect for hiking, stargazing, and photography.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/f/f2/Aoraki_Mount_Cook_National_Park.jpg",
+        url: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/",
+      },
+      {
+        "@type": "TouristAttraction",
+        name: "Franz Josef Glacier",
+        description:
+          "A spectacular glacier on the West Coast, offering guided hikes and helicopter tours.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/0/05/Franz_Josef_Glacier_NZ.jpg",
+        url: "https://www.franzjosefglacier.com/",
+      },
+    ],
+  };
   return (
     <>
 
