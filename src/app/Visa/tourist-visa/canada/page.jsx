@@ -1,5 +1,4 @@
 import styles from "@/Components/Visa.module.css";
-// import { NextSeo, ArticleJsonLd, BreadcrumbJsonLd, LocalBusinessJsonLd, } from 'next-seo';
 import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 
