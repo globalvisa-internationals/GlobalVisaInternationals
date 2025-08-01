@@ -1,6 +1,6 @@
 
 import VisaForm from '@/Components/VisaForm';
-import styles from './Japan.module.css';
+
 import React from 'react';
 import Head from 'next/head';
 
