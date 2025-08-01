@@ -1,8 +1,7 @@
 
-import VisaForm from '@/Components/VisaForm';
-
-import React from 'react';
-import Head from 'next/head';
+import styles from "@/Components/Visa.module.css";
+import Head from "next/head";
+import VisaForm from "@/Components/VisaForm";
 
 
 export const metadata = {
