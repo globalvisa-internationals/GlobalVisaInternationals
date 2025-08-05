@@ -1,8 +1,7 @@
 
 import VisaForm from '@/Components/VisaForm';
-import styles from './USA.module.css';
+// import styles from './USA.module.css';
 import React from 'react';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 // import SeoSchemaUSA from '@/Components/SeoSchemaUSA';
 
@@ -46,99 +45,165 @@ export const metadata = {
 };
 
 
-export default function Australia() {
+export default function USATouristVisa() {
+  const pageUrl = metadata.alternates.canonical;
+
+  const TouristAttraction = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Top Tourist Attractions in the USA",
+    "itemListElement": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Statue of Liberty",
+        "description": "Iconic symbol of freedom in New York City, offering tours and scenic views.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg",
+        "url": "https://www.nps.gov/stli/index.htm"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Grand Canyon",
+        "description": "A breathtaking natural wonder in Arizona, popular for hiking and sightseeing.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Grand_Canyon_view_from_Pima_Point_2010.jpg",
+        "url": "https://www.nps.gov/grca/index.htm"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Yellowstone National Park",
+        "description": "First national park in the world, known for geysers, wildlife, and scenic beauty.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Morning_Glory_Pool_2005.jpg",
+        "url": "https://www.nps.gov/yell/index.htm"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Walt Disney World Resort",
+        "description": "World-famous theme park in Florida offering magical experiences for all ages.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cinderella_Castle_2013_WDW.jpg",
+        "url": "https://disneyworld.disney.go.com/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Golden Gate Bridge",
+        "description": "A renowned suspension bridge in San Francisco, known for its architecture and views.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg",
+        "url": "https://www.goldengate.org/"
+      }
+    ]
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "USA Tourist Visa",
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Expert USA Tourist Visa Consultants in Bangalore. We assist with complete USA visa documentation, application submission, and personalized guidance.",
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ]
+  };
+
+
 
   return (
     <>
       <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Breadcrumb Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://www.globalvisainternationals.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Canada",
-                  "item": "https://www.globalvisainternationals.com/visa/tourist-visa/usa"
-                }
-              ]
-            }),
-          }}
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TouristAttraction) }}
         />
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        {/* Local Business Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "TravelAgency",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com",
-              "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-              "description": "Visa & Immigration Consultants based in Bangalore. Trusted since 2017.",
-              "telephone": "+91-7022213466",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "MG Road",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "Karnataka",
-                "postalCode": "560025",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 12.9716,
-                "longitude": 77.5946
-              },
-              "openingHoursSpecification": [{
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday"
-                ],
-                "opens": "10:00",
-                "closes": "18:00"
-              }],
-              "sameAs": [
-                "https://www.facebook.com/globalvisainternationals/",
-                "https://www.instagram.com/globalvisa_internationals/",
-                "https://www.linkedin.com/company/global-visa-internationals/",
-                "https://x.com/GLOBALVISA1505",
-                "https://www.youtube.com/@globalVisaInternationals",
-                "https://www.google.com/maps/place/Global+Visa+Internationals"
-              ]
-            }),
-          }}
-        />
+
       </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/visa-banner/USA-Tourist-Visa-assistance-banner.webp" alt="USA Tourist Visa assistance banner" className={styles.USAImage} />
+        <img src="/visa-banner/USA-Tourist-Visa-assistance-banner.webp" alt="USA Tourist Visa assistance banner" className={styles.VisaImage} />
       </div>
 
-      <div className={styles.USASec}>
+      <div className={styles.VisaSec}>
 
 
-        <div className={styles.USAData}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>USA Tourist Visa Consultants | Explore America with Global Visa Internationals</h1>
           <p>Planning a trip to the United States? Whether you're heading for a family visit, tourism, or short-term business travel, Global Visa Internationals is your trusted partner for USA tourist visa and B1 B2 visa support. As a leading US visa consultant and tourist visa agent in Bangalore, we assist Indian travelers with everything they need to successfully apply USA visa and complete the USA tourist visa application process without hassle. Whether it’s your first time or a reapplication, we provide step-by-step guidance for your US visitor visa, ensuring compliance with the latest 2025 requirements.</p>
           <p>Our expert team in US visa Bangalore office ensures you're well-prepared with the complete B1 B2 visa documents checklist and all required documents for US tourist visa. From DS-160 form filling to financial proof and itinerary guidance, we help you avoid common mistakes that lead to tourist visa rejection reasons USA. We also offer personalized US visa interview tips to boost your confidence and improve your US visa success rate. With our support, many Indian travelers have successfully received USA multiple entry visa approvals without delay.</p>
