@@ -31,11 +31,12 @@
   width: 98%;
   height: 320px;
   margin: 0 auto;
-  background: #ffffff;
+  background: #cefafc;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 8px 22px #00000014;
   display: flex;
+  margin-top: 20px;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
@@ -65,7 +66,7 @@
   margin-top: 12px;
   font-size: 1.8rem;
   text-align: center;
-  color: #057a7e;
+  color: #057A7E;
   font-weight: 400;
   font-family: 'Agbalumo', cursive;
   letter-spacing: 1px;
@@ -224,7 +225,7 @@
 
   /* Make each paragraph a card on mobile */
   .storyCard {
-    background: #ffffff;
+    background: #cefafc;
     border-radius: 12px;
     padding: 15px 20px;
     margin: 10px auto;
@@ -268,7 +269,7 @@
 
 /* ===== INDIVIDUAL CARD ===== */
 .whyCard {
-  background: #ffffff;
+  background: #cefafc;
   border: 1px solid #e0e0e0;
   color: var(--text);
   padding: 24px;
@@ -364,7 +365,7 @@
 
 .serviceCard {
   flex: 1 1 450px;
-  background: #ffffff;
+  background: #cefafc;
   border: 1px solid #e0e0e0;
   border-radius: 14px;
   padding: 30px 25px;
@@ -440,7 +441,7 @@
 .visionCard,
 .valuesCard {
   width: 300px;
-  background: #ffffff;
+  background: #cefafc;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   padding: 24px;
@@ -602,7 +603,7 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #cefafc;
   border: 2px solid var(--accent);
   transform: rotateX(180deg);
   padding-top: 20px;
@@ -705,9 +706,15 @@
 /* ========== FORM & FAQ STYLES ========== */
 .dataForm {
   display: flex;
+  margin: 0 auto;
+}
 
+.formSection {
+  margin: 0 auto;
+}
 
-
+.faqSection {
+  margin: 0 auto;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -759,7 +766,7 @@
   /* Dark Text */
   padding: 18px;
   margin: 20px auto;
-  border-left: 4px solid #057A7E;
+  border-left: 4px solid #cefafc;
   /* Teal Accent */
   background-color: #F5F6F8;
   /* Neutral Background */
