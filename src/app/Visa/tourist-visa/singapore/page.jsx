@@ -1,249 +1,212 @@
-"use client";
-import styles from './Singapore.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+
+import styles from "@/Components/Visa.module.css";
+import VisaForm from "@/Components/VisaForm";
+import React from 'react';
+import Head from "next/head";
+
+export const metadata = {
+  title: "Get Your Singapore Tourist Visa in Bangalore | Global Visa Internationals",
+  description: "Planning a trip to Singapore? Let Global Visa Internationals simplify your visa process. Trusted consultants in Bangalore offering end-to-end visa support with fast approvals.",
+  keywords: "Singapore tourist visa Bangalore, apply Singapore visa India, Singapore travel visa assistance, Singapore visa agents, tourist visa consultants for Singapore",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore",
+  },
+  openGraph: {
+    type: "website",
+    title: "Fast & Reliable Singapore Tourist Visa Services in Bangalore",
+    description: "Expert assistance for your Singapore tourist visa application. Smooth process, accurate documentation, and high approval rate. Start your Singapore journey with confidence.",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png",
+        alt: "Apply for Singapore Tourist Visa - Global Visa Internationals",
+      }
+    ],
+    siteName: "Global Visa Internationals"
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@globalvisainternationals",
+    title: "Apply for Singapore Tourist Visa from Bangalore – Trusted Experts",
+    description: "Need a Singapore tourist visa? Get complete assistance from Global Visa Internationals – Bangalore’s preferred visa consultants.",
+    images: ["https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png"]
+  }
+};
+
 
 export default function Dubai() {
+  const pageUrl = metadata.alternates.canonical;
 
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
+  const TouristAttraction = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Top Tourist Attractions in Singapore",
+    "itemListElement": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Marina Bay Sands",
+        "description": "Iconic luxury hotel with a rooftop infinity pool and skypark offering panoramic views of Singapore.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Marina_Bay_Sands_in_the_evening_-_20101120.jpg",
+        "url": "https://www.marinabaysands.com/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Gardens by the Bay",
+        "description": "A futuristic park featuring Supertree Grove, Cloud Forest, and Flower Dome, showcasing exotic plants and sustainable architecture.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Gardens_by_the_Bay%2C_Singapore_-_20120626.jpg",
+        "url": "https://www.gardensbythebay.com.sg/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Sentosa Island",
+        "description": "Popular island resort with beaches, theme parks, and attractions like Universal Studios Singapore.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Sentosa_Beach_Singapore.jpg",
+        "url": "https://www.sentosa.com.sg/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Merlion Park",
+        "description": "Famous waterfront park featuring the iconic Merlion statue and scenic views of Marina Bay.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Merlion_and_the_city_skyline%2C_Singapore_-_20120722.jpg",
+        "url": "https://www.visitsingapore.com/see-do-singapore/recreation-leisure/viewpoints/merlion-park/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Singapore Flyer",
+        "description": "One of the world’s largest observation wheels offering spectacular cityscape views.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Singapore_Flyer_view.jpg",
+        "url": "https://www.singaporeflyer.com/"
       }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
+    ]
   };
-  //reviews
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Singapore Tourist Visa",
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Expert Singapore Tourist Visa Consultants in Bangalore. We offer full support for Singapore visa documentation, application filing, and personalized guidance for travelers.",
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ]
+  };
+
   return (
     <>
-      <head>
-  <title>Singapore Tourist Visa From India | Cost, Process & Top Attractions</title>
-  <meta name="description" content="Apply for a Singapore Tourist Visa with expert guidance from Global Visa Internationals. Know the visa process, fees, documents required, and explore top tourist destinations in Singapore." />
-  <meta name="keywords" content="Singapore tourist visa, apply for Singapore tourist visa from India, Singapore visa cost, Singapore visa consultants in India, tourist attractions in Singapore, Singapore visa process, Singapore visa fees" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Global Visa Internationals" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" />
-  <meta name="theme-color" content="#0a66c2" />
-  <link rel="canonical" href="https://www.globalvisainternationals.com/visa/tourist-visa/singapore" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png" imagesrcset="https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png 1x" />
-
-  {/* Open Graph / Facebook */}
-  <meta property="og:title" content="Apply for Singapore Tourist Visa From India | Global Visa Internationals" />
-  <meta property="og:description" content="Planning to visit Singapore? Get expert assistance for your tourist visa application, cost estimate, and must-visit places. Start your Singapore journey with Global Visa Internationals." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/singapore" />
-  <meta property="og:image" content="https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:locale:alternate" content="en_US" />
-
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Singapore Tourist Visa | Application, Cost & Documents Needed" />
-  <meta name="twitter:description" content="Explore Singapore with the right tourist visa. Get visa application support, travel cost breakdown, and expert help from Global Visa Internationals." />
-  <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png" />
-  <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/tourist-visa/singapore" />
-  <meta name="twitter:site" content="@GlobalVisaIntl" />
-
-  {/* Geo Location Tags */}
-  <meta name="geo.region" content="SG" />
-  <meta name="geo.placename" content="Singapore" />
-  <meta name="geo.region" content="IN-KA" />
-  <meta name="geo.placename" content="Bengaluru" />
-  <meta name="ICBM" content="12.9716,77.5946" />
-
-  {/* Local Business Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Global Visa Internationals",
-      "url": "https://www.globalvisainternationals.com",
-      "logo": "https://www.globalvisainternationals.com/logo.png",
-      "description": "Leading visa consultancy offering expert Singapore tourist visa assistance from India. We help with visa application, documentation, and more.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "MG Road",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "KA",
-        "postalCode": "560025",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-7022213466",
-        "contactType": "Customer Support"
-      },
-      "sameAs": [
-        "https://www.facebook.com/globalvisainternationals/",
-        "https://www.instagram.com/globalvisa_internationals/",
-        "https://www.linkedin.com/company/global-visa-internationals/",
-        "https://x.com/GLOBALVISA1505",
-        "https://www.youtube.com/@globalVisaInternationals",
-        "https://www.google.com/maps/place/Global+Visa+Internationals/@12.967478,77.6035421,17z"
-      ]
-    })
-  }} />
-
-  {/* BreadcrumbList Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.globalvisainternationals.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Tourist Visa",
-          "item": "https://www.globalvisainternationals.com/visa/tourist-visa"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Singapore"
-        }
-      ]
-    })
-  }} />
-
-  {/* FAQPage Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the cost of a Singapore Tourist Visa from India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The cost typically ranges from ₹2,500 to ₹3,500 depending on processing and service charges."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What documents are required for a Singapore tourist visa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A valid passport, recent photographs, bank statements, travel itinerary, and confirmed hotel booking are usually required."
-          }
-        }
-      ]
-    })
-  }} />
-
-  {/* Service Structured Data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Singapore Tourist Visa Application Assistance",
-      "provider": {
-        "@type": "Organization",
-        "name": "Global Visa Internationals",
-        "url": "https://www.globalvisainternationals.com"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Visa Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Tourist Visa - Single Entry"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Tourist Visa - Multiple Entry"
-            }
-          }
-        ]
-      }
-    })
-  }} />
-</head>
 
 
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+
+        {/* Geo & Mobile SEO */}
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(TouristAttraction) }}
+        />
+      </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/images/singapore-tourist-visa-global-visa-internationals.png" alt="Singapore-Turist-Visa-Global-Visa-Internationals" className={styles.JapanImage} />
+        <img src="/images/singapore-tourist-visa-global-visa-internationals.png" alt="Singapore-Turist-Visa-Global-Visa-Internationals" className={styles.VisaImage} />
       </div>
 
-      <div className={styles.JapanSec}>
+      <div className={styles.VisaSec}>
 
-        <div className={styles.JapanData}>
-          <h1 className={styles.Title}>Your Gateway to Singapore: Tourist Visa Assistance by Global Visa Internationals</h1>
+        <div className={styles.VisaData}>
+          <h1 className={styles.Title}>Apply for a Singapore Tourist Visa with Expert Help from Global Visa Internationals</h1>
+          <p>Planning your dream vacation to Singapore? Whether you're traveling for leisure, sightseeing, or to visit family and friends, obtaining a Singapore tourist visa is the first step. At Global Visa Internationals, we provide complete Singapore visa assistance for Indian citizens. With over 11 years of expertise, we’ve helped thousands of travelers successfully apply for Singapore visas from India, including popular cities like Bangalore, Chennai, and Mumbai.</p>
+          <p>Our team of authorised Singapore visa agents in India offers end-to-end services including documentation support, application review, Form 14A completion, cover letter drafting, and detailed Singapore visa checklists tailored for Indian applicants. Whether you need a Singapore visa for tourism, a short-term visit pass, or help with your Singapore e-visa application, our consultants ensure a smooth, error-free process. We understand common Singapore visa rejection reasons and help you avoid costly mistakes.</p>
+          <p>Wondering how long it takes? The typical Singapore tourist visa processing time is around 3–5 working days, though it may vary. The Singapore visa fee is approximately SGD 30, and our team will walk you through all visa application charges with complete transparency. If you're in a rush, we can help with quicker turnaround times where possible, depending on the embassy and submission schedule.</p>
+          <p>Whether you’re applying online or need in-person visa documentation assistance, our expert team offers personalized support. From navigating Singapore visa delays to writing a visa invitation letter, we ensure every requirement is met accurately. We're recognized as one of the best Singapore visa consultants in India for our reliable service and high approval rates. We also assist with issues raised on platforms like MakeMyTrip and Atlys, providing independent support when you need it most.</p>
+          <p>Don’t leave your travel plans to chance. Choose Global Visa Internationals, your trusted Singapore visa consultancy service in India. Contact us today to get started on your Singapore visa application process, and travel with peace of mind knowing you're backed by professional, end-to-end visa support.</p>
+
           <p>Singapore, a dynamic island nation, captivates visitors with its stunning Singapore skyline, verdant Singapore gardens, and a rich tapestry of Singapore culture. Whether you envision yourself exploring futuristic landscapes or savoring diverse culinary experiences, a Singapore holiday promises an unforgettable escape. Allow Global Visa Internationals to streamline your travel by providing expert assistance with your Singapore tourist visa application. Contact Global Visa Internationals today to begin your journey!</p>
 
           <h3 className={styles.subTitle}>Discover the Must-See Singapore Attractions</h3>
@@ -251,20 +214,13 @@ export default function Dubai() {
 
           <ul>
             <li><b className={styles.subTitle}>Singapore attractions,</b> Immerse yourself in the mesmerizing Supertree Grove, discover the wonders of the Flower Dome and Cloud Forest conservatories, and witness the enchanting Garden Rhapsody light and sound spectacle.  Contact Global Visa Internationals for a smooth visa process to experience this!</li>
-
             <li><b className={styles.subTitle}> Singapore skyline: </b> Marvel at the architectural grandeur of Marina Bay Sands, capture breathtaking panoramic views of the Singapore skyline from the Sands SkyPark Observation Deck, and experience the excitement of its renowned casino. </li>
-
             <li><b className={styles.subTitle}>Sentosa Island:</b> Escape to the recreational haven of Sentosa Island, offering thrilling adventures at Universal Studios Singapore, serene beaches, the captivating S.E.A. Aquarium, and the iconic Merlion statue.</li>
-
             <li><b className={styles.subTitle}>Orchard Road Shopping:</b> Indulge in a world-class Orchard Road shopping experience along this prestigious boulevard, featuring luxurious boutiques, upscale department stores, and vibrant shopping malls.</li>
-
             <li><b className={styles.subTitle}>Singapore Food at Hawker Centres: </b>Immerse yourself in Singapore's vibrant culinary scene by exploring authentic Singapore food at local hawker centres, offering a delectable array of affordable and diverse dishes.</li>
             <li><b className={styles.subTitle}>Little India Singapore and Chinatown Singapore - Little India Singapore:</b> Experience the rich Singapore culture by wandering through the colorful streets of Little India Singapore and Chinatown Singapore, filled with ornate temples, bustling markets, and authentic cuisine.</li>
-
             <li><b className={styles.subTitle}>Singapore Botanic Gardens:</b> Unwind in the lush greenery of the Singapore Botanic Gardens, a UNESCO World Heritage Site, featuring the stunning National Orchid Garden and serene walking trails.</li>
-
             <li><b className={styles.subTitle}>Singapore Flyer:</b> Take a ride on the Singapore Flyer, one of the world's largest observation wheels, for breathtaking views of the city skyline and Marina Bay.</li>
-
             <li><b className={styles.subTitle}>Clarke Quay:</b> Experience the vibrant nightlife of Clarke Quay, a riverside quay filled with restaurants, bars, and clubs, perfect for dining and entertainment.</li>
             <li><b className={styles.subTitle}>ingapore Zoo:</b> Discover the wonders of wildlife at the Singapore Zoo, renowned for its open-concept enclosures and diverse animal exhibits.</li>
             <li><b className={styles.subTitle}>Marina Bay Sands SkyPark:</b> Visit the Marina Bay Sands SkyPark for panoramic views of the city skyline, gardens, and waterfront.</li>
@@ -282,77 +238,7 @@ export default function Dubai() {
           </ul>
           <div className={styles.formSection1}>
 
-            <h1 className={styles.FormTitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
           <h3 className={styles.subTitle}>Discover the Reasons to Visit Singapore</h3>
@@ -374,77 +260,7 @@ export default function Dubai() {
 
           <div className={styles.formSection1}>
 
-            <h1 className={styles.FormTitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
           <h2 className={styles.subTitle}>🇸🇬 Singapore Travel Cost Guide – May 2025</h2>
@@ -502,77 +318,7 @@ export default function Dubai() {
 
           <div className={styles.formSection1}>
 
-            <h1 className={styles.FormTitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h2 className={styles.subTitle}>Navigating the Japan Tourist Visa Process</h2>
           <p>Obtaining a tourist visa for Japan involves several key steps. While the specific requirements may vary based on your nationality, the general process typically includes:</p>
@@ -585,7 +331,9 @@ export default function Dubai() {
             <li>Receiving Your Visa: Once your application is approved, your visa will be affixed to your passport.</li>
           </ol>
           <p>The Japan visa process can seem complex, but Global Visa Internationals is here to simplify it for you.</p>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your Guide to Japan Visa Application</h3>
           <p>Planning your dream trip to Japan should be exciting, not stressful. At Global Visa Internationals, we provide comprehensive assistance to ensure a smooth and successful Japan tourist visa application process.</p>
           <b className={styles.subTitle}>Our Japan Visa Services include:</b>
@@ -601,77 +349,7 @@ export default function Dubai() {
 
           <div className={styles.formSection1}>
 
-            <h1 className={styles.FormTitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h1 className={styles.Title}>Navigating Singapore Visa Requirements for Indian Citizens with Global Visa Internationals</h1>
           <p>Planning your dream Singapore holiday? For Indian citizens holding ordinary passports, a valid Singapore tourist visa is essential before you embark on your journey to explore the stunning Singapore skyline and vibrant Singapore culture. <strong className={styles.subTitle}>Global Visa Internationals</strong> is here to simplify this crucial step, ensuring a smooth and stress-free visa application process. <strong className={styles.subTitle}>Don't take the risk of visa rejection; contact Global Visa Internationals for expert assistance and guidance!</strong></p>
@@ -689,7 +367,9 @@ export default function Dubai() {
             <li><strong className={styles.subTitle}>Form V39A (Letter of Introduction for Visa Application - LOI):</strong> This form might be a mandatory requirement and typically needs to be issued by a local contact in Singapore, who must be a Singapore citizen or a Permanent Resident. <strong className={styles.subTitle}>Global Visa Internationals</strong> can provide guidance on this requirement.</li>
             <li><strong className={styles.subTitle}>Other Supporting Documents:</strong> Depending on your individual circumstances (such as employment status, business ownership, or student status), additional Singapore visa documents like salary slips, business registration certificates, or a No Objection Certificate from parents might be necessary.</li>
           </ul>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>How to Apply for Your Singapore Visa with Global Visa Internationals (Singapore Visa Online Application):</h2>
           <p>The Singapore High Commission in India mandates that all visa applications be submitted through authorized visa agents. <strong className={styles.subTitle}>Global Visa Internationals</strong> is your trusted partner in navigating this process seamlessly. Here's how we assist you with your Singapore visa online application:</p>
           <ul>
@@ -704,7 +384,9 @@ export default function Dubai() {
             <li><strong className={styles.subTitle}>Regular Application Updates:</strong> We will keep you informed about the progress of your Singapore visa application, providing you with peace of mind throughout the process.</li>
             <li><strong className={styles.subTitle}>Visa Retrieval Guidance:</strong> Once your Singapore visa is approved, we will provide you with clear instructions on how to receive your e-visa, which you will need to print and carry with your passport during your travel.</li>
           </ul>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>Understanding Singapore Visa Processing Time:</h2>
           <p>The typical Singapore visa processing time for Indian citizens is approximately <strong className={styles.subTitle}>3 to 5 working days</strong>, excluding the day of submission, weekends, and Singaporean public holidays. However, it's important to note that processing times can vary based on individual cases and the volume of applications received by the ICA. To avoid any last-minute stress, we strongly advise you to apply for your Singapore tourist visa at least two weeks before your intended travel date. Contact Global Visa Internationals for timely processing assistance.</p>
 
@@ -715,7 +397,9 @@ export default function Dubai() {
             <li><strong className={styles.subTitle}>Global Visa Internationals</strong> offers competitive service charges for our expert assistance. For detailed information on our service fees, please fill out the form, and our experts will contact you immediately.</li>
           </ul>
           <p >Therefore, the overall cost for your Singapore tourist visa will be the sum of these two components. Contact Global Visa Internationals for transparent and accurate information regarding the tourist visa fees Singapore.</p>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>Important Points to Keep in Mind:</h2>
           <ul>
             <li><strong className={styles.subTitle}>Visa-Free Transit Facility (VFTF):</strong> If you are an Indian national transiting through Singapore by air to or from a third country, you might be eligible for the 96-hour Visa-Free Transit Facility (VFTF) under specific conditions. These conditions include possessing a valid onward/return air ticket and, in some instances, a valid visa or long-term pass from certain countries (Australia, Canada, Germany, Japan, New Zealand, Switzerland, UK, USA).</li>
@@ -725,78 +409,7 @@ export default function Dubai() {
           </ul>
 
           <div className={styles.formSection1}>
-
-            <h1 className={styles.FormTitle}>Visa And Immigration Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Visa Needs?</h2>
           <p>At Global Visa Internationals, we understand that the visa application process can be complex and time-consuming. That's why we offer:</p>
@@ -809,84 +422,13 @@ export default function Dubai() {
           </ul>
           <p>We at Global Visa Internationals, proud to be India's finest visa consultants, are dedicated to making your dreams into reality. With our 11+ years of experience as leading visa consultants in Bangalore, we have successfully managed to process over 55,000+ visas and offer over 75,000 expert visa advice sessions till date. You can confidently rely on our vast visa and immigration consulting experience in India.</p>
           <p>Let Global Visa Internationals assist you in navigating the visa application process and planning your dream Australian adventure!</p>
-         <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
-
 
         <div className={styles.formSection}>
-
-          <h1 className={styles.FormTitle}>Visa And Immigration Inquiry Form</h1>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "Europe", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+          <VisaForm />
         </div>
+
       </div>
       <section id='Client Reviews'>
         <h2 className={styles.subtitle}>Client Reviews</h2>
