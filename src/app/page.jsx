@@ -712,12 +712,12 @@ export default function Home() {
 
         {/* <AnimatedHR direction="left" duration={1.2} /> */}
 
-        <section id={styles.clientReview}>
+        {/* <section id={styles.clientReview}>
           <h2 id={styles.clientVideo} className={styles.subtitle}>
             Client Testimonial{" "}
           </h2>
           <ClientVideoCarousel videos={testimonialVideos} />
-        </section>
+        </section> */}
 
         <section>
           <div className={styles.containerLoc}>
