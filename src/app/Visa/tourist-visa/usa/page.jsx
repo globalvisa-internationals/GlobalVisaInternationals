@@ -1,6 +1,5 @@
 
 import VisaForm from '@/Components/VisaForm';
-// import styles from './USA.module.css';
 import styles from '@/Components/Visa.module.css';
 import React from 'react';
 import Head from 'next/head';
@@ -9,10 +8,8 @@ import Head from 'next/head';
 
 export const metadata = {
   title: "USA Tourist Visa Consultants | Global Visa Internationals",
-  description:
-    "Apply for your USA Tourist Visa with Global Visa Internationals. Expert help with B2 visa process, costs, and travel planning from India.",
-  keywords:
-    "USA tourist visa, B2 visa consultants, USA visa from India, US travel visa application, apply for visitor visa USA",
+  description: "Apply for your USA Tourist Visa with Global Visa Internationals. Expert help with B2 visa process, costs, and travel planning from India.",
+  keywords: "USA tourist visa, B2 visa consultants, USA visa from India, US travel visa application, apply for visitor visa USA",
   robots: "index, follow",
   alternates: {
     canonical: "https://www.globalvisainternationals.com/visa/tourist-visa/usa",
@@ -23,15 +20,12 @@ export const metadata = {
       "Plan your USA trip with expert visa support. Learn about B2 visa process, travel costs, and top U.S. destinations. Trusted since 2017.",
     url: "https://www.globalvisainternationals.com/visa/tourist-visa/usa",
     siteName: "Global Visa Internationals",
-    images: [
-      {
-        url: "https://www.globalvisainternationals.com/visa-banner/USA-Tourist-Visa-assistance-banner.webp",
-        width: 1200,
-        height: 630,
-        alt: "USA Tourist Visa Banner",
-      },
-    ],
-    type: "website",
+    images: [{
+      url: "https://www.globalvisainternationals.com/visa-banner/USA-Tourist-Visa-assistance-banner.webp",
+      width: 1200,
+      height: 630,
+      alt: "USA Tourist Visa Banner",
+    },], type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -57,40 +51,43 @@ export default function USATouristVisa() {
       {
         "@type": "TouristAttraction",
         "name": "Statue of Liberty",
-        "description": "Iconic symbol of freedom in New York City, offering tours and scenic views.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg",
+        "description": "Iconic symbol of freedom in New York City, offering scenic views and tours.",
+        "image": "https://en.wikipedia.org/wiki/Statue_of_Liberty#/media/File:Front_view_of_Statue_of_Liberty_with_pedestal_and_base_2024.jpg ",
         "url": "https://www.nps.gov/stli/index.htm"
       },
       {
         "@type": "TouristAttraction",
-        "name": "Grand Canyon",
-        "description": "A breathtaking natural wonder in Arizona, popular for hiking and sightseeing.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Grand_Canyon_view_from_Pima_Point_2010.jpg",
-        "url": "https://www.nps.gov/grca/index.htm"
+        "name": "Grand Canyon – Pima Point",
+        "description": "Panoramic viewpoint overlooking the Grand Canyon’s South Rim.",
+        "image": "https://www.nps.gov/common/uploads/cropped_image/primary/FF126CF3-9FCB-3F85-33DB711059064278.jpg?width=1600&quality=90&mode=crop",
+        "url": "https://www.nps.gov/places/000/pima-point.htm"
       },
       {
         "@type": "TouristAttraction",
-        "name": "Yellowstone National Park",
-        "description": "First national park in the world, known for geysers, wildlife, and scenic beauty.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Morning_Glory_Pool_2005.jpg",
-        "url": "https://www.nps.gov/yell/index.htm"
+        "name": "Yellowstone National Park – Morning Glory Pool",
+        "description": "Vibrant hot spring in Yellowstone’s Upper Geyser Basin, famous for its blue‑green hues.",
+        "image": "https://en.wikipedia.org/wiki/Morning_Glory_Pool#/media/File:Morning_Glory_Pool.jpg",
+        "url": "https://www.nps.gov/places/000/morning-glory-pool.htm"
       },
       {
         "@type": "TouristAttraction",
-        "name": "Walt Disney World Resort",
-        "description": "World-famous theme park in Florida offering magical experiences for all ages.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cinderella_Castle_2013_WDW.jpg",
-        "url": "https://disneyworld.disney.go.com/"
+        "name": "Walt Disney World Resort – Cinderella Castle",
+        "description": "Fairy‑tale castle at the heart of Magic Kingdom Park in Florida.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Cinderella_Castle%2C_Magic_Kingdom.JPG",
+        "url": "https://disneyworld.disney.go.com/attractions/magic-kingdom/cinderella-castle/"
       },
       {
         "@type": "TouristAttraction",
         "name": "Golden Gate Bridge",
-        "description": "A renowned suspension bridge in San Francisco, known for its architecture and views.",
+        "description": "Famous suspension bridge in San Francisco with panoramic skyline views.",
         "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg",
         "url": "https://www.goldengate.org/"
       }
     ]
   };
+
+
+
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
