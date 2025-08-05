@@ -1,22 +1,120 @@
 "use client";
 import VisaForm from '@/Components/VisaForm';
-import styles from './Uk.module.css';
+import styles from '@/Components/Visa.module.css';
 import React from 'react';
+import Head from 'next/head';
+
+export const metadata = {
+  title: "UK Tourist Visa Consultants in India | Global Visa Internationals",
+  description: "Apply for your UK tourist visa from India with expert guidance. Global Visa Internationals helps with UK visitor visa documentation, online application, and interview tips.",
+  keywords: "UK tourist visa, UK visa consultants in India, apply UK visitor visa from India, UK visa Bangalore, UK visa application help, UK travel visa for Indians, UK visa agents near me, UK visitor visa documents, UK visa cost from India",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk",
+  },
+  openGraph: {
+    title: "UK Tourist Visa Assistance for Indian Citizens | Apply with Ease",
+    description:
+      "Planning to visit the UK? Get expert help with UK tourist visa application, document preparation, and embassy appointment. Trusted visa agents in India since 2012.",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp",
+        width: 1200,
+        height: 630,
+        alt: "UK Tourist Visa Assistance Banner",
+      }
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "UK Tourist Visa for Indian Citizens | Fast & Trusted Consultants",
+    description:
+      "Apply for a UK visitor visa with the help of expert consultants in Bangalore. Complete support for UK visa forms, documents, and embassy guidance.",
+    images: [
+      "https://www.globalvisainternationals.com/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp",
+    ],
+  },
+};
 
 
-export default function UK() {
-  const jsonLd = {
+
+export default function UKTouristVisa() {
+  const pageUrl = metadata.alternates.canonical;
+
+  const TouristAttraction = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
+    "@type": "ItemList",
+    "name": "Top Tourist Attractions in the UK",
+    "itemListElement": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Big Ben & Houses of Parliament",
+        "description": "Historic clock tower and iconic British Parliament building in London.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Elizabeth_Tower%2C_June_2022.jpg",
+        "url": "https://www.parliament.Visa/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Buckingham Palace",
+        "description": "Official London residence of the British monarch with Changing of the Guard ceremony.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Buckingham_Palace%2C_London_-_April_2009.jpg",
+        "url": "https://www.rct.Visa/visit/the-state-rooms-buckingham-palace"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Tower of London",
+        "description": "Historic fortress housing the Crown Jewels and offering guided tours.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tower_of_London_viewed_from_the_River_Thames.jpg",
+        "url": "https://www.hrp.org.Visa/tower-of-london/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Stonehenge",
+        "description": "Mysterious prehistoric stone circle and world heritage site in Wiltshire.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Stonehenge2007_07_30.jpg",
+        "url": "https://www.english-heritage.org.Visa/visit/places/stonehenge/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Edinburgh Castle",
+        "description": "Famous Scottish fortress offering panoramic views of Edinburgh.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/View_of_Edinburgh_Castle_%28from_the_south_east%29.jpg",
+        "url": "https://www.edinburghcastle.scot/"
+      }
+    ]
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "UK Tourist Visa",
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
     "name": "Global Visa Internationals",
     "url": "https://www.globalvisainternationals.com",
     "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Unlock Your UK Adventure! Global Visa Internationals provides expert guidance for your UK tourist visa application. Simplify the process and explore Britain's wonders. Contact us today!",
-    "founder": {
-      "@type": "Organization",
-      "name": "Naveen Kumar J"
-    },
-    "foundingDate": "2016",
+    "description": "Trusted UK Tourist Visa Consultants in Bangalore. Apply for your UK visitor visa from India with expert help for documents, online application & appointment booking.",
+    "telephone": "+91-7022213466",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "MG Road",
@@ -25,72 +123,87 @@ export default function UK() {
       "postalCode": "560025",
       "addressCountry": "IN"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-7022213466",
-      "contactType": "Customer Support",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
     },
-    "areaServed": ["IN", "UK", "EU"],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
     "sameAs": [
-      "https://www.facebook.com/GlobalVisaInternationals",
+      "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/globalvisainternationals"
-      // Add more links if you have Twitter, YouTube, etc.
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
     ]
-
   };
 
 
   return (
     <>
-      <head>
-        <title> Unlock Your British Adventure | Global visa internationals</title>
-        <meta name="description" content="Your comprehensive guide to UK student visas, top-ranked universities, popular courses, costs, and the application process. Unlock your UK education dream with Global Visa Internationals." />
-        <meta name="keywords" content="UK student visa, study in UK, UK universities, top UK universities, courses in UK, MBA UK, cost of studying UK, UK student visa requirements, UK visa application, international students UK, student life UK, UK education system, Tier 4 visa UK, UK scholarships, post study work UK" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/student-visa/uk" />
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
-
-        <meta property="og:title" content="UK Student Visa: Top Universities, Courses & Application Guide | Global Visa Internationals" />
-        <meta property="og:description" content="Your comprehensive guide to UK student visas, top-ranked universities, popular courses, costs, and the application process. Unlock your UK education dream with Global Visa Internationals." />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/student-visa/uk" />
-        <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content="URL_TO_YOUR_UK_IMAGE" /> */}
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UK Student Visa: Top Universities, Courses & Application Guide | Global Visa Internationals" />
-        <meta name="twitter:description" content="Your comprehensive guide to UK student visas, top-ranked universities, popular courses, costs, and the application process. Unlock your UK education dream with Global Visa Internationals." />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/Visa/student-visa/uk" />
-        {/* <meta name="twitter:image" content="URL_TO_YOUR_UK_IMAGE" /> */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        {/* Geo-related meta tags */}
-        <meta name="geo.region" content="GB" />
-        <meta name="geo.placename" content="United Kingdom" />
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Structured Data - EducationalOrganization Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TouristAttraction) }}
         />
-      </head>
+
+      </Head>
+
 
       <div className={styles.imageContainer}>
         <img
           src="/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp"
           alt="UK Image"
-          className={styles.UKImage}
+          className={styles.VisaImage}
         />
       </div>
-      <div className={styles.UKSec}>
+      <div className={styles.VisaSec}>
 
 
-        <div className={styles.UKData}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>Unlock Your British Adventure: Your Comprehensive Guide to the UK Tourist Visa | Global visa internationals</h1>
           <p>Planning a memorable trip to the UK? Whether it's a vacation, family visit, or sightseeing adventure, getting the right visa is your first step—and Global Visa Internationals, your trusted visa and immigration experts, is here to make it easy. As leading UK visa consultants and agents, we specialize in assisting Indians with the UK Tourist Visa and UK Visitor Visa process. From helping you apply UK visa correctly to booking your UK visa appointment, we manage the complexities so you can focus on your travel plans. Whether you're in Bangalore or any other city, our expert consultants ensure smooth documentation and timely submissions for your UK visa from India.</p>
           <p>Understanding the UK visa requirements can be overwhelming, especially with constant updates in policies. That’s where we step in. Our team will guide you through preparing your UK visa documents, clarify the UK visa fees, and help you track your application through the UK visa application center. We’re fully aware of the expected UK tourist visa processing time, and we make sure nothing slows you down. Not sure how to apply UK visa in 2025? Don’t worry—we walk you through it all, with personalized assistance that simplifies your journey.
@@ -181,7 +294,7 @@ export default function UK() {
             Below is the latest information on UK visa fees and estimated travel expenses from India.
             For official and up-to-date details, visit the
             <a
-              href="https://www.gov.uk/standard-visitor"
+              href="https://www.gov.Visa/standard-visitor"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.link}
