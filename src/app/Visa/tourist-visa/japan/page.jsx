@@ -193,8 +193,12 @@ export default function JapanTouristVisa() {
 
         <div className={styles.VisaData}>
           <h1 className={styles.Title}>Japan Tourist Visa Assistance – Travel with Confidence</h1>
-          <p>
-            Planning a trip to the Land of the Rising Sun? Global Visa Internationals is your trusted partner for
+          <p>Planning a trip from India to Singapore? Our expert Singapore tourist visa assistance India service guides you through the complete Singapore visa application process, from visa requirements for Indian citizens to Singapore visa processing time India. We support applicants from Bangalore, Mumbai, Chennai, Delhi, and beyond—handling everything from Singapore visa documents checklist to photo specifications, cover letter format, and itinerary templates.</p>
+          <p>Wondering how to apply for a Singapore tourist visa? You don’t need to navigate the confusing process alone. Our Singapore visa consultants India partner with VFS Global, the authorised agency for Singapore visas in India, to ensure your single-entry or multiple-entry tourist visa application is complete and accurate. We’ll assist with application form filling, bank statement requirements, ITR proofs, passport validity, and even travel insurance requirements India — all tailored for smooth submission.</p>
+          <p>What’s the Singapore visa processing time in India? On average, Indian applicants receive their visa within 3 to 5 working days, depending on jurisdiction and seasonality. Peak travel periods may extend the turnaround time, but with our proactive support—such as tracking your VFS appointment booking issues and avoiding common mistakes in visa application—you’ll be well-prepared.</p>
+          <p>Concerned about visa fees, rejection reasons, or sponsor letters? We provide clear guidance on Singapore visa fee India, service charges, and optional courier costs. If your case requires a sponsor letter or you’re self‑sponsoring, we help you draft a professional cover letter and itinerary, and submit dummy flight bookings to strengthen your application. We also proactively prepare you for Singapore visa rejection reasons and ways to avoid them, including tips on dummy flight tickets that are airport‑recognizable.</p>
+          <p>At Global Visa Internationals, our commitment is to offer best Singapore visa help for Indians—whether you need Bangalore visa support, Mumbai application assistance, or Chennai‑based consultancy services. From Singapore visit visa for Indian citizens to purpose‑specific visa types, trust us for the most reliable, up‑to‑date support in 2025. Apply early—ideally at least 15 days before your travel date—and travel worry‑free!</p>
+          <p>Planning a trip to the Land of the Rising Sun? Global Visa Internationals is your trusted partner for
             <strong> Japan tourist visa assistance</strong>. We simplify the entire process, from documentation to submission,
             helping you explore Japan's cultural wonders, futuristic cities, and natural beauty with ease.
           </p>
@@ -247,7 +251,7 @@ export default function JapanTouristVisa() {
             Understanding the estimated travel costs is crucial when applying for your <strong>Japan Tourist Visa</strong>. Here's a detailed breakdown of the major expenses including flights, accommodations, food, transport, and more—helping you plan better with the support of a trusted <strong>Japan tourist visa consultancy</strong>.
           </p>
 
-          <h3> Flight Costs from India to Japan (2025)</h3>
+          <h3 className={styles.subTitle}> Flight Costs from India to Japan (2025)</h3>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -265,7 +269,7 @@ export default function JapanTouristVisa() {
             </tbody>
           </table>
 
-          <h3> Accommodation Costs on Japan tourist visa</h3>
+          <h3 className={styles.subTitle}> Accommodation Costs on Japan tourist visa</h3>
           <p>Whether you’re backpacking or enjoying a luxury trip, Japan offers stays for all budgets:</p>
           <table className={styles.table}>
             <thead>
@@ -281,7 +285,7 @@ export default function JapanTouristVisa() {
             </tbody>
           </table>
 
-          <h3> Food & Dining in Japan</h3>
+          <h3 className={styles.subTitle}> Food & Dining in Japan</h3>
           <p>Japanese cuisine fits every pocket—from street food to Michelin-star sushi bars:</p>
           <table className={styles.table}>
             <thead>
@@ -297,7 +301,7 @@ export default function JapanTouristVisa() {
             </tbody>
           </table>
 
-          <h3> Transportation Costs for japan tourist visa</h3>
+          <h3 className={styles.subTitle}> Transportation Costs for japan tourist visa</h3>
           <h4>Local Travel</h4>
           <table className={styles.table}>
             <thead>
@@ -324,7 +328,7 @@ export default function JapanTouristVisa() {
             </tbody>
           </table>
 
-          <h3> Total Estimated Trip Cost (7 Days, Excl. Flights) For Japan </h3>
+          <h3 className={styles.subTitle}> Total Estimated Trip Cost (7 Days, Excl. Flights) For Japan </h3>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -506,11 +510,59 @@ export default function JapanTouristVisa() {
 
           <p className={styles.note}><strong>Disclaimer:</strong> This service is provided by Global Visa Internationals, an independent visa consultancy. We are not affiliated with the Japanese Government or its official embassy.</p>
 
+          <section >
+            <h2 className={styles.subTitle}> Japan Tourist Visa for Indian Citizens – FAQs</h2>
+
+            <h3 className={styles.subTitle}>Do Indian citizens need a visa to visit Japan for tourism?</h3>
+            <p>Yes, Indian passport holders must apply for a tourist visa in advance. Japan does <strong>not offer visa-on-arrival</strong> for Indian nationals.</p>
+
+            <h3 className={styles.subTitle}>How long does the Japan tourist visa take to process in India?</h3>
+            <p>The standard processing time is <strong>4–7 business days</strong>, though it may extend during holidays or peak travel seasons.</p>
+
+            <h3 className={styles.subTitle}>How long can I stay in Japan on a tourist visa?</h3>
+            <p>A <strong>single-entry visa</strong> allows up to <strong>90 days per visit</strong>. Multiple-entry visas are valid longer, but each stay is still capped at 90 days.</p>
+
+            <h3 className={styles.subTitle}>What documents are required for a Japan tourist visa from India?</h3>
+            <ul>
+              <li>Valid passport (with at least 2 blank pages)</li>
+              <li>Visa application form with photo (as per specifications)</li>
+              <li>Detailed travel itinerary</li>
+              <li>Confirmed or refundable flight and hotel bookings</li>
+              <li>Latest <strong>bank statements</strong> and <strong>ITR for past 2–3 years</strong></li>
+              <li>Cover letter stating purpose of visit</li>
+            </ul>
+
+            <h3 className={styles.subTitle}>Do I need confirmed flight and hotel bookings before applying?</h3>
+            <p>Confirmed or refundable bookings are <strong>strongly recommended</strong> to demonstrate your travel intent. A detailed itinerary may suffice, but confirmed bookings add strength to your application.</p>
+
+            <h3 className={styles.subTitle}>How much bank balance or income proof is needed?</h3>
+            <p>It’s advisable to show a minimum balance of <strong>₹1–1.5 lakh</strong> with stable income. ITRs for at least 2 years further boost your application.</p>
+
+            <h3 className={styles.subTitle}>Can unemployed applicants apply for a tourist visa?</h3>
+            <p>Yes, unemployed applicants can apply with a <strong>sponsorship letter</strong> and financial documents from a sponsor (parent, spouse, etc.).</p>
+
+            <h3 className={styles.subTitle}>Is travel insurance mandatory?</h3>
+            <p>While not strictly mandatory, <strong>travel insurance is highly recommended</strong> to cover emergencies during your stay in Japan.</p>
+
+            <h3 className={styles.subTitle}>When should I apply for a Japan visa before travel?</h3>
+            <p>You should apply at least <strong>1–3 months in advance</strong>. For metro cities like <strong>Delhi, Mumbai, Bangalore, and Chennai</strong>, book your VFS appointment ~3 weeks ahead.</p>
+
+            <h3 className={styles.subTitle}>Can I extend my tourist visa while in Japan?</h3>
+            <p>No, tourist visas are <strong>not extendable</strong> under normal circumstances. Ensure your return is scheduled within the visa validity period.</p>
+
+            <div >
+              <h3 className={styles.subTitle}>Need Help with Your Japan Tourist Visa?</h3>
+              <p>Let <strong>Global Visa Internationals</strong> assist you with your Japan visa from India. From document checks to VFS appointment guidance, our team ensures a hassle-free experience.</p>
+              <a href="https://www.globalvisainternationals.com/contact" >Apply Now with Global Visa Internationals</a>
+            </div>
+          </section>
+
+
         </div>
         <div className={styles.formSection}>
           <VisaForm />
         </div>
-      </div>
+      </div >
       <section id='Client Reviews'>
         <h2 className={styles.subtitle}>Client Reviews</h2>
         <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
