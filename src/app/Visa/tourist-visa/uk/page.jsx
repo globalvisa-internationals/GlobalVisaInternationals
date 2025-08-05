@@ -1,4 +1,4 @@
-"use client";
+
 import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
 import React from 'react';
