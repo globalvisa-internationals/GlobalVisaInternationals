@@ -123,8 +123,8 @@ export default function NewZealand() {
         description:
           "A stunning fjord in Fiordland National Park, famous for waterfalls and boat cruises.",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/4/4c/Milford_Sound_Panorama.jpg",
-        url: "https://www.fiordland.org.nz/see-and-do/milford-sound/",
+          "https://upload.wikimedia.org/wikipedia/commons/0/01/Milford_Sound_Panorama.jpg",
+        url: "https://www.newzealand.com/in/milford-sound/",
       },
       {
         "@type": "TouristAttraction",
@@ -132,8 +132,8 @@ export default function NewZealand() {
         description:
           "Known for geysers, hot springs, and Maori culture experiences in the North Island.",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/8/8c/Champagne_Pool_Wai-O-Tapu.jpg",
-        url: "https://www.rotoruanz.com/visit/explore/geothermal-wonders",
+          "https://en.wikipedia.org/wiki/Champagne_Pool#/media/File:ChampagnePool-Wai-O-Tapu_rotated_MC.jpg",
+        url: "https://en.wikipedia.org/wiki/Champagne_Pool",
       },
       {
         "@type": "TouristAttraction",
@@ -141,8 +141,8 @@ export default function NewZealand() {
         description:
           "The iconic movie set from The Lord of the Rings and The Hobbit, located in Matamata.",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hobbiton_Matamata.jpg",
-        url: "https://www.hobbitontours.com/en/",
+          "https://en.wikipedia.org/wiki/Hobbiton_Movie_Set#/media/File:Waterhouse_Lake_Front.jpg",
+        url: "https://en.wikipedia.org/wiki/Hobbiton_Movie_Set",
       },
       {
         "@type": "TouristAttraction",
@@ -150,8 +150,8 @@ export default function NewZealand() {
         description:
           "Home to New Zealand's highest mountain, perfect for hiking, stargazing, and photography.",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/f/f2/Aoraki_Mount_Cook_National_Park.jpg",
-        url: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/",
+          "https://en.wikipedia.org/wiki/Aoraki_/_Mount_Cook_National_Park#/media/File:Hooker_Valley_in_front_of_Mount_Cook_Range.jpg",
+        url: "https://en.wikipedia.org/wiki/Aoraki_/_Mount_Cook_National_Park",
       },
       {
         "@type": "TouristAttraction",
@@ -159,8 +159,8 @@ export default function NewZealand() {
         description:
           "A spectacular glacier on the West Coast, offering guided hikes and helicopter tours.",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/0/05/Franz_Josef_Glacier_NZ.jpg",
-        url: "https://www.franzjosefglacier.com/",
+          "https://upload.wikimedia.org/wikipedia/commons/3/3a/Franz_josef_Glacier_LC0250.jpg",
+        url: "https://en.wikipedia.org/wiki/Franz_Josef_Glacier",
       },
     ],
   };
@@ -217,11 +217,37 @@ export default function NewZealand() {
 
         <div className={styles.VisaData}>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
 
-          <h1 className={styles.Title}>New-Zeland Tourist Visa | Global Visa Internationals | The Best Visa and immigraton Assistance in India</h1>
+
+          <section>
+            <h1 className={styles.subTitle}>Apply for New Zealand Tourist Visa from India with Global Visa Internationals</h1>
+            <p>Planning a trip to New Zealand? Indian citizens need to apply in advance for a New Zealand tourist visa or visitor visa before traveling. Whether you're dreaming of the scenic landscapes of Queenstown, the culture of Rotorua, or the city life in Auckland, Global Visa Internationals simplifies the process of getting your New Zealand visa from India. Our expert consultants assist you in completing the New Zealand visa application form, preparing your documents, and ensuring every requirement is met — increasing your chances of approval from VFS New Zealand India.</p>
+            <p>✅ Start your application now with expert help from Global Visa Internationals — <a href="https://www.globalvisainternationals.com/contact">Contact Us</a></p>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>Comprehensive Assistance for Indian Citizens Applying from Delhi, Mumbai & Bangalore</h2>
+            <p>We provide visa support services across India, including New Zealand visa assistance from Mumbai, Delhi, and Bangalore. Our consultants are familiar with city-specific appointment timelines at VFS Global and help schedule your New Zealand visa appointment on time. From the initial New Zealand visa documents checklist to your NZ visitor visa ITR requirements, we’ll ensure everything is aligned with immigration expectations. Unsure about bank balance requirements or NZ visa sponsorship letters? Our team guides both self-sponsored and sponsored applicants through every step.</p>
+            <p>📍 Apply for your New Zealand visa from Bangalore, Delhi, or Mumbai with us – <a href="https://www.globalvisainternationals.com/contact">Get Started Today</a></p>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>Stay Ahead with Proper Documentation & Avoid Rejections</h2>
+            <p>To apply for your New Zealand visitor visa from India, you need a valid passport, recent photos, a detailed travel itinerary, and proof of funds. This includes bank statements, ITRs, a possible sponsorship letter, and even a police certificate or medical certificate depending on your case. Many visa rejections happen due to missing or inconsistent documents. Common New Zealand visa rejection reasons in India include insufficient funds, lack of clear travel intent, or incorrect information. At Global Visa Internationals, we review your cover letter, itinerary samples, and ensure you're showing genuine tourist intent — helping reduce the risk of delays, visa pending issues, or outright rejection.</p>
+            <p>🛡️ Don’t risk rejection — Get your documents reviewed by our visa experts for FREE! <a href="https://www.globalvisainternationals.com/contact">Book a Consultation</a></p>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>Know the Fees, Timeline & Financial Criteria</h2>
+            <p>The New Zealand visa fee for Indian applicants varies depending on the visa type and exchange rate (NZD to INR). Additionally, you must pay the New Zealand IVL fee for your visitor visa. Processing typically takes 15–30 days, but timelines can shift based on seasonal demand. We help you understand the New Zealand visa turnaround time from India, and track your application’s status post-submission. Need to show adequate funds? Our team clarifies the New Zealand visa proof of funds requirement and helps you present a strong financial profile — whether you're employed, self-employed, or traveling as a digital nomad or under a remote work visitor visa.</p>
+            <p>💰 Transparent fee guidance and timeline tracking — <a href="https://www.globalvisainternationals.com/contact">Talk to a Visa Advisor Now</a></p>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>Trusted Visa Partner for Indian Travelers Since 2017</h2>
+            <p>Whether you're applying for a New Zealand multiple-entry tourist visa, a short-term visitor visa, or traveling solo, with family, or as a remote worker — we’ve got you covered. We also support clients navigating visa quota systems, pending delays, or appeals after rejection. Since 2017, Global Visa Internationals has helped thousands of Indians visit their dream destinations with the right visa support. We’re here to help you travel with confidence.</p>
+            <p>🌏 Ready to explore New Zealand? Apply stress-free with Global Visa Internationals – <a href="https://www.globalvisainternationals.com/contact">Apply Now</a></p>
+          </section>
           <p>New Zealand is an island nation in the southwestern Pacific Ocean, is known for its stunning natural landscapes, vibrant Māori culture, and adventure tourism. It consists of two main landmasses—the North Island and the South Island—and numerous smaller islands. With its diverse geography ranging from snow-capped mountains and fjords to beaches and volcanic plateaus, New Zealand is a dream destination for nature lovers and thrill-seekers alike.</p>
           <h2 className={styles.subTitle}>Top Tourist Places In New Zealand</h2>
           <p> Discover the best places to visit in New Zealand:</p>
