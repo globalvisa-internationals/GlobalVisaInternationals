@@ -12,24 +12,39 @@ body {
   padding: 5 auto;
 }
 
+
+/* :root {
+  --nav-bg: #0B1F3A;
+  --nav-hover-bg: #153E75;
+  --nav-hover-accent: #2D82B7;
+  --primary: #0057A0;
+  --accent: #28A0C9;
+  --background: #F5F7FA;
+  --text: #212121;
+  --submenu-bg: #122C52;
+} */
+
+
 :root {
-  /* --nav-bg: #0A1F44;
-  --nav-hover-bg: #2C3E50;
-  --nav-hover-accent: #6386c2;
-  --submenu-bg: #1449a5; */
-  --primary: #002B5B;
-  --accent: #057A7E;
-  --background: #F5F6F8;
-  --text: #333333;
+  --nav-bg: #1E1F28;
+  --nav-hover-bg: #2E2F38;
+  --nav-hover-accent: #2E2F38;
+  --submenu-bg: #1E1F28;
+  --primary: #3D9DF2;
+  --accent: #00D4B3;
+  --background: #FAFAFB;
+  --text: #333;
+
 }
 
 
-/* :root {
+/* 
+:root {
   --nav-bg: #1C1C1E;
   --nav-hover-bg: #333333;
   --nav-hover-accent: #6386c2;
   --submenu-bg: #2B2B2E;
-} */
+}
 
 
 
@@ -41,7 +56,7 @@ body {
 }
 
 
-/* :root {
+:root {
   --nav-bg: #1E2A36;
   --nav-hover-accent: #6386c2;
   --nav-hover-bg: #2B3A47;
