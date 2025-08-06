@@ -120,7 +120,7 @@
 
 /* Card Design */
 .card {
-    background: #ffffff;
+    background: #cefafc;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     padding: 16px 20px;
@@ -135,6 +135,27 @@
 }
 
 .card p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card1 {
+    background: #fccef6;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 16px 20px;
+    margin: 15px 0;
+    color: #333;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card1:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card1 p {
     margin: 0;
     font-size: 16px;
     line-height: 1.6;
@@ -178,7 +199,8 @@
         max-width: 95%;
     }
 
-    .card {
+    .card,
+    .card1 {
         padding: 14px 16px;
         margin: 12px 0;
     }
