@@ -153,23 +153,53 @@ export default function DubaiVisaPage() {
       <div className={styles.VisaSec}>
 
         <div className={styles.VisaData}>
-          <h1 className={styles.Title}>Apply for Your Dubai Tourist Visa – Experience the Magic of the UAE</h1>
+          <h1 className={styles.Title}> Dubai Tourist Visa</h1>
 
-          <p>Planning a trip to the UAE? A <strong>Dubai Tourist Visa</strong> is your gateway to explore one of the world’s most exciting destinations. From luxury shopping and iconic landmarks to desert safaris and cultural gems, Dubai has something for every traveler. Our expert <strong>Dubai Tourist Visa assistance</strong> ensures a smooth and hassle-free process so you can focus on your dream holiday.</p>
+
+          <p className={styles.card}>Planning your dream trip to the UAE? <strong className={styles.strong}>Dubai tourist visa India</strong> is now easier to obtain with expert assistance from <strong className={styles.strong}>Global Visa International</strong>. Whether you are looking for a <strong className={styles.strong}>30 day Dubai visa from India</strong>, <strong className={styles.strong}>60 day Dubai visa India</strong>, or <strong className={styles.strong}>90 day Dubai tourist visa Indians</strong>, our team ensures a smooth process from documentation to approval. For those who wish to explore the region multiple times, the <strong className={styles.strong}>Dubai multiple entry tourist visa India</strong> offers flexible travel options. We also guide you on eligibility for <strong className={styles.strong}>Dubai visa on arrival Indian citizens</strong> and updates on <strong className={styles.strong}>UAE visa on arrival India</strong> policies.</p>
+          <p className={styles.card1}>✅ <strong className={styles.strong}>Get started today</strong> with a free consultation from Global Visa International – your trusted partner for Dubai visa assistance!</p>
+
+          <h2>Dubai Transit Visa India</h2>
+          <p className={styles.card}>For short layovers or stopovers, a <strong className={styles.strong}>Dubai transit visa India</strong> might be what you need. Whether you're flying with Emirates or another airline, we assist you in booking the right visa and meeting all travel requirements. Wondering about the <strong className={styles.strong}>Dubai tourist visa cost India</strong> or the <strong className={styles.strong}>30 day Dubai visa fee in rupees</strong>? We offer transparent pricing with no hidden charges, guiding you through options including <strong className={styles.strong}>cheap Dubai visa India</strong>, <strong className={styles.strong}>Dubai visa price extra charges</strong>, and <strong className={styles.strong}>Dubai visa agent charges India</strong> — so you know exactly what you're paying for.</p>
+          <p className={styles.card1}>✈️ <strong className={styles.strong}>Ready to travel?</strong> Contact Global Visa International now and let us simplify your Dubai visa journey.</p>
+
+          <h2>Apply Dubai Visa Online from India</h2>
+          <p className={styles.card}>Want a quick and reliable visa application experience? You can now <strong className={styles.strong}>apply Dubai visa online from India</strong> without stress. Whether you’re going through <strong className={styles.strong}>Dubai visa through MakeMyTrip</strong>, <strong className={styles.strong}>Emirates visa service Indian passport</strong>, or other platforms like <strong className={styles.strong}>Akbar Travels Dubai visa process</strong>, we help you compare and choose the best route. You can also <strong className={styles.strong}>apply Dubai visa via airline</strong> depending on your travel booking. If you're unsure about hotel reservations, we provide assistance with <strong className={styles.strong}>Dubai visa booking hotel QR code</strong> and share insights from <strong className={styles.strong}>Atlys Dubai visa India reviews</strong> to help you make informed decisions.</p>
+          <p className={styles.card1}>📱 <strong className={styles.strong}>Apply online today</strong> with Global Visa International and get expert guidance every step of the way!</p>
+
+          <h2>Dubai Visa Documents for Indians</h2>
+          <p className={styles.card}>Having the correct documents is crucial. We help you prepare your <strong className={styles.strong}>Dubai visa documents for Indians</strong>, including <strong className={styles.strong}>Dubai visa hotel booking proof</strong>, <strong className={styles.strong}>return ticket requirement Dubai visa</strong>, and even the <strong className={styles.strong}>PAN card for Dubai visa</strong>. You’ll also need a <strong className={styles.strong}>bank statement for Dubai visa</strong> and ensure <strong className={styles.strong}>passport validity six months UAE visa</strong>. For many travelers, a <strong className={styles.strong}>travel insurance requirement Dubai visa</strong> is mandatory. With our help, you’ll meet all requirements with confidence.</p>
+          <p className={styles.card1}>📄 <strong className={styles.strong}>Avoid rejection and delays</strong> — Get a document checklist from our visa experts now.</p>
+
+          <h2>Dubai Visa Processing Time India</h2>
+          <p className={styles.card}>Processing your visa on time is essential. Our team explains <strong className={styles.strong}>Dubai visa processing time India</strong>, offers support for <strong className={styles.strong}>express Dubai visa 48 hours</strong>, and tracks progress on your <strong className={styles.strong}>Dubai tourist visa 3–5 days</strong> processing. Need your visa faster? Ask us about <strong className={styles.strong}>Dubai visa urgent processing India</strong>. Planning a longer stay? We’ll guide you on how to <strong className={styles.strong}>extend Dubai tourist visa from India</strong>, understand <strong className={styles.strong}>Dubai visa extension cost UAE</strong>, and the difference between <strong className={styles.strong}>visa validity vs stay duration Dubai</strong>.</p>
+          <p className={styles.card1}>🚀 <strong className={styles.strong}>In a rush?</strong> Fast-track your visa with Global Visa International’s priority service.</p>
+
+          <h2>Trusted Dubai Visa Agent India</h2>
+          <p className={styles.card}>When it comes to finding a <strong className={styles.strong}>trusted Dubai visa agent India</strong> or the <strong className={styles.strong}>best visa consultancy for Dubai India</strong>, thousands of Indian travelers trust us. We help you <strong className={styles.strong}>avoid Dubai visa scams India</strong> with transparent guidance. Want real feedback? Explore <strong className={styles.strong}>Indian forum Dubai visa recommendations</strong> and learn more about <strong className={styles.strong}>visa-on-arrival eligibility Indian passport UAE</strong> and <strong className={styles.strong}>UAE visa policy India 2025</strong> updates. Stay informed with the <strong className={styles.strong}>new Dubai visa rules India 2024</strong> and the truth about <strong className={styles.strong}>visa on arrival cancelled for Indians UAE</strong>.</p>
+          <p className={styles.card1}>🛡️ <strong className={styles.strong}>Don’t take risks.</strong> Choose Global Visa International – reliable, experienced, and trusted by Indian travelers.</p>
+
+          <h2>Reddit Indian Dubai Visa Help</h2>
+          <p className={styles.card}>Looking for peer feedback? Many travelers share tips on <strong className={styles.strong}>Reddit Indian Dubai visa help</strong>, offering firsthand <strong className={styles.strong}>Indian travellers Dubai visa experience</strong>. Still unsure? We explain <strong className={styles.strong}>visa rejection reasons Dubai India</strong> and answer “<strong className={styles.strong}>how much bank balance for Dubai visa Indians</strong>” to boost your approval rate. Need help with paperwork? Get <strong className={styles.strong}>dummy hotel booking Dubai visa India</strong> assistance and complete your <strong className={styles.strong}>Dubai tourist visa INR</strong> submission stress-free.</p>
+          <p className={styles.card1}>🌐 <strong className={styles.strong}>Connect with experts</strong> who’ve helped thousands of Indians travel to Dubai successfully — only at Global Visa International.</p>
+
+
+
+          <p className={styles.card}>Planning a trip to the UAE? A <strong className={styles.strong}>Dubai Tourist Visa</strong> is your gateway to explore one of the world’s most exciting destinations. From luxury shopping and iconic landmarks to desert safaris and cultural gems, Dubai has something for every traveler. Our expert <strong className={styles.strong}>Dubai Tourist Visa assistance</strong> ensures a smooth and hassle-free process so you can focus on your dream holiday.</p>
 
           <h2 className={styles.subTitle}>Top Tourist Attractions in Dubai</h2>
 
-          <p>With a valid <strong>Tourist Visa for Dubai</strong>, you can enjoy the perfect blend of modern marvels and ancient culture. Don't miss these must-see spots:</p>
+          <p className={styles.card1}>With a valid <strong className={styles.strong}>Tourist Visa for Dubai</strong>, you can enjoy the perfect blend of modern marvels and ancient culture. Don't miss these must-see spots:</p>
 
           <ul>
-            <li><strong>Burj Khalifa</strong>: Get a bird’s-eye view of Dubai from the world’s tallest building.</li>
-            <li><strong>The Dubai Mall</strong>: Shop, dine, and catch the famous Dubai Fountain show.</li>
-            <li><strong>Palm Jumeirah</strong>: Discover luxury resorts and beaches on this iconic man-made island.</li>
-            <li><strong>Dubai Creek</strong>: Ride a traditional abra and explore the historic heart of the city.</li>
-            <li><strong>Jumeirah Beach</strong>: Sunbathe with the majestic Burj Al Arab in the background.</li>
-            <li><strong>Global Village</strong>: Explore food, art, and culture from 90+ countries (seasonal).</li>
-            <li><strong>Dubai Marina</strong>: Walk along the waterfront promenade, packed with restaurants and yachts.</li>
-            <li><strong>Dubai Desert Safari</strong>: Enjoy dune bashing, camel rides, and a traditional Bedouin dinner.</li>
+            <li className={styles.card}><strong className={styles.strong}>Burj Khalifa</strong>: Get a bird’s-eye view of Dubai from the world’s tallest building.</li>
+            <li className={styles.card1}><strong className={styles.strong}>The Dubai Mall</strong>: Shop, dine, and catch the famous Dubai Fountain show.</li>
+            <li className={styles.card}><strong className={styles.strong}>Palm Jumeirah</strong>: Discover luxury resorts and beaches on this iconic man-made island.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Dubai Creek</strong>: Ride a traditional abra and explore the historic heart of the city.</li>
+            <li className={styles.card}><strong className={styles.strong}>Jumeirah Beach</strong>: Sunbathe with the majestic Burj Al Arab in the background.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Global Village</strong>: Explore food, art, and culture from 90+ countries (seasonal).</li>
+            <li className={styles.card}><strong className={styles.strong}>Dubai Marina</strong>: Walk along the waterfront promenade, packed with restaurants and yachts.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Dubai Desert Safari</strong>: Enjoy dune bashing, camel rides, and a traditional Bedouin dinner.</li>
           </ul>
 
           <div className={styles.formSection1}>
@@ -178,35 +208,35 @@ export default function DubaiVisaPage() {
 
           <h2 className={styles.subTitle}>Why Apply for a Dubai Tourist Visa?</h2>
 
-          <p>Whether you're traveling for a short getaway or an extended vacation, here's why Dubai should be on your list:</p>
+          <p className={styles.card}>Whether you're traveling for a short getaway or an extended vacation, here's why Dubai should be on your list:</p>
 
           <ol>
-            <li><strong>Fast Visa Processing:</strong> Our <strong>Dubai Tourist Visa consultants</strong> offer quick and reliable support.</li>
-            <li><strong>Cultural Attractions:</strong> Visit souks, museums, and the Al Fahidi Historic District.</li>
-            <li><strong>Diverse Cuisine:</strong> Taste flavors from around the world and authentic Emirati dishes.</li>
-            <li><strong>World-Class Entertainment:</strong> From theme parks to desert safaris, fun is guaranteed.</li>
-            <li><strong>Safe & Modern:</strong> Dubai is one of the safest and most well-developed cities globally.</li>
-            <li><strong>Shopping Paradise:</strong> Enjoy tax-free shopping in massive malls and traditional bazaars.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Fast Visa Processing:</strong> Our <strong className={styles.strong}>Dubai Tourist Visa consultants</strong> offer quick and reliable support.</li>
+            <li className={styles.card}><strong className={styles.strong}>Cultural Attractions:</strong> Visit souks, museums, and the Al Fahidi Historic District.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Diverse Cuisine:</strong> Taste flavors from around the world and authentic Emirati dishes.</li>
+            <li className={styles.card}><strong className={styles.strong}>World-Class Entertainment:</strong> From theme parks to desert safaris, fun is guaranteed.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Safe & Modern:</strong> Dubai is one of the safest and most well-developed cities globally.</li>
+            <li className={styles.card}><strong className={styles.strong}>Shopping Paradise:</strong> Enjoy tax-free shopping in massive malls and traditional bazaars.</li>
           </ol>
 
-          <p>Need expert help? Our team offers complete <strong>Dubai Tourist Visa assistance</strong> — from document collection to application tracking. Whether it’s your first international trip or a frequent flyer adventure, we make visa processing simple and stress-free.</p>
+          <p className={styles.card1}>Need expert help? Our team offers complete <strong className={styles.strong}>Dubai Tourist Visa assistance</strong> — from document collection to application tracking. Whether it’s your first international trip or a frequent flyer adventure, we make visa processing simple and stress-free.</p>
 
           <div className={styles.formSection1}>
             <VisaForm />
           </div>
 
-          <p><strong>Get in touch today with a trusted <span style={{ color: '#c00' }}>Dubai Tourist Visa consultant</span> and start your journey to the Emirates.</strong></p>
+          <p className={styles.card1}><strong className={styles.strong}>Get in touch today with a trusted <span style={{ color: '#c00' }}>Dubai Tourist Visa consultant</span> and start your journey to the Emirates.</strong></p>
 
           <h1 className={styles.Title}>Dubai Tourist Visa – Easy Application & Assistance from India</h1>
 
-          <p>Planning your dream trip to the UAE? Whether you're drawn to Dubai’s luxurious malls, iconic landmarks like the Burj Khalifa, or vibrant desert adventures, securing your <strong>Dubai Tourist Visa</strong> is the first step. Our professional <strong>Dubai visa consultants</strong> are here to provide end-to-end <strong>Dubai Tourist Visa assistance</strong> to make the process simple and stress-free.</p>
+          <p className={styles.card}>Planning your dream trip to the UAE? Whether you're drawn to Dubai’s luxurious malls, iconic landmarks like the Burj Khalifa, or vibrant desert adventures, securing your <strong className={styles.strong}>Dubai Tourist Visa</strong> is the first step. Our professional <strong className={styles.strong}>Dubai visa consultants</strong> are here to provide end-to-end <strong className={styles.strong}>Dubai Tourist Visa assistance</strong> to make the process simple and stress-free.</p>
 
           <h2 className={styles.subTitle}>Why Choose Dubai for Your Next Holiday?</h2>
           <ul>
-            <li><strong>Visa on time:</strong> Quick processing for Indian passport holders.</li>
-            <li><strong>Safe & modern:</strong> One of the safest, most modern cities globally.</li>
-            <li><strong>Luxury shopping & dining:</strong> Enjoy tax-free shopping and world-class cuisine.</li>
-            <li><strong>Adventure & Culture:</strong> Desert safaris, Dhow cruises, and Emirati heritage in one city.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Visa on time:</strong> Quick processing for Indian passport holders.</li>
+            <li className={styles.card}><strong className={styles.strong}>Safe & modern:</strong> One of the safest, most modern cities globally.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Luxury shopping & dining:</strong> Enjoy tax-free shopping and world-class cuisine.</li>
+            <li className={styles.card}><strong className={styles.strong}>Adventure & Culture:</strong> Desert safaris, Dhow cruises, and Emirati heritage in one city.</li>
           </ul>
 
           <h2 className={styles.subTitle}>Types of Dubai Tourist Visas for Indians</h2>
@@ -249,11 +279,11 @@ export default function DubaiVisaPage() {
 
           <h2 className={styles.subTitle}>Documents Required to Apply for Dubai Tourist Visa</h2>
           <ul>
-            <li>Passport (valid for at least 6 months)</li>
-            <li>Passport-size photograph (white background)</li>
-            <li>Confirmed return air ticket</li>
-            <li>Hotel booking or UAE address proof</li>
-            <li>Bank statement (if requested)</li>
+            <li className={styles.card1}>Passport (valid for at least 6 months)</li>
+            <li className={styles.card}>Passport-size photograph (white background)</li>
+            <li className={styles.card1}>Confirmed return air ticket</li>
+            <li className={styles.card}>Hotel booking or UAE address proof</li>
+            <li className={styles.card1}>Bank statement (if requested)</li>
           </ul>
 
           <h2 className={styles.subTitle}>Dubai Tourist Visa Fees from India (Approx.)</h2>
@@ -292,69 +322,69 @@ export default function DubaiVisaPage() {
 
           <h2 className={styles.subTitle}>Why Choose Us for Dubai Tourist Visa Assistance?</h2>
           <ul>
-            <li>Fast & easy processing</li>
-            <li>Transparent pricing</li>
-            <li>Expert support from our Dubai visa consultants</li>
-            <li>24x7 support on WhatsApp and email</li>
+            <li className={styles.card}>Fast & easy processing</li>
+            <li className={styles.card1}>Transparent pricing</li>
+            <li className={styles.card}>Expert support from our Dubai visa consultants</li>
+            <li className={styles.card1}>24x7 support on WhatsApp and email</li>
           </ul>
 
-          <p><strong>Get started now! Submit your details and our team will help you apply for your Dubai Tourist Visa with confidence.</strong></p>
+          <p className={styles.card}><strong className={styles.strong}>Get started now! Submit your details and our team will help you apply for your Dubai Tourist Visa with confidence.</strong></p>
 
           <div className={styles.formSection1}>
             <VisaForm />
           </div>
           <h2 className={styles.subTitle}>Navigating the Dubai Tourist Visa Process</h2>
-          <p>Applying for a <strong>Dubai Tourist Visa</strong> from India involves a few important steps. With multiple visa types, quick processing times, and evolving rules, it's crucial to understand the process thoroughly. Here's how to apply with ease:</p>
+          <p className={styles.card1}>Applying for a <strong className={styles.strong}>Dubai Tourist Visa</strong> from India involves a few important steps. With multiple visa types, quick processing times, and evolving rules, it's crucial to understand the process thoroughly. Here's how to apply with ease:</p>
 
           <ol>
-            <li><strong>Determine Your Visa Type:</strong> Choose between 14-day, 30-day, or 60-day tourist visas depending on your travel plans and stay duration.</li>
-            <li><strong>Collect Required Documents:</strong> You’ll typically need a valid passport, a passport-sized photo, confirmed return flight tickets, hotel bookings, and sometimes a bank statement.</li>
-            <li><strong>Submit Your Application:</strong> You can apply through an authorized travel agency or with the help of expert <strong>Dubai visa consultants</strong> like Global Visa Internationals.</li>
-            <li><strong>Wait for Processing:</strong> Most <strong>Dubai Tourist Visa applications</strong> are processed within 2 to 5 working days.</li>
-            <li><strong>Receive Your E-Visa:</strong> Once approved, the visa will be sent to your email and is linked to your passport.</li>
+            <li className={styles.card}><strong className={styles.strong}>Determine Your Visa Type:</strong> Choose between 14-day, 30-day, or 60-day tourist visas depending on your travel plans and stay duration.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Collect Required Documents:</strong> You’ll typically need a valid passport, a passport-sized photo, confirmed return flight tickets, hotel bookings, and sometimes a bank statement.</li>
+            <li className={styles.card}><strong className={styles.strong}>Submit Your Application:</strong> You can apply through an authorized travel agency or with the help of expert <strong className={styles.strong}>Dubai visa consultants</strong> like Global Visa Internationals.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Wait for Processing:</strong> Most <strong className={styles.strong}>Dubai Tourist Visa applications</strong> are processed within 2 to 5 working days.</li>
+            <li className={styles.card}><strong className={styles.strong}>Receive Your E-Visa:</strong> Once approved, the visa will be sent to your email and is linked to your passport.</li>
           </ol>
 
-          <p>Feeling overwhelmed? Let Global Visa Internationals make your <strong>Dubai visa application</strong> smooth and stress-free.</p>
+          <p className={styles.card1}>Feeling overwhelmed? Let Global Visa Internationals make your <strong className={styles.strong}>Dubai visa application</strong> smooth and stress-free.</p>
 
           <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your Trusted Dubai Visa Consultant</h3>
-          <p>Dreaming of exploring Dubai’s skyscrapers, souks, and sandy beaches? We’ll help you get there. At Global Visa Internationals, we specialize in <strong>Dubai Tourist Visa assistance</strong> with a high success rate and personalized support.</p>
+          <p className={styles.card}>Dreaming of exploring Dubai’s skyscrapers, souks, and sandy beaches? We’ll help you get there. At Global Visa Internationals, we specialize in <strong className={styles.strong}>Dubai Tourist Visa assistance</strong> with a high success rate and personalized support.</p>
 
           <b className={styles.subTitle}>Our Dubai Visa Services Include:</b>
           <ul>
-            <li>One-on-one guidance on selecting the right <strong>Dubai visa type</strong>.</li>
-            <li>Expert document checklist and submission assistance.</li>
-            <li>Thorough review of your application to avoid errors or rejections.</li>
-            <li>WhatsApp support and updates throughout your visa journey.</li>
-            <li>Travel planning tips for your Dubai itinerary.</li>
+            <li className={styles.card1}>One-on-one guidance on selecting the right <strong className={styles.strong}>Dubai visa type</strong>.</li>
+            <li className={styles.card}>Expert document checklist and submission assistance.</li>
+            <li className={styles.card1}>Thorough review of your application to avoid errors or rejections.</li>
+            <li className={styles.card}>WhatsApp support and updates throughout your visa journey.</li>
+            <li className={styles.card1}>Travel planning tips for your Dubai itinerary.</li>
           </ul>
 
-          <p className={styles.note}>Avoid last-minute stress or rejection. Contact Global Visa Internationals today and let us handle your <strong>Dubai Tourist Visa</strong> process end to end.</p>
+          <p className={styles.note}>Avoid last-minute stress or rejection. Contact Global Visa Internationals today and let us handle your <strong className={styles.strong}>Dubai Tourist Visa</strong> process end to end.</p>
 
           <div className={styles.formSection1}>
             <VisaForm />
           </div>
 
           <h3 className={styles.subTitle}>Need Help With Dubai Tourist Visa or Urgent Visa Requests?</h3>
-          <p>Whether you’re planning a luxury vacation, a business visit, or a family reunion in Dubai, our consultants are here to help. With our extensive experience in <strong>Dubai visa services</strong>, we ensure you’re fully prepared for every step.</p>
+          <p className={styles.card}>Whether you’re planning a luxury vacation, a business visit, or a family reunion in Dubai, our consultants are here to help. With our extensive experience in <strong className={styles.strong}>Dubai visa services</strong>, we ensure you’re fully prepared for every step.</p>
 
           <b className={styles.subTitle}>Here’s how we simplify your Dubai visa journey:</b>
           <ol>
-            <h3 className={styles.subTitle}><li className={styles.subTitle}>Fast Visa Processing</li></h3>
-            <p>We help you apply for urgent 24-48 hour <strong>Dubai Tourist Visas</strong> with accurate documentation, so you don’t miss your travel window.</p>
+            <h3 className={styles.subTitle}><li className={styles.card1} >Fast Visa Processing</li></h3>
+            <p className={styles.card1}>We help you apply for urgent 24-48 hour <strong className={styles.strong}>Dubai Tourist Visas</strong> with accurate documentation, so you don’t miss your travel window.</p>
 
-            <h3><li className={styles.subTitle}>Tailored Document Support</li></h3>
-            <p>We guide you on all key requirements including:</p>
+            <h3><li className={styles.card} >Tailored Document Support</li></h3>
+            <p className={styles.card}>We guide you on all key requirements including:</p>
             <ul>
-              <li>Valid passport & passport-size photo</li>
-              <li>Flight tickets, hotel bookings, or sponsor documents</li>
-              <li>Bank statements if needed for longer stays</li>
+              <li className={styles.card1}>Valid passport & passport-size photo</li>
+              <li className={styles.card}>Flight tickets, hotel bookings, or sponsor documents</li>
+              <li className={styles.card1}>Bank statements if needed for longer stays</li>
             </ul>
 
-            <h3><li className={styles.subTitle}>Real-Time Support by Dubai Visa Experts</li></h3>
-            <p>Get WhatsApp and email support from a dedicated <strong>Dubai visa consultant</strong> throughout the process. We answer your queries promptly and track your application status daily.</p>
+            <h3><li className={styles.card} >Real-Time Support by Dubai Visa Experts</li></h3>
+            <p className={styles.card1}>Get WhatsApp and email support from a dedicated <strong className={styles.strong}>Dubai visa consultant</strong> throughout the process. We answer your queries promptly and track your application status daily.</p>
 
-            <h3><li className={styles.subTitle}>100% Assistance Until Visa Approval</li></h3>
-            <p>From the first form to final visa delivery, we don’t stop until your <strong>Dubai Tourist Visa</strong> is ready. You just pack your bags — we’ll handle the rest.</p>
+            <h3><li className={styles.card} >100% Assistance Until Visa Approval</li></h3>
+            <p className={styles.card1}>From the first form to final visa delivery, we don’t stop until your <strong className={styles.strong}>Dubai Tourist Visa</strong> is ready. You just pack your bags — we’ll handle the rest.</p>
           </ol>
 
           <div className={styles.formSection1}>
@@ -362,19 +392,19 @@ export default function DubaiVisaPage() {
           </div>
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Dubai Tourist Visa Assistance?</h2>
-          <p>At Global Visa Internationals, we take pride in offering professional, transparent, and timely <strong>Dubai visa consultancy services</strong>. Here’s why thousands trust us:</p>
+          <p className={styles.card}>At Global Visa Internationals, we take pride in offering professional, transparent, and timely <strong className={styles.strong}>Dubai visa consultancy services</strong>. Here’s why thousands trust us:</p>
 
           <ul>
-            <li><strong>Tailored Guidance:</strong> We provide country-specific visa solutions based on your profile.</li>
-            <li><strong>Accuracy First:</strong> All your forms and documents are reviewed multiple times.</li>
-            <li><strong>End-to-End Support:</strong> From visa form filling to travel tips, we’re with you at every step.</li>
-            <li><strong>Proven Success:</strong> With over <strong>55,000+ visas processed</strong>, we have the expertise to get it done right.</li>
-            <li><strong>Quick Turnaround:</strong> Get your Dubai visa within 2–5 working days (sometimes faster!).</li>
+            <li className={styles.card1}><strong className={styles.strong}>Tailored Guidance:</strong> We provide country-specific visa solutions based on your profile.</li>
+            <li className={styles.card}><strong className={styles.strong}>Accuracy First:</strong> All your forms and documents are reviewed multiple times.</li>
+            <li className={styles.card1}><strong className={styles.strong}>End-to-End Support:</strong> From visa form filling to travel tips, we’re with you at every step.</li>
+            <li className={styles.card}><strong className={styles.strong}>Proven Success:</strong> With over <strong className={styles.strong}>55,000+ visas processed</strong>, we have the expertise to get it done right.</li>
+            <li className={styles.card1}><strong className={styles.strong}>Quick Turnaround:</strong> Get your Dubai visa within 2–5 working days (sometimes faster!).</li>
           </ul>
 
-          <p>We’re not just visa agents — we’re your travel partners. With 11+ years of visa expertise and 75,000+ consultations delivered, we at Global Visa Internationals proudly serve as India’s leading <strong>Dubai Tourist Visa consultants</strong>.</p>
+          <p className={styles.card}>We’re not just visa agents — we’re your travel partners. With 11+ years of visa expertise and 75,000+ consultations delivered, we at Global Visa Internationals proudly serve as India’s leading <strong className={styles.strong}>Dubai Tourist Visa consultants</strong>.</p>
 
-          <p>Let Global Visa Internationals help you plan your unforgettable Dubai vacation — with peace of mind and professional visa assistance.</p>
+          <p className={styles.card1}>Let Global Visa Internationals help you plan your unforgettable Dubai vacation — with peace of mind and professional visa assistance.</p>
 
           <p className={styles.note}>This service is provided by Global Visa Internationals, an independent visa consultancy. We are not affiliated with the UAE government or embassy.</p>
 
