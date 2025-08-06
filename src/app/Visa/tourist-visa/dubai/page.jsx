@@ -403,9 +403,7 @@ export default function DubaiVisaPage() {
           </ul>
 
           <p className={styles.card}>We’re not just visa agents — we’re your travel partners. With 11+ years of visa expertise and 75,000+ consultations delivered, we at Global Visa Internationals proudly serve as India’s leading <strong className={styles.strong}>Dubai Tourist Visa consultants</strong>.</p>
-
           <p className={styles.card1}>Let Global Visa Internationals help you plan your unforgettable Dubai vacation — with peace of mind and professional visa assistance.</p>
-
           <p className={styles.note}>This service is provided by Global Visa Internationals, an independent visa consultancy. We are not affiliated with the UAE government or embassy.</p>
 
 
