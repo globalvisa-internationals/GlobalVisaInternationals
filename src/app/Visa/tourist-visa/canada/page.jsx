@@ -146,27 +146,7 @@ export default function Canada() {
             Canada Tourist Visa Agents in Bangalore | Best Canada Visitor Visa
             Consultants | Global Visa Internationals
           </h1>
-          <p>
-            Planning to explore Canada? As one of the most trusted{" "}
-            <strong>Canada Tourist Visa Consultants in Bangalore</strong>,
-            Global Visa Internationals helps you secure your{" "}
-            <strong>Canada visitor visa</strong> with ease. Canada is a land of
-            breathtaking natural beauty, iconic landmarks, and multicultural
-            cities. From the majestic <strong>Rocky Mountains</strong> and{" "}
-            <strong>Niagara Falls</strong> to the historic charm of Quebec City
-            and the vibrant life of Toronto and Vancouver, this country offers
-            something for every traveler. Our expert team provides complete
-            guidance on{" "}
-            <strong>
-              Canada tourist visa requirements, processing time, eligibility,
-              and document checklist
-            </strong>
-            . Whether you're planning a family vacation, a solo trip, or a
-            honeymoon, we ensure your visa process is smooth and stress-free.
-            Trust Global Visa Internationals – your reliable partner for{" "}
-            <strong>Canada tourist visa application support</strong> – to turn
-            your travel dreams into reality.
-          </p>
+          <p className={styles.card}> Planning to explore Canada? As one of the most trusted Canada Tourist Visa Consultants in Bangalore, Global Visa Internationals helps you secure your Canada visitor visa with ease. Canada is a land of breathtaking natural beauty, iconic landmarks, and multicultural cities. From the majestic Rocky Mountains and Niagara Falls to the historic charm of Quebec City and the vibrant life of Toronto and Vancouver, this country offers something for every traveler. Our expert team provides complete guidance on Canada tourist visa requirements, processing time, eligibility, and document checklist. Whether you're planning a family vacation, a solo trip, or a honeymoon, we ensure your visa process is smooth and stress-free. Trust Global Visa Internationals – your reliable partner for Canada tourist visa application support – to turn your travel dreams into reality. </p>
 
           <div className={styles.formSection1}>
             <VisaForm />
@@ -176,13 +156,11 @@ export default function Canada() {
             Explore Top Places to Visit in Canada – A Complete Guide for Tourist
             Visa Applicants
           </h2>
-          <p>
-            Planning a trip to Canada on a <strong>Canada tourist visa</strong>?
+          <p className={styles.card}>
+            Planning a trip to Canada on a Canada tourist visa?
             Discover some of the most iconic landmarks and top-rated attractions
             that make Canada a dream destination for travelers worldwide.
-            Whether you're applying for a{" "}
-            <strong>Canada visitor visa from India</strong> or consulting with{" "}
-            <strong>expert Canada tourist visa agents</strong>, this travel
+            Whether you're applying for a Canada visitor visa from India or consulting with expert Canada tourist visa agents, this travel
             guide will help you plan an unforgettable experience.
           </p>
 
@@ -190,60 +168,60 @@ export default function Canada() {
             Must-Visit Attractions for Canada Tourist Visa Holders
           </strong>
           <ul>
-            <li>
+            <li className={styles.card}>
               <h4 className={styles.subTitle}>Banff National Park</h4>
               Located in the heart of the Canadian Rockies, Banff is a
-              must-visit for anyone traveling on a{" "}
-              <strong>Canada visitor visa</strong>. With scenic spots like Lake
+              must-visit for anyone traveling on a
+              Canada visitor visa. With scenic spots like Lake
               Louise, Moraine Lake, and the Icefields Parkway, this park offers
-              hiking, sightseeing, and photography opportunities. A favorite for{" "}
-              <strong>tourist visa travelers</strong>, it’s perfect for both
+              hiking, sightseeing, and photography opportunities. A favorite for
+              tourist visa travelers, it’s perfect for both
               summer and winter adventures.
             </li>
 
-            <li>
+            <li className={styles.card}>
               <h4 className={styles.subTitle}>Quebec City</h4>
               Quebec City offers a European vibe with cobblestone streets,
               French architecture, and historical landmarks. It's a great
-              destination for cultural tourism under a{" "}
-              <strong>Canada tourist visa</strong>. Visit Château Frontenac, Old
+              destination for cultural tourism under a
+              Canada tourist visa. Visit Château Frontenac, Old
               Quebec (UNESCO World Heritage Site), and enjoy seasonal festivals
               and local cuisine.
             </li>
 
-            <li>
+            <li className={styles.card}>
               <h4 className={styles.subTitle}>Toronto</h4>
-              For tourists holding a <strong>Canada travel visa</strong>,
+              For tourists holding a Canada travel visa,
               Toronto offers iconic city experiences like the CN Tower, the
               Royal Ontario Museum, and the Distillery District. It's one of the
               most visited cities in Canada, ideal for shopping, nightlife, and
               cultural tours.
             </li>
 
-            <li>
+            <li className={styles.card}>
               <h4 className={styles.subTitle}>Niagara Falls</h4>A global tourist
               magnet, Niagara Falls is a bucket-list destination for anyone
-              applying for a <strong>Canada visitor visa</strong>. Get up-close
+              applying for a Canada visitor visa. Get up-close
               through Journey Behind the Falls or take the Niagara City Cruise
               to experience the majestic beauty of one of the world’s most
               powerful waterfalls.
             </li>
 
-            <li>
+            <li className={styles.card}>
               <h4 className={styles.subTitle}>Jasper National Park</h4>
               Adjacent to Banff, Jasper offers serene beauty and less crowded
               natural escapes. With attractions like Maligne Lake, Athabasca
               Falls, and Spirit Island, it’s a top choice for nature lovers
-              applying for a <strong>Canadian tourist visa</strong>.
+              applying for a Canadian tourist visa.
             </li>
 
-            <li>
+            <li className={styles.card}>
               <h4 className={styles.subTitle}>Historic Sites in Ottawa</h4>
               As Canada’s capital, Ottawa is rich in history and perfect for
               educational and leisure tourism. Visit Parliament Hill, Rideau
               Canal (UNESCO Site), and the Canadian War Museum. Ideal for
-              families and solo travelers on a{" "}
-              <strong>Canada visa for tourism</strong>.
+              families and solo travelers on a
+              Canada visa for tourism.
             </li>
           </ul>
 
@@ -255,51 +233,50 @@ export default function Canada() {
             Best Time to Visit Canada for Tourist Visa Holders – A
             Season-by-Season Guide
           </h3>
-          <p>
-            Canada is a year-round destination for travelers applying for a{" "}
-            <strong>Canada tourist visa</strong>. With its diverse seasons, each
+          <p className={styles.card}>
+            Canada is a year-round destination for travelers applying for a Canada tourist visa. With its diverse seasons, each
             part of the year offers unique experiences – from snow-covered
             adventures in winter to colorful foliage in fall. Knowing the best
             time to visit Canada can help you plan your trip better and increase
-            your chances of <strong>Canada visitor visa approval</strong> if
+            your chances of Canada visitor visa approval if
             tied to a specific season or event.
           </p>
 
           <ul>
-            <li>
+            <li className={styles.card}>
               <h3 className={styles.subTitle}>☀️ Summer (June to August)</h3>
               Summer in Canada offers ideal weather for outdoor activities,
               sightseeing, and festivals. Popular with international tourists on
-              a <strong>Canada visitor visa</strong>, it's the perfect season
+              a Canada visitor visa, it's the perfect season
               for exploring Banff and Jasper National Parks, canoeing on
               crystal-clear lakes, and visiting iconic landmarks like Lake
-              Louise and Moraine Lake. Book early – this is peak{" "}
-              <strong>Canada tourist season</strong>.
+              Louise and Moraine Lake. Book early – this is peak
+              Canada tourist season.
             </li>
 
-            <li>
+            <li className={styles.card}>
               <h3 className={styles.subTitle}>
                 ❄️ Winter (December to February)
               </h3>
               Traveling to Canada in winter gives you the chance to enjoy snow
               sports, winter carnivals, and magical scenery. Tourist visa
               holders can ski in Banff, go ice skating on frozen lakes, or visit
-              the world-famous <strong>Carnaval de Québec</strong>. Winter is
+              the world-famous Carnaval de Québec. Winter is
               perfect for those seeking adventure and snowy landscapes.
             </li>
 
-            <li>
+            <li className={styles.card}>
               <h3 className={styles.subTitle}>
                 🍁 Shoulder Seasons (Spring: March–May | Fall:
                 September–November)
               </h3>
-              Spring and fall are excellent times to apply for a{" "}
-              <strong>Canada travel visa</strong> if you prefer fewer crowds,
+              Spring and fall are excellent times to apply for a
+              Canada travel visa if you prefer fewer crowds,
               lower costs, and unique seasonal experiences. Spring features
               cherry blossoms in Vancouver and maple syrup tours in Quebec. Fall
               offers breathtaking foliage in the Rockies and is ideal for
               Northern Lights viewing in the Yukon. These off-peak seasons are
-              perfect for smooth <strong>tourist visa processing</strong> and
+              perfect for smooth tourist visa processing and
               relaxed exploration.
             </li>
           </ul>
@@ -307,8 +284,8 @@ export default function Canada() {
           <h3 className={styles.subTitle}>
             🎉 Experience Canadian Culture: Must-See Festivals & Events
           </h3>
-          <p>
-            Tourists on a <strong>Canada visitor visa</strong> can experience
+          <p className={styles.card}>
+            Tourists on a Canada visitor visa can experience
             the country's rich culture through its vibrant festivals held all
             year round. From music and food to history and film, Canada’s
             festivals offer something for everyone.
@@ -317,44 +294,44 @@ export default function Canada() {
           <ul>
             <li>
               <h3 className={styles.subTitle}>🎶 Summer Festivals</h3>
-              Summer is packed with world-class events like the{" "}
-              <strong>Montreal International Jazz Festival</strong>,{" "}
-              <strong>Toronto Caribbean Carnival</strong>, and{" "}
-              <strong>Calgary Stampede</strong>. Visitors also enjoy the{" "}
-              <strong>Celebration of Light</strong> in Vancouver and{" "}
-              <strong>Folklorama</strong> in Winnipeg. These events attract
-              thousands of international travelers with valid{" "}
-              <strong>Canada tourist visas</strong>.
+              Summer is packed with world-class events like the
+              Montreal International Jazz Festival,
+              Toronto Caribbean Carnival, and
+              Calgary Stampede. Visitors also enjoy the
+              Celebration of Light in Vancouver and
+              Folklorama in Winnipeg. These events attract
+              thousands of international travelers with valid
+              Canada tourist visas.
             </li>
 
             <li>
               <h3 className={styles.subTitle}>🌨️ Winter Festivals</h3>
-              Winter highlights include <strong>
-                Carnaval de Québec
-              </strong>, <strong>Ottawa Winterlude</strong>,{" "}
-              <strong>Niagara Winter Festival of Lights</strong>, and{" "}
-              <strong>Festival du Voyageur</strong> in Winnipeg. If you're
+              Winter highlights include
+              Carnaval de Québec
+              , Ottawa Winterlude,
+              Niagara Winter Festival of Lights, and
+              Festival du Voyageur in Winnipeg. If you're
               visiting Canada in winter, these festivals are a must.
             </li>
 
             <li>
               <h3 className={styles.subTitle}>🌸 Spring Festivals</h3>
-              Spring is known for the <strong>
-                Canadian Tulip Festival
-              </strong>{" "}
-              in Ottawa, the <strong>Vancouver Cherry Blossom Festival</strong>,
+              Spring is known for the
+              Canadian Tulip Festival
+
+              in Ottawa, the Vancouver Cherry Blossom Festival,
               and Quebec’s maple syrup season. It’s a great time to travel to
               Canada with fewer crowds and colorful backdrops.
             </li>
 
             <li>
               <h3 className={styles.subTitle}>🍂 Fall Festivals</h3>
-              Fall includes major events like the{" "}
-              <strong>Toronto International Film Festival (TIFF)</strong>,{" "}
-              <strong>Celtic Colours International Festival</strong>, and{" "}
-              <strong>Oktoberfest</strong> in Kitchener-Waterloo. Don’t miss the{" "}
-              <strong>Jasper Dark Sky Festival</strong> or{" "}
-              <strong>Okanagan Wine Festival</strong> for unforgettable seasonal
+              Fall includes major events like the
+              Toronto International Film Festival (TIFF),
+              Celtic Colours International Festival, and
+              Oktoberfest in Kitchener-Waterloo. Don’t miss the
+              Jasper Dark Sky Festival or
+              Okanagan Wine Festival for unforgettable seasonal
               experiences.
             </li>
           </ul>
@@ -367,8 +344,8 @@ export default function Canada() {
             Planning Your Trip to Canada – Cost, Flights & Accommodation Guide
             for Tourist Visa Applicants
           </h2>
-          <p>
-            If you're applying for a <strong>Canada tourist visa</strong>,
+          <p className={styles.card}>
+            If you're applying for a Canada tourist visa,
             having a clear understanding of travel expenses can help you budget
             your trip effectively. From flight costs to accommodation options,
             here's essential information for planning a smooth and affordable
@@ -378,11 +355,9 @@ export default function Canada() {
           <h3 className={styles.subTitle}>
             ✈️ Flight Costs to Canada – Average Round-Trip Fares by Region
           </h3>
-          <p>
+          <p className={styles.card}>
             Flight fares to Canada vary based on season, departure country,
-            airline, and destination city. If you're searching for the{" "}
-            <strong>cheapest time to fly to Canada</strong> or wondering about{" "}
-            <strong>flight ticket prices from India to Canada</strong>, use this
+            airline, and destination city. If you're searching for the cheapest time to fly to Canada or wondering about flight ticket prices from India to Canada, use this
             table as a reference to plan ahead.
           </p>
 
@@ -438,13 +413,12 @@ export default function Canada() {
             🏨 Accommodation Costs in Canada – Budget, Mid-Range & Luxury
             Options
           </h2>
-          <p>
-            Wondering <strong>where to stay in Canada</strong> during your
+          <p className={styles.card}>
+            Wondering where to stay in Canada during your
             visit? From backpacker-friendly hostels to luxury 5-star hotels,
             Canada offers a wide range of accommodations to suit all travel
-            styles and visa durations. Here's an overview of{" "}
-            <strong>hotel prices in major Canadian cities</strong> to help you
-            plan your stay while on a <strong>Canada visitor visa</strong>.
+            styles and visa durations. Here's an overview of hotel prices in major Canadian cities to help you
+            plan your stay while on a Canada visitor visa.
           </p>
 
           <table className={styles.table}>
@@ -493,8 +467,7 @@ export default function Canada() {
           <p className={styles.note}>
             <b>Tip:</b> Booking early and choosing shoulder seasons can help
             reduce overall costs. Also consider vacation rentals, B&Bs, and
-            Airbnb for long stays during your{" "}
-            <strong>Canada tourist visit</strong>.
+            Airbnb for long stays during your Canada tourist visit.
           </p>
 
           <div className={styles.formSection1}>
@@ -504,9 +477,9 @@ export default function Canada() {
             Average Daily Expenses in Canada – Budget Planning for Tourist Visa
             Holders
           </h2>
-          <p>
+          <p className={styles.card}>
             Understanding the average cost of daily living in Canada is crucial
-            for those applying for a <strong>Canada tourist visa</strong>. Your
+            for those applying for a Canada tourist visa. Your
             travel budget will depend on your style—backpacker, mid-range, or
             luxury. Here's a breakdown of typical food and public transport
             costs in major Canadian cities.
@@ -576,49 +549,48 @@ export default function Canada() {
             Why Choose Canada for Your Next Vacation? – Top Reasons for Tourist
             Visa Travelers
           </h2>
-          <p>
-            If you're considering applying for a{" "}
-            <strong>Canada visitor visa</strong>, here’s why Canada consistently
+          <p className={styles.card}>
+            If you're considering applying for a Canada visitor visa, here’s why Canada consistently
             ranks among the world’s top tourist destinations. From natural
             beauty to safety and cultural diversity, it offers everything you
             need for a memorable international trip.
           </p>
 
           <ul>
-            <li>
+            <li className={styles.card}>
               <h4 className={styles.subTitle}>
                 🌲 Breathtaking Landscapes and Natural Beauty
               </h4>
-              Canada is home to world-renowned natural attractions like the{" "}
-              <strong>Rocky Mountains</strong>, <strong>Niagara Falls</strong>,
-              and <strong>Banff National Park</strong>. Whether you're visiting
-              Lake Louise, hiking in Jasper, or watching the{" "}
-              <strong>Northern Lights</strong> in Yukon, the country’s scenic
+              Canada is home to world-renowned natural attractions like the
+              Rocky Mountains, Niagara Falls,
+              and Banff National Park. Whether you're visiting
+              Lake Louise, hiking in Jasper, or watching the
+              Northern Lights in Yukon, the country’s scenic
               beauty is unmatched.
             </li>
 
-            <li>
+            <li className={styles.card}>
               <h4 className={styles.subTitle}>
                 🎭 Rich Cultural Experiences and Warm Hospitality
               </h4>
               Canada’s multicultural society welcomes visitors from around the
-              world. Cities like <strong>Toronto</strong>,{" "}
-              <strong>Montreal</strong>, and <strong>Vancouver</strong>{" "}
+              world. Cities like Toronto,
+              Montreal, and Vancouver
               celebrate diversity through art, food, festivals, and heritage.
-              Canada is a great destination for{" "}
-              <strong>cultural tourism</strong>, offering immersive experiences
+              Canada is a great destination for
+              cultural tourism, offering immersive experiences
               for travelers.
             </li>
 
-            <li>
+            <li className={styles.card} >
               <h4 className={styles.subTitle}>
                 🛡️ Safe and Secure Travel Environment
               </h4>
               Canada ranks among the safest countries globally, with low crime
               rates and stable governance. Public transport is reliable,
               healthcare is accessible, and infrastructure is well-maintained —
-              making it a stress-free choice for international travelers on a{" "}
-              <strong>Canada tourist visa</strong>.
+              making it a stress-free choice for international travelers on a
+              Canada tourist visa.
             </li>
           </ul>
 
@@ -629,9 +601,8 @@ export default function Canada() {
             Canada Tourist Visa Requirements: Complete Checklist & Eligibility
             Guide (2025)
           </h2>
-          <p>
-            Planning a trip to Canada? Before applying for a{" "}
-            <strong>Canada Tourist Visa (Temporary Resident Visa)</strong>, it's
+          <p className={styles.card}>
+            Planning a trip to Canada? Before applying for a Canada Tourist Visa (Temporary Resident Visa), it's
             essential to understand the eligibility criteria and required
             documents to increase your chances of visa approval. Here's a
             detailed breakdown to help you prepare a strong and complete
@@ -641,10 +612,9 @@ export default function Canada() {
           <h3 className={styles.subTitle}>
             ✅ Who is Eligible to Apply for a Canadian Visitor Visa?
           </h3>
-          <p>
+          <p className={styles.card}>
             To be eligible for a Canadian tourist visa, applicants must meet
-            several key requirements set by{" "}
-            <strong>Immigration, Refugees and Citizenship Canada (IRCC)</strong>
+            several key requirements set by Immigration, Refugees and Citizenship Canada (IRCC)
             .
           </p>
 
@@ -779,12 +749,10 @@ export default function Canada() {
             </li>
           </ul>
 
-          <p>
-            Meeting these{" "}
-            <strong>Canada visitor visa eligibility criteria</strong> and submitting a complete file improves your chances of approval. For
+          <p className={styles.card}>
+            Meeting these Canada visitor visa eligibility criteria and submitting a complete file improves your chances of approval. For
             expert assistance with document preparation, financial
-            justification, or travel bookings, reach out to{" "}
-            <strong>Global Visa Internationals</strong> – your trusted Canada
+            justification, or travel bookings, reach out to Global Visa Internationals – your trusted Canada
             tourist visa agents in India.
           </p>
 
@@ -797,9 +765,8 @@ export default function Canada() {
           <h2 className={styles.subTitle}>
             Step-by-Step Canada Tourist Visa Application Process (2025)
           </h2>
-          <p>
-            Planning a trip to Canada? Here's a complete guide to the{" "}
-            <strong>Canada visitor visa application process</strong> to help you
+          <p className={styles.card}>
+            Planning a trip to Canada? Here's a complete guide to the Canada visitor visa application process to help you
             navigate every step with confidence. Whether you're visiting for
             tourism, to meet family, or explore Canadian culture, these steps
             ensure your journey starts smoothly.
@@ -810,9 +777,9 @@ export default function Canada() {
               <b className={styles.subTitle}>Visa Type & Eligibility:</b>
               <ul>
                 <li>
-                  Depending on your nationality, you may need a{" "}
-                  <strong>Temporary Resident Visa (TRV)</strong> or an{" "}
-                  <strong>Electronic Travel Authorization (eTA)</strong> to
+                  Depending on your nationality, you may need a
+                  Temporary Resident Visa (TRV) or an
+                  Electronic Travel Authorization (eTA) to
                   visit Canada.
                 </li>
                 <li>
@@ -858,7 +825,7 @@ export default function Canada() {
               <ul>
                 <li>Unsure about the process? Avoid mistakes and delays.</li>
                 <li>
-                  <strong>Global Visa Internationals</strong> offers end-to-end
+                  Global Visa Internationals offers end-to-end
                   visa assistance — from profile assessment to documentation and
                   follow-ups.
                 </li>
@@ -873,10 +840,9 @@ export default function Canada() {
           <h2 className={styles.subTitle}>
             Start Your Canada Visa Application With Experts
           </h2>
-          <p>
-            At <strong>Global Visa Internationals</strong>, we provide
-            personalized guidance to ensure your{" "}
-            <strong>Canada visitor visa application</strong> is complete,
+          <p className={styles.card}>
+            At Global Visa Internationals, we provide
+            personalized guidance to ensure your Canada visitor visa application is complete,
             accurate, and professionally presented. We assist with:
           </p>
           <ul>
@@ -886,7 +852,7 @@ export default function Canada() {
             <li>Mock interviews (if called for one)</li>
             <li>Real-time updates on your visa progress</li>
           </ul>
-          <p>
+          <p className={styles.card}>
             Get peace of mind with expert help — contact us today and make your
             Canadian travel dream a reality!
           </p>
