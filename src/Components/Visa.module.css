@@ -60,6 +60,23 @@
     margin: auto;
 }
 
+
+/* Card Design */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 16px 20px;
+    margin: 15px 0;
+    color: #333;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
 .formSection1 {
     display: none;
     align-items: center;
@@ -141,6 +158,12 @@
     .subTitle {
         font-size: 18px;
     }
+
+    .card {
+        padding: 14px 16px;
+        margin: 12px 0;
+    }
+
 
     .table th,
     .table td {
