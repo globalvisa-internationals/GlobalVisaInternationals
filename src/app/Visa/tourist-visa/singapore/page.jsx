@@ -19,7 +19,7 @@ export const metadata = {
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png",
+        url: "https://www.globalvisainternationals.com/visa-banner/singapore-tourist-visa-global-visa-internationals.png",
         alt: "Apply for Singapore Tourist Visa - Global Visa Internationals",
       }
     ],
@@ -194,7 +194,7 @@ export default function Dubai() {
       </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/images/singapore-tourist-visa-global-visa-internationals.png" alt="Singapore-Turist-Visa-Global-Visa-Internationals" className={styles.VisaImage} />
+        <img src="/visa-banner/singapore-tourist-visa-global-visa-internationals.png" alt="Singapore-Turist-Visa-Global-Visa-Internationals" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>
