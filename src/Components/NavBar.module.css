@@ -52,7 +52,7 @@
 .navLinks a:hover,
 .navLinks a:focus {
   background-color: var(--nav-hover-bg);
-  color: var(--nav-hover-accent);
+  color: var(--primary);
   transform: translateY(-1px);
 }
 
@@ -73,7 +73,7 @@
 
 .submenuToggle:hover,
 .submenuToggle:focus {
-  color: var(--nav-hover-accent);
+  color: var(--primary);
 }
 
 .submenu {
@@ -109,7 +109,7 @@
 
 .submenu li a:hover {
   background-color: var(--nav-hover-accent);
-  color: var(--nav-bg);
+  color: var(--primary);
 }
 
 /* Mobile Navigation */
