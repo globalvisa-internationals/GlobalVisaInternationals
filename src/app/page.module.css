@@ -185,7 +185,7 @@
 
 /* ===== STORY CARD ===== */
 .storyCard {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Mobile Responsive */
@@ -506,7 +506,6 @@
     height: 60px;
   }
 }
-
 
 
 .services {
