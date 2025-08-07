@@ -20,7 +20,7 @@
   position: relative;
   margin: 30px 0 40px 0;
   text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
-  color: #002B5B;
+  color: #057A7E;
   font-weight: 600;
   font-size: 2rem;
   letter-spacing: 0.5px;
@@ -177,7 +177,7 @@
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  color: var(--primary);
+  color: #057A7E;
   margin-bottom: 15px;
   padding-top: 0;
   margin-top: 0;
@@ -249,7 +249,7 @@
 }
 
 .whyChooseContainer h2 {
-  color: var(--primary);
+  color: #057A7E;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
@@ -380,7 +380,7 @@
 
 .serviceCard h3 {
   font-size: 1.3rem;
-  color: var(--primary);
+  color: #057A7E;
   margin-bottom: 16px;
   text-align: center;
 }
@@ -473,7 +473,7 @@
 .valuesCard h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--primary);
+  color: #057A7E;
   /* Corporate blue */
   margin-bottom: 12px;
 }
@@ -572,7 +572,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--primary);
+  color: #057A7E;
   text-align: center;
   gap: 12px;
 }
@@ -602,7 +602,7 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  background-color: #cefafc;
+  background-color: #e8f6f7;
   border: 2px solid var(--accent);
   transform: rotateX(180deg);
   padding-top: 20px;
@@ -612,21 +612,25 @@
 .cardBack h4 {
   margin: 5px 0 10px;
   font-size: 18px;
-  color: var(--primary);
+  color: #057A7E;
 }
 
 .cardBack ul {
   padding: 0;
   margin: 0;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   width: 100%;
   font-size: 15px;
 }
 
 .cardBack li {
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.5px dotted #333;
   padding: 8px 0;
-  transition: 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
 }
 
 .cardBack li a {
