@@ -66,7 +66,7 @@ const breadcrumbStructuredData = {
 };
 
 export default function USVisaBulletinJuly2025() {
-    const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}}`;
+    const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
 
     return (
         <>
