@@ -5,17 +5,19 @@ import React from 'react';
 import Head from 'next/head';
 
 export const metadata = {
-  title: "UK Tourist Visa Consultants in India | Global Visa Internationals",
-  description: "Apply for your UK tourist visa from India with expert guidance. Global Visa Internationals helps with UK visitor visa documentation, online application, and interview tips.",
-  keywords: "UK tourist visa, UK visa consultants in India, apply UK visitor visa from India, UK visa Bangalore, UK visa application help, UK travel visa for Indians, UK visa agents near me, UK visitor visa documents, UK visa cost from India",
+  title: "UK Tourist Visa from India | Best UK Visa Consultants in India - Global Visa Internationals",
+  description:
+    "Apply for your UK tourist visa from India with the best UK visa consultants. Get expert help for UK visitor visa application, documents, fees, and embassy interview. Trusted by thousands of Indian travellers.",
+  keywords:
+    "UK tourist visa from India, UK visitor visa consultants, UK visa agents in India, apply UK visa online India, UK visa assistance Bangalore, UK travel visa for Indian citizens, UK visa documentation help, UK visa consultants near me, UK visa process from India, UK visa cost 2025",
   robots: "index, follow",
   alternates: {
     canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk",
   },
   openGraph: {
-    title: "UK Tourist Visa Assistance for Indian Citizens | Apply with Ease",
+    title: "Apply for UK Tourist Visa from India | Trusted UK Visa Consultants",
     description:
-      "Planning to visit the UK? Get expert help with UK tourist visa application, document preparation, and embassy appointment. Trusted visa agents in India since 2012.",
+      "Looking to travel to the UK from India? Global Visa Internationals offers full support for UK tourist visa applications, documentation, and embassy appointments. Fast processing. Reliable service since 2012.",
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk",
     siteName: "Global Visa Internationals",
     images: [
@@ -23,7 +25,7 @@ export const metadata = {
         url: "https://www.globalvisainternationals.com/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp",
         width: 1200,
         height: 630,
-        alt: "UK Tourist Visa Assistance Banner",
+        alt: "UK Tourist Visa Assistance from India - Global Visa Internationals",
       }
     ],
     type: "website",
@@ -31,9 +33,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@GLOBALVISA1505",
-    title: "UK Tourist Visa for Indian Citizens | Fast & Trusted Consultants",
+    title: "UK Tourist Visa from India | Fast UK Visa Application Help",
     description:
-      "Apply for a UK visitor visa with the help of expert consultants in Bangalore. Complete support for UK visa forms, documents, and embassy guidance.",
+      "Get expert help to apply for your UK tourist visa from India. Global Visa Internationals provides visa application assistance, documentation support, and embassy appointment guidance.",
     images: [
       "https://www.globalvisainternationals.com/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp",
     ],
