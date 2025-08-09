@@ -2,72 +2,98 @@ import Styles from './blog.module.css';
 import Head from 'next/head';
 
 export const metadata = {
-    title: "US Visa Rules 2025 for Indians | Trump Policy Changes Explained",
-    description: "Explore the latest US visa rule changes for 2025 including visa fee hikes, $250 integrity fee, green card marriage rules, and interview requirements. Get expert help from Global Visa Internationals, trusted consultants in India.",
+    title: "US Visa Rules & Global Travel Updates for Indians | August 2025",
+    description: "Get the latest August 8, 2025 visa news for Indians: US visa policy changes, interview waiver updates, EB-5 final action date, Philippines visa-free entry, Luxembourg visa scam alerts, and more. Expert insights from Global Visa Internationals.",
     keywords: [
         "US visa rules 2025",
-        "new US visa policy 2025",
-        "Trump immigration changes 2025",
-        "US visa fee hike 2025",
-        "US visa integrity fee",
-        "apply US tourist visa from India",
-        "H-1B visa new rules for Indians",
-        "green card marriage rules 2025",
-        "US visa consultants India",
-        "US visa interview waiver India 2025",
-        "US visa cost India 2025"
+        "US Dropbox cancellation India",
+        "US in-person passport collection",
+        "US visa interview waiver changes",
+        "EB-5 visa India 2025",
+        "EB-5 final action date India",
+        "US visa bulletin August 2025",
+        "H1B visa interview India",
+        "L1 visa interview changes India",
+        "US consulate India updates",
+        "Visa-free countries for Indians 2025",
+        "Philippines visa-free entry India",
+        "India Philippines direct flights 2025",
+        "Free e-tourist visa India Philippines",
+        "Fake Luxembourg visa scam",
+        "Schengen visa fraud India",
+        "Luxembourg visa racket Ahmedabad",
+        "Re 1 visa sale India",
+        "Atlys visa sale offer",
+        "Visa appointment booking India",
+        "Travel visa news August 2025",
+        "Indian tourist visa updates 2025",
+        "Visa processing changes India",
+        "US embassy India guidelines",
+        "Overseas travel from India 2025",
+        "Visa fraud warning India",
+        "Cheapest visa offers India",
+        "International travel updates India",
+        "Immigration news India 2025",
+        "Consulate policy changes US India"
     ],
     robots: "index, follow",
-    canonical: "https://www.globalvisainternationals.com/blog/us-visa-policy-2025",
-    image: "/Blog/US Visa Rules-2025-for-Indians-Trump-Policy-Changes-Explained.webp",
+    canonical: "https://www.globalvisainternationals.com/blog/us-visa-updates-august-2025",
+    image: "/Blog/US-Visa-Rules-2025-August-Updates.webp",
     author: "Global Visa Internationals",
-    date: "2025-08-07", // Corrected to today's date
+    date: "2025-08-08"
 };
 
-const blogStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": metadata.title,
-    "description": metadata.description,
-    "image": `https://www.globalvisainternationals.com${metadata.image}`,
-    "author": {
-        "@type": "Organization",
-        "name": metadata.author,
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": metadata.author,
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.globalvisainternationals.com/gvilogo.png",
-        },
-    },
-    "datePublished": metadata.date,
-    "mainEntityOfPage": metadata.canonical,
-};
 
-const breadcrumbStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.globalvisainternationals.com",
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "USA Visa Updates",
-            "item": metadata.canonical,
-        }
-    ]
-};
+
 
 export default function USVisaBulletinJuly2025() {
     const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
+    const blogStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": metadata.title,
+        "description": metadata.description,
+        "image": `https://www.globalvisainternationals.com${metadata.image}`,
+        "author": {
+            "@type": "Organization",
+            "name": metadata.author
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": metadata.author,
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.globalvisainternationals.com/gvilogo.png"
+            }
+        },
+        "datePublished": metadata.date,
+        "mainEntityOfPage": metadata.canonical
+    };
 
+    const breadcrumbStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.globalvisainternationals.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Visa News",
+                "item": "https://www.globalvisainternationals.com/blog/visa-news"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "US Visa Updates August 2025",
+                "item": metadata.canonical
+            }
+        ]
+    };
     return (
         <>
             <Head>
