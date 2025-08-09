@@ -20,7 +20,7 @@ export const metadata = {
     canonical: "https://www.globalvisainternationals.com/blog/visa-updates-indians-august-8-2025",
     image: "/Blog/Visa-Updates-for-Indians-August-8-2025.webp",
     author: "Global Visa Internationals",
-    date: "2025-08-08",
+    date: "2025-08-09",
 };
 
 const blogStructuredData = {
@@ -165,7 +165,7 @@ export default function VisaUpdatesAug2025() {
                     />
                 </div>
 
-                <h1>Updates for Indians on August 8, 2025 – Global Visa Internationals</h1>
+                <h1>Updates for Indians on August 9, 2025 – Global Visa Internationals</h1>
                 <p>
                     As part of evolving <strong>US visa rules 2025</strong>, and amid broader <strong>International travel updates India</strong>, several fast-moving changes affect visa applicants, appointment bookings, and travel plans. Below, Global Visa Internationals – Visa and immigrant consultants – outlines the latest verified developments and our recommendations for Indian applicants.
                 </p>
