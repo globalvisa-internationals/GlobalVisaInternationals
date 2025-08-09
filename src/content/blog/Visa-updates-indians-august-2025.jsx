@@ -2,7 +2,7 @@ import Styles from './blog.module.css';
 import Head from 'next/head';
 
 export const metadata = {
-    title: "Visa Updates for Indians – August 8, 2025 | Global Visa Internationals",
+    title: "Visa Updates for Indians – August 9, 2025 | Global Visa Internationals",
     description: "Latest Indian visa news – US H-1B changes, Schengen fraud alerts, and new visa-free countries for Indian passport holders as of August 8, 2025. Stay updated for stress-free travel.",
     keywords: [
         "visa updates India August 2025",
@@ -17,8 +17,8 @@ export const metadata = {
         "international travel restrictions India"
     ],
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    canonical: "https://www.globalvisainternationals.com/blog/visa-updates-indians-august-8-2025",
-    image: "/Blog/Visa-Updates-for-Indians-August-8-2025.webp",
+    canonical: "https://www.globalvisainternationals.com/blog/visa-updates-indians-august-9-2025",
+    image: "/Blog/Visa-Updates-for-Indians-August-9-2025.webp",
     author: "Global Visa Internationals",
     date: "2025-08-09",
 };
@@ -74,7 +74,7 @@ const faqStructuredData = {
             "name": "Which countries are visa-free for Indians in 2025?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "As of August 8, 2025, countries like the Philippines have introduced visa-free entry for Indian passport holders. Always check embassy guidelines before travel."
+                "text": "As of August 9, 2025, countries like the Philippines have introduced visa-free entry for Indian passport holders. Always check embassy guidelines before travel."
             }
         },
         {
@@ -112,7 +112,7 @@ export default function VisaUpdatesAug2025() {
                 <meta property="og:description" content="Breaking visa news for Indians – New US rules, visa-free travel options, and fraud alerts. Learn what’s changing in August 2025." />
                 <meta property="og:url" content={metadata.canonical} />
                 <meta property="og:image" content={fullImageUrl} />
-                <meta property="og:image:alt" content="Visa Updates for Indians August 8 2025 - Global Visa Internationals" />
+                <meta property="og:image:alt" content="Visa Updates for Indians August 9 2025 - Global Visa Internationals" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:site_name" content="Global Visa Internationals" />
@@ -121,7 +121,7 @@ export default function VisaUpdatesAug2025() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@GLOBALVISA1505" />
                 <meta name="twitter:creator" content="@GLOBALVISA1505" />
-                <meta name="twitter:title" content="Visa Updates for Indians – August 8, 2025" />
+                <meta name="twitter:title" content="Visa Updates for Indians – August 9, 2025" />
                 <meta name="twitter:description" content="US H-1B visa updates, Schengen fraud alerts & new visa-free countries for Indians. Read the latest August 2025 travel news." />
                 <meta name="twitter:image" content={fullImageUrl} />
                 <meta name="twitter:image:alt" content="Visa Updates India August 2025" />
