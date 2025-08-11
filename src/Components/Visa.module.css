@@ -156,7 +156,7 @@
 
 /* Card Design */
 .card {
-    background: #cefafc;
+    background: #ffff;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     padding: 16px 20px;
@@ -177,7 +177,7 @@
 }
 
 .card1 {
-    background: #fccef6;
+    background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     padding: 16px 20px;
@@ -200,7 +200,7 @@
 
 @media (max-width: 768px) {
     .Title {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .subTitle {
