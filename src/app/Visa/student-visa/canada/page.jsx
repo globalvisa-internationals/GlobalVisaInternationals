@@ -2,6 +2,7 @@
 import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
 import React from 'react';
+import Head from 'next/head';
 
 export const metadata = {
   title: "Canada Student Visa Consultants | Global Visa Internationals",
