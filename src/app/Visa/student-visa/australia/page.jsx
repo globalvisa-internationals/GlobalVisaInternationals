@@ -1,188 +1,247 @@
-"use client";
-import styles from './australia.module.css';
-import React, { useState } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import VisaForm from '@/Components/VisaForm';
+import styles from '@/Components/Visa.module.css';
+import React from 'react';
+import Head from 'next/head';
+
+export const metadata = {
+  title: "Australia Student Visa Consultants | Global Visa Internationals",
+  description:
+    "Apply for your Australia Student Visa (subclass 500) with Global Visa Internationals. Expert guidance on study permit process, GTE requirements, costs, and top universities for Indian students.",
+  keywords:
+    "Australia student visa, subclass 500 visa, Australian study visa, study in Australia for Indian students, apply for Australia student visa, GTE Australia, Australia student visa requirements, Australia study permit from India",
+  robots: "index, follow",
+  images: "https://www.globalvisainternationals.com/visa-banner/Australia-Visa-&-Passport-Services.webp",
+
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/student-visa/australia",
+  },
+  openGraph: {
+    title: "Australia Student Visa: Application, Requirements & Study Tips",
+    description:
+      "Plan your education in Australia with expert visa support. Learn about subclass 500 visa process, GTE requirements, tuition fees, and best universities for Indian students.",
+    url: "https://www.globalvisainternationals.com/Visa/student-visa/australia",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/visa-banner/Australia-Visa-&-Passport-Services.webp",
+        width: 1200,
+        height: 630,
+        alt: "Australia Student Visa Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "Australia Student Visa: Apply, Requirements & Top Universities",
+    description:
+      "Study in Australia with a valid student visa (subclass 500). Get expert help from Global Visa Internationals on GTE, tuition fees, and top universities for Indian students.",
+    images: [
+      "https://www.globalvisainternationals.com/visa-banner/Australia-Visa-&-Passport-Services.webp",
+    ],
+  },
+};
 
 export default function Australia() {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+  const pageUrl = metadata.alternates.canonical;
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    })
-      .then(async (res) => {
-        const data = await res.json();
-        if (!data.success) {
-          alert("❌ Email sending failed. Please try again.");
+  const TopUniversitiesList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Top Universities in Australia for International Students",
+    "description": "Popular Australian universities frequently chosen by Indian students applying for a student visa subclass 500. Helpful when planning admissions, GTE preparation, and post-study work opportunities.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Melbourne",
+          "description": "One of Australia's top-ranked universities, known for research and global employability.",
+          "url": "https://www.unimelb.edu.au/",
+          "image": "https://about.unimelb.edu.au/__data/assets/image/0021/243563/UniversitySquare-hero.jpg"
         }
-      })
-      .catch((err) => {
-        alert("❌ Something went wrong while submitting the form.");
-        console.error(err);
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Australian National University (ANU)",
+          "description": "Renowned for academic excellence and located in Canberra, a popular choice for international students.",
+          "url": "https://www.anu.edu.au/",
+          "image": "https://www.anu.edu.au/files/styles/anu_full_920_518/public/story/anu-campus-hero.jpg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Sydney",
+          "description": "Historic Australian university with world-class facilities and diverse programs.",
+          "url": "https://www.sydney.edu.au/",
+          "image": "https://www.sydney.edu.au/content/dam/corporate/images/about-us/our-campus/camperdown-darlington-campus.jpg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Queensland",
+          "description": "Leading Australian research university located in Brisbane with strong industry links.",
+          "url": "https://www.uq.edu.au/",
+          "image": "https://about.uq.edu.au/files/43658/UQ-Great-Court.jpg"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Monash University",
+          "description": "Known for innovation, global research, and high employability of graduates.",
+          "url": "https://www.monash.edu/",
+          "image": "https://www.monash.edu/__data/assets/image/0015/2333991/monash-campus.jpg"
+        }
+      }
+    ]
   };
 
-  const structuredData = {
+  const breadcrumbJsonLd = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Global Visa Internationals - Australian Student Visa Services",
-    "description": "Expert guidance on Australian student visas (Subclass 500), top universities, scholarships, and post-study career support.",
-    "url": "https://www.globalvisainternationals.com/Visa/student-visa/australia",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Australia Student Visa",
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const educationConsultancyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
     "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "image": "https://www.globalvisainternationals.com/images/study-in-australia-cover.png",
+    "description": "Global Visa Internationals provides Australia Student Visa Assistance for Indian students — expert help with subclass 500 visa, GTE requirements, proof of funds, OSHC guidance, biometrics, medicals, police certificates, SOPs, and university admissions.",
+    "keywords": "Australia student visa, subclass 500 visa, Australian study visa, GTE Australia, Australia student visa for Indian students, apply for Australia student visa, Australia study visa requirements",
+    "telephone": "+91-7022213466",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "GF-9, Business Point, Brigade Road",
-      "addressLocality": "Bangalore",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
       "addressRegion": "Karnataka",
       "postalCode": "560025",
       "addressCountry": "IN"
     },
-    "telephone": "+917022213466",
-    "sameAs": [
-      "https://www.facebook.com/globalvisa.globalvisa",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://x.com/GLOBALVISA1505"
-    ],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
     "areaServed": {
       "@type": "Country",
-      "name": "Australia"
+      "name": "IN"
     },
-    "serviceType": "Australian Student Visa Assistance",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "Varies",
-      "url": "https://www.globalvisainternationals.com/Visa/student-visa/australia",
-      "description": "Personalized visa application support, university selection, and scholarship guidance for studying in Australia."
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Australian Student Visa Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "item": {
-            "@type": "Service",
-            "name": "Visa Application Assistance (Subclass 500)",
-            "description": "End-to-end support with documentation, application, and interviews.",
-            "url": "https://www.globalvisainternationals.com/Visa/student-visa/australia"
-          }
-        },
-        {
-          "@type": "Offer",
-          "item": {
-            "@type": "Service",
-            "name": "University & Course Selection",
-            "description": "Help choosing suitable programs based on your goals and eligibility.",
-            "url": "https://www.globalvisainternationals.com/Visa/student-visa/australia"
-          }
-        },
-        {
-          "@type": "Offer",
-          "item": {
-            "@type": "Service",
-            "name": "Scholarship Support",
-            "description": "Get matched with scholarships and apply with confidence.",
-            "url": "https://www.globalvisainternationals.com/Visa/student-visa/australia"
-          }
-        },
-        {
-          "@type": "Offer",
-          "item": {
-            "@type": "Service",
-            "name": "GTE Statement Assistance",
-            "description": "Craft a compelling Genuine Temporary Entrant statement to strengthen your case.",
-            "url": "https://www.globalvisainternationals.com/Visa/student-visa/australia"
-          }
-        },
-        {
-          "@type": "Offer",
-          "item": {
-            "@type": "Service",
-            "name": "Post-Study Work Visa & PR Pathway Guidance",
-            "description": "Plan your future with post-study visa options and PR strategies.",
-            "url": "https://www.globalvisainternationals.com/Visa/student-visa/australia"
-          }
-        }
-      ]
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ],
+    "serviceType": [
+      "Australia Student Visa Assistance",
+      "Subclass 500 Visa Consultation",
+      "GTE Preparation & Documentation",
+      "University Admission Guidance for Indian Students"
+    ],
     "potentialAction": {
-      "@type": "ContactAction",
-      "name": "Contact Us for Visa Help",
-      "target": "https://www.globalvisainternationals.com/contact"
+      "@type": "Action",
+      "name": "Book a Consultation",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${pageUrl}#contact`,
+        "inLanguage": "en-IN",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      }
     }
   };
 
   return (
     <>
-      <head>
-        <title>Study in Australia | Visa, Universities, Scholarships & PR Pathways</title>
-        <meta name="description" content="Explore top universities, scholarships, student visa (Subclass 500), and post-study PR options in Australia. Trusted guidance by Global Visa Internationals." />
-        <meta name="keywords" content="study in Australia, Australian student visa, subclass 500, study permit Australia, Australia universities, scholarships, international students, PR after study, GTE statement, OSHC, work while studying, courses in Australia" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/student-visa/australia" />
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
-        <meta property="og:title" content="Study in Australia | Visa, Universities, Scholarships & PR Pathways" />
-        <meta property="og:description" content="Expert visa assistance for studying in Australia. Get help with Subclass 500 visa, top courses, scholarships, and career pathways." />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/student-visa/australia" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/study-in-australia-cover.png" />
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Study in Australia | Visa, Scholarships, Universities & PR" />
-        <meta name="twitter:description" content="Start your Australian education journey with expert visa and scholarship guidance from Global Visa Internationals." />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/study-in-australia-cover.png" />
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        <meta name="geo.region" content="AU" />
-        <meta name="geo.placename" content="Australia" />
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      </head>
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TopUniversitiesList) }}
+        />
+
+      </Head>
+
       <div className={styles.imageContainer}>
         <img src="/images/Australia-banner.png" alt="Australia Image" className={styles.AustraliaImage} />
       </div>
@@ -195,77 +254,7 @@ export default function Australia() {
           <p>Are you ready to embark on an exciting educational journey in Australia? With its world-class universities, diverse culture, and vibrant lifestyle, Australia has become a top destination for international students seeking quality education and personal growth. The Australian student visa (Subclass 500) is your gateway to this incredible opportunity.</p>
           <p className={styles.note}>At Global Visa Internationals, we understand that the process of obtaining a student visa can be overwhelming. That's why we're here to provide you with expert guidance and support every step of the way. Our team of experienced professionals is dedicated to helping you navigate the complexities of the visa application process, ensuring that you have all the necessary documentation and information to make your journey smooth and successful.</p>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <p>Imagine yourself thriving in Australia's world-renowned educational environment! From bustling metropolitan cities like Sydney and Melbourne to the serene beauty of Perth and Brisbane, Australia offers a diverse range of study locations and lifestyles. An Australian student visa is your key to unlocking a transformative educational experience that can shape your future.</p>
 
@@ -273,77 +262,7 @@ export default function Australia() {
 
           <p>With our extensive knowledge of the Australian education system and visa regulations, we are here to help you every step of the way. Whether you're interested in pursuing a diploma, bachelor's degree, or postgraduate studies, we will assist you in selecting the right course and institution that aligns with your aspirations.</p>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>Why Australia Stands Out for International Students</h3>
           <p>Choosing Australia for your education offers a multitude of compelling advantages:</p>
@@ -359,77 +278,7 @@ export default function Australia() {
             <li><strong>Supportive Environment for International Students:</strong> Australian institutions and communities actively support international students with various services, including orientation programs, academic assistance, and social activities.</li>
           </ul>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>Understanding the Australian Student Visa (Subclass 500)</h3>
           <p>The Australian student visa (Subclass 500) is designed for international students who wish to study full-time in a registered course at an Australian educational institution. This visa allows you to live, work, and study in Australia for the duration of your course. Here are some key points to consider:</p>
@@ -444,153 +293,13 @@ export default function Australia() {
             <li><strong>Pathway to Permanent Residency:</strong> Depending on your qualifications and work experience, you may have pathways to apply for permanent residency in Australia after completing your studies.</li>
           </ul>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>The Importance of the Genuine Temporary Entrant (GTE) Requirement</h3>
           <p>The Genuine Temporary Entrant (GTE) requirement is a crucial aspect of the Australian student visa application process. It is designed to ensure that applicants genuinely intend to study in Australia temporarily and will return to their home country after completing their studies. To meet the GTE requirement, you must provide a statement addressing your intentions, ties to your home country, and reasons for choosing Australia as your study destination.</p>
           <p>At Global Visa Internationals, we understand the significance of the GTE requirement and can assist you in crafting a compelling GTE statement that highlights your genuine intentions and strengthens your visa application.</p>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>The Role of Overseas Student Health Cover (OSHC)</h3>
           <p>Overseas Student Health Cover (OSHC) is a mandatory health insurance requirement for international students studying in Australia. It provides coverage for medical expenses, hospital visits, and other healthcare services during your stay. Having OSHC ensures that you have access to necessary medical care without incurring significant out-of-pocket expenses.</p>
@@ -599,77 +308,7 @@ export default function Australia() {
           <p>Submitting a well-prepared visa application is essential for a successful outcome. The Australian Department of Home Affairs assesses applications based on various factors, including your financial capacity, English language proficiency, and adherence to visa conditions. A comprehensive and accurate application increases your chances of obtaining the student visa.</p>
           <p>At Global Visa Internationals, we specialize in preparing and submitting student visa applications. Our team will work closely with you to gather the necessary documentation, complete the application forms accurately, and ensure that your application meets all requirements.</p>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>The Benefits of Choosing Global Visa Internationals</h3>
           <p>At Global Visa Internationals, we are committed to providing you with the highest level of service and support throughout your Australian student visa journey. Here are some of the key benefits of choosing us:</p>
@@ -686,77 +325,7 @@ export default function Australia() {
             <li><strong>Network of Partnerships:</strong> Our strong relationships with educational institutions and industry partners enable us to provide you with exclusive opportunities and insights.</li>
           </ul>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>Key Aspects of the Australian Student Visa (Subclass 500)</h3>
           <p>The Student Visa (Subclass 500) is specifically designed for individuals who wish to undertake full-time study in a registered course of study in Australia. Successful applicants generally need to demonstrate:</p>
@@ -772,77 +341,7 @@ export default function Australia() {
 
           </ul>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>Navigating the Application Process</h3>
           <p>The Australian student visa application typically involves several stages, includin</p>
@@ -857,85 +356,7 @@ export default function Australia() {
 
 
           <div className={styles.formSection1}>
-            <h2 className={styles.subTitle}>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input
-                    className={styles.input}
-                    type="tel"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    pattern="[0-9]{10}"
-                    minLength="10"
-                    maxLength="10"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
           <h3 className={styles.subTitle}>A Closer Look at the Student Visa Application Journey</h3>
@@ -950,77 +371,7 @@ export default function Australia() {
             <li>Visa Grant Notification: Once your application is assessed and approved, you will receive a notification of your visa grant.</li>
           </ul>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>Top Courses to Study in Australia (High Demand & Future Growth)</h3>
           <p>Australia's strong economy and focus on innovation drive demand for graduates in various fields. Here are some of the top courses international students are pursuing:</p>
@@ -1046,77 +397,7 @@ export default function Australia() {
             <li><strong>Architecture and Urban Planning:</strong> As cities grow and evolve, skilled architects and urban planners are in demand.</li>
           </ul>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>Best Scholarships in Australia for International Students</h3>
           <p>Financing your education is a key consideration. Australia offers various scholarships for international students:</p>
@@ -1133,77 +414,7 @@ export default function Australia() {
             <li><strong>Research Training Program (RTP) Scholarships: </strong>For higher degree research students (Masters by Research and PhD), the Australian Government provides RTP scholarships to support tuition fees and living costs.</li>
           </ul>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>Types of Australian Student Visas</h3>
           <p>The primary visa for international students undertaking formal studies in Australia is the Student Visa (Subclass 500). This visa allows you to stay in Australia for the duration of your registered course(s). Key aspects include:</p>
@@ -1215,77 +426,7 @@ export default function Australia() {
             <strong>Navigating the specific requirements and conditions of each visa subclass can be complex. Contact Global Visa Internationals for accurate and up-to-date information tailored to your situation.</strong>
           </ul>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3 className={styles.subTitle}>The Australian Education Model: A Focus on Quality and Practical Application</h3>
           <p>The Australian education system is highly regarded globally for its quality assurance frameworks and focus on practical learning:</p>
@@ -1329,77 +470,7 @@ export default function Australia() {
 
           <p>Australia's strong economy offers diverse career opportunities for international graduates in various sectors, particularly in areas of high demand mentioned earlier (Healthcare, Engineering, IT, etc.).</p>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <ul>
             <li><strong>Post-Study Work Visa (Subclass 485):</strong> This visa allows eligible international students to stay and work in Australia for a period after graduation, providing valuable work experience. Different streams exist with varying eligibility criteria and durations.</li>br
@@ -1468,77 +539,7 @@ export default function Australia() {
             </p>
           </div>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
 
@@ -1551,77 +552,7 @@ export default function Australia() {
           <p className={styles.note}>At Global Visa Internationals, we are committed to providing you with personalized support and expert guidance tailored to your unique situation. Our experienced team is here to assist you in every step of the process, ensuring that you have the best chance of success in obtaining your Australian student visa.</p>
           <p>Partner with the experienced professionals at Global Visa Internationals to ensure a seamless and successful visa application journey. Our expert consultants offer:</p>
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
 
           <ul>
@@ -1641,77 +572,7 @@ export default function Australia() {
           <p className={styles.note}>Don't let the complexities of the visa process deter you from pursuing your academic dreams in Australia. Contact Global Visa Internationals today and let us be your trusted partner in making your Australian education a reality!</p>
 
           <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
           <h3>Frequently Asked Questions (FAQs)</h3>
           <ol>
@@ -1834,86 +695,16 @@ export default function Australia() {
             <p>Having a low academic score may affect your chances of obtaining a student visa. However, you can still apply and provide additional documentation to demonstrate your genuine intention to study and your commitment to improving your academic performance.</p>
           </ol>
 
- <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
-        <div className={styles.formSection}>
-          <h2>Immigration Inquiry Form</h2>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["Canada", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+        <div className={styles.formSection1}>
+          <VisaForm />
         </div>
       </div>
       <section id='Client Reviews'>
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
       </section>
     </>
   );
