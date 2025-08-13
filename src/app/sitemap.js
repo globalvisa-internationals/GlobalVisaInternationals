@@ -6,7 +6,7 @@ export default async function sitemap() {
       url: 'https://www.globalvisainternationals.com/',
       lastModified: new Date('2025-05-15'),
       changefreq: 'weekly',   // all lowercase
-      priority: 1.0,
+      priority: 1,
     },
     {
       url: 'https://www.globalvisainternationals.com/about-us',
@@ -210,14 +210,14 @@ export default async function sitemap() {
       url: 'https://www.globalvisainternationals.com/blog/uk-student-visa-rules-2025',
       lastModified: new Date('2025-06-07'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
 
     {
       url: 'https://www.globalvisainternationals.com/blog/US-Visa-got-rejected-dont-wory',
       lastModified: new Date('2025-06-07'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
 
 
@@ -225,68 +225,75 @@ export default async function sitemap() {
       url: 'https://www.globalvisainternationals.com/blog/10-Plus-Countries-You-Can-Visit-With-A-USA-Visa',
       lastModified: new Date('2025-06-07'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/uk-evisa-digital-visa-replacement-2025',
       lastModified: new Date('2025-06-18'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/germany-steady-harbor-indian-students',
       lastModified: new Date('2025-06-18'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/US-Introduces-Sweeping-New-Rules-for-Foreign-Students-What-Indians-Need-to-Know',
       lastModified: new Date('2025-06-23'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/UK-Family-Visa-Tax-on-Love-2025',
       lastModified: new Date('2025-06-25'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025/',
       lastModified: new Date('2025-06-23'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/10-Important-Things-to-Know-for-Indian-Students-in-Canada/',
       lastModified: new Date('2025-07-02'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/',
       lastModified: new Date('2025-07-04'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers/',
       lastModified: new Date('2025-07-18'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/australian-tourist-visa-for-indians-july-2025-updates',
       lastModified: new Date('2025-08-05'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Visa-updates-indians-august-2025',
       lastModified: new Date('2025-08-09'),
       changefreq: 'monthly',
-      priority: 1,
+      priority: 0.8,
     },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/UK-Tourist-and-Student-Visa-Changes-in-2025',
+      lastModified: new Date('2025-08-13T00:00:00Z'), // explicit ISO helps some generators
+      changefreq: 'weekly', // fine for a newsy/updates page
+      priority: 0.8,         // use 0.7–0.9 for important blog posts; reserve 1.0 for homepage only
+    },
+
 
   ]
 }
