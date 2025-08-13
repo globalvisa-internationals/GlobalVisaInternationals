@@ -245,8 +245,6 @@ export default function Canada() {
 
       </Head>
 
-
-
       <div className={styles.imageContainer}>
         <img
           src={metadata.images}
