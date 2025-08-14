@@ -5,12 +5,14 @@ import 'react-phone-input-2/lib/style.css';
 import styles from './VisaForm.module.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
+
 export default function VisaForm() {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [phone, setPhone] = useState('');
   const [phoneError, setPhoneError] = useState('');
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -33,7 +35,10 @@ export default function VisaForm() {
     } else {
       setPhoneError('');
     }
-
+    if (!agreedToTerms) {
+      alert('❌ Please agree to the Terms & Conditions.');
+      return;
+    }
     const form = event.target;
     const formData = new FormData(form);
 
@@ -130,6 +135,19 @@ export default function VisaForm() {
             ))}
           </select>
           <input className={styles.input} name="email" type="email" placeholder="Enter your email" required />
+        </div>
+        <div className={styles.termsContainer}>
+          <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            checked={agreedToTerms}
+            onChange={() => setAgreedToTerms(!agreedToTerms)}
+            required
+          />
+          <label htmlFor="terms">
+            I agree to the <a href="https://www.globalvisainternationals.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+          </label>
         </div>
 
         <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
