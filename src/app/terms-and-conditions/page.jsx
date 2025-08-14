@@ -1,82 +1,174 @@
-import react from 'react';
-import Styles from './terms-and-conditions.module.css'
-export default function TermsAndConditions(){
-    return(
-        <>
-        <section className={Styles.TermsAndConditions}>
-            <h1 className={Styles.Title}>Terms & Conditions – Consultancy Undertaking Agreement</h1>
-            <p>Global Visa Internationals, headquartered in Bangalore, India, is a trusted consultancy firm offering expert guidance on immigration and visa processes. Our services include:</p>
-            <ul>
-                <li>Immigration and visa consultancy</li>
-                <li>Profile assessment and documentation support</li>
-                <li>Evaluation of qualifications and eligibility</li>
-                <li>Guidance for application lodgment</li>
-                <li>Country-specific settlement and documentation advice</li>
-                <li>Assistance with visa interview preparation</li>
-            </ul>
-            <h2 className={Styles.subTitle}>Agreement Overview</h2>
-            <p>This agreement outlines the terms of engagement between the client (referred to as “Client”, “I”, or “We”) and Global Visa Internationals (referred to as “Company”, “We”, or “Us”) for consultancy services related to immigration and visa applications.</p>
-            <p>By availing our services, the Client agrees to the terms below.</p>
-            <ol>
-                <li><h2 className={Styles.subTitle}>Authorization & Responsibilities</h2>
+import React from 'react';
+import Styles from '@/Components/Visa.module.css';
+
+export default function TermsAndConditions() {
+    return (
+        <div className={Styles.VisaSec}>
+            <div className={Styles.VisaData}>
+                <h1 className={Styles.strong}>Terms and Conditions</h1>
+
+                <p className={Styles.note}>
+                    Disclaimer: Global Visa Internationals is an independent entity. We are not affiliated with any government or government agency. We provide immigration guidance and concierge services for a fee. Our website, www.globalvisainternationals.com, is a private publication offering general information about immigration and permits. We are not a law firm and do not provide legal advice. All information on our website is for reference only and should not be used as a substitute for professional legal advice. By using our website or making a purchase, you agree to our Terms of Use.
+                </p>
+                <h3 className={Styles.strong}>Intellectual Property:</h3>
+                <p>
+
+                    Global Visa Internationals is the copyright holder of all content, layout, design, data, graphics, trademarks, and logos on the globalvisainternationals.com domain, unless stated otherwise. This content is protected by international copyright laws. We will protect our intellectual property rights and take legal action if necessary.
+                </p>
+                <h3 className={Styles.strong}>Limitation of Liability:</h3>
+                <p>
+                    Global Visa Internationals is not liable for any special or consequential damages that result from the use or inability to use the materials on this website, even if we have been advised of the possibility of such damages.
+                </p>
+                <h3 className={Styles.strong}>Personal Use Limitation:</h3>
+                <p>
+                    The information, news, articles, emails, products, and services provided by Global Visa Internationals are for your personal, non-commercial use. You may not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any of our content, products, or services without our express written permission.
+                </p>
+                <h3 className={Styles.strong}>Typographical Errors:</h3>
+                <p>
+                    In the event that a product or service is listed at an incorrect price, we reserve the right to refuse or cancel any orders placed at the incorrect price. If your credit card has already been charged for the incorrect price, we will issue a full refund.
+                </p>
+                <h3 className={Styles.strong}>Newsletter:</h3>
+                <p>
+                    Our website offers a free newsletter. This is an opt-out service, so you can unsubscribe at any time. Your email address will never be shared with any third party.
+                </p>
+                <h3 className={Styles.strong}>Links:</h3>
+                <p>
+                    Our website may contain hyperlinks to external sites for your convenience. However, the inclusion of any link does not imply our endorsement. We are not responsible for the content of any linked websites.
+                </p>
+
+                <h2 className={Styles.strong}>Refund Policy</h2>
+                <p>
+                    Refunds are subject to the following criteria:
+                </p>
                 <ul>
-                    <li>The Client authorizes Global Visa Internationals to assist in the preparation, review, and submission of documents required for immigration or visa applications.</li>
-                    <li>The Client is responsible for submitting all necessary documents within the stipulated time frame (generally 7 to 30 days). Delays or failure in submission may impact the process and are the sole responsibility of the Client.</li>
-                </ul></li>
-                <li><h2 className={Styles.subTitle}>Client Acknowledgments</h2>
-                <ul>
-                    <li>The Client confirms that all documents provided are authentic and complete.</li>
-                    <li>The Client understands that Global Visa Internationals:
+                    <li><strong className={Styles.strong}>100% Non-refundable:</strong>
                         <ul>
-                            <li>The Client understands that Global Visa Internationals:</li>
-                            <li>Does not guarantee visa approval</li>
-                            <li>Does not arrange accommodation or travel</li>
+                            <li>Evaluations, DIY Kits, Directories, and Job Search Services.</li>
+                            <li>If you do not sign and return the agreement.</li>
+                            <li>If you change your mind and decide to withdraw from our services.</li>
+                            <li>If you do not wish to continue with our services.</li>
+                            <li>In the event of natural calamities or a pandemic.</li>
                         </ul>
                     </li>
-                    <li>Our services are limited to consultancy, documentation guidance, and, where applicable, support in profile promotion through recognized channels.</li>
-                </ul></li>
-                <li><h2 className={Styles.subTitle}>Consultation Fee Policy</h2><ul>
-                    <li>All fees charged for consultancy services are considered administrative and professional fees.</li>
-                    <li>Fees are strictly non-refundable under all circumstances, including (but not limited to):
+                    <li><strong className={Styles.strong}>Other non-refundable situations include:</strong>
                         <ul>
-                            <li>Withdrawal by the Client</li>
-                            <li>Non-compliance with document requirements</li>
-                            <li>Ineligibility due to medical, financial, or legal issues</li>
-                            <li>Visa rejection due to external factors</li>
-                            <li>Changes in immigration rules or country-specific quotas</li>
-                            <li>Delayed or incomplete submissions</li>
+                            <li>Failure of a medical examination by you or your family members.</li>
+                            <li>Failure to provide a genuine Police Clearance Certificate (PCC) that is not older than 3 months.</li>
+                            <li>Failure to prove sufficient funds for settlement.</li>
+                            <li>Submission of fraudulent documents.</li>
+                            <li>A prior violation of any immigration law.</li>
+                            <li>Late submission of any requested additional documents.</li>
                         </ul>
                     </li>
-                </ul></li>
-                <li><h2 className={Styles.subTitle}>Reapplication Support</h2>
-                In case of visa refusal, the Client may be eligible for reapplication support under revised terms. This is subject to the discretion of Global Visa Internationals and applies only when the reapplication is handled through our consultancy.
-                </li>
-                <li><h2 className={Styles.subTitle}>Additional Charges</h2>
-                The Client agrees to bear costs not included in our consultancy fees, such as:
+                </ul>
+                <p>
+                    Please refer to your specific service agreement for detailed refund terms. Global Visa Internationals reserves the right to withhold a refund in accordance with our policies. Approved refunds will be processed within 30 days after you have submitted the refund request form and proof of rejection, if applicable. By agreeing to our terms and conditions, you agree not to request a chargeback under any circumstances. Refunds will be issued via a company check made payable to the person on the order form and mailed to the address provided. You agree not to contact your credit card company or bank to file a dispute, as this will only delay the refund process.
+                </p>
+
+                <h2 className={Styles.strong}>Our Products and Services</h2>
+                <h3 className={Styles.strong}>Technical Evaluation</h3>
+                <p>
+                    Our technical evaluation service assesses your profile for a selected country and provides you with a score. Reports are sent within 48 hours of receiving all necessary information. The fee for this service is 100% non-refundable.
+                </p>
+                <h3 className={Styles.strong}>Full Service</h3>
+                <p>
+                    We offer guidance and advice for immigration. All services are performed from our back office in India, and you agree to this arrangement. The full-service fee is refundable only as per the conditions outlined in our refund policy.
+                </p>
+                <h3 className={Styles.strong}>DIY Kits</h3>
+                <p>
+                    We offer downloadable DIY Kits (do-it-yourself guides) for a fee, which is 100% non-refundable. These kits are for informational purposes only and are not legal advice. All kits are copyrighted by Global Visa Internationals, and legal action will be taken against anyone who attempts to copy or sell them.
+                </p>
+                <h3 className={Styles.strong}>Directories</h3>
+                <p>
+                    We provide downloadable directories of employers and placement agencies in various cities for a fee. These directories are copyrighted by Global Visa Internationals, and legal action will be taken against anyone who attempts to copy or sell them.
+                </p>
+                <h3 className={Styles.strong}>Requisition Forms</h3>
+                <p>
+                    We offer downloadable requisition and inquiry forms from various government agencies as an additional service on a subscription basis. We do not claim copyright on these forms.
+                </p>
+
+                <h2 className={Styles.strong}>Shipping Policy</h2>
+                <p>
+                    We strive to make your order available for immediate download after purchase. In the rare event of technical difficulties, the order will be sent to your email address. Please note that there are no refunds or chargebacks once an order has been placed.
+                </p>
+
+                <h2 className={Styles.strong}>Warranty Disclaimer</h2>
+                <p>
+                    This website and its materials are provided “as is” and without warranties of any kind, either express or implied. Global Visa Internationals disclaims all warranties, including but not limited to, implied warranties of merchantability and fitness for a particular purpose. We do not guarantee that the site will be uninterrupted, error-free, or free of viruses.
+                </p>
+
+                <h2 className={Styles.strong}>Changes to the Terms and Conditions</h2>
+                <p>
+                    Global Visa Internationals reserves the right to change these Terms and Conditions at any time. By purchasing any product or service, you agree to all terms and conditions and agree not to dispute them. All disputes are subject to the exclusive jurisdiction of Hyderabad Courts only.
+                </p>
+
+                <h2 className={Styles.strong}>Data Protection Principles</h2>
+                <p>
+                    We comply with data protection law and are committed to protecting your privacy. The personal information we hold about you will be:
+                </p>
                 <ul>
-                    <li>Official visa application charges</li>
-                    <li>Courier or mailing costs</li>
-                    <li>Notarization or translation fees</li>
-                    <li>Government or embassy-related payments</li>
-                </ul></li>
-                <li><h2 className={Styles.subTitle}>Consent & Compliance</h2>
-                By accepting these terms, the Client affirms that:
+                    <li>Used lawfully, fairly, and transparently.</li>
+                    <li>Collected for specific, valid purposes and not used in a way that is incompatible with those purposes.</li>
+                    <li>Relevant and limited to the purposes for which it was collected.</li>
+                    <li>Accurate and kept up to date.</li>
+                    <li>Kept securely.</li>
+                </ul>
+
+                <h3 className={Styles.strong}>Information We Collect</h3>
+                <p>
+                    We may collect and use the following categories of personal information:
+                </p>
                 <ul>
-                    <li>They are engaging voluntarily and are fully informed about the services</li>
-                    <li>They have no disqualifying medical or criminal records</li>
-                    <li>They will meet language proficiency and other eligibility criteria as required</li>
-                    <li>They will comply with all submission and documentation deadlines</li>
-                </ul></li>
-                <li><h2 className={Styles.subTitle}>Processing Timeline</h2><ul>
-                    <li>Global Visa Internationals will provide initial documentation templates and checklists promptly after onboarding.</li>
-                    <li>The Client is expected to complete and submit documents for final processing within 30 days.</li>
-                    <li>Immigration policies and timelines are subject to change and are not controlled by Global Visa Internationals.</li>
-                </ul></li>
-                <li><h2 className={Styles.subTitle}>Validity of Agreement</h2>This agreement remains valid for one year from the date of engagement. If the process is not completed within this period, additional service charges may apply to continue support.</li>
-                <li><h2 className={Styles.subTitle}>Postponement or Deferment</h2>Clients wishing to defer or pause their process must notify the Company via official email. We will accommodate deferment requests to the best of our ability within the initial validity period.</li>
-                <li><h2 className={Styles.subTitle}>Disclaimer</h2>Global Visa Internationals provides consultancy services only. We do not claim affiliation with any immigration authority or government. No guarantees are provided regarding visa success, job opportunities, or travel outcomes.</li>
-            </ol>
-        </section>
-        </>
-    )
+                    <li><strong className={Styles.strong}>Personal details:</strong> Name, contact information, date of birth, gender, marital status, and emergency contact information.</li>
+                    <li><strong className={Styles.strong}>Financial and employment information:</strong> Tax ID, bank account details, and employment-related information such as occupation, work experience, and skill sets.</li>
+                    <li><strong className={Styles.strong}>Education information:</strong> Education level and schools attended.</li>
+                    <li><strong className={Styles.strong}>System usage information:</strong> Data about your use of our information and communication systems.</li>
+                </ul>
+
+                <h3 className={Styles.strong}>How We Collect Information</h3>
+                <p>
+                    We collect personal information through various methods, including landing pages, websites, and registration forms. We also offer free counseling services via our landing pages and websites.
+                </p>
+
+                <h3 className={Styles.strong}>How We Use Your Information</h3>
+                <p>
+                    We will only use your personal information when the law allows us to, primarily to perform our contract with you and to comply with legal obligations. We may also use your information for business management, accounting, auditing, fraud prevention, and data analytics to improve our services. In certain situations, we may be required to share your information with government authorities such as the CBI or police. We will also use your information to send you important updates and notifications via WhatsApp.
+                </p>
+
+                <h3 className={Styles.strong}>Data Security</h3>
+                <p>
+                    We have implemented appropriate security measures to prevent your personal information from being accidentally lost, used, or accessed in an unauthorized way. We limit access to your personal information to employees and agents who have a business need to know. We also have procedures in place to deal with any suspected data security breaches.
+                </p>
+
+                <h2 className={Styles.strong}>Your Rights</h2>
+                <p>
+                    You have the right to:
+                </p>
+                <ul>
+                    <li>Request access to your personal information.</li>
+                    <li>Request correction of any incomplete or inaccurate information.</li>
+                    <li>Request the erasure of your personal information.</li>
+                    <li>Object to the processing of your personal information.</li>
+                    <li>Request the restriction of processing your personal information.</li>
+                </ul>
+                <p>
+                    To exercise these rights, please contact us in writing at support@globalvisainternationals.com. We may ask for specific information to confirm your identity before fulfilling your request. You also have the right to withdraw your consent at any time if you have previously given it for a specific purpose. To withdraw your consent, please contact us at the same email address.
+                </p>
+
+                <h2 className={Styles.strong}>Referral Program</h2>
+                <p>
+                    By participating in our referral program, you agree to the following terms:
+                </p>
+                <ul>
+                    <li><strong className={Styles.strong}>Eligibility:</strong> You must meet our referral criteria.</li>
+                    <li><strong className={Styles.strong}>Process:</strong> We will contact the referred client directly. Your involvement is limited to making the initial referral.</li>
+                    <li><strong className={Styles.strong}>Confidentiality:</strong> Any information you share is confidential, and the relationship between us and the referred client is solely between the two parties.</li>
+                    <li><strong className={Styles.strong}>Exclusions:</strong> You will not be involved in any transactions or agreements with the referred client beyond the initial referral.</li>
+                    <li><strong className={Styles.strong}>Data Protection:</strong> All data shared during the referral process is treated with confidentiality.</li>
+                    <li><strong className={Styles.strong}>Changes to Terms:</strong> We reserve the right to amend these terms at any time.</li>
+                    <li><strong className={Styles.strong}>Existing Clients:</strong> If the person you refer is already in our system, the referral will not be eligible for any rewards.</li>
+                </ul>
+            </div>
+        </div>
+    );
 }
