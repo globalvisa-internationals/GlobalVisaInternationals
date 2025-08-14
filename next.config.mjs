@@ -8,7 +8,7 @@ const withMDX = require('@next/mdx')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'mdx'], // Include .mdx pages
+  pageExtensions: ['js', 'jsx', 'mdx'],
   webpack: (config, { isServer }) => {
     config.cache = false;
     return config;
@@ -37,6 +37,18 @@ const nextConfig = {
             type: 'header',
             key: 'x-forwarded-proto',
             value: 'http',
+          },
+        ],
+        destination: 'https://www.globalvisainternationals.com/:path*',
+        permanent: true,
+      },
+      // Redirect dashed domain to main www domain
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'globalvisa-internationals.com',
           },
         ],
         destination: 'https://www.globalvisainternationals.com/:path*',
