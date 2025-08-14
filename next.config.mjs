@@ -8,7 +8,7 @@ const withMDX = require('@next/mdx')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx'],
+  pageExtensions: ['js', 'jsx', 'mdx'], // Include .mdx pages
   webpack: (config, { isServer }) => {
     config.cache = false;
     return config;
@@ -17,6 +17,7 @@ const nextConfig = {
   // ✅ Add proper 301 redirects
   async redirects() {
     return [
+      // Redirect non-www to www
       {
         source: '/:path*',
         has: [
@@ -26,7 +27,20 @@ const nextConfig = {
           },
         ],
         destination: 'https://www.globalvisainternationals.com/:path*',
-        permanent: true, // 301 redirect
+        permanent: true,
+      },
+      // Redirect HTTP to HTTPS (extra safeguard)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        destination: 'https://www.globalvisainternationals.com/:path*',
+        permanent: true,
       },
     ];
   },

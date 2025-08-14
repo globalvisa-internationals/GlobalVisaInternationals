@@ -1,0 +1,293 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "globalvisainternationals.com"
+        }
+      ],
+      "destination": "https://www.globalvisainternationals.com/:path*",
+      "statusCode": 308,
+      "regex": "^(?!/_next)(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-forwarded-proto",
+          "value": "http"
+        }
+      ],
+      "destination": "https://www.globalvisainternationals.com/:path*",
+      "statusCode": 308,
+      "regex": "^(?!/_next)(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/blog/[slug]",
+      "regex": "^/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/Visa/business/australia",
+      "regex": "^/Visa/business/australia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/business/australia(?:/)?$"
+    },
+    {
+      "page": "/Visa/business/canada",
+      "regex": "^/Visa/business/canada(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/business/canada(?:/)?$"
+    },
+    {
+      "page": "/Visa/business/europe",
+      "regex": "^/Visa/business/europe(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/business/europe(?:/)?$"
+    },
+    {
+      "page": "/Visa/business/new-zealand",
+      "regex": "^/Visa/business/new\\-zealand(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/business/new\\-zealand(?:/)?$"
+    },
+    {
+      "page": "/Visa/business/uk",
+      "regex": "^/Visa/business/uk(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/business/uk(?:/)?$"
+    },
+    {
+      "page": "/Visa/permanent-residency-visa/australia",
+      "regex": "^/Visa/permanent\\-residency\\-visa/australia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/permanent\\-residency\\-visa/australia(?:/)?$"
+    },
+    {
+      "page": "/Visa/permanent-residency-visa/canada",
+      "regex": "^/Visa/permanent\\-residency\\-visa/canada(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/permanent\\-residency\\-visa/canada(?:/)?$"
+    },
+    {
+      "page": "/Visa/refusal-visa/australia",
+      "regex": "^/Visa/refusal\\-visa/australia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/refusal\\-visa/australia(?:/)?$"
+    },
+    {
+      "page": "/Visa/refusal-visa/canada",
+      "regex": "^/Visa/refusal\\-visa/canada(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/refusal\\-visa/canada(?:/)?$"
+    },
+    {
+      "page": "/Visa/refusal-visa/europe",
+      "regex": "^/Visa/refusal\\-visa/europe(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/refusal\\-visa/europe(?:/)?$"
+    },
+    {
+      "page": "/Visa/refusal-visa/new-zealand",
+      "regex": "^/Visa/refusal\\-visa/new\\-zealand(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/refusal\\-visa/new\\-zealand(?:/)?$"
+    },
+    {
+      "page": "/Visa/refusal-visa/singapore",
+      "regex": "^/Visa/refusal\\-visa/singapore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/refusal\\-visa/singapore(?:/)?$"
+    },
+    {
+      "page": "/Visa/refusal-visa/uk",
+      "regex": "^/Visa/refusal\\-visa/uk(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/refusal\\-visa/uk(?:/)?$"
+    },
+    {
+      "page": "/Visa/refusal-visa/usa",
+      "regex": "^/Visa/refusal\\-visa/usa(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/refusal\\-visa/usa(?:/)?$"
+    },
+    {
+      "page": "/Visa/student-visa/australia",
+      "regex": "^/Visa/student\\-visa/australia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/student\\-visa/australia(?:/)?$"
+    },
+    {
+      "page": "/Visa/student-visa/canada",
+      "regex": "^/Visa/student\\-visa/canada(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/student\\-visa/canada(?:/)?$"
+    },
+    {
+      "page": "/Visa/student-visa/europe",
+      "regex": "^/Visa/student\\-visa/europe(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/student\\-visa/europe(?:/)?$"
+    },
+    {
+      "page": "/Visa/student-visa/new-zealand",
+      "regex": "^/Visa/student\\-visa/new\\-zealand(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/student\\-visa/new\\-zealand(?:/)?$"
+    },
+    {
+      "page": "/Visa/student-visa/uk",
+      "regex": "^/Visa/student\\-visa/uk(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/student\\-visa/uk(?:/)?$"
+    },
+    {
+      "page": "/Visa/student-visa/usa",
+      "regex": "^/Visa/student\\-visa/usa(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/student\\-visa/usa(?:/)?$"
+    },
+    {
+      "page": "/Visa/tourist-visa/australia",
+      "regex": "^/Visa/tourist\\-visa/australia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/tourist\\-visa/australia(?:/)?$"
+    },
+    {
+      "page": "/Visa/tourist-visa/canada",
+      "regex": "^/Visa/tourist\\-visa/canada(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/tourist\\-visa/canada(?:/)?$"
+    },
+    {
+      "page": "/Visa/tourist-visa/dubai",
+      "regex": "^/Visa/tourist\\-visa/dubai(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/tourist\\-visa/dubai(?:/)?$"
+    },
+    {
+      "page": "/Visa/tourist-visa/japan",
+      "regex": "^/Visa/tourist\\-visa/japan(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/tourist\\-visa/japan(?:/)?$"
+    },
+    {
+      "page": "/Visa/tourist-visa/new-zealand",
+      "regex": "^/Visa/tourist\\-visa/new\\-zealand(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/tourist\\-visa/new\\-zealand(?:/)?$"
+    },
+    {
+      "page": "/Visa/tourist-visa/singapore",
+      "regex": "^/Visa/tourist\\-visa/singapore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/tourist\\-visa/singapore(?:/)?$"
+    },
+    {
+      "page": "/Visa/tourist-visa/uk",
+      "regex": "^/Visa/tourist\\-visa/uk(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/tourist\\-visa/uk(?:/)?$"
+    },
+    {
+      "page": "/Visa/tourist-visa/usa",
+      "regex": "^/Visa/tourist\\-visa/usa(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Visa/tourist\\-visa/usa(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/career",
+      "regex": "^/career(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/career(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/privacy-policy",
+      "regex": "^/privacy\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy\\-policy(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/terms-and-conditions",
+      "regex": "^/terms\\-and\\-conditions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terms\\-and\\-conditions(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}
