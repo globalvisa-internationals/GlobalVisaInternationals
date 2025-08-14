@@ -364,7 +364,7 @@ export default function CareerPage() {
               <div className={styles.inputWrapper}>
                 <select className={styles.select} name="jobTitle" required>
                   <option value="" disabled selected hidden>Applying For</option>
-                  <option value="Sales Executive">Sales Executive</option>
+                  <option value="Sales Executive">Visa Counselor</option>
                 </select>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import { getAllPosts } from '@/lib/blog';
 import BlogList from './BlogList';
-import Head from 'next/head';
+
 
 export async function generateMetadata() {
   const pageTitle = "Blog - Global Visa Internationals";

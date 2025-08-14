@@ -81,12 +81,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #01ac28;
+  color: var(--accent);
 }
 
 .subTitle {
 
-  color: #01ac28;
+  color: var(--accent);
 }
 
 
@@ -142,7 +142,7 @@
 .submittingBtn {
   display: block;
   max-width: 250px;
-  background-color: #01ac28;
+  background-color: var(--primary);
   font-size: 16px;
   font-weight: bold;
   padding: 12px;
@@ -193,7 +193,7 @@
 }
 
 .popupContent button {
-  color: #01ac28;
+  color: var(--accent);
   border: 2px solid #01ac28;
   border-radius: 6px;
   padding: 0.5rem 1.2rem;
@@ -309,7 +309,7 @@
   top: -10px;
   left: 8px;
   font-size: 12px;
-  color: #01ac28;
+  color: var(--accent);
   opacity: 1;
   z-index: 1;
 }
