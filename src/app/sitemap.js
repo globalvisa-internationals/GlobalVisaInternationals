@@ -299,6 +299,12 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/An-invitation-letter-(from-a-U.S.-person)-guarantees-visa-approval',
+      lastModified: new Date('2025-08-18'),
+      changefreq: 'weekly',
+      priority: 0.8,
+    },
 
   ]
 }
