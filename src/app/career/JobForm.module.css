@@ -105,43 +105,47 @@
 }
 
 .form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.inputWrapper {
   display: flex;
   flex-direction: column;
-  height: fit-content;
-  width: 100%;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-
-
-}
-
-.row div {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  padding-bottom: 10px;
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
 }
 
 .input,
 .select {
   width: 100%;
-  padding: 10px;
+  padding: 12px 14px;
   border-radius: 8px;
-  border: #a6e988;
-  ;
+  border: 1px solid #ccc;
   font-size: 16px;
-  margin: 5px;
-  box-shadow: 0 4px 8px #282828;
-  text-align: left;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.2s ease;
 }
 
+.input:focus,
+.select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
 
 .submittingBtn {
-  display: block;
-  max-width: 250px;
+  grid-column: 1 / -1;
+  /* full width row */
+  max-width: 280px;
   background-color: var(--primary);
   font-size: 16px;
   font-weight: bold;
@@ -151,11 +155,11 @@
   cursor: pointer;
   text-align: center;
   transition: background 0.3s ease-in-out;
-  margin: 10px auto;
+  margin: 20px auto 0;
 }
 
 .submittingBtn:hover {
-  background-color: #85da5d
+  background-color: #85da5d;
 }
 
 .popupOverlay {
