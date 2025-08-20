@@ -4,7 +4,7 @@ import Head from 'next/head';
 export const metadata = {
   title: "UK's New 2025 Student Visa Rules: What International Students Must Know",
   date: "June 7, 2025",
-  category: "Visa Information",
+  category: "Study Abroad",
   author: "Global Visa Internationals Team",
   excerpt:
     "The UK government is introducing stricter student visa rules in 2025. Key changes include a shorter post-study work visa (Graduate Route), new dependent restrictions, and a rigorous rating system for universities.",

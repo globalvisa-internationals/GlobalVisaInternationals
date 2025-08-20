@@ -4,7 +4,7 @@ import Head from 'next/head';
 export const metadata = {
     title: "Rejected by US visas, welcomed by France, Grenoble-B-School steps up and launches emergency admissions pathway",
     date: "June 9, 2025",
-    category: "Study in France",
+    category: "Study Abroad",
     author: "Global Visa Internationals Team",
     excerpt:
         "Facing U.S. visa delays? Don't despair. Discover how Grenoble Ecole de Management's 'Emergency Pathway' and France's welcoming policies can turn your setback into an incredible European adventure.",

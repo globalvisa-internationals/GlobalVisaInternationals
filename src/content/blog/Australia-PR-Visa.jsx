@@ -7,7 +7,7 @@ import Head from 'next/head';
 export const metadata = {
   title: "Australia PR Visa: Process, Eligibility, and Benefits (2025 Guide)",
   date: "April 21, 2025",
-  category: "Study",
+  category: "Work & PR",
   author: "Global Visa Internationals Team",
   excerpt: "Discover the amazing opportunities for students in Australia.",
   image: "/images/Australia-PR-Visa.webp",

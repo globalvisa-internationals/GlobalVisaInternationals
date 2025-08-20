@@ -4,7 +4,7 @@ import Head from 'next/head';
 export const metadata = {
   title: "10+ Countries You Can Visit With a U.S. Visa | 2025 Travel Guide",
   date: "June 14, 2025",
-  category: "Travel Tips & Visa Guides",
+  category: "iImigration News & Updates",
   author: "Global Visa Internationals Team",
   excerpt:
     "U.S. tourist visa can unlock visa-free travel to over 10+ amazing countries like Mexico, Costa Rica, Serbia, and Turkey. Our 2025 guide explains the rules so you can plan your next adventure.",

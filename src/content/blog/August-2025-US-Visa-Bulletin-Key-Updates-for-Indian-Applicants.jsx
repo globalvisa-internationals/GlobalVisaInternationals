@@ -4,7 +4,7 @@ import Head from 'next/head';
 export const metadata = {
     title: "August 2025 U.S. Visa Bulletin: Key Updates for Indian Applicants",
     date: "August 1, 2025",
-    category: "Travel Tips & Visa Guides",
+    category: "immigration News & Updates",
     author: "Global Visa Internationals Team",
     excerpt:
         "The U.S. Department of State has released the August 2025 Visa Bulletin, providing important updates for family-sponsored and employment-based green card applicants. If you are an Indian applicant waiting for your U.S. green card, here’s everything you need to know in simple terms.",

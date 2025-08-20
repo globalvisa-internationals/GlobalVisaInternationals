@@ -5,6 +5,7 @@ import Head from 'next/head';
 export const metadata = {
 
     title: "UK Student Visa & UK Tourist Visa Changes 2025 — What Indian Applicants Must Know",
+    category: "Tourism & Travel",
     description:
         "UK Student Visa for Indian students & UK Tourist Visa from India — essential 2025 changes: Graduate Route update, higher maintenance funds, digital eVisas, ETA and dependent rules. Read advice & expert CTAs from Global Visa Internationals.",
     keywords: [

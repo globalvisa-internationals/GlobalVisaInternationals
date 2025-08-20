@@ -4,7 +4,7 @@ import Head from 'next/head';
 export const metadata = {
   title: "USA Student Visa New Rules 2025: What Indian Students Must Know About F1, J1 & OPT Changes",
   date: "Jun 23, 2025",
-  category: "Visa Information",
+  category: " Study Abroad",
   author: "Global Visa Internationals Team",
   excerpt: "Major changes in U.S. student visa rules affect Indian applicants: Find out what's new, how it impacts F-1, J-1, and OPT status, and what steps to take next.",
   image: "/BlogImages/US-Introduces-Sweeping-New-Rules-for-Foreign-Students-What-Indians-Need-to-Know.webp",

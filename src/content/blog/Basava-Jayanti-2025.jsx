@@ -7,7 +7,7 @@ import Head from 'next/head'
 export const metadata = {
   title: "Basava Jayanti: Celebrating the Vision of Shri Basavanna",
   date: "April 30, 2025",
-  category: "Indian Culture & Festivals",
+  category: "Culture & Lifestyle",
   author: "Global Visa Internationals Team",
   excerpt: "Explore the significance of Basava Jayanti, the celebration of the birth anniversary of the 12th-century philosopher and social reformer, Shri Basavanna, and his profound teachings on equality, compassion, and social justice.",
   image: "/images/Basava-Jayanti.png", // Replace with the actual path to your Basava Jayanti image

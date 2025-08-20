@@ -5,7 +5,7 @@ import Head from 'next/head';
 export const metadata = {
     title: "Australian Tourist Visa for Indians – July 2025 Updates",
     date: "2025-07-31",
-    category: "Visa Information",
+    category: "Tourism & Travel",
     author: "Global Visa Internationals Team",
     excerpt:
         "Explore the benefits of an Australian Tourist Visa for Indians. Learn about July 2025 fee updates, multiple-entry options, and tips to apply successfully.",

@@ -6,9 +6,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const categories = [
-  "All", "Study", "Visit", "Work", "Events", "PR-Visa", "Travel",
-  "VFS Global", "Travel Tips", "Indian Culture & Festivals", "Visa Information"];
-const POSTS_PER_PAGE = 8;
+  "All", "Study Abroad", "Work & PR", "Tourism & Travel", "Visa Information", "Culture & Lifestyle", "Immigration News & Updates"
+];
+const POSTS_PER_PAGE = 9;
 
 export default function BlogList({ posts }) {
   const [filteredCategory, setFilteredCategory] = useState("All");
@@ -47,11 +47,9 @@ export default function BlogList({ posts }) {
                   alt={post.title}
                   className={styles.image}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 300px) 100vw, 33vw"
                   unoptimized
                 />
-
               </Link>
 
               <div className={styles.cardBody}>
@@ -134,6 +132,34 @@ export default function BlogList({ posts }) {
           </button>
         </div>
       )}
+
+      {/* Subscribe Box */}
+      <div className={styles.subscribeBox}>
+        <h3>Subscribe to Our Blog</h3>
+        <p>Get the latest visa updates, tips, and news directly in your inbox.</p>
+        <form
+          className={styles.subscribeForm}
+          onSubmit={(e) => {
+            e.preventDefault();
+            const email = e.target.email.value;
+            if (email) {
+              alert(`Subscribed with ${email}`); // Replace with API call later
+            }
+          }}
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            className={styles.subscribeInput}
+          />
+          <button type="submit" className={styles.subscribeButton}>
+            Subscribe
+          </button>
+        </form>
+      </div>
     </div>
+
   );
 }

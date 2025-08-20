@@ -5,7 +5,7 @@ import Head from 'next/head';
 export const metadata = {
     title: "10 Important Things to Know for Indian Students in Canada",
     date: "2025-07-02",
-    category: "Visa Information",
+    category: "Immigration News & Updates",
     author: "Global Visa Internationals Team",
     excerpt:
         "Moving to Canada as a student from India is not just a long journey — it’s a big change in culture, a challenge for your wallet, and sometimes, a real shock for your weather expectations. You’ll need to understand different grading systems, deal with very cold winters that can drop to -30°C, and discover that saying “sorry” can mean many different things. There are many things that brochures or university information sessions won't tell you. This is not just a simple guide — it’s a friendly talk with a bit of humor, some coffee, and sometimes feeling confused about who you are. Whether you are going to Toronto for a master's degree or to Halifax for a diploma, here are 10 important things every Indian student should know before you become polite… and maybe a bit short on money.",

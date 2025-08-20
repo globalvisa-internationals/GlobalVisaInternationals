@@ -25,6 +25,7 @@ export const metadata = {
     image: "/BlogImages/Invitation-Letter-Myth.webp",
     author: "Global Visa Internationals",
     date: "2025-08-18",
+    category: "mmigration News & Updates",
 };
 
 export default function VisaMythInvitationLetter2025() {

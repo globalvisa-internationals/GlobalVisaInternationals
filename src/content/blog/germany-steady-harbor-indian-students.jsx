@@ -4,7 +4,7 @@ import Head from 'next/head';
 export const metadata = {
   title: "Germany: A Steady Harbor for Indian Students | Global Visa Internationals",
   date: "June 17, 2025",
-  category: "Study Abroad, Visa Guides",
+  category: "Study Abroad, Visa Information",
   author: "Global Visa Internationals Team",
   excerpt:
     "Discover why Germany is becoming a top choice for Indian students amidst changing global visa regulations, offering stability, affordability, and excellent post-study opportunities. Guided by Global Visa Internationals.",

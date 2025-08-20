@@ -4,7 +4,7 @@ import Head from 'next/head';
 export const metadata = {
   title: "New 2025 US Green Card Rules: What Lawful Permanent Residents Must Know",
   date: "May 29, 2025",
-  category: "Visa Information",
+  category: "Immigration News & Updates",
   author: "Global Visa Internationals Team",
   excerpt:
     "Discover the key Green Card rule changes in 2025, including updated Form I-90, mandatory USCIS registration, revocation risks, and the $5M Gold Card visa for investors.",
