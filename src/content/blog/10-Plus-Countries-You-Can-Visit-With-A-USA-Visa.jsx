@@ -8,7 +8,7 @@ export const metadata = {
   author: "Global Visa Internationals Team",
   excerpt:
     "U.S. tourist visa can unlock visa-free travel to over 10+ amazing countries like Mexico, Costa Rica, Serbia, and Turkey. Our 2025 guide explains the rules so you can plan your next adventure.",
-  image: "/Blog/countries-to-visit-with-us-visa.webp", // Note: Suggested new image path
+  image: "/BlogImages/countries-to-visit-with-us-visa.webp", // Note: Suggested new image path
   keywords: [
     "countries to visit with us visa",
     "us visa travel benefits",
@@ -281,7 +281,7 @@ export default function USVisaBulletinJuly2025() {
               Whether you need a hand with that first U.S. visa application or want to map out the perfect multi-country itinerary, our team at Global Visa Internationals lives for this stuff.
             </p>
             <p>
-              <a className={Styles.a} href="https://www.globalvisainternationals.com/contact">Schedule a Consultation</a> | 📧 <a  className={Styles.a} href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a>
+              <a className={Styles.a} href="https://www.globalvisainternationals.com/contact">Schedule a Consultation</a> | 📧 <a className={Styles.a} href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a>
             </p>
           </section>
         </article>

@@ -8,7 +8,7 @@ export const metadata = {
   author: "Global Visa Internationals Team",
   excerpt:
     "The July 2025 Visa Bulletin brings welcome relief to Indian Green Card seekers, especially in EB-3, F2A, and F4. See what changed and how it affects your application.",
-  image: "/Blog/visa-bulletin-july-2025.webp",
+  image: "/BlogImages/visa-bulletin-july-2025.webp",
   keywords: [
     "US Visa Bulletin July 2025",
     "EB-3 India Green Card",

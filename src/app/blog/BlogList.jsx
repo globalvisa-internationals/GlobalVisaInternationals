@@ -49,7 +49,9 @@ export default function BlogList({ posts }) {
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   style={{ objectFit: "cover" }}
+                  unoptimized
                 />
+
               </Link>
 
               <div className={styles.cardBody}>

@@ -19,7 +19,7 @@ export const metadata = {
     ],
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     canonical: "https://www.globalvisainternationals.com/blog/visa-updates-indians-august-9-2025",
-    image: "/Blog/Visa-Updates-for-Indians-August-9-2025.webp",
+    image: "/BlogImages/Visa-Updates-for-Indians-August-9-2025.webp",
     author: "Global Visa Internationals",
     date: "2025-08-09",
 };

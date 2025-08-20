@@ -8,7 +8,7 @@ export const metadata = {
     author: "Global Visa Internationals Team",
     excerpt:
         "The U.S. Department of State has released the August 2025 Visa Bulletin, providing important updates for family-sponsored and employment-based green card applicants. If you are an Indian applicant waiting for your U.S. green card, here’s everything you need to know in simple terms.",
-    image: "/Blog/countries-to-visit-with-us-visa.webp", // Note: Suggested new image path
+    image: "/BlogImages/countries-to-visit-with-us-visa.webp", // Note: Suggested new image path
     keywords: [
         "countries to visit with us visa",
         "us visa travel benefits",

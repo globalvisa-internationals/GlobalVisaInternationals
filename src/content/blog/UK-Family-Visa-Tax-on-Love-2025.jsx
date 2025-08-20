@@ -7,7 +7,7 @@ export const metadata = {
   category: "Visa Information",
   author: "Global Visa Internationals Team",
   excerpt: "Many families are being forced apart by strict UK family visa income rules. Here's what's happening, real stories, and what's likely to change in 2025.",
-  image: "/Blog/UK-Family-Visa-Tax-on-Love-2025.webp",
+  image: "/BlogImages/UK-Family-Visa-Tax-on-Love-2025.webp",
   keywords: [
     "UK family visa 2025",
     "spouse visa UK income requirement",

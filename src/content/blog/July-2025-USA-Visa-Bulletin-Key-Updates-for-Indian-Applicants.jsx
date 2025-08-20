@@ -7,7 +7,7 @@ export const metadata = {
   author: "Global Visa Internationals Team",
   excerpt:
     "Get the latest U.S. Visa Bulletin updates for July 2025. Track green card priority dates for Indian applicants across family-based, employment-based, and diversity visa categories. Understand Final Action and Filing Dates, DV-2025 cut-offs, and immigration backlogs.",
-  image: "/Blog/US-Visa-Bulletin-July-2025-Green-Card-and-Immigration-Priority-Dates.webp",
+  image: "/BlogImages/US-Visa-Bulletin-July-2025-Green-Card-and-Immigration-Priority-Dates.webp",
   keywords: [
     "USA visa bulletin July 2025",
     "Green card priority dates India",
@@ -89,7 +89,7 @@ export default function CanadaResidencyBlog() {
 
   return (
     <>
-   <Head>
+      <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.excerpt} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
@@ -191,7 +191,7 @@ export default function CanadaResidencyBlog() {
       </Head>
 
 
-<main>
+      <main>
         <div className={Styles.meta}>
           <span>By {metadata.author}</span>
           <span>•</span>
@@ -216,54 +216,54 @@ export default function CanadaResidencyBlog() {
         </div>
 
         <h1 className={Styles.subtitle}>{metadata.title}</h1>
-This summary highlights the crucial visa bulletin updates for individuals from India seeking to immigrate to the U.S. in the Family-Sponsored and Employment-Based categories.
-<h3 className={Styles.subtitle}>Family-Sponsored Preference Categories (Final Action Dates)</h3>
-<ul>
-  <li><strong className={Styles.bold}>F1 (Unmarried Sons and Daughters of U.S. Citizens):</strong> The final action date remains at July 15, 2016.</li>
-  <li><strong className={Styles.bold}>F2A (Spouses and Children of Permanent Residents):</strong> This category shows a significant jump, with the final action date moving to September 1, 2022. This is a positive development for many applicants.</li>
-  <li><strong className={Styles.bold}>F2B (Unmarried Sons and Daughters of Permanent Residents):</strong> The final action date is October 15, 2016.</li>
-  <li><strong className={Styles.bold}>F3 (Married Sons and Daughters of U.S. Citizens):</strong> The date is now August 1, 2011.</li>
-  <li><strong className={Styles.bold}>F4 (Brothers and Sisters of Adult U.S. Citizens):</strong> The final action date has progressed to July 8, 2006.</li>
-</ul>
-<h3 className={Styles.subtitle}>Family-Sponsored Preference Categories (Dates for Filing)</h3>
-<ul>
-  <li><strong className={Styles.bold}>F1:</strong> The date for filing applications is September 1, 2017.</li>
-  <li><strong className={Styles.bold}>F2A:</strong> This category is showing a very positive trend, with the filing date at March 1, 2025, indicating that applicants with priority dates up to this date can prepare and submit their documentation.</li>
-  <li><strong className={Styles.bold}>F2B:</strong> The date for filing applications is January 1, 2017.</li>
-  <li><strong className={Styles.bold}>F3:</strong> The date is July 22, 2012.</li>
-  <li><strong className={Styles.bold}>F4:</strong> The filing date has advanced to December 1, 2006.</li>
-</ul>
-<h3 className={Styles.subtitle}>Employment-Based Preference Categories (Final Action Dates)</h3>
-<ul>
-  <li><strong className={Styles.bold}>1st Preference (EB-1):</strong> The date remains at February 15, 2022. This category has seen little movement.</li>
-  <li><strong className={Styles.bold}>2nd Preference (EB-2):</strong> The final action date is stagnant at January 1, 2013.</li>
-  <li><strong className={Styles.bold}>3rd Preference (EB-3):</strong> There is a slight advance for Skilled Workers and Professionals to April 22, 2013.</li>
-  <li><strong className={Styles.bold}>Other Workers:</strong> The date is April 22, 2013.</li>
-  <li><strong className={Styles.bold}>4th Preference (EB-4) & Certain Religious Workers:</strong> These categories are “Unauthorized” (U), meaning visas are not available for issuance for India.</li>
-  <li><strong className={Styles.bold}>5th Preference (EB-5, Unreserved):</strong> The date is May 1, 2019.</li>
-  <li><strong className={Styles.bold}>5th Preference (EB-5, Set Aside categories):</strong> These categories are “Current” (C), meaning visas are available for all applicants regardless of priority date.</li>
-</ul>
-<h3 className={Styles.subtitle}>Employment-Based Preference Categories (Dates for Filing)</h3>
-<ul>
-  <li><strong className={Styles.bold}>1st Preference:</strong> The filing date remains at April 15, 2022.</li>
-  <li><strong className={Styles.bold}>2nd Preference:</strong> The filing date is February 1, 2013.</li>
-  <li><strong className={Styles.bold}>3rd Preference:</strong> The filing date is June 8, 2013.</li>
-  <li><strong className={Styles.bold}>Other Workers:</strong> The date is June 8, 2013.</li>
-  <li><strong className={Styles.bold}>4th Preference & Religious Workers:</strong> The date is February 1, 2021.</li>
-  <li><strong className={Styles.bold}>5th Unreserved:</strong> The filing date is April 1, 2022.</li>
-  <li><strong className={Styles.bold}>5th Set Aside:</strong> These categories are “Current” (C).</li>
-</ul>
-<h3 className={Styles.subtitle}>Take the Next Step in Your U.S. Visa Journey</h3>
-<p>Navigating the complexities of the U.S. Visa Bulletin and the intricate application process can be overwhelming, especially with the fluctuating priority dates. The information in this bulletin is time-sensitive and requires careful interpretation to determine your eligibility and the next steps for your application.</p>
-<p>Don’t leave your visa application to chance. For personalized guidance and expert assistance, it is highly recommended to consult with experienced visa professionals.</p>
-<p><strong className={Styles.bold}>Global Visa Internationals</strong>, located right here in Bengaluru, specializes in providing comprehensive visa assistance. Their team of seasoned professionals can help you understand your priority date, navigate the charts, and prepare your documentation with precision.</p>
-<p><strong className={Styles.bold}>For a smooth and stress-free visa application process, contact Global Visa Internationals today:</strong></p>
-<p>
-  📞 <a href="tel:+917022213466">+91-7022213466</a> <br />
-  📧 <a href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a><br />
-  💬 <a href="https://www.globalvisainternationals.com/contact">Schedule a Consultation</a>
-</p>
-</main>
+        This summary highlights the crucial visa bulletin updates for individuals from India seeking to immigrate to the U.S. in the Family-Sponsored and Employment-Based categories.
+        <h3 className={Styles.subtitle}>Family-Sponsored Preference Categories (Final Action Dates)</h3>
+        <ul>
+          <li><strong className={Styles.bold}>F1 (Unmarried Sons and Daughters of U.S. Citizens):</strong> The final action date remains at July 15, 2016.</li>
+          <li><strong className={Styles.bold}>F2A (Spouses and Children of Permanent Residents):</strong> This category shows a significant jump, with the final action date moving to September 1, 2022. This is a positive development for many applicants.</li>
+          <li><strong className={Styles.bold}>F2B (Unmarried Sons and Daughters of Permanent Residents):</strong> The final action date is October 15, 2016.</li>
+          <li><strong className={Styles.bold}>F3 (Married Sons and Daughters of U.S. Citizens):</strong> The date is now August 1, 2011.</li>
+          <li><strong className={Styles.bold}>F4 (Brothers and Sisters of Adult U.S. Citizens):</strong> The final action date has progressed to July 8, 2006.</li>
+        </ul>
+        <h3 className={Styles.subtitle}>Family-Sponsored Preference Categories (Dates for Filing)</h3>
+        <ul>
+          <li><strong className={Styles.bold}>F1:</strong> The date for filing applications is September 1, 2017.</li>
+          <li><strong className={Styles.bold}>F2A:</strong> This category is showing a very positive trend, with the filing date at March 1, 2025, indicating that applicants with priority dates up to this date can prepare and submit their documentation.</li>
+          <li><strong className={Styles.bold}>F2B:</strong> The date for filing applications is January 1, 2017.</li>
+          <li><strong className={Styles.bold}>F3:</strong> The date is July 22, 2012.</li>
+          <li><strong className={Styles.bold}>F4:</strong> The filing date has advanced to December 1, 2006.</li>
+        </ul>
+        <h3 className={Styles.subtitle}>Employment-Based Preference Categories (Final Action Dates)</h3>
+        <ul>
+          <li><strong className={Styles.bold}>1st Preference (EB-1):</strong> The date remains at February 15, 2022. This category has seen little movement.</li>
+          <li><strong className={Styles.bold}>2nd Preference (EB-2):</strong> The final action date is stagnant at January 1, 2013.</li>
+          <li><strong className={Styles.bold}>3rd Preference (EB-3):</strong> There is a slight advance for Skilled Workers and Professionals to April 22, 2013.</li>
+          <li><strong className={Styles.bold}>Other Workers:</strong> The date is April 22, 2013.</li>
+          <li><strong className={Styles.bold}>4th Preference (EB-4) & Certain Religious Workers:</strong> These categories are “Unauthorized” (U), meaning visas are not available for issuance for India.</li>
+          <li><strong className={Styles.bold}>5th Preference (EB-5, Unreserved):</strong> The date is May 1, 2019.</li>
+          <li><strong className={Styles.bold}>5th Preference (EB-5, Set Aside categories):</strong> These categories are “Current” (C), meaning visas are available for all applicants regardless of priority date.</li>
+        </ul>
+        <h3 className={Styles.subtitle}>Employment-Based Preference Categories (Dates for Filing)</h3>
+        <ul>
+          <li><strong className={Styles.bold}>1st Preference:</strong> The filing date remains at April 15, 2022.</li>
+          <li><strong className={Styles.bold}>2nd Preference:</strong> The filing date is February 1, 2013.</li>
+          <li><strong className={Styles.bold}>3rd Preference:</strong> The filing date is June 8, 2013.</li>
+          <li><strong className={Styles.bold}>Other Workers:</strong> The date is June 8, 2013.</li>
+          <li><strong className={Styles.bold}>4th Preference & Religious Workers:</strong> The date is February 1, 2021.</li>
+          <li><strong className={Styles.bold}>5th Unreserved:</strong> The filing date is April 1, 2022.</li>
+          <li><strong className={Styles.bold}>5th Set Aside:</strong> These categories are “Current” (C).</li>
+        </ul>
+        <h3 className={Styles.subtitle}>Take the Next Step in Your U.S. Visa Journey</h3>
+        <p>Navigating the complexities of the U.S. Visa Bulletin and the intricate application process can be overwhelming, especially with the fluctuating priority dates. The information in this bulletin is time-sensitive and requires careful interpretation to determine your eligibility and the next steps for your application.</p>
+        <p>Don’t leave your visa application to chance. For personalized guidance and expert assistance, it is highly recommended to consult with experienced visa professionals.</p>
+        <p><strong className={Styles.bold}>Global Visa Internationals</strong>, located right here in Bengaluru, specializes in providing comprehensive visa assistance. Their team of seasoned professionals can help you understand your priority date, navigate the charts, and prepare your documentation with precision.</p>
+        <p><strong className={Styles.bold}>For a smooth and stress-free visa application process, contact Global Visa Internationals today:</strong></p>
+        <p>
+          📞 <a href="tel:+917022213466">+91-7022213466</a> <br />
+          📧 <a href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a><br />
+          💬 <a href="https://www.globalvisainternationals.com/contact">Schedule a Consultation</a>
+        </p>
+      </main>
     </>
   );
 }

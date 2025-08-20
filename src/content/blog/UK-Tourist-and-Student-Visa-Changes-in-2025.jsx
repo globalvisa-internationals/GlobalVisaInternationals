@@ -27,7 +27,7 @@ export const metadata = {
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     canonical:
         "https://www.globalvisainternationals.com/blog/UK-Tourist-&-Student-Visa-Changes-in-2025",
-    image: "/Blog/UK-Student-Tourist-Visa-Changes-2025.webp",
+    image: "/BlogImages/UK-Student-Tourist-Visa-Changes-2025.webp",
     author: "Global Visa Internationals",
     date: "2025-08-13",
 };

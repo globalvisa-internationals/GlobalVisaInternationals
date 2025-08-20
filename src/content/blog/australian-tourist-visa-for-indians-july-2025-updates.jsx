@@ -9,7 +9,7 @@ export const metadata = {
     author: "Global Visa Internationals Team",
     excerpt:
         "Explore the benefits of an Australian Tourist Visa for Indians. Learn about July 2025 fee updates, multiple-entry options, and tips to apply successfully.",
-    image: "/Blog/Australian-Tourist-Visa-For-Indians-July-2025.webp",
+    image: "/BlogImages/Australian-Tourist-Visa-For-Indians-July-2025.webp",
     keywords: [
         "Australian tourist visa for Indians",
         "Australia Visitor Visa Subclass 600",

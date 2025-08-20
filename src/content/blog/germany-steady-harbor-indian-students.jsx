@@ -8,7 +8,7 @@ export const metadata = {
   author: "Global Visa Internationals Team",
   excerpt:
     "Discover why Germany is becoming a top choice for Indian students amidst changing global visa regulations, offering stability, affordability, and excellent post-study opportunities. Guided by Global Visa Internationals.",
-  image: "/Blog/germany-study-abroad-indian-students.webp", // Note: Suggested new image path for relevance
+  image: "/BlogImages/germany-study-abroad-indian-students.webp", // Note: Suggested new image path for relevance
   keywords: [
     "study in Germany for Indian students",
     "Germany student visa",
@@ -30,8 +30,8 @@ export const metadata = {
 export default function USVisaBulletinJuly2025() {
   const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
   const pageUrl = "https://www.globalvisainternationals.com/blog/germany-steady-harbor-indian-students/";
-const publishedDate = "2025-06-17T10:00:00+05:30";
-const modifiedDate = "2025-06-17T12:00:00+05:30";
+  const publishedDate = "2025-06-17T10:00:00+05:30";
+  const modifiedDate = "2025-06-17T12:00:00+05:30";
 
   return (
     <>
@@ -212,13 +212,13 @@ const modifiedDate = "2025-06-17T12:00:00+05:30";
               <li> Minimal living costs and no tuition in public universities</li>
               <li> Global Visa Internationals helps shortlist the best-fit programs for your academic goals</li>
             </ul>
-            <h3  className={Styles.subtitle}> Post-Study Job Prospects</h3>
+            <h3 className={Styles.subtitle}> Post-Study Job Prospects</h3>
             <ul>
               <li> Stay up to 18 months after graduation to find a job</li>
               <li> Easy transition to work permits or EU Blue Cards</li>
               <li> Our career counselors at Global Visa Internationals provide job-market insights and preparation</li>
             </ul>
-            <h3  className={Styles.subtitle}>Smooth Visa Processing</h3>
+            <h3 className={Styles.subtitle}>Smooth Visa Processing</h3>
             <ul>
               <li>Transparent requirements and timelines</li>
               <li>No agents needed to apply — but expert guidance always helps</li>
@@ -227,7 +227,7 @@ const modifiedDate = "2025-06-17T12:00:00+05:30";
           </section>
 
           <section>
-            <h2  className={Styles.subtitle}>5. The U.S. Visa Pause: A Wake-Up Call</h2>
+            <h2 className={Styles.subtitle}>5. The U.S. Visa Pause: A Wake-Up Call</h2>
             <p>The U.S. decision to pause new student visas (May 2025) has triggered uncertainty and privacy concerns among students (Source: Washington Post, AP, CSMonitor).</p>
             <p>Applicants are now facing:</p>
             <ul>

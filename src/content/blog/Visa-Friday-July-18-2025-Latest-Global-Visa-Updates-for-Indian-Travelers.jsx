@@ -9,7 +9,7 @@ export const metadata = {
     author: "Global Visa Internationals Team",
     excerpt:
         "Welcome to Visa Friday, your one-stop source for the latest visa news, travel alerts, and policy updates affecting Indian passport holders. Whether you're planning a U.S. trip, European holiday, or pilgrimage abroad, stay informed and prepared with trusted insights from Global Visa Internationals—India’s most reliable visa consultancy.",
-    image: "/Blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.webp",
+    image: "/BlogImages/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.webp",
     keywords: [
         "US Visa news",
         "Visa news",

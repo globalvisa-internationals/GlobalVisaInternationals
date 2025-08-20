@@ -9,7 +9,7 @@ export const metadata = {
     author: "Global Visa Internationals Team",
     excerpt:
         "In a significant move aimed at addressing pressing labor shortages and demographic challenges, the Italian government has announced plans to grant nearly 500,000 additional work permits to non-EU foreign workers between 2026 and 2028. This initiative represents one of Italy's most substantial immigration efforts in recent history.",
-    image: "/Blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers.webp",
+    image: "/BlogImages/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers.webp",
     keywords: [
         "Italy visa",
         "Italy PR Visa",
@@ -242,13 +242,13 @@ export default function CanadaResidencyBlog() {
 
                         <h3 className={Styles.subtitle}><li>Implications for Foreign Workers</li></h3><p>The new work permit policy provides legal pathways for non-EU workers to live and work in Italy. The general application process involves the following steps:</p>
 
-                         <ol>
-                        <li><b className={Styles.bold}>Employer Applies for Authorization (Nulla Osta): </b>This process is undertaken through Italy’s Decreto Flussi (immigration flow decree).</li>
-                        <li><b className={Styles.bold}>Applicant Applies for a Visa: </b>This application is made at the Italian consulate in the applicant's home country.</li>
-                        <li><b className={Styles.bold}>Travel to Italy & Apply for a Residence Permit: </b>The application must be submitted within eight days of arriving in Italy.</li>
-                        
+                        <ol>
+                            <li><b className={Styles.bold}>Employer Applies for Authorization (Nulla Osta): </b>This process is undertaken through Italy’s Decreto Flussi (immigration flow decree).</li>
+                            <li><b className={Styles.bold}>Applicant Applies for a Visa: </b>This application is made at the Italian consulate in the applicant's home country.</li>
+                            <li><b className={Styles.bold}>Travel to Italy & Apply for a Residence Permit: </b>The application must be submitted within eight days of arriving in Italy.</li>
 
-                    </ol>
+
+                        </ol>
 
                         <h3 className={Styles.subtitle}><li>Visa and Permit Costs</li></h3><p>Estimated costs associated with obtaining a work visa and residence permit include:</p>
                         <ul>
@@ -265,32 +265,32 @@ export default function CanadaResidencyBlog() {
                             <li>Tightening citizenship rules to limit claims to Italian ancestry to two generations abroad (down from four)</li>
                             <li>Proposing reforms to facilitate legal migration for economic benefits</li>
                         </ul>
-<h3 className={Styles.subtitle}><li>Who Is Eligible to Apply?</li></h3>The work permits will primarily be available for:
-<ul>
-    <li>Seasonal and non-seasonal workers</li>
-    <li> Construction workers</li>
-    <li>Agricultural laborers</li>
-    <li>Domestic helpers</li>
-    <li>Hospitality and tourism employees</li>
-    <li>Healthcare professionals, especially caregivers</li>
-</ul>
-<p>Additionally, non-EU countries that have bilateral agreements with Italy will be prioritized.</p>
+                        <h3 className={Styles.subtitle}><li>Who Is Eligible to Apply?</li></h3>The work permits will primarily be available for:
+                        <ul>
+                            <li>Seasonal and non-seasonal workers</li>
+                            <li> Construction workers</li>
+                            <li>Agricultural laborers</li>
+                            <li>Domestic helpers</li>
+                            <li>Hospitality and tourism employees</li>
+                            <li>Healthcare professionals, especially caregivers</li>
+                        </ul>
+                        <p>Additionally, non-EU countries that have bilateral agreements with Italy will be prioritized.</p>
 
-<h3 className={Styles.subtitle}><li>Opportunities for Visa Applicants</li></h3> <p>For skilled or semi-skilled workers considering opportunities abroad, Italy presents a favorable option. With nearly half a million new positions anticipated by 2028 and a clear legal process in place, prospective applicants are encouraged to prepare their documentation, familiarize themselves with basic Italian phrases, and stay informed about updates related to the Flussi Decree.</p>                
+                        <h3 className={Styles.subtitle}><li>Opportunities for Visa Applicants</li></h3> <p>For skilled or semi-skilled workers considering opportunities abroad, Italy presents a favorable option. With nearly half a million new positions anticipated by 2028 and a clear legal process in place, prospective applicants are encouraged to prepare their documentation, familiarize themselves with basic Italian phrases, and stay informed about updates related to the Flussi Decree.</p>
 
-   </ul>
-   <h2 className={Styles.subtitle}>Conclusion</h2><p>Italy’s proactive approach is indicative of a broader European trend towards managed migration as a viable solution to labor shortages. While many countries are tightening their borders, Italy is opting to create regulated and legal channels for immigration, thus fostering both opportunities and challenges within the migration landscape.</p>
+                    </ul>
+                    <h2 className={Styles.subtitle}>Conclusion</h2><p>Italy’s proactive approach is indicative of a broader European trend towards managed migration as a viable solution to labor shortages. While many countries are tightening their borders, Italy is opting to create regulated and legal channels for immigration, thus fostering both opportunities and challenges within the migration landscape.</p>
 
                     <p>Contact Global Visa Internationals or click here to get expert visa assistance and guidance on navigating these evolving immigration rules. Our experienced team can provide you with the latest information, support you in understanding the specific requirements for your visa category, and help you prepare for the necessary English language tests.</p>
 
                     <p>By staying informed and seeking professional guidance, individuals and families can effectively navigate the UK’s new immigration landscape and achieve their goals of studying, working, or settling in the country.</p>
-                   
+
 
 
                     <p className={Styles.links}>
-                        📞 <a  className={Styles.a} href="tel:+917022213466"><b><i>+91-7022213466</i></b></a> <br />
-                        📧 <a  className={Styles.a} href="mailto:operations@globalvisa-internationalscom"><b><i>operations@globalvisa-internationals.com</i></b></a><br />
-                        💬 <a  className={Styles.a} href="https://www.globalvisainternationals.com/contact"><b><i>Schedule a Consultation</i></b></a>
+                        📞 <a className={Styles.a} href="tel:+917022213466"><b><i>+91-7022213466</i></b></a> <br />
+                        📧 <a className={Styles.a} href="mailto:operations@globalvisa-internationalscom"><b><i>operations@globalvisa-internationals.com</i></b></a><br />
+                        💬 <a className={Styles.a} href="https://www.globalvisainternationals.com/contact"><b><i>Schedule a Consultation</i></b></a>
                     </p>
                 </div>
                 <div className={Styles.VisaForm}><VisaForm /></div>

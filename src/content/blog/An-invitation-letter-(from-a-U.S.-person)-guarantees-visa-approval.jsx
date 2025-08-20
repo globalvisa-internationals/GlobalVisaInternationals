@@ -22,7 +22,7 @@ export const metadata = {
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     canonical:
         "https://www.globalvisainternationals.com/blog/does-an-invitation-letter-guarantee-us-visa-approval",
-    image: "/Blog/Invitation-Letter-Myth.webp",
+    image: "/BlogImages/Invitation-Letter-Myth.webp",
     author: "Global Visa Internationals",
     date: "2025-08-18",
 };

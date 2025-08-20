@@ -263,7 +263,7 @@
 
 .categoryList li:hover {
   border-color: #057A7E;
-  color: #057A7E;
+  color: #2f00ff;
   /* Corporate Blue hover */
 }
 
@@ -296,7 +296,7 @@
 }
 
 .pagination button:hover:not(:disabled) {
-  background-color: #ffffff;
+  background-color: #6d6ff3;
   /* Teal hover */
 }
 

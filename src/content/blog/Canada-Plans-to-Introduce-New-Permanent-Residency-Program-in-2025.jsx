@@ -8,7 +8,7 @@ export const metadata = {
   author: "Global Visa Internationals Team",
   excerpt:
     "In 2025, Canada will begin a new program that allows skilled refugees and displaced individuals to live and work in the country permanently. This program builds on a previous successful initiative called the Economic Mobility Pathways Pilot (EMPP). The details were shared in the IRCC Departmental Plan for 2025-2026.",
-  image: "/Blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025.webp",
+  image: "/BlogImages/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025.webp",
   keywords: [
     "Canada visa",
     "Canada PR Visa",
@@ -83,7 +83,7 @@ export default function CanadaResidencyBlog() {
 
   return (
     <>
-   <Head>
+      <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.excerpt} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />

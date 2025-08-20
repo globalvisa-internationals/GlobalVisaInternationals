@@ -10,7 +10,7 @@ export const metadata = {
   author: "Global Visa Internationals Team",
   excerpt:
     "Canada has raised its minimum proof of funds requirement for international students to CAD $22,895 (~₹14 lakh), effective September 1, 2025. This change impacts Indian students planning to study in Canada by increasing the financial threshold required for living expenses.",
-  image: "/Blog/Canada-Study-Visa-Fund-Requirement-Update-2025.webp",
+  image: "/BlogImages/Canada-Study-Visa-Fund-Requirement-Update-2025.webp",
   keywords: [
     "Canada student visa",
     "Canada proof of funds",
@@ -251,7 +251,7 @@ export default function CanadaResidencyBlog() {
           </section>
 
           <section>
-            <h2  className={Styles.subtitle}>Estimated First-Year Cost for Indian Students</h2>
+            <h2 className={Styles.subtitle}>Estimated First-Year Cost for Indian Students</h2>
             <ul>
               <li>Living Expenses: ₹14 lakh</li>
               <li>Tuition Fees: ₹8–₹25 lakh (varies by program)</li>

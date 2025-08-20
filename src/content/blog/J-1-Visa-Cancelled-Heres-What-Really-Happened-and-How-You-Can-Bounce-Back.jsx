@@ -7,7 +7,7 @@ export const metadata = {
   category: "Visa Information",
   author: "Global Visa Internationals Team",
   excerpt: "J-1 Visa Cancelled? Here's What Really Happened and How You Can Bounce Back",
-  image: "/Blog/J-1-Visa-Cancelled-Heres-What-Really-Happened.webp",
+  image: "/BlogImages/J-1-Visa-Cancelled-Heres-What-Really-Happened.webp",
   keywords: [
     "Green Card 2025",
     "Form I-90 update",
@@ -27,32 +27,32 @@ export default function USGreenCard2025Rules() {
   const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
   const pageUrl = "https://www.globalvisainternationals.com/blog/J-1-Visa-Cancelled-Heres-What-Really-Happened-and-How-You-Can-Bounce-Back/";
 
-const blogStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.globalvisainternationals.com/blog/J-1-Visa-Cancelled-Heres-What-Really-Happened-and-How-You-Can-Bounce-Back"
-  },
-  "headline": "J-1 Visa Cancelled? Here's What Really Happened and How You Can Bounce Back",
-  "description": "Was your J-1 visa revoked due to a rule breach? Discover what happened, what steps you can take, and how Global Visa Internationals can help you reapply successfully.",
-  "image": "https://www.globalvisainternationals.com/images/blog/j1-visa-cancelled.webp",
-  "author": {
-    "@type": "Organization",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Global Visa Internationals",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.globalvisainternationals.com/gvilogo.png"
-    }
-  },
-  "datePublished": "2025-06-19",
-  "dateModified": "2025-06-19"
-};
+  const blogStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.globalvisainternationals.com/blog/J-1-Visa-Cancelled-Heres-What-Really-Happened-and-How-You-Can-Bounce-Back"
+    },
+    "headline": "J-1 Visa Cancelled? Here's What Really Happened and How You Can Bounce Back",
+    "description": "Was your J-1 visa revoked due to a rule breach? Discover what happened, what steps you can take, and how Global Visa Internationals can help you reapply successfully.",
+    "image": "https://www.globalvisainternationals.com/images/blog/j1-visa-cancelled.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "Global Visa Internationals",
+      "url": "https://www.globalvisainternationals.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Global Visa Internationals",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.globalvisainternationals.com/gvilogo.png"
+      }
+    },
+    "datePublished": "2025-06-19",
+    "dateModified": "2025-06-19"
+  };
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
@@ -236,29 +236,29 @@ const blogStructuredData = {
         <h2 className={Styles.subtitle}> Step-by-Step Guide to Handle This</h2>
         <ol>
           <h3 className={Styles.subtitle}><li>Understand Your Visa Revocation Type</li></h3>
-            <ul>
-              <li>With prejudice (due to fraud): You’ll need a waiver</li>
+          <ul>
+            <li>With prejudice (due to fraud): You’ll need a waiver</li>
             <li>Without prejudice: You can apply again, no waiver required</li>
-            </ul>
-          
+          </ul>
 
-          
-            <h3 className={Styles.subtitle}><li>Ready Your Documents</li></h3>
-            <ul>
-              <li>Collect proof of ties to India (job, family, home, bank accounts)</li>
+
+
+          <h3 className={Styles.subtitle}><li>Ready Your Documents</li></h3>
+          <ul>
+            <li>Collect proof of ties to India (job, family, home, bank accounts)</li>
             <li>Keep your DS-2019, sponsor letters, and anything that shows you followed the rules</li>
             <li>Be prepared to explain clearly what went wrong in your interview</li>
-            </ul>
-          
+          </ul>
+
           <h3 className={Styles.subtitle}><li>Pick the Right Visa to Apply For</li></h3>
-            <ul>
-              <li>Going to the U.S. for studies? Try F-1</li>
+          <ul>
+            <li>Going to the U.S. for studies? Try F-1</li>
             <li>Getting married to a U.S. citizen? Go for K-1 fiancé visa or CR-1 spouse visa</li>
             <li>For jobs or conferences, look at H-1B or B-1 options</li>
-            </ul>
-          
+          </ul>
+
           <h3 className={Styles.subtitle}><li>Speak to an Immigration Expert</li></h3>
-            <ul><li>If your program was terminated, or you’re unsure about rules like Section 212(e), an expert can help you prepare and even apply for a </li></ul>
+          <ul><li>If your program was terminated, or you’re unsure about rules like Section 212(e), an expert can help you prepare and even apply for a </li></ul>
         </ol>
         <h2 className={Styles.subtitle}>Summary: Don’t Panic, Just Plan</h2>
 

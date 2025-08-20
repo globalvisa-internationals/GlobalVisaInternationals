@@ -38,7 +38,7 @@ export const metadata = {
     ],
     robots: "index, follow",
     canonical: "https://www.globalvisainternationals.com/blog/us-visa-updates-august-2025",
-    image: "/Blog/US-Visa-Rules-2025-August-Updates.webp",
+    image: "/BlogImages/US-Visa-Rules-2025-August-Updates.webp",
     author: "Global Visa Internationals",
     date: "2025-08-05"
 };

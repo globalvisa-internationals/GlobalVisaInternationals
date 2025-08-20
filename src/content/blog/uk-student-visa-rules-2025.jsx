@@ -8,7 +8,7 @@ export const metadata = {
   author: "Global Visa Internationals Team",
   excerpt:
     "The UK government is introducing stricter student visa rules in 2025. Key changes include a shorter post-study work visa (Graduate Route), new dependent restrictions, and a rigorous rating system for universities.",
-  image: "/Blog/uk-student-visa-rules-2025.webp",
+  image: "/BlogImages/uk-student-visa-rules-2025.webp",
   keywords: [
     "UK student visa 2025",
     "UK immigration rules",

@@ -8,7 +8,7 @@ export const metadata = {
   author: "Global Visa Internationals Team",
   excerpt:
     "Discover the key Green Card rule changes in 2025, including updated Form I-90, mandatory USCIS registration, revocation risks, and the $5M Gold Card visa for investors.",
-  image: "/Blog/us-green-card-2025-rules.webp",
+  image: "/BlogImages/us-green-card-2025-rules.webp",
   keywords: [
     "Green Card 2025",
     "Form I-90 update",
@@ -80,92 +80,92 @@ export default function USGreenCard2025Rules() {
   };
   return (
     <>
-    <Head>
-  <title>{metadata.title}</title>
-  <meta name="description" content={metadata.excerpt} />
-  <meta name="keywords" content={metadata.keywords.join(", ")} />
-  <meta name="author" content={metadata.author} />
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preload" as="image" href={fullImageUrl} />
-  <link rel="canonical" href="https://www.globalvisainternationals.com/blog/us-green-card-2025-rules" />
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.excerpt} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta name="author" content={metadata.author} />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preload" as="image" href={fullImageUrl} />
+        <link rel="canonical" href="https://www.globalvisainternationals.com/blog/us-green-card-2025-rules" />
 
 
-  {/* Open Graph */}
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content={metadata.title} />
-  <meta property="og:description" content={metadata.excerpt} />
-  <meta property="og:url" content={pageUrl} />
-  <meta property="og:image" content={fullImageUrl} />
-  <meta property="og:image:alt" content={metadata.title} />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="Global Visa Internationals" />
+        {/* Open Graph */}
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.excerpt} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={fullImageUrl} />
+        <meta property="og:image:alt" content={metadata.title} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Global Visa Internationals" />
 
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@GlobalVisaIntern" />
-  <meta name="twitter:creator" content="@GlobalVisaIntern" />
-  <meta name="twitter:url" content={pageUrl} />
-  <meta name="twitter:title" content={metadata.title} />
-  <meta name="twitter:description" content={metadata.excerpt} />
-  <meta name="twitter:image" content={fullImageUrl} />
-  <meta name="twitter:image:alt" content={metadata.title} />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@GlobalVisaIntern" />
+        <meta name="twitter:creator" content="@GlobalVisaIntern" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.excerpt} />
+        <meta name="twitter:image" content={fullImageUrl} />
+        <meta name="twitter:image:alt" content={metadata.title} />
 
-  {/* Structured Data: Organization */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Global Visa Internationals",
-        "url": "https://www.globalvisainternationals.com",
-        "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-        "description": "Helping Indian residents navigate complex U.S. immigration and Green Card regulations with expert consultancy.",
-        "founder": { "@type": "Person", "name": "Naveen Kumar J" },
-        "foundingDate": "2016",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "MG Road",
-          "addressLocality": "Bengaluru",
-          "addressRegion": "Karnataka",
-          "postalCode": "560025",
-          "addressCountry": "IN"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-7022213466",
-          "contactType": "Customer Support",
-          "areaServed": "IN",
-          "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
-        },
-        "areaServed": ["IN", "US", "CA", "UK", "EU"],
-        "sameAs": [
-          "https://www.facebook.com/globalvisainternationals/",
-          "https://www.instagram.com/globalvisa_internationals/",
-          "https://www.linkedin.com/company/global-visa-internationals/",
-          "https://twitter.com/GlobalVisaIntern",
-          "https://www.youtube.com/@globalVisaInternationals",
-          "https://www.google.com/maps/place/Global+Visa+Internationals"
-        ]
-      })
-    }}
-  />
+        {/* Structured Data: Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com",
+              "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+              "description": "Helping Indian residents navigate complex U.S. immigration and Green Card regulations with expert consultancy.",
+              "founder": { "@type": "Person", "name": "Naveen Kumar J" },
+              "foundingDate": "2016",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "MG Road",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560025",
+                "addressCountry": "IN"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-7022213466",
+                "contactType": "Customer Support",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
+              },
+              "areaServed": ["IN", "US", "CA", "UK", "EU"],
+              "sameAs": [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://twitter.com/GlobalVisaIntern",
+                "https://www.youtube.com/@globalVisaInternationals",
+                "https://www.google.com/maps/place/Global+Visa+Internationals"
+              ]
+            })
+          }}
+        />
 
-  {/* Structured Data: BlogPosting */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
-  />
+        {/* Structured Data: BlogPosting */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
+        />
 
-  {/* Structured Data: BreadcrumbList */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
-  />
-</Head>
+        {/* Structured Data: BreadcrumbList */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+      </Head>
 
 
       <main className="prose lg:prose-xl max-w-4xl mx-auto px-4 py-12">
@@ -259,8 +259,8 @@ export default function USGreenCard2025Rules() {
           <li> Online reputation audits for immigration</li>
         </ul>
         <p>
-           <strong>Don’t risk your residency. Contact us now!</strong><br />
-           <a href="https://www.globalvisainternationals.com/contact">Schedule a Call</a> | 📧 <a href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a>
+          <strong>Don’t risk your residency. Contact us now!</strong><br />
+          <a href="https://www.globalvisainternationals.com/contact">Schedule a Call</a> | 📧 <a href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a>
         </p>
       </main>
     </>

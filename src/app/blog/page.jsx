@@ -1,3 +1,4 @@
+//GlobalVisaInternationals\src\app\blog\page.jsx
 import { getAllPosts } from '@/lib/blog';
 import BlogList from './BlogList';
 

@@ -7,7 +7,7 @@ export const metadata = {
   category: "Visa Information",
   author: "Global Visa Internationals Team",
   excerpt: "Marrying a U.S. Citizen? Ayyo, It Doesn’t Guarantee a Green Card Anymore! (2025 Update)",
-  image: "/Blog/Marrying-a-U.S.-Citizen-No-Longer-Guarantees-a-Green-Card-What-You-Need-to-Know-in-2025.webp",
+  image: "/BlogImages/Marrying-a-U.S.-Citizen-No-Longer-Guarantees-a-Green-Card-What-You-Need-to-Know-in-2025.webp",
   keywords: [
     "Green Card 2025",
     "Form I-90 update",
