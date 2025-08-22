@@ -305,6 +305,12 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/Seen-as-Anti-American.-USA-May-Deny-You-a-Visa-What-the-New-Policy-Means',
+      lastModified: new Date('2025-08-22'),
+      changefreq: 'weekly',
+      priority: 0.8,
+    },
 
   ]
 }
