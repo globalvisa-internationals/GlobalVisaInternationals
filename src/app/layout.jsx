@@ -4,6 +4,7 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './globals.css'
 
 export default function RootLayout({ children }) {

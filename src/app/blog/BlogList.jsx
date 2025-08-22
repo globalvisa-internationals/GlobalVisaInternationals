@@ -13,6 +13,7 @@ const POSTS_PER_PAGE = 9;
 export default function BlogList({ posts }) {
   const [filteredCategory, setFilteredCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+  const [popup, setPopup] = useState({ show: false, message: "", type: "" });
 
   const handleCategoryFilter = (category) => {
     setFilteredCategory(category);
@@ -28,6 +29,30 @@ export default function BlogList({ posts }) {
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE
   );
+
+
+
+
+
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      alert("✅ Subscribed successfully!");
+    } else {
+      alert("❌ Failed to subscribe.");
+    }
+  };
+
 
   return (
     <div className={styles.container}>
@@ -133,18 +158,38 @@ export default function BlogList({ posts }) {
         </div>
       )}
 
+
       {/* Subscribe Box */}
       <div className={styles.subscribeBox}>
         <h3>Subscribe to Our Blog</h3>
         <p>Get the latest visa updates, tips, and news directly in your inbox.</p>
+
         <form
           className={styles.subscribeForm}
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
             const email = e.target.email.value;
-            if (email) {
-              alert(`Subscribed with ${email}`); // Replace with API call later
+
+            try {
+              const res = await fetch("/api/subscribe", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email }),
+              });
+
+              const data = await res.json();
+              if (data.success) {
+                setPopup({ show: true, message: "✅ Subscribed successfully!", type: "success" });
+                e.target.reset();
+              } else {
+                setPopup({ show: true, message: "❌ " + data.error, type: "error" });
+              }
+            } catch (err) {
+              setPopup({ show: true, message: "❌ Something went wrong.", type: "error" });
             }
+
+            // Auto-close popup after 3 sec
+            setTimeout(() => setPopup({ show: false, message: "", type: "" }), 3000);
           }}
         >
           <input
@@ -158,7 +203,17 @@ export default function BlogList({ posts }) {
             Subscribe
           </button>
         </form>
+
+        {/* ✅ Custom Popup */}
+        {popup.show && (
+          <div
+            className={`${styles.popup} ${popup.type === "success" ? styles.success : styles.error}`}
+          >
+            {popup.message}
+          </div>
+        )}
       </div>
+
     </div>
 
   );
