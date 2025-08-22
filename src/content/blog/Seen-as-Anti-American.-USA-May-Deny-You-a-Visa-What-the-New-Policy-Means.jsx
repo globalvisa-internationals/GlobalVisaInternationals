@@ -202,59 +202,91 @@ export default function USAVisa2025Rules() {
                     />
                 </div>
 
-                <h1 class={Styles.subtitle}>The Truth About the New US Visa Policy – Risks, Rules, and Preparation</h1>
+                <h1 className={Styles.subtitle}>
+                    The Truth About the New US Visa Policy – Risks, Rules, and Preparation
+                </h1>
 
-                <p className={Styles.card}>In recent amendments, the US visa policy has generated controversies worldwide. There are reports that applicants deemed as "anti-American" through previous speeches, online activities, or group membership have been experiencing US visa denials. The change has caused anxiety among visa applicants from India and other countries wanting to travel, study, or work in the USA.</p>
-                <p className={Styles.card}>At Global Visa Internationals, we are monitoring these updates closely so that our clients get the most authentic and dependable information. With 9+ years of experience, having processed 55,000+ visas and conducted 75,000+ consultations, we understand the importance of being adequately prepared for the US visa interview process.</p>
+                <p className={Styles.card}>
+                    In recent amendments, the US visa policy has generated controversies worldwide.
+                    There are reports that applicants deemed as "anti-American" through previous speeches,
+                    online activities, or group membership have been experiencing US visa denials.
+                    The change has caused anxiety among visa applicants from India and other countries
+                    wanting to <a href="https://www.globalvisainternationals.com/Visa/tourist-visa/usa" target="_blank" rel="noopener noreferrer">travel to the USA</a>,
+                    <a href="https://www.globalvisainternationals.com/Visa/student-visa/usa" target="_blank" rel="noopener noreferrer">study abroad</a>,
+                    or work in the US.
+                </p>
+
+                <p className={Styles.card}>
+                    At <a href="https://www.globalvisainternationals.com/" target="_blank" rel="noopener noreferrer">Global Visa Internationals</a>,
+                    we are monitoring these updates closely so that our clients get the most authentic and dependable information.
+                    With 9+ years of experience, having processed 55,000+ visas and conducted 75,000+ consultations,
+                    we understand the importance of being adequately prepared for the US visa interview process.
+                </p>
 
                 <h3 className={Styles.strong}>What Does the New US Visa Policy Say?</h3>
-                <p className={Styles.card}>The policy makes a note that US immigration authorities may consider usage of social media, political opinions, or past associations while judging the merits of an applicant. This would mean:</p>
-                <ul >
+                <p className={Styles.card}>
+                    The policy makes a note that US immigration authorities may consider usage of social media,
+                    political opinions, or past associations while judging the merits of an applicant. This would mean:
+                </p>
+                <ul>
                     <li>Applicants' social media accounts can be reviewed for any signs of "anti-Americanism," which is a broadly defined and discretionary term that lacks a precise legal definition.</li>
                     <li>Affiliation with groups or individuals who are viewed as "anti-American" or support ideologies like antisemitism or terrorism can affect your US visa application.</li>
                     <li>Even casual interactions on the web, such as liking or sharing certain posts, can sometimes be questioned when processing a visa.</li>
                     <li>While the US has traditionally reserved the right to deny entry for reasons of security, this move indicates a stricter vetting policy that extends to ideological scrutiny.</li>
                 </ul>
 
-                <p className={Styles.card}>Association with groups or individuals who are viewed as "anti-American" can affect your US visa application.</p>
-                <p className={Styles.card}>Even casual interactions on the web can sometimes be questioned when processing a visa.</p>
-                <p className={Styles.card}>While the US has traditionally reserved the right to deny entry for reasons of security, this move indicates a stricter vetting policy.</p>
-
                 <h3 className={Styles.strong}>Who Can Be Affected?</h3>
-                <p className={Styles.card}>The new policy applies to a wide range of visa applicants, including:</p>
-                <ul >
+                <p className={Styles.card}>
+                    The new policy applies to a wide range of visa applicants, including:
+                </p>
+                <ul>
                     <li>Students seeking US student visas (F-1, J-1)</li>
                     <li>Tourists seeking US visitor visas (B1/B2)</li>
                     <li>Working professionals seeking US work visas (H1B, L1)</li>
                     <li>Immigrants seeking US Green Cards or PR visas</li>
                 </ul>
-                <p className={Styles.card}>This means that anyone intending to study in the USA, travel for business, or move there permanently should be even more cautious with respect to their documents and background checks.</p>
+                <p className={Styles.card}>
+                    This means that anyone intending to study in the USA, travel for business, or move there permanently should be even more cautious with respect to their documents and background checks.
+                    If you have faced a rejection before, our <a href="https://www.globalvisainternationals.com/Visa/refusal-visa/usa" target="_blank" rel="noopener noreferrer">US refused visa consultation</a> can help you reapply strategically.
+                </p>
 
                 <h3 className={Styles.strong}>What Global Visa Internationals Can Do</h3>
-                <p className={Styles.card}>In Bangalore, Global Visa Internationals offers complete US visa advisory services. While we do not issue visas or represent the US government, our expert advisors provide customized advice to help applicants enhance their chances of approval.</p>
+                <p className={Styles.card}>
+                    In Bangalore, Global Visa Internationals offers complete US visa advisory services.
+                    While we do not issue visas or represent the US government, our expert advisors provide customized advice
+                    to help applicants enhance their chances of approval.
+                </p>
                 <h4 className={Styles.strong}>Our Services Include:</h4>
-                <ul >
-                    <li> US Student Visa Counseling – Application assistance, interview guidance, and overseas study planning</li>
-                    <li> US Visitor Visa Consultation – Document verification and check for eligibility for easy travel</li>
-                    <li> Work Visa Advice – H1B, L1, and other work visa categories</li>
-                    <li> Green Card & PR Consultation – Guidance on long-term settlement in the USA</li>
-                    <li> Denied Visa Reapplication Guidance – Strategic advising to improve approval chances</li>
+                <ul>
+                    <li>US Student Visa Counseling – Application assistance, interview guidance, and overseas study planning</li>
+                    <li>US Visitor Visa Consultation – Document verification and check for eligibility for easy travel</li>
+                    <li>Work Visa Advice – H1B, L1, and other work visa categories</li>
+                    <li>Green Card & PR Consultation – Guidance on long-term settlement in the USA</li>
+                    <li>Denied Visa Reapplication Guidance – Strategic advising to improve approval chances</li>
                 </ul>
 
                 <h3 className={Styles.strong}>Tips for Applicants in the Context of the New Policy</h3>
-                <ul >
-                    <li> Review your social media accounts before applying.</li>
-                    <li> Avoid aggressive or political statements which may be interpreted negatively.</li>
-                    <li> Provide clear, precise, and honest documentation at the time of application.</li>
-                    <li> Prepare diligently for your US visa interview with expert help.</li>
+                <ul>
+                    <li>Review your social media accounts before applying.</li>
+                    <li>Avoid aggressive or political statements which may be interpreted negatively.</li>
+                    <li>Provide clear, precise, and honest documentation at the time of application.</li>
+                    <li>Prepare diligently for your US visa interview with expert help.</li>
                 </ul>
 
                 <h3 className={Styles.strong}>Final Thoughts</h3>
-                <p className={Styles.card}>The latest US visa policy shift serves as a reminder that the immigration procedures are becoming more elaborate and stringent. Being pro-active, well-prepared, and aware of these changes can be a significant determinant in the destiny of your application.</p>
-                <p className={Styles.card}>At Global Visa Internationals, we remain committed to helping our clients achieve their goal of studying, traveling, working, or settling abroad through expert, ethical, and reliable guidance.</p>
-                <p className={Styles.card}>📞 Contact us today to book your free visa consultancy in Bangalore and embark on your global journey on the right note!</p>
-
+                <p className={Styles.card}>
+                    The latest US visa policy shift serves as a reminder that the immigration procedures are becoming more elaborate and stringent.
+                    Being pro-active, well-prepared, and aware of these changes can be a significant determinant in the destiny of your application.
+                </p>
+                <p className={Styles.card}>
+                    At <a href="https://www.globalvisainternationals.com/" target="_blank" rel="noopener noreferrer">Global Visa Internationals</a>,
+                    we remain committed to helping our clients achieve their goal of studying, traveling, working, or settling abroad through expert, ethical, and reliable guidance.
+                </p>
+                <p className={Styles.card}>
+                    📞 <a href="https://www.globalvisainternationals.com/contact" target="_blank" rel="noopener noreferrer">Contact us today</a> to book your free visa consultancy in Bangalore and embark on your global journey on the right note!
+                </p>
             </main>
+
         </>
     )
 }
