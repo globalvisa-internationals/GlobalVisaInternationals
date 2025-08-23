@@ -311,6 +311,12 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/Visa-Friday-USA-Visa-Reapplay-of-refusal-visa',
+      lastModified: new Date('2025-08-22'),
+      changefreq: 'weekly',
+      priority: 0.8,
+    },
 
   ]
 }
