@@ -4,17 +4,38 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
 import Script from "next/script";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import './globals.css'
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import "./globals.css";
 
 export default function RootLayout({ children }) {
-  const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics */}
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}');
+              `}
+            </Script>
+          </>
+        )}
 
-      <body className='body'>
+
+      </head>
+
+      <body className="body">
         <GoogleReCaptchaProvider
           reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
           scriptProps={{ async: true, defer: true, appendTo: "head" }}
@@ -22,6 +43,7 @@ export default function RootLayout({ children }) {
           <NavBar />
           {children}
           <Footer />
+          <SpeedInsights />
         </GoogleReCaptchaProvider>
       </body>
     </html>
