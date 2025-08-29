@@ -126,22 +126,31 @@ export default function Visa_Friday_Updates_29_AUG_2025() {
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={metadata.title} />
-                <meta property="og:description" content="The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup brings three significant developments from Argentina, the UK, and New Zealand—each opening new opportunities for Indians abroad" />
+                <meta
+                    property="og:description"
+                    content="The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup highlights key developments from Argentina, the UK, and New Zealand—each unlocking new opportunities for Indians abroad."
+                />
                 <meta property="og:url" content={metadata.canonical} />
                 <meta property="og:image" content={fullImageUrl} />
-                <meta property="og:image:alt" content="🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)" />
+                <meta property="og:image:alt" content={metadata.title} />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:site_name" content="Global Visa Internationals" />
+
+                {/* Instant Articles (IA) – cleaned */}
+                <meta property="ia:markup_url" content={metadata.canonical} />
+                <meta property="ia:markup_url_dev" content={metadata.canonical} />
+                <meta property="ia:rules_url" content={metadata.canonical} />
+                <meta property="ia:rules_url_dev" content={metadata.canonical} />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@GLOBALVISA1505" />
                 <meta name="twitter:creator" content="@GLOBALVISA1505" />
-                <meta name="twitter:title" content="🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)" />
-                <meta name="twitter:description" content="The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup brings three significant developments from Argentina, the UK, and New Zealand—each opening new opportunities for Indians abroad." />
+                <meta name="twitter:title" content={metadata.title} />
+                <meta name="twitter:description" content={metadata.description} />
                 <meta name="twitter:image" content={fullImageUrl} />
-                <meta name="twitter:image:alt" content="🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)" />
+                <meta name="twitter:image:alt" content={metadata.title} />
 
                 {/* Mobile SEO */}
                 <meta name="format-detection" content="telephone=no" />
