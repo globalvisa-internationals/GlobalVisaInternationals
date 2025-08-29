@@ -318,8 +318,8 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://www.globalvisainternationals.com/blog/Visa-Friday-Updates-Key-Global-Changes-Indians-Need-to-Know-(August-29-2025)',
-      lastModified: new Date('2025-08-23'),
+      url: 'https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025',
+      lastModified: new Date('2025-08-29'),
       changefreq: 'weekly',
       priority: 0.8,
     },

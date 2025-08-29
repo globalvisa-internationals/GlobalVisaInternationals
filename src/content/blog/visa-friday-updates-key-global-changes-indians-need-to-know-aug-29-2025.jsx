@@ -11,8 +11,8 @@ export const metadata = {
     ],
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     canonical:
-        "https://www.globalvisainternationals.com/blog/Visa-Friday-Updates-Key-Global-Changes-Indians-Need-to-Know-(August-29-2025)",
-    image: "/BlogImages/Visa-Friday-Updates-Key-Global-Changes-Indians-Need-to-Know-(August-29-2025)_Banner.webp",
+        "https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025",
+    image: "/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.webp",
     author: "Global Visa Internationals",
     date: "2025-08-29",
     category: "Immigration News & Updates",
