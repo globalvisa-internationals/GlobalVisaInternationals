@@ -4,7 +4,8 @@ import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
 
 export const metadata = {
-    title: "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
+    title:
+        "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
     description:
         "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup brings three significant developments from Argentina, the UK, and New Zealand—each opening new opportunities for Indians abroad.",
     keywords: [
@@ -24,26 +25,42 @@ export const metadata = {
         canonical:
             "https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025",
     },
+    // human-friendly author & published date (used by your component)
+    author: "Global Visa Internationals",
+    date: "2025-08-29",
+
+    // keep authors array for Next.js metadata compatibility too
     authors: [{ name: "Global Visa Internationals" }],
     category: "Immigration News & Updates",
+
+    // hero image variants (webp preferred + jpg fallback)
+    imageWebp:
+        "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.webp",
+    imageJpg:
+        "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
+
     openGraph: {
         type: "article",
         locale: "en_US",
-        url: "https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025",
+        url:
+            "https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025",
         siteName: "Global Visa Internationals",
-        title: "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
+        title:
+            "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
         description:
             "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup brings three significant developments from Argentina, the UK, and New Zealand—each opening new opportunities for Indians abroad.",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
+                url:
+                    "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.webp",
                 width: 1200,
                 height: 630,
                 alt: "Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
                 type: "image/webp",
             },
             {
-                url: "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
+                url:
+                    "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
@@ -51,18 +68,20 @@ export const metadata = {
             },
         ],
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
         creator: "@GLOBALVISA1505",
-        title: "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
+        title:
+            "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
         description:
             "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential.",
         images: [
-            "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
+            "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
         ],
     },
-    // optional extra article meta (static published date + dynamic modified time)
+
     other: {
         "article:published_time": "2025-08-29",
         "article:modified_time": new Date().toISOString(),
@@ -74,6 +93,8 @@ export const metadata = {
 
 export default function Visa_Friday_Updates_29_AUG_2025() {
     const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
+    const fullImageWebp = metadata.imageWebp;
+    const fullImageJpg = metadata.imageJpg;
 
     const blogStructuredData = {
         "@context": "https://schema.org",
@@ -257,14 +278,18 @@ export default function Visa_Friday_Updates_29_AUG_2025() {
                 </div>
 
                 <div className={Styles.imageCard}>
-                    <img
-                        src={fullImageUrl}
-                        alt={metadata.title}
-                        className={Styles.image}
-                        loading="lazy"
-                        width="1200"
-                        height="630"
-                    />
+                    {/* picture element uses webp when supported, jpg fallback otherwise */}
+                    <picture>
+                        <source srcSet={fullImageWebp} type="image/webp" />
+                        <img
+                            src={fullImageJpg}
+                            alt={metadata.title}
+                            className={Styles.image}
+                            loading="lazy"
+                            width="1200"
+                            height="630"
+                        />
+                    </picture>
                 </div>
                 <p>The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup brings three significant developments from Argentina, the UK, and New Zealand—each opening new opportunities for Indians abroad.</p>
                 {/* --- Section 1: Argentina --- */}
