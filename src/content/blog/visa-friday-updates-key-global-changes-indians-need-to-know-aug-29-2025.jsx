@@ -36,14 +36,14 @@ export const metadata = {
             "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup brings three significant developments from Argentina, the UK, and New Zealand—each opening new opportunities for Indians abroad.",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.webp",
+                url: "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
                 type: "image/webp",
             },
             {
-                url: "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
+                url: "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
@@ -59,7 +59,7 @@ export const metadata = {
         description:
             "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential.",
         images: [
-            "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
+            "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
         ],
     },
     // optional extra article meta (static published date + dynamic modified time)
