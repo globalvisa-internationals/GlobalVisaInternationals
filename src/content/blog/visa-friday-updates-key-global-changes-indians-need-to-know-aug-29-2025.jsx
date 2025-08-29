@@ -4,19 +4,73 @@ import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
 
 export const metadata = {
-    title: "🌍Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
+    title: "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
     description:
         "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup brings three significant developments from Argentina, the UK, and New Zealand—each opening new opportunities for Indians abroad.",
-    keywords: ["Visa requirements for Indians", "Visa free countries for Indian passport", "UK student visa from India", "Canada student visa 2025", "H1B visa latest news", "USA tourist visa from India", "Schengen visa for Indians", "Work visa for Indians abroad", "Cheapest countries for Indian students", "Best visa options for Indians"
+    keywords: [
+        "Visa requirements for Indians",
+        "Visa free countries for Indian passport",
+        "UK student visa from India",
+        "Canada student visa 2025",
+        "H1B visa latest news",
+        "USA tourist visa from India",
+        "Schengen visa for Indians",
+        "Work visa for Indians abroad",
+        "Cheapest countries for Indian students",
+        "Best visa options for Indians",
     ],
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    canonical:
-        "https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025",
-    image: "/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.webp",
-    author: "Global Visa Internationals",
-    date: "2025-08-29",
+    alternates: {
+        canonical:
+            "https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025",
+    },
+    authors: [{ name: "Global Visa Internationals" }],
     category: "Immigration News & Updates",
+    openGraph: {
+        type: "article",
+        locale: "en_US",
+        url: "https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025",
+        siteName: "Global Visa Internationals",
+        title: "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
+        description:
+            "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup brings three significant developments from Argentina, the UK, and New Zealand—each opening new opportunities for Indians abroad.",
+        images: [
+            {
+                url: "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.webp",
+                width: 1200,
+                height: 630,
+                alt: "Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
+                type: "image/webp",
+            },
+            {
+                url: "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
+                type: "image/jpeg",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        site: "@GLOBALVISA1505",
+        creator: "@GLOBALVISA1505",
+        title: "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
+        description:
+            "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential.",
+        images: [
+            "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
+        ],
+    },
+    // optional extra article meta (static published date + dynamic modified time)
+    other: {
+        "article:published_time": "2025-08-29",
+        "article:modified_time": new Date().toISOString(),
+        "article:section": "Immigration News & Updates",
+        "article:tag": "visa, immigration, travel",
+    },
 };
+
 
 export default function Visa_Friday_Updates_29_AUG_2025() {
     const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
@@ -111,49 +165,70 @@ export default function Visa_Friday_Updates_29_AUG_2025() {
     return (
         <>
             <Head>
+                {/* Basic */}
+                <meta charSet="utf-8" />
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
                 <meta name="keywords" content={metadata.keywords.join(", ")} />
-                <meta name="author" content={metadata.author} />
+                <meta name="author" content={metadata.authors[0].name} />
                 <meta name="robots" content={metadata.robots} />
-                <meta name="googlebot" content={metadata.robots} />
-                <meta name="bingbot" content={metadata.robots} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="canonical" href={metadata.canonical} />
+                <link rel="canonical" href={metadata.alternates.canonical} />
+
+                {/* Preconnect / DNS-prefetch */}
+                <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+                {/* Preload hero image */}
                 <link rel="preload" as="image" href={fullImageUrl} />
 
                 {/* Open Graph */}
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content={metadata.title} />
-                <meta
-                    property="og:description"
-                    content="The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential. This week’s Visa Friday roundup highlights key developments from Argentina, the UK, and New Zealand—each unlocking new opportunities for Indians abroad."
-                />
-                <meta property="og:url" content={metadata.canonical} />
-                <meta property="og:image" content={fullImageUrl} />
-                <meta property="og:image:alt" content={metadata.title} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta property="og:site_name" content="Global Visa Internationals" />
+                <meta property="og:title" content={metadata.openGraph.title} />
+                <meta property="og:description" content={metadata.openGraph.description} />
+                <meta property="og:url" content={metadata.openGraph.url} />
+                <meta property="og:site_name" content={metadata.openGraph.siteName} />
+                {/* WebP preferred, JPG fallback */}
+                <meta property="og:image" content={metadata.openGraph.images[0].url} />
+                <meta property="og:image:secure_url" content={metadata.openGraph.images[0].url} />
+                <meta property="og:image:type" content={metadata.openGraph.images[0].type} />
+                <meta property="og:image:width" content={metadata.openGraph.images[0].width.toString()} />
+                <meta property="og:image:height" content={metadata.openGraph.images[0].height.toString()} />
+                <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+                {/* Fallback (jpg) */}
+                <meta property="og:image" content={metadata.openGraph.images[1].url} />
+                <meta property="og:image:secure_url" content={metadata.openGraph.images[1].url} />
+                <meta property="og:image:type" content={metadata.openGraph.images[1].type} />
 
-                {/* Instant Articles (IA) – cleaned */}
-                <meta property="ia:markup_url" content={metadata.canonical} />
-                <meta property="ia:markup_url_dev" content={metadata.canonical} />
-                <meta property="ia:rules_url" content={metadata.canonical} />
-                <meta property="ia:rules_url_dev" content={metadata.canonical} />
+                <meta property="og:updated_time" content={new Date().toISOString()} />
 
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@GLOBALVISA1505" />
-                <meta name="twitter:creator" content="@GLOBALVISA1505" />
-                <meta name="twitter:title" content={metadata.title} />
-                <meta name="twitter:description" content={metadata.description} />
-                <meta name="twitter:image" content={fullImageUrl} />
-                <meta name="twitter:image:alt" content={metadata.title} />
+                {/* Article meta */}
+                <meta property="article:published_time" content={metadata.other["article:published_time"]} />
+                <meta property="article:modified_time" content={metadata.other["article:modified_time"]} />
+                <meta property="article:author" content={metadata.authors[0].name} />
+                <meta property="article:section" content={metadata.other["article:section"]} />
+                <meta property="article:tag" content="visa" />
+                <meta property="article:tag" content="immigration" />
+                <meta property="article:tag" content="travel" />
 
-                {/* Mobile SEO */}
-                <meta name="format-detection" content="telephone=no" />
+                {/* Twitter */}
+                <meta name="twitter:card" content={metadata.twitter.card} />
+                <meta name="twitter:site" content={metadata.twitter.site} />
+                <meta name="twitter:creator" content={metadata.twitter.creator} />
+                <meta name="twitter:title" content={metadata.twitter.title} />
+                <meta name="twitter:description" content={metadata.twitter.description} />
+                <meta name="twitter:image" content={metadata.twitter.images[0]} />
+                <meta name="twitter:image:alt" content={metadata.openGraph.images[0].alt} />
+
+                {/* Fallback */}
+                <link rel="image_src" href={metadata.twitter.images[0]} />
+
+                {/* PWA / Icons */}
+                <link rel="manifest" href="/site.webmanifest" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
                 <meta name="theme-color" content="#ffffff" />
 
                 {/* Local SEO */}
@@ -162,7 +237,7 @@ export default function Visa_Friday_Updates_29_AUG_2025() {
                 <meta name="geo.position" content="12.9716;77.5946" />
                 <meta name="ICBM" content="12.9716,77.5946" />
 
-                {/* Structured Data */}
+                {/* JSON-LD Structured Data */}
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
