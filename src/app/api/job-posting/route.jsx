@@ -35,7 +35,7 @@ export async function POST(request) {
   try {
     const { fields, files } = await parseForm(request);
 
-    // Prepare attachments
+    // Prepare attachments (resume)
     let attachments = [];
     const resumeFile = files.resume?.[0];
 
@@ -50,22 +50,21 @@ export async function POST(request) {
       });
     }
 
-    // Build message HTML
+    // Build message HTML based on JobForm fields
     const message = `
       <h2>New Job Application Received</h2>
       <p><strong>Name:</strong> ${fields.name || "Not provided"}</p>
       <p><strong>Email:</strong> ${fields.email || "Not provided"}</p>
       <p><strong>Phone:</strong> ${fields.phone || "Not provided"}</p>
-      <p><strong>DOB:</strong> ${fields.dob || "Not provided"}</p>
-      <p><strong>Age:</strong> ${fields.age || "Not provided"}</p>
       <p><strong>Experience:</strong> ${fields.experience || "Not provided"}</p>
+      <p><strong>Gender:</strong> ${fields.gender || "Not provided"}</p>
       <p><strong>Education:</strong> ${fields.education || "Not provided"}</p>
-      <p><strong>Job Title:</strong> ${fields.jobTitle || "Not provided"}</p>
+      <p><strong>Applying For:</strong> ${fields.jobTitle || "Not provided"}</p>
     `;
 
     // Send email via Resend
     await resend.emails.send({
-      from: `Global Visa Intl <${process.env.FROM_EMAIL}>`, // ✅ keep dynamic sender
+      from: `Global Visa Intl <${process.env.FROM_EMAIL}>`,
       to: [process.env.TO_EMAIL],
       subject: "New Job Application Received",
       html: message,
