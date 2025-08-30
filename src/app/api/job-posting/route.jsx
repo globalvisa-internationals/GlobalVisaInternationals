@@ -2,7 +2,6 @@
 import { Resend } from "resend";
 import { Readable } from "stream";
 
-
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Convert Web ReadableStream to Node Readable stream
@@ -22,7 +21,7 @@ async function parseForm(request) {
   const stream = toNodeReadable(request.body);
   stream.headers = headers;
   stream.method = "POST";
-  stream.url = "/api/job-posting"; // needed by formidable
+  stream.url = "/api/job-posting";
 
   return new Promise((resolve, reject) => {
     form.parse(stream, (err, fields, files) => {
@@ -36,9 +35,9 @@ export async function POST(request) {
   try {
     const { fields, files } = await parseForm(request);
 
-    // Extract file
-    const resumeFile = files.resume?.[0];
+    // Prepare attachments
     let attachments = [];
+    const resumeFile = files.resume?.[0];
 
     if (resumeFile) {
       const fs = await import("fs/promises");
@@ -47,35 +46,37 @@ export async function POST(request) {
       attachments.push({
         filename: resumeFile.originalFilename,
         content: resumeBuffer.toString("base64"),
-        type: resumeFile.mimetype, // <-- important for Resend
+        type: resumeFile.mimetype,
       });
     }
 
+    // Build message HTML
+    const message = `
+      <h2>New Job Application Received</h2>
+      <p><strong>Name:</strong> ${fields.name || "Not provided"}</p>
+      <p><strong>Email:</strong> ${fields.email || "Not provided"}</p>
+      <p><strong>Phone:</strong> ${fields.phone || "Not provided"}</p>
+      <p><strong>DOB:</strong> ${fields.dob || "Not provided"}</p>
+      <p><strong>Age:</strong> ${fields.age || "Not provided"}</p>
+      <p><strong>Experience:</strong> ${fields.experience || "Not provided"}</p>
+      <p><strong>Education:</strong> ${fields.education || "Not provided"}</p>
+      <p><strong>Job Title:</strong> ${fields.jobTitle || "Not provided"}</p>
+    `;
+
     // Send email via Resend
     await resend.emails.send({
-      from: "Global Visa <onboarding@resend.dev>",
-      to: process.env.EMAIL_TO,
+      from: `Global Visa Intl <${process.env.FROM_EMAIL}>`, // ✅ keep dynamic sender
+      to: [process.env.TO_EMAIL],
       subject: "New Job Application Received",
-      text: `
-New Job Application Received ✅
-
-Name: ${fields.name}
-Email: ${fields.email}
-Phone: ${fields.phone}
-DOB: ${fields.dob}
-Age: ${fields.age}
-Experience: ${fields.experience}
-Education: ${fields.education}
-Job Title: ${fields.jobTitle}
-      `,
+      html: message,
       attachments,
     });
 
     return Response.json({ success: true });
   } catch (error) {
-    console.error("❌ Email sending failed:", error);
+    console.error("❌ Job Application email failed:", error);
     return Response.json(
-      { success: false, message: "Email sending failed." },
+      { success: false, message: "Job Application email failed." },
       { status: 500 }
     );
   }
