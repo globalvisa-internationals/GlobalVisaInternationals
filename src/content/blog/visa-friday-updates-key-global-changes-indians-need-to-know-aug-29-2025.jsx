@@ -36,8 +36,8 @@ export const metadata = {
     // hero image variants (webp preferred + jpg fallback)
     imageWebp:
         "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.webp",
-    imageJpg:
-        "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
+    image:
+        "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
 
     openGraph: {
         type: "article",
@@ -60,7 +60,7 @@ export const metadata = {
             },
             {
                 url:
-                    "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
+                    "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
@@ -78,7 +78,7 @@ export const metadata = {
         description:
             "The global visa landscape is constantly evolving, and for Indian travelers, students, and investors, staying updated is essential.",
         images: [
-            "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpg",
+            "https://www.globalvisainternationals.com/blogBannerImages/visa-friday-updates-key-global-changes-indians-need-to-know-aug-29-2025-banner.jpeg",
         ],
     },
 
@@ -94,7 +94,7 @@ export const metadata = {
 export default function Visa_Friday_Updates_29_AUG_2025() {
     const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
     const fullImageWebp = metadata.imageWebp;
-    const fullImageJpg = metadata.imageJpg;
+    const fullimage = metadata.image;
 
     const blogStructuredData = {
         "@context": "https://schema.org",
@@ -282,7 +282,7 @@ export default function Visa_Friday_Updates_29_AUG_2025() {
                     <picture>
                         <source srcSet={fullImageWebp} type="image/webp" />
                         <img
-                            src={fullImageJpg}
+                            src={fullimage}
                             alt={metadata.title}
                             className={Styles.image}
                             loading="lazy"
