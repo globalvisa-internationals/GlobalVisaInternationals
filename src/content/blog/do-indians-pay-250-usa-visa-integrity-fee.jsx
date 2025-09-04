@@ -33,7 +33,7 @@ export const metadata = {
     category: "Visa Policy & Immigration News",
 
     image:
-        "/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+        "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
 
     openGraph: {
         type: "article",
@@ -48,7 +48,7 @@ export const metadata = {
         images: [
             {
                 url:
-                    "/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+                    "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate",
@@ -56,7 +56,7 @@ export const metadata = {
             },
             {
                 url:
-                    "/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+                    "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate",
@@ -74,7 +74,7 @@ export const metadata = {
         description:
             "Indians already pay the MRV fee, but now the U.S. has added a $250 Visa Integrity Fee. Who pays, who is exempt, refund rules, and why many call it unfair.",
         images: [
-            "/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+            "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
         ],
     },
 
@@ -101,7 +101,15 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
         "image": "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
         "author": {
             "@type": "Organization",
-            "name": metadata.author
+            "name": metadata.author,
+            "sameAs": [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+                "https://www.google.com/maps/place/Global+Visa+Internationals"
+            ]
         },
         "publisher": {
             "@type": "Organization",
@@ -109,11 +117,19 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://www.globalvisainternationals.com/gvilogo.png"
-            }
+            },
+            "sameAs": [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+                "https://www.google.com/maps/place/Global+Visa+Internationals"
+            ]
         },
         "datePublished": metadata.date,
         "dateModified": metadata.date,
-        "mainEntityOfPage": `https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra`
+        "mainEntityOfPage": "https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra"
     };
 
     const breadcrumbStructuredData = {
