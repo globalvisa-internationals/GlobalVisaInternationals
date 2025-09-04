@@ -89,7 +89,7 @@ export const metadata = {
 
 export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
 
-    const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
+    const fullImageUrl = `https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg`;
     const fullImageWebp = metadata.imageWebp;
     const fullImage = metadata.image;
 
@@ -98,7 +98,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
         "@type": "Article",
         "headline": metadata.title,
         "description": metadata.description,
-        "image": fullImageUrl,
+        "image": "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
         "author": {
             "@type": "Organization",
             "name": metadata.author
@@ -216,7 +216,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
                 {/* Preload hero image */}
-                <link rel="preload" as="image" href={fullImageUrl} />
+                <link rel="preload" as="image" href="https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg" />
 
                 {/* Open Graph */}
                 <meta property="og:locale" content="en_US" />
