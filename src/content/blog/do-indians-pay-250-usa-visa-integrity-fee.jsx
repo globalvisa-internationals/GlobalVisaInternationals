@@ -97,7 +97,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": metadata.title,
-        "description": metadata.description,
+        "description": "The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies.",
         "image": "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
         "author": {
             "@type": "Organization",
@@ -203,7 +203,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 {/* Basic */}
                 <meta charSet="utf-8" />
                 <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
+                <meta name="description" content="The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies." />
                 <meta name="keywords" content={metadata.keywords.join(", ")} />
                 <meta name="author" content={metadata.authors[0].name} />
                 <meta name="robots" content={metadata.robots} />
@@ -222,7 +222,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={metadata.openGraph.title} />
-                <meta property="og:description" content={metadata.openGraph.description} />
+                <meta property="og:description" content="The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies." />
                 <meta property="og:url" content={metadata.openGraph.url} />
                 <meta property="og:site_name" content={metadata.openGraph.siteName} />
 
@@ -246,7 +246,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <meta name="twitter:site" content={metadata.twitter.site} />
                 <meta name="twitter:creator" content={metadata.twitter.creator} />
                 <meta name="twitter:title" content={metadata.twitter.title} />
-                <meta name="twitter:description" content={metadata.twitter.description} />
+                <meta name="twitter:description" content="The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies." />
                 <meta name="twitter:image" content={metadata.twitter.images[0]} />
                 <meta name="twitter:image:alt" content={metadata.openGraph.images[0].alt} />
 
