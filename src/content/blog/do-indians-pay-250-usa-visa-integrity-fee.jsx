@@ -38,25 +38,13 @@ export const metadata = {
     openGraph: {
         type: "article",
         locale: "en_US",
-        url:
-            "https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra",
+        url: "https://www.globalvisainternationals.com/blog/do-indians-pay-250-usa-visa-integrity-fee",
         siteName: "Global Visa Internationals",
-        title:
-            "US Visa Integrity Fee 2025 – Do Indians Really Need to Pay $250 Extra?",
-        description:
-            "The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies.",
+        title: "US Visa Integrity Fee 2025 – Do Indians Really Need to Pay $250 Extra?",
+        description: "The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies.",
         images: [
             {
-                url:
-                    "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
-                width: 1200,
-                height: 630,
-                alt: "Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate",
-                type: "image/webp",
-            },
-            {
-                url:
-                    "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+                url: "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate",
@@ -64,6 +52,7 @@ export const metadata = {
             },
         ],
     },
+
 
     twitter: {
         card: "summary_large_image",
@@ -243,10 +232,22 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <meta property="og:site_name" content={metadata.openGraph.siteName} />
 
                 {/* Social Images */}
-                {metadata.openGraph.images.map((img, index) => (
-                    <meta key={index} property="og:image" content={img.url} />
-                ))}
-                <meta property="og:updated_time" content={new Date().toISOString()} />
+                {metadata.openGraph.images.map((img, index) => {
+                    // ensure absolute URLs
+                    const imageUrl = img.url.startsWith("http")
+                        ? img.url
+                        : `https://www.globalvisainternationals.com${img.url}`;
+                    return (
+                        <React.Fragment key={index}>
+                            <meta property="og:image" content={imageUrl} />
+                            {img.width && <meta property="og:image:width" content={img.width.toString()} />}
+                            {img.height && <meta property="og:image:height" content={img.height.toString()} />}
+                            {img.alt && <meta property="og:image:alt" content={img.alt} />}
+                            {img.type && <meta property="og:image:type" content={img.type} />}
+                        </React.Fragment>
+                    );
+                })}
+
 
                 {/* Article meta */}
                 <meta property="article:published_time" content={metadata.other["article:published_time"]} />
@@ -258,7 +259,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 ))}
 
                 {/* Twitter */}
-                <!-- Twitter -->
+
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@GLOBALVISA1505" />
                 <meta name="twitter:creator" content="@GLOBALVISA1505" />
