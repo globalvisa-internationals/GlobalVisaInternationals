@@ -6,44 +6,24 @@ import React from "react";
 
 
 export const metadata = {
-    title:
-        "US Visa Integrity Fee 2025 – Do Indians Really Need to Pay $250 Extra on Top of MRV?",
-    description:
-        "The USA has introduced a new $250 ‘Visa Integrity Fee’ for non-immigrant visas. Do Indians really need to pay this on top of the MRV fee? Who pays, who is exempt, refund rules, and why many see this as an unfair Trump-era tax on Indian travelers.",
-    keywords: [
-        "US Visa Integrity Fee 2025",
-        "Do Indians need to pay Visa Integrity Fee",
-        "USA tourist visa fee for Indians",
-        "US student visa fee from India",
-        "US H1B visa fee increase 2025",
-        "Visa MRV vs Integrity Fee explained",
-        "Refund of US Visa Integrity Fee",
-        "Trump visa fee policy criticism",
-        "Extra charges for Indian travelers USA",
-        "US visa news for Indians 2025"
-    ],
+    title: "US Visa Integrity Fee 2025 – Do Indians Really Need to Pay $250 Extra on Top of MRV?",
+    description: "The USA has introduced a new $250 ‘Visa Integrity Fee’ for non-immigrant visas. Do Indians really need to pay this on top of the MRV fee? Who pays, who is exempt, refund rules, and why many see this as an unfair Trump-era tax on Indian travelers.",
+    keywords: ["US Visa Integrity Fee 2025", "Do Indians need to pay Visa Integrity Fee", "USA tourist visa fee for Indians", "US student visa fee from India", "US H1B visa fee increase 2025", "Visa MRV vs Integrity Fee explained", "Refund of US Visa Integrity Fee", "Trump visa fee policy criticism", "Extra charges for Indian travelers USA", "US visa news for Indians 2025"],
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra",
-    },
-
+    alternates: { canonical: "https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra", },
     author: "Global Visa Internationals",
     date: "2025-09-03",
-
     authors: [{ name: "Global Visa Internationals" }],
     category: "Visa Policy & Immigration News",
-
-    image:
-        "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+    image: "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
 
     openGraph: {
         type: "article",
         locale: "en_US",
-        url: "https://www.globalvisainternationals.com/blog/do-indians-pay-250-usa-visa-integrity-fee",
-        siteName: "Global Visa Internationals",
         title: "US Visa Integrity Fee 2025 – Do Indians Really Need to Pay $250 Extra?",
         description: "The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies.",
+        url: "https://www.globalvisainternationals.com/blog/do-indians-pay-250-usa-visa-integrity-fee",
+        siteName: "Global Visa Internationals",
         images: [
             {
                 url: "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
@@ -81,7 +61,7 @@ export const metadata = {
 export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
 
     const fullImageUrl = `https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg`;
-    const fullImageWebp = metadata.imageWebp;
+    const fullImageWebp = metadata.image;
     const fullImage = metadata.image;
 
     const blogStructuredData = {
@@ -210,9 +190,8 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 {/* Basic */}
                 <meta charSet="utf-8" />
                 <title>{metadata.title}</title>
-                <meta name="description" content="The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies." />
-                <meta name="keywords" content={metadata.keywords.join(", ")} />
-                <meta name="author" content={metadata.authors[0].name} />
+                <meta name="description" content={metadata.description} />
+                <meta name="keywords" content={metadata.keywords} />
                 <meta name="robots" content={metadata.robots} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="canonical" href='https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra' />
@@ -226,12 +205,17 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <link rel="preload" as="image" href="https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg" />
 
                 {/* Open Graph */}
-                <meta property="og:locale" content="en_US" />
-                <meta property="og:type" content="article" />
+
+                <meta property="og:type" content={metadata.openGraph.type} />
                 <meta property="og:title" content={metadata.openGraph.title} />
-                <meta property="og:description" content="The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies." />
+                <meta property="og:description" content={metadata.openGraph.description} />
                 <meta property="og:url" content={metadata.openGraph.url} />
+                <meta property="og:image" content={metadata.openGraph.images[0].url} />
+                <meta property="og:image:alt" content="Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate" />
+                <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
                 <meta property="og:site_name" content={metadata.openGraph.siteName} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
 
                 {/* Social Images */}
                 {metadata.openGraph.images.map((img, index) => {
@@ -256,18 +240,16 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <meta property="article:modified_time" content={metadata.other["article:modified_time"]} />
                 <meta property="article:author" content={metadata.authors[0].name} />
                 <meta property="article:section" content={metadata.other["article:section"]} />
-                {metadata.other["article:tag"].split(",").map((tag, i) => (
-                    <meta key={i} property="article:tag" content={tag.trim()} />
-                ))}
+                {metadata.other["article:tag"].split(",").map((tag, i) => (<meta key={i} property="article:tag" content={tag.trim()} />))}
 
                 {/* Twitter */}
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@GLOBALVISA1505" />
                 <meta name="twitter:creator" content="@GLOBALVISA1505" />
-                <meta name="twitter:title" content="US Visa Integrity Fee 2025 – Indians Forced to Pay $250 Extra?" />
-                <meta name="twitter:description" content="Indians already pay the MRV fee, but now the U.S. has added a $250 Visa Integrity Fee. Who pays, who is exempt, refund rules, and why many call it unfair." />
-                <meta name="twitter:image" content="https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg" />
+                <meta name="twitter:title" content={metadata.twitter.title} />
+                <meta name="twitter:description" content={metadata.twitter.description} />
+                <meta name="twitter:image" content={metadata.twitter.images} />
                 <meta name="twitter:image:alt" content="Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate" />
 
 
@@ -287,18 +269,9 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <meta name="ICBM" content="12.9716,77.5946" />
 
                 {/* JSON-LD Structured Data */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
-                />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
-                />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-                />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
             </Head>
 
 
