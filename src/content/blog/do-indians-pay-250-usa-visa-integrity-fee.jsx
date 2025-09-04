@@ -113,7 +113,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
         },
         "datePublished": metadata.date,
         "dateModified": metadata.date,
-        "mainEntityOfPage": metadata.canonical
+        "mainEntityOfPage": `https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra`
     };
 
     const breadcrumbStructuredData = {
@@ -136,7 +136,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
-                "item": metadata.canonical
+                "item": `https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra`
             }
         ]
     };
@@ -208,7 +208,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <meta name="author" content={metadata.authors[0].name} />
                 <meta name="robots" content={metadata.robots} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="canonical" href={metadata.alternates.canonical} />
+                <link rel="canonical" href='https://www.globalvisainternationals.com/blog/us-visa-integrity-fee-2025-do-indians-need-to-pay-extra' />
 
                 {/* Preconnect / DNS-prefetch */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
