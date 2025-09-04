@@ -2,6 +2,8 @@ import AnimatedHR from '@/Components/AnimatedHR';
 import Styles from './blog.module.css';
 import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
+import React from "react";
+
 
 export const metadata = {
     title:
