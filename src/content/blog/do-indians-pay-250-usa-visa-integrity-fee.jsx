@@ -258,13 +258,15 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 ))}
 
                 {/* Twitter */}
-                <meta name="twitter:card" content={metadata.twitter.card} />
-                <meta name="twitter:site" content={metadata.twitter.site} />
-                <meta name="twitter:creator" content={metadata.twitter.creator} />
-                <meta name="twitter:title" content={metadata.twitter.title} />
-                <meta name="twitter:description" content="The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies." />
-                <meta name="twitter:image" content={metadata.twitter.images[0]} />
-                <meta name="twitter:image:alt" content={metadata.openGraph.images[0].alt} />
+                <!-- Twitter -->
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@GLOBALVISA1505" />
+                <meta name="twitter:creator" content="@GLOBALVISA1505" />
+                <meta name="twitter:title" content="US Visa Integrity Fee 2025 – Indians Forced to Pay $250 Extra?" />
+                <meta name="twitter:description" content="Indians already pay the MRV fee, but now the U.S. has added a $250 Visa Integrity Fee. Who pays, who is exempt, refund rules, and why many call it unfair." />
+                <meta name="twitter:image" content="https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg" />
+                <meta name="twitter:image:alt" content="Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate" />
+
 
                 {/* Fallback */}
                 <link rel="image_src" href={metadata.twitter.images[0]} />
