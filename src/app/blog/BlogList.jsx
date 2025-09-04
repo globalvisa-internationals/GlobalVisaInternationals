@@ -1,3 +1,4 @@
+//src\app\blog\BlogList.jsx
 'use client';
 import styles from './blog.module.css';
 import Image from "next/image";
