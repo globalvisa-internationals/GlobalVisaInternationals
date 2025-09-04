@@ -1,12 +1,12 @@
 //src\app\blog\[slug]\page.jsx
+// src/app/blog/[slug]/page.jsx
 import { getPostBySlug } from '@/lib/blog';
 import { notFound } from 'next/navigation';
 import styles from '@/content/blog/blog.module.css';
 
-
 export async function generateMetadata({ params }) {
-  const { slug } = params; // Destructure params to get the slug
-  const post = await getPostBySlug(slug); // Await the post data
+  const { slug } = await params; // ✅ Await params
+  const post = await getPostBySlug(slug);
 
   if (!post) return { title: 'Post Not Found' };
 
@@ -17,11 +17,11 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const { slug } = params; // Destructure params to get the slug
-  const post = await getPostBySlug(slug); // Await the post data
+  const { slug } = await params; // ✅ Await params
+  const post = await getPostBySlug(slug);
 
   if (!post) {
-    notFound(); // If the post is not found, call notFound
+    notFound();
   }
 
   const { Content } = post;
