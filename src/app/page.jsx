@@ -24,12 +24,12 @@ export const metadata = {
     title: "Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
     description:
       "Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more. Genuine, fast and transparent support.",
-    url: "https://www.globalvisainternationals.com/",
+    url: "https://www.globalvisainternationals.com",
     siteName: "Global Visa Internationals",
     type: "website",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/banner.webp",
+        url: "https://www.globalvisainternationals.com/GVI_Banner.webp",
         width: 1200,
         height: 630,
         alt: "Visa and Immigration Services - Global Visa Internationals",
@@ -46,10 +46,6 @@ export const metadata = {
     images: ["https://www.globalvisainternationals.com/banner.webp"],
   },
 }
-
-
-
-
 
 
 const slides = [
