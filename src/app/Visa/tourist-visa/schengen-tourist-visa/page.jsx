@@ -335,10 +335,24 @@ export default function Schengen_Visa_Assistance() {
           </div>
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
           <p>Choose the right <b className={styles.strong}>Schengen visa assistance package</b> for your needs:</p>
-          <ul>
-            <li><b className={styles.strong}>Basic (₹4,999 + GST)</b>: Checklist + document review</li>
-            <li><b className={styles.strong}>Standard (₹6,999 + GST)</b>: End-to-end application, filing, appointment booking, and biometrics guidance</li>
-          </ul>
+          <div className={styles.pricingContainer}>
+            <div className={styles.pricingCard}>
+              <h3 className={styles.planTitle}>Basic</h3>
+              <p className={styles.planPrice}>₹4,999 + GST</p>
+              <ul className={styles.planFeatures}>
+                <li>Checklist + document review</li>
+              </ul>
+            </div>
+            <div className={`${styles.pricingCard} ${styles.highlighted}`}>
+              <h3 className={styles.planTitle}>Standard</h3>
+              <p className={styles.planPrice}>₹6,999 + GST</p>
+              <ul className={styles.planFeatures}>
+                <li>End-to-end application</li>
+                <li>Filing and appointment booking</li>
+                <li>Biometrics guidance</li>
+              </ul>
+            </div>
+          </div>
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
           <p>At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
