@@ -244,6 +244,9 @@ export default function Schengen_Visa_Assistance() {
               </div>
             </div>
           </div>
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>🕒 Schengen Visa Duration Rule</h2>
           <p>A short-stay Schengen visa permits you to stay according to your travel dates in the Schengen Zone  also if some condetion is meat then you can get up to 5 years
             <br />
@@ -258,7 +261,9 @@ export default function Schengen_Visa_Assistance() {
             <li><b className={styles.strong}>Valid Passport</b>: Must be valid for at least 6 months beyond your return date, with at least two blank pages.</li>
             <li><b className={styles.strong}>Travel History</b>: Previous travel history and a record of international travel stamps are crucial. GVI helps you highlight these to strengthen your application.</li>
           </ul>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
           <p>One of the most critical aspects of your application is proving you have sufficient funds. The consulate needs to be convinced you can support your entire trip.
             We recommend maintaining a minimum balance of <b className={styles.strong}>₹3–4 lakh</b> (or €3,000-€4,000) in your bank account for 3 to 6 months. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.</p>
@@ -274,7 +279,9 @@ export default function Schengen_Visa_Assistance() {
             <li><b className={styles.strong}>Business Owners/Self-Employed</b>: Submit your GST certificate and last 3 years’ ITRs. We also recommend a brief business profile.</li>
             <li><b className={styles.strong}>Students</b>: Provide an enrolment letter and NOC from your school/university.</li>
           </ul>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
           <ul>
             <li><b className={styles.strong}>Flight & Hotel Bookings</b>: Provide confirmed return flight tickets and hotel reservations covering your entire stay.</li>
@@ -285,7 +292,9 @@ export default function Schengen_Visa_Assistance() {
           <h3 className={styles.subTitle}>5. Visa Cover Letter & Itinerary</h3>
           <p>A well-written <b className={styles.strong}>Schengen visa cover letter</b> is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional cover letter and a detailed itinerary for every client to maximize their chances of success.</p>
           <a href="/cover-letter-guide" target="_blank">Read our detailed guide on how to write a Schengen visa cover letter.</a>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>Schengen Tourist Visa Fees (India 2025)</h2>
           <ul>
             <li><b className={styles.strong}>Adult Visa Fee (Embassy)</b>: €90 (~₹9,300) per person</li>
@@ -302,7 +311,9 @@ export default function Schengen_Visa_Assistance() {
             <li><b className={styles.strong}>Unclear Purpose of Travel</b>: Our expert-prepared cover letters and itineraries clearly explain your travel plans and ties to India.</li>
             <li><b className={styles.strong}>Lack of Strong Ties to India</b>: We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
           </ul>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>Schengen Tourist Visa Processing Time from India</h2>
           <p>The processing time for a Schengen visa can vary depending on the embassy, the time of year, and the completeness of your application. Here are some general timelines:</p>
           <ul>
@@ -319,7 +330,9 @@ export default function Schengen_Visa_Assistance() {
             <li><b className={styles.strong}>Application Tracking</b>: Once submitted, we help you track your application status until your passport is ready for collection.</li>
           </ol>
           <a href="https://visa.vfsglobal.com/" target="_blank" rel="noopener noreferrer">VFS Global — India</a>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
           <p>Choose the right <b className={styles.strong}>Schengen visa assistance package</b> for your needs:</p>
           <ul>
@@ -335,7 +348,9 @@ export default function Schengen_Visa_Assistance() {
             <li>Specialized assistance for re-application after rejection</li>
             <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
           </ul>
-
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
           <h2 className={styles.subTitle}>Meet Our Experts</h2>
           <p>Our team of visa consultants has decades of combined experience in handling complex visa cases. We stay updated with the latest embassy rules and requirements to provide you with the most accurate and reliable guidance.</p>
 
