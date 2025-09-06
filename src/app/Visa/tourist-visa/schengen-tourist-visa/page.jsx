@@ -1,0 +1,283 @@
+import styles from "@/Components/Visa.module.css";
+import Head from "next/head";
+import VisaForm from "@/Components/VisaForm";
+
+export const metadata = {
+  title:
+    "Schengen Visa Assistance: Tourist, Visitor & Business Visa Requirements | Global Visa Internationals",
+  description:
+    "Apply for a Schengen Visa with Global Visa Internationals. Get expert guidance for Schengen tourist visas, visitor visas, and business visas. Learn requirements, documents, fees, and travel tips for 27 European countries.",
+  keywords:
+    "Schengen visa, Schengen tourist visa, apply Schengen visa India, Schengen business visa, Schengen visitor visa, Schengen visa requirements, Schengen visa documents, Schengen visa consultants, Schengen visa fees, Europe tourist visa, apply Schengen visa online",
+  robots: "index, follow",
+  alternates: {
+    canonical:
+      "https://www.globalvisainternationals.com/visa/schengen-visa",
+  },
+  openGraph: {
+    title: "Schengen Visa Assistance: Tourist, Visitor & Business Visa Support",
+    description:
+      "Global Visa Internationals helps Indian travelers apply for Schengen tourist, visitor, and business visas. Get expert guidance on requirements, documents, and travel insurance for 27 Schengen countries.",
+    url: "https://www.globalvisainternationals.com/visa/schengen-visa",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Schengen Tourist Visa Assistance Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "Schengen Visa Assistance: Tourist, Visitor & Business Visa Support",
+    description:
+      "Plan your trip to Europe with confidence. Apply for Schengen tourist, visitor, or business visa with Global Visa Internationals – expert help for documents, fees, and approvals.",
+    images: [
+      "https://www.globalvisainternationals.com/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp",
+    ],
+  },
+};
+
+export default function Schengen_Visa_Assistance() {
+  const pageUrl = metadata.alternates.canonical;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Schengen Visa",
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Expert Schengen Visa consultants in Bangalore. Assistance for Schengen Tourist, Visitor, and Business visas including eligibility, documentation, and travel insurance support for 27 European countries.",
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ]
+  };
+  return (
+    <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+
+        {/* Geo & Mobile SEO */}
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
+
+        {/* Structured Data: JSON-LD */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
+      </Head>
+
+      <div className={styles.imageContainer}>
+        <img
+          src="/visa-banner/Canada-Tourist-Visa-assistence-banner.webp"
+          alt="Canada Image"
+          className={styles.VisaImage}
+        />
+      </div>
+
+      <div className={styles.VisaSec}>
+        <div className={styles.VisaData}>
+          <h1 className={styles.Title}>Schengen Tourist Visa from India 2025 – Eligibility, Requirements & Fees | Global Visa Internationals</h1>
+
+          <h2>✈ Travel to Europe with a Schengen Visa</h2>
+          <p>Planning a trip to Europe? A <b>Schengen tourist visa</b> allows Indian travelers to explore 29 European countries with a single visa. At <b>Global Visa Internationals (GVI)</b>, we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
+
+          <h2>🕒 Schengen Visa Duration Rule</h2>
+          <p>A short-stay Schengen visa permits you to stay in the Schengen Zone for up to <b>90 days within any 180-day period</b>.
+            <br />
+            Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.
+            👉 With GVI, you’ll never miscalculate your stay — we ensure full compliance with <b>Schengen visa rules</b>.</p>
+
+          <h2>Schengen Tourist Visa Documents & Requirements for Indian Applicants</h2>
+          <p>Before applying, ensure you meet the <b>Schengen visa eligibility requirements</b>. If these criteria are met, <b>Global Visa Internationals (GVI)</b> will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
+
+          <h3>1. Valid Passport & Travel History</h3>
+          <ul>
+            <li><b>Valid Passport</b>: Must be valid for at least 6 months beyond your return date, with at least two blank pages.</li>
+            <li><b>Travel History</b>: Previous travel history and a record of international travel stamps are crucial. GVI helps you highlight these to strengthen your application.</li>
+          </ul>
+
+          <h3>2. Financial Proof: Bank Statements & Funds</h3>
+          <p>One of the most critical aspects of your application is proving you have sufficient funds. The consulate needs to be convinced you can support your entire trip.
+            We recommend maintaining a minimum balance of <b>₹3–4 lakh</b> (or €3,000-€4,000) in your bank account for 3 to 6 months. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.</p>
+          <ul>
+            <li><b>Bank Statements</b>: Submit original bank statements for the last 6 months, stamped by the bank.</li>
+            <li><b>Income Tax Returns (ITR)</b>: Provide ITRs for the last 3 years to prove a stable income source.</li>
+          </ul>
+
+          <h3>3. Employment & Professional Documentation</h3>
+          <ul>
+            <li><b>Employees</b>: You must provide a <b>Leave Approval Letter</b> (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.
+              <a href="/leave-letter-template" target="_blank">Download our free template for a Schengen visa leave letter.</a></li>
+            <li><b>Business Owners/Self-Employed</b>: Submit your GST certificate and last 3 years’ ITRs. We also recommend a brief business profile.</li>
+            <li><b>Students</b>: Provide an enrolment letter and NOC from your school/university.</li>
+          </ul>
+
+          <h3>4. Travel & Accommodation Proof</h3>
+          <ul>
+            <li><b>Flight & Hotel Bookings</b>: Provide confirmed return flight tickets and hotel reservations covering your entire stay.</li>
+            <li><b>Travel Insurance (Mandatory)</b>: Must cover at least €30,000 for medical emergencies, hospitalisation, and repatriation across all Schengen countries.
+              👉 GVI assists you in securing <b>Schengen travel insurance</b> that meets embassy requirements.</li>
+          </ul>
+
+          <h3>5. Visa Cover Letter & Itinerary</h3>
+          <p>A well-written <b>Schengen visa cover letter</b> is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional cover letter and a detailed itinerary for every client to maximize their chances of success.</p>
+          <a href="/cover-letter-guide" target="_blank">Read our detailed guide on how to write a Schengen visa cover letter.</a>
+
+          <h2>Schengen Tourist Visa Fees (India 2025)</h2>
+          <ul>
+            <li><b>Adult Visa Fee (Embassy)</b>: €90 (~₹9,300) per person</li>
+            <li><b>Children (6–12 years)</b>: €45 per person</li>
+            <li><b>Children below 6 years</b>: Free</li>
+            <li><b>VFS Service Charges</b>: ₹1,000 – ₹2,000 approx.</li>
+          </ul>
+
+          <h2>Common Reasons for Schengen Visa Rejection & How We Solve Them</h2>
+          <p>Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues.</p>
+          <ul>
+            <li><b>Incomplete/Mismatched Documents</b>: We perform a professional document review as per embassy standards to ensure everything is perfect.</li>
+            <li><b>Insufficient Proof of Funds</b>: We advise you on the exact financial requirements and review your bank statements to ensure compliance.</li>
+            <li><b>Unclear Purpose of Travel</b>: Our expert-prepared cover letters and itineraries clearly explain your travel plans and ties to India.</li>
+            <li><b>Lack of Strong Ties to India</b>: We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
+          </ul>
+
+          <h2>Schengen Tourist Visa Processing Time from India</h2>
+          <p>The processing time for a Schengen visa can vary depending on the embassy, the time of year, and the completeness of your application. Here are some general timelines:</p>
+          <ul>
+            <li><b>Standard Processing Time</b>: 15-20 working days.</li>
+            <li><b>Peak Season (May-August)</b>: Can extend up to 30-45 working days.</li>
+            <li><b>Our Service</b>: Once we receive your documents, GVI finalizes your file within <b>3–5 working days</b>, ensuring it is submitted to the embassy in a timely manner.</li>
+          </ul>
+
+          <h2>The VFS Global Application Process: A Step-by-Step Guide</h2>
+          <p>Navigating the VFS Global appointment system can be confusing. With GVI's end-to-end service, we manage this process for you. Here’s a quick overview of what to expect:</p>
+          <ol>
+            <li><b>Online Application & Appointment Booking</b>: We fill out the online form and book your VFS appointment for you.</li>
+            <li><b>Document Submission & Biometrics</b>: You visit the VFS center in person to submit the verified documents and provide your fingerprints and a photo.</li>
+            <li><b>Application Tracking</b>: Once submitted, we help you track your application status until your passport is ready for collection.</li>
+          </ol>
+          <a href="https://visa.vfsglobal.com/" target="_blank" rel="noopener noreferrer">VFS Global — India</a>
+
+          <h2>Transparent Pricing</h2>
+          <p>Choose the right <b>Schengen visa assistance package</b> for your needs:</p>
+          <ul>
+            <li><b>Basic (₹4,999 + GST)</b>: Checklist + document review</li>
+            <li><b>Standard (₹6,999 + GST)</b>: End-to-end application, filing, appointment booking, and biometrics guidance</li>
+          </ul>
+
+          <h2>Why Choose Global Visa Internationals?</h2>
+          <p>At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
+          <ul>
+            <li><b>1,200+ Schengen visas processed since 2018</b></li>
+            <li><b>98% client satisfaction rate across India</b></li>
+            <li>Specialized assistance for re-application after rejection</li>
+            <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
+          </ul>
+
+          <h2>Meet Our Experts</h2>
+          <p>Our team of visa consultants has decades of combined experience in handling complex visa cases. We stay updated with the latest embassy rules and requirements to provide you with the most accurate and reliable guidance.</p>
+
+          <h2>Ready to Apply?</h2>
+          <p>With GVI, you don’t need to worry about rejections or missing documents.
+            👉 <b>Start your Schengen visa application today</b> with Global Visa Internationals and travel to Europe with confidence.
+            <br />
+            <a href="/contact" className={styles.ctaButton}>Get a free consultation today!</a></p>
+        </div>
+
+        <div className={styles.formSection}>
+          <VisaForm />
+        </div>
+
+      </div>
+      {/* <section id="ClientReviews" className={styles.reviewSection}>
+        <div
+          className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5"
+          data-elfsight-app-lazy
+        ></div>
+      </section> */}
+
+    </>
+  );
+}
