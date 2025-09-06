@@ -151,7 +151,7 @@ export default function Schengen_Visa_Assistance() {
 
       <div className={styles.imageContainer}>
         <img
-          src="/visa-banner/Canada-Tourist-Visa-assistence-banner.webp"
+          src="/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp"
           alt="Canada Image"
           className={styles.VisaImage}
         />
@@ -164,7 +164,23 @@ export default function Schengen_Visa_Assistance() {
           <h2 className={styles.subTitle}>✈ Travel to Europe with a Schengen Visa</h2>
           <p>Planning a trip to Europe? A <b className={styles.strong}>Schengen tourist visa</b> allows Indian travelers to explore 29 European countries with a single visa. At <b className={styles.strong}>Global Visa Internationals (GVI)</b>, we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
 
+          <div className={styles.section}>
+            <h2 className={styles.subTitle}>Visa Processing Overview</h2>
+            <p>Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your visa application meets the expectations of the High Commission and that your travel purpose is clearly and professionally represented.</p>
 
+            <h3 className={styles.subTitle}>Our Services Include:</h3>
+            <ul>
+              <li>Application form filling</li>
+              <li>Covering letter and documentation preparation</li>
+              <li>Personalized checklist and guidance</li>
+              <li>Providing accepted samples for the required documents</li>
+              <li>Verification of documentation</li>
+              <li>Complete walk-through of the process</li>
+            </ul>
+
+            <h3 className={styles.subTitle}>Timeline:</h3>
+            <p>Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days.</p>
+          </div>
           <div className={styles.schengenCard}>
             <div className={styles.cardHeader}>
               <h2 className={styles.cardTitle}>29 Schengen Countries</h2>
