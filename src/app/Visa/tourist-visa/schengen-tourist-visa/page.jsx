@@ -164,8 +164,72 @@ export default function Schengen_Visa_Assistance() {
           <h2>✈ Travel to Europe with a Schengen Visa</h2>
           <p>Planning a trip to Europe? A <b>Schengen tourist visa</b> allows Indian travelers to explore 29 European countries with a single visa. At <b>Global Visa Internationals (GVI)</b>, we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
 
+
+          <div class={styles.schengenCard}>
+            <div class={styles.cardHeader}>
+              <h2 class={styles.cardTitle}>29 Schengen Countries</h2>
+              <p class={styles.cardSubtitle}>Explore Europe with a single tourist visa from India.</p>
+            </div>
+
+            <div class={styles.countryList}>
+              <h3>All Member States</h3>
+              <ul class={styles.countryGrid}>
+                <li>Austria</li>
+                <li>Belgium</li>
+                <li>Bulgaria</li>
+                <li>Croatia</li>
+                <li>Czech Republic</li>
+                <li>Denmark</li>
+                <li>Estonia</li>
+                <li>Finland</li>
+                <li>France</li>
+                <li>Germany</li>
+                <li>Greece</li>
+                <li>Hungary</li>
+                <li>Iceland</li>
+                <li>Italy</li>
+                <li>Latvia</li>
+                <li>Liechtenstein</li>
+                <li>Lithuania</li>
+                <li>Luxembourg</li>
+                <li>Malta</li>
+                <li>Netherlands</li>
+                <li>Norway</li>
+                <li>Poland</li>
+                <li>Portugal</li>
+                <li>Romania</li>
+                <li>Slovakia</li>
+                <li>Slovenia</li>
+                <li>Spain</li>
+                <li>Sweden</li>
+                <li>Switzerland</li>
+              </ul>
+            </div>
+
+            <div class={styles.highlightSection}>
+              <h3>Newest Members & Key Additions</h3>
+              <div class={styles.highlightGrid}>
+                <div class={styles.highlightItem}>
+                  <span class={styles.countryName}>Bulgaria</span>
+                  <p class={styles.countryInfo}>Joined in 2024 (air & sea border)</p>
+                </div>
+                <div class={styles.highlightItem}>
+                  <span class={styles.countryName}>Croatia</span>
+                  <p class={styles.countryInfo}>Joined in 2023</p>
+                </div>
+                <div class={styles.highlightItem}>
+                  <span class={styles.countryName}>Romania</span>
+                  <p class={styles.countryInfo}>Joined in 2024 (air & sea border)</p>
+                </div>
+                <div class={styles.highlightItem}>
+                  <span class={styles.countryName}>Liechtenstein</span>
+                  <p class={styles.countryInfo}>Joined in 2011</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <h2>🕒 Schengen Visa Duration Rule</h2>
-          <p>A short-stay Schengen visa permits you to stay in the Schengen Zone for up to <b>90 days within any 180-day period</b>.
+          <p>A short-stay Schengen visa permits you to stay according to your travel dates in the Schengen Zone  also if some condetion is meat then you can get up to 5 years
             <br />
             Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.
             👉 With GVI, you’ll never miscalculate your stay — we ensure full compliance with <b>Schengen visa rules</b>.</p>
