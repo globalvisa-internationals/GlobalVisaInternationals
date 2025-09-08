@@ -34,6 +34,9 @@ body {
   --accent: #001d3f;
   --background: #FAFAFB;
   --text: #333;
+  --muted: #555;
+  --card-bg: #fff;
+  --card-border: #e0e0e0;
 
 }
 

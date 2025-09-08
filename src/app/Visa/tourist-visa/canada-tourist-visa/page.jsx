@@ -142,563 +142,176 @@ export default function Canada() {
 
       <div className={styles.VisaSec}>
         <div className={styles.VisaData}>
-          <h1 className={styles.Title}>
-            Canada Tourist Visa Agents in Bangalore | Best Canada Visitor Visa
-            Consultants | Global Visa Internationals
-          </h1>
-          <p className={styles.card}> Planning to explore Canada? As one of the most trusted Canada Tourist Visa Consultants in Bangalore, Global Visa Internationals helps you secure your Canada visitor visa with ease. Canada is a land of breathtaking natural beauty, iconic landmarks, and multicultural cities. From the majestic Rocky Mountains and Niagara Falls to the historic charm of Quebec City and the vibrant life of Toronto and Vancouver, this country offers something for every traveler. Our expert team provides complete guidance on Canada tourist visa requirements, processing time, eligibility, and document checklist. Whether you're planning a family vacation, a solo trip, or a honeymoon, we ensure your visa process is smooth and stress-free. Trust Global Visa Internationals – your reliable partner for Canada tourist visa application support – to turn your travel dreams into reality. </p>
+          <section className={styles.card}>
+            <h2 className={styles.subTitle}>✈ Travel to Canada with a Visitor Visa</h2>
+            <p>Planning a trip to Canada? The Canada Visitor Visa (also known as a Temporary Resident Visa or TRV) allows Indian travelers to visit for tourism, to see family, or for a short-term business trip. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
+          </section>
+
+          <div className={styles.section}>
+            <section className={styles.card}>
+              <h2 className={styles.subTitle}>Visa Processing Overview</h2>
+              <p>Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your visa application meets the expectations of Immigration, Refugees and Citizenship Canada (IRCC) and that your travel purpose is clearly and professionally represented.</p>
+            </section>
+
+            <section className={styles.card}>
+              <h3 className={styles.subTitle}>Our Services Include:</h3>
+              <ul>
+                <li>Online application form filling</li>
+                <li>Covering letter and documentation preparation</li>
+                <li>Personalized checklist and guidance</li>
+                <li>Providing accepted samples for the required documents</li>
+                <li>Verification of documentation</li>
+                <li>Complete walk-through of the process</li>
+              </ul>
+            </section>
+
+            <section className={styles.card}>
+              <h3 className={styles.subTitle}>Timeline:</h3>
+              <p>Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days.</p>
+            </section>
+          </div>
 
           <div className={styles.formSection1}>
             <VisaForm />
           </div>
 
-          <h2 className={styles.subTitle}>
-            Explore Top Places to Visit in Canada – A Complete Guide for Tourist
-            Visa Applicants
-          </h2>
-          <p className={styles.card}>
-            Planning a trip to Canada on a Canada tourist visa?
-            Discover some of the most iconic landmarks and top-rated attractions
-            that make Canada a dream destination for travelers worldwide.
-            Whether you're applying for a Canada visitor visa from India or consulting with expert Canada tourist visa agents, this travel
-            guide will help you plan an unforgettable experience.
-          </p>
+          <section className={styles.card}>
+            <h2 className={styles.subTitle}>🕒 Canada Visa Duration Rule</h2>
+            <p>A Canada Visitor Visa typically allows you to stay for up to 6 months. A multiple-entry visa may be issued with a validity of up to 10 years, or until your passport expires, whichever comes first. Note that even with a multiple-entry visa, you can only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.</p>
+            <p>👉 With GVI, you’ll never miscalculate your stay—we ensure full compliance with Canadian visa rules.</p>
+          </section>
 
-          <strong className={styles.subTitle}>
-            Must-Visit Attractions for Canada Tourist Visa Holders
-          </strong>
+          <section className={styles.card}>
+            <h2 className={styles.subTitle}>Canada Visitor & Business Visa Documents & Requirements for Indian Applicants</h2>
+            <p>Before applying, ensure you meet the Canada visa eligibility requirements. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
+          </section>
+
+          <section className={styles.card}>
+            <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
+            <ul>
+              <li><b className={styles.strong}>Valid Passport:</b> Must be valid for the entire duration of your stay in Canada, with at least one blank page for the visa stamp.</li>
+              <li><b className={styles.strong}>Travel History:</b> Previous international travel and a record of international travel stamps are crucial. GVI helps you highlight these to strengthen your application.</li>
+            </ul>
+          </section>
+
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
+
+          <section className={styles.card}>
+            <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
+            <p>You must prove you have sufficient funds to support your trip without working or relying on public funds. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹3–4 lakh (or approx. CAD$4,700-$62,000) in your bank account. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.</p>
+            <ul>
+              <li><b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank.</li>
+              <li><b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 3 years to prove a stable income source.</li>
+            </ul>
+          </section>
+
+          <section className={styles.card}>
+            <h3 className={styles.subTitle}>3. Employment & Professional Documentation</h3>
+            <ul>
+              <li><b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.</li>
+              <li><b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 3 years’ ITRs. We also recommend a brief business profile.</li>
+              <li><b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university.</li>
+            </ul>
+          </section>
+
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
+
+          <section className={styles.card}>
+            <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
+            <ul>
+              <li><b className={styles.strong}>Flight & Hotel Bookings:</b> Provide a detailed travel itinerary covering your entire stay. It's not mandatory to have confirmed return flight tickets, but a travel plan is required.</li>
+              <li><b className={styles.strong}>Accommodation Proof:</b> Provide confirmed hotel reservations covering your entire stay. If staying with a friend or relative, you will need a letter of invitation and proof of their Canadian address and immigration status.</li>
+            </ul>
+          </section>
+
+          <section className={styles.card}>
+            <h3 className={styles.subTitle}>5. Visa Cover Letter & Itinerary</h3>
+            <p>A well-written cover letter is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism, business meeting), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional cover letter and a detailed itinerary for every client to maximize their chances of success.</p>
+          </section>
+
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
+
+          <section className={styles.card}>
+            <h2 className={styles.subTitle}>Canada Visitor Visa Fees (India 2025)</h2>
+            <p>As of 2025, the Canada visa fees are subject to change. Fees are paid to the Government of Canada (IRCC) and VFS Global. The fees listed below are approximate and do not include additional services.</p>
+            <ul>
+              <li><b className={styles.strong}>IRCC Visitor Visa Application Fee:</b> CAD$100 (approx. ₹6,100)\
+                \85 (approx. ₹5,200)</li>
+              <li><b className={styles.strong}>VFS Global Service Charges:</b> Vary based on services availed (e.g., package transmission, courier, etc.)</li>
+            </ul>
+          </section>
+
+          <section className={styles.card}>
+            <h2 className={styles.subTitle}>Common Reasons for Canada Visa Rejection & How We Solve Them</h2>
+            <p>Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues.</p>
+            <ul>
+              <li><b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per IRCC standards to ensure everything is perfect.</li>
+              <li><b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.</li>
+              <li><b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared cover letters and itineraries clearly explain your travel plans and ties to India.</li>
+              <li><b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
+            </ul>
+          </section>
+
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
+
+          <section className={styles.card}>
+            <h2 className={styles.subTitle}>Canada Visa Processing Time from India</h2>
+            <p>The processing time for a Canada Visitor Visa can vary. Here are some general timelines:</p>
+            <ul>
+              <li><b className={styles.strong}>Standard Processing Time:</b> The IRCC service standard is to process most visitor visa applications within a few weeks. Wait times can vary and are often updated on the official IRCC website.</li>
+              <li><b className={styles.strong}>Peak Season:</b> Can extend to 60 working days or more.</li>
+              <li><b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the IRCC in a timely manner.</li>
+            </ul>
+          </section>
+
+          <section className={styles.card}>
+            <h2 className={styles.subTitle}>The VFS Global Application Process: A Step-by-Step Guide</h2>
+            <p>As VFS Global is the official partner for Canada Visas and Immigration in India, we manage this process for you. Here’s a quick overview of what to expect:</p>
+            <ol>
+              <li><b className={styles.strong}>Online Application & Appointment Booking:</b> We fill out the online form on the IRCC website and book your VFS appointment for you.</li>
+              <li><b className={styles.strong}>Document Submission & Biometrics:</b> You visit the VFS center in person to submit the verified documents and provide your fingerprints and a photo.</li>
+              <li><b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.</li>
+            </ol>
+          </section>
+          <a href="https://visa.vfsglobal.com/ind/en/can/" target="_blank" rel="noopener noreferrer">VFS Global — Canada Visas & Immigration</a>
+
+          <div className={styles.formSection1}>
+            <VisaForm />
+          </div>
+
+          <h2 className={styles.subTitle}>Transparent Pricing</h2>
+          <p>Choose the right Canada visa assistance package for your needs:</p>
           <ul>
-            <li className={styles.card}>
-              <h4 className={styles.strong}>Banff National Park</h4>
-              Located in the heart of the Canadian Rockies, Banff is a
-              must-visit for anyone traveling on a
-              Canada visitor visa. With scenic spots like Lake
-              Louise, Moraine Lake, and the Icefields Parkway, this park offers
-              hiking, sightseeing, and photography opportunities. A favorite for
-              tourist visa travelers, it’s perfect for both
-              summer and winter adventures.
-            </li>
+            <li><b className={styles.strong}>Basic (₹6,999):</b> Checklist + document review</li>
+            <li><b className={styles.strong}>Standard (₹8,999):</b> End-to-end application, filing, appointment booking, and biometrics guidance</li>
+          </ul>
 
-            <li className={styles.card}><h4 className={styles.strong}>Quebec City</h4>Quebec City offers a European vibe with cobblestone streets, French architecture, and historical landmarks. It's a greatdestination for cultural tourism under a Canada tourist visa. Visit Château Frontenac, Old Quebec (UNESCO World Heritage Site), and enjoy seasonal festivals and local cuisine.</li>
-
-            <li className={styles.card}> <h4 className={styles.strong}>Toronto</h4> For tourists holding a Canada travel visa, Toronto offers iconic city experiences like the CN Tower, the Royal Ontario Museum, and the Distillery District. It's one of the most visited cities in Canada, ideal for shopping, nightlife, and cultural tours.</li>
-
-            <li className={styles.card}> <h4 className={styles.strong}>Niagara Falls</h4>A global tourist magnet, Niagara Falls is a bucket-list destination for anyone applying for a Canada visitor visa. Get up-close through Journey Behind the Falls or take the Niagara City Cruise to experience the majestic beauty of one of the world’s most powerful waterfalls.</li>
-
-            <li className={styles.card}> <h4 className={styles.strong}>Jasper National Park</h4> Adjacent to Banff, Jasper offers serene beauty and less crowded natural escapes. With attractions like Maligne Lake, Athabasca Falls, and Spirit Island, it’s a top choice for nature lovers applying for a Canadian tourist visa. </li>
-
-            <li className={styles.card}> <h4 className={styles.strong}>Historic Sites in Ottawa</h4> As Canada’s capital, Ottawa is rich in history and perfect for  educational and leisure tourism. Visit Parliament Hill, Rideau Canal (UNESCO Site), and the Canadian War Museum. Ideal for families and solo travelers on a Canada visa for tourism.</li>
+          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
+          <p>At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
+          <ul>
+            <li>2,200+ Canada visas processed since 2017</li>
+            <li>98% client satisfaction rate across India</li>
+            <li>Specialized assistance for re-application after rejection</li>
+            <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
           </ul>
 
           <div className={styles.formSection1}>
             <VisaForm />
           </div>
 
-          <h3 className={styles.subTitle}>
-            Best Time to Visit Canada for Tourist Visa Holders – A
-            Season-by-Season Guide
-          </h3>
-          <p className={styles.card}> Canada is a year-round destination for travelers applying for a Canada tourist visa. With its diverse seasons, each part of the year offers unique experiences – from snow-covered adventures in winter to colorful foliage in fall. Knowing the bestn time to visit Canada can help you plan your trip better and increase your chances of Canada visitor visa approval if tied to a specific season or event. </p>
-
-          <ul>
-            <li className={styles.card}> <h3 className={styles.subTitle}>☀️ Summer (June to August)</h3> Summer in Canada offers ideal weather for outdoor activities, sightseeing, and festivals. Popular with international tourists on a Canada visitor visa, it's the perfect season for exploring Banff and Jasper National Parks, canoeing on crystal-clear lakes, and visiting iconic landmarks like Lake Louise and Moraine Lake. Book early – this is peak Canada tourist season. </li>
-
-            <li className={styles.card}> <h3 className={styles.subTitle}> ❄️ Winter (December to February)</h3>   Traveling to Canada in winter gives you the chance to enjoy snow sports, winter carnivals, and magical scenery. Tourist visa holders can ski in Banff, go ice skating on frozen lakes, or visit  the world-famous Carnaval de Québec. Winter is perfect for those seeking adventure and snowy landscapes. </li>
-
-
-            <li className={styles.card}> <h3 className={styles.subTitle}> 🍁 Shoulder Seasons (Spring: March–May | Fall: September–November) </h3> Spring and fall are excellent times to apply for a Canada travel visa if you prefer fewer crowds, lower costs, and unique seasonal experiences. Spring features cherry blossoms in Vancouver and maple syrup tours in Quebec. Fall offers breathtaking foliage in the Rockies and is ideal for Northern Lights viewing in the Yukon. These off-peak seasons are perfect for smooth tourist visa processing and  relaxed exploration.  </li>
-          </ul>
-
-          <h3 className={styles.subTitle}>
-            🎉 Experience Canadian Culture: Must-See Festivals & Events
-          </h3>
-          <p className={styles.card}> Tourists on a Canada visitor visa can experience the country's rich culture through its vibrant festivals held all  year round. From music and food to history and film, Canada’s festivals offer something for everyone. </p>
-
-          <ul>
-            <li> <h3 className={styles.subTitle}>🎶 Summer Festivals</h3> Summer is packed with world-class events like the Montreal International Jazz Festival, Toronto Caribbean Carnival, and Calgary Stampede. Visitors also enjoy the Celebration of Light in Vancouver and Folklorama in Winnipeg. These events attract thousands of international travelers with valid Canada tourist visas. </li>
-
-            <li> <h3 className={styles.subTitle}>🌨️ Winter Festivals</h3> Winter highlights include Carnaval de Québec, Ottawa Winterlude, Niagara Winter Festival of Lights, and Festival du Voyageur in Winnipeg. If you're visiting Canada in winter, these festivals are a must.</li>
-
-            <li>
-              <h3 className={styles.subTitle}>🌸 Spring Festivals</h3>
-              Spring is known for the
-              Canadian Tulip Festival
-              in Ottawa, the Vancouver Cherry Blossom Festival,
-              and Quebec’s maple syrup season. It’s a great time to travel to
-              Canada with fewer crowds and colorful backdrops.
-            </li>
-
-            <li>
-              <h3 className={styles.subTitle}>🍂 Fall Festivals</h3>
-              Fall includes major events like the
-              Toronto International Film Festival (TIFF),
-              Celtic Colours International Festival, and
-              Oktoberfest in Kitchener-Waterloo. Don’t miss the
-              Jasper Dark Sky Festival or
-              Okanagan Wine Festival for unforgettable seasonal
-              experiences.
-            </li>
-          </ul>
-
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-
-          <h2 className={styles.subTitle}>
-            Planning Your Trip to Canada – Cost, Flights & Accommodation Guide
-            for Tourist Visa Applicants
-          </h2>
-          <p className={styles.card}>
-            If you're applying for a Canada tourist visa,
-            having a clear understanding of travel expenses can help you budget
-            your trip effectively. From flight costs to accommodation options,
-            here's essential information for planning a smooth and affordable
-            visit to Canada.
-          </p>
-
-          <h3 className={styles.subTitle}>
-            ✈️ Flight Costs to Canada – Average Round-Trip Fares by Region
-          </h3>
-          <p className={styles.card}>
-            Flight fares to Canada vary based on season, departure country,
-            airline, and destination city. If you're searching for the cheapest time to fly to Canada or wondering about flight ticket prices from India to Canada, use this
-            table as a reference to plan ahead.
-          </p>
-
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Origin Region</th>
-                <th>Destination City</th>
-                <th>Average Round-Trip Flight Cost (USD)</th>
-                <th>Cheapest Months to Fly</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>USA</td>
-                <td>Toronto</td>
-                <td>$456</td>
-                <td>May, June</td>
-              </tr>
-              <tr>
-                <td>Europe</td>
-                <td>Toronto</td>
-                <td>$500 - $800+ (CAD)</td>
-                <td>February</td>
-              </tr>
-              <tr>
-                <td>Asia</td>
-                <td>Vancouver</td>
-                <td>$577 - $914+</td>
-                <td>October, November</td>
-              </tr>
-              <tr>
-                <td>Southeast Asia</td>
-                <td>Vancouver</td>
-                <td>$673+</td>
-                <td>–</td>
-              </tr>
-              <tr>
-                <td>South America</td>
-                <td>Montreal</td>
-                <td>$579 - $896+</td>
-                <td>October, November</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p className={styles.note}>
-            <b>Note:</b> Prices are approximate and may change based on
-            availability, booking time, and seasonality.
-          </p>
-
-          <h2 className={styles.subTitle}>
-            🏨 Accommodation Costs in Canada – Budget, Mid-Range & Luxury
-            Options
-          </h2>
-          <p className={styles.card}>
-            Wondering where to stay in Canada during your
-            visit? From backpacker-friendly hostels to luxury 5-star hotels,
-            Canada offers a wide range of accommodations to suit all travel
-            styles and visa durations. Here's an overview of hotel prices in major Canadian cities to help you
-            plan your stay while on a Canada visitor visa.
-          </p>
-
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>City</th>
-                <th>Budget (Hostels / 1-Star)</th>
-                <th>Mid-Range (2–3 Star Hotels)</th>
-                <th>Luxury (4–5 Star Hotels)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Toronto</td>
-                <td>$28 – $100</td>
-                <td>$100 – $250</td>
-                <td>$200 – $500+</td>
-              </tr>
-              <tr>
-                <td>Montreal</td>
-                <td>$18 – $70</td>
-                <td>$70 – $200</td>
-                <td>$200 – $500+</td>
-              </tr>
-              <tr>
-                <td>Vancouver</td>
-                <td>$28 – $100</td>
-                <td>$100 – $300</td>
-                <td>$300 – $700+</td>
-              </tr>
-              <tr>
-                <td>Banff</td>
-                <td>$44 – $150</td>
-                <td>$150 – $300</td>
-                <td>$300 – $1000+</td>
-              </tr>
-              <tr>
-                <td>Quebec City</td>
-                <td>$28 – $70</td>
-                <td>$70 – $180</td>
-                <td>$180 – $400+</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p className={styles.note}>
-            <b>Tip:</b> Booking early and choosing shoulder seasons can help
-            reduce overall costs. Also consider vacation rentals, B&Bs, and
-            Airbnb for long stays during your Canada tourist visit.
-          </p>
-
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-          <h2 className={styles.subTitle}>
-            Average Daily Expenses in Canada – Budget Planning for Tourist Visa
-            Holders
-          </h2>
-          <p className={styles.card}>
-            Understanding the average cost of daily living in Canada is crucial
-            for those applying for a Canada tourist visa. Your
-            travel budget will depend on your style—backpacker, mid-range, or
-            luxury. Here's a breakdown of typical food and public transport
-            costs in major Canadian cities.
-          </p>
-
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>City</th>
-                <th>Food (Budget)</th>
-                <th>Food (Moderate)</th>
-                <th>Food (Luxury)</th>
-                <th>Public Transport (Single Fare)</th>
-                <th>Public Transport (Day Pass)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Toronto</td>
-                <td>$50 CAD</td>
-                <td>$85 CAD</td>
-                <td>$125 CAD</td>
-                <td>$3.30 – $3.35 CAD</td>
-                <td>$13.50 CAD</td>
-              </tr>
-              <tr>
-                <td>Montreal</td>
-                <td>$19 CAD</td>
-                <td>$52 CAD</td>
-                <td>$150 CAD</td>
-                <td>$3.75 CAD</td>
-                <td>$11.00 CAD</td>
-              </tr>
-              <tr>
-                <td>Vancouver</td>
-                <td>$50 – $100 CAD</td>
-                <td>$85 – $150 CAD</td>
-                <td>$125 – $200+ CAD</td>
-                <td>$2.60 – $3.20 CAD</td>
-                <td>$11.50 CAD</td>
-              </tr>
-              <tr>
-                <td>Banff</td>
-                <td>$40 – $80 CAD</td>
-                <td>$70 – $120 CAD</td>
-                <td>$100 – $200+ CAD</td>
-                <td>$5 – $25 CAD</td>
-                <td>$12 – $35 CAD</td>
-              </tr>
-              <tr>
-                <td>Quebec City</td>
-                <td>$40 – $70 CAD</td>
-                <td>$70 – $120 CAD</td>
-                <td>$100 – $180+ CAD</td>
-                <td>$3.50 – $3.75 CAD</td>
-                <td>$10.00 CAD</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p className={styles.note}><b>Note:</b> These costs are averages and can vary by season, location, and spending style. </p>
-
-          <h2 className={styles.subTitle}>
-            Why Choose Canada for Your Next Vacation? – Top Reasons for Tourist
-            Visa Travelers
-          </h2>
-          <p className={styles.card}>
-            If you're considering applying for a Canada visitor visa, here’s why Canada consistently
-            ranks among the world’s top tourist destinations. From natural
-            beauty to safety and cultural diversity, it offers everything you
-            need for a memorable international trip.
-          </p>
-
-          <ul>
-            <li className={styles.card}>
-              <h4 className={styles.strong}>
-                🌲 Breathtaking Landscapes and Natural Beauty
-              </h4>
-              Canada is home to world-renowned natural attractions like the
-              Rocky Mountains, Niagara Falls,
-              and Banff National Park. Whether you're visiting
-              Lake Louise, hiking in Jasper, or watching the
-              Northern Lights in Yukon, the country’s scenic
-              beauty is unmatched.
-            </li>
-
-            <li className={styles.card}>
-              <h4 className={styles.strong}>
-                🎭 Rich Cultural Experiences and Warm Hospitality
-              </h4>
-              Canada’s multicultural society welcomes visitors from around the
-              world. Cities like Toronto,
-              Montreal, and Vancouver
-              celebrate diversity through art, food, festivals, and heritage.
-              Canada is a great destination for
-              cultural tourism, offering immersive experiences
-              for travelers.
-            </li>
-
-            <li className={styles.card} >
-              <h4 className={styles.strong}>
-                🛡️ Safe and Secure Travel Environment
-              </h4>
-              Canada ranks among the safest countries globally, with low crime
-              rates and stable governance. Public transport is reliable,
-              healthcare is accessible, and infrastructure is well-maintained —
-              making it a stress-free choice for international travelers on a
-              Canada tourist visa.
-            </li>
-          </ul>
-
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-          <h2 className={styles.subTitle}>
-            Canada Tourist Visa Requirements: Complete Checklist & Eligibility
-            Guide (2025)
-          </h2>
-          <p className={styles.card}>
-            Planning a trip to Canada? Before applying for a Canada Tourist Visa (Temporary Resident Visa), it's
-            essential to understand the eligibility criteria and required
-            documents to increase your chances of visa approval. Here's a
-            detailed breakdown to help you prepare a strong and complete
-            application.
-          </p>
-
-          <h3 className={styles.subTitle}>
-            ✅ Who is Eligible to Apply for a Canadian Visitor Visa?
-          </h3>
-          <p className={styles.card}>
-            To be eligible for a Canadian tourist visa, applicants must meet
-            several key requirements set by Immigration, Refugees and Citizenship Canada (IRCC)
-            .
-          </p>
-
-          <ul>
-            <li>
-              <strong className={styles.subTitle}>✔ Valid Passport:</strong>
-              <ul>
-                <li>Must be valid for the duration of your stay.</li>
-                <li>
-                  At least 6 months validity is recommended beyond your return
-                  date.
-                </li>
-                <li>Ensure blank pages are available for visa stamps.</li>
-              </ul>
-            </li>
-
-            <li>
-              <strong className={styles.subTitle}>✔ Good Health:</strong>
-              <ul>
-                <li>You must be medically fit to travel.</li>
-                <li>
-                  A medical exam may be required based on your nationality or stay duration.
-                </li>
-                <li>
-                  Medical conditions that may be considered inadmissible must be disclosed.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong className={styles.subTitle}>
-                ✔ No Criminal Record:
-              </strong>
-              <ul>
-                <li>Provide a clean police record.</li>
-                <li>Past convictions can affect your visa approval.</li>
-                <li>
-                  Police clearance certificates may be required for all countries you’ve lived in for 6+ months since age 18.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong className={styles.subTitle}>
-                ✔ Strong Ties to Your Home Country:
-              </strong>
-              <ul>
-                <li>You must prove that you will return after your visit.</li>
-                <li>
-                  Accepted ties include:
-                  <ul>
-                    <li><b>Employment proof</b>: Job letter or NOC from employer. </li>
-                    <li><b>Ongoing studies</b>: Enrollment verification letter. </li>
-                    <li><b>Property ownership</b>: Land/house ownership documents.</li>
-                    <li><b>Financial assets</b>: Fixed deposits, mutual funds, savings. </li> <li> <b>Family responsibilities</b>: Marriage certificate, child’s birth certificate, elderly dependents.</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong className={styles.subTitle}>
-                ✔ Proof of Sufficient Funds:
-              </strong>
-              <ul>
-                <li> You must show you can financially support yourself in Canada. </li>
-                <li>
-                  Documents may include:
-                  <ul>
-                    <li>Recent 3–6 months bank statements</li>
-                    <li>ITR (Income Tax Returns)</li>
-                    <li>Fixed deposits or investment proofs</li>
-                    <li>
-                      If sponsored: sponsor’s financial documents + letter of support
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong className={styles.subTitle}>
-                ✔ Letter of Invitation (Optional but Helpful):
-              </strong>
-              <ul>
-                <li>
-                  If visiting friends or family, an invitation letter from the Canadian host can strengthen your application.
-                </li>
-                <li>
-                  It should include:
-                  <ul>
-                    <li>
-                      Host's full name, address, and legal status in Canada
-                    </li>
-                    <li>
-                      Your purpose of visit, duration, relationship, and accommodation plan
-                    </li>
-                    <li>Whether they will sponsor your stay (if applicable)</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong className={styles.subTitle}>
-                ✔ Biometrics (If Required):
-              </strong>
-              <ul>
-                <li> Most applicants from Asia, Africa, and the Middle East need to give biometrics.</li>
-                <li>Fingerprinting and photo are taken at the nearest Visa Application Centre (VAC).</li>
-                <li> A biometric instruction letter is issued after online application and payment. </li>
-              </ul>
-            </li>
-          </ul>
-
-          <p className={styles.card}>Meeting these Canada visitor visa eligibility criteria and submitting a complete file improves your chances of approval. For expert assistance with document preparation, financial justification, or travel bookings, reach out to Global Visa Internationals – your trusted Canada tourist visa agents in India. </p>
-
-          <div className={styles.formSection1}>
-            <h1 className={styles.formtitle}>
-              Visa And Immigration Inquiry Form
-            </h1>
-            <VisaForm />
-          </div>
-          <h2 className={styles.subTitle}>
-            Step-by-Step Canada Tourist Visa Application Process (2025)
-          </h2>
-          <p className={styles.card}> Planning a trip to Canada? Here's a complete guide to the Canada visitor visa application process to help you navigate every step with confidence. Whether you're visiting for tourism, to meet family, or explore Canadian culture, these steps ensure your journey starts smoothly. </p>
-
-          <ol type="I">
-            <li>
-              <b className={styles.subTitle}>Visa Type & Eligibility:</b>
-              <ul>
-                <li>Depending on your nationality, you may need a Temporary Resident Visa (TRV) or an Electronic Travel Authorization (eTA) to visit Canada.</li>
-                <li>Visa requirements vary based on travel purpose, duration, and personal profile.</li>
-              </ul>
-            </li>
-
-            <li>
-              <b className={styles.subTitle}>Application Requirements:</b>
-              <ul>
-                <li> Applicants are generally expected to demonstrate strong ties to their home country, financial stability, and a clear reason for visiting Canada. </li>
-                <li> Additional requirements may apply based on your travel history or if you're visiting family or friends. </li>
-              </ul>
-            </li>
-
-            <li>
-              <b className={styles.subTitle}>Processing Time & Approval:</b>
-              <ul>
-                <li> Visa processing timelines typically range from 2 to 6 weeks, depending on country, season, and profile. </li>
-                <li> Approved applicants receive a passport submission request and get their visa stamped. </li>
-              </ul>
-            </li>
-
-            <li>
-              <b className={styles.subTitle}> Expert Guidance by Global Visa Internationals: </b>
-              <ul>
-                <li>Unsure about the process? Avoid mistakes and delays.</li>
-                <li> Global Visa Internationals offers end-to-end visa assistance — from profile assessment to documentation and follow-ups. </li>
-                <li> Reach out to our team for a smooth and stress-free Canada visa journey.</li>
-              </ul>
-            </li>
-          </ol>
-
-          <h2 className={styles.subTitle}>
-            Start Your Canada Visa Application With Experts
-          </h2>
-          <p className={styles.card}> At Global Visa Internationals, we provide personalized guidance to ensure your Canada visitor visa application is complete, accurate, and professionally presented. We assist with: </p>
-          <ul>
-            <li>Document preparation & checklist verification</li>
-            <li>Online form assistance & uploads</li>
-            <li>Biometric appointment booking</li>
-            <li>Mock interviews (if called for one)</li>
-            <li>Real-time updates on your visa progress</li>
-          </ul>
-          <p className={styles.card}>
-            Get peace of mind with expert help — contact us today and make your
-            Canadian travel dream a reality!
-          </p>
-          <p className={styles.note}>
-            <b>Disclaimer:</b> Global Visa Internationals is a private
-            consultancy and is not affiliated with the Canadian government or
-            IRCC.
-          </p>
+          <h2 className={styles.subTitle}>Ready to Apply?</h2>
+          <p>With GVI, you don’t need to worry about rejections or missing documents.</p>
+          <p>👉 Start your Canada visa application today with Global Visa Internationals and travel to Canada with confidence.</p>
+          <br />
+          <a href="/contact" className={styles.ctaButton}>Get a free consultation today!</a>
         </div>
         <div className={styles.formSection}>
           <VisaForm />

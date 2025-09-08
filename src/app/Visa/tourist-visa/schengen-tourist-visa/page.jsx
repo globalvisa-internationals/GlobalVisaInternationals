@@ -163,6 +163,25 @@ export default function Schengen_Visa_Assistance() {
 
           <h2 className={styles.subTitle}>✈ Travel to Europe with a Schengen Visa</h2>
           <p>Planning a trip to Europe? A <b className={styles.strong}>Schengen tourist visa</b> allows Indian travelers to explore 29 European countries with a single visa. At <b className={styles.strong}>Global Visa Internationals (GVI)</b>, we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
+          <h2 className={styles.subTitle}>🕒 Schengen Visa Duration Rule</h2>
+          <p>A short-stay Schengen visa permits you to stay according to your travel dates in the Schengen Zone. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications. With GVI, you’ll never miscalculate your stay — we ensure full compliance with <b className={styles.strong}>Schengen visa rules</b>.</p>
+          <p>The duration you are granted on your Schengen visa depends on your travel history and the embassy's discretion. The standard is a single-entry visa for the specific dates of your trip, but with a proven track record, you can qualify for longer-term, multiple-entry visas.</p>
+
+          <div className={styles.section}>
+            <h2 className={styles.subTitle}>Schengen Visa 'Cascade' System for Indian Nationals</h2>
+            <p>The European Union has a 'cascade' principle for granting longer-duration, multiple-entry visas. This system rewards frequent, lawful travelers. For Indian nationals, this means your past travel history directly impacts your eligibility for a longer visa.</p>
+            <ul>
+              <li><b className={styles.strong}>Initial Eligibility</b>: Your first application will typically be for a short-term, single-entry or multiple-entry visa.</li>
+              <li><b className={styles.strong}>Progression to a 2-Year Visa</b>: After lawfully using at least two Schengen visas within the three years preceding your application, you can be eligible for a <b className={styles.strong}>two-year multiple-entry Schengen visa</b>.</li>
+              <li><b className={styles.strong}>Progression to a 5-Year Visa</b>: After holding and lawfully using a two-year visa, you can then qualify for the next level, a <b className={styles.strong}>five-year multiple-entry visa</b>, provided you meet all applicable terms and conditions.</li>
+            </ul>
+            <h3 className={styles.subTitle}>Key Considerations for Progression:</h3>
+            <ul>
+              <li><b className={styles.strong}>Lawful Use</b>: The key to progressing is the "lawful use" of your previous visas, meaning you adhered to all terms and conditions, including the 90/180-day rule.</li>
+              <li><b className={styles.strong}>Passport Validity</b>: Your passport must have sufficient remaining validity. For a multi-year visa, your passport must be valid for at least three months beyond the visa's expiry date.</li>
+            </ul>
+            <p>This cascade system is a recent update for Indian nationals. We at GVI are fully up-to-date with these regulations and will help you build a strong application for a longer-duration visa.</p>
+          </div>
 
           <div className={styles.section}>
             <h2 className={styles.subTitle}>Visa Processing Overview</h2>
@@ -338,14 +357,14 @@ export default function Schengen_Visa_Assistance() {
           <div className={styles.pricingContainer}>
             <div className={styles.pricingCard}>
               <h3 className={styles.planTitle}>Basic</h3>
-              <p className={styles.planPrice}>₹4,999 + GST</p>
+              <p className={styles.planPrice}>₹4,999</p>
               <ul className={styles.planFeatures}>
                 <li>Checklist + document review</li>
               </ul>
             </div>
             <div className={`${styles.pricingCard} ${styles.highlighted}`}>
               <h3 className={styles.planTitle}>Standard</h3>
-              <p className={styles.planPrice}>₹6,999 + GST</p>
+              <p className={styles.planPrice}>₹6,999</p>
               <ul className={styles.planFeatures}>
                 <li>End-to-end application</li>
                 <li>Filing and appointment booking</li>

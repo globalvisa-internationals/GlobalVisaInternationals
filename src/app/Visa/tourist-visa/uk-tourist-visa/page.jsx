@@ -361,8 +361,8 @@ export default function UKTouristVisa() {
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
           <p>Choose the right UK visa assistance package for your needs:</p>
           <ul>
-            <li><b className={styles.strong}>Basic (₹6,999 + GST):</b> Checklist + document review</li>
-            <li><b className={styles.strong}>Standard (₹8,999 + GST):</b> End-to-end application, filing, appointment booking, and biometrics guidance</li>
+            <li><b className={styles.strong}>Basic (₹6,999 ):</b> Checklist + document review</li>
+            <li><b className={styles.strong}>Standard (₹8,999 ):</b> End-to-end application, filing, appointment booking, and biometrics guidance</li>
           </ul>
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
