@@ -307,9 +307,7 @@ export default function NewZealand() {
 
           </table>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h2 className={styles.subTitle}>Top Reasons to Visit New Zealand in 2025</h2>
           <p>Why choose New Zealand for your next vacation?</p>
@@ -324,9 +322,7 @@ export default function NewZealand() {
           </ul>
           <p className={styles.note}>Planning your first overseas trip? New Zealand is the perfect destination for families, couples, and solo travelers alike.</p>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
 
           <h2 className={styles.subTitle}>How to Apply for a New Zealand Tourist Visa from India</h2>
@@ -351,9 +347,7 @@ export default function NewZealand() {
           </ul>
           <p className={styles.note}>We handle everything from visa documentation to mock interview sessions—making the process stress-free and successful.</p>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>

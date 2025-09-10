@@ -165,19 +165,13 @@ export default function Australia() {
 
           <p>Planning your dream holiday to Australia? At Global Visa Internationals, we specialize in assisting Indian travelers with the Australia tourist visa and Australia visitor visa process from start to finish. Whether you're looking to apply Australia visa online or submit an Australia visa application form in person, our expert Australia visa consultants and trusted Australia visa agents in India are here to help. From our base in Bangalore, we support clients across India in understanding the Australia tourist visa requirements, collecting the right documents required for Australia tourist visa, and preparing for the Australia visa embassy interview. If you're searching for a tourist visa for Australia from India, we make the process smooth and stress-free.</p>
           <p>Our services cover every step—from booking your Australia visa appointment India to explaining the Australia visa process time 2025 and helping you track your tourist visa Australia application status through VFS Australia visa tracking India. We ensure your Australia tourist visa application is submitted correctly, following the Australia tourist visa new rules 2025 and including the correct Australia tourist visa documents checklist. Whether you’re applying for a short stay visa, holiday visa, or Australia family visit visa, our team ensures you meet all Australia visitor visa eligibility and comply with the Australian travel visa for Indians standards.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <p>If you're unsure how to apply Australia tourist visa, we offer step-by-step guidance, including tips on improving your Australia tourist visa success rate and avoiding Australian visa rejection reasons. We help with Australia ETA visa India, Australia eVisitor visa for Indians, and even complex cases like Australia visa stamping process, Australia visa biometric appointment India, and Australian tourist visa biometrics 2025. If you're planning to travel to Australia from India visa-ready, we also help with multiple entry Australia tourist visa, tourist visa duration Australia, and applications for Australia tourist visa for parents from India.</p>
           <p>Need help fast? Discover how to get Australia tourist visa fast with our premium support services. As one of the best Australia visa consultants in India, we’re known for our transparency, high success rates, and reliable visa assistance for Australia. Whether you have no Australia travel history requirement or are reapplying after rejection, our genuine visa consultants for Australia will ensure your case is strong. From applying for the Australia e600 visa from India to consulting the Australia immigration office India, we’ve got you covered.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <p>So, if you're looking for the best visa agent for Australia, a trusted tourist visa agent for Australia in Bangalore, or simply want expert help from the Australia visa help center, Global Visa Internationals is your go-to destination. We assist you in booking Australia visa appointment India, preparing for Australia visa interview questions, and staying fully compliant with Australian consulate visa application guidelines. Your smooth and successful journey to Australia starts with our dedicated team. Reach out today for genuine visa assistance for Australia and experience the difference.</p>
           <p className={styles.note}><strong>Contact us now</strong> to get started on your Australia tourist visa application!</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Why Visit Australia? Top Reasons Tourists Love It</h3>
 
           <p>Australia is a premier tourist destination, offering unforgettable experiences for every type of traveler. Here’s why:</p>
@@ -209,9 +203,7 @@ export default function Australia() {
           <h3 className={styles.subTitle}>Top Tourist Places in Australia You Must Visit</h3>
 
           <p>Planning your trip with an <strong>Australia Tourist Visa</strong>? Discover the most iconic and unforgettable destinations across the country. This curated <strong>Australia travel guide</strong> highlights the best places to explore—from coastal cities to natural wonders.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <ol>
             <li>
               <strong>Sydney:</strong> Australia's most popular city for tourists. Visit the <strong>Sydney Opera House</strong>, walk across the <strong>Harbour Bridge</strong>, relax on <strong>Bondi Beach</strong>, and explore The Rocks historic district. A must for every tourist applying for an <strong>Australia visitor visa</strong>.
@@ -244,9 +236,7 @@ export default function Australia() {
               <strong>Adelaide:</strong> Known for its arts scene, botanical gardens, and access to nearby wine regions like <strong>Barossa Valley</strong> and <strong>McLaren Vale</strong>. Great for those looking for a relaxed and cultured Australia vacation.
             </li>
           </ol>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <p>Each of these destinations showcases the incredible diversity of experiences Australia has to offer. <strong>Global Visa Internationals</strong>, a trusted <strong>Australia visa consultant</strong>, helps you get the right visa and plan your dream itinerary. Let us guide your journey—stress-free and expertly handled.</p>
 
 
@@ -261,9 +251,7 @@ export default function Australia() {
             <li><strong>14-Day Best of Australia:</strong> Discover Sydney, Melbourne, Uluru (Ayers Rock), and tropical Queensland.</li>
             <li><strong>10-Day West Coast Adventure:</strong> Experience Perth, Exmouth, and Broome with pristine beaches and outback vibes.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>Cost of Traveling to Australia from India (2025)</h2>
           <p>Understanding the estimated <strong>cost of Australia trip from India</strong> helps in planning your budget effectively. Here's a breakdown of typical expenses for tourists applying for an <strong>Australia visitor visa (subclass 600)</strong>:</p>
 
@@ -299,9 +287,7 @@ export default function Australia() {
           </ul>
 
           <p >Need help budgeting or booking your Australia visa? <strong>Global Visa Internationals</strong> is your trusted <strong>visa consultant in India</strong> for seamless <strong>tourist visa application</strong> and travel planning support. Contact us today for expert guidance!</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>Australia Trip Budget Calculator</h2>
           <p>Planning your budget in advance is essential for a stress-free holiday. Here’s an estimated cost breakdown for a 10-day trip to Australia (excluding visa and airfare):</p>
           <ul>
@@ -319,9 +305,7 @@ export default function Australia() {
             <li><strong>Be Flexible:</strong> Australia is vast. Embrace surprises and leave space for spontaneous experiences.</li>
             <li><strong>Enjoy Every Moment:</strong> Capture memories, relax, and experience Australia’s diverse landscapes and cultures to the fullest.</li>
           </ol>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>Top Attractions & Unique Australian Experiences</h2>
           <ul>
             <li><strong>Hidden Gems & Local Experiences:</strong>
@@ -353,9 +337,7 @@ export default function Australia() {
               </ul>
             </li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <p>Whether you’re a budget traveler or luxury seeker, planning ahead helps you make the most of your <strong>Australia tourist visa</strong> journey. Need expert guidance? Contact <strong>Global Visa Internationals</strong> for visa support and personalized travel planning.</p>
 
           <ol>
@@ -373,9 +355,7 @@ export default function Australia() {
 
             <li><strong>Gold Coast:</strong> A coastal gem in Queensland famous for its stunning beaches, surfing hot spots, luxury resorts, and vibrant nightlife. One of the most popular destinations for international tourists in Australia.</li>
           </ol>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>Additional Travel Tips for Your Australia Tourist Visa Journey</h2>
           <ol>
             <li><strong>Prepare for Australia’s Diverse Weather:</strong> From tropical heat in the north to cooler climates in the south, Australia’s weather varies widely. Pack appropriate clothing and check seasonal forecasts before your trip.</li>
@@ -393,9 +373,7 @@ export default function Australia() {
             <li><strong>Need Help Planning?</strong> Whether it's choosing destinations, understanding visa rules, or budgeting your trip, <strong>Global Visa Internationals</strong> provides complete end-to-end support for your Australia travel planning. Contact us for expert visa assistance and personalized travel tips.</li>
           </ol>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h2 className={styles.subTitle}>How to Apply for an Australian Tourist Visa from India</h2>
           <p>Planning a trip to Australia? Indian citizens must apply for the <strong>Australia Tourist Visa – Visitor Visa (Subclass 600)</strong> under the Tourist Stream. This visa allows travelers to explore Australia for leisure, holidays, or visiting family and friends. Here’s a step-by-step guide to ensure your application is smooth and successful:</p>
@@ -419,9 +397,7 @@ export default function Australia() {
             <li><strong>Visa Fee:</strong> Approx. <strong>AUD 190</strong> (subject to change by the Department of Home Affairs).</li>
             <li><strong>Processing Time:</strong> Standard processing time is 3–4 weeks. Early application is strongly recommended.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <p><strong>Accuracy matters.</strong> Even minor errors can delay or jeopardize your visa approval. Partnering with an expert <strong>Australia visa consultant</strong> can significantly improve your chances of success.</p>
 
           <h2 className={styles.subTitle}>Why Trust Global Visa Internationals for Your Australian Visa?</h2>
@@ -435,9 +411,7 @@ export default function Australia() {
             <li><strong>Mock Interview Sessions:</strong> Preparing for visa interviews? We help you face it confidently with expert coaching.</li>
             <li><strong>Proven Success:</strong> With <strong>55,000+ visas processed</strong> and <strong>75,000+ consultations</strong> completed, our clients trust us for a reason.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <p>Whether it’s your first international trip or a family vacation to Sydney or Melbourne, <strong>Global Visa Internationals</strong> ensures your <strong>Australia travel visa</strong> experience is smooth, secure, and successful.</p>
 
           <p><strong>With over 11+ years of experience</strong> as leading <strong>visa consultants in Bangalore</strong>, we’re proud to be India’s preferred choice for <strong>tourist visa guidance</strong>. Our team stays updated on Australia’s latest visa policies to give you a competitive edge.</p>

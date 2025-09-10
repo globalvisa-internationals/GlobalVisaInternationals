@@ -243,9 +243,7 @@ export default function JapanTouristVisa() {
             Get Expert Visa Assistance Now
           </a>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>Japan Visa and Travel Costs in 2025 – Plan Your Budget Smartly</h2>
           <p>
             Understanding the estimated travel costs is crucial when applying for your <strong>Japan Tourist Visa</strong>. Here's a detailed breakdown of the major expenses including flights, accommodations, food, transport, and more—helping you plan better with the support of a trusted <strong>Japan tourist visa consultancy</strong>.
@@ -351,9 +349,7 @@ export default function JapanTouristVisa() {
             <strong>Note:</strong> These estimates are approximate and can vary depending on personal preferences, seasonality, and exchange rates.
           </p>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <p className={styles.ctaText}>
             <strong>Start your journey to Japan with confidence!</strong> For expert <strong>Japan tourist visa assistance</strong> and documentation, reach out to Global Visa Internationals today.
@@ -383,9 +379,7 @@ export default function JapanTouristVisa() {
             The <strong>Japan tourist visa requirements</strong> may seem detailed, but Global Visa Internationals is here to make it simple. From understanding the rules to submitting the paperwork—we help you every step of the way.
           </p>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your assistance to Japan tourist Visa</h3>
           <p>
@@ -405,9 +399,7 @@ export default function JapanTouristVisa() {
             Don’t let the complexities of the Japan visa process stop you from visiting one of the most beautiful countries in the world. Whether you're applying solo or with family, we’re here to help. Contact us today for the best <strong>Japan tourist visa assistance</strong>.
           </p>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h3 className={styles.subTitle}>Need Help With the Japan Tourist Visa Process?</h3>
           <p>
@@ -479,9 +471,7 @@ export default function JapanTouristVisa() {
             </li>
           </ol>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <p className={styles.note}>
             Ready to explore Japan? Get expert help from Global Visa Internationals—your trusted <strong>Japan tourist visa consultancy</strong>. From paperwork to peace of mind, we’re here every step of the way.

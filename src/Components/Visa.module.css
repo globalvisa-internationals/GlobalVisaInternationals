@@ -1,455 +1,181 @@
-.imageContainer {
-    display: flex;
-
-    justify-content: center;
-    padding-top: 70px;
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-
-.UKTitle {
-    display: flex;
-    top: 100px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--primary);
-}
-
-.VisaImage {
-    height: 400px;
-    width: 70%;
-    border-radius: 20px;
-    object-fit: fill;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
+/* === Sections === */
 .VisaSec {
     display: flex;
-    justify-content: center;
-    padding: 40px;
-    max-width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 100%;
     margin: 0 auto;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    gap: 30px;
-    color: var(--text);
+    font-size: 15px;
+    gap: 18px;
+    top: 60px;
 }
 
 .VisaData {
-    flex: 1;
-    min-width: 60%;
-    max-width: 65%;
-    padding: 10px;
-    gap: 10px;
-    overflow-y: auto;
+    width: 95%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: justify;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
 }
 
+/* === Titles & Typography === */
 .Title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    font-size: 1.2rem;
     color: var(--primary);
+    font-weight: 600;
+    margin: 10px 0;
 }
 
 .subTitle {
-    display: flex;
     text-align: left;
+    font-size: 1.1rem;
     color: var(--primary);
+    font-weight: 600;
+    margin: 15px 0 10px;
+    line-height: 1.4;
+}
+
+.subTitle1 {
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 6px;
 }
 
 .strong {
     color: var(--accent);
+    font-weight: 600;
 }
 
 .note {
-    font-size: 0.95rem;
-    color: var(--accent);
+    font-size: 0.9rem;
+    color: var(--muted);
     padding: 1rem;
-    border-left: 4px solid var(--primary);
+    border-left: 3px solid var(--primary);
+    background: #f5f7f8;
+    border-radius: var(--radius);
+    margin: 20px auto;
     max-width: 800px;
-    margin: auto;
 }
 
-
-/* Card Design */
-.card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    padding: 16px 20px;
-    margin: 15px 0;
-    color: #333;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.formSection1 {
-    display: none;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 15px;
-    height: fit-content;
-}
-
-
-.formSection {
+/* === Image Wrappers === */
+.imageContainer,
+.imageWrapper {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 400px;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 40px;
-    position: sticky;
-    top: 60px;
-    height: fit-content;
-    background: #ffffff;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+    margin: 20px 0;
 }
 
+.VisaImage,
+.responsiveImage {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+    border: 1px solid var(--card-border);
+}
 
-.visaFeesSection {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
+/* === Card Styles === */
+.card,
+.card1 {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+    transition: var(--transition);
+}
+
+.card p,
+.card1 p {
+    margin: 0;
+    font-size: 0.95rem;
     color: var(--text);
 }
 
-.heading {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
+/* Hover effects — subtle, corporate */
+.card:hover,
+.card1:hover {
+    border-color: var(--primary);
+    background: #fdfefe;
 }
 
-.description {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-.link {
-    color: var(--accent);
-    font-weight: 600;
-    margin-left: 0.3rem;
-    text-decoration: underline;
-}
-
-.table {
+/* === Form Section === */
+.formSection,
+.formSection1 {
+    display: flex;
     width: 100%;
+
+}
+
+/* === Table === */
+.table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
     border-collapse: collapse;
-    border-radius: 15px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 1.2rem 0;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
 }
 
 .table th,
 .table td {
-    border: 1px solid #dddddd;
-    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    border: 1px solid var(--card-border);
     text-align: left;
-    font-size: 0.95rem;
 }
 
 .table th {
-    background-color: #e0f4f8;
+    background-color: #f0fafa;
     color: var(--primary);
     font-weight: 600;
 }
 
-/* Card Design */
-.card {
-    background: #ffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    padding: 16px 20px;
-    margin: 15px 0;
-    color: #333;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.card p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.card1 {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    padding: 16px 20px;
-    margin: 15px 0;
-    color: #333;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card1:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.card1 p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-
-@media (max-width: 768px) {
-    .UKTitle {
-        font-size: 18px;
-    }
-
-    .Title {
-        font-size: 18px;
-    }
-
-    .subTitle {
-        font-size: 18px;
-    }
-
-    .card {
-        padding: 14px 16px;
-        margin: 12px 0;
-    }
-
-
-    .table th,
-    .table td {
-        font-size: 0.85rem;
-        padding: 0.5rem;
-    }
-
-    .table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-    }
-
-    .table thead {
-        white-space: nowrap;
-    }
-
-    .imageContainer {
-        justify-content: center;
-        padding-top: 70px;
-        width: 100%;
-    }
-
-    .VisaImage {
-        height: auto;
-        width: 90%;
-    }
-
-    .VisaSec {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        max-width: 95%;
-    }
-
-    .VisaData {
-        min-width: 95%;
-        text-align: justify;
-        padding: 10px;
-    }
-
-    .formSection {
-        width: 95%;
-        position: relative;
-        margin-top: 20px;
-        margin-bottom: 80px;
-    }
-
-
-    .formSection1 {
-        display: flex;
-        position: relative;
-        margin-top: 20px;
-        margin-bottom: 80px;
-    }
-}
-
-
-/* Card Container */
-.schengenCard {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 900px;
-    margin: 40px auto;
-    color: #333;
-}
-
-/* Header Section */
-.cardHeader {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.cardTitle {
-    font-size: 2.2rem;
-    color: #1a237e;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.cardSubtitle {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* Main Country List */
-.countryList h3,
-.highlightSection h3 {
-    font-size: 1.5rem;
-    color: var(--primary);
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.countryGrid {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    text-align: center;
-}
-
-.countryGrid li {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px 10px;
-    border: 1px solid #ddd;
-    font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.countryGrid li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Highlighted Section (New Countries) */
-.highlightSection {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 2px solid #e0e0e0;
-}
-
-.highlightGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.highlightItem {
-    background-color: #e8f5e9;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #c8e6c9;
-}
-
-.highlightItem .countryName {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 5px;
-}
-
-.highlightItem .countryInfo {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 0;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .schengenCard {
-        padding: 20px;
-    }
-
-    .cardTitle {
-        font-size: 1.8rem;
-    }
-
-    .countryList h3,
-    .highlightSection h3 {
-        font-size: 1.3rem;
-    }
-
-    .countryGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/* === Pricing === */
 .pricingContainer {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .pricingCard {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 10px;
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 18px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 250px;
-    font-family: Arial, sans-serif;
+    transition: var(--transition);
+    width: 100%;
+    max-width: 250px;
 }
 
 .pricingCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.highlighted {
-    border: 2px solid #007bff;
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
-}
-
-.highlighted .planTitle,
-.highlighted .planPrice {
-    color: #007bff;
+    border-color: var(--primary);
+    background: #fdfefe;
 }
 
 .planTitle {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--accent);
 }
 
 .planPrice {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 25px;
-    color: #555;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--primary);
 }
 
 .planFeatures {
@@ -460,17 +186,70 @@
 }
 
 .planFeatures li {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+    padding-left: 18px;
     position: relative;
-    padding-left: 25px;
 }
 
 .planFeatures li::before {
     content: '✓';
-    color: #28a745;
+    color: var(--primary);
     font-weight: bold;
     position: absolute;
     left: 0;
+}
+
+/* === Larger Screens Enhancements === */
+@media (min-width: 768px) {
+    .VisaSec {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 40px;
+    }
+
+    .VisaImage,
+    .responsiveImage {
+        max-width: 70%;
+        height: auto;
+    }
+
+    .VisaData {
+        min-width: 60%;
+        max-width: 65%;
+        padding: 20px;
+    }
+
+    .Title {
+        font-size: 1.4rem;
+    }
+
+    .subTitle {
+        font-size: 1.3rem;
+    }
+
+    .formSection {
+        width: 400px;
+        position: sticky;
+        top: 70px;
+        margin-top: 40px;
+    }
+
+    .formSection1 {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Title {
+        font-size: 1.6rem;
+    }
+
+    .subTitle {
+        font-size: 1.4rem;
+    }
 }

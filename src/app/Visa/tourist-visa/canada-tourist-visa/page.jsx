@@ -142,18 +142,18 @@ export default function Canada() {
 
       <div className={styles.VisaSec}>
         <div className={styles.VisaData}>
-          <section className={styles.card}>
+          <section >
             <h2 className={styles.subTitle}>✈ Travel to Canada with a Visitor Visa</h2>
             <p>Planning a trip to Canada? The Canada Visitor Visa (also known as a Temporary Resident Visa or TRV) allows Indian travelers to visit for tourism, to see family, or for a short-term business trip. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
           </section>
 
           <div className={styles.section}>
-            <section className={styles.card}>
+            <section >
               <h2 className={styles.subTitle}>Visa Processing Overview</h2>
               <p>Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your visa application meets the expectations of Immigration, Refugees and Citizenship Canada (IRCC) and that your travel purpose is clearly and professionally represented.</p>
             </section>
 
-            <section className={styles.card}>
+            <section >
               <h3 className={styles.subTitle}>Our Services Include:</h3>
               <ul>
                 <li>Online application form filling</li>
@@ -165,28 +165,26 @@ export default function Canada() {
               </ul>
             </section>
 
-            <section className={styles.card}>
+            <section >
               <h3 className={styles.subTitle}>Timeline:</h3>
               <p>Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days.</p>
             </section>
           </div>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
 
-          <section className={styles.card}>
+
+          <section >
             <h2 className={styles.subTitle}>🕒 Canada Visa Duration Rule</h2>
             <p>A Canada Visitor Visa typically allows you to stay for up to 6 months. A multiple-entry visa may be issued with a validity of up to 10 years, or until your passport expires, whichever comes first. Note that even with a multiple-entry visa, you can only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.</p>
             <p>👉 With GVI, you’ll never miscalculate your stay—we ensure full compliance with Canadian visa rules.</p>
           </section>
 
-          <section className={styles.card}>
+          <section >
             <h2 className={styles.subTitle}>Canada Visitor & Business Visa Documents & Requirements for Indian Applicants</h2>
             <p>Before applying, ensure you meet the Canada visa eligibility requirements. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
           </section>
 
-          <section className={styles.card}>
+          <section >
             <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
             <ul>
               <li><b className={styles.strong}>Valid Passport:</b> Must be valid for the entire duration of your stay in Canada, with at least one blank page for the visa stamp.</li>
@@ -194,11 +192,9 @@ export default function Canada() {
             </ul>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
 
-          <section className={styles.card}>
+
+          <section >
             <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
             <p>You must prove you have sufficient funds to support your trip without working or relying on public funds. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹3–4 lakh (or approx. CAD$4,700-$62,000) in your bank account. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.</p>
             <ul>
@@ -207,7 +203,7 @@ export default function Canada() {
             </ul>
           </section>
 
-          <section className={styles.card}>
+          <section >
             <h3 className={styles.subTitle}>3. Employment & Professional Documentation</h3>
             <ul>
               <li><b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.</li>
@@ -216,11 +212,9 @@ export default function Canada() {
             </ul>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
 
-          <section className={styles.card}>
+
+          <section >
             <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
             <ul>
               <li><b className={styles.strong}>Flight & Hotel Bookings:</b> Provide a detailed travel itinerary covering your entire stay. It's not mandatory to have confirmed return flight tickets, but a travel plan is required.</li>
@@ -228,16 +222,14 @@ export default function Canada() {
             </ul>
           </section>
 
-          <section className={styles.card}>
+          <section >
             <h3 className={styles.subTitle}>5. Visa Cover Letter & Itinerary</h3>
             <p>A well-written cover letter is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism, business meeting), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional cover letter and a detailed itinerary for every client to maximize their chances of success.</p>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
 
-          <section className={styles.card}>
+
+          <section >
             <h2 className={styles.subTitle}>Canada Visitor Visa Fees (India 2025)</h2>
             <p>As of 2025, the Canada visa fees are subject to change. Fees are paid to the Government of Canada (IRCC) and VFS Global. The fees listed below are approximate and do not include additional services.</p>
             <ul>
@@ -247,7 +239,7 @@ export default function Canada() {
             </ul>
           </section>
 
-          <section className={styles.card}>
+          <section >
             <h2 className={styles.subTitle}>Common Reasons for Canada Visa Rejection & How We Solve Them</h2>
             <p>Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues.</p>
             <ul>
@@ -258,11 +250,9 @@ export default function Canada() {
             </ul>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
 
-          <section className={styles.card}>
+
+          <section >
             <h2 className={styles.subTitle}>Canada Visa Processing Time from India</h2>
             <p>The processing time for a Canada Visitor Visa can vary. Here are some general timelines:</p>
             <ul>
@@ -272,7 +262,7 @@ export default function Canada() {
             </ul>
           </section>
 
-          <section className={styles.card}>
+          <section >
             <h2 className={styles.subTitle}>The VFS Global Application Process: A Step-by-Step Guide</h2>
             <p>As VFS Global is the official partner for Canada Visas and Immigration in India, we manage this process for you. Here’s a quick overview of what to expect:</p>
             <ol>
@@ -283,9 +273,7 @@ export default function Canada() {
           </section>
           <a href="https://visa.vfsglobal.com/ind/en/can/" target="_blank" rel="noopener noreferrer">VFS Global — Canada Visas & Immigration</a>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
           <p>Choose the right Canada visa assistance package for your needs:</p>
@@ -303,9 +291,7 @@ export default function Canada() {
             <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
           </ul>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h2 className={styles.subTitle}>Ready to Apply?</h2>
           <p>With GVI, you don’t need to worry about rejections or missing documents.</p>

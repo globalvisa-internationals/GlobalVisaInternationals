@@ -243,13 +243,13 @@ export default function Australia() {
       </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/images/Australia-banner.png" alt="Australia Image" className={styles.AustraliaImage} />
+        <img src="/images/Australia-banner.png" alt="Australia Image" className={styles.VisaImage} />
       </div>
 
-      <div className={styles.AustraliaSec}>
+      <div className={styles.VisaSec}>
 
 
-        <div className={styles.AustraliaData}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>Australia Student Visa Assistence | Global Visa Internationals</h1>
 
           <p>Choosing the right Australia study visa consultant can be the difference between a smooth visa process and a stressful one. At our agency, we specialise in guiding Indian students through every step of the Australia student visa journey, from eligibility checks to final approvals. Our team has helped hundreds of students secure their student visa for Australia from India, including those applying for the 485 visa Australia after graduation.</p>
@@ -318,17 +318,13 @@ export default function Australia() {
 
           <p>By working with us, you avoid common mistakes that lead to delays or refusals. You’ll have a clear understanding of your student visa Australia cost, eligibility, and post-study work options — all while staying fully compliant with Australian immigration laws.</p>
           <p className={styles.note}>At Global Visa Internationals, we understand that the process of obtaining a student visa can be overwhelming. That's why we're here to provide you with expert guidance and support every step of the way. Our team of experienced professionals is dedicated to helping you navigate the complexities of the visa application process, ensuring that you have all the necessary documentation and information to make your journey smooth and successful.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <p>Imagine yourself thriving in Australia's world-renowned educational environment! From bustling metropolitan cities like Sydney and Melbourne to the serene beauty of Perth and Brisbane, Australia offers a diverse range of study locations and lifestyles. An Australian student visa is your key to unlocking a transformative educational experience that can shape your future.</p>
 
           <p>At Global Visa Internationals, we recognize that the journey to obtaining an Australian student visa involves careful planning and a thorough understanding of the requirements. Our dedicated team of education and visa specialists is committed to providing you with the expert guidance and unwavering support you need to navigate this process with confidence. We aim to simplify the complexities, allowing you to focus on the exciting prospect of your studies.</p>
 
           <p>With our extensive knowledge of the Australian education system and visa regulations, we are here to help you every step of the way. Whether you're interested in pursuing a diploma, bachelor's degree, or postgraduate studies, we will assist you in selecting the right course and institution that aligns with your aspirations.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Why Australia Stands Out for International Students</h3>
           <p>Choosing Australia for your education offers a multitude of compelling advantages:</p>
           <ul>
@@ -342,9 +338,7 @@ export default function Australia() {
             <li><strong>Breathtaking Natural Beauty and Outdoor Adventures:</strong> From the iconic Great Barrier Reef to the rugged Outback and pristine beaches, Australia offers incredible opportunities for exploration and adventure outside of your studies.</li><br />
             <li><strong>Supportive Environment for International Students:</strong> Australian institutions and communities actively support international students with various services, including orientation programs, academic assistance, and social activities.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Understanding the Australian Student Visa (Subclass 500)</h3>
           <p>The Australian student visa (Subclass 500) is designed for international students who wish to study full-time in a registered course at an Australian educational institution. This visa allows you to live, work, and study in Australia for the duration of your course. Here are some key points to consider:</p>
           <ul>
@@ -357,24 +351,18 @@ export default function Australia() {
             <li><strong>Post-Study Work Opportunities:</strong> After completing your studies, you may be eligible for a post-study work visa, allowing you to gain valuable work experience in Australia.</li>
             <li><strong>Pathway to Permanent Residency:</strong> Depending on your qualifications and work experience, you may have pathways to apply for permanent residency in Australia after completing your studies.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>The Importance of the Genuine Temporary Entrant (GTE) Requirement</h3>
           <p>The Genuine Temporary Entrant (GTE) requirement is a crucial aspect of the Australian student visa application process. It is designed to ensure that applicants genuinely intend to study in Australia temporarily and will return to their home country after completing their studies. To meet the GTE requirement, you must provide a statement addressing your intentions, ties to your home country, and reasons for choosing Australia as your study destination.</p>
           <p>At Global Visa Internationals, we understand the significance of the GTE requirement and can assist you in crafting a compelling GTE statement that highlights your genuine intentions and strengthens your visa application.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>The Role of Overseas Student Health Cover (OSHC)</h3>
           <p>Overseas Student Health Cover (OSHC) is a mandatory health insurance requirement for international students studying in Australia. It provides coverage for medical expenses, hospital visits, and other healthcare services during your stay. Having OSHC ensures that you have access to necessary medical care without incurring significant out-of-pocket expenses.</p>
           <p>At Global Visa Internationals, we can guide you in selecting the right OSHC provider and plan that suits your needs, ensuring you have peace of mind while studying in Australia.</p>
           <h3 className={styles.subTitle}>The Importance of a Well-Prepared Visa Application</h3>
           <p>Submitting a well-prepared visa application is essential for a successful outcome. The Australian Department of Home Affairs assesses applications based on various factors, including your financial capacity, English language proficiency, and adherence to visa conditions. A comprehensive and accurate application increases your chances of obtaining the student visa.</p>
           <p>At Global Visa Internationals, we specialize in preparing and submitting student visa applications. Our team will work closely with you to gather the necessary documentation, complete the application forms accurately, and ensure that your application meets all requirements.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>The Benefits of Choosing Global Visa Internationals</h3>
           <p>At Global Visa Internationals, we are committed to providing you with the highest level of service and support throughout your Australian student visa journey. Here are some of the key benefits of choosing us:</p>
           <ul>
@@ -389,9 +377,7 @@ export default function Australia() {
             <li><strong>Access to Resources:</strong> We provide access to valuable resources, including scholarship opportunities, university information, and career guidance.</li>
             <li><strong>Network of Partnerships:</strong> Our strong relationships with educational institutions and industry partners enable us to provide you with exclusive opportunities and insights.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Key Aspects of the Australian Student Visa (Subclass 500)</h3>
           <p>The Student Visa (Subclass 500) is specifically designed for individuals who wish to undertake full-time study in a registered course of study in Australia. Successful applicants generally need to demonstrate:</p>
           <ul>
@@ -405,9 +391,7 @@ export default function Australia() {
             <li><strong>Potential for Visa Conditions:</strong> Your student visa may have specific conditions attached, such as limitations on working hours, requirements to maintain enrolment, and restrictions on changing courses.</li>
 
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Navigating the Application Process</h3>
           <p>The Australian student visa application typically involves several stages, includin</p>
           <ul>
@@ -420,9 +404,7 @@ export default function Australia() {
 
 
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h3 className={styles.subTitle}>A Closer Look at the Student Visa Application Journey</h3>
           <p>The process of applying for an Australian student visa typically involves these key steps:</p>
@@ -435,9 +417,7 @@ export default function Australia() {
             <li><strong>Visa Interview (Potentially): </strong>In some cases, the Department of Home Affairs may request an interview to further assess your application</li>
             <li>Visa Grant Notification: Once your application is assessed and approved, you will receive a notification of your visa grant.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Top Courses to Study in Australia (High Demand & Future Growth)</h3>
           <p>Australia's strong economy and focus on innovation drive demand for graduates in various fields. Here are some of the top courses international students are pursuing:</p>
           <ul>
@@ -461,9 +441,7 @@ export default function Australia() {
             <br />
             <li><strong>Architecture and Urban Planning:</strong> As cities grow and evolve, skilled architects and urban planners are in demand.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Best Scholarships in Australia for International Students</h3>
           <p>Financing your education is a key consideration. Australia offers various scholarships for international students:</p>
           <ul>
@@ -478,9 +456,7 @@ export default function Australia() {
             <li><strong>External Scholarships:</strong> Organizations and foundations in your home country or internationally may also offer scholarships for studying in Australia.</li>
             <li><strong>Research Training Program (RTP) Scholarships: </strong>For higher degree research students (Masters by Research and PhD), the Australian Government provides RTP scholarships to support tuition fees and living costs.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Types of Australian Student Visas</h3>
           <p>The primary visa for international students undertaking formal studies in Australia is the Student Visa (Subclass 500). This visa allows you to stay in Australia for the duration of your registered course(s). Key aspects include:</p>
           <ul>
@@ -490,9 +466,7 @@ export default function Australia() {
             <li><strong>Training Visa (Subclass 407):</strong> While not strictly a "student visa," this visa can be relevant for structured workplace-based training required as part of a course.</li>
             <strong>Navigating the specific requirements and conditions of each visa subclass can be complex. Contact Global Visa Internationals for accurate and up-to-date information tailored to your situation.</strong>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>The Australian Education Model: A Focus on Quality and Practical Application</h3>
           <p>The Australian education system is highly regarded globally for its quality assurance frameworks and focus on practical learning:</p>
           <ul>
@@ -534,9 +508,7 @@ export default function Australia() {
           <strong><p>Promising Career Opportunities in Australia for International Graduates</p></strong>
 
           <p>Australia's strong economy offers diverse career opportunities for international graduates in various sectors, particularly in areas of high demand mentioned earlier (Healthcare, Engineering, IT, etc.).</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <ul>
             <li><strong>Post-Study Work Visa (Subclass 485):</strong> This visa allows eligible international students to stay and work in Australia for a period after graduation, providing valuable work experience. Different streams exist with varying eligibility criteria and durations.</li>br
 
@@ -603,9 +575,7 @@ export default function Australia() {
               <strong>Note:</strong> Costs are approximate and based on an exchange rate of ₹55 per 1 AUD. Actual rates may vary. Always refer to official sources for accurate information.
             </p>
           </div>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
 
           <h3 className={styles.subTitle}>Your Dedicated Pathway to Studying in Australia Starts Here</h3>
@@ -616,9 +586,7 @@ export default function Australia() {
           <p className={styles.note}>Avoid the pitfalls and complexities of navigating the Australian student visa system on your own.</p>
           <p className={styles.note}>At Global Visa Internationals, we are committed to providing you with personalized support and expert guidance tailored to your unique situation. Our experienced team is here to assist you in every step of the process, ensuring that you have the best chance of success in obtaining your Australian student visa.</p>
           <p>Partner with the experienced professionals at Global Visa Internationals to ensure a seamless and successful visa application journey. Our expert consultants offer:</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <ul>
             <li><strong>Comprehensive Eligibility Assessment: </strong>We will thoroughly evaluate your individual circumstances to determine your eligibility for the most suitable student visa pathway.</li><br />
@@ -636,9 +604,7 @@ export default function Australia() {
 
           <p className={styles.note}>Don't let the complexities of the visa process deter you from pursuing your academic dreams in Australia. Contact Global Visa Internationals today and let us be your trusted partner in making your Australian education a reality!</p>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3>Frequently Asked Questions (FAQs)</h3>
           <ol>
             <h4>
@@ -763,7 +729,7 @@ export default function Australia() {
           <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
-        <div className={styles.formSection1}>
+        <div className={styles.formSection}>
           <VisaForm />
         </div>
       </div>

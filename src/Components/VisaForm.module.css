@@ -5,12 +5,12 @@
   flex-direction: column;
   max-width: 400px;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: #e9f5b5;
   padding: 20px;
   margin: 0 auto;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   position: sticky;
-  top: 60px;
+  /* top: 60px; */
   height: fit-content;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -28,6 +28,7 @@
   color: #002B5B;
   /* Corporate Dark Blue */
   margin-bottom: 20px;
+  align-items: center;
 }
 
 /* --- Form Layout --- */
@@ -35,6 +36,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
   margin: 0 auto;
 
 }
@@ -201,5 +203,120 @@
   .submittingBtn {
     width: 100%;
     font-size: 15px;
+  }
+}
+
+/* === Normal Form Container === */
+.normalForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.normalForm:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Title inside normal form --- */
+.normalForm .formtitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #002B5B;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* --- Inputs & Selects (reuse your existing styles) --- */
+.normalForm .input,
+.normalForm .select {
+  width: 100%;
+  padding: 5px;
+  margin: 4px 0;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #002B5B;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.normalForm .input:focus,
+.normalForm .select:focus {
+  border-color: #005241;
+  box-shadow: 0 0 0 3px rgba(0, 82, 65, 0.15);
+  outline: none;
+}
+
+/* --- Submit Button --- */
+.normalForm .submittingBtn {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 20px auto 0;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #005241;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.normalForm .submittingBtn:hover {
+  background-color: #007b6d;
+  transform: translateY(-2px);
+}
+
+/* === Responsive (Mobile First) === */
+@media (max-width: 768px) {
+  .normalForm {
+    max-width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .normalForm .formtitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .normalForm .input,
+  .normalForm .select {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .normalForm .submittingBtn {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+
+/* === Larger screens === */
+@media (min-width: 1024px) {
+  .normalForm {
+    max-width: 700px;
+    padding: 35px 40px;
+  }
+
+  .normalForm .formtitle {
+    font-size: 28px;
+  }
+
+  .normalForm .input,
+  .normalForm .select {
+    font-size: 17px;
   }
 }

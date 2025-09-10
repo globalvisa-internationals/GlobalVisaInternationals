@@ -1,0 +1,165 @@
+.VisaSec {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: var(--font-base);
+    padding: 20px 15px;
+    color: var(--text);
+    background: var(--background);
+}
+
+/* Intro text */
+.VisaSec p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.countryTitle {
+    font-size: 1.4rem;
+    color: var(--primary);
+    text-align: center;
+    font-weight: 700;
+    margin: 30px 0 15px;
+    line-height: 1.3;
+}
+
+/* ================================
+   Pricing Cards
+================================ */
+.pricingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px auto 40px;
+    max-width: 100%;
+}
+
+.pricingCard {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    width: 100%;
+}
+
+.pricingCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlighted plan */
+.highlighted {
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.highlighted .planTitle,
+.highlighted .planPrice {
+    color: var(--accent);
+}
+
+/* Titles & Prices */
+.planTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.planPrice {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: var(--muted);
+}
+
+/* Features list */
+.planFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.planFeatures li {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 24px;
+    line-height: 1.4;
+}
+
+.planFeatures li::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.whatsappBtn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background-color: #25d366;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.whatsappBtn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+
+/* Tablet */
+@media (min-width: 600px) {
+    .pricingContainer {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .pricingCard {
+        width: 260px;
+    }
+
+    .planTitle {
+        font-size: 1.4rem;
+    }
+
+    .planPrice {
+        font-size: 1.25rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .countryTitle {
+        font-size: 1.8rem;
+        margin: 40px 0 20px;
+    }
+
+    .planTitle {
+        font-size: 1.5rem;
+    }
+
+    .planPrice {
+        font-size: 1.3rem;
+    }
+}

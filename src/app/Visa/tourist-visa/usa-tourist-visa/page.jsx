@@ -202,278 +202,292 @@ export default function USATouristVisa() {
 
 
         <div className={styles.VisaData}>
-          <h1 className={styles.Title}>USA Tourist Visa Consultants | Explore America with Global Visa Internationals</h1>
-          <p>Planning a trip to the United States? Whether you're heading for a family visit, tourism, or short-term business travel, Global Visa Internationals is your trusted partner for USA tourist visa and B1 B2 visa support. As a leading US visa consultant and tourist visa agent in Bangalore, we assist Indian travelers with everything they need to successfully apply USA visa and complete the USA tourist visa application process without hassle. Whether it’s your first time or a reapplication, we provide step-by-step guidance for your US visitor visa, ensuring compliance with the latest 2025 requirements.</p>
-          <p>Our expert team in US visa Bangalore office ensures you're well-prepared with the complete B1 B2 visa documents checklist and all required documents for US tourist visa. From DS-160 form filling to financial proof and itinerary guidance, we help you avoid common mistakes that lead to tourist visa rejection reasons USA. We also offer personalized US visa interview tips to boost your confidence and improve your US visa success rate. With our support, many Indian travelers have successfully received USA multiple entry visa approvals without delay.</p>
-          <p>Not sure how to get USA visa or when to start the process? We’ll walk you through every step, including USA visitor visa requirements, USA visa processing time 2025, and how to book US visa appointment India through the US embassy visa appointment system. We coordinate everything from submission to final interview—ensuring a smooth experience. Our strong understanding of the US consulate visa process and years of expertise in visa assistance for USA makes us a reliable choice for travelers across India.</p>
-          <p>With over 11 years of experience and more than 55,000 successful visa applications, Global Visa Internationals is recognized as one of the most trusted visa consultants for USA. We are committed to providing transparent, affordable, and genuine support for your US travel plans. Our team is dedicated to helping you navigate the complexities of the USA tourist visa process, ensuring you have all the information and resources needed for a successful application.</p>
-          <p>Worried about costs? We provide complete transparency on the tourist visa USA cost and B1 B2 visa fees India, with no hidden charges. Our consultants are known for offering affordable and genuine support, making us one of the most genuine visa consultants for USA. Whether you’re applying for a short holiday or long-term US travel visa for Indian citizens, we’ll help you maximize your approval chances. Need help with USA visa stamping or appointment delays? We’ve got you covered there too.</p>
-          <p>At Global Visa Internationals, we understand that every traveler has unique needs. That’s why we offer personalized consultations to assess your specific situation and provide tailored advice. Our team is here to answer all your questions, from the initial application to the final interview, ensuring you feel confident and prepared at every step.</p>
-          <p>If you’re looking for the best visa agent for USA, trust Global Visa Internationals to deliver end-to-end support, from form filing to interview coaching. We also handle last-minute cases and help you secure a priority date for urgent travel. Whether you're a first-time traveler or a frequent flyer, we make travel to USA from India visa processing fast, stress-free, and affordable. Contact us today for B1 B2 visa guidance and take the first step towards your American journey with a team that cares.</p>
+          <h1 className={styles.Title}>USA Tourist Visa Assistance from India</h1>
 
-          <h3 className={styles.subTitle}>Why Visit the USA? Top Reasons to Apply for a Tourist Visa</h3>
-          <p>As one of the most popular travel destinations in the world, the USA attracts millions of tourists every year. Here's why you should explore it with a valid visitor visa:</p>
+          <p>Planning your dream trip to the United States? Navigating the <strong className={styles.strong}>USA tourist visa process from India</strong> can be complex, but with expert assistance from <strong className={styles.strong}>Global Visa International</strong>, it becomes remarkably straightforward. Whether you need a <strong className={styles.strong}>B2 visa USA from India</strong>, the popular <strong className={styles.strong}>10 year US tourist visa for Indians</strong>, or guidance on <strong className={styles.strong}>USA visitor visa requirements</strong>, our dedicated team ensures a seamless process from documentation to approval.</p>
+
+          <p>✅ <strong className={styles.strong}>Get started today with a free consultation</strong> from Global Visa International – your trusted partner for USA visa assistance!</p>
+
+          <h2 className={styles.subTitle}>Understanding the USA Visa Process for Indians</h2>
+          <p>Successfully navigating the <strong className={styles.strong}>US visa process from India</strong> requires meticulous preparation and understanding of specific requirements. At Global Visa International, we provide comprehensive <strong className={styles.strong}>DS-160 form filling assistance</strong>, personalized <strong className={styles.strong}>US visa interview preparation</strong>, and clear explanations of all <strong className={styles.strong}>US visa fees from India</strong>. Many applicants wonder about the exact <strong className={styles.strong}>USA tourist visa cost from India</strong> or the current <strong className={styles.strong}>US visa application fee in rupees</strong> – we offer completely transparent pricing with no hidden charges.</p>
+
+          <p>Our experts guide you through all available options including <strong className={styles.strong}>US visa premium processing India</strong> services and explain typical <strong className={styles.strong}>USA visa agent charges India</strong> so you know exactly what you're paying for with no surprises.</p>
+
+          <p>✈️ <strong className={styles.strong}>Ready to begin your American journey?</strong> Contact Global Visa International now and let us simplify your entire USA visa process!</p>
+
+          <h2 className={styles.subTitle}>How to Apply for USA Visa Online from India</h2>
+          <p>Want a streamlined, stress-free visa application experience? You can now <strong className={styles.strong}>apply for US visa online from India</strong> with confidence through Global Visa International. Whether you're applying through the official <strong className={styles.strong}>US visa through VFS Global</strong> channel, visiting a <strong className={styles.strong}>US visa application center in India</strong>, or exploring other authorized platforms, we help you compare and select the optimal application route for your specific situation.</p>
+
+          <p>Our services extend beyond the initial application – we assist you in learning how to <strong className={styles.strong}>check US visa status India</strong> updates and provide comprehensive <strong className={styles.strong}>US visa document checklist India</strong> guidance. We also share valuable insights from previous <strong className={styles.strong}>US visa success stories India</strong> applicants to help you make informed decisions and strengthen your application.</p>
+
+          <p>📱 <strong className={styles.strong}>Apply online with confidence today</strong> with Global Visa International and receive expert guidance at every step!</p>
+
+          <h2 className={styles.subTitle}>Essential USA Visa Documents for Indian Applicants</h2>
+          <p>Submitting complete and accurate documentation is arguably the most crucial aspect of your <strong className={styles.strong}>US visa application process</strong>. Our team at Global Visa International provides meticulous assistance in preparing your complete <strong className={styles.strong}>US visa documents for Indians</strong> package, including proper preparation of <strong className={styles.strong}>USA visa financial documents</strong>, understanding the <strong className={styles.strong}>US visa bank balance requirements</strong>, and correctly submitting your <strong className={styles.strong}>ITR for US visa India</strong> applicants.</p>
+
+          <p>We ensure you have the appropriate <strong className={styles.strong}>bank statements for US visa</strong> applications, verify your <strong className={styles.strong}>passport validity for US visa</strong> requirements, and help craft a convincing <strong className={styles.strong}>US visa travel itinerary</strong>. For those needing sponsor support, we provide expert guidance on preparing proper <strong className={styles.strong}>USA visa sponsor documents</strong>. With our comprehensive document support, you'll meet all requirements with complete confidence.</p>
+
+          <p>📄 <strong className={styles.strong}>Avoid rejection and unnecessary delays</strong> — Request your personalized document checklist from Global Visa International experts today!</p>
+
+          <h2 className={styles.subTitle}>USA Visa Processing Time from India</h2>
+          <p>Understanding realistic timelines is essential for planning your American adventure. Our team at Global Visa International provides clear explanations of typical <strong className={styles.strong}>US visa processing time from India</strong>, offers specialized support for <strong className={styles.strong}>urgent US visa India</strong> requests, and diligently tracks progress throughout your application journey. While standard <strong className={styles.strong}>US tourist visa processing</strong> typically takes 15-20 working days, we can explore <strong className={styles.strong}>US visa premium processing India</strong> options if you need expedited service.</p>
+
+          <p>For those planning extended visits, we provide guidance on how to potentially <strong className={styles.strong}>extend US tourist visa from India</strong>, help you understand the <strong className={styles.strong}>US visa validity period</strong> nuances, and clarify the important difference between <strong className={styles.strong}>visa validity vs stay duration USA</strong> regulations.</p>
+
+          <p>🚀 <strong className={styles.strong}>Facing time constraints?</strong> Inquire about Global Visa International's priority fast-track visa service!</p>
+
+          <h2 className={styles.subTitle}>Finding a Trusted USA Visa Agent in India</h2>
+          <p>When searching for a genuinely <strong className={styles.strong}>trusted US visa agent India</strong> or identifying the truly <strong className={styles.strong}>best visa consultancy for USA India</strong>, thousands of Indian travelers consistently choose Global Visa International. We protect you from potential pitfalls by helping you <strong className={styles.strong}>avoid US visa scams India</strong> operators through completely transparent guidance and ethical practices.</p>
+
+          <p>Want authentic, unbiased feedback? We encourage exploring genuine <strong className={styles.strong}>Indian forum US visa recommendations</strong> and provide current information on actual <strong className={styles.strong}>US visa approval rates India</strong> statistics and upcoming <strong className={styles.strong}>USA visa policy India 2025</strong> updates. Stay thoroughly informed about <strong className={styles.strong}>new US visa rules India 2024</strong> implementations and understand the real facts behind common <strong className={styles.strong}>US visa rejection reasons India</strong> scenarios.</p>
+
+          <p>🛡️ <strong className={styles.strong}>Don't gamble with your travel plans.</strong> Choose Global Visa International – consistently reliable, thoroughly experienced, and trusted by Indian travelers nationwide!</p>
+
+          <h2 className={styles.subTitle}>Community Insights: Reddit Indian USA Visa Help</h2>
+          <p>Many applicants value community perspectives when preparing their applications. Numerous travelers share authentic tips through <strong className={styles.strong}>Reddit Indian US visa help</strong> threads, offering genuine firsthand <strong className={styles.strong}>Indian travellers US visa experience</strong> accounts. While these resources can be helpful, nothing replaces professional guidance.</p>
+
+          <p>Still feeling uncertain? Our experts at Global Visa International provide clear explanations of common <strong className={styles.strong}>US visa rejection reasons India</strong> applicants face and answer the frequently asked question of "<strong className={styles.strong}>how much bank balance for US visa Indians</strong>" need to demonstrate to significantly boost your approval chances. Need comprehensive paperwork assistance? We provide thorough <strong className={styles.strong}>US visa interview questions preparation</strong> support and help complete your entire <strong className={styles.strong}>USA tourist visa application</strong> process completely stress-free.</p>
+
+          <p>🌐 <strong className={styles.strong}>Connect with genuine experts</strong> who've successfully helped thousands of Indians travel to USA – exclusively at Global Visa International!</p>
+
+          <div className={styles.ctaBox}>
+            <h3>Begin Your American Journey Today!</h3>
+            <p>Let Global Visa International handle the complex visa process while you focus on planning your unforgettable trip to the United States. Our team of experts provides personalized guidance tailored to your specific circumstances.</p>
+            <button className={styles.ctaButton}>Schedule Your Free Consultation Now</button>
+          </div>
+
+          <p>Planning your inaugural trip to the United States? Securing the proper <strong className={styles.strong}>USA Tourist Visa</strong> is your essential gateway to exploring one of the world's most diverse and captivating destinations. From iconic landmarks and breathtaking natural wonders to rich cultural experiences and exciting urban adventures, America offers something extraordinary for every type of traveler. Our expert <strong className={styles.strong}>USA Tourist Visa assistance</strong> ensures a smooth, efficient, and hassle-free process allowing you to focus entirely on planning your dream holiday itinerary.</p>
+
+          <h2 className={styles.subTitle}>Top Tourist Attractions in the USA</h2>
+
+          <p>With a properly issued <strong className={styles.strong}>Tourist Visa for USA</strong>, you can experience the perfect blend of spectacular natural beauty and impressive modern marvels. While planning your itinerary, ensure you don't miss these absolute must-see destinations:</p>
 
           <ul>
-            <li><strong>Iconic Landmarks:</strong> From the Statue of Liberty and Golden Gate Bridge to Niagara Falls and the White House, the USA is home to some of the world’s most recognizable attractions.</li>
-            <li><strong>Diverse Landscapes:</strong> Experience everything from deserts and beaches to mountains, forests, and national parks. Whether you're into adventure or relaxation, the USA has something for every traveler.</li>
-            <li><strong>Vibrant Cities:</strong> Explore the hustle of New York City, the movie magic of Los Angeles, the tech buzz in San Francisco, and the cultural pulse of Chicago and Boston.</li>
-            <li><strong>World-Class Entertainment:</strong> Catch Broadway shows, attend music festivals, visit Disneyland or Universal Studios, and experience live events across the country.</li>
-            <li><strong>Rich Culture & History:</strong> Visit the Smithsonian in Washington D.C., explore jazz in New Orleans, or connect with Native American heritage in the Southwest.</li>
+            <li><strong className={styles.strong}>Statue of Liberty National Monument</strong>: Iconic universal symbol of freedom and democracy situated in New York Harbor.</li>
+            <li><strong className={styles.strong}>Grand Canyon National Park</strong>: Breathtaking natural wonder in Arizona featuring awe-inspiring geological formations.</li>
+            <li><strong className={styles.strong}>Golden Gate Bridge</strong>: World-famous suspension bridge and architectural marvel in San Francisco.</li>
+            <li><strong className={styles.strong}>Walt Disney World Resort</strong>: Magical theme park complex in Orlando, Florida offering entertainment for all ages.</li>
+            <li><strong className={styles.strong}>Las Vegas Strip</strong>: Glittering entertainment capital featuring dazzling lights, world-class shows, and luxurious resorts.</li>
+            <li><strong className={styles.strong}>Yellowstone National Park</strong>: America's first national park renowned for its geothermal features and abundant wildlife.</li>
+            <li><strong className={styles.strong}>Niagara Falls State Park</strong>: Majestic waterfall system straddling the US-Canada border.</li>
+            <li><strong className={styles.strong}>Hollywood Walk of Fame</strong>: Celebrity-studded entertainment industry hub in Los Angeles.</li>
+            <li><strong className={styles.strong}>National Mall in Washington D.C.</strong>: Iconic park containing monuments, memorials, and Smithsonian museums.</li>
+            <li><strong className={styles.strong}>Yosemite National Park</strong>: Stunning California park famous for its giant sequoia trees and granite cliffs.</li>
           </ul>
 
-          <h3 className={styles.subTitle}>Top 10 Must-Visit Places in the USA for Indian Travelers</h3>
-          <p>When planning your USA tourist trip, don’t miss these iconic destinations:</p>
+          <h2 className={styles.subTitle}>Compelling Reasons to Apply for a USA Tourist Visa</h2>
+
+          <p>Whether you're planning a brief two-week getaway or an extended cross-country vacation, here's why the United States should be at the top of your travel list:</p>
+
           <ol>
-            <li><strong>New York City, NY:</strong> Times Square, Central Park, Empire State Building, and Statue of Liberty.</li>
-            <li><strong>Los Angeles, CA:</strong> Hollywood, Universal Studios, Beverly Hills, and Santa Monica Pier.</li>
-            <li><strong>San Francisco, CA:</strong> Golden Gate Bridge, Alcatraz, and Fisherman's Wharf.</li>
-            <li><strong>Grand Canyon, AZ:</strong> One of the Seven Natural Wonders of the World.</li>
-            <li><strong>Yellowstone National Park:</strong> Geysers, hot springs, wildlife, and stunning nature.</li>
-            <li><strong>Miami, FL:</strong> Beaches, nightlife, Cuban cuisine, and colorful Art Deco vibes.</li>
-            <li><strong>Washington D.C.:</strong> White House, National Mall, Lincoln Memorial, and free museums.</li>
-            <li><strong>Las Vegas, NV:</strong> Casinos, nightlife, live performances, and The Strip.</li>
-            <li><strong>Niagara Falls, NY:</strong> A powerful natural wonder on the U.S.-Canada border.</li>
-            <li><strong>Orlando, FL:</strong> Walt Disney World, Universal Studios, and family attractions.</li>
+            <li><strong className={styles.strong}>Comprehensive Visa Guidance:</strong> Our specialized USA Tourist Visa consultants provide detailed, personalized support throughout your application journey.</li>
+            <li><strong className={styles.strong}>Exceptionally Diverse Attractions:</strong> Experience everything from pristine national parks and world-class museums to historic cultural landmarks and modern architectural marvels.</li>
+            <li><strong className={styles.strong}>Unforgettable Culinary Experiences:</strong> Taste authentic regional specialties and international cuisines from across this vast culinary landscape.</li>
+            <li><strong className={styles.strong}>World-Class Entertainment Options:</strong> Enjoy everything from legendary Broadway productions and music festivals to professional sporting events and cultural performances.</li>
+            <li><strong className={styles.strong}>Safe & Welcoming Environment:</strong> Benefit from well-developed tourism infrastructure and generally welcoming attitudes toward international visitors.</li>
+            <li><strong className={styles.strong}>Exceptional Shopping Opportunities:</strong> Explore everything from massive outlet malls and department stores to unique boutique shops and artisan markets.</li>
           </ol>
 
-          <h3 className={styles.subTitle}>Apply for Your USA Tourist Visa with Global Visa Internationals</h3>
-          <p>At <strong>Global Visa Internationals</strong>, we specialize in assisting Indian travelers with successful USA tourist visa applications. From <strong>DS-160 form filling</strong> to interview preparation, we ensure a hassle-free process and a high approval success rate.</p>
+          <p>Require professional assistance? Our dedicated team at Global Visa International offers complete <strong className={styles.strong}>USA Tourist Visa assistance</strong> — encompassing everything from document collection and verification to interview preparation and follow-up. Whether this represents your first international trip or you're a frequent global traveler, we streamline the visa processing experience making it simple, transparent, and completely stress-free.</p>
 
-          <ul>
-            <li>End-to-End Visa Assistance by Certified Consultants</li>
-            <li>Personalized Documentation Guidance</li>
-            <li>Mock Interview Sessions to Boost Confidence</li>
-            <li>11+ Years of Experience & 55,000+ Visas Processed</li>
-          </ul>
-
-          <p><strong>Book your USA visa consultation</strong> today with Global Visa Internationals — your trusted partner in international travel since 2017.</p>
-
-          <p className={styles.note}><em>Disclaimer: We are a private consultancy and not affiliated with the U.S. Embassy or Government. All visa approvals are at the sole discretion of the U.S. immigration authorities.</em></p>
-
-
-          <div className={styles.formSection1}>
-            <VisaForm />
+          <div className={styles.ctaBox}>
+            <h3>Your American Dream Starts Here</h3>
+            <p>Don't let visa complexities deter you from experiencing the United States. Our experienced consultants have helped thousands of travelers successfully obtain their US tourist visas.</p>
+            <button className={styles.ctaButton}>Start Your Visa Application Today</button>
           </div>
 
-          <h2 className={styles.subTitle}>USA Tourist Visa Trip Cost from India – A Complete Breakdown</h2>
-          <p>Planning a trip to the United States? Understanding the overall cost is crucial for a smooth and enjoyable experience. Whether you're traveling solo or with family, budgeting properly ensures a stress-free journey. Here’s a detailed overview of estimated expenses for Indian travelers applying for a <strong>USA tourist visa (B-2)</strong>.</p>
+          <p><strong className={styles.strong}>Get in touch today with a trusted <span style={{ color: '#c00' }}>USA Tourist Visa consultant</span> from Global Visa International and begin your journey to America!</strong></p>
 
-          <h3 className={styles.subTitle}>USA Travel Cost Overview</h3>
+          <h1 className={styles.Title}>USA Tourist Visa – Simplified Application Process & Expert Assistance from India</h1>
+
+          <p>Planning your dream trip to the United States? Whether you're drawn to America's iconic landmarks, breathtaking natural wonders, or vibrant cosmopolitan cities, successfully securing your <strong className={styles.strong}>USA Tourist Visa</strong> represents the essential first step. Our professional <strong className={styles.strong}>US visa consultants</strong> at Global Visa International provide comprehensive end-to-end <strong className={styles.strong}>USA Tourist Visa assistance</strong> specifically designed to make the entire process straightforward and stress-free for Indian applicants.</p>
+
+          <h2 className={styles.subTitle}>Why Choose the USA for Your Next Holiday Destination?</h2>
+          <ul>
+            <li><strong className={styles.strong}> incredibly Diverse experiences:</strong> From sunny beaches and snowy mountains to bustling cities and tranquil countryside.</li>
+            <li><strong className={styles.strong}>World-famous attractions:</strong> Visit iconic sites recognized globally for their cultural and historical significance.</li>
+            <li><strong className={styles.strong}>Remarkable Cultural diversity:</strong> Experience numerous distinct cultures within one nation's borders.</li>
+            <li><strong className={styles.strong}>Advanced tourism infrastructure:</strong> Benefit from well-developed transportation, accommodation, and tourist facilities nationwide.</li>
+            <li><strong className={styles.strong}>Year-round destinations:</strong> Different regions offer ideal visiting conditions during various seasons.</li>
+          </ul>
+
+          <h2 className={styles.subTitle}>Types of USA Tourist Visas Available for Indian Citizens</h2>
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Expense Category</th>
-                <th>Estimated Cost</th>
-                <th>Details</th>
+                <th>Visa Type</th>
+                <th>Validity Duration</th>
+                <th>Maximum Stay Period</th>
+                <th>Estimated Processing Time</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td> Flight Charges</td>
-                <td>₹70,000 – ₹1,50,000+ (round-trip)</td>
-                <td>Varies by airline, booking date, season, and destination city in the USA</td>
+                <td>B2 Tourist Visa (Standard)</td>
+                <td>10 Years (typically)</td>
+                <td>Up to 6 months per entry</td>
+                <td>15-20 working days</td>
               </tr>
               <tr>
-                <td> Accommodation</td>
-                <td>See table below</td>
-                <td>Costs vary by city, hotel category, and booking method</td>
+                <td>B2 Tourist Visa (Limited Validity)</td>
+                <td>1-5 Years (case specific)</td>
+                <td>Up to 6 months per entry</td>
+                <td>15-20 working days</td>
               </tr>
+            </tbody>
+          </table>
+
+          <h2 className={styles.subTitle}>Essential Documents Required for USA Tourist Visa Application</h2>
+          <ul>
+            <li>Original passport (valid for at least six months beyond your intended stay period)</li>
+            <li>DS-160 confirmation page with barcode</li>
+            <li>Visa appointment confirmation letter</li>
+            <li>Recent passport-sized photograph meeting specific requirements</li>
+            <li>Comprehensive financial documents demonstrating sufficient funds</li>
+            <li>Employment verification letter (if currently employed)</li>
+            <li>Detailed travel itinerary including accommodation arrangements</li>
+            <li>Previous travel history documentation (if applicable)</li>
+            <li>Evidence of strong ties to India (property, family, employment)</li>
+          </ul>
+
+          <h2 className={styles.subTitle}>USA Tourist Visa Fee Structure from India (Approximate)</h2>
+          <table className={styles.table}>
+            <thead>
               <tr>
-                <td> Food</td>
-                <td>$20 – $100 per day</td>
-                <td>From budget meals to fine dining in cities like NYC or LA</td>
+                <th>Fee Type</th>
+                <th>Current Cost (INR)</th>
+                <th>USD Equivalent</th>
               </tr>
+            </thead>
+            <tbody>
               <tr>
-                <td> Local Transport</td>
-                <td>$30 – $100 per day</td>
-                <td>Includes metro, buses, taxis, or car rentals</td>
-              </tr>
-              <tr>
-                <td> Attractions & Activities</td>
-                <td>$5 – $50+ per activity</td>
-                <td>Museums, theme parks (Disney, Universal), tours, and events</td>
-              </tr>
-              <tr>
-                <td> Visa Fee (B-2)</td>
+                <td>MRV Application Fee (Mandatory)</td>
+                <td>₹15,200</td>
                 <td>$185</td>
-                <td>Mandatory tourist visa application fee for Indian citizens</td>
               </tr>
               <tr>
-                <td> Travel Insurance</td>
-                <td>$50 – $200</td>
-                <td>Highly recommended for medical emergencies and trip protection</td>
+                <td>VFS Service Charge (If applicable)</td>
+                <td>₹1,320</td>
+                <td>$16</td>
               </tr>
               <tr>
-                <td> Miscellaneous</td>
-                <td>Varies</td>
-                <td>Shopping, souvenirs, tips, and emergency expenses</td>
+                <td>Premium Processing (Optional)</td>
+                <td>Additional ₹8,200-₹16,400</td>
+                <td>$100-$200</td>
               </tr>
             </tbody>
           </table>
 
-          <h3 className={styles.subTitle}>Accommodation Costs Across the USA</h3>
-          <p>Hotel rates differ based on location, quality, and time of year. Here's a typical range for Indian tourists:</p>
+          <p className={styles.note}>Note: All prices are approximate and may vary based on current exchange rates and policy updates.</p>
 
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Accommodation Type</th>
-                <th>Average Price per Night (USD)</th>
-                <th>Ideal For</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td> Hotels</td>
-                <td>$100 – $500+</td>
-                <td>Best for families, couples, and business travelers</td>
-              </tr>
-              <tr>
-                <td> Airbnb / Vacation Rentals</td>
-                <td>$80 – $300+</td>
-                <td>Suitable for long stays or group travel</td>
-              </tr>
-              <tr>
-                <td> Hostels / Dorms</td>
-                <td>$30 – $80</td>
-                <td>Perfect for solo travelers or backpackers</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p className={styles.note}><strong>Budget Tip:</strong> A 10-day tourist trip to the USA (excluding flights) can cost approximately $1,500 – $5,000+ per person depending on your travel style (budget, mid-range, or luxury).</p>
-
-          <p>Need expert help with your <strong>USA visa application</strong> and travel planning? Contact <strong>Global Visa Internationals</strong> — India's most trusted USA tourist visa consultants with 55,000+ success stories.</p>
-
-
-          <div className={styles.formSection1}>
-            <VisaForm />
+          <div className={styles.ctaBox}>
+            <h3>Confused About Visa Requirements?</h3>
+            <p>Our experts provide clear, personalized guidance on all documentation needed for your specific situation.</p>
+            <button className={styles.ctaButton}>Get Personalized Document Checklist</button>
           </div>
 
-          <h2 className={styles.subTitle}>USA Tourist Visa Process from India (B-2 Visa Guide)</h2>
-          <p>Planning to explore the United States? Here’s a step-by-step breakdown of the official B-2 <strong>USA Tourist Visa process for Indian citizens</strong>:</p>
-
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Step</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1. Check Eligibility</td>
-                <td>Ensure you intend to visit temporarily for tourism, have strong financials, and ties to India.</td>
-              </tr>
-              <tr>
-                <td>2. Fill DS-160 Form</td>
-                <td>Complete the U.S. visa application form online. Accuracy is critical for approval.</td>
-              </tr>
-              <tr>
-                <td>3. Pay Visa Fee</td>
-                <td>Non-refundable fee of $185 paid online or at authorized bank centers.</td>
-              </tr>
-              <tr>
-                <td>4. Schedule Visa Interview</td>
-                <td>Book a B-2 visa interview at U.S. Embassy or Consulates in Mumbai, Delhi, Chennai, Hyderabad, or Kolkata.</td>
-              </tr>
-              <tr>
-                <td>5. Prepare Documents</td>
-                <td>Gather your passport, DS-160 confirmation, proof of funds, purpose of visit, and ties to India.</td>
-              </tr>
-              <tr>
-                <td>6. Attend Interview</td>
-                <td>Appear for a face-to-face interview. Be confident, clear, and honest in your responses.</td>
-              </tr>
-              <tr>
-                <td>7. Wait for Processing</td>
-                <td>If approved, your passport will be stamped with the B-2 visa and returned to you.</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3 className={styles.subTitle}>Need Help With DS-160 or B-2 Visa Interview?</h3>
-          <p>Applying for a <strong>USA tourist visa</strong> can be confusing — but you're not alone. At <strong>Global Visa Internationals</strong>, our visa consultants provide end-to-end assistance to maximize your chances of approval.</p>
-
-          <h3 className={styles.subTitle}>How Global Visa Internationals Supports Your USA Visa Application</h3>
-          <ol className={styles.numberedList}>
-            <li>
-              <h4 className={styles.subTitle}> DS-160 Form Filling Assistance</h4>
-              <p>We ensure your DS-160 form is:</p>
-              <ul>
-                <li>Filled correctly with verified details</li>
-                <li>Free from common mistakes that lead to rejections</li>
-                <li>Accompanied by a compliant digital photo</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4 className={styles.subTitle}> Personalized Visa Consultation</h4>
-              <p>Every case is unique. We assess your situation and guide you on:</p>
-              <ul>
-                <li>Financial documentation and bank balance requirements</li>
-                <li>Family or job ties that demonstrate return intent</li>
-                <li>Supporting itinerary or sponsor letters</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4 className={styles.subTitle}> Mock Interview Preparation (U.S. Consulate Based)</h4>
-              <p>We conduct practice sessions with real B-2 visa questions asked at:</p>
-              <ul>
-                <li>U.S. Embassy (Delhi) & Consulates (Mumbai, Chennai, Hyderabad, Kolkata)</li>
-                <li>Behavioral coaching to answer with confidence</li>
-                <li>Customized feedback based on your answers</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4 className={styles.subTitle}> Complete Document Checklist & Review</h4>
-              <p>We’ll guide and verify all required documents like:</p>
-              <ul>
-                <li>Passport, DS-160, visa fee receipt</li>
-                <li>Proof of funds, hotel bookings, travel insurance</li>
-                <li>Sponsor letters or invitation (if applicable)</li>
-              </ul>
-            </li>
-          </ol>
-
-          <p className={styles.note}>
-            <strong>Global Visa Internationals</strong> has helped over <strong>55,000+ travelers</strong> secure their USA tourist visas. With our expertise in <strong>B-2 visa filing, documentation, and interview training</strong>, we ensure your American dream begins with confidence.
-          </p>
-
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Tourist Visa?</h2>
-
-          <p>
-            Navigating the visa process can be overwhelming — but with <strong>Global Visa Internationals</strong>, you're never alone. As one of the leading <strong>visa consultants in Bangalore</strong>, we provide end-to-end assistance to ensure your application is smooth, accurate, and stress-free.
-          </p>
-
+          <h2 className={styles.subTitle}>Why Choose Global Visa International for USA Tourist Visa Assistance?</h2>
           <ul>
-            <li><strong>Personalized Guidance:</strong> Our expert consultants offer one-on-one support, tailored to your specific visa requirements and travel goals.</li>
-            <li><strong>Up-to-Date Expertise:</strong> We stay current with changing visa rules and ensure your documents meet the latest immigration standards.</li>
-            <li><strong>End-to-End Documentation Help:</strong> From filling out forms to compiling financial and travel documents, we manage everything for you.</li>
-            <li><strong>Mock Interviews for Success:</strong> Prepare with confidence through our realistic <strong>visa interview training sessions</strong>.</li>
-            <li><strong>High Visa Success Rate:</strong> With thousands of approved visas, we’re trusted by travelers across India for proven results.</li>
+            <li>Expert guidance through the complex application process</li>
+            <li>Completely transparent pricing with no hidden charges</li>
+            <li>Thorough interview preparation including mock sessions</li>
+            <li>24x7 customer support via WhatsApp, email, and phone</li>
+            <li>Document review and verification service</li>
+            <li>Personalized application strategy based on your profile</li>
+            <li>High success rate with extensive experience</li>
           </ul>
 
-          <p>
-            At <strong>Global Visa Internationals</strong>, we take pride in being recognized as <strong>India’s most trusted visa consultancy</strong>. With over <strong>11+ years of experience</strong>, we've successfully processed more than <strong>55,000 visas</strong> and conducted over <strong>75,000 visa consultations</strong> to date.
-          </p>
+          <p><strong className={styles.strong}>Get started now! Submit your details and our team at Global Visa International will help you confidently apply for your USA Tourist Visa!</strong></p>
 
-          <p>
-            Whether you're applying for a <strong>tourist visa to Australia</strong>, the USA, Canada, or any other destination — we’re here to make your dream trip a reality.
-          </p>
+          <h2 className={styles.subTitle}>Navigating the USA Tourist Visa Application Process</h2>
+          <p>Applying for a <strong className={styles.strong}>USA Tourist Visa</strong> from India involves several critical steps that require careful attention. With stringent requirements and a mandatory interview process, it's essential to understand and thoroughly prepare for each stage. Here's how the process works:</p>
 
-          <p className={styles.note}>
-            <em>Note: Global Visa Internationals is an independent visa consultancy and is not affiliated with the Australian Government or any embassy.</em>
-          </p>
+          <ol>
+            <li><strong className={styles.strong}>Complete DS-160 Form Accurately:</strong> Fill out the comprehensive online nonimmigrant visa application form with precise, consistent information.</li>
+            <li><strong className={styles.strong}>Pay Required Visa Fee:</strong> Pay the mandatory MRV application fee through designated channels.</li>
+            <li><strong className={styles.strong}>Schedule Your Appointment:</strong> Book your visa interview appointment at the appropriate US Embassy or Consulate.</li>
+            <li><strong className={styles.strong}>Prepare Supporting Documents:</strong> Gather and organize all required supporting documents according to guidelines.</li>
+            <li><strong className={styles.strong}>Attend Visa Interview Confidently:</strong> Attend your visa interview well-prepared with all necessary documentation.</li>
+            <li><strong className={styles.strong}>Receive Visa Decision & Passport:</strong> Once approved, your passport containing the visa will be returned through selected delivery method.</li>
+          </ol>
+
+          <p>Feeling overwhelmed by this process? Let Global Visa International transform your <strong className={styles.strong}>US visa application</strong> experience into a smooth, well-managed, and stress-free journey.</p>
+
+          <h3 className={styles.subTitle}>Let Global Visa International Be Your Trusted US Visa Consultant</h3>
+          <p>Dreaming of exploring America's spectacular national parks, vibrant cities, and rich cultural attractions? We'll help transform that dream into reality. At Global Visa International, we specialize in providing exceptional <strong className={styles.strong}>USA Tourist Visa assistance</strong> with an impressive success rate and truly personalized support tailored to your specific circumstances.</p>
+
+          <b className={styles.subTitle}>Our Comprehensive US Visa Services Include:</b>
+          <ul>
+            <li>One-on-one guidance understanding all <strong className={styles.strong}>US visa requirements</strong> specific to your profile.</li>
+            <li>Expert document checklist creation and thorough review service.</li>
+            <li>Professional DS-160 form filling assistance ensuring accuracy.</li>
+            <li>Comprehensive interview preparation including mock sessions.</li>
+            <li>Continuous WhatsApp and email support throughout your visa journey.</li>
+            <li>Application tracking and follow-up with consular authorities.</li>
+          </ul>
+
+          <p className={styles.note}>Avoid last-minute stress, unnecessary delays, or potential rejection. Contact Global Visa International today and let us expertly handle your <strong className={styles.strong}>USA Tourist Visa</strong> process from beginning to end.</p>
+
+          <div className={styles.ctaBox}>
+            <h3>Limited Availability for Personalized Consultation</h3>
+            <p>Our visa experts have limited capacity for one-on-one consultations. Reserve your spot today for comprehensive visa guidance.</p>
+            <button className={styles.ctaButton}>Reserve Your Consultation Now</button>
+          </div>
+
+          <h3 className={styles.subTitle}>Need Professional Help With USA Tourist Visa or Urgent Processing Requests?</h3>
+          <p>Whether you're planning a family vacation to Disney World, visiting relatives across America, or exploring the country's incredible natural wonders, our experienced consultants at Global Visa International are here to provide expert assistance. With our extensive experience in <strong className={styles.strong}>US visa services</strong> for Indian applicants, we ensure you're thoroughly prepared for every step of the process.</p>
+
+          <b className={styles.subTitle}>Here's how we simplify and enhance your US visa journey:</b>
+          <ol>
+            <h3 className={styles.subTitle}><li>Comprehensive Visa Guidance</li></h3>
+            <p>We help you successfully navigate the complex <strong className={styles.strong}>US visa process</strong> with accurate documentation preparation and strategic application planning.</p>
+
+            <h3 className={styles.subTitle}><li>Tailored Document Support</li></h3>
+            <p>We provide detailed guidance on all key requirements including:</p>
+            <ul>
+              <li>Valid passport meeting validity requirements & recent photographs</li>
+              <li>Financial documents demonstrating adequate funds and stability</li>
+              <li>Employment verification and leave approval documents</li>
+              <li>Detailed travel itinerary and accommodation arrangements</li>
+              <li>Evidence of strong social, economic, and family ties to India</li>
+            </ul>
+
+            <h3 className={styles.subTitle}><li>Real-Time Support by Experienced US Visa Experts</li></h3>
+            <p>Receive prompt WhatsApp and email support from a dedicated <strong className={styles.strong}>US visa consultant</strong> throughout your entire application process. We answer your queries quickly and help you prepare comprehensively for your crucial interview.</p>
+
+            <h3 className={styles.subTitle}><li>End-to-End Assistance Until Visa Approval</li></h3>
+            <p>From the initial DS-160 form completion to final visa approval notification, we provide continuous support until your <strong className={styles.strong}>USA Tourist Visa</strong> is secured. You can focus on packing your bags — we'll expertly handle the entire visa process.</p>
+          </ol>
+
+          <h2 className={styles.subTitle}>Why Thousands Choose Global Visa International for USA Tourist Visa Assistance?</h2>
+          <p>At Global Visa International, we take immense pride in offering professional, transparent, and timely <strong className={styles.strong}>US visa consultancy services</strong> that deliver results. Here's why thousands of Indian travelers trust us with their American dreams:</p>
+
+          <ul>
+            <li><strong className={styles.strong}>Expert Guidance:</strong> We provide detailed, personalized visa solutions based on your specific profile and travel purpose.</li>
+            <li><strong className={styles.strong}>Accuracy First Approach:</strong> All your forms and supporting documents undergo multiple reviews to ensure perfection.</li>
+            <li><strong className={styles.strong}>Complete End-to-End Support:</strong> Comprehensive assistance from initial form filling to final interview preparation.</li>
+            <li><strong className={styles.strong}>Proven Success Record:</strong> With extensive experience in US visas, we possess the expertise to maximize your approval chances.</li>
+            <li><strong className={styles.strong}>Professional Interview Preparation:</strong> Thorough mock sessions and question preparation to boost your confidence.</li>
+            <li><strong className={styles.strong}>Transparent Communication:</strong> Regular updates and clear explanations at every process stage.</li>
+          </ul>
+
+          <p>We're not just visa agents — we're your dedicated travel partners. With years of specialized visa expertise and thousands of successful consultations delivered, we at Global Visa International proudly serve as India's leading <strong className={styles.strong}>USA Tourist Visa consultants</strong>.</p>
+
+          <p>Let Global Visa International help you plan your unforgettable American vacation — with complete peace of mind and professional visa assistance every step of the way.</p>
+
+          <div className={styles.ctaBox}>
+            <h3>Your American Adventure Awaits</h3>
+            <p>Don't let visa uncertainties delay your travel plans. Our team is ready to guide you through the entire process efficiently.</p>
+            <button className={styles.ctaButton}>Begin Your Visa Process Today</button>
+          </div>
+
+          <p className={styles.note}>This service is provided by Global Visa International, an independent visa consultancy. We are not affiliated with the US government or embassy but provide expert guidance based on extensive experience and current regulations.</p>
         </div>
         <div className={styles.formSection}>
 
           <VisaForm />
         </div>
-      </div>
+      </div >
       <section id='Client Reviews'>
 
         <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>

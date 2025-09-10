@@ -267,33 +267,25 @@ export default function Canada() {
           <h3 className={styles.strong}>Canada Student Visa Requirements for Indians</h3>
           <p className={styles.card}>Applying for a student visa means understanding how much funds required for Canada student visa from India and whether can I sponsor family on Canada student visa from India fits your case. We assist in resolving Canada study permit refusal reasons India, filing Canada student visa appeal process India, booking Canada study permit biometrics India, and completing your medical exam for Canada student visa India. We also help you secure your police clearance certificate for Canada student visa India, prepare your Canada study visa sample cover letter for Indians, and ensure your Canada study visa bank statement format India meets IRCC standards. Proof of finances like proof of funds for Canada student visa India is a critical step we handle carefully.</p>
           <p className={styles.card}>From apply for student visa to Canada from Delhi/Mumbai/Bangalore to tracking Canada student visa processing time India and Canada student visa processing time 2024 2025 India, we help you meet deadlines. Whether you need Canada study permit extension from India, advice on how to apply for Canada study permit from India step by step, or calculating student visa to Canada cost in rupees, we ensure your Canada study permit checklist for Indian students 2025 is ready. Contact Global Visa International today to start your application right.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.strong}>Canada Study Visa GIC Requirement India</h3>
           <p className={styles.card}>Students aiming for post graduation work permit (PGWP) Canada 2025 Indian students or checking PGWP eligibility after study in Canada for Indians often ask if can Indian students get permanent residency after studying in Canada. We guide you through express entry after study in Canada for Indians, choosing colleges in Canada that accept Indian students without IELTS, applying for scholarships for Indian students to study in Canada, and finding the cheapest cities to study in Canada for Indian students. We also help you learn how to get study permit faster Canada India, book Canada study visa appointment India, and find your Canada student visa processing centre India VAC locations.</p>
           <p className={styles.card}>Our process reduces Canada student visa refusal reasons and solutions India through clear documentation and preparation. We coach you on how to write statement of purpose for Canada student visa India, provide SOPs for Canada study permit Indian students examples, and explain Canada study permit document translation requirements India. From choosing the best courses to study in Canada for Indian students to comparing diploma vs degree in Canada for Indians job prospects, we make sure you’re ready. Start your journey now with our expert team.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.strong}>Canada Study Visa Appointment India</h3>
           <p className={styles.card}>Whether you wish to study in Ontario from India how to apply student visa, study in British Columbia from India student visa guide, study in Quebec from India student visa requirements, or study in Alberta from India student visa process, we’ve got you covered. We guide you on GIC Canada for Indian students how to buy, securing Canada study visa proof of tuition payment India, and how to show ties to India for Canada student visa to satisfy IRCC officers. We also monitor Canada study permit processing delays 2024 2025 India and prepare a Canada study visa checklist for parents funding education from India.</p>
           <p className={styles.card}>If you’re applying for student visa to Canada for MBBS/engineering from India, exploring part time work while studying in Canada rules for Indians, or looking into a co-op work permit Canada for Indian students, we can assist. We help with Canada study visa medical insurance requirement India, how to convert marksheets for Canada study permit Indian students, and understanding Canada student visa IELTS score requirement for Indians along with alternatives to IELTS for Canada student visa from India. Book your consultation now and get expert guidance every step of the way.</p>
           <h3 className={styles.strong}>Student Visa to Canada for Masters from India</h3>
           <p className={styles.card}>From student visa to Canada for masters from India to apply for Canada student visa after refusal India reapply tips, we manage even complex cases. We explain Canada study permit visa fees refund policy India, update you on Canada study visa success rate for Indian students 2024, and connect you with the best immigration consultants for Canada student visa in India. Our team also handles visa interview appointment reschedule Canada India, creates a Canada study permit arrival checklist for Indian students, and guides on how to get invitation letter for Canada study permit from college.</p>
           <p className={styles.card}>We advise on Canada study permit open work permit spouse rules India, plan your Canada student visa timeline from application to approval India, and answer Canada study visa FAQs for Indian students. We even share Indian student experiences in Canada study visa stories reddit/quora, track Canada study visa attrition rates and cap 2024 2025, and explain how to prepare bank guarantee for Canada student visa India. Call us today to make your application stronger.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.strong}>Canada Student Visa Checklist for Self-Funded Students India</h3>
           <p className={styles.card}>If you face unusual scenarios like Canada study visa not asking for passport India what to do or need to Canada student visa extend stay after study Indian students, we help. We offer scholarship application tips Indian students Canada universities, recommend best programs in Canada for Indian students with job prospects, and explain the difference between study permit and student visa Canada explained India. We discuss Canada student visa consultation fees India — is it worth it, explore part time jobs in Canada for international students Indian students guide, and provide a Canada student visa checklist for self-funded students India.</p>
           <p className={styles.card}>We even handle niche queries like Canada student visa for 50 year olds from India, give guidance on Canada study visa processing centre how to contact VAC India, and prepare a Canada student visa checklist for government scholarship students India. We track university admission deadlines in Canada for Indian students 2024 2025, review Canada study visa travel insurance requirements India, and show how to track Canada study permit application from India. Enquire now to avoid missing key steps.</p>
           <h3 className={styles.strong}>Canada Study Visa Appointment Biometric Booking India</h3>
           <p className={styles.card}>From booking your Canada study visa appointment biometric booking India to advising what to do if Canada student visa delayed India, our services cover every detail. We support Canada student visa, Canada study visa, and study permit Canada applications, connect you to myvisajobs com Canada, help you apply to study in Canada, and guide on Canada visit visa from UK for international students. We help you apply for student visa Canada, Canada schooling visa, SX1 visa Canada, calculate student visa Canada cost, and secure your Canada education visa.</p>
           <p className={styles.card}>We assist with Canada visa without IELTS, match you with the best consultant for Canada study visa, and prepare you to apply study visa for Canada or apply for study permit Canada. We explain each Canada student visa requirement, discuss schooling visa Canada, minor study visa Canada, student permit Canada, and even Canada without IELTS study visa 2022. Talk to our experts now and get one step closer to Canada.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <p className={styles.card}>Are you dreaming of experiencing world-class education in a vibrant and multicultural environment? Canada has emerged as a top destination for international students, offering unparalleled academic opportunities and a high quality of life. At Global Visa Internationals, we understand that navigating the Canadian student visa application process can feel overwhelming. That's why we're here to guide you every step of the way, turning your aspirations of studying in Canada into a reality. Avoide pit falles and contact Global Visa Internationals for Student Visa assistance for Canada </p>
           <h2 className={styles.strong}>Embark on a Journey to Academic Excellence in Canada</h2>
@@ -302,9 +294,7 @@ export default function Canada() {
           <p className={styles.card}>The process of obtaining a Canadian student visa involves several key stages. From understanding the eligibility criteria and gathering the necessary documentation to submitting a complete and accurate application, each step requires careful attention to detail. While the specifics can vary based on your country of origin and chosen program, some common elements include:
 
           </p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <ul className={styles.card}>
             <li>Acceptance letter from a Designated Learning Institution (DLI)</li>
             <li>Proof of sufficient funds to cover tuition fees and living expenses</li>
@@ -317,9 +307,7 @@ export default function Canada() {
 
           <p className={styles.note}> Is there a Frear for rejection of Student visa Contact Global Visa internationals fopr Shooth and stress fir Visa process and Guidence we have 100% sucess of getting Canada Student Visa  </p>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h3 className={styles.strong}>Why Choose Canada for Your Education?</h3>
           <p className={styles.card}>Canada is not just a country; it's a melting pot of cultures, languages, and experiences. With its stunning landscapes, friendly communities, and high standard of living, Canada offers an enriching environment for international students. You'll have the chance to explore breathtaking natural wonders, engage in vibrant city life, and build lifelong friendships with people from diverse backgrounds.</p>
@@ -339,9 +327,7 @@ export default function Canada() {
 
 
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h3 className={styles.strong}></h3>
           <strong className={styles.strong}>Dreaming of a Canadian Education? Here's your guide to making that dream a reality.</strong>
@@ -357,9 +343,7 @@ export default function Canada() {
             </ul>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <section id="Best Scholarships">
             <h3 className={styles.strong}>Best Scholarships in Canada</h3>
@@ -374,9 +358,7 @@ export default function Canada() {
             </ul>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
 
           <p className={styles.note}>Felling harder to to do Canada Visa process Dont wory we are hear, Let Global Visa Internationals take away your stress we are the experts in doing Canada Student Visa process Contact us now with in just one click we will make your visa process stress free , we will take care all of your visa process and guide you Contact now  </p>
@@ -392,9 +374,7 @@ export default function Canada() {
             <li><strong className={styles.strong}>Multicultural Environment:</strong> Experience a diverse and inclusive learning environment.</li>
           </ul>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.strong}>Top Universities in Canada</h3>
           <p className={styles.card}>Canada is home to some of the world's leading universities:</p>
           <ol>
@@ -429,9 +409,7 @@ export default function Canada() {
 
           </ol>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
 
           <p className={styles.card}>Got confuse which type of visa suits you?  Dont wory! We are hear Contact Global Visa  Internationals For Clarity and do your visa process stress free, Just fill the form and our experts will contact you and guide you  </p>
@@ -472,9 +450,7 @@ export default function Canada() {
             <li className={styles.card}><strong className={styles.strong}>Graphic Design:</strong> Visual communication, branding, web design.</li>
           </ul>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h3 className={styles.strong}>Best States for International Students</h3>
           <p className={styles.card}>Some of the best provinces for international students in Canada include:</p>
@@ -499,9 +475,7 @@ export default function Canada() {
             <li className={styles.card}><strong className={styles.strong}>Nova Scotia:</strong> Offers a friendly atmosphere and institutions like Dalhousie University.</li>
           </ol>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <div className="table-responsive">
 
             <div className={styles.container}>
@@ -571,9 +545,7 @@ export default function Canada() {
 
           </div>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
 
           <p className={styles.card}>Do you fell Harder By seeing soo many details !. Dont wory We are hear Contact Global visa internationals And make your Visa Process Stress free</p>
@@ -588,9 +560,7 @@ export default function Canada() {
             <li className={styles.card}><strong className={styles.strong}>Attend Interview (if necessary):</strong> Some applicants may be called for an interview.</li>
           </ul>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
 
           <h3 className={styles.strong}>Processing Time</h3>
           <p className={styles.card}>Processing times vary based on the applicant's country and the volume of applications. On average, it can take 4-12 weeks.</p>

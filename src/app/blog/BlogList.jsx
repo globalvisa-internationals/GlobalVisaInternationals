@@ -1,9 +1,9 @@
-//src\app\blog\BlogList.jsx
+// src\app\blog\BlogList.jsx
 'use client';
 import styles from './blog.module.css';
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const categories = [
@@ -15,6 +15,21 @@ export default function BlogList({ posts }) {
   const [filteredCategory, setFilteredCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const [popup, setPopup] = useState({ show: false, message: "", type: "" });
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check screen size on mount and resize
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
 
   const handleCategoryFilter = (category) => {
     setFilteredCategory(category);
@@ -31,32 +46,50 @@ export default function BlogList({ posts }) {
     currentPage * POSTS_PER_PAGE
   );
 
-
-
-
-
-
   const handleSubscribe = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
 
-    const res = await fetch("/api/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
 
-    const data = await res.json();
-    if (data.success) {
-      alert("✅ Subscribed successfully!");
-    } else {
-      alert("❌ Failed to subscribe.");
+      const data = await res.json();
+      if (data.success) {
+        setPopup({ show: true, message: "✅ Subscribed successfully!", type: "success" });
+        e.target.reset();
+      } else {
+        setPopup({ show: true, message: "❌ " + data.error, type: "error" });
+      }
+    } catch (err) {
+      setPopup({ show: true, message: "❌ Something went wrong.", type: "error" });
     }
-  };
 
+    // Auto-close popup after 3 sec
+    setTimeout(() => setPopup({ show: false, message: "", type: "" }), 3000);
+  };
 
   return (
     <div className={styles.container}>
+      {/* Mobile Category Filter */}
+      {isMobile && (
+        <div className={styles.mobileCategoryFilter}>
+          <select
+            value={filteredCategory}
+            onChange={(e) => handleCategoryFilter(e.target.value)}
+            className={styles.mobileCategorySelect}
+            aria-label="Filter by category"
+          >
+            {categories.map((cat) => (
+              <option key={cat} value={cat}>{cat}</option>
+            ))}
+          </select>
+        </div>
+      )}
+
       <div className={styles.gridWrapper}>
         <div className={styles.blogGrid}>
           {paginatedPosts.map((post, index) => (
@@ -73,7 +106,7 @@ export default function BlogList({ posts }) {
                   alt={post.title}
                   className={styles.image}
                   fill
-                  sizes="(max-width: 300px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   unoptimized
                 />
               </Link>
@@ -108,24 +141,27 @@ export default function BlogList({ posts }) {
           ))}
         </div>
 
-        <aside className={styles.sidebar}>
-          <h2>Popular Categories</h2>
-          <ul className={styles.categoryList} role="list">
-            {categories.map((cat) => (
-              <li
-                key={cat}
-                className={`${filteredCategory === cat ? styles.activeCategory : ''}`}
-                onClick={() => handleCategoryFilter(cat)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && handleCategoryFilter(cat)}
-                aria-current={filteredCategory === cat ? "true" : "false"}
-              >
-                {cat}
-              </li>
-            ))}
-          </ul>
-        </aside>
+        {/* Desktop Sidebar */}
+        {!isMobile && (
+          <aside className={styles.sidebar}>
+            <h2>Popular Categories</h2>
+            <ul className={styles.categoryList} role="list">
+              {categories.map((cat) => (
+                <li
+                  key={cat}
+                  className={`${filteredCategory === cat ? styles.activeCategory : ''}`}
+                  onClick={() => handleCategoryFilter(cat)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCategoryFilter(cat)}
+                  aria-current={filteredCategory === cat ? "true" : "false"}
+                >
+                  {cat}
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
       </div>
 
       {totalPages > 1 && (
@@ -159,7 +195,6 @@ export default function BlogList({ posts }) {
         </div>
       )}
 
-
       {/* Subscribe Box */}
       <div className={styles.subscribeBox}>
         <h3>Subscribe to Our Blog</h3>
@@ -167,31 +202,7 @@ export default function BlogList({ posts }) {
 
         <form
           className={styles.subscribeForm}
-          onSubmit={async (e) => {
-            e.preventDefault();
-            const email = e.target.email.value;
-
-            try {
-              const res = await fetch("/api/subscribe", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email }),
-              });
-
-              const data = await res.json();
-              if (data.success) {
-                setPopup({ show: true, message: "✅ Subscribed successfully!", type: "success" });
-                e.target.reset();
-              } else {
-                setPopup({ show: true, message: "❌ " + data.error, type: "error" });
-              }
-            } catch (err) {
-              setPopup({ show: true, message: "❌ Something went wrong.", type: "error" });
-            }
-
-            // Auto-close popup after 3 sec
-            setTimeout(() => setPopup({ show: false, message: "", type: "" }), 3000);
-          }}
+          onSubmit={handleSubscribe}
         >
           <input
             type="email"
@@ -205,7 +216,7 @@ export default function BlogList({ posts }) {
           </button>
         </form>
 
-        {/* ✅ Custom Popup */}
+        {/* Custom Popup */}
         {popup.show && (
           <div
             className={`${styles.popup} ${popup.type === "success" ? styles.success : styles.error}`}
@@ -214,8 +225,6 @@ export default function BlogList({ posts }) {
           </div>
         )}
       </div>
-
     </div>
-
   );
 }

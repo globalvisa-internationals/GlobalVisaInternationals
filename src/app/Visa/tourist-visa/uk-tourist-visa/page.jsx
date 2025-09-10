@@ -203,27 +203,26 @@ export default function UKTouristVisa() {
           className={styles.VisaImage}
         />
       </div>
-      <h1 className={styles.UKTitle}>UK Tourist Visa from India 2025 – Eligibility, Requirements & Fees | Global Visa Internationals</h1>
       <div className={styles.VisaSec}>
 
-
         <div className={styles.VisaData}>
-          <section className={styles.card}>
+          <section>
+            <h1 className={styles.Title}>Dubai Tourist Visa from India 2025 – Eligibility, Requirements & Fees | Global Visa Internationals</h1>
 
-            <h2 className={styles.subTitle}>✈ Travel to the UK with a Standard Visitor Visa</h2>
-            <p>Planning a trip to the United Kingdom? A Standard Visitor visa allows Indian travelers to visit for tourism, to see family, or for a short-term business trip. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
+            <h2 className={styles.subTitle}>✈ Travel to Dubai with a Tourist E-Visa</h2>
+            <p>Planning a trip to the mesmerizing city of Dubai? A tourist visa is required for Indian citizens to visit for tourism, to see family, or for a short-term business trip. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We are your trusted partner for a stress-free online visa application process.</p>
           </section>
 
           <div className={styles.section}>
-            <section className={styles.card}>
-              <h2 className={styles.subTitle}>Visa Processing Overview</h2>
-              <p>Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your visa application meets the expectations of UK Visas and Immigration (UKVI) and that your travel purpose is clearly and professionally represented.</p>
+            <section>
+              <h2 className={styles.subTitle}>Dubai Visa Processing Overview</h2>
+              <p>Global Visa Internationals (GVI) will manage the entire documentation process for your Dubai e-visa to ensure your application meets the expectations of the General Directorate of Residency and Foreigners Affairs (GDRFA) and that your travel purpose is clearly and professionally represented.</p>
             </section>
 
-            <section className={styles.card}>
+            <section>
               <h3 className={styles.subTitle}>Our Services Include:</h3>
               <ul>
-                <li>Online application form filling</li>
+                <li>Online visa application form filling</li>
                 <li>Covering letter and documentation preparation</li>
                 <li>Personalized checklist and guidance</li>
                 <li>Providing accepted samples for the required documents</li>
@@ -232,159 +231,114 @@ export default function UKTouristVisa() {
               </ul>
             </section>
 
-            <section className={styles.card}>
+            <section>
               <h3 className={styles.subTitle}>Timeline:</h3>
-              <p>Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days.</p>
+              <p>Processing for your Dubai visa online application will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 1 to 2 working days.</p>
             </section>
           </div>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-
-          <section className={styles.card}>
-            <h2 className={styles.subTitle}>🕒 UK Visa Duration Rule</h2>
-            <p>A Standard Visitor visa typically allows you to stay for up to 6 months. However, you can also apply for a long-term Standard Visitor visa for 2, 5, or 10 years if you visit the UK regularly. Note that even with a long-term visa, you can only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.</p>
-            <p>👉 With GVI, you’ll never miscalculate your stay—we ensure full compliance with UK visa rules.</p>
+          <section>
+            <h2 className={styles.subTitle}>🕒 Dubai Visa Duration & Types</h2>
+            <p>A Dubai tourist visa typically allows you to stay for up to 30 or 60 days. You can also apply for a multiple entry Dubai visa. There are also short-term options like the 14-day tourist visa and transit visa Dubai for shorter layovers. Overstaying your visa may lead to fines or an entry ban. Our experts ensure you understand the validity and stay duration to avoid any issues.</p>
+            <p>👉 With GVI, you’ll never miscalculate your stay—we ensure full compliance with UAE visa rules.</p>
           </section>
 
-          <section className={styles.card}>
-            <h2 className={styles.subTitle}>UK Tourist Visa Documents & Requirements for Indian Applicants</h2>
-            <p>Before applying, ensure you meet the UK visa eligibility requirements. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
+          <section>
+            <h2 className={styles.subTitle}>Dubai Tourist Visa Documents & Requirements for Indian Citizens</h2>
+            <p>Before applying, ensure you meet the Dubai visa requirements. If these criteria are met, Global Visa Internationals (GVI) will accept your case and manage the entire online application process. You won't need to visit a center; we handle everything electronically. This includes applications for a Dubai visa for family, a Dubai visa for a single lady, or a Dubai visa for a minor.</p>
           </section>
 
-          <section className={styles.card}>
+          <section>
             <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
             <ul>
-              <li><b className={styles.strong}>Valid Passport:</b> Must be valid for the entire duration of your stay in the UK, with at least one blank page for the visa vignette.</li>
-              <li><b className={styles.strong}>Travel History:</b> Previous international travel and a record of international travel stamps are crucial. GVI helps you highlight these to strengthen your application.</li>
+              <li><b className={styles.strong}>Valid Passport:</b> Must be valid for at least 6 months from your travel date. We will need a scanned color copy of the first and last pages.</li>
+              <li><b className={styles.strong}>Previous Travel:</b> While not always mandatory, having a good travel history can strengthen your application.</li>
             </ul>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-
-          <section className={styles.card}>
-            <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
-            <p>You must prove you have sufficient funds to support your trip without working or relying on public funds. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹2–3 lakh (or approx. £2,000-£3,000) in your bank account. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.</p>
+          <section>
+            <h3 className={styles.subTitle}>2. Photograph</h3>
             <ul>
-              <li><b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank.</li>
-              <li><b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 3 years to prove a stable income source.</li>
+              <li><b className={styles.strong}>Passport-Sized Photo:</b> A recent color photograph with a white background. Our team will guide you on the exact specifications for your Dubai visa application.</li>
             </ul>
           </section>
 
-          <section className={styles.card}>
-            <h3 className={styles.subTitle}>3. Employment & Professional Documentation</h3>
+          <section>
+            <h3 className={styles.subTitle}>3. Travel & Accommodation Proof</h3>
             <ul>
-              <li><b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.</li>
-              <li><b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 3 years’ ITRs. We also recommend a brief business profile.</li>
-              <li><b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university.</li>
+              <li><b className={styles.strong}>Confirmed Flight Tickets:</b> A scanned copy of your confirmed return flight ticket is a mandatory requirement.</li>
+              <li><b className={styles.strong}>Accommodation Proof:</b> While not always strictly required, confirmed hotel reservations covering your stay are highly recommended. If staying with a relative, we'll guide you on the necessary invitation letter.</li>
             </ul>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-
-          <section className={styles.card}>
-            <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
+          <section>
+            <h3 className={styles.subTitle}>4. Other Required Documents</h3>
             <ul>
-              <li><b className={styles.strong}>Flight & Hotel Bookings:</b> Provide a detailed travel itinerary covering your entire stay. It's not mandatory to have confirmed return flight tickets, but a travel plan is required.</li>
-              <li><b className={styles.strong}>Accommodation Proof:</b> Provide confirmed hotel reservations covering your entire stay. If staying with a friend or relative, you will need a letter of invitation and proof of their UK address and immigration status.</li>
+              <li><b className={styles.strong}>Visa Cover Letter & Itinerary:</b> A well-drafted letter explaining the purpose of your trip and a detailed travel plan is your opportunity to convince the visa officer. Our experts draft a professional one for every client to maximize their chances of success for a Dubai visit visa for Indian passport holders.</li>
             </ul>
+            <p>For specific cases like a Dubai visa for honeymoon or a Dubai visa for a business trip, we provide tailored guidance on the documents needed to support your purpose.</p>
           </section>
 
-          <section className={styles.card}>
-            <h3 className={styles.subTitle}>5. Visa Cover Letter & Itinerary</h3>
-            <p>A well-written UK visa cover letter is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional cover letter and a detailed itinerary for every client to maximize their chances of success.</p>
-          </section>
-
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-
-          <section className={styles.card}>
-            <h2 className={styles.subTitle}>UK Tourist Visa Fees (India 2025)</h2>
-            <p>As of April 2025, the UK visa fees are subject to change. The Standard Visitor visa fee is approximately £127 for a 6-month visa. The long-term visa fees are higher. VFS Global service charges are additional. Please note that all fees are non-refundable in case of visa refusal.</p>
+          <section>
+            <h2 className={styles.subTitle}>Dubai Visa Fees for Indian Citizens 2025</h2>
+            <p>The Dubai visa cost from India is subject to change. The fees depend on the type and duration of the visa. The prices below are approximate and may vary with currency exchange rates.</p>
             <ul>
-              <li><b className={styles.strong}>Standard Visitor Visa (up to 6 months):</b> £127 (approx. ₹15,100)</li>
-              <li><b className={styles.strong}>Long-term Visitor Visa (up to 2 years):</b> £475 (approx. ₹56,500)</li>
-              <li><b className={styles.strong}>Long-term Visitor Visa (up to 5 years):</b> £848 (approx. ₹1,00,900)</li>
-              <li><b className={styles.strong}>Long-term Visitor Visa (up to 10 years):</b> £1,059 (approx. ₹1,26,000)</li>
-              <li>VFS service charges and any optional premium services are extra and vary by country/centre.</li>
-
+              <li><b className={styles.strong}>14-Day Tourist Visa:</b> Approximately ₹7,099</li>
+              <li><b className={styles.strong}>30-Day Dubai Tourist Visa Price:</b> Approximately ₹7,299</li>
+              <li><b className={styles.strong}>60-Day Dubai Visa Cost:</b> Approximately ₹12,399</li>
+              <li><b className={styles.strong}>30-Day Multiple-Entry Visa:</b> Approximately ₹16,599</li>
             </ul>
+            <p>Please note that all fees are non-refundable in case of visa refusal. These costs are for the e-visa and do not include our service charges. For urgent Dubai visa requirements, we also offer an express Dubai visa service for an additional fee.</p>
           </section>
 
-          <section className={styles.card}>
-            <h2 className={styles.subTitle}>Common Reasons for UK Visa Rejection & How We Solve Them</h2>
-            <p>Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues.</p>
+          <section>
+            <h2 className={styles.subTitle}>Dubai Visa Processing Time from India</h2>
+            <p>The processing time for a Dubai tourist visa for Indian nationals is generally very fast. Here are some general timelines:</p>
             <ul>
-              <li><b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per UKVI standards to ensure everything is perfect.</li>
-              <li><b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.</li>
-              <li><b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared cover letters and itineraries clearly explain your travel plans and ties to India.</li>
-              <li><b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
+              <li><b className={styles.strong}>Standard Processing Time:</b> 3 to 4 working days.</li>
+              <li><b className={styles.strong}>Urgent/Express Service:</b> You can choose to pay an additional fee for faster processing (24 to 48 working hours).</li>
+              <li><b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 1–2 working days, ensuring it is submitted in a timely manner for quick approval.</li>
             </ul>
           </section>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-
-          <section className={styles.card}>
-            <h2 className={styles.subTitle}>UK Tourist Visa Processing Time from India</h2>
-            <p>The processing time for a UK Standard Visitor visa can vary. Here are some general timelines:</p>
-            <ul>
-              <li><b className={styles.strong}>Standard Processing Time:</b> The UKVI service standard is to process 90% of non-settlement visa applications within 3 weeks.</li>
-              <li><b className={styles.strong}>Peak Season:</b> Can extend up to 6 weeks or more.</li>
-              <li><b className={styles.strong}>Priority and Super Priority Services:</b> You can choose to pay an additional fee for faster processing (Priority: 5 working days; Super Priority: next working day), where available.</li>
-              <li><b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the UKVI in a timely manner.</li>
-            </ul>
-          </section>
-
-          <section className={styles.card}>
-            <h2 className={styles.subTitle}>The VFS Global Application Process: A Step-by-Step Guide</h2>
-            <p>As VFS Global is the official partner for UK Visas and Immigration in India, we manage this process for you. Here’s a quick overview of what to expect:</p>
+          <section>
+            <h2 className={styles.subTitle}>The Online Application Process: A Step-by-Step Guide</h2>
+            <p>As an experienced visa consultant in India, we manage the entire process for you. Here’s a quick overview of what to expect when you apply for your Dubai visa online with us:</p>
             <ol>
-              <li><b className={styles.strong}>Online Application & Appointment Booking:</b> We fill out the online form on the GOV.UK website and book your VFS appointment for you.</li>
-              <li><b className={styles.strong}>Document Submission & Biometrics:</b> You visit the VFS center in person to submit the verified documents and provide your fingerprints and a photo.</li>
-              <li><b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.</li>
+              <li><b className={styles.strong}>Document Collection:</b> You provide us with the required documents electronically (scans or high-quality photos).</li>
+              <li><b className={styles.strong}>Application & Filing:</b> We fill out and submit the application on your behalf to the relevant immigration authorities.</li>
+              <li><b className={styles.strong}>E-Visa & Tracking:</b> Once approved, we will send you your electronic visa via email. We help you track your Dubai visa online application status throughout the process.</li>
             </ol>
           </section>
-          <a href="[https://visa.vfsglobal.com/ind/en/gbr/](https://visa.vfsglobal.com/ind/en/gbr/)" target="_blank" rel="noopener noreferrer">VFS Global — UK Visas & Immigration</a>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+          <section>
+            <h2 className={styles.subTitle}>Transparent Pricing</h2>
+            <p>Choose the right Dubai visa assistance package for your needs:</p>
+            <ul>
+              <li><b className={styles.strong}>Basic (₹2,999 ):</b> Checklist + document review</li>
+              <li><b className={styles.strong}>Standard (₹4,999 ):</b> End-to-end application, filing, and biometrics guidance</li>
+            </ul>
+            <p>Please note that these are our service charges and do not include the government visa fees.</p>
+          </section>
 
-          <h2 className={styles.subTitle}>Transparent Pricing</h2>
-          <p>Choose the right UK visa assistance package for your needs:</p>
-          <ul>
-            <li><b className={styles.strong}>Basic (₹6,999 ):</b> Checklist + document review</li>
-            <li><b className={styles.strong}>Standard (₹8,999 ):</b> End-to-end application, filing, appointment booking, and biometrics guidance</li>
-          </ul>
+          <section>
+            <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
+            <p>At GVI, we are committed to making your Dubai visa process stress-free and successful. Our expertise and dedication have led to:</p>
+            <ul>
+              <li>Over 5,000 UAE tourist visas processed for Indian nationals.</li>
+              <li>High client satisfaction rate across India.</li>
+              <li>Specialized assistance for complex cases, including a transit visa Dubai.</li>
+              <li>Experienced visa consultants who provide personalized, country-specific advice. We have successfully processed visas from cities like Dubai visa from Delhi, Dubai visa from Mumbai, and Dubai visa from Bangalore.</li>
+            </ul>
+          </section>
 
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <p>At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
-          <ul>
-            <li>2,200+ UK visas processed since 2017</li>
-            <li>98% client satisfaction rate across India</li>
-            <li>Specialized assistance for re-application after rejection</li>
-            <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
-          </ul>
-
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
-
-          <h2 className={styles.subTitle}>Ready to Apply?</h2>
-          <p>With GVI, you don’t need to worry about rejections or missing documents.</p>
-          <p>👉 Start your UK visa application today with Global Visa Internationals and travel to the UK with confidence.</p>
-          <br />
-          <a href="/contact" className={styles.ctaButton}>Get a free consultation today!</a>
-
-
+          <section>
+            <h2 className={styles.subTitle}>Ready to Apply?</h2>
+            <p>With GVI, you don’t need to worry about rejections or missing documents. We are your go-to guide for a smooth process.</p>
+            <p>👉 Start your Dubai visa for Indian passport holders today with Global Visa Internationals and travel with confidence.</p>
+            <br />
+            <a href="/contact" className={styles.ctaButton}>Get a free consultation today!</a>
+          </section>
         </div>
 
 

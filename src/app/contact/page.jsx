@@ -1,8 +1,6 @@
-
 import Head from 'next/head';
 import styles from './page.module.css';
 import Image from 'next/image';
-
 import React from 'react';
 import VisaForm from '@/Components/VisaForm';
 

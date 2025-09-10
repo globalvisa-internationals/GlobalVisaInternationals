@@ -236,10 +236,7 @@ export default function Dubai() {
             <li className={styles.card}><b className={styles.strong}>Singapore River Safari:</b> Explore the River Safari, a wildlife park featuring river-themed exhibits and the Giant Panda Forest.</li>
             <li className={styles.card1}><b className={styles.strong}>Singapore National Gallery:</b> Discover Singapore's art and culture at the National Gallery, showcasing a vast collection of Southeast Asian art.</li>
           </ul>
-          <div className={styles.formSection1}>
 
-            <VisaForm />
-          </div>
 
           <h3 className={styles.subTitle}>Discover the Reasons to Visit Singapore</h3>
           <p className={styles.card}>Singapore's unique blend of modernity, cultural richness, and natural beauty makes it a compelling destination for all types of travelers:</p>
@@ -258,10 +255,7 @@ export default function Dubai() {
           </ol>
 
 
-          <div className={styles.formSection1}>
 
-            <VisaForm />
-          </div>
 
           <h2 className={styles.subTitle}>🇸🇬 Singapore Travel Cost Guide – May 2025</h2>
 
@@ -316,10 +310,7 @@ export default function Dubai() {
 
 
 
-          <div className={styles.formSection1}>
 
-            <VisaForm />
-          </div>
           <h2 className={styles.subTitle}>Navigating the Japan Tourist Visa Process</h2>
           <p className={styles.card1}>Obtaining a tourist visa for Japan involves several key steps. While the specific requirements may vary based on your nationality, the general process typically includes:</p>
           <ol>
@@ -331,9 +322,7 @@ export default function Dubai() {
             <li className={styles.card1}>Receiving Your Visa: Once your application is approved, your visa will be affixed to your passport.</li>
           </ol>
           <p className={styles.card}>The Japan visa process can seem complex, but Global Visa Internationals is here to simplify it for you.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your Guide to Japan Visa Application</h3>
           <p className={styles.card}>Planning your dream trip to Japan should be exciting, not stressful. At Global Visa Internationals, we provide comprehensive assistance to ensure a smooth and successful Japan tourist visa application process.</p>
           <b className={styles.strong}>Our Japan Visa Services include:</b>
@@ -346,10 +335,7 @@ export default function Dubai() {
           </ul>
           <p className={styles.note}>Don't let the complexities of the Japan visa application stand in the way of your adventure. Contact Global Visa Internationals today for expert support and personalized assistance. Let us help you turn your dream of exploring Japan into a reality!</p>
 
-          <div className={styles.formSection1}>
 
-            <VisaForm />
-          </div>
           <h1 className={styles.Title}>Navigating Singapore Visa Requirements for Indian Citizens with Global Visa Internationals</h1>
           <p className={styles.card}>Planning your dream Singapore holiday? For Indian citizens holding ordinary passports, a valid Singapore tourist visa is essential before you embark on your journey to explore the stunning Singapore skyline and vibrant Singapore culture. <strong className={styles.strong}>Global Visa Internationals</strong> is here to simplify this crucial step, ensuring a smooth and stress-free visa application process. <strong className={styles.strong}>Don't take the risk of visa rejection; contact Global Visa Internationals for expert assistance and guidance!</strong></p>
 
@@ -366,9 +352,7 @@ export default function Dubai() {
             <li className={styles.card}><strong className={styles.strong}>Form V39A (Letter of Introduction for Visa Application - LOI):</strong> This form might be a mandatory requirement and typically needs to be issued by a local contact in Singapore, who must be a Singapore citizen or a Permanent Resident. <strong className={styles.strong}>Global Visa Internationals</strong> can provide guidance on this requirement.</li>
             <li className={styles.card1}><strong className={styles.strong}>Other Supporting Documents:</strong> Depending on your individual circumstances (such as employment status, business ownership, or student status), additional Singapore visa documents like salary slips, business registration certificates, or a No Objection Certificate from parents might be necessary.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>How to Apply for Your Singapore Visa with Global Visa Internationals (Singapore Visa Online Application):</h2>
           <p className={styles.card}>The Singapore High Commission in India mandates that all visa applications be submitted through authorized visa agents. <strong className={styles.strong}>Global Visa Internationals</strong> is your trusted partner in navigating this process seamlessly. Here's how we assist you with your Singapore visa online application:</p>
           <ul>
@@ -383,9 +367,7 @@ export default function Dubai() {
             <li className={styles.card1}><strong className={styles.strong}>Regular Application Updates:</strong> We will keep you informed about the progress of your Singapore visa application, providing you with peace of mind throughout the process.</li>
             <li className={styles.card}><strong className={styles.strong}>Visa Retrieval Guidance:</strong> Once your Singapore visa is approved, we will provide you with clear instructions on how to receive your e-visa, which you will need to print and carry with your passport during your travel.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>Understanding Singapore Visa Processing Time:</h2>
           <p className={styles.card1}>The typical Singapore visa processing time for Indian citizens is approximately <strong className={styles.strong}>3 to 5 working days,</strong>excluding the day of submission, weekends, and Singaporean public holidays. However, it's important to note that processing times can vary based on individual cases and the volume of applications received by the ICA. To avoid any last-minute stress, we strongly advise you to apply for your Singapore tourist visa at least two weeks before your intended travel date. Contact Global Visa Internationals for timely processing assistance.</p>
 
@@ -396,9 +378,7 @@ export default function Dubai() {
             <li><strong className={styles.strong}>Global Visa Internationals</strong> offers competitive service charges for our expert assistance. For detailed information on our service fees, please fill out the form, and our experts will contact you immediately.</li>
           </ul>
           <p className={styles.card1} >Therefore, the overall cost for your Singapore tourist visa will be the sum of these two components. Contact Global Visa Internationals for transparent and accurate information regarding the tourist visa fees Singapore.</p>
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>Important Points to Keep in Mind:</h2>
           <ul>
             <li className={styles.card}><strong className={styles.strong}>Visa-Free Transit Facility (VFTF):</strong> If you are an Indian national transiting through Singapore by air to or from a third country, you might be eligible for the 96-hour Visa-Free Transit Facility (VFTF) under specific conditions. These conditions include possessing a valid onward/return air ticket and, in some instances, a valid visa or long-term pass from certain countries (Australia, Canada, Germany, Japan, New Zealand, Switzerland, UK, USA).</li>
@@ -407,9 +387,7 @@ export default function Dubai() {
             <li className={styles.card1}><strong className={styles.strong}>SG Arrival Card:</strong> All travelers to Singapore are required to submit an SG Arrival Card electronically via the official ICA website or mobile app within three days prior to their arrival. <strong className={styles.strong}>Global Visa Internationals</strong> can provide you with guidance on this mandatory requirement.</li>
           </ul>
 
-          <div className={styles.formSection1}>
-            <VisaForm />
-          </div>
+
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Visa Needs?</h2>
           <p>At Global Visa Internationals, we understand that the visa application process can be complex and time-consuming. That's why we offer:</p>
           <ul>
