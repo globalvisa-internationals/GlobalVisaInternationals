@@ -285,39 +285,19 @@ export default function Home() {
 
               <AnimatedSection direction="up" delay={0.2} reverseOnExit={true}>
                 <div className={styles.storyCard}>
-                  <p>
-                    We specialize in student visa consultant services for aspiring
-                    international students. From guiding you through the visa
-                    documentation checklist to offering detailed visa interview
-                    preparation, we simplify the process. As a leading Canada study visa
-                    consultant, UK study visa consultant, and USA study visa consultant,
-                    we offer dedicated support to help you achieve your academic dreams
-                    abroad. We also assist with tourist visas, including Canada tourist
-                    visa and Australia tourist visa applications.
-                  </p>
+                  <p>We specialize in student visa consultant services for aspiringinternational students. From guiding you through the visadocumentation checklist to offering detailed visa interviewpreparation, we simplify the process. As a leading Canada study visaconsultant, UK study visa consultant, and USA study visa consultant,we offer dedicated support to help you achieve your academic dreamsabroad. We also assist with tourist visas, including Canada touristvisa and Australia tourist visa applications.</p>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.3} reverseOnExit={true}>
                 <div className={styles.storyCard}>
-                  <p>
-                    Our team of certified visa processing agents and professionals with
-                    verified immigration agent qualifications work diligently to reduce
-                    your visa processing time and increase your approval chances.
-                    Whether you're looking to study, work, or travel abroad, we deliver
-                    reliable, end-to-end solutions that open doors to global
-                    opportunities.
-                  </p>
+                  <p>  Our team of certified visa processing agents and professionals with  verified immigration agent qualifications work diligently to reduce  your visa processing time and increase your approval chances.  Whether you're looking to study, work, or travel abroad, we deliver  reliable, end-to-end solutions that open doors to global  opportunities.</p>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.4} reverseOnExit={true}>
                 <div className={styles.storyCard}>
-                  <p>
-                    Global Visa Internationals is a private Visa consultancy which is
-                    not affiliated with any government or embassy. We offer independent
-                    visa and immigration assistance & services.
-                  </p>
+                  <p>  Global Visa Internationals is a private Visa consultancy which is  not affiliated with any government or embassy. We offer independent  visa and immigration assistance & services.</p>
                 </div>
               </AnimatedSection>
             </div>
@@ -335,20 +315,8 @@ export default function Home() {
 
           {/* Main Description */}
           <AnimatedSection direction="down" reverseOnExit={true}>
-            <p>
-              At <strong>Global Visa Internationals</strong>, we specialize in comprehensive
-              <strong> visa consultation services</strong>, helping individuals and families
-              successfully navigate the complex visa process for over <strong>9+ years</strong>.
-              Based in <strong>Bangalore</strong>, we've processed
-              <strong> 55,000+ visas</strong> and conducted over
-              <strong> 75,000 expert consultations</strong> across major visa categories.
-            </p>
-            <p>
-              While we do not issue visas or represent any government body, our certified
-              consultants offer <strong>personalized advisory</strong>,
-              <strong> documentation support</strong>, and <strong>eligibility guidance</strong>
-              for all visa types.
-            </p>
+            <p>  At <strong>Global Visa Internationals</strong>, we specialize in comprehensive  <strong> visa consultation services</strong>, helping individuals and families  successfully navigate the complex visa process for over <strong>9+ years</strong>.  Based in <strong>Bangalore</strong>, we've processed  <strong> 55,000+ visas</strong> and conducted over  <strong> 75,000 expert consultations</strong> across major visa categories.</p>
+            <p>  While we do not issue visas or represent any government body, our certified  consultants offer <strong>personalized advisory</strong>,  <strong> documentation support</strong>, and <strong>eligibility guidance</strong>  for all visa types.</p>
           </AnimatedSection>
 
           {/* SIDE-BY-SIDE CARDS */}
@@ -387,16 +355,8 @@ export default function Home() {
 
           {/* Bottom Description */}
           <AnimatedSection direction="down" reverseOnExit={true}>
-            <p>
-              Whether you're planning to <strong>work in Australia</strong>,
-              <strong> study in Canada</strong>, or <strong>travel to Europe</strong>,
-              our consultancy provides step-by-step guidance tailored to your goals.
-            </p>
-            <p>
-              <strong>Disclaimer:</strong> Global Visa Internationals is a private visa
-              consultancy and is not affiliated with any government or embassy.
-              We provide independent visa and immigration assistance services.
-            </p>
+            <p>  Whether you're planning to <strong>work in Australia</strong>,  <strong> study in Canada</strong>, or <strong>travel to Europe</strong>,  our consultancy provides step-by-step guidance tailored to your goals.</p>
+            <p>  <strong>Disclaimer:</strong> Global Visa Internationals is a private visa  consultancy and is not affiliated with any government or embassy.  We provide independent visa and immigration assistance services.</p>
           </AnimatedSection>
         </section>
 
@@ -497,12 +457,7 @@ export default function Home() {
                   loading="lazy"
                 />
                 <h3>Our Mission</h3>
-                <p>
-                  We aim to simplify international visa and immigration processes
-                  with expert guidance, ethical support, and end-to-end assistance,
-                  empowering students, professionals, and families to achieve
-                  their global aspirations with confidence.
-                </p>
+                <p>  We aim to simplify international visa and immigration processes  with expert guidance, ethical support, and end-to-end assistance,  empowering students, professionals, and families to achieve  their global aspirations with confidence.</p>
               </div>
             </AnimatedSection>
 
@@ -515,11 +470,7 @@ export default function Home() {
                   loading="lazy"
                 />
                 <h3>Our Vision</h3>
-                <p>
-                  To be the most trusted and innovative visa consultancy, helping
-                  people overcome borders and create opportunities worldwide
-                  through reliable, transparent, and client-focused solutions.
-                </p>
+                <p>  To be the most trusted and innovative visa consultancy, helping  people overcome borders and create opportunities worldwide  through reliable, transparent, and client-focused solutions.</p>
               </div>
             </AnimatedSection>
 
@@ -532,11 +483,7 @@ export default function Home() {
                   loading="lazy"
                 />
                 <h3>Core Values</h3>
-                <p>
-                  Transparency, Client-First, Empathy, Accountability, and a
-                  Global Perspective guide everything we do to support your
-                  international journey.
-                </p>
+                <p>  Transparency, Client-First, Empathy, Accountability, and a  Global Perspective guide everything we do to support your  international journey.</p>
               </div>
             </AnimatedSection>
           </section>
@@ -734,12 +681,7 @@ export default function Home() {
           </div>
         </section>
 
-        <p className={styles.note}>
-          {" "}
-          This service is provided by Global Visa Internationals, an independent
-          consultancy. We are not affiliated with the Australian Government or
-          any embassy.
-        </p>
+        <p className={styles.note}>  {" "}  This service is provided by Global Visa Internationals, an independent  consultancy. We are not affiliated with the Australian Government or  any embassy.</p>
       </main>
     </>
   );
