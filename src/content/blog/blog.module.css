@@ -335,6 +335,118 @@
 }
 
 
+
+
+.storyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  text-align: justify;
+  background: var(--background);
+}
+
+/* ===== IMAGE WRAPPER ===== */
+.imageWrapper {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+/* ===== IMAGE STYLING ===== */
+.responsiveImage {
+  border-radius: 12px;
+  object-fit: cover;
+  /* better than fill for proper scaling */
+}
+
+/* ===== TEXT CONTENT ===== */
+.textContent {
+  max-width: 700px;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 10px;
+  margin-top: 0;
+  padding-top: 0;
+  color: var(--text);
+}
+
+.textContent h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #057A7E;
+  margin-bottom: 15px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* ===== STORY CARD ===== */
+.storyCard {
+  margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .storyContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 3 / 4;
+    /* Ensures proper height */
+  }
+
+  /* Fix for next/image fill to keep container height */
+  .imageWrapper::before {
+    content: "";
+    display: block;
+    padding-top: 133%;
+    /* fallback for aspect ratio */
+  }
+
+  .textContent {
+    max-width: 100%;
+    font-size: 15px;
+    padding: 0 5px;
+  }
+
+  .textContent h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  /* Make each paragraph a card on mobile */
+  .storyCard {
+    background: #cefafc;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin: 10px auto;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .storyCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
 /* @media (prefers-color-scheme: dark) {
   .bold {
     color: #fff;
