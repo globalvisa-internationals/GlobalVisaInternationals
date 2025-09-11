@@ -30,7 +30,7 @@ export default function VisaForm() {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowPopup(true);
-    }, 200000);
+    }, 10000); // 5000 milliseconds = 5 seconds
     return () => clearInterval(interval);
   }, []);
 
