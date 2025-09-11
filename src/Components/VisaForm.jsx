@@ -7,15 +7,12 @@ import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export default function VisaForm() {
   const { executeRecaptcha } = useGoogleReCaptcha();
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [phone, setPhone] = useState('');
-  const [phoneError, setPhoneError] = useState('');
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [successPopup, setSuccessPopup] = useState(false);
+  const [phone, setPhone] = useState('');
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
-  // 🔹 Controlled form data
   const [formData, setFormData] = useState({
     name: '',
     country: '',
@@ -26,110 +23,89 @@ export default function VisaForm() {
     email: '',
   });
 
-  // 🔹 Auto popup (10s for demo, set to 1000000 in production)
+  // Show popup after 10 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      setShowPopup(true);
-    }, 10000); // 5000 milliseconds = 5 seconds
-    return () => clearInterval(interval);
+    const timer = setTimeout(() => setShowPopup(true), 5000);
+    return () => clearTimeout(timer);
   }, []);
 
-  // 🔹 Input change handler
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // 🔹 Phone validation
-  const validatePhone = (number) => {
-    return number.replace(/\D/g, '').length >= 10;
-  };
-
-  // 🔹 Submit handler
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsSubmitting(true);
-
-    if (!validatePhone(phone)) {
-      setPhoneError('❌ Please enter a valid phone number.');
-      setIsSubmitting(false);
-      return;
-    } else {
-      setPhoneError('');
+  const validateForm = () => {
+    if (phone.replace(/\D/g, '').length < 10) {
+      alert('❌ Please enter a valid phone number.');
+      return false;
     }
 
     if (!agreedToTerms) {
       alert('❌ Please agree to the Terms & Conditions.');
-      setIsSubmitting(false);
-      return;
+      return false;
     }
 
-    if (!executeRecaptcha) {
-      alert('❌ reCAPTCHA not ready');
-      setIsSubmitting(false);
-      return;
-    }
-
-    const token = await executeRecaptcha('inquiry_form');
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      setIsSubmitting(false);
-      return;
-    }
-
-    const payload = {
-      ...formData,
-      phone,
-      recaptchaToken: token,
-    };
-
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    })
-      .then(async (res) => {
-        const data = await res.json();
-        if (!data.success) {
-          alert('❌ Email sending failed.');
-        } else {
-          // ✅ Reset only after success
-          setFormData({
-            name: '',
-            country: '',
-            immigration_type: '',
-            applicants: '',
-            age: '',
-            education: '',
-            email: '',
-          });
-          setPhone('');
-          setAgreedToTerms(false);
-          setSuccessPopup(true);
-        }
-      })
-      .catch((err) => {
-        console.error(err);
-        alert('❌ Submission error.');
-      })
-      .finally(() => setIsSubmitting(false));
+    return true;
   };
 
-  // 🔹 Reusable form UI
-  const FormUI = () => (
-    <form onSubmit={handleSubmit}>
-      <div className={styles.row1}>
-        <input
-          className={styles.input}
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Enter your name"
-          required
-        />
-      </div>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-      <div className={styles.row1}>
+    if (!validateForm()) return;
+    if (!executeRecaptcha) {
+      alert('❌ reCAPTCHA not ready');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const token = await executeRecaptcha('inquiry_form');
+      if (!token) {
+        alert("❌ Please verify you're not a robot");
+        return;
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, phone, recaptchaToken: token }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Reset form
+        setFormData({
+          name: '',
+          country: '',
+          immigration_type: '',
+          applicants: '',
+          age: '',
+          education: '',
+          email: '',
+        });
+        setPhone('');
+        setAgreedToTerms(false);
+        setSuccessPopup(true);
+      } else {
+        alert('❌ Submission failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('❌ Submission error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Form fields configuration for cleaner JSX
+  const formFields = [
+    { type: 'text', name: 'name', placeholder: 'Enter your name', required: true },
+    {
+      type: 'custom',
+      name: 'phone',
+      component: (
         <PhoneInput
           country={'in'}
           value={phone}
@@ -139,118 +115,146 @@ export default function VisaForm() {
           placeholder="Enter phone number"
           inputProps={{ name: 'phone', required: true }}
         />
-      </div>
-      {phoneError && <p style={{ color: 'red', fontSize: '14px' }}>{phoneError}</p>}
+      )
+    },
+    {
+      type: 'row',
+      fields: [
+        {
+          type: 'select',
+          name: 'country',
+          options: ['', 'New Zealand', 'USA', 'UK', 'Canada', 'Australia', 'Europe', 'Japan', 'Dubai', 'Singapore', 'Other'],
+          placeholder: 'Select Country'
+        },
+        {
+          type: 'select',
+          name: 'immigration_type',
+          options: ['', 'Work Visa', 'Student Visa', 'Visitor/Tourist Visa', 'Business Visa', 'Dependent Visa', 'Permanent Residency Visa'],
+          placeholder: 'Select Immigration Type'
+        }
+      ]
+    },
+    {
+      type: 'row',
+      fields: [
+        {
+          type: 'number',
+          name: 'applicants',
+          placeholder: 'Number of applicants',
+          min: 1,
+          required: true
+        },
+        {
+          type: 'select',
+          name: 'age',
+          options: ['', '18-45', '45+'],
+          placeholder: 'Select Age'
+        }
+      ]
+    },
+    {
+      type: 'row',
+      fields: [
+        {
+          type: 'select',
+          name: 'education',
+          options: ['', "Diploma", "Bachelor's", "Master's", 'Doctorate', 'Doctor', 'Other'],
+          placeholder: 'Select Qualification'
+        },
+        {
+          type: 'email',
+          name: 'email',
+          placeholder: 'Enter your email',
+          required: true
+        }
+      ]
+    }
+  ];
 
-      <div className={styles.row}>
-        <select
-          className={styles.select}
-          name="country"
-          value={formData.country}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select Country</option>
-          {['New Zealand', 'USA', 'UK', 'Canada', 'Australia', 'Europe', 'Japan', 'Dubai', 'Singapore', 'Other'].map((c) => (
-            <option key={c} value={c}>{c}</option>
-          ))}
-        </select>
-
-        <select
-          className={styles.select}
-          name="immigration_type"
-          value={formData.immigration_type}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select Immigration Type</option>
-          {['Work Visa', 'Student Visa', 'Visitor/Tourist Visa', 'Business Visa', 'Dependent Visa', 'Permanent Residency Visa'].map((v) => (
-            <option key={v} value={v}>{v}</option>
-          ))}
-        </select>
-      </div>
-
-      <div className={styles.row}>
-        <input
-          className={styles.input}
-          name="applicants"
-          type="number"
-          min="1"
-          placeholder="Number of applicants"
-          value={formData.applicants}
-          onChange={handleChange}
-          required
-        />
-        <select
-          className={styles.select}
-          name="age"
-          value={formData.age}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select Age</option>
-          <option value="18-45">1-45</option>
-          <option value="45+">45+</option>
-        </select>
-      </div>
-
-      <div className={styles.row}>
-        <select
-          className={styles.select}
-          name="education"
-          value={formData.education}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select Qualification</option>
-          {["Diploma", "Bachelor's", "Master's", 'Doctorate', 'Doctor', 'Other'].map((q) => (
-            <option key={q} value={q}>{q}</option>
-          ))}
-        </select>
-        <input
-          className={styles.input}
-          name="email"
-          type="email"
-          placeholder="Enter your email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div className={styles.termsContainer}>
-        <input
-          type="checkbox"
-          id="terms"
-          name="terms"
-          checked={agreedToTerms}
-          onChange={() => setAgreedToTerms(!agreedToTerms)}
-          required
-        />
-        <label htmlFor="terms">
-          I agree to the{' '}
-          <a
-            href="https://www.globalvisainternationals.com/terms-and-conditions"
-            target="_blank"
-            rel="noopener noreferrer"
+  // Render field based on type
+  const renderField = (field) => {
+    switch (field.type) {
+      case 'text':
+      case 'email':
+      case 'number':
+        return (
+          <input
+            className={styles.input}
+            type={field.type}
+            name={field.name}
+            value={formData[field.name]}
+            onChange={handleChange}
+            placeholder={field.placeholder}
+            required={field.required}
+            min={field.min}
+          />
+        );
+      case 'select':
+        return (
+          <select
+            className={styles.select}
+            name={field.name}
+            value={formData[field.name]}
+            onChange={handleChange}
+            required={field.required}
           >
-            Terms & Conditions
-          </a>
-        </label>
-      </div>
-
-      <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-        {isSubmitting ? '⏳ Sending...' : 'Submit'}
-      </button>
-    </form>
-  );
+            <option value="">{field.placeholder}</option>
+            {field.options.slice(1).map(option => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        );
+      case 'custom':
+        return field.component;
+      default:
+        return null;
+    }
+  };
 
   return (
     <>
       {/* Normal Form */}
       <div className={styles.normalForm}>
         <h1 className={styles.formtitle}>Visa Inquiry Form</h1>
-        <FormUI />
+        <form onSubmit={handleSubmit}>
+          {formFields.map((field, index) => (
+            <div key={index} className={field.type === 'row' ? styles.row : styles.row1}>
+              {field.type === 'row' ? (
+                field.fields.map((subField, subIndex) => (
+                  <React.Fragment key={subIndex}>
+                    {renderField(subField)}
+                  </React.Fragment>
+                ))
+              ) : (
+                renderField(field)
+              )}
+            </div>
+          ))}
+
+          <div className={styles.termsContainer}>
+            <input
+              type="checkbox"
+              id="terms"
+              checked={agreedToTerms}
+              onChange={() => setAgreedToTerms(!agreedToTerms)}
+              required
+            />
+            <label htmlFor="terms">
+              I agree to the{' '}
+              <a
+                href="https://www.globalvisainternationals.com/terms-and-conditions"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms & Conditions
+              </a>
+            </label>
+          </div>
+
+          <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+            {isSubmitting ? '⏳ Sending...' : 'Submit'}
+          </button>
+        </form>
       </div>
 
       {/* Popup form */}
@@ -258,10 +262,47 @@ export default function VisaForm() {
         <div className={styles.popupOverlay} onClick={() => setShowPopup(false)}>
           <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
             <h1 className={styles.formtitle}>Visa Inquiry Form</h1>
-            <FormUI />
-            <button type="button" onClick={() => setShowPopup(false)} style={{ marginTop: '10px' }}>
-              ❌ Close
-            </button>
+            <form onSubmit={handleSubmit}>
+              {formFields.map((field, index) => (
+                <div key={index} className={field.type === 'row' ? styles.row : styles.row1}>
+                  {field.type === 'row' ? (
+                    field.fields.map((subField, subIndex) => (
+                      <React.Fragment key={subIndex}>
+                        {renderField(subField)}
+                      </React.Fragment>
+                    ))
+                  ) : (
+                    renderField(field)
+                  )}
+                </div>
+              ))}
+
+              <div className={styles.termsContainer}>
+                <input
+                  type="checkbox"
+                  id="terms"
+                  checked={agreedToTerms}
+                  onChange={() => setAgreedToTerms(!agreedToTerms)}
+                  required
+                />
+                <label htmlFor="terms">
+                  I agree to the{' '}
+                  <a
+                    href="https://www.globalvisainternationals.com/terms-and-conditions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Terms & Conditions
+                  </a>
+                </label>
+              </div>
+              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? '⏳ Sending...' : 'Submit'}
+              </button>
+              <button type="button" onClick={() => setShowPopup(false)} style={{ marginTop: '10px' }}>
+                ❌ Close
+              </button>
+            </form>
           </div>
         </div>
       )}
