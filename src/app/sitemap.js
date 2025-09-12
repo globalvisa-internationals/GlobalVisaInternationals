@@ -329,6 +329,18 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/visa-friday-updates-key-global-changes-indians-need-to-know-setp-05-2025',
+      lastModified: new Date('2025-09-05'),
+      changefreq: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/Vidya-Pillai-and-Sundeep-Gulati-Head-to-the-2025-WPA-Heyball-Champion-of-Champions-Visa-Helped-by-GVI',
+      lastModified: new Date('2025-09-12'),
+      changefreq: 'weekly',
+      priority: 0.8,
+    },
 
   ]
 }
