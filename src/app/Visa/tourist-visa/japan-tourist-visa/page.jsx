@@ -192,362 +192,229 @@ export default function JapanTouristVisa() {
 
 
         <div className={styles.VisaData}>
-          <h1 className={styles.Title}>Japan Tourist Visa Assistance – Travel with Confidence</h1>
-          <p>Planning a trip from India to Singapore? Our expert Singapore tourist visa assistance India service guides you through the complete Singapore visa application process, from visa requirements for Indian citizens to Singapore visa processing time India. We support applicants from Bangalore, Mumbai, Chennai, Delhi, and beyond—handling everything from Singapore visa documents checklist to photo specifications, cover letter format, and itinerary templates.</p>
-          <p>Wondering how to apply for a Singapore tourist visa? You don’t need to navigate the confusing process alone. Our Singapore visa consultants India partner with VFS Global, the authorised agency for Singapore visas in India, to ensure your single-entry or multiple-entry tourist visa application is complete and accurate. We’ll assist with application form filling, bank statement requirements, ITR proofs, passport validity, and even travel insurance requirements India — all tailored for smooth submission.</p>
-          <p>What’s the Singapore visa processing time in India? On average, Indian applicants receive their visa within 3 to 5 working days, depending on jurisdiction and seasonality. Peak travel periods may extend the turnaround time, but with our proactive support—such as tracking your VFS appointment booking issues and avoiding common mistakes in visa application—you’ll be well-prepared.</p>
-          <p>Concerned about visa fees, rejection reasons, or sponsor letters? We provide clear guidance on Singapore visa fee India, service charges, and optional courier costs. If your case requires a sponsor letter or you’re self‑sponsoring, we help you draft a professional cover letter and itinerary, and submit dummy flight bookings to strengthen your application. We also proactively prepare you for Singapore visa rejection reasons and ways to avoid them, including tips on dummy flight tickets that are airport‑recognizable.</p>
-          <p>At Global Visa Internationals, our commitment is to offer best Singapore visa help for Indians—whether you need Bangalore visa support, Mumbai application assistance, or Chennai‑based consultancy services. From Singapore visit visa for Indian citizens to purpose‑specific visa types, trust us for the most reliable, up‑to‑date support in 2025. Apply early—ideally at least 15 days before your travel date—and travel worry‑free!</p>
-          <p>Planning a trip to the Land of the Rising Sun? Global Visa Internationals is your trusted partner for
-            <strong> Japan tourist visa assistance</strong>. We simplify the entire process, from documentation to submission,
-            helping you explore Japan's cultural wonders, futuristic cities, and natural beauty with ease.
-          </p>
-
-          <h2 className={styles.subTitle}>Japan Top Tourist Attractions </h2>
-          <p>Experience the highlights of Japan with these must-see destinations:</p>
-          <ul>
-            <li><strong>Tokyo Tower:</strong> Enjoy panoramic city views from this iconic landmark in Japan’s capital.</li>
-            <li><strong>Kyoto’s Historic Temples:</strong> Visit Kinkaku-ji (Golden Pavilion) and Fushimi Inari-taisha, famous for its red torii gates.</li>
-            <li><strong>Cherry Blossom Season (Sakura):</strong> Celebrate spring with a hanami picnic under blooming cherry trees from March to April.</li>
-            <li><strong>Mount Fuji:</strong> Capture breathtaking views of Japan’s tallest peak from the Fuji Five Lakes region.</li>
-          </ul>
-          <p>
-            Beyond these, discover Osaka's vibrant street food, Hiroshima’s historical landmarks, and the tranquil beauty of the Japanese Alps.
-          </p>
-
-          <h2 className={styles.subTitle}>Why Japan Visa for Your Next Trip?</h2>
-          <ol>
-            <li><strong>Rich History:</strong> Explore ancient castles, shrines, and traditions like tea ceremonies.</li>
-            <li><strong>Diverse Culture:</strong> Experience a blend of ancient customs and cutting-edge innovation.</li>
-            <li><strong>World-Class Cuisine:</strong> Enjoy sushi, ramen, tempura, and multi-course kaiseki meals.</li>
-            <li><strong>Stunning Landscapes:</strong> From beaches to mountains, Japan’s natural beauty is unforgettable.</li>
-            <li><strong>Omotenashi Hospitality:</strong> Renowned politeness and excellent service everywhere you go.</li>
-            <li><strong>Safety & Cleanliness:</strong> One of the world’s safest, cleanest travel destinations.</li>
-          </ol>
-          <p>Whether you're a solo traveler, couple, or family – Japan promises something special for everyone.</p>
-
-          <h2 className={styles.subTitle}>Need Help with Your Japan Tourist Visa?</h2>
-          <p>
-            Global Visa Internationals is a reliable <strong>Japan tourist visa consultancy</strong> offering end-to-end guidance:
-          </p>
-          <ul>
-            <li>Document verification & checklist preparation</li>
-            <li>Visa application form filling</li>
-            <li>Cover letter and travel plan assistance</li>
-            <li>Appointment scheduling & submission guidance</li>
-          </ul>
-
-          <p><strong> Ready to apply for your Japan Tourist Visa?</strong> Let our experts handle the process while you focus on planning your dream trip!</p>
-
-          <a href="/contact" className={styles.ctaButton}>
-            Get Expert Visa Assistance Now
-          </a>
-
-
-          <h2 className={styles.subTitle}>Japan Visa and Travel Costs in 2025 – Plan Your Budget Smartly</h2>
-          <p>
-            Understanding the estimated travel costs is crucial when applying for your <strong>Japan Tourist Visa</strong>. Here's a detailed breakdown of the major expenses including flights, accommodations, food, transport, and more—helping you plan better with the support of a trusted <strong>Japan tourist visa consultancy</strong>.
-          </p>
-
-          <h3 className={styles.subTitle}> Flight Costs from India to Japan (2025)</h3>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Destination</th>
-                <th>Flight Type</th>
-                <th>Starting Price (INR)</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Tokyo</td><td>1+ stops</td><td>₹29,759</td><td>Cheapest in September</td></tr>
-              <tr><td>Osaka</td><td>1+ stops</td><td>₹31,702</td><td>Competitive fares available</td></tr>
-              <tr><td>Nagoya</td><td>1+ stops</td><td>₹32,437</td><td>Slightly higher fares</td></tr>
-              <tr><td>Fukuoka</td><td>1+ stops</td><td>₹33,021</td><td>Affordable options</td></tr>
-            </tbody>
-          </table>
-
-          <h3 className={styles.subTitle}> Accommodation Costs on Japan tourist visa</h3>
-          <p>Whether you’re backpacking or enjoying a luxury trip, Japan offers stays for all budgets:</p>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Type</th><th>Price (JPY)</th><th>Price (INR)</th><th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Hostels</td><td>1,500–4,000</td><td>₹900–₹2,400</td><td>Budget-friendly, shared facilities</td></tr>
-              <tr><td>Capsule Hotels</td><td>5,000–15,000</td><td>₹3,000–₹9,000</td><td>Compact & modern, great for solo travel</td></tr>
-              <tr><td>Minshuku</td><td>5,000–20,000</td><td>₹3,000–₹12,000</td><td>Traditional Japanese guesthouses</td></tr>
-              <tr><td>Luxury Hotels / Ryokans</td><td>30,000–300,000</td><td>₹18,000–₹180,000</td><td>Top-tier services with cultural experiences</td></tr>
-            </tbody>
-          </table>
-
-          <h3 className={styles.subTitle}> Food & Dining in Japan</h3>
-          <p>Japanese cuisine fits every pocket—from street food to Michelin-star sushi bars:</p>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Meal Type</th><th>JPY</th><th>INR</th><th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Street Food</td><td>300–1,500</td><td>₹180–₹900</td><td>Ramen, onigiri, takoyaki</td></tr>
-              <tr><td>Casual Dining</td><td>1,000–1,500</td><td>₹600–₹900</td><td>Izakayas & chain restaurants</td></tr>
-              <tr><td>Daily Food Budget</td><td>~10,000</td><td>~₹6,000</td><td>3 meals + snacks</td></tr>
-              <tr><td>Fine Dining</td><td>10,000–50,000</td><td>₹6,000–₹30,000</td><td>Kaiseki meals & sushi experiences</td></tr>
-            </tbody>
-          </table>
-
-          <h3 className={styles.subTitle}> Transportation Costs for japan tourist visa</h3>
-          <h4>Local Travel</h4>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Mode</th><th>JPY</th><th>INR</th><th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Metro/Bus</td><td>200–500</td><td>₹120–₹300</td><td>Single ride</td></tr>
-              <tr><td>Day Pass</td><td>~1,600</td><td>~₹960</td><td>Unlimited travel for a day</td></tr>
-            </tbody>
-          </table>
-
-          <h4>Long-Distance Travel on japan Tourist visa</h4>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Mode</th><th>JPY</th><th>INR</th><th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Shinkansen (Tokyo–Kyoto)</td><td>~14,000</td><td>~₹8,400</td><td>One-way</td></tr>
-              <tr><td>Japan Rail Pass (7-day)</td><td>50,000</td><td>~₹30,000</td><td>Unlimited JR trains nationwide</td></tr>
-            </tbody>
-          </table>
-
-          <h3 className={styles.subTitle}> Total Estimated Trip Cost (7 Days, Excl. Flights) For Japan </h3>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Budget (INR)</th>
-                <th>Mid-Range (INR)</th>
-                <th>Luxury (INR)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Accommodation</td><td>₹900–₹3,000/night</td><td>₹3,000–₹9,000/night</td><td>₹18,000–₹180,000/night</td></tr>
-              <tr><td>Food</td><td>₹1,800–₹3,000/day</td><td>₹3,000–₹6,000/day</td><td>₹6,000–₹30,000/day</td></tr>
-              <tr><td>Transport</td><td>₹600–₹1,800/day</td><td>₹1,800–₹6,000/day</td><td>₹6,000–₹30,000/day</td></tr>
-              <tr><td>Sightseeing/Shopping</td><td>₹1,200–₹3,000/day</td><td>₹3,000–₹6,000/day</td><td>₹6,000–₹30,000/day</td></tr>
-              <tr><td><strong>Total (7 Days)</strong></td><td>₹28,000–₹70,000</td><td>₹70,000–₹140,000</td><td>₹140,000–₹700,000</td></tr>
-            </tbody>
-          </table>
-
-          <p className={styles.note}>
-            <strong>Note:</strong> These estimates are approximate and can vary depending on personal preferences, seasonality, and exchange rates.
-          </p>
-
-
-
-          <p className={styles.ctaText}>
-            <strong>Start your journey to Japan with confidence!</strong> For expert <strong>Japan tourist visa assistance</strong> and documentation, reach out to Global Visa Internationals today.
-          </p>
-          <a href="/contact" className={styles.ctaButton}>Get Expert Visa Help </a>
-
-          <h2 className={styles.subTitle}>Traveling to Japan on Tourist Visa Process</h2>
-          <p>
-            Planning a trip to Japan? Understanding the <strong>Japan tourist visa</strong> process is the first step toward your dream vacation. While the specific requirements may vary by nationality, here's a simplified overview of how to <strong>apply for a Japan visa from India</strong> or any other country.
-          </p>
-
-          <ol>
-            <li><strong>Determine Eligibility:</strong> Visit the Japanese Ministry of Foreign Affairs website or your local embassy/consulate to check if you need a <strong>Japan visa for Indian citizens</strong> or other nationalities.</li>
-
-            <li><strong>Collect Required Documents:</strong> Prepare key documents including your valid passport, completed <strong>Japan visa application form</strong>, passport-size photos, financial proof, hotel booking, and travel itinerary. Depending on your case, additional documents may be needed.</li>
-
-            <li><strong>Submit at Japan Visa Application Center:</strong> Submit your documents at the <strong>Japan visa application center</strong> or Japanese embassy/consulate. Appointments may be required in some cases.</li>
-
-            <li><strong>Attend Interview (if applicable):</strong> Some applicants may be asked to attend a short visa interview, especially for first-time travelers or unusual cases.</li>
-
-            <li><strong>Wait for Visa Processing:</strong> <strong>Japan tourist visa processing time</strong> typically ranges from 3–7 working days. Apply early to avoid last-minute issues.</li>
-
-            <li><strong>Receive Your Japan Visa:</strong> Once approved, your visa will be stamped in your passport. You're now ready to experience Japan!</li>
-          </ol>
-
-          <p>
-            The <strong>Japan tourist visa requirements</strong> may seem detailed, but Global Visa Internationals is here to make it simple. From understanding the rules to submitting the paperwork—we help you every step of the way.
-          </p>
-
-
-
-          <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your assistance to Japan tourist Visa</h3>
-          <p>
-            Don’t let complex forms or long embassy queues get in your way. As a trusted <strong>visa agent for Japan</strong>, Global Visa Internationals offers expert guidance for a smooth and hassle-free experience.
-          </p>
-
-          <b className={styles.subTitle}>Our Japan Tourist Visa Services Include:</b>
-          <ul>
-            <li>Personalized guidance on <strong>Japan visa requirements</strong> based on your nationality.</li>
-            <li>Expert support in organizing and verifying all documents for your <strong>Japan tourist visa</strong>.</li>
-            <li>Pre-submission review to minimize errors and avoid delays in processing.</li>
-            <li>Mock interview preparation to boost your confidence for embassy questions.</li>
-            <li>End-to-end assistance from a leading <strong>Japan visa consultancy</strong> in India.</li>
-          </ul>
-
-          <p className={styles.note}>
-            Don’t let the complexities of the Japan visa process stop you from visiting one of the most beautiful countries in the world. Whether you're applying solo or with family, we’re here to help. Contact us today for the best <strong>Japan tourist visa assistance</strong>.
-          </p>
-
-
-
-          <h3 className={styles.subTitle}>Need Help With the Japan Tourist Visa Process?</h3>
-          <p>
-            Applying for a <strong>Japan tourist visa</strong> from India can seem complex—but you're not alone. At Global Visa Internationals, we offer full-service <strong>Japan tourist visa assistance</strong> to make your journey hassle-free and successful.
-          </p>
-
-          <b className={styles.subTitle}>Here’s how we simplify your Japan visa application:</b>
-          <ol className={styles.serviceList}>
-            <li>
-              <h4 className={styles.subTitle}> Personalized Japan Visa Consultation</h4>
-              <p>
-                Every traveler's case is different. Our <strong>Japan visa consultancy</strong> team provides tailored guidance based on:
-              </p>
-              <ul>
-                <li>Your travel history and purpose of visit</li>
-                <li>Proof of funds and employment details</li>
-                <li>Return intent and sponsorship (if applicable)</li>
-              </ul>
-              <p>We’ll help you understand exactly <strong>how to apply for Japan visa from India</strong> based on your unique case.</p>
-            </li>
-
-            <li>
-              <h4 className={styles.subTitle}> Document Checklist & Review</h4>
-              <p>
-                Incorrect or missing documents are a major reason for visa rejection. Our experts help you gather and review:
-              </p>
-              <ul>
-                <li>Valid passport, completed visa form, photographs</li>
-                <li>Bank statements and financial proof</li>
-                <li>Confirmed hotel bookings and itinerary</li>
-                <li>Invitation or cover letters (if needed)</li>
-              </ul>
-              <p>We ensure your paperwork meets <strong>Japan tourist visa requirements</strong> and embassy standards.</p>
-            </li>
-
-            <li>
-              <h4 className={styles.subTitle}>Japan Visa Application Form Assistance</h4>
-              <p>Struggling with the Japan visa application form? Our team will:</p>
-              <ul>
-                <li>Help you fill the form correctly</li>
-                <li>Guide you on the latest embassy requirements</li>
-                <li>Check for consistency across all submitted details</li>
-              </ul>
-              <p>Leave no room for rejection with expert assistance from a trusted <strong>visa agent for Japan</strong>.</p>
-            </li>
-
-            <li>
-              <h4 className={styles.subTitle}>Japan Visa Embassy Appointment Support</h4>
-              <p>
-                Some applicants need to schedule appointments at a <strong>Japan visa application center</strong> or consulate. We help with:
-              </p>
-              <ul>
-                <li>Booking embassy/VFS appointments</li>
-                <li>Preparing documents in the required format</li>
-                <li>Step-by-step guidance until submission</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4 className={styles.subTitle}>Japan Visa, Travel & Budget Planning (Bonus)</h4>
-              <p>
-                As part of our comprehensive <strong>Japan tourist visa consultancy</strong>, we also help you:
-              </p>
-              <ul>
-                <li>Estimate trip costs including flights, stay, and daily expenses</li>
-                <li>Get guidance on the best times to visit Japan</li>
-                <li>Explore city-specific travel tips for Tokyo, Kyoto, Osaka, and more</li>
-              </ul>
-            </li>
-          </ol>
-
-
-
-          <p className={styles.note}>
-            Ready to explore Japan? Get expert help from Global Visa Internationals—your trusted <strong>Japan tourist visa consultancy</strong>. From paperwork to peace of mind, we’re here every step of the way.
-          </p>
-
-          <a href="/contact" className={styles.ctaButton}>
-            Get Japan Visa Help Now
-          </a>
-
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Japan Tourist Visa?</h2>
-          <p>
-            At Global Visa Internationals, we specialize in simplifying the complex <strong>Japan tourist visa process</strong> for travelers from India. With years of experience and a client-first approach, we ensure you receive the right guidance at every step.
-          </p>
-
-          <ul>
-            <li><strong>Personalized Guidance:</strong> Our experienced <strong>visa consultants in Bangalore</strong> offer one-on-one assistance tailored to your travel goals and background.</li>
-            <li><strong>Expert Documentation Help:</strong> We ensure your application is complete, error-free, and compliant with current <strong>Japan visa requirements</strong>.</li>
-            <li><strong> Hassle-Free Processing:</strong> We handle the paperwork and logistics so you can focus on planning your dream trip to Japan.</li>
-            <li><strong> High Approval Rate:</strong> Our strong track record and deep embassy insights significantly boost your visa success chances.</li>
-            <li><strong> Mock Interviews & Prep:</strong> We conduct visa mock interviews so you feel confident, especially for in-person consulate appointments.</li>
-          </ul>
-
-          <p>With over <strong>11+ years of experience</strong> as one of the most trusted <strong>visa consultancies in India</strong>, Global Visa Internationals has helped <strong>55,000+ clients</strong> secure visas and delivered <strong>75,000+ expert consultations</strong>. Whether you're traveling for leisure, family visits, or solo exploration, we provide unmatched support every step of the way.</p>
-
-          <p>Let Global Visa Internationals assist you in navigating the <strong>Japan tourist visa application</strong> smoothly—and help you turn your dream of exploring Japan into a reality!</p>
-
-          <p className={styles.note}><strong>Disclaimer:</strong> This service is provided by Global Visa Internationals, an independent visa consultancy. We are not affiliated with the Japanese Government or its official embassy.</p>
-
-          <section >
-            <h2 className={styles.subTitle}> Japan Tourist Visa for Indian Citizens – FAQs</h2>
-
-            <h3 className={styles.subTitle}>Do Indian citizens need a visa to visit Japan for tourism?</h3>
-            <p>Yes, Indian passport holders must apply for a tourist visa in advance. Japan does <strong>not offer visa-on-arrival</strong> for Indian nationals.</p>
-
-            <h3 className={styles.subTitle}>How long does the Japan tourist visa take to process in India?</h3>
-            <p>The standard processing time is <strong>4–7 business days</strong>, though it may extend during holidays or peak travel seasons.</p>
-
-            <h3 className={styles.subTitle}>How long can I stay in Japan on a tourist visa?</h3>
-            <p>A <strong>single-entry visa</strong> allows up to <strong>90 days per visit</strong>. Multiple-entry visas are valid longer, but each stay is still capped at 90 days.</p>
-
-            <h3 className={styles.subTitle}>What documents are required for a Japan tourist visa from India?</h3>
-            <ul>
-              <li>Valid passport (with at least 2 blank pages)</li>
-              <li>Visa application form with photo (as per specifications)</li>
-              <li>Detailed travel itinerary</li>
-              <li>Confirmed or refundable flight and hotel bookings</li>
-              <li>Latest <strong>bank statements</strong> and <strong>ITR for past 2–3 years</strong></li>
-              <li>Cover letter stating purpose of visit</li>
-            </ul>
-
-            <h3 className={styles.subTitle}>Do I need confirmed flight and hotel bookings before applying?</h3>
-            <p>Confirmed or refundable bookings are <strong>strongly recommended</strong> to demonstrate your travel intent. A detailed itinerary may suffice, but confirmed bookings add strength to your application.</p>
-
-            <h3 className={styles.subTitle}>How much bank balance or income proof is needed?</h3>
-            <p>It’s advisable to show a minimum balance of <strong>₹1–1.5 lakh</strong> with stable income. ITRs for at least 2 years further boost your application.</p>
-
-            <h3 className={styles.subTitle}>Can unemployed applicants apply for a tourist visa?</h3>
-            <p>Yes, unemployed applicants can apply with a <strong>sponsorship letter</strong> and financial documents from a sponsor (parent, spouse, etc.).</p>
-
-            <h3 className={styles.subTitle}>Is travel insurance mandatory?</h3>
-            <p>While not strictly mandatory, <strong>travel insurance is highly recommended</strong> to cover emergencies during your stay in Japan.</p>
-
-            <h3 className={styles.subTitle}>When should I apply for a Japan visa before travel?</h3>
-            <p>You should apply at least <strong>1–3 months in advance</strong>. For metro cities like <strong>Delhi, Mumbai, Bangalore, and Chennai</strong>, book your VFS appointment ~3 weeks ahead.</p>
-
-            <h3 className={styles.subTitle}>Can I extend my tourist visa while in Japan?</h3>
-            <p>No, tourist visas are <strong>not extendable</strong> under normal circumstances. Ensure your return is scheduled within the visa validity period.</p>
-
-            <div >
-              <h3 className={styles.subTitle}>Need Help with Your Japan Tourist Visa?</h3>
-              <p>Let <strong>Global Visa Internationals</strong> assist you with your Japan visa from India. From document checks to VFS appointment guidance, our team ensures a hassle-free experience.</p>
-              <a href="https://www.globalvisainternationals.com/contact" >Apply Now with Global Visa Internationals</a>
-            </div>
+          <section>
+            <h2 className={styles.subTitle}>✈ Travel to Japan with a Visitor Visa</h2>
+            <p>
+              Planning a trip to Japan? The Japan Tourist Visa allows Indian travelers to visit for tourism, to see family, or for short-term business purposes. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We specialize in providing comprehensive <strong className={styles.strong}>Japan visa assistance for Indians</strong>.
+            </p>
           </section>
 
+          <div className={styles.section}>
+            <section>
+              <h2 className={styles.subTitle}>Visa Processing Overview</h2>
+              <p>
+                Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your <strong className={styles.strong}>Japan visa application from India</strong> meets the expectations of the Japanese Embassy and that your travel purpose is clearly and professionally represented. We are a trusted <strong className={styles.strong}>Japan visa consultant in India</strong>.
+              </p>
+            </section>
 
+            <section>
+              <h3 className={styles.subTitle}>Our Services Include:</h3>
+              <ul>
+                <li>Visa application form filling assistance</li>
+                <li>Covering letter and documentation preparation</li>
+                <li>Personalized Japan tourist visa checklist and guidance</li>
+                <li>Providing accepted samples for the required documents</li>
+                <li>Verification of documentation</li>
+                <li>Complete walk-through of the Japan tourist visa process</li>
+              </ul>
+            </section>
+
+            <section>
+              <h3 className={styles.subTitle}>Timeline:</h3>
+              <p>
+                Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days. This is an essential first step in the overall <strong className={styles.strong}>Japan visa processing time from India</strong>.
+              </p>
+            </section>
+          </div>
+
+          <section>
+            <h2 className={styles.subTitle}>🕒 Japan Visa Duration Rule</h2>
+            <p>
+              A Japan Tourist Visa typically allows you to stay for up to 15, 30 or 90 days depending on the visa issued. A <strong className={styles.strong}>Japan multiple entry visa for Indians</strong> may be issued with a validity of 1, 3, or 5 years for eligible applicants. Note that even with a multiple-entry visa, you can only stay for the authorized period on each visit. Overstaying may lead to fines, entry bans, or refusal of future visa applications.
+            </p>
+            <p>
+              👉 With GVI, you'll never miscalculate your stay—we ensure full compliance with Japanese immigration rules.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>Japan Visitor Visa Documents & Requirements for Indian Applicants</h2>
+            <p>
+              Before applying, ensure you meet the <strong className={styles.strong}>Japan visa eligibility for Indians</strong>. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and guide you through submission. You may need to visit the application center or embassy for submission. We provide a detailed <strong className={styles.strong}>Japan tourist visa document checklist</strong>.
+            </p>
+          </section>
+
+          <section>
+            <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
+            <ul>
+              <li>
+                <b className={styles.strong}>Valid Passport:</b> Must be valid for at least six months beyond your intended stay, with at least two blank pages. We guide you on all <strong className={styles.strong}>Japan visa passport requirements</strong>.
+              </li>
+              <li>
+                <b className={styles.strong}>Travel History:</b> Previous international travel to developed countries strengthens your application. GVI helps you highlight these to strengthen your Japan visa application.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
+            <p>
+              You must prove you have sufficient funds to support your trip without working. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹1–2 lakh (or approx. ¥200,000-¥400,000) in your bank account. This is a key part of the <strong className={styles.strong}>proof of funds for Japan visitor visa</strong>. Avoid any large, unexplained transactions in the months leading up to your application.
+            </p>
+            <ul>
+              <li>
+                <b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. We advise on the <strong className={styles.strong}>Japan tourist visa bank statement requirements</strong>.
+              </li>
+              <li>
+                <b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 2-3 years to prove a stable income source.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 className={styles.subTitle}>3. Employment & Professional Documentation</h3>
+            <ul>
+              <li>
+                <b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.
+              </li>
+              <li>
+                <b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 2-3 years' ITRs. We also recommend a brief business profile. This also applies for <strong className={styles.strong}>Japan visa for retired persons</strong>.
+              </li>
+              <li>
+                <b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university. We also assist with <strong className={styles.strong}>Japan tourist visa for minors</strong>.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
+            <ul>
+              <li>
+                <b className={styles.strong}>Flight & Hotel Bookings:</b> Provide a detailed day-by-day travel itinerary covering your entire stay. It's recommended to have confirmed return flight tickets and hotel reservations.
+              </li>
+              <li>
+                <b className={styles.strong}>Accommodation Proof:</b> Provide confirmed hotel reservations covering your entire stay. If staying with a friend or relative, you will need a <strong className={styles.strong}>Japan visa invitation letter</strong> and proof of their Japanese address and residency status. We assist with applications for a <strong className={styles.strong}>Japan visa for family</strong> and <strong className={styles.strong}>Japan visa for parents</strong>.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 className={styles.subTitle}>5. Visa Application Form & Itinerary</h3>
+            <p>
+              A well-written day-by-day itinerary is crucial for your Japan visa application. It should include your travel plans, places to visit, and proof of your strong ties to India (e.g., family, job). Our experts draft a professional <strong className={styles.strong}>Japan tourist visa itinerary sample</strong> for every client to maximize their chances of success.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>Japan Tourist Visa Fees (India 2025)</h2>
+            <p>
+              As of 2025, the Japan visa fees are subject to change. The fees listed below are approximate and do not include additional services. We provide transparent guidance on the <strong className={styles.strong}>Japan tourist visa cost in rupees</strong>.
+            </p>
+            <ul>
+              <li>
+                <b className={styles.strong}>Single Entry Visa Fee:</b> ¥3,000 (approx. ₹1,700)
+              </li>
+              <li>
+                <b className={styles.strong}>Multiple Entry Visa Fee:</b> ¥6,000 (approx. ₹3,400)
+              </li>
+              <li>
+                <b className={styles.strong}>Service Charges:</b> Vary based on services availed (e.g., documentation assistance, consultation, etc.)
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>Common Reasons for Japan Visa Rejection & How We Solve Them</h2>
+            <p>
+              Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent <strong className={styles.strong}>Japan tourist visa rejection reasons</strong>.
+            </p>
+            <ul>
+              <li>
+                <b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per embassy standards to ensure everything is perfect.
+              </li>
+              <li>
+                <b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.
+              </li>
+              <li>
+                <b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared itineraries clearly explain your travel plans and ties to India.
+              </li>
+              <li>
+                <b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>Japan Visa Processing Time from India</h2>
+            <p>
+              The <strong className={styles.strong}>Japan visa processing time from India</strong> can vary. Here are some general timelines:
+            </p>
+            <ul>
+              <li>
+                <b className={styles.strong}>Standard Processing Time:</b> Typically 5 to 7 working days after submission to the embassy/consulate.
+              </li>
+              <li>
+                <b className={styles.strong}>Peak Season:</b> Can extend to 10-12 working days during holiday seasons.
+              </li>
+              <li>
+                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the embassy in a timely manner. We help you track <strong className={styles.strong}>Japan visa application status</strong>.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className={styles.subTitle}>The Japan Visa Application Process: A Step-by-Step Guide</h2>
+            <p>
+              We manage this process for you. Here's a quick overview of what to expect:
+            </p>
+            <ol>
+              <li>
+                <b className={styles.strong}>Document Preparation:</b> We help you gather and prepare all necessary documents according to embassy requirements.
+              </li>
+              <li>
+                <b className={styles.strong}>Application Submission:</b> Depending on your location, you may need to submit documents through an authorized visa application center or directly to the consulate.
+              </li>
+              <li>
+                <b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.
+              </li>
+            </ol>
+          </section>
+
+          <h2 className={styles.subTitle}>Transparent Pricing</h2>
+          <p>
+            Choose the right Japan visa assistance package for your needs:
+          </p>
+          <ul>
+            <li>
+              <b className={styles.strong}>Basic (₹4,999):</b> Checklist + document review
+            </li>
+            <li>
+              <b className={styles.strong}>Standard (₹7,999):</b> End-to-end application assistance, documentation preparation, and submission guidance
+            </li>
+          </ul>
+
+          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
+          <p>
+            At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:
+          </p>
+          <ul>
+            <li>1,800+ Japan visas processed since 2017</li>
+            <li>97% client satisfaction rate across India</li>
+            <li>Specialized assistance for re-application after rejection</li>
+            <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
+          </ul>
+
+          <h2 className={styles.subTitle}>Ready to Apply?</h2>
+          <p>
+            With GVI, you don't need to worry about rejections or missing documents.
+          </p>
+          <p>
+            👉 Start your <strong className={styles.strong}>Japan visa application</strong> today with Global Visa Internationals and experience the beauty of Japan with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for Japan</strong>.
+          </p>
+          <br />
+          <a href="/contact" className={styles.ctaButton}>
+            Get a free consultation today!
+          </a>
         </div>
         <div className={styles.formSection}>
           <VisaForm />

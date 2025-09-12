@@ -8,7 +8,7 @@ import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import styles from "./NavBar.module.css";
 
 const NAV_ITEMS = [
-  { title: "TOURIST", path: "tourist-visa", countries: ["Canada-Tourist-Visa", "Australia-Tourist-Visa", "USA-Tourist-Visa", "UK-Tourist-Visa", "Europe-Tourist-Visa", "Schengen-Tourist-Visa", "Japan-Tourist-Visa", "Dubai-Tourist-Visa", "New-Zealand-Tourist-Visa", "Singapore-Tourist-Visa"] },
+  { title: "TOURIST", path: "tourist-visa", countries: ["Canada-Tourist-Visa", "Australia-Tourist-Visa", "USA-Tourist-Visa", "UK-Tourist-Visa", "Europe-Tourist-Visa", "Schengen-Tourist-Visa", "Japan-Tourist-Visa", "Dubai-Tourist-Visa", "New-Zealand-Tourist-Visa", "Singapore-Tourist-Visa", "China-Tourist-Visa"] },
   { title: "STUDENT", path: "student-visa", countries: ["Canada", "Australia", "USA", "UK", "Europe", "New-Zealand"] },
   { title: "BUSINESS", path: "business", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
   { title: "PERMANENT RESIDENCY", path: "permanent-residency-visa", countries: ["Canada", "Australia"] },

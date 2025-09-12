@@ -207,7 +207,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 40px;
-        max-width: 80%;
+        max-width: 85%;
         margin: 0 auto;
         gap: 40px;
     }
@@ -215,7 +215,8 @@
     .VisaImage,
     .responsiveImage {
         max-width: 70%;
-        height: auto;
+        max-height: 400px;
+        object-fit: fill;
     }
 
     .VisaData {
@@ -251,5 +252,203 @@
 
     .subTitle {
         font-size: 1.4rem;
+    }
+}
+
+.schengenCard {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.cardHeader {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cardTitle {
+    font-size: 1.8rem;
+    color: #1a237e;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.cardSubtitle {
+    font-size: 1rem;
+    color: #555;
+}
+
+.countryList h3,
+.highlightSection h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.countryGrid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns on mobile */
+    gap: 15px;
+    text-align: center;
+}
+
+.countryGrid li {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px 10px;
+    border: 1px solid #ddd;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.countryGrid li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlightSection {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.highlightGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column on mobile */
+    gap: 20px;
+}
+
+.highlightItem {
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #c8e6c9;
+}
+
+.highlightItem .countryName {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.highlightItem .countryInfo {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+.pricingContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.pricingCard {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 95%;
+}
+
+.pricingCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlighted {
+    border: 2px solid #007bff;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
+}
+
+.highlighted .planTitle,
+.highlighted .planPrice {
+    color: #007bff;
+}
+
+.planTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.planPrice {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.planFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.planFeatures li {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.planFeatures li::before {
+    content: '✓';
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Media Queries for Larger Screens (Tablet and Desktop) */
+@media (min-width: 768px) {
+    .schengenCard {
+        padding: 30px;
+    }
+
+    .cardTitle {
+        font-size: 2.2rem;
+    }
+
+    .cardSubtitle {
+        font-size: 1.1rem;
+    }
+
+    .countryList h3,
+    .highlightSection h3 {
+        font-size: 1.5rem;
+    }
+
+    .countryGrid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .highlightGrid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .pricingCard {
+        width: 250px;
     }
 }

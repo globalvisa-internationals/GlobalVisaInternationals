@@ -147,7 +147,7 @@ export default function VisaForm() {
         {
           type: 'select',
           name: 'age',
-          options: ['', '18-45', '45+'],
+          options: ['', '1-45', '45+'],
           placeholder: 'Select Age'
         }
       ]
@@ -215,7 +215,7 @@ export default function VisaForm() {
     <>
       {/* Normal Form */}
       <div className={styles.normalForm}>
-        <h1 className={styles.formtitle}>Visa Inquiry Form</h1>
+        <h1 className={styles.formtitle}>Free Visa Consultation Form</h1>
         <form onSubmit={handleSubmit}>
           {formFields.map((field, index) => (
             <div key={index} className={field.type === 'row' ? styles.row : styles.row1}>
@@ -261,7 +261,7 @@ export default function VisaForm() {
       {showPopup && (
         <div className={styles.popupOverlay} onClick={() => setShowPopup(false)}>
           <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <h1 className={styles.formtitle}>Visa Inquiry Form</h1>
+            <h1 className={styles.formtitle}>Free Visa Consultation Form</h1>
             <form onSubmit={handleSubmit}>
               {formFields.map((field, index) => (
                 <div key={index} className={field.type === 'row' ? styles.row : styles.row1}>

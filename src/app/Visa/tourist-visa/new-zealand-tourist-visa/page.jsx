@@ -216,164 +216,244 @@ export default function NewZealand() {
       <div className={styles.VisaSec}>
 
         <div className={styles.VisaData}>
+          <section>
+            <h2 className={styles.subTitle}>✈ Travel to New Zealand with a Visitor Visa</h2>
+            <p>
+              Planning a trip to New Zealand? The New Zealand Visitor Visa allows Indian travelers to visit for tourism, to see family, or for short-term business purposes. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We specialize in providing comprehensive <strong className={styles.strong}>New Zealand visa assistance for Indians</strong>.
+            </p>
+          </section>
 
+          <div className={styles.section}>
+            <section>
+              <h2 className={styles.subTitle}>Visa Processing Overview</h2>
+              <p>
+                Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your <strong className={styles.strong}>New Zealand visa application from India</strong> meets the expectations of Immigration New Zealand (INZ) and that your travel purpose is clearly and professionally represented. We are a trusted <strong className={styles.strong}>New Zealand visa consultant in India</strong>.
+              </p>
+            </section>
 
+            <section>
+              <h3 className={styles.subTitle}>Our Services Include:</h3>
+              <ul>
+                <li>Online NZeTA application assistance</li>
+                <li>Covering letter and documentation preparation</li>
+                <li>Personalized New Zealand tourist visa checklist and guidance</li>
+                <li>Providing accepted samples for the required documents</li>
+                <li>Verification of documentation</li>
+                <li>Complete walk-through of the New Zealand tourist visa process</li>
+              </ul>
+            </section>
+
+            <section>
+              <h3 className={styles.subTitle}>Timeline:</h3>
+              <p>
+                Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days. This is an essential first step in the overall <strong className={styles.strong}>New Zealand visa processing time from India</strong>.
+              </p>
+            </section>
+          </div>
 
           <section>
-            <h1 className={styles.subTitle}>Apply for New Zealand Tourist Visa from India with Global Visa Internationals</h1>
-            <p>Planning a trip to New Zealand? Indian citizens need to apply in advance for a New Zealand tourist visa or visitor visa before traveling. Whether you're dreaming of the scenic landscapes of Queenstown, the culture of Rotorua, or the city life in Auckland, Global Visa Internationals simplifies the process of getting your New Zealand visa from India. Our expert consultants assist you in completing the New Zealand visa application form, preparing your documents, and ensuring every requirement is met — increasing your chances of approval from VFS New Zealand India.</p>
-            <p>✅ Start your application now with expert help from Global Visa Internationals — <a href="https://www.globalvisainternationals.com/contact">Contact Us</a></p>
+            <h2 className={styles.subTitle}>🕒 New Zealand Visa Duration Rule</h2>
+            <p>
+              A New Zealand Visitor Visa typically allows you to stay for up to 9 months within an 18-month period. A <strong className={styles.strong}>New Zealand multiple entry visa for Indians</strong> may be issued with a validity of up to 5 years for eligible applicants. Note that even with a multiple-entry visa, you can only stay for the authorized period on each visit. Overstaying may lead to fines, entry bans, or refusal of future visa applications.
+            </p>
+            <p>
+              👉 With GVI, you'll never miscalculate your stay—we ensure full compliance with New Zealand immigration rules.
+            </p>
           </section>
 
           <section>
-            <h2 className={styles.subTitle}>Comprehensive Assistance for Indian Citizens Applying from Delhi, Mumbai & Bangalore</h2>
-            <p>We provide visa support services across India, including New Zealand visa assistance from Mumbai, Delhi, and Bangalore. Our consultants are familiar with city-specific appointment timelines at VFS Global and help schedule your New Zealand visa appointment on time. From the initial New Zealand visa documents checklist to your NZ visitor visa ITR requirements, we’ll ensure everything is aligned with immigration expectations. Unsure about bank balance requirements or NZ visa sponsorship letters? Our team guides both self-sponsored and sponsored applicants through every step.</p>
-            <p>📍 Apply for your New Zealand visa from Bangalore, Delhi, or Mumbai with us – <a href="https://www.globalvisainternationals.com/contact">Get Started Today</a></p>
+            <h2 className={styles.subTitle}>New Zealand Visitor Visa Documents & Requirements for Indian Applicants</h2>
+            <p>
+              Before applying, ensure you meet the <strong className={styles.strong}>New Zealand visa eligibility for Indians</strong>. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and guide you through submission. We provide a detailed <strong className={styles.strong}>New Zealand tourist visa document checklist</strong>.
+            </p>
           </section>
 
           <section>
-            <h2 className={styles.subTitle}>Stay Ahead with Proper Documentation & Avoid Rejections</h2>
-            <p>To apply for your New Zealand visitor visa from India, you need a valid passport, recent photos, a detailed travel itinerary, and proof of funds. This includes bank statements, ITRs, a possible sponsorship letter, and even a police certificate or medical certificate depending on your case. Many visa rejections happen due to missing or inconsistent documents. Common New Zealand visa rejection reasons in India include insufficient funds, lack of clear travel intent, or incorrect information. At Global Visa Internationals, we review your cover letter, itinerary samples, and ensure you're showing genuine tourist intent — helping reduce the risk of delays, visa pending issues, or outright rejection.</p>
-            <p>🛡️ Don’t risk rejection — Get your documents reviewed by our visa experts for FREE! <a href="https://www.globalvisainternationals.com/contact">Book a Consultation</a></p>
+            <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
+            <ul>
+              <li>
+                <b className={styles.strong}>Valid Passport:</b> Must be valid for at least three months beyond your intended departure date from New Zealand, with at least one blank page. We guide you on all <strong className={styles.strong}>New Zealand visa passport requirements</strong>.
+              </li>
+              <li>
+                <b className={styles.strong}>Travel History:</b> Previous international travel to countries like Australia, UK, US, or Canada strengthens your application. GVI helps you highlight these to strengthen your New Zealand visa application.
+              </li>
+            </ul>
           </section>
 
           <section>
-            <h2 className={styles.subTitle}>Know the Fees, Timeline & Financial Criteria</h2>
-            <p>The New Zealand visa fee for Indian applicants varies depending on the visa type and exchange rate (NZD to INR). Additionally, you must pay the New Zealand IVL fee for your visitor visa. Processing typically takes 15–30 days, but timelines can shift based on seasonal demand. We help you understand the New Zealand visa turnaround time from India, and track your application’s status post-submission. Need to show adequate funds? Our team clarifies the New Zealand visa proof of funds requirement and helps you present a strong financial profile — whether you're employed, self-employed, or traveling as a digital nomad or under a remote work visitor visa.</p>
-            <p>💰 Transparent fee guidance and timeline tracking — <a href="https://www.globalvisainternationals.com/contact">Talk to a Visa Advisor Now</a></p>
+            <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
+            <p>
+              You must prove you have sufficient funds to support your trip without working. Immigration New Zealand needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹1.5–2.5 lakh (or approx. NZD$3,000-$5,000) in your bank account. This is a key part of the <strong className={styles.strong}>proof of funds for New Zealand visitor visa</strong>. Avoid any large, unexplained transactions in the months leading up to your application.
+            </p>
+            <ul>
+              <li>
+                <b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. We advise on the <strong className={styles.strong}>New Zealand tourist visa bank statement requirements</strong>.
+              </li>
+              <li>
+                <b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 2-3 years to prove a stable income source.
+              </li>
+            </ul>
           </section>
 
           <section>
-            <h2 className={styles.subTitle}>Trusted Visa Partner for Indian Travelers Since 2017</h2>
-            <p>Whether you're applying for a New Zealand multiple-entry tourist visa, a short-term visitor visa, or traveling solo, with family, or as a remote worker — we’ve got you covered. We also support clients navigating visa quota systems, pending delays, or appeals after rejection. Since 2017, Global Visa Internationals has helped thousands of Indians visit their dream destinations with the right visa support. We’re here to help you travel with confidence.</p>
-            <p>🌏 Ready to explore New Zealand? Apply stress-free with Global Visa Internationals – <a href="https://www.globalvisainternationals.com/contact">Apply Now</a></p>
+            <h3 className={styles.subTitle}>3. Employment & Professional Documentation</h3>
+            <ul>
+              <li>
+                <b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.
+              </li>
+              <li>
+                <b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 2-3 years' ITRs. We also recommend a brief business profile. This also applies for <strong className={styles.strong}>New Zealand visa for retired persons</strong>.
+              </li>
+              <li>
+                <b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university. We also assist with <strong className={styles.strong}>New Zealand tourist visa for minors</strong>.
+              </li>
+            </ul>
           </section>
-          <p>New Zealand is an island nation in the southwestern Pacific Ocean, is known for its stunning natural landscapes, vibrant Māori culture, and adventure tourism. It consists of two main landmasses—the North Island and the South Island—and numerous smaller islands. With its diverse geography ranging from snow-capped mountains and fjords to beaches and volcanic plateaus, New Zealand is a dream destination for nature lovers and thrill-seekers alike.</p>
-          <h2 className={styles.subTitle}>Top Tourist Places In New Zealand</h2>
-          <p> Discover the best places to visit in New Zealand:</p>
-          <ol>
-            <li>Queenstown – Adventure capital with bungee jumping, skydiving, and stunning alpine views.</li>
 
-            <li>Rotorua – Geothermal wonders and Maori cultural experiences.</li>
+          <section>
+            <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
+            <ul>
+              <li>
+                <b className={styles.strong}>Flight & Hotel Bookings:</b> Provide a detailed day-by-day travel itinerary covering your entire stay. It's recommended to have confirmed return flight tickets and hotel reservations.
+              </li>
+              <li>
+                <b className={styles.strong}>Accommodation Proof:</b> Provide confirmed hotel reservations covering your entire stay. If staying with a friend or relative, you will need a <strong className={styles.strong}>New Zealand visa invitation letter</strong> and proof of their New Zealand address and residency status. We assist with applications for a <strong className={styles.strong}>New Zealand visa for family</strong> and <strong className={styles.strong}>New Zealand visa for parents</strong>.
+              </li>
+            </ul>
+          </section>
 
-            <li>Auckland – A cosmopolitan city with beautiful harbors, shopping, and dining.</li>
+          <section>
+            <h3 className={styles.subTitle}>5. Visa Application Form & Itinerary</h3>
+            <p>
+              A well-written day-by-day itinerary is crucial for your New Zealand visa application. It should include your travel plans, places to visit, and proof of your strong ties to India (e.g., family, job). Our experts draft a professional <strong className={styles.strong}>New Zealand tourist visa itinerary sample</strong> for every client to maximize their chances of success.
+            </p>
+          </section>
 
-            <li>Milford Sound – Spectacular fjord landscapes and wildlife.</li>
+          <section>
+            <h2 className={styles.subTitle}>New Zealand Tourist Visa Fees (India 2025)</h2>
+            <p>
+              As of 2025, the New Zealand visa fees are subject to change. The fees listed below are approximate and do not include additional services. We provide transparent guidance on the <strong className={styles.strong}>New Zealand tourist visa cost in rupees</strong>.
+            </p>
+            <ul>
+              <li>
+                <b className={styles.strong}>Visitor Visa Application Fee:</b> NZD$211 (approx. ₹10,800)
+              </li>
+              <li>
+                <b className={styles.strong}>NZeTA (if applicable):</b> NZD$17 (approx. ₹870)
+              </li>
+              <li>
+                <b className={styles.strong}>International Visitor Conservation and Tourism Levy (IVL):</b> NZD$35 (approx. ₹1,790)
+              </li>
+              <li>
+                <b className={styles.strong}>Service Charges:</b> Vary based on services availed (e.g., documentation assistance, consultation, etc.)
+              </li>
+            </ul>
+          </section>
 
-            <li>Waiheke Island – Wine tasting, beaches, and boutique art galleries.</li>
+          <section>
+            <h2 className={styles.subTitle}>Common Reasons for New Zealand Visa Rejection & How We Solve Them</h2>
+            <p>
+              Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent <strong className={styles.strong}>New Zealand tourist visa rejection reasons</strong>.
+            </p>
+            <ul>
+              <li>
+                <b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per INZ standards to ensure everything is perfect.
+              </li>
+              <li>
+                <b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.
+              </li>
+              <li>
+                <b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared itineraries clearly explain your travel plans and ties to India.
+              </li>
+              <li>
+                <b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.
+              </li>
+            </ul>
+          </section>
 
-            <li>Mount Cook National Park – Perfect for hiking, stargazing, and scenic photography.</li>
+          <section>
+            <h2 className={styles.subTitle}>New Zealand Visa Processing Time from India</h2>
+            <p>
+              The <strong className={styles.strong}>New Zealand visa processing time from India</strong> can vary. Here are some general timelines:
+            </p>
+            <ul>
+              <li>
+                <b className={styles.strong}>Standard Processing Time:</b> Typically 20 to 25 working days after submission to Immigration New Zealand.
+              </li>
+              <li>
+                <b className={styles.strong}>Peak Season:</b> Can extend to 30-35 working days during holiday seasons.
+              </li>
+              <li>
+                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to INZ in a timely manner. We help you track <strong className={styles.strong}>New Zealand visa application status</strong>.
+              </li>
+            </ul>
+          </section>
 
-            <li>Lake Tekapo – Famous for its turquoise waters and Church of the Good Shepherd.</li>
+          <section>
+            <h2 className={styles.subTitle}>The New Zealand Visa Application Process: A Step-by-Step Guide</h2>
+            <p>
+              We manage this process for you. Here's a quick overview of what to expect:
+            </p>
+            <ol>
+              <li>
+                <b className={styles.strong}>Online Application:</b> We help you complete the Immigration New Zealand online application form accurately.
+              </li>
+              <li>
+                <b className={styles.strong}>Document Preparation:</b> We help you gather and prepare all necessary documents according to INZ requirements.
+              </li>
+              <li>
+                <b className={styles.strong}>Application Submission:</b> We guide you through the online submission process and payment of fees.
+              </li>
+              <li>
+                <b className={styles.strong}>Biometrics:</b> You may need to visit a Visa Application Centre to provide biometric information.
+              </li>
+              <li>
+                <b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until a decision is made.
+              </li>
+            </ol>
+          </section>
 
-            <li>Franz Josef & Fox Glaciers – Glacier walks and heli-hikes through icy terrain.</li>
-          </ol>
-
-          <h2 className={styles.subTitle}>Cost of Traveling to New Zealand from India (2025 Estimate)</h2>
-          <p>Planning your travel budget? Here's an average breakdown for a 10-day trip to New Zealand from India:</p>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Estimated Cost (INR)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Round-trip Flights</td>
-                <td>₹70,000 – ₹1,10,000</td>
-              </tr>
-              <tr>
-                <td>Accommodation</td>
-                <td>₹4,000 – ₹10,000/night</td>
-              </tr>
-              <tr>
-                <td>Food & Dining</td>
-                <td>	₹1,000 – ₹2,000/day</td>
-              </tr>
-              <tr>
-                <td>Transportation</td>
-                <td>₹10,000 – ₹20,000 (car rentals, local travel)</td>
-              </tr>
-              <tr>
-                <td>Activities & Tours</td>
-                <td>₹20,000 – ₹40,000</td>
-              </tr>
-              <tr>
-                <td>Visa Application</td>
-                <td>₹7,500 – ₹12,000</td>
-              </tr>
-            </tbody>
-
-          </table>
-
-
-
-          <h2 className={styles.subTitle}>Top Reasons to Visit New Zealand in 2025</h2>
-          <p>Why choose New Zealand for your next vacation?</p>
-
+          <h2 className={styles.subTitle}>Transparent Pricing</h2>
+          <p>
+            Choose the right New Zealand visa assistance package for your needs:
+          </p>
           <ul>
-            <li>Nature Lover’s Paradise – Lush forests, glaciers, lakes, and mountains.</li>
-            <li>Adventure Sports – Skydiving, bungee jumping, white-water rafting.</li>
-            <li>Safe & Tourist-Friendly – Ranked as one of the safest countries to travel.</li>
-            <li>Rich Maori Culture – Unique traditions, food, and performances.</li>
-            <li>Filming Locations – Visit Hobbiton and other iconic LOTR film sets.</li>
-            <li>Planning your first overseas trip? New Zealand is the perfect destination for families, couples, and solo travelers alike.</li>
+            <li>
+              <b className={styles.strong}>Basic (₹5,999):</b> Checklist + document review
+            </li>
+            <li>
+              <b className={styles.strong}>Standard (₹8,999):</b> End-to-end application assistance, documentation preparation, and submission guidance
+            </li>
           </ul>
-          <p className={styles.note}>Planning your first overseas trip? New Zealand is the perfect destination for families, couples, and solo travelers alike.</p>
-
-
-
-
-          <h2 className={styles.subTitle}>How to Apply for a New Zealand Tourist Visa from India</h2>
-          <p>Global Visa Internationals offers complete support for your New Zealand visitor visa application.</p>
-          <h3 className={styles.subTitle}>New Zealand Tourist Visa Requirements:</h3>
-          <ul>
-            <li>Valid passport (minimum 6 months validity)</li>
-            <li>Recent passport-sized photographs</li>
-            <li>Travel itinerary and accommodation bookings</li>
-            <li>Proof of financial capacity</li>
-            <li>Employment or business proof</li>
-            <li>Cover letter and visa application form</li>
-          </ul>
-          <h3 className={styles.subTitle}>Visa Application Process:</h3>
-          <ul>
-            <li>Initial Consultation & Eligibility Check</li>
-            <li>Document Collection & Review</li>
-            <li>Filling the Visa Application Form</li>
-            <li>Booking Appointments (if required)</li>
-            <li>Submitting the Application Online or via VAC</li>
-            <li>Visa Decision & Passport Collection</li>
-          </ul>
-          <p className={styles.note}>We handle everything from visa documentation to mock interview sessions—making the process stress-free and successful.</p>
-
-
-
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <p>At Global Visa Internationals, we provide:</p>
+          <p>
+            At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:
+          </p>
           <ul>
-            <li>End-to-End Visa Assistance</li>
-            <li> Expert Guidance on Documentation</li>
-            <li> Mock Interview Preparation</li>
-            <li>Personalized One-on-One Consultations</li>
-            <li>Tracking & Updates Throughout the Visa Process</li>
+            <li>1,500+ New Zealand visas processed since 2017</li>
+            <li>96% client satisfaction rate across India</li>
+            <li>Specialized assistance for re-application after rejection</li>
+            <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
           </ul>
-          <p>Let us take care of the complex paperwork so you can focus on planning your dream trip!</p>
-          <h4 className={styles.subTitle}> Contact us today to speak with a visa expert or book a free consultation.</h4>
-          <h3 className={styles.subTitle}> Serving clients PAN India – with a strong presence in Bangalore.</h3>
-          <h2 className={styles.subTitle}>Get in Touch for New Zealand Tourist Visa Assistance</h2>
 
-          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <h2 className={styles.subTitle}>Ready to Apply?</h2>
+          <p>
+            With GVI, you don't need to worry about rejections or missing documents.
+          </p>
+          <p>
+            👉 Start your <strong className={styles.strong}>New Zealand visa application</strong> today with Global Visa Internationals and experience the breathtaking landscapes of New Zealand with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for New Zealand</strong>.
+          </p>
+          <br />
+          <a href="/contact" className={styles.ctaButton}>
+            Get a free consultation today!
+          </a>
         </div>
-
-
         <div className={styles.formSection}>
           <VisaForm />
         </div>
       </div>
       <section id='Client Reviews'>
-        <h2 className={styles.subtitle}>Client Reviews</h2>
         <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
       </section>
     </>

@@ -9,9 +9,7 @@ export const metadata = {
   description: "Planning a trip to Singapore? Let Global Visa Internationals simplify your visa process. Trusted consultants in Bangalore offering end-to-end visa support with fast approvals.",
   keywords: "Singapore tourist visa Bangalore, apply Singapore visa India, Singapore travel visa assistance, Singapore visa agents, tourist visa consultants for Singapore",
   robots: "index, follow",
-  alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore",
-  },
+  alternates: { canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore", },
   openGraph: {
     type: "website",
     title: "Fast & Reliable Singapore Tourist Visa Services in Bangalore",
@@ -28,8 +26,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@globalvisainternationals",
-    title: "Apply for Singapore Tourist Visa from Bangalore – Trusted Experts",
-    description: "Need a Singapore tourist visa? Get complete assistance from Global Visa Internationals – Bangalore’s preferred visa consultants.",
+    title: "Apply for Singapore Tourist Visa from Bangalore - Trusted Experts",
+    description: "Need a Singapore tourist visa? Get complete assistance from Global Visa Internationals - Bangalore's preferred visa consultants.",
     images: ["https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png"]
   }
 };
@@ -74,7 +72,7 @@ export default function Dubai() {
       {
         "@type": "TouristAttraction",
         "name": "Singapore Flyer",
-        "description": "One of the world’s largest observation wheels offering spectacular cityscape views.",
+        "description": "One of the world's largest observation wheels offering spectacular cityscape views.",
         "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Singapore_Flyer_view.jpg",
         "url": "https://www.singaporeflyer.com/"
       }
@@ -201,11 +199,11 @@ export default function Dubai() {
 
         <div className={styles.VisaData}>
           <h1 className={styles.Title}>Apply for a Singapore Tourist Visa with Expert Help from Global Visa Internationals</h1>
-          <p className={styles.card}>Planning your dream vacation to Singapore? Whether you're traveling for leisure, sightseeing, or to visit family and friends, obtaining a Singapore tourist visa is the first step. At Global Visa Internationals, we provide complete Singapore visa assistance for Indian citizens. With over 11 years of expertise, we’ve helped thousands of travelers successfully apply for Singapore visas from India, including popular cities like Bangalore, Chennai, and Mumbai.</p>
+          <p className={styles.card}>Planning your dream vacation to Singapore? Whether you're traveling for leisure, sightseeing, or to visit family and friends, obtaining a Singapore tourist visa is the first step. At <strong>Global Visa Internationals,</strong> we provide complete Singapore visa assistance for Indian citizens. With over 11 years of expertise, we've helped thousands of travelers successfully apply for Singapore visas from India, including popular cities like Bangalore, Chennai, and Mumbai.</p>
           <p className={styles.card1}>Our team of authorised Singapore visa agents in India offers end-to-end services including documentation support, application review, Form 14A completion, cover letter drafting, and detailed Singapore visa checklists tailored for Indian applicants. Whether you need a Singapore visa for tourism, a short-term visit pass, or help with your Singapore e-visa application, our consultants ensure a smooth, error-free process. We understand common Singapore visa rejection reasons and help you avoid costly mistakes.</p>
-          <p className={styles.card}>Wondering how long it takes? The typical Singapore tourist visa processing time is around 3–5 working days, though it may vary. The Singapore visa fee is approximately SGD 30, and our team will walk you through all visa application charges with complete transparency. If you're in a rush, we can help with quicker turnaround times where possible, depending on the embassy and submission schedule.</p>
-          <p className={styles.card1}>Whether you’re applying online or need in-person visa documentation assistance, our expert team offers personalized support. From navigating Singapore visa delays to writing a visa invitation letter, we ensure every requirement is met accurately. We're recognized as one of the best Singapore visa consultants in India for our reliable service and high approval rates. We also assist with issues raised on platforms like MakeMyTrip and Atlys, providing independent support when you need it most.</p>
-          <p className={styles.card}>Don’t leave your travel plans to chance. Choose Global Visa Internationals, your trusted Singapore visa consultancy service in India. Contact us today to get started on your Singapore visa application process, and travel with peace of mind knowing you're backed by professional, end-to-end visa support.</p>
+          <p className={styles.card}>Wondering how long it takes? The typical Singapore tourist visa processing time is around 3-5 working days, though it may vary. The Singapore visa fee is approximately SGD 30, and our team will walk you through all visa application charges with complete transparency. If you're in a rush, we can help with quicker turnaround times where possible, depending on the embassy and submission schedule.</p>
+          <p className={styles.card1}>Whether you're applying online or need in-person visa documentation assistance, our expert team offers personalized support. From navigating Singapore visa delays to writing a visa invitation letter, we ensure every requirement is met accurately. We're recognized as one of the best Singapore visa consultants in India for our reliable service and high approval rates. We also assist with issues raised on platforms like MakeMyTrip and Atlys, providing independent support when you need it most.</p>
+          <p className={styles.card}>Don't leave your travel plans to chance. Choose <strong>Global Visa Internationals,</strong> your trusted Singapore visa consultancy service in India. Contact us today to get started on your Singapore visa application process, and travel with peace of mind knowing you're backed by professional, end-to-end visa support.</p>
 
           <p className={styles.card1}>Singapore, a dynamic island nation, captivates visitors with its stunning Singapore skyline, verdant Singapore gardens, and a rich tapestry of Singapore culture. Whether you envision yourself exploring futuristic landscapes or savoring diverse culinary experiences, a Singapore holiday promises an unforgettable escape. Allow Global Visa Internationals to streamline your travel by providing expert assistance with your Singapore tourist visa application. Contact Global Visa Internationals today to begin your journey!</p>
 
@@ -241,23 +239,15 @@ export default function Dubai() {
           <h3 className={styles.subTitle}>Discover the Reasons to Visit Singapore</h3>
           <p className={styles.card}>Singapore's unique blend of modernity, cultural richness, and natural beauty makes it a compelling destination for all types of travelers:</p>
           <ol>
-            <li className={styles.card1}>Safe Travel Singapore and Clean City Singapore: Singapore is globally recognized for its exceptionally low crime rate and remarkably clean environment, offering visitors unparalleled peace of mind.</li>
-
-            <li className={styles.card}>Singapore Culture Diversity and Multicultural Singapore: Immerse yourself in Singapore's vibrant Singapore culture diversity, a harmonious blend of Chinese, Malay, Indian, and Western influences evident in its cuisine, festivals, and architecture, creating a truly multicultural Singapore.</li>
-
-            <li className={styles.card1}>Top Attractions Singapore and Singapore Sightseeing: From futuristic Singapore gardens to thrilling theme parks, Singapore boasts a wealth of top attractions Singapore ensuring a memorable Singapore sightseeing experience.</li>
-
-            <li className={styles.card}>Singapore Food Scene and Best Food in Singapore: Indulge in the diverse and delectable Singapore food scene, ranging from Michelin-starred establishments to the best food in Singapore found in its bustling hawker centres.</li>
-
-            <li className={styles.card1}>Singapore Changi Airport and Transportation in Singapore: Benefit from Singapore's Changi Airport, a major international hub offering seamless global connections, complemented by an excellent and efficient transportation in Singapore network.</li>
-
-            <li className={styles.card}>Parks in Singapore and Singapore Gardens: Despite its modern urban landscape, Singapore boasts numerous lush parks in Singapore and stunning Singapore gardens, providing refreshing escapes within the city. </li>
+            <li className={styles.card1}><strong>Safe Travel Singapore and Clean City Singapore:</strong> Singapore is globally recognized for its exceptionally low crime rate and remarkably clean environment, offering visitors unparalleled peace of mind.</li>
+            <li className={styles.card}><strong>Singapore Culture Diversity and Multicultural Singapore:</strong> Immerse yourself in Singapore's vibrant Singapore culture diversity, a harmonious blend of Chinese, Malay, Indian, and Western influences evident in its cuisine, festivals, and architecture, creating a truly multicultural Singapore.</li>
+            <li className={styles.card1}><strong>Top Attractions Singapore and Singapore Sightseeing:</strong> From futuristic Singapore gardens to thrilling theme parks, Singapore boasts a wealth of top attractions Singapore ensuring a memorable Singapore sightseeing experience.</li>
+            <li className={styles.card}><strong>Singapore Food Scene and Best Food in Singapore:</strong> Indulge in the diverse and delectable Singapore food scene, ranging from Michelin-starred establishments to the best food in Singapore found in its bustling hawker centres.</li>
+            <li className={styles.card1}><strong>Singapore Changi Airport and Transportation in Singapore:</strong> Benefit from Singapore's Changi Airport, a major international hub offering seamless global connections, complemented by an excellent and efficient transportation in Singapore network.</li>
+            <li className={styles.card}><strong>Parks in Singapore and Singapore Gardens:</strong> Despite its modern urban landscape, Singapore boasts numerous lush parks in Singapore and stunning Singapore gardens, providing refreshing escapes within the city. </li>
           </ol>
 
-
-
-
-          <h2 className={styles.subTitle}>🇸🇬 Singapore Travel Cost Guide – May 2025</h2>
+          <h2 className={styles.subTitle}> Singapore Travel Cost Guide - May 2025</h2>
 
           <table className={styles.table}>
             <thead>
@@ -271,32 +261,32 @@ export default function Dubai() {
             <tbody>
               <tr>
                 <td data-label="Category">Flights (One-way)</td>
-                <td data-label="SGD">S$120–S$380</td>
-                <td data-label="INR">₹7,490–₹22,000</td>
-                <td data-label="Details">From major Indian cities – <a href="https://www.airindia.com/en-in/book-flights/flights-to-singapore?utm_source=chatgpt.com" target="_blank">Air India</a></td>
+                <td data-label="SGD">S$120-S$380</td>
+                <td data-label="INR">₹7,490-₹22,000</td>
+                <td data-label="Details">From major Indian cities - <a href="https://www.airindia.com/en-in/book-flights/flights-to-singapore?utm_source=chatgpt.com" target="_blank">Air India</a></td>
               </tr>
               <tr>
                 <td data-label="Category">Accommodation (Per night)</td>
-                <td data-label="SGD">S$20–S$423</td>
-                <td data-label="INR">₹1,250–₹26,000</td>
+                <td data-label="SGD">S$20-S$423</td>
+                <td data-label="INR">₹1,250-₹26,000</td>
                 <td data-label="Details"><a href="https://www.booking.com/city/sg/singapore.html?utm_source=chatgpt.com" target="_blank">Booking.com</a>, <a href="https://www.agoda.com/country/singapore.html?utm_source=chatgpt.com" target="_blank">Agoda</a></td>
               </tr>
               <tr>
                 <td data-label="Category">Food (Per day)</td>
-                <td data-label="SGD">S$15–S$100</td>
-                <td data-label="INR">₹950–₹6,300</td>
-                <td data-label="Details">Hawker to mid-range – <a href="https://www.numbeo.com/cost-of-living/country_result.jsp?country=Singapore&utm_source=chatgpt.com" target="_blank">Numbeo</a></td>
+                <td data-label="SGD">S$15-S$100</td>
+                <td data-label="INR">₹950-₹6,300</td>
+                <td data-label="Details">Hawker to mid-range - <a href="https://www.numbeo.com/cost-of-living/country_result.jsp?country=Singapore&utm_source=chatgpt.com" target="_blank">Numbeo</a></td>
               </tr>
               <tr>
                 <td data-label="Category">Public Transport</td>
-                <td data-label="SGD">S$4–S$10</td>
-                <td data-label="INR">₹250–₹630</td>
+                <td data-label="SGD">S$4-S$10</td>
+                <td data-label="INR">₹250-₹630</td>
                 <td data-label="Details"><a href="https://www.ptc.gov.sg/fare-regulation/bus-rail/fare-structure?utm_source=chatgpt.com" target="_blank">Public Transport Council</a></td>
               </tr>
               <tr>
                 <td data-label="Category">Attractions</td>
-                <td data-label="SGD">S$10–S$56</td>
-                <td data-label="INR">₹630–₹3,500</td>
+                <td data-label="SGD">S$10-S$56</td>
+                <td data-label="INR">₹630-₹3,500</td>
                 <td data-label="Details"><a href="https://www.singapore-tickets.com/?utm_source=chatgpt.com" target="_blank">Singapore Tickets</a></td>
               </tr>
               <tr>
@@ -308,23 +298,20 @@ export default function Dubai() {
             </tbody>
           </table>
 
-
-
-
           <h2 className={styles.subTitle}>Navigating the Japan Tourist Visa Process</h2>
           <p className={styles.card1}>Obtaining a tourist visa for Japan involves several key steps. While the specific requirements may vary based on your nationality, the general process typically includes:</p>
           <ol>
-            <li className={styles.card}>Determining Visa Requirements: Check the website of the Japanese Ministry of Foreign Affairs or the Japanese embassy/consulate in your country to confirm if you need a visa and the specific requirements for your nationality.</li>
-            <li className={styles.card1}>Gathering Required Documents: This usually includes a valid passport, visa application form, passport-sized photographs, proof of sufficient funds, travel itinerary, and hotel booking confirmations. Additional documents may be required depending on your circumstances.</li>
-            <li className={styles.card}>Submitting Your Application: You will typically need to submit your application in person at the Japanese embassy or consulate in your country. Some countries may have authorized visa application centers.</li>
-            <li className={styles.card1}>Visa Interview (if required): In some cases, you may be required to attend an interview as part of the visa application process.1 </li>
-            <li className={styles.card}>Visa Processing: The processing time for a Japan tourist visa can vary. It's crucial to apply well in advance of your intended travel dates.</li>
-            <li className={styles.card1}>Receiving Your Visa: Once your application is approved, your visa will be affixed to your passport.</li>
+            <li className={styles.card}><strong>Determining Visa Requirements:</strong> Check the website of the Japanese Ministry of Foreign Affairs or the Japanese embassy/consulate in your country to confirm if you need a visa and the specific requirements for your nationality.</li>
+            <li className={styles.card1}><strong>Gathering Required Documents:</strong> This usually includes a valid passport, visa application form, passport-sized photographs, proof of sufficient funds, travel itinerary, and hotel booking confirmations. Additional documents may be required depending on your circumstances.</li>
+            <li className={styles.card}><strong>Submitting Your Application:</strong> You will typically need to submit your application in person at the Japanese embassy or consulate in your country. Some countries may have authorized visa application centers.</li>
+            <li className={styles.card1}><strong>Visa Interview (if required):</strong> In some cases, you may be required to attend an interview as part of the visa application process.1 </li>
+            <li className={styles.card}><strong>Visa Processing:</strong> The processing time for a Japan tourist visa can vary. It's crucial to apply well in advance of your intended travel dates.</li>
+            <li className={styles.card1}><strong>Receiving Your Visa:</strong> Once your application is approved, your visa will be affixed to your passport.</li>
           </ol>
           <p className={styles.card}>The Japan visa process can seem complex, but Global Visa Internationals is here to simplify it for you.</p>
 
           <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your Guide to Japan Visa Application</h3>
-          <p className={styles.card}>Planning your dream trip to Japan should be exciting, not stressful. At Global Visa Internationals, we provide comprehensive assistance to ensure a smooth and successful Japan tourist visa application process.</p>
+          <p className={styles.card}>Planning your dream trip to Japan should be exciting, not stressful. At <strong>Global Visa Internationals,</strong> we provide comprehensive assistance to ensure a smooth and successful Japan tourist visa application process.</p>
           <b className={styles.strong}>Our Japan Visa Services include:</b>
           <ul className={styles.card1}>
             <li>Personalized guidance on Japan visa requirements based on your nationality.</li>
@@ -389,17 +376,17 @@ export default function Dubai() {
 
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals for Your Visa Needs?</h2>
-          <p>At Global Visa Internationals, we understand that the visa application process can be complex and time-consuming. That's why we offer:</p>
+          <p>At <strong>Global Visa Internationals,</strong> we understand that the visa application process can be complex and time-consuming. That's why we offer:</p>
           <ul>
-            <li>Personalized Guidance: Our experienced consultants provide tailored support throughout your application journey</li>
-            <li>Expert Knowledge: We stay up-to-date with the latest visa regulations to ensure your application is accurate and complete.</li>
-            <li>Hassle-Free Process: We handle the paperwork and guide you through each step, saving you time and stress.</li>
-            <li>High Success Rate: We are committed to maximizing your chances of a successful visa outcome.</li>
-            <li>Additional Services: We also take Mock Interviews to prepare you for the visa interview process.</li>
+            <li> Personalized Guidance: Our experienced consultants provide tailored support throughout your application journey</li>
+            <li> Expert Knowledge: We stay up-to-date with the latest visa regulations to ensure your application is accurate and complete.</li>
+            <li> Hassle-Free Process: We handle the paperwork and guide you through each step, saving you time and stress.</li>
+            <li> High Success Rate: We are committed to maximizing your chances of a successful visa outcome.</li>
+            <li> Additional Services: We also take Mock Interviews to prepare you for the visa interview process.</li>
           </ul>
-          <p>We at Global Visa Internationals, proud to be India's finest visa consultants, are dedicated to making your dreams into reality. With our 11+ years of experience as leading visa consultants in Bangalore, we have successfully managed to process over 55,000+ visas and offer over 75,000 expert visa advice sessions till date. You can confidently rely on our vast visa and immigration consulting experience in India.</p>
+          <p>We at <strong>Global Visa Internationals,</strong> proud to be India's finest visa consultants, are dedicated to making your dreams into reality. With our 11+ years of experience as leading visa consultants in Bangalore, we have successfully managed to process over 55,000+ visas and offer over 75,000 expert visa advice sessions till date. You can confidently rely on our vast visa and immigration consulting experience in India.</p>
           <p>Let Global Visa Internationals assist you in navigating the visa application process and planning your dream Australian adventure!</p>
-          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p className={styles.note}> This service is provided by <strong>Global Visa Internationals,</strong> an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
         <div className={styles.formSection}>

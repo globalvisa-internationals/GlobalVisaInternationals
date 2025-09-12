@@ -145,7 +145,7 @@ export default function Canada() {
           <section>
             <h2 className={styles.subTitle}>✈ Travel to Canada with a Visitor Visa</h2>
             <p>
-              Planning a trip to Canada? The **Canada Visitor Visa** (also known as a Temporary Resident Visa or TRV) allows Indian travelers to visit for tourism, to see family, or for a short-term business trip. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We specialize in providing comprehensive **Canada visa assistance for Indians**.
+              Planning a trip to Canada? The Canada Visitor Visa (also known as a Temporary Resident Visa or TRV) allows Indian travelers to visit for tourism, to see family, or for a short-term business trip. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We specialize in providing comprehensive Canada visa assistance for Indians.
             </p>
           </section>
 
@@ -153,7 +153,7 @@ export default function Canada() {
             <section>
               <h2 className={styles.subTitle}>Visa Processing Overview</h2>
               <p>
-                Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your **Canada visa application from India** meets the expectations of Immigration, Refugees and Citizenship Canada (IRCC) and that your travel purpose is clearly and professionally represented. We are a trusted **Canada visa consultant in India**.
+                Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your Canada visa application from India meets the expectations of Immigration, Refugees and Citizenship Canada (IRCC) and that your travel purpose is clearly and professionally represented. We are a trusted Canada visa consultant in India.
               </p>
             </section>
 
@@ -165,14 +165,14 @@ export default function Canada() {
                 <li>Personalized checklist and guidance</li>
                 <li>Providing accepted samples for the required documents</li>
                 <li>Verification of documentation</li>
-                <li>Complete walk-through of the **Canada tourist visa process**</li>
+                <li>Complete walk-through of the Canada tourist visa process</li>
               </ul>
             </section>
 
             <section>
               <h3 className={styles.subTitle}>Timeline:</h3>
               <p>
-                Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days. This is an essential first step in the overall **Canada visa processing time**.
+                Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days. This is an essential first step in the overall Canada visa processing time.
               </p>
             </section>
           </div>
@@ -180,7 +180,7 @@ export default function Canada() {
           <section>
             <h2 className={styles.subTitle}>🕒 Canada Visa Duration Rule</h2>
             <p>
-              A **Canada Visitor Visa** typically allows you to stay for up to 6 months. A **multiple entry Canada visa for Indians** may be issued with a validity of up to 10 years, or until your passport expires, whichever comes first. Note that even with a multiple-entry visa, you can only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.
+              A Canada Visitor Visa typically allows you to stay for up to 6 months. A multiple entry Canada visa for Indians may be issued with a validity of up to 10 years, or until your passport expires, whichever comes first. Note that even with a multiple-entry visa, you can only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.
             </p>
             <p>
               👉 With GVI, you’ll never miscalculate your stay—we ensure full compliance with Canadian visa rules.
@@ -190,7 +190,7 @@ export default function Canada() {
           <section>
             <h2 className={styles.subTitle}>Canada Visitor & Business Visa Documents & Requirements for Indian Applicants</h2>
             <p>
-              Before applying, ensure you meet the **Canada visa eligibility for Indians**. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents. We provide a detailed **Canada tourist visa checklist**.
+              Before applying, ensure you meet the Canada visa eligibility for Indians. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents. We provide a detailed Canada tourist visa checklist.
             </p>
           </section>
 
@@ -198,10 +198,10 @@ export default function Canada() {
             <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
             <ul>
               <li>
-                <b className={styles.strong}>Valid Passport:</b> Must be valid for the entire duration of your stay in Canada, with at least one blank page for the visa stamp. We guide you on all **Canada visa on Indian passport** requirements.
+                <b className={styles.strong}>Valid Passport:</b> Must be valid for the entire duration of your stay in Canada, with at least one blank page for the visa stamp. We guide you on all Canada visa on Indian passport requirements.
               </li>
               <li>
-                <b className={styles.strong}>Travel History:</b> Previous international travel and a record of international travel stamps are crucial. GVI helps you highlight these to strengthen your **Canada visa application**.
+                <b className={styles.strong}>Travel History:</b> Previous international travel and a record of international travel stamps are crucial. GVI helps you highlight these to strengthen your Canada visa application.
               </li>
             </ul>
           </section>
@@ -209,11 +209,11 @@ export default function Canada() {
           <section>
             <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
             <p>
-              You must prove you have sufficient funds to support your trip without working or relying on public funds. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹3–4 lakh (or approx. CAD$4,700-$62,000) in your bank account. This is a key part of the **proof of funds for Canada visitor visa**. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.
+              You must prove you have sufficient funds to support your trip without working or relying on public funds. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹3–4 lakh (or approx. CAD$4,700-$62,000) in your bank account. This is a key part of the proof of funds for Canada visitor visa. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.
             </p>
             <ul>
               <li>
-                <b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. We advise on the **Canada tourist visa bank statement requirement**.
+                <b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. We advise on the Canada tourist visa bank statement requirement.
               </li>
               <li>
                 <b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 3 years to prove a stable income source.
@@ -228,10 +228,10 @@ export default function Canada() {
                 <b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.
               </li>
               <li>
-                <b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 3 years’ ITRs. We also recommend a brief business profile. This also applies for **Canada visa for retired persons**.
+                <b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 3 years’ ITRs. We also recommend a brief business profile. This also applies for Canada visa for retired persons.
               </li>
               <li>
-                <b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university. We also assist with **Canada tourist visa for minors**.
+                <b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university. We also assist with Canada tourist visa for minors.
               </li>
             </ul>
           </section>
@@ -243,7 +243,7 @@ export default function Canada() {
                 <b className={styles.strong}>Flight & Hotel Bookings:</b> Provide a detailed travel itinerary covering your entire stay. It's not mandatory to have confirmed return flight tickets, but a travel plan is required.
               </li>
               <li>
-                <b className={styles.strong}>Accommodation Proof:</b> Provide confirmed hotel reservations covering your entire stay. If staying with a friend or relative, you will need a **Canada visa invitation letter** and proof of their Canadian address and immigration status. We assist with applications for a **Canada visa for family** and **Canada visa for aged parents**.
+                <b className={styles.strong}>Accommodation Proof:</b> Provide confirmed hotel reservations covering your entire stay. If staying with a friend or relative, you will need a Canada visa invitation letter and proof of their Canadian address and immigration status. We assist with applications for a Canada visa for family and Canada visa for aged parents.
               </li>
             </ul>
           </section>
@@ -251,14 +251,14 @@ export default function Canada() {
           <section>
             <h3 className={styles.subTitle}>5. Visa Cover Letter & Itinerary</h3>
             <p>
-              A well-written cover letter is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism, business meeting), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional **Canada tourist visa cover letter sample** for every client to maximize their chances of success.
+              A well-written cover letter is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism, business meeting), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional Canada tourist visa cover letter sample for every client to maximize their chances of success.
             </p>
           </section>
 
           <section>
             <h2 className={styles.subTitle}>Canada Visitor Visa Fees (India 2025)</h2>
             <p>
-              As of 2025, the **Canada visa fees** are subject to change. Fees are paid to the Government of Canada (IRCC) and VFS Global. The fees listed below are approximate and do not include additional services. We provide transparent guidance on the **Canada tourist visa cost in rupees**.
+              As of 2025, the Canada visa fees are subject to change. Fees are paid to the Government of Canada (IRCC) and VFS Global. The fees listed below are approximate and do not include additional services. We provide transparent guidance on the Canada tourist visa cost in rupees.
             </p>
             <ul>
               <li>
@@ -275,7 +275,7 @@ export default function Canada() {
           <section>
             <h2 className={styles.subTitle}>Common Reasons for Canada Visa Rejection & How We Solve Them</h2>
             <p>
-              Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent **Canada tourist visa rejection reasons**.
+              Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent Canada tourist visa rejection reasons.
             </p>
             <ul>
               <li>
@@ -296,17 +296,17 @@ export default function Canada() {
           <section>
             <h2 className={styles.subTitle}>Canada Visa Processing Time from India</h2>
             <p>
-              The **Canada visa processing time from India** can vary. Here are some general timelines:
+              The Canada visa processing time from India can vary. Here are some general timelines:
             </p>
             <ul>
               <li>
-                <b className={styles.strong}>Standard Processing Time:</b> The IRCC service standard is to process most visitor visa applications within a few weeks. Wait times can vary and are often updated on the official IRCC website. The **Canada tourist visa processing time VFS** is a key part of this.
+                <b className={styles.strong}>Standard Processing Time:</b> The IRCC service standard is to process most visitor visa applications within a few weeks. Wait times can vary and are often updated on the official IRCC website. The Canada tourist visa processing time VFS is a key part of this.
               </li>
               <li>
                 <b className={styles.strong}>Peak Season:</b> Can extend to 60 working days or more.
               </li>
               <li>
-                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the IRCC in a timely manner. We help you **track Canada visa application status** and understand **Canada visa appointment waiting time in India**.
+                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the IRCC in a timely manner. We help you track Canada visa application status and understand Canada visa appointment waiting time in India.
               </li>
             </ul>
           </section>
@@ -318,7 +318,7 @@ export default function Canada() {
             </p>
             <ol>
               <li>
-                <b className={styles.strong}>Online Application & Appointment Booking:</b> We fill out the online form on the IRCC website and book your VFS appointment for you. We are experts in the **VFS Global Canada visa process**.
+                <b className={styles.strong}>Online Application & Appointment Booking:</b> We fill out the online form on the IRCC website and book your VFS appointment for you. We are experts in the VFS Global Canada visa process.
               </li>
               <li>
                 <b className={styles.strong}>Document Submission & Biometrics:</b> You visit the VFS center in person to submit the verified documents and provide your fingerprints and a photo.
@@ -334,11 +334,11 @@ export default function Canada() {
 
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
           <p>
-            Choose the right **Canada visa assistance package** for your needs:
+            Choose the right Canada visa assistance package for your needs:
           </p>
           <ul>
             <li>
-              <b className={styles.strong}>Basic (₹6,999):</b> Checklist + document review
+              <b className={styles.strong}>Basic (₹5,999):</b> Checklist + document review
             </li>
             <li>
               <b className={styles.strong}>Standard (₹8,999):</b> End-to-end application, filing, appointment booking, and biometrics guidance
@@ -353,7 +353,7 @@ export default function Canada() {
             <li>2,200+ Canada visas processed since 2017</li>
             <li>98% client satisfaction rate across India</li>
             <li>Specialized assistance for re-application after rejection</li>
-            <li>Experienced **visa consultants** who provide personalized, country-specific advice.</li>
+            <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
           </ul>
 
           <h2 className={styles.subTitle}>Ready to Apply?</h2>
@@ -361,7 +361,7 @@ export default function Canada() {
             With GVI, you don’t need to worry about rejections or missing documents.
           </p>
           <p>
-            👉 Start your **Canada visa application** today with Global Visa Internationals and travel to Canada with confidence. We are recognized as a **best visa consultancy for Canada**.
+            👉 Start your Canada visa application today with Global Visa Internationals and travel to Canada with confidence. We are recognized as a best visa consultancy for Canada.
           </p>
           <br />
           <a href="/contact" className={styles.ctaButton}>
