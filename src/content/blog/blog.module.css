@@ -336,113 +336,111 @@
 
 
 
-
+/* ===== STORY CONTAINER ===== */
 .storyContainer {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 40px auto;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  /* mobile first = stacked */
+  align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 1200px;
   text-align: justify;
   background: var(--background);
 }
 
 /* ===== IMAGE WRAPPER ===== */
 .imageWrapper {
-  position: relative;
-  width: 280px;
-  height: 400px;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 12px;
-  flex-shrink: 0;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   background: #fff;
 }
 
 /* ===== IMAGE STYLING ===== */
 .responsiveImage {
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
   object-fit: cover;
-  /* better than fill for proper scaling */
 }
 
 /* ===== TEXT CONTENT ===== */
 .textContent {
+  width: 100%;
   max-width: 700px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.7;
-  padding: 10px;
-  margin-top: 0;
-  padding-top: 0;
+  padding: 0 5px;
   color: var(--text);
 }
 
 .textContent h2 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
   text-align: center;
   color: #057A7E;
-  margin-bottom: 15px;
-  padding-top: 0;
-  margin-top: 0;
-}
-
-/* ===== STORY CARD ===== */
-.storyCard {
   margin-bottom: 10px;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* ===== STORY CARD ===== */
+
+.strong {
+  color: var(--accent);
+}
+
+.storyCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== DESKTOP & TABLET OVERRIDES ===== */
+@media (min-width: 769px) {
   .storyContainer {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    /* side-by-side */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 40px auto;
     gap: 20px;
-    padding: 15px;
   }
 
   .imageWrapper {
-    width: 100%;
-    max-width: 320px;
-    aspect-ratio: 3 / 4;
-    /* Ensures proper height */
-  }
-
-  /* Fix for next/image fill to keep container height */
-  .imageWrapper::before {
-    content: "";
-    display: block;
-    padding-top: 133%;
-    /* fallback for aspect ratio */
+    flex-shrink: 0;
+    width: 280px;
+    height: 400px;
+    aspect-ratio: auto;
+    /* override for fixed desktop size */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   }
 
   .textContent {
-    max-width: 100%;
-    font-size: 15px;
-    padding: 0 5px;
+    font-size: 16px;
+    padding: 10px;
   }
 
   .textContent h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    padding-top: 0px;
+    font-size: 28px;
+    margin-bottom: 15px;
   }
 
-  /* Make each paragraph a card on mobile */
   .storyCard {
-    background: #cefafc;
-    border-radius: 12px;
-    padding: 15px 20px;
-    margin: 10px auto;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 10px;
+    transition: none;
   }
 
   .storyCard:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transform: none;
+    box-shadow: none;
   }
 }
 
