@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp",
+        url: "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg",
         width: 1200,
         height: 630,
         alt: "Schengen Tourist Visa Assistance Banner",
@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "Plan your trip to Europe with confidence. Apply for Schengen tourist, visitor, or business visa with Global Visa Internationals – expert help for documents, fees, and approvals.",
     images: [
-      "https://www.globalvisainternationals.com/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp",
+      "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg",
     ],
   },
 };
@@ -151,8 +151,8 @@ export default function Schengen_Visa_Assistance() {
 
       <div className={styles.imageContainer}>
         <img
-          src="/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp"
-          alt="Canada Image"
+          src="/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg"
+          alt="Schengen Tourist Visa Assistance GVI"
           className={styles.VisaImage}
         />
       </div>
@@ -270,7 +270,7 @@ export default function Schengen_Visa_Assistance() {
             Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.
             👉 With GVI, you’ll never miscalculate your stay — we ensure full compliance with <b className={styles.strong}>Schengen visa rules</b>.</p>
 
-          <h2 className={styles.subTitle}>Schengen Tourist Visa Documents & Requirements for Indian Applicants</h2>
+          <h2 className={styles.subTitle}>Schengen Tourist Visa Documents Cheack List for Indian Applicants</h2>
           <p>Before applying, ensure you meet the <b className={styles.strong}>Schengen visa eligibility requirements</b>. If these criteria are met, <b className={styles.strong}>Global Visa Internationals (GVI)</b> will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
 
           <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>

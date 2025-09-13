@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/Australia-Tourist-Visa-assistance-banner.webp",
+        url: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
         width: 1200,
         height: 630,
         alt: "Australia Tourist Visa Banner",
@@ -39,7 +39,7 @@ export const metadata = {
     description:
       "Plan your dream trip to Australia. Discover visa requirements, estimated expenses, and top attractions. Trusted consultants since 2017.",
     images: [
-      "https://www.globalvisainternationals.com/visa-banner/Australia-Tourist-Visa-assistance-banner.webp",
+      "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
     ],
   },
 };
@@ -154,7 +154,7 @@ export default function Australia() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/visa-banner/Australia-Tourist-Visa-assistance-banner.webp" alt="Australia Visa assistence Bannar Global Visa Internationals" className={styles.VisaImage} />
+        <img src="/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg" alt="Australia Visa assistence Bannar Global Visa Internationals" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>

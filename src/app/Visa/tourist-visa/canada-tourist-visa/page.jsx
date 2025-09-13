@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/Canada-Tourist-Visa-assistence-banner.webp",
+        url: "https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg",
         width: 1200,
         height: 630,
         alt: "Canada Tourist Visa Banner",
@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "Plan your dream trip to Canada. Discover visa requirements, costs, and must-see destinations with help from Global Visa Internationals.",
     images: [
-      "https://www.globalvisainternationals.com/visa-banner/Canada-Tourist-Visa-assistence-banner.webp",
+      "https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg",
     ],
   },
 };
@@ -207,8 +207,8 @@ export default function Canada() {
 
       <div className={styles.imageContainer}>
         <img
-          src="/visa-banner/Canada-Tourist-Visa-assistence-banner.webp"
-          alt="Canada Image"
+          src="/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg"
+          alt="Canada Tourist Visa Assistance GVI"
           className={styles.VisaImage}
         />
       </div>

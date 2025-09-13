@@ -24,7 +24,7 @@ export const metadata = {
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand-tourist-visa",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/images/new-zealand-tourist-visa-banner.webp",
+        url: "https://www.globalvisainternationals.com/tourist-visa/New-Zealand-Tourist-Visa-Assistance-GVI.jpg",
         alt: "New Zealand Tourist Visa Assistance",
       },
     ],
@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "Planning a trip to New Zealand? Get full visa support from trusted consultants in Bangalore.",
     images: [
-      "https://www.globalvisainternationals.com/images/new-zealand-tourist-visa-banner.webp",
+      "https://www.globalvisainternationals.com/tourist-visa/New-Zealand-Tourist-Visa-Assistance-GVI.jpg",
     ],
   },
 };
@@ -210,7 +210,7 @@ export default function NewZealand() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/new-zealand-tourist-visa-banner.webp" alt="new zealand tourist visa banner" className={styles.VisaImage} />
+        <img src="/tourist-visa/New-Zealand-Tourist-Visa-Assistance-GVI.jpg" alt="new zealand tourist visa banner" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>

@@ -17,7 +17,7 @@ export const metadata = {
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore-tourist-visa",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/singapore-tourist-visa-global-visa-internationals.png",
+        url: "https://www.globalvisainternationals.com/tourist-visa/Singapore-Visa-Assistance-GVI.jpg",
         alt: "Apply for Singapore Tourist Visa - Global Visa Internationals",
       }
     ],
@@ -28,7 +28,7 @@ export const metadata = {
     site: "@globalvisainternationals",
     title: "Apply for Singapore Tourist Visa from Bangalore - Trusted Experts",
     description: "Need a Singapore tourist visa? Get complete assistance from Global Visa Internationals - Bangalore's preferred visa consultants.",
-    images: ["https://www.globalvisainternationals.com/images/singapore-tourist-visa-global-visa-internationals.png"]
+    images: ["https://www.globalvisainternationals.com/tourist-visa/Singapore-Visa-Assistance-GVI.jpg"]
   }
 };
 
@@ -192,7 +192,7 @@ export default function Dubai() {
       </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/visa-banner/singapore-tourist-visa-global-visa-internationals.png" alt="Singapore-Turist-Visa-Global-Visa-Internationals" className={styles.VisaImage} />
+        <img src="/tourist-visa/Singapore-Visa-Assistance-GVI.jpg" alt="Singapore Turist Visa Global Visa-Internationals" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>

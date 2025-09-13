@@ -22,7 +22,7 @@ export const metadata = {
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/dubai-tourist-visa",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp",
+        url: "https://www.globalvisainternationals.com/tourist-visa/Dubai-Tourist-Visa-Assistance-GVI.jpg",
         alt: "Dubai Tourist Visa Assistance - Global Visa Internationals",
       },
     ],
@@ -35,7 +35,7 @@ export const metadata = {
     description:
       "Need a Dubai Tourist Visa? Get complete assistance with fast processing and expert support. Trusted consultants in Bangalore since 2012.",
     images: [
-      "https://www.globalvisainternationals.com/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp",
+      "https://www.globalvisainternationals.com/tourist-visa/Dubai-Tourist-Visa-Assistance-GVI.jpg",
     ],
   },
 };
@@ -147,7 +147,7 @@ export default function DubaiVisaPage() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp" alt="Dubai-Turist-Visa-Global-Visa-Internationals" className={styles.VisaImage} />
+        <img src="/tourist-visa/Dubai-Tourist-Visa-Assistance-GVI.jpg" alt="Dubai Turist Visa Global Visa Internationals" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>

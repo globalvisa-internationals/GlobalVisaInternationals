@@ -19,7 +19,7 @@ export const metadata = {
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan-tourist-visa",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/images/japan-visa-banner.jpg",
+        url: "https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg",
         alt: "Japan Tourist Visa Assistance",
       }
     ],
@@ -30,7 +30,7 @@ export const metadata = {
     site: "@globalvisainternationals",
     title: "Japan Tourist Visa Experts – Global Visa Internationals",
     description: "Planning to travel to Japan? Get full visa support from trusted consultants in Bangalore.",
-    images: ["https://www.globalvisainternationals.com/images/japan-visa-banner.jpg"]
+    images: ["https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg"]
   }
 };
 
@@ -185,7 +185,7 @@ export default function JapanTouristVisa() {
       </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/images/Japan1.png" alt="Europe Image" className={styles.VisaImage} />
+        <img src="/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg" alt="Japan Tourist Visa Assistance GVI" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>

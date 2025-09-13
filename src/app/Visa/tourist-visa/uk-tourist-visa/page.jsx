@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp",
+        url: "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
         width: 1200,
         height: 630,
         alt: "UK Tourist Visa Assistance from India - Global Visa Internationals",
@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "Get expert help to apply for your UK tourist visa from India. Global Visa Internationals provides visa application assistance, documentation support, and embassy appointment guidance.",
     images: [
-      "https://www.globalvisainternationals.com/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp",
+      "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
     ],
   },
 };
@@ -198,8 +198,8 @@ export default function UKTouristVisa() {
       <div className={styles.imageContainer}>
 
         <img
-          src="/visa-banner/London-Tourist-Visa-Global-Visa-Internationals.webp"
-          alt="UK Image"
+          src="/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg"
+          alt="UK Tourist Visa Assistance GVI"
           className={styles.VisaImage}
         />
       </div>
