@@ -42,6 +42,7 @@ export default function RootLayout({ children }) {
         >
           <NavBar />
           {children}
+          <Analytics />
           <Footer />
           <SpeedInsights />
         </GoogleReCaptchaProvider>
