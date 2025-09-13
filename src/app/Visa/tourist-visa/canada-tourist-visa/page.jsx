@@ -12,13 +12,13 @@ export const metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
+      "https://www.globalvisainternationals.com/Visa/tourist-visa/canada-tourist-visa",
   },
   openGraph: {
     title: "Canada Tourist Visa: Application, Requirements & Top Travel Tips",
     description:
       "Get expert help from Global Visa Internationals on applying for a Canada tourist visa. Learn the visa process, documents needed, and explore popular Canadian destinations.",
-    url: "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/canada-tourist-visa",
     siteName: "Global Visa Internationals",
     images: [
       {
@@ -43,93 +43,166 @@ export const metadata = {
 };
 
 export default function Canada() {
+  const pageUrl = metadata.alternates.canonical;
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.globalvisainternationals.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Canada Tourist Visa",
+        item: pageUrl,
+      },
+    ],
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    logo: "https://www.globalvisainternationals.com/gvilogo.png",
+    description:
+      "Expert Canada Tourist Visa Consultants in Bangalore. Complete documentation, application submission, and personalized guidance.",
+    telephone: "+91-7022213466",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "MG Road",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560025",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 12.9716,
+      longitude: 77.5946,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "10:00",
+        closes: "18:00",
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "[suspicious link removed]",
+    ],
+  };
+
+  const touristAttractionsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Top Tourist Attractions in Canada",
+    itemListElement: [
+      {
+        "@type": "TouristAttraction",
+        name: "Niagara Falls",
+        description:
+          "The world-famous waterfalls on the border of Canada and the United States.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/e/e0/Niagara_Falls_2017.jpg",
+        url: "https://en.wikipedia.org/wiki/Niagara_Falls",
+      },
+      {
+        "@type": "TouristAttraction",
+        name: "Banff National Park",
+        description:
+          "Canada's oldest national park, known for its turquoise lakes and stunning Rocky Mountain scenery.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/1/11/Lake_Louise_Banff_National_Park_Canada.jpg",
+        url: "https://en.wikipedia.org/wiki/Banff_National_Park",
+      },
+      {
+        "@type": "TouristAttraction",
+        name: "Toronto's CN Tower",
+        description:
+          "An iconic observation and communications tower offering panoramic city views.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d4/Toronto_-ON-CN_Tower-2015-05-24-_01.jpg",
+        url: "https://en.wikipedia.org/wiki/CN_Tower",
+      },
+      {
+        "@type": "TouristAttraction",
+        name: "Old Quebec",
+        description:
+          "A historic, walled city with cobblestone streets, charming architecture, and a rich European feel.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d3/Quebec_City_at_dusk.jpg",
+        url: "https://en.wikipedia.org/wiki/Old_Quebec",
+      },
+      {
+        "@type": "TouristAttraction",
+        name: "Vancouver's Stanley Park",
+        description:
+          "A massive urban park with a famous seawall, rainforest trails, and beaches.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/c/c3/Stanley_Park%2C_Vancouver%2C_BC%2C_Canada.jpg",
+        url: "https://en.wikipedia.org/wiki/Stanley_Park_(Vancouver",
+      },
+    ],
+  };
   return (
     <>
       <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Breadcrumb Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://www.globalvisainternationals.com",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Canada",
-                  item: "https://www.globalvisainternationals.com/visa/tourist-visa/canada",
-                },
-              ],
-            }),
-          }}
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(touristAttractionsJsonLd) }}
         />
-        <script
-          src="https://static.elfsight.com/platform/platform.js"
-          async
-        ></script>
-        {/* Local Business Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "TravelAgency",
-              name: "Global Visa Internationals",
-              url: "https://www.globalvisainternationals.com",
-              logo: "https://www.globalvisainternationals.com/gvilogo.png",
-              description:
-                "Visa & Immigration Consultants based in Bangalore. Trusted since 2017.",
-              telephone: "+91-7022213466",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "MG Road",
-                addressLocality: "Bengaluru",
-                addressRegion: "Karnataka",
-                postalCode: "560025",
-                addressCountry: "IN",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 12.9716,
-                longitude: 77.5946,
-              },
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                  ],
-                  opens: "10:00",
-                  closes: "18:00",
-                },
-              ],
-              sameAs: [
-                "https://www.facebook.com/globalvisainternationals/",
-                "https://www.instagram.com/globalvisa_internationals/",
-                "https://www.linkedin.com/company/global-visa-internationals/",
-                "https://x.com/GLOBALVISA1505",
-                "https://www.youtube.com/@globalVisaInternationals",
-                "https://www.google.com/maps/place/Global+Visa+Internationals",
-              ],
-            }),
-          }}
-        />
+
       </Head>
 
       <div className={styles.imageContainer}>

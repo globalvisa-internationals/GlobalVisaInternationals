@@ -9,12 +9,12 @@ export const metadata = {
   description: "Planning a trip to Singapore? Let Global Visa Internationals simplify your visa process. Trusted consultants in Bangalore offering end-to-end visa support with fast approvals.",
   keywords: "Singapore tourist visa Bangalore, apply Singapore visa India, Singapore travel visa assistance, Singapore visa agents, tourist visa consultants for Singapore",
   robots: "index, follow",
-  alternates: { canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore", },
+  alternates: { canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore-tourist-visa", },
   openGraph: {
     type: "website",
     title: "Fast & Reliable Singapore Tourist Visa Services in Bangalore",
     description: "Expert assistance for your Singapore tourist visa application. Smooth process, accurate documentation, and high approval rate. Start your Singapore journey with confidence.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore-tourist-visa",
     images: [
       {
         url: "https://www.globalvisainternationals.com/visa-banner/singapore-tourist-visa-global-visa-internationals.png",

@@ -12,14 +12,14 @@ export const metadata = {
     "Dubai tourist visa, Dubai visa consultants in Bangalore, apply for Dubai visa, Dubai tourist visa assistance, Dubai e-visa India, Dubai travel visa consultants, Dubai tourist visa Bangalore, fast Dubai visa processing",
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/dubai",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/dubai-tourist-visa",
   },
   openGraph: {
     type: "website",
     title: "Apply for Dubai Tourist Visa from India | Fast Visa Assistance in Bangalore",
     description:
       "Get expert Dubai Tourist Visa assistance in Bangalore with Global Visa Internationals. Trusted consultants, quick approvals, 11+ years of experience, and full document support.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/dubai",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/dubai-tourist-visa",
     images: [
       {
         url: "https://www.globalvisainternationals.com/images/Dubai-Turist-Visa-Global-Visa-Internationals.webp",

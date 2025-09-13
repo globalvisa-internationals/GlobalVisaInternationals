@@ -12,13 +12,13 @@ export const metadata = {
   keywords: "USA tourist visa, B2 visa consultants, USA visa from India, US travel visa application, apply for visitor visa USA",
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/visa/tourist-visa/usa",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/usa-tourist-visa",
   },
   openGraph: {
     title: "USA Tourist Visa: Application, Requirements & Top Travel Tips",
     description:
       "Plan your USA trip with expert visa support. Learn about B2 visa process, travel costs, and top U.S. destinations. Trusted since 2017.",
-    url: "https://www.globalvisainternationals.com/visa/tourist-visa/usa",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/usa-tourist-visa",
     siteName: "Global Visa Internationals",
     images: [{
       url: "https://www.globalvisainternationals.com/visa-banner/USA-Tourist-Visa-assistance-banner.webp",

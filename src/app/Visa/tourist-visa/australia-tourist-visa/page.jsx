@@ -14,13 +14,13 @@ export const metadata = {
     "Australia tourist visa, apply Australia visitor visa, Australia visa consultant, Australia travel guide, visa for Australia from India, Australia immigration, best tourist places in Australia",
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia-tourist-visa",
   },
   openGraph: {
     title: "Australia Tourist Visa: Application, Requirements & Top Travel Tips",
     description:
       "Get expert help from Global Visa Internationals on applying for an Australia tourist visa. Learn about visa process, travel costs, and iconic Australian destinations.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia-tourist-visa",
     siteName: "Global Visa Internationals",
     images: [
       {

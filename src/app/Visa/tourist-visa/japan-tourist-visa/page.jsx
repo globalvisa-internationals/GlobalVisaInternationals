@@ -10,13 +10,13 @@ export const metadata = {
   keywords: "Japan tourist visa, Japan visa consultants in Bangalore, Japan visitor visa from India, how to apply for Japan visa, Japan travel visa assistance",
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan-tourist-visa",
   },
   openGraph: {
     type: "website",
     title: "Apply for Japan Tourist Visa from India | Global Visa Internationals",
     description: "Trusted visa agents for Japan in Bangalore. Expert documentation, embassy interview prep, and high visa success rate.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan-tourist-visa",
     images: [
       {
         url: "https://www.globalvisainternationals.com/images/japan-visa-banner.jpg",

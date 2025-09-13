@@ -13,7 +13,7 @@ export const metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand",
+      "https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand-tourist-visa",
   },
   openGraph: {
     type: "website",
@@ -21,7 +21,7 @@ export const metadata = {
       "Apply for New Zealand Tourist Visa from India | Global Visa Internationals",
     description:
       "Trusted visa agents for New Zealand in Bangalore. Expert documentation, embassy interview prep, and high visa success rate.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand-tourist-visa",
     images: [
       {
         url: "https://www.globalvisainternationals.com/images/new-zealand-tourist-visa-banner.webp",

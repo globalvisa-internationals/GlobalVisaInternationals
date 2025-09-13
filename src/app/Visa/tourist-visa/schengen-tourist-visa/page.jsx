@@ -12,13 +12,13 @@ export const metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://globalvisainternationals.com/Visa/tourist-visa/schengen-tourist-visa",
+      "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen-tourist-visa",
   },
   openGraph: {
     title: "Schengen Visa Assistance: Tourist, Visitor & Business Visa Support",
     description:
       "Global Visa Internationals helps Indian travelers apply for Schengen tourist, visitor, and business visas. Get expert guidance on requirements, documents, and travel insurance for 27 Schengen countries.",
-    url: "https://globalvisainternationals.com/Visa/tourist-visa/schengen-tourist-visa",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen-tourist-visa",
     siteName: "Global Visa Internationals",
     images: [
       {
