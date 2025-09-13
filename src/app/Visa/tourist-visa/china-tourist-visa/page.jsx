@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/China-Visa-Assistance-Banner.webp",
+        url: "https://www.globalvisainternationals.com/visa-banner/China-Visa-Assistance-Banner.jpg",
         width: 1200,
         height: 630,
         alt: "China Tourist & Business Visa Banner",
@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "Plan your trip to China. Discover visa requirements, costs, and must-see destinations with help from Global Visa Internationals.",
     images: [
-      "https://www.globalvisainternationals.com/visa-banner/China-Visa-Assistance-Banner.webp",
+      "https://www.globalvisainternationals.com/visa-banner/China-Visa-Assistance-Banner.jpg",
     ],
   },
 };
