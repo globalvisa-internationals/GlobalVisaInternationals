@@ -207,7 +207,7 @@ export default function Canada() {
 
       <div className={styles.imageContainer}>
         <img
-          src="/visa-banner/Canada-Tourist-Visa-assistence-banner.webp"
+          src="/visa-banner/China-Visa-Assistance-Banner.jpg"
           alt="Canada Image"
           className={styles.VisaImage}
         />
