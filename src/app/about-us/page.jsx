@@ -9,11 +9,11 @@ import AnimatedSection from '@/Components/AnimatedSection';
 
 
 export const metadata = {
-  title: "About Us | <b className={styles.strong}> Global Visa Internationals</b>  - Leading Visa & Immigration Consultants in Bangalore",
+  title: "About Us |  Global Visa Internationals  - Leading Visa & Immigration Consultants in Bangalore",
   description:
-    "Learn more about <b className={styles.strong}> Global Visa Internationals</b> , a trusted visa and immigration consultancy in Bangalore. We provide expert assistance for Tourist, Student, Work, PR, and Business Visas for Canada, USA, UK, Australia, Europe, and more with 75,000+ happy clients.",
+    "Learn more about  Global Visa Internationals , a trusted visa and immigration consultancy in Bangalore. We provide expert assistance for Tourist, Student, Work, PR, and Business Visas for Canada, USA, UK, Australia, Europe, and more with 75,000+ happy clients.",
   keywords: [
-    "about <b className={styles.strong}> global visa internationals</b> ",
+    "about  global visa internationals ",
     "visa consultants in Bangalore",
     "immigration consultants in Bangalore",
     "visa services Bangalore",
@@ -27,26 +27,26 @@ export const metadata = {
   ],
   alternates: { canonical: "https://www.globalvisainternationals.com/about-us" },
   openGraph: {
-    title: "About Us | <b className={styles.strong}> Global Visa Internationals</b>  - Trusted Immigration Consultants in Bangalore",
+    title: "About Us |  Global Visa Internationals  - Trusted Immigration Consultants in Bangalore",
     description:
-      "Discover the story and services of <b className={styles.strong}> Global Visa Internationals</b> . Leading experts in PR, Work, Study & Visit visas for Canada, Australia, USA, UK, and more.",
+      "Discover the story and services of  Global Visa Internationals . Leading experts in PR, Work, Study & Visit visas for Canada, Australia, USA, UK, and more.",
     url: "https://www.globalvisainternationals.com/about-us",
-    siteName: "<b className={styles.strong}> Global Visa Internationals</b> ",
+    siteName: "Global Visa Internationals ",
     type: "website",
     images: [
       {
         url: "https://www.globalvisainternationals.com/banner.webp",
         width: 1200,
         height: 630,
-        alt: "About <b className={styles.strong}> Global Visa Internationals</b>  - Visa and Immigration Consultants",
+        alt: "About  Global Visa Internationals  - Visa and Immigration Consultants",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | <b className={styles.strong}> Global Visa Internationals</b>  - Trusted Immigration Consultants in Bangalore",
+    title: "About Us |Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
     description:
-      "Learn more about <b className={styles.strong}> Global Visa Internationals</b> , offering expert PR, Work, Study & Tourist visa services with 75,000+ satisfied clients.",
+      "Learn more about  Global Visa Internationals, offering expert PR, Work, Study & Tourist visa services with 75,000+ satisfied clients.",
     site: "@GLOBALVISA1505",
     creator: "@GLOBALVISA1505",
     images: ["https://www.globalvisainternationals.com/banner.webp"],
@@ -83,11 +83,11 @@ export default function About() {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     "@id": "https://www.globalvisainternationals.com/#organization",
-    name: "<b className={styles.strong}> Global Visa Internationals</b> ",
+    name: "Global Visa Internationals",
     url: "https://www.globalvisainternationals.com",
     logo: "https://www.globalvisainternationals.com/gvilogo.png",
     description:
-      "<b className={styles.strong}> Global Visa Internationals</b>  is a leading visa and immigration consultancy in Bangalore, offering expert assistance for Tourist, PR, Student, Work, and Business Visas to countries like Canada, Australia, UK, USA, Europe, and more.",
+      " Global Visa Internationals is a leading visa and immigration consultancy in Bangalore, offering expert assistance for Tourist, PR, Student, Work, and Business Visas to countries like Canada, Australia, UK, USA, Europe, and more.",
     telephone: "+91-7022213466",
     address: {
       "@type": "PostalAddress",
