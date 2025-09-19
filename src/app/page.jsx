@@ -223,13 +223,13 @@ export default function Home() {
         <AnimatedSection direction="up" reverseOnExit={true}>
           <div className={styles.logoCard}>
             <img
-              src="/svg/World-Map.gif"
+              src="https://www.globalvisainternationals.com/svg/World-Map.gif"
               alt="World Map"
               className={styles.worldMap}
             />
             <div className={styles.logoWrapper}>
               <img
-                src="/Global-Visa-Internationals-Logo.svg"
+                src="https://www.globalvisainternationals.com/Global-Visa-Internationals-Logo.svg"
                 alt="Global Visa Internationals Logo"
                 className={styles.logoImage}
               />
@@ -255,13 +255,14 @@ export default function Home() {
             {/* Left Image */}
             <AnimatedSection direction="left" reverseOnExit={true}>
               <div className={styles.imageWrapper}>
-                <Image
-                  src="/images/story.webp"
+                {/* <Image
+                  src="https://www.globalvisainternationals.com//images/story.webp"
                   alt="Best visa agents in Bangalore"
                   fill
                   sizes="(max-width: 768px) 100vw, 380px"
                   className={styles.responsiveImage}
-                />
+                /> */}
+                <img className={styles.responsiveImage} src="https://www.globalvisainternationals.com//images/story.webp" alt="Best visa agents in Bangalore" />
               </div>
             </AnimatedSection>
 
@@ -367,7 +368,7 @@ export default function Home() {
               <div className={styles.whyCard}>
                 <img
                   className={styles.whyImg}
-                  src="/images/networking.png"
+                  src="https://www.globalvisainternationals.com//images/networking.png"
                   alt="Visa and immigration industry experience"
                   loading="lazy"
                 />
@@ -378,7 +379,7 @@ export default function Home() {
               <div className={styles.whyCard}>
                 <img
                   className={styles.whyImg}
-                  src="/images/globe.png"
+                  src="https://www.globalvisainternationals.com//images/globe.png"
                   alt="Immigration destinations offered"
                   loading="lazy"
                 />
@@ -391,7 +392,7 @@ export default function Home() {
               <div className={styles.whyCard}>
                 <img
                   className={styles.whyImg}
-                  src="/images/crowd-of-users.png"
+                  src="https://www.globalvisainternationals.com//images/crowd-of-users.png"
                   alt="Skilled migration and business visa options"
                   loading="lazy"
                 />
@@ -402,7 +403,7 @@ export default function Home() {
               <div className={styles.whyCard}>
                 <img
                   className={styles.whyImg}
-                  src="/images/airplane.png"
+                  src=" https://www.globalvisainternationals.com//images/airplane.png"
                   alt="Successful immigration cases"
                   loading="lazy"
                 />
@@ -413,7 +414,7 @@ export default function Home() {
               <div className={styles.whyCard}>
                 <img
                   className={styles.whyImg}
-                  src="/images/calendar.png"
+                  src="https://www.globalvisainternationals.com//images/calendar.png"
                   alt="Visa consultancy since 2017"
                   loading="lazy"
                 />

@@ -1,26 +1,3 @@
-/* @media (prefers-color-scheme: dark){
-    .aboutSec{
-        color: #fff;
-    }
-    .whydata h2{
-        color: #fff;
-    }
-    .whydata ul li strong{
-        color: #ffff;
-    }
-    .aboutUsContainer{
-        color: #fff;
-    }
-    .subTitle{
-        color: #fff;
-    }
-    .subTitle1{
-        color: #fff;
-    }
-    .subTitle2{
-        color: #f7f7f7;
-    }
-} */
 .aboutSec {
     max-width: 90%;
     margin: 0 auto;
@@ -163,13 +140,10 @@
 
 /* Form Section */
 .formSection {
-
-
-    max-width: 95%;
-    padding: 5px;
+    width: 400px;
     position: sticky;
-    top: 60px;
-
+    top: 70px;
+    margin-top: 40px;
 }
 
 /* Responsive */
@@ -212,7 +186,7 @@
     }
 
     .formSection {
-        position: relative;
+
         margin-bottom: 40px;
         top: 10px;
     }

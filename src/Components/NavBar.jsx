@@ -8,10 +8,10 @@ import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import styles from "./NavBar.module.css";
 
 const NAV_ITEMS = [
-  { title: "TOURIST", path: "tourist-visa", countries: ["Canada-Tourist-Visa", "Australia-Tourist-Visa", "USA-Tourist-Visa", "UK-Tourist-Visa", "Europe-Tourist-Visa", "Schengen-Tourist-Visa", "Japan-Tourist-Visa", "Dubai-Tourist-Visa", "New-Zealand-Tourist-Visa", "Singapore-Tourist-Visa", "China-Tourist-Visa"] },
-  { title: "STUDENT", path: "student-visa", countries: ["Canada", "Australia", "USA", "UK", "Europe", "New-Zealand"] },
-  { title: "BUSINESS", path: "business", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
-  { title: "PERMANENT RESIDENCY", path: "permanent-residency-visa", countries: ["Canada", "Australia"] },
+  { title: "TOURIST VISA", path: "tourist-visa", countries: ["Canada", "Australia", "USA", "United-Kingdom", "Europe", "Schengen", "Japan", "Dubai", "New-Zealand", "Singapore", "China"] },
+  { title: "STUDENT VISA", path: "student-visa", countries: ["Canada", "Australia", "USA", "UK", "Europe", "New-Zealand"] },
+  { title: "BUSINESS VISA", path: "business", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
+  { title: "PERMANENT RESIDENCY (PR)", path: "permanent-residency-visa", countries: ["Canada-PR-Visa", "Australia-PR-Visa"] },
   // { title: "WORK", path: "work", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
   { title: "REFUSAL VISA", path: "refusal-visa", countries: ["Canada", "Australia", "USA", "UK", "Europe", "New-Zealand"] },
 ];
@@ -28,6 +28,10 @@ const NavBar = () => {
   const handleSubmenuToggle = (menu) => {
     setOpenDropdown((prev) => (prev === menu ? null : menu));
   };
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+    setOpenDropdown(null);
+  };
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -36,6 +40,9 @@ const NavBar = () => {
         setMenuOpen(false);
         setOpenDropdown(null);
       }
+      // Close menu + dropdowns on link click
+
+
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -69,7 +76,7 @@ const NavBar = () => {
         {/* Navigation Links */}
         <ul className={clsx(styles.navLinks, { [styles.showMenu]: menuOpen })}>
 
-          <li><Link href="/about-us" title="ABOUT US">ABOUT</Link></li>
+          <li><Link href="/about-us" title="ABOUT US" onClick={handleLinkClick} >ABOUT</Link></li>
 
           {/* Dropdown Menus */}
           {NAV_ITEMS.map(({ title, path, countries }) => (
@@ -90,7 +97,7 @@ const NavBar = () => {
               <ul className={clsx(styles.submenu, { [styles.submenuOpen]: openDropdown === title })}>
                 {countries.map((country) => (
                   <li key={country}>
-                    <Link href={`/Visa/${path}/${country.toLowerCase()}`} title={`${title} Visa for ${country}`}>
+                    <Link href={`/Visa/${path}/${country.toLowerCase()}`} title={`${title} Visa for ${country}`} onClick={handleLinkClick}>
                       {country.replace("-", " ")}
                     </Link>
                   </li>
@@ -99,10 +106,10 @@ const NavBar = () => {
             </li>
           ))}
 
-          <li><Link href="/blog" title="BLOG">BLOG</Link></li>
-          <li><Link href="/career" title="CAREER">CAREER</Link></li>
+          <li><Link href="/blog" title="BLOG" onClick={handleLinkClick}>BLOG</Link></li>
+          <li><Link href="/career" title="CAREER" onClick={handleLinkClick}>CAREER</Link></li>
           {/* <li><Link href="/UAE-Career" title="UAE-Career">UAE-Career</Link></li> */}
-          <li><Link href="/contact" title="CONTACT-US">CONTACT</Link></li>
+          <li><Link href="/contact" title="CONTACT-US" onClick={handleLinkClick}>CONTACT</Link></li>
         </ul>
       </nav>
     </header>
