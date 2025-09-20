@@ -4,7 +4,7 @@
   padding: 0 auto;
   color: #333333;
   font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-  padding-top: 50px;
+  padding-top: 100px;
 
 }
 
@@ -41,7 +41,7 @@
   align-items: center;
   justify-content: space-between;
   /* padding: 0 20px; */
-  top: 40px;
+
 }
 
 
@@ -94,7 +94,7 @@
     height: auto;
     padding: 5px;
     margin: 0 auto;
-    top: 40px;
+
   }
 
   .logoWrapper {
