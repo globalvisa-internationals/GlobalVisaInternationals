@@ -251,17 +251,13 @@ export default function Home() {
 
         {/* About Us Section */}
         <section id="aboutUs">
+          <AnimatedSection direction="up" reverseOnExit={true}>
+            <h2 className={styles.subtitle}>Our Story</h2></AnimatedSection>
           <section className={styles.storyContainer}>
+
             {/* Left Image */}
             <AnimatedSection direction="left" reverseOnExit={true}>
               <div className={styles.imageWrapper}>
-                {/* <Image
-                  src="https://www.globalvisainternationals.com//images/story.webp"
-                  alt="Best visa agents in Bangalore"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 380px"
-                  className={styles.responsiveImage}
-                /> */}
                 <img className={styles.responsiveImage} src="https://www.globalvisainternationals.com//images/story.webp" alt="Best visa agents in Bangalore" />
               </div>
             </AnimatedSection>
@@ -270,38 +266,33 @@ export default function Home() {
             <div className={styles.textContent}>
               {/* Sequential Animated Cards */}
               <AnimatedSection direction="up" delay={0.1} reverseOnExit={true}>
-                <h2 className={styles.subtitle}>Our Story</h2>
+
                 <div className={styles.storyCard}>
-                  <p>
-                    At Global Visa Internationals, we are your trusted visa consultant
-                    and immigration consultant, providing professional visa services and
-                    immigration services customized to suit your travel and settlement
-                    needs. Whether you're applying for a work permit, seeking visa
-                    assistance, or starting your visa application, our experienced team
-                    ensures you meet all necessary visa requirements with ease and
-                    confidence.
-                  </p>
+                  <p>  At <b>Global Visa Internationals</b>, we understand that applying for a visa can feel  overwhelming. That’s why we’re more than just a <b>visa consultancy</b> — we’re your  trusted partners throughout the journey. With years of experience as a  <b>professional immigration service provider</b>, our team has helped countless  individuals, families, and professionals achieve their travel and relocation goals  with confidence and peace of mind.</p>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.2} reverseOnExit={true}>
                 <div className={styles.storyCard}>
-                  <p>We specialize in student visa consultant services for aspiringinternational students. From guiding you through the visadocumentation checklist to offering detailed visa interviewpreparation, we simplify the process. As a leading Canada study visaconsultant, UK study visa consultant, and USA study visa consultant,we offer dedicated support to help you achieve your academic dreamsabroad. We also assist with tourist visas, including Canada touristvisa and Australia tourist visa applications.</p>
+                  <p>  For students, we know how big the dream of studying abroad is. As one of the  <b>best student visa consultants in India</b>, we guide you step by step — from preparing  the <b>visa documentation checklist</b> to <b>visa interview training</b>. Whether it’s a  <b>Canada student visa</b>, <b>UK study visa</b>, <b>USA student visa</b>, or <b>Australia study visa</b>,  our goal is to make your journey smooth and stress-free. We also assist travelers  with <b>tourist visas</b>, including <b>Canada visitor visas</b>, <b>Australia tourist visas</b>, and  <b>Schengen visas</b> for Europe.</p>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.3} reverseOnExit={true}>
                 <div className={styles.storyCard}>
-                  <p>  Our team of certified visa processing agents and professionals with  verified immigration agent qualifications work diligently to reduce  your visa processing time and increase your approval chances.  Whether you're looking to study, work, or travel abroad, we deliver  reliable, end-to-end solutions that open doors to global  opportunities.</p>
+
+                </div>
+              </AnimatedSection>
+              <AnimatedSection direction="up" delay={0.3} reverseOnExit={true}>
+                <div className={styles.storyCard}>
+                  <p>  What makes us different is the people behind the process. Our team of  <b>certified visa consultants</b> and immigration specialists genuinely care about your  success. We work to reduce waiting times, minimize errors, and improve approval  rates. Whether it’s a <b>work visa</b>, <b>study visa</b>, <b>tourist visa</b>, or <b>business visa</b>,  you’ll find in us a partner who provides <b>end-to-end visa solutions</b> with clarity,  transparency, and dedication.
+                  </p>
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection direction="up" delay={0.4} reverseOnExit={true}>
-                <div className={styles.storyCard}>
-                  <p>  Global Visa Internationals is a private Visa consultancy which is  not affiliated with any government or embassy. We offer independent  visa and immigration assistance & services.</p>
-                </div>
-              </AnimatedSection>
+
             </div>
+
           </section>
         </section>
 

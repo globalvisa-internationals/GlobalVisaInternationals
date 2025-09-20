@@ -24,6 +24,16 @@ body {
   --submenu-bg: #122C52;
 } */
 
+body {
+  background-color: var(--background);
+
+}
+
+/* 
+* {
+  padding: 0 auto;
+  margin: 0 auto;
+} */
 
 :root {
   --nav-bg: #1E1F28;

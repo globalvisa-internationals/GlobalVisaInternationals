@@ -207,7 +207,7 @@ export default function Canada() {
 
       <div className={styles.imageContainer}>
         <img
-          src="/tourist-visa/China-Tourist-Visa-Assistance-GVI.jpg"
+          src="https://www.globalvisainternationals.com/tourist-visa/China-Tourist-Visa-Assistance-GVI.jpg"
           alt="China Tourist Visa Assistance GVI"
           className={styles.VisaImage}
         />
@@ -395,18 +395,10 @@ export default function Canada() {
               Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent <strong className={styles.strong}>China tourist visa rejection reasons</strong>.
             </p>
             <ul>
-              <li>
-                <b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per embassy standards to ensure everything is perfect.
-              </li>
-              <li>
-                <b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.
-              </li>
-              <li>
-                <b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared documentation clearly explains your travel plans and ties to India.
-              </li>
-              <li>
-                <b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.
-              </li>
+              <li><b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per embassy standards to ensure everything is perfect.</li>
+              <li><b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.              </li>
+              <li><b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared documentation clearly explains your travel plans and ties to India.</li>
+              <li><b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
             </ul>
           </section>
 
@@ -439,11 +431,9 @@ export default function Canada() {
             Choose the right China visa assistance package for your needs:
           </p>
           <ul>
+
             <li>
-              <b className={styles.strong}>Basic (₹4,999):</b> Checklist + document review
-            </li>
-            <li>
-              <b className={styles.strong}>Standard (₹7,999):</b> End-to-end application assistance, documentation preparation, and submission guidance
+              <b className={styles.strong}>Standard (₹12,999):</b> End-to-end application assistance, documentation preparation, and submission guidance
             </li>
             <li>
               <b className={styles.strong}>Express Processing:</b> Additional ₹5,000 for faster processing (3-4 working days)
