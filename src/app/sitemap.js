@@ -33,7 +33,7 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/uk',
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom',
       lastModified: new Date('2025-09-19'),
       changefreq: 'weekly',
       priority: 0.8,
