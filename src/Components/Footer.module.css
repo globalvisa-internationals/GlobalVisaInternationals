@@ -1,78 +1,13 @@
-.text {
-  color: #1b1b1b;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.text:hover {
-  color: #478537;
-}
-
-/* Footer container */
-.Footer {
-  color: #000;
-  padding: 20px 10px;
-  border-top: 2px solid #478537;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-
-}
-
-.footerContent {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-/* Footer Paragraph */
-.footerContent p {
-  line-height: 1.6;
-  margin: 5px 0;
-}
-
-/* Social Media Icons */
-.socialIcons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin: 15px 0;
-}
-
-.footerImg {
-  width: 40px;
-  height: 40px;
-  border-radius: 10%;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.footerImg:hover {
-  transform: scale(1.2);
-  opacity: 0.8;
-}
-
-
-.footerContact a {
-  font-weight: bold;
-  font-size: 14px;
-  transition: color 0.3s ease-in-out;
-}
-
-
-/* Floating Action Icons */
+/* ========= FLOATING ACTION ICONS ========= */
 .callIcon,
 .whatsappIcon {
   position: fixed;
-  bottom: 100px;
-  width: 50px;
-  height: 50px;
+  bottom: 90px;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
   border-radius: 10%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,138 +15,193 @@
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.whatsappIcon {
-  right: 50px;
-}
-
 .callIcon {
-  left: 50px;
+  left: 20px;
 }
 
-.callIcon,
-.whatsappIcon :hover {
+.whatsappIcon {
+  right: 20px;
+}
+
+.callIcon:hover,
+.whatsappIcon:hover {
   transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
 }
 
-/* Responsive Icons */
-@media (max-width: 600px) {
+/* Responsive Floating Icons */
+@media (max-width: 400px) {
 
   .callIcon,
   .whatsappIcon {
-    width: 40px;
-    height: 40px;
-    bottom: 90px;
+    width: 38px;
+    height: 38px;
+    bottom: 80px;
+  }
+
+  .callIcon {
+    left: 15px;
   }
 
   .whatsappIcon {
-    right: 30px;
+    right: 15px;
   }
 }
 
-/* Reused across multiple breakpoints for consistency */
-@media screen and (min-width: 1024px),
-screen and (max-width: 768px),
-screen and (max-width: 1118px),
-screen and (max-width: 340px),
-screen and (min-width: 1118px) {
+@media (min-width: 768px) {
 
   .callIcon,
   .whatsappIcon {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     bottom: 90px;
-  }
-
-  .whatsappIcon {
-    right: 30px;
   }
 }
 
+@media (min-width: 1024px) {
+
+  .callIcon,
+  .whatsappIcon {
+    width: 50px;
+    height: 50px;
+    bottom: 100px;
+  }
+}
+
+/* ========= FOOTER ========= */
+.footer {
+  background: #fff;
+  padding: 2rem 1rem;
+  border-top: 2px solid #0a8510;
+  font-family: var(--font-main);
+  color: #1b1b1b;
+}
 
 .footerGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  background: #f8f9fa;
-  border-top: 2px solid #478537;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Each Column */
+.column {
+  flex: 1;
+  min-width: 220px;
+}
 
 .column h4 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.15rem;
+  color: #000;
 }
 
-.logo {
-  width: 120px;
-  margin-bottom: 1rem;
+/* Links inside lists */
+.column ul {
+  list-style: none;
+  /* Remove default bullets */
+  padding-left: 0;
 }
 
-.footerGrid a {
-  display: block;
+.column li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  /* space for custom bullet */
+}
+
+/* Custom bullet style */
+.column li::before {
+  content: "✔";
+  /* Change symbol if you like (→, •, ►, ✓) */
+  color: #0a8510;
+  font-size: 0.9rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.column a {
+  display: inline-block;
   color: #1b1b1b;
-  margin: 0.3rem 0;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-.footerGrid a:hover {
+.column a:hover {
   color: #478537;
 }
 
-.socialIcons {
+.column p {
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+/* Logo */
+.logo {
   display: flex;
-  gap: 0.5rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
   margin-bottom: 1rem;
 }
 
-.footerGrid address {
-  font-style: normal;
-  line-height: 1.6;
+/* About Text */
+.about {
+  text-align: justify;
+}
+
+/* Social Icons */
+.socialIcons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.socialIcons a {
+  font-size: 1.4rem;
+  color: #1b1b1b;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.socialIcons a:hover {
+  transform: scale(1.2);
+  color: #478537;
 }
 
 
-/* 🌗 Dark Mode Styles for Footer & Icons */
-/* @media (prefers-color-scheme: dark) {
-  .text {
-    color: #e0e0e0;
+/* ========= RESPONSIVE LAYOUT ========= */
+@media (max-width: 400px) {
+  .footer {
+    text-align: center;
   }
 
-  .text:hover {
-    color: #a6e988;
+  .footerGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
-  .Footer {
-    background-color: #1c1c1c;
-    color: #e0e0e0;
-    border-top: 2px solid #66ff66;
+  .column {
+    width: 90%;
+    /* Each section takes 90% of screen */
+    max-width: 90%;
   }
 
-  .footerContent p {
-    color: #cfcfcf;
+  .socialIcons {
+    justify-content: center;
   }
+}
 
-  .footerContact a {
-    color: #66ff66;
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .footerContact a:hover {
-    color: #66ff66;
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
   }
-
-  .footerImg {
-    filter: brightness(0.8) saturate(1.2);
-  }
-
-  .callIcon,
-  .whatsappIcon {
-    background-color: #2a2a2a;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-  }
-
-  .callIcon:hover,
-  .whatsappIcon:hover {
-    opacity: 0.9;
-    transform: scale(1.2);
-  }
-} */
+}

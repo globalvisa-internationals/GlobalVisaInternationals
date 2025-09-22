@@ -3,9 +3,8 @@
   margin: 0 auto;
   padding: 0 auto;
   color: #333333;
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-  padding-top: 100px;
-
+  font-family: var(--font-main);
+  margin-top: 80px;
 }
 
 .videoContainer:hover .carouselTrack {
@@ -35,12 +34,11 @@
   background: #cefafc;
   border-radius: 14px;
   overflow: hidden;
-  /* box-shadow: 0 8px 22px #00000014; */
   display: flex;
   margin-top: 20px;
   align-items: center;
   justify-content: space-between;
-  /* padding: 0 20px; */
+
 
 }
 
@@ -86,6 +84,15 @@
 
 
 @media (max-width: 768px) {
+  .HomeSec {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 auto;
+    color: #333333;
+    font-family: var(--font-main);
+    margin-top: 80px;
+  }
+
   .logoCard {
     flex-wrap: nowrap;
     justify-content: center;
@@ -94,6 +101,7 @@
     height: auto;
     padding: 5px;
     margin: 0 auto;
+    margin-top: 80px;
 
   }
 

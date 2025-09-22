@@ -1,329 +1,213 @@
-"use client";
 
-import styles from './Uk.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import VisaForm from '@/Components/VisaForm';
+import styles from '@/Components/Visa.module.css';
+import React from 'react';
+import Head from 'next/head';
 
-export default function newzealand() {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const form = event.target
-
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
+export const metadata = {
+  title: "UK Business Visa from India | Best UK Visa Consultants in India - Global Visa Internationals",
+  description:
+    "Apply for your UK Business visa from India with the best UK visa consultants. Get expert help for UK visitor visa application, documents, fees, and embassy interview. Trusted by thousands of Indian travellers.",
+  keywords:
+    "UK Business visa from India, UK visitor visa consultants, UK visa agents in India, apply UK visa online India, UK visa assistance Bangalore, UK travel visa for Indian citizens, UK visa documentation help, UK visa consultants near me, UK visa process from India, UK visa cost 2025",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk-tourist-visa",
+  },
+  openGraph: {
+    title: "Apply for UK Business Visa from India | Trusted UK Visa Consultants",
+    description:
+      "Looking to travel to the UK from India? Global Visa Internationals offers full support for UK Business visa applications, documentation, and embassy appointments. Fast processing. Reliable service since 2012.",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk-tourist-visa",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
+        width: 1200,
+        height: 630,
+        alt: "UK Business Visa Assistance from India - Global Visa Internationals",
       }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "UK Business Visa from India | Fast UK Visa Application Help",
+    description:
+      "Get expert help to apply for your UK Business visa from India. Global Visa Internationals provides visa application assistance, documentation support, and embassy appointment guidance.",
+    images: [
+      "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
+    ],
+  },
+};
+
+
+export default function UK_Business_Visa() {
+  const pageUrl = metadata.alternates.canonical;
+
+  const TouristAttraction = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Top Tourist Attractions in the UK",
+    "itemListElement": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Big Ben & Houses of Parliament",
+        "description": "Historic clock tower and iconic British Parliament building in London.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Elizabeth_Tower%2C_June_2022.jpg",
+        "url": "https://www.parliament.Visa/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Buckingham Palace",
+        "description": "Official London residence of the British monarch with Changing of the Guard ceremony.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Buckingham_Palace%2C_London_-_April_2009.jpg",
+        "url": "https://www.rct.Visa/visit/the-state-rooms-buckingham-palace"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Tower of London",
+        "description": "Historic fortress housing the Crown Jewels and offering guided tours.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tower_of_London_viewed_from_the_River_Thames.jpg",
+        "url": "https://www.hrp.org.Visa/tower-of-london/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Stonehenge",
+        "description": "Mysterious prehistoric stone circle and world heritage site in Wiltshire.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Stonehenge2007_07_30.jpg",
+        "url": "https://www.english-heritage.org.Visa/visit/places/stonehenge/"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Edinburgh Castle",
+        "description": "Famous Scottish fortress offering panoramic views of Edinburgh.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/View_of_Edinburgh_Castle_%28from_the_south_east%29.jpg",
+        "url": "https://www.edinburghcastle.scot/"
+      }
+    ]
   };
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "UK Business Visa",
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const travelAgencyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Trusted UK Business Visa Consultants in Bangalore. Apply for your UK visitor visa from India with expert help for documents, online application & appointment booking.",
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ]
+  };
 
   return (
     <>
-      <head>
-        <title>UK Business Visa Assistance from India | Requirements, Process & Cost</title>
-        <meta name="description" content="Apply for a UK Business Visa with expert help from Global Visa Internationals. Learn about visa requirements, eligibility, documentation, and the application process." />
-        <meta name="keywords" content="UK business visa, apply business visa UK, UK business visa from India, investor visa, entrepreneur visa, business migration to UK" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Global Visa Internationals" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0a66c2" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/business/uk" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/uk-business-visa-banner.jpg" />
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Apply for UK Business Visa | Global Visa Internationals" />
-        <meta property="og:description" content="Get complete assistance in applying for a UK Business Visa from India. Learn about visa types, eligibility, and process with Global Visa Internationals." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/business/uk" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/uk-business-visa-banner.jpg" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:locale:alternate" content="en_GB" />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UK Business Visa | Application, Cost & Requirements" />
-        <meta name="twitter:description" content="Explore UK Business Visa options with expert guidance. Apply from India for investor or entrepreneur visas to the United Kingdom." />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/uk-business-visa-banner.jpg" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/business/uk" />
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        {/* Location Metadata */}
-        <meta name="geo.region" content="GB" />
-        <meta name="geo.placename" content="United Kingdom" />
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* LocalBusiness JSON-LD */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com",
-            "logo": "https://www.globalvisainternationals.com/logo.png",
-            "description": "Visa experts offering UK business visa assistance for entrepreneurs, investors, and business owners from India.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "MG Road",
-              "addressLocality": "Bengaluru",
-              "addressRegion": "KA",
-              "postalCode": "560025",
-              "addressCountry": "IN"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-7022213466",
-              "contactType": "Customer Support"
-            },
-            "sameAs": [
-              "https://www.facebook.com/GlobalVisaInternationals",
-              "https://www.linkedin.com/company/globalvisainternationals",
-              "https://twitter.com/GlobalVisaIntl"
-            ]
-          })
-        }} />
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TouristAttraction) }}
+        />
 
-        {/* BreadcrumbList JSON-LD */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.globalvisainternationals.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Business Visa",
-                "item": "https://www.globalvisainternationals.com/visa/business"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "UK Business Visa"
-              }
-            ]
-          })
-        }} />
-
-        {/* FAQPage JSON-LD */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Who is eligible for a UK Business Visa?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Entrepreneurs, investors, and business professionals with a solid business plan, sufficient capital, and relevant experience can apply for a UK Business Visa."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What are the requirements for a UK Business Visa?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Requirements include a valid business idea, financial proof, clean background, and often a certain level of English proficiency. Specific conditions apply depending on the visa type."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How much does a UK Business Visa cost?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Application fees for UK Business Visas generally range from GBP 1,200 to GBP 2,000, not including consulting or documentation costs."
-                }
-              }
-            ]
-          })
-        }} />
-
-        {/* Service JSON-LD */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "UK Business Visa Application Assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com"
-            },
-            "areaServed": {
-              "@type": "Country",
-              "name": "India"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Business Visa Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "UK Innovator Founder Visa Support"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "UK Start-up Visa Consultation"
-                  }
-                }
-              ]
-            }
-          })
-        }} />
-      </head>
+      </Head>
 
 
 
       <div className={styles.imageContainer}>
-        <img src="/visa/Europe-business-visa-banner.webp" alt="new-zealand Business Visa Image" className={styles.newzealandImage} />
+        <img src="/visa/Europe-business-visa-banner.webp" alt="new-zealand Business Visa Image" className={styles.VisaImage} />
       </div>
 
-      <div class={styles.ukSec}>
-        <div class={styles.ukData}>
-          <h1 class={styles.ukGuide}>Your Comprehensive Guide to UK Business Visas | Global Visa Internationals</h1>
+      <div class={styles.VisaSec}>
+        <div class={styles.VisaData}>
+          <h1 class={styles.VisaGuide}>Your Comprehensive Guide to UK Business Visas | Global Visa Internationals</h1>
           <p>Dreaming of expanding your business horizons or investing in a thriving global economy? The United Kingdom, a land of robust economic growth, strategic global connections, and abundant opportunities, is calling! Securing a UK Business Visa opens doors to an exceptional environment for entrepreneurs, investors, and business professionals. It's more than just a visa; it's a chance to establish a brighter future for your enterprise and potentially your family in the heart of Europe.</p>
 
           <h3 class={styles.subTitle}>Why Choose the UK for Business? What Makes It So Special?</h3>
           <p>The UK isn't just another country; it's a promise of significant business potential. Here's what makes it a premier destination for business immigration:</p>
 
 
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
           <ul>
             <li><strong>Strong & Stable Economy:</strong> The UK boasts a resilient and diverse economy, consistently performing well on the global stage. This stability provides a secure environment for business operations and investments.</li>
@@ -335,81 +219,7 @@ export default function newzealand() {
             <li><strong>Path to Residency:</strong> Many UK business visas offer a clear pathway to permanent residency (Indefinite Leave to Remain), allowing successful business migrants to eventually gain full rights and privileges in their new home.</li>
           </ul>
 
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
           <h3 class={styles.subTitle}>Key UK Cities and Regions for Business Visa Seekers</h3>
           <p>While business opportunities exist nationwide, some cities and regions are particularly attractive for foreign investors and entrepreneurs due to their economic vibrancy, innovation ecosystems, and support systems. Consider these top destinations for your UK business journey:</p>
@@ -431,81 +241,7 @@ export default function newzealand() {
           <p>Feeling overwhelmed by the options for a UK Business Visa? Don't worry! We can help you navigate the various UK immigration programs for entrepreneurs and investors. Take our quick assessment to discover your ideal UK business visa route – it's designed to point you in the right direction! Contact Global Visa Internationals today for a personalized assessment.</p>
 
           ---
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
 
           <h2 class={styles.subTitle}>Understanding the Cost of UK Business Visas in 2025</h2>
@@ -560,81 +296,7 @@ export default function newzealand() {
             </tbody>
           </table>
 
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
           <p><em>*Note: These are Visa Application Charges (VACs) only and do not include other associated costs or the mandatory investment amounts. Fees are subject to change by UK Visas and Immigration. The Tier 1 Investor visa is closed to new applicants, but existing visa holders may still extend or apply for ILR. The Start-up visa route is also closed to new applications as of July 13, 2023, but may be relevant for those with prior endorsements. The Innovator Founder visa has replaced the Start-up and Innovator visas for new applications.</em></p>
 
@@ -657,81 +319,7 @@ export default function newzealand() {
             <li><strong>Consultancy Fees (if applicable):</strong> If you choose to leverage the expertise of an immigration consultant like Global Visa Internationals, their professional fees will be an additional cost. These fees vary based on the comprehensive services provided to guide you through your UK business visa journey, including business plan assistance, endorsement guidance, and application management. We encourage you to contact Global Visa Internationals for a transparent breakdown of all costs.</li>
           </ul>
 
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
           <h2 class={styles.subTitle}>Example Estimated Total Out-of-Pocket Costs (for a single applicant, excluding consultancy fees and required business/investment funds):</h2>
           <ul>
@@ -745,81 +333,7 @@ export default function newzealand() {
           </ul>
           <p>Please remember, these are rough estimates, and actual costs can vary. It's always essential to check the official UK government website (GOV.UK) for the most up-to-date fees and requirements. For a personalized cost breakdown and detailed guidance on financial requirements, reach out to Global Visa Internationals!</p>
           ---
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
 
           <h2 class={styles.subTitle}>Tips for a Successful UK Business Visa Application: Your Pathway to Success</h2>
@@ -834,81 +348,7 @@ export default function newzealand() {
             <li><strong>Seek Professional Guidance:</strong> The UK Business Visa process is complex and requires meticulous preparation. Consulting with experienced immigration professionals like Global Visa Internationals is crucial to navigate the intricacies, optimize your application, and maximize your chances of success.</li>
           </ol>
           ---
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
           <h2 class={styles.subTitle}>Top Considerations for Your UK Business Venture: Beyond the Visa Application</h2>
           <ul>
@@ -938,81 +378,7 @@ export default function newzealand() {
             </li>
           </ul>
           ---
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
           <h2 class={styles.subTitle}>Additional Tips for Your UK Business Journey: Making the Most of Your Visa</h2>
           <ol>
@@ -1022,81 +388,8 @@ export default function newzealand() {
             <li><strong>Maintain Valid Documents:</strong> Ensure your passport and all other required documents remain valid throughout the entire application process and beyond.</li>
             <li><strong>Embrace the Adventure:</strong> Starting a business or investing in a new country is a significant step, full of challenges and incredible opportunities. Embrace the journey, learn from new experiences, and enjoy building your new life and enterprise in the UK! Let Global Visa Internationals guide you every step of the way.</li>
           </ol>
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
           <h2 class={styles.subTitle}>Applying for UK Business Visas: Your Pathways to Opportunity</h2>
           <p>Navigating the various routes for UK Business Visas can seem daunting, but we're here to simplify it. UK Visas and Immigration offers several key pathways for entrepreneurs and investors seeking to establish a presence:</p>
           <ul>
@@ -1137,81 +430,7 @@ export default function newzealand() {
             </li>
           </ul>
 
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
           <p><strong>Key Requirements (General for UK Business Visa Programs for 2025 - Varies by Visa Type):</strong></p>
           <table class={styles.table}>
@@ -1263,81 +482,7 @@ export default function newzealand() {
           <p>Providing accurate information and all necessary documents, especially regarding your business history and financial standing, is paramount to avoid delays or even rejection of your UK Business Visa application. That's where expert guidance from Global Visa Internationals comes in handy!</p>
 
           ---
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
           <h2 class={styles.subTitle}>Why Choose Global Visa Internationals? Your Trusted Partner for UK Business Visas</h2>
           <p>At Global Visa Internationals, we understand that securing a UK Business Visa can be a complex and highly strategic process. That's why we're dedicated to making your journey to UK business immigration smooth and successful. We offer comprehensive support, making us the preferred choice for aspiring business migrants and investors:</p>
           <ul>
@@ -1348,160 +493,14 @@ export default function newzealand() {
             <li><strong>High Success Rate:</strong> Your success is our priority. We are committed to maximizing your chances of a successful UK Business Visa outcome with our meticulous approach and deep understanding of the immigration landscape.</li>
             <li><strong>Additional Services:</strong> Beyond core application support, we offer valuable services like guidance on English language requirements, insights into the UK business environment, and essential settlement advice to help your business thrive in the UK.</li>
           </ul>
-          <div className={styles.formSection1}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    <option value="Europe">Europe</option>
-                    {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-24">18-24</option>
-                    <option value="25-32">25-32</option>
-                    <option value="33-39">33-39</option>
-                    <option value="40-44">40-44</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
           <p>We at Global Visa Internationals are proud to be India's finest visa consultants. We're dedicated to turning your dreams of establishing or investing in a business in the UK into reality. With over 11+ years of experience as leading visa consultants in Bangalore, we have successfully processed over 55,000+ visas and offered over 75,000 expert visa advice sessions to date. You can confidently rely on our vast experience in UK business immigration consulting in India.</p>
           <p>Don't let the complexities of the UK Business Visa process deter your entrepreneurial spirit! Let Global Visa Internationals be your trusted partner in navigating the application and planning your exciting new business venture and life in the United Kingdom. Contact us today for a free consultation and take the first step towards your UK business dream!</p>
         </div>
 
 
         <div className={styles.formSection}>
-          <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  <option value="Europe">Europe</option>
-                  {["USA", "UK", "New Zealand", "Europe", "Australia", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-24">18-24</option>
-                  <option value="25-32">25-32</option>
-                  <option value="33-39">33-39</option>
-                  <option value="40-44">40-44</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Europe PR options.</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+          <VisaForm />
         </div>
       </div>
 

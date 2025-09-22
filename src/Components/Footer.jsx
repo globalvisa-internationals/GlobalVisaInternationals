@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link"; // For internal navigation
 import styles from "./Footer.module.css";
+import { FaWhatsapp, FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebook } from "react-icons/fa6";
+import { MdLocationOn, MdEmail, MdPhone, MdOutlineBusiness } from "react-icons/md";
 
 export default function Footer() {
     return (
@@ -49,63 +51,60 @@ export default function Footer() {
             </section>
 
             {/* Footer Section */}
-            <footer className={styles.Footer}>
-                <div className={styles.footerContent}>
-                    <p>&copy; {new Date().getFullYear()} Global Visa Internationals. All Rights Reserved.</p>
+            <footer className={styles.footer}>
+                <div className={styles.footerGrid}>
 
+                    {/* Column 1: Logo + About */}
+                    <div className={styles.column}>
+                        <img className={styles.logo} src="https://www.globalvisainternationals.com/Global-Visa-Internationals-Logo.svg" alt="Logo" />
+                        <p className={styles.about}>With over 11+ years of experience, <b>Global Visa Internationals </b>    is a trusted leader in providing innovative immigration and global    mobility solutions. We specialize in visa processing, relocation    services, and compliance support to help individuals and businesses    navigate international mobility.</p>
+                    </div>
 
+                    {/* Column 2: Immigration Services */}
+                    <div className={styles.column}>
+                        <h4>Immigration Services</h4>
+                        <ul>
+                            <li><a href="https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada-pr-visa"> Canada Immigration</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa"> Australia Immigration</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/Visa/tourist-visa/schengen"> Europe Immigration</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/Visa/business/uk"> Business & Investor Visas</a></li>
+                            <li><a href="#"> Student Visas</a></li>
+                        </ul>
+                    </div>
 
-                    {/* Contact and Address Info */}
-                    <address className={styles.footerContact}>
-                        <p>
-                            <a
-                                className={styles.text}
-                                href="https://www.google.com/maps/dir//Global+Visa+Internationals+GF-9,+Business+Point+Brigade+Rd,+next+to+Brigade+Tower,+Shanthala+Nagar,+Ashok+Nagar+Bengaluru,+Karnataka+560025/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <strong>Address:</strong> G F9 Business Point, 137 Brigade Road, Next to Brigade Tower, Bangalore, 560025, Karnataka
-                            </a>
-                        </p>
-                        <p>
-                            <a className={styles.text} href="tel:080-4971-6272">
-                                <strong>Land Line:</strong> ☎️ 080-4971-6272
-                            </a> |{" "}
-                            <a className={styles.text} href="tel:+917022213466">
-                                <strong>Phone:</strong> 📞 +91-7022213466
-                            </a>
-                        </p>
-                        <p>
-                            <a className={styles.text} href="mailto:operations@globalvisainternationals.com">
-                                <strong>Mail:</strong> 📧 operations@globalvisainternationals.com
-                            </a>
-                        </p>
-                    </address>
+                    {/* Column 3: Quick Assistance */}
+                    <div className={styles.column}>
+                        <h4>Quick Assistance</h4>
+                        <ul>
+                            <li><a href="https://www.globalvisainternationals.com/contact">Free Consultation</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/blog">Blog</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/career">Careers</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/terms-and-conditions">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
 
-                    {/* Policy Links */}
-                    <div style={{ marginTop: "15px" }}>
-                        <Link href="/privacy-policy" className={styles.text}>Privacy Policy</Link> |{" "}
-                        <Link href="/terms-and-conditions" className={styles.text}>Terms & Conditions</Link>
+                    {/* Column 4: Contact Info */}
+                    <div className={styles.column}>
+                        <h4>Contact Info</h4>
+                        <p><MdOutlineBusiness /> <b>Head Office:</b></p>
+                        <p><MdLocationOn /> Global Visa Internationals G-F9, Business Point, 137 Brigade Road, Next to Brigade Tower, Bangalore, 560025, Karnataka</p>
+                        <p><MdPhone /> <b>+91-7022213466</b></p>
+                        <p><MdEmail /> operation@globalvisainternationals.com</p>
+
+                        {/* Social Icons */}
+                        <div className={styles.socialIcons}>
+                            <a href="https://wa.me/+917022213466"><FaWhatsapp /></a>
+                            <a href="https://instagram.com/globalvisa_internationals/"><FaInstagram /></a>
+                            <a href="http://linkedin.com/company/globalvisainternationals"><FaLinkedin /></a>
+                            <a href="https://www.youtube.com/@GLOBALVISAINTERNATIONALS"><FaYoutube /></a>
+                            <a href="https://x.com/GLOBALVISA1505"><FaXTwitter /></a>
+                            <a href="https://www.facebook.com/profile.php?id=61551041483630"><FaFacebook /></a>
+                        </div>
                     </div>
                 </div>
-                <div className={styles.socialIcons}>
-                    <a href="http://linkedin.com/company/globalvisainternationals" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <img className={styles.footerImg} src="/images/linkedInB.png" alt="LinkedIn" />
-                    </a>
-                    <a href="https://www.youtube.com/@GLOBALVISAINTERNATIONALS" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                        <img className={styles.footerImg} src="/images/youtube.png" alt="YouTube" />
-                    </a>
-                    <a href="https://x.com/GLOBALVISA1505" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <img className={styles.footerImg} src="/images/twitter.png" alt="Twitter" />
-                    </a>
-                    <a href="https://instagram.com/globalvisa_internationals/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <img className={styles.footerImg} src="/images/instagram.png" alt="Instagram" />
-                    </a>
-                    <a href="https://facebook.com/globalvisa.globalvisa" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <img className={styles.footerImg} src="/images/facebook.png" alt="Facebook" />
-                    </a>
-                </div>
             </footer>
+
         </>
     );
 }

@@ -49,8 +49,7 @@ body {
   --card-border: #e0e0e0;
   --radius: 10px;
   --transition: 0.25s ease;
-  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 
