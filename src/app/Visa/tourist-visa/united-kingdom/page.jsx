@@ -12,13 +12,13 @@ export const metadata = {
     "UK tourist visa from India, UK visitor visa consultants, UK visa agents in India, apply UK visa online India, UK visa assistance Bangalore, UK travel visa for Indian citizens, UK visa documentation help, UK visa consultants near me, UK visa process from India, UK visa cost 2025",
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk-tourist-visa",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom",
   },
   openGraph: {
     title: "Apply for UK Tourist Visa from India | Trusted UK Visa Consultants",
     description:
       "Looking to travel to the UK from India? Global Visa Internationals offers full support for UK tourist visa applications, documentation, and embassy appointments. Fast processing. Reliable service since 2012.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk-tourist-visa",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom",
     siteName: "Global Visa Internationals",
     images: [
       {
