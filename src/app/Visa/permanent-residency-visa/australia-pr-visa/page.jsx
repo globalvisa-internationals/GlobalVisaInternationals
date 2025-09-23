@@ -259,7 +259,7 @@ export default function Australia() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/Australia1.png" alt="Australia Image" className={styles.VisaImage} />
+        <img src="https://www.globalvisainternationals.com/PR-visa/Australia-PR-Visa-Assistance-GVI.jpg" alt="Australia Image" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>
@@ -557,7 +557,7 @@ export default function Australia() {
 
           <p>
             ✅ Ready to start your <b className={styles.strong}>Australia PR journey</b>? Contact <b className={styles.strong}>Global Visa Internationals</b> today for expert assistance with every step — from eligibility checks to final visa approval.
-            <br /><a href="/contact" class="cta-button">📩 Book Your Free Consultation</a>
+            <br /><a href="https://www.globalvisainternationals.com/contact" class="cta-button">📩 Book Your Free Consultation</a>
           </p>
 
 
@@ -596,34 +596,23 @@ export default function Australia() {
           </p>
 
           <h4 className={styles.subTitle}>✔️ Reducing Errors & Speeding Up Your PR Application</h4>
-          <p>
-            The <b className={styles.strong}>Australia PR visa process</b> is complex, and even the smallest error in your application can result in rejection or long delays. Our agents meticulously review your documents, lodge accurate applications, and respond to Department of Home Affairs queries on your behalf. This reduces risks, saves you time, and helps you reach your goal of <b className={styles.strong}>permanent residency</b> faster.
-          </p>
+          <p>  The <b className={styles.strong}>Australia PR visa process</b> is complex, and even the smallest error in your application can result in rejection or long delays. Our agents meticulously review your documents, lodge accurate applications, and respond to Department of Home Affairs queries on your behalf. This reduces risks, saves you time, and helps you reach your goal of <b className={styles.strong}>permanent residency</b> faster.  </p>
 
           <h4 className={styles.subTitle}>✔️ Staying Ahead of Law & Policy Changes</h4>
-          <p>
-            Immigration rules, <b className={styles.strong}>occupation lists</b>, and eligibility requirements are updated frequently by the Australian government. At <b className={styles.strong}>Global Visa Internationals</b>, our team stays informed about every policy update and applies this knowledge to your application. By ensuring compliance with the latest visa requirements, we give you a significant advantage in the competitive PR process.
+          <p>  Immigration rules, <b className={styles.strong}>occupation lists</b>, and eligibility requirements are updated frequently by the Australian government. At <b className={styles.strong}>Global Visa Internationals</b>, our team stays informed about every policy update and applies this knowledge to your application. By ensuring compliance with the latest visa requirements, we give you a significant advantage in the competitive PR process.
           </p>
 
           <h4 className={styles.subTitle}>✔️ Personalised Support at Every Step</h4>
-          <p>
-            No two applicants are the same — your background, career, and goals are unique. That’s why our migration experts provide <b className={styles.strong}>personalised PR strategies</b> tailored to your situation. From selecting the right PR pathway (Skilled Migration, Employer-Sponsored, Partner/Family, Business, or State Nominee visas) to preparing strong documentation, we walk with you every step of the way.
-          </p>
+          <p>  No two applicants are the same — your background, career, and goals are unique. That’s why our migration experts provide <b className={styles.strong}>personalised PR strategies</b> tailored to your situation. From selecting the right PR pathway (Skilled Migration, Employer-Sponsored, Partner/Family, Business, or State Nominee visas) to preparing strong documentation, we walk with you every step of the way.</p>
 
           <h4 className={styles.subTitle}>✔️ Proven Success & Global Trust</h4>
-          <p>
-            With a high success rate and hundreds of successful PR visa approvals, <b className={styles.strong}>Global Visa Internationals</b> has built a reputation for reliability and results. Our satisfied clients across India, Australia, and beyond are living proof of the value we bring. When you choose us, you’re not just applying for a visa — you’re securing a partner dedicated to your success.
-          </p>
+          <p>  With a high success rate and hundreds of successful PR visa approvals, <b className={styles.strong}>Global Visa Internationals</b> has built a reputation for reliability and results. Our satisfied clients across India, Australia, and beyond are living proof of the value we bring. When you choose us, you’re not just applying for a visa — you’re securing a partner dedicated to your success.</p>
 
-          <p>
-            <i>At <b className={styles.strong}>Global Visa Internationals</b>, we combine MARA accreditation, in-depth expertise, and a client-first approach to make your <b className={styles.strong}>Australia PR journey</b> smooth and stress-free. Let us turn your immigration goals into reality.</i>
-          </p>
+          <p>  <i>At <b className={styles.strong}>Global Visa Internationals</b>, we combine MARA accreditation, in-depth expertise, and a client-first approach to make your <b className={styles.strong}>Australia PR journey</b> smooth and stress-free. Let us turn your immigration goals into reality.</i></p>
 
           <a href="/contact" class="cta-button">📩 Book a Consultation with a Registered Migration Agent</a>
           <h3 className={styles.subTitle}>Processing Time, Costs & Fees for Australia PR</h3>
-          <p>
-            One of the most common questions applicants ask is: <b className={styles.strong}>“How long does the Australia PR process take and how much will it cost me?”</b> At <b className={styles.strong}>Global Visa Internationals</b>, we believe in complete transparency. While processing times and fees vary depending on your chosen visa subclass, occupation, and personal circumstances, our registered migration agents will give you a clear roadmap of both <b className={styles.strong}>timelines and expenses</b> before you begin.
-          </p>
+          <p>  One of the most common questions applicants ask is: <b className={styles.strong}>“How long does the Australia PR process take and how much will it cost me?”</b> At <b className={styles.strong}>Global Visa Internationals</b>, we believe in complete transparency. While processing times and fees vary depending on your chosen visa subclass, occupation, and personal circumstances, our registered migration agents will give you a clear roadmap of both <b className={styles.strong}>timelines and expenses</b> before you begin.</p>
 
           <h4 className={styles.subTitle}>⏳ Typical Processing Times</h4>
           <p>
@@ -635,23 +624,17 @@ export default function Australia() {
             <li><b className={styles.strong}>Subclass 491 Skilled Work Regional Visa</b>: 12–18 months (regional nomination + additional conditions)</li>
             <li><b className={styles.strong}>Partner & Family Visas</b>: 12–24 months (varies based on category)</li>
           </ul>
-          <p>
-            <i>Tip: A well-prepared application is often processed faster. At <b className={styles.strong}>Global Visa Internationals</b>, our MARA-registered agents ensure your documents are complete and compliant from the start — minimising delays and boosting your chances of quicker approval.</i>
-          </p>
+          <p>  <i>Tip: A well-prepared application is often processed faster. At <b className={styles.strong}>Global Visa Internationals</b>, our MARA-registered agents ensure your documents are complete and compliant from the start — minimising delays and boosting your chances of quicker approval.</i></p>
 
           <h4 className={styles.subTitle}>💰 Government Fees vs. Consulting Fees</h4>
-          <p>
-            When applying for an <b className={styles.strong}>Australia PR visa</b>, there are two main types of costs:
-          </p>
+          <p>  When applying for an <b className={styles.strong}>Australia PR visa</b>, there are two main types of costs:</p>
           <ul>
             <li><b className={styles.strong}>Government Fees:</b> Payable directly to the Department of Home Affairs. For example, the primary applicant visa charge can range between AUD $4,000–$5,000, with additional fees for partners and dependent children. These fees are non-refundable even if the application is refused.</li>
             <li><b className={styles.strong}>Consulting Fees:</b> At <b className={styles.strong}>Global Visa Internationals</b>, our fees are competitive and tailored to the complexity of your case. We offer flexible payment plans so you can spread the cost across stages of your PR journey. Unlike many agencies, we provide <b className={styles.strong}>transparent quotes upfront</b> — no hidden charges.</li>
           </ul>
 
           <h4 className={styles.subTitle}>📑 Additional Document-Related Costs</h4>
-          <p>
-            Apart from visa and consultation fees, you may also need to budget for supporting documentation:
-          </p>
+          <p>  Apart from visa and consultation fees, you may also need to budget for supporting documentation:</p>
           <ul>
             <li><b className={styles.strong}>Skills Assessment Fees:</b> Varies by authority (e.g., ACS, Engineers Australia, VETASSESS). Typically ranges between AUD $500–$1,000.</li>
             <li><b className={styles.strong}>English Language Test:</b> IELTS, PTE, or OET usually costs AUD $350–$400 per attempt.</li>
@@ -661,18 +644,14 @@ export default function Australia() {
           </ul>
 
           <h4 className={styles.subTitle}>🌟 Why Choose Global Visa Internationals for Transparent Guidance</h4>
-          <p>
-            Many applicants underestimate the total cost and end up facing surprises along the way. At <b className={styles.strong}>Global Visa Internationals</b>, we make the financial aspect clear from day one. We provide:
-          </p>
+          <p>  Many applicants underestimate the total cost and end up facing surprises along the way. At <b className={styles.strong}>Global Visa Internationals</b>, we make the financial aspect clear from day one. We provide:</p>
           <ul>
             <li>A <b className={styles.strong}>personalised cost breakdown</b> based on your visa pathway</li>
             <li>Flexible <b className={styles.strong}>installment plans</b> for consulting fees</li>
             <li>Guidance on <b className={styles.strong}>minimising unnecessary expenses</b></li>
             <li>Step-by-step advice so you know <b className={styles.strong}>exactly when and where to pay</b></li>
           </ul>
-          <p>
-            <i>By choosing Global Visa Internationals, you’re not just investing in a visa service — you’re investing in peace of mind, accuracy, and a smoother journey to <b className={styles.strong}>Australia PR</b>.</i>
-          </p>
+          <p>  <i>By choosing Global Visa Internationals, you’re not just investing in a visa service — you’re investing in peace of mind, accuracy, and a smoother journey to <b className={styles.strong}>Australia PR</b>.</i></p>
 
           <a href="/contact" class="cta-button">📩 Get a Free Cost Estimate & Processing Timeline</a>
 
