@@ -19,7 +19,7 @@ export const metadata = {
     title:
       "Australia PR Visa Assistance | Skilled Migration & Permanent Residency Experts",
     description:
-      "Global Visa Internationals offers complete guidance for Australia PR visa applications. Skilled migration (subclass 189, 190, 491), family and partner PR visas. Trusted consultants since 2012.",
+      "Global Visa Internationals offers complete guidance for Australia PR visa applications. Skilled migration (subclass 189, 190, 491), family and partner PR visas. Trusted consultants since 2017.",
     url: "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa",
     siteName: "Global Visa Internationals",
     images: [
