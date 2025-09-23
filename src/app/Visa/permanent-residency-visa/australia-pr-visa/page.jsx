@@ -3,11 +3,257 @@ import styles from '@/Components/Visa.module.css';
 import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 
+export const metadata = {
+  title:
+    "Australia PR Visa Assistance from India | Skilled Migration Consultants - Global Visa Internationals",
+  description:
+    "Apply for your Australia PR visa with expert assistance from Global Visa Internationals. Trusted consultants for skilled migration (subclass 189, 190, 491), family, and partner visas. Step-by-step guidance for PR eligibility, documentation, points test, and visa application.",
+  keywords:
+    "Australia PR visa assistance, Australia PR visa from India, skilled migration Australia, subclass 189 visa consultants, subclass 190 visa assistance, subclass 491 visa help, permanent residency Australia consultants, apply Australia PR visa online, Australia immigration consultants India, PR visa documentation Australia, Australia visa consultants near me, Australia PR visa process 2025, Australia PR eligibility check, Australia PR points calculator help",
+  robots: "index, follow",
+  alternates: {
+    canonical:
+      "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa",
+  },
+  openGraph: {
+    title:
+      "Australia PR Visa Assistance | Skilled Migration & Permanent Residency Experts",
+    description:
+      "Global Visa Internationals offers complete guidance for Australia PR visa applications. Skilled migration (subclass 189, 190, 491), family and partner PR visas. Trusted consultants since 2012.",
+    url: "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/PR-visa/Australia-PR-Visa-Assistance-GVI.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Australia PR Visa Assistance from India - Global Visa Internationals",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title:
+      "Australia PR Visa Assistance from India | Expert Skilled Migration Help",
+    description:
+      "Get professional help to apply for Australia PR visa. Global Visa Internationals assists with skilled migration visas (subclass 189, 190, 491), PR eligibility checks, documentation, and points test support.",
+    images: [
+      "https://www.globalvisainternationals.com/PR-visa/Australia-PR-Visa-Assistance-GVI.jpg",
+    ],
+  },
+};
+
+
 export default function Australia() {
 
+  const pageUrl = "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa";
+
+  const AustraliaPRVisaJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Australia PR Visa Assistance Services",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "name": "Skilled Migration Visa (Subclass 189)",
+        "description": "Expert assistance for Australia Skilled Independent Visa (subclass 189) including eligibility assessment, EOI submission, and documentation support.",
+        "url": pageUrl + "#subclass-189"
+      },
+      {
+        "@type": "Service",
+        "name": "State Nomination Visa (Subclass 190)",
+        "description": "Guidance for Australia PR via state-nominated visa (subclass 190) including nomination application and document verification.",
+        "url": pageUrl + "#subclass-190"
+      },
+      {
+        "@type": "Service",
+        "name": "Regional Sponsored Visa (Subclass 491)",
+        "description": "Assistance with Australia PR through regional sponsored visa (subclass 491), points assessment, and employer nomination.",
+        "url": pageUrl + "#subclass-491"
+      },
+      {
+        "@type": "Service",
+        "name": "Partner & Family PR Visa",
+        "description": "Professional help for partner and family PR visas to Australia, including eligibility check, form submission, and embassy liaison.",
+        "url": pageUrl + "#family-partner-pr"
+      },
+      {
+        "@type": "Service",
+        "name": "Australia PR Eligibility & Points Assessment",
+        "description": "Comprehensive points test assessment for Australia PR, ensuring maximum eligibility for skilled migration visas.",
+        "url": pageUrl + "#points-assessment"
+      }
+    ]
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Australia PR Visa Assistance",
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const immigrationConsultantJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Expert Australia PR visa consultants providing skilled migration (subclass 189, 190, 491), partner & family PR visa assistance, points assessment, and end-to-end application support from India.",
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ]
+  };
+  const australiaPRVisaFAQJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to get Australia PR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The processing time for Australia PR depends on the visa subclass. For skilled migration visas (subclass 189, 190, 491), it usually takes 6 to 12 months. Family and partner visas may take longer depending on the application type and documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which visa subclasses are eligible for Australia PR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Australia PR can be obtained through skilled migration visas (subclass 189, 190, 491), employer-sponsored visas, or family/partner visas. Each subclass has different eligibility requirements and points criteria."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the points test for Australia PR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The points test is used to assess eligibility for skilled migration visas. Points are awarded based on age, English language proficiency, work experience, education, and other factors. A minimum of 65 points is usually required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I apply for Australia PR after studying in Australia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, international students who have completed eligible studies in Australia may qualify for skilled migration visas. They can gain extra points for Australian study and work experience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a registered migration agent to apply for Australia PR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While it is not mandatory to use a registered migration agent, hiring a MARA-registered agent ensures accurate documentation, proper visa application submission, and reduces the risk of errors or delays."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if my Australia PR application is refused?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your application is refused, you can request a review or appeal depending on the visa subclass and reason for refusal. A registered migration agent can assist in assessing your options and reapplying if possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I continue working while my PR application is in process?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if you hold a valid temporary visa such as a student visa or work visa, you can continue working while your PR application is being processed."
+        }
+      }
+    ]
+  };
 
   return (
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+        <meta name="twitter:image:alt" content="Australia PR Visa Assistance from India - Global Visa Internationals" />
+
+
+        {/* Geo & Mobile SEO */}
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(AustraliaPRVisaJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(immigrationConsultantJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(australiaPRVisaFAQJsonLd) }} />
+      </Head>
+
 
 
 
