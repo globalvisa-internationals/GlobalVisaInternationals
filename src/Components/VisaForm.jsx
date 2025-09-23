@@ -215,7 +215,7 @@ export default function VisaForm() {
     <>
       {/* Normal Form */}
       <div className={styles.normalForm}>
-        <h1 className={styles.formtitle}>Free Visa Consultation Form</h1>
+        <h1 className={styles.formtitle}>Book a Free Consultation</h1>
         <form onSubmit={handleSubmit}>
           {formFields.map((field, index) => (
             <div key={index} className={field.type === 'row' ? styles.row : styles.row1}>
@@ -261,7 +261,7 @@ export default function VisaForm() {
       {showPopup && (
         <div className={styles.popupOverlay} onClick={() => setShowPopup(false)}>
           <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <h1 className={styles.formtitle}>Free Visa Consultation Form</h1>
+            <h1 className={styles.formtitle}>Book a Free Consultation</h1>
             <form onSubmit={handleSubmit}>
               {formFields.map((field, index) => (
                 <div key={index} className={field.type === 'row' ? styles.row : styles.row1}>

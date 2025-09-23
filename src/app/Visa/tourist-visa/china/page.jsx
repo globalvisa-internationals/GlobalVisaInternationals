@@ -219,8 +219,7 @@ export default function Canada() {
           <section>
             <h2 className={styles.subTitle}>✈ Travel to China with a Tourist or Business Visa</h2>
             <p>
-              Planning a trip to China for tourism or business? The China Tourist (L) Visa and Business (M) Visa allow Indian travelers to visit for sightseeing, to see family, or for business purposes. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We specialize in providing comprehensive <strong className={styles.strong}>China visa assistance for Indians</strong>.
-            </p>
+              Planning a trip to China for tourism or business? The China Tourist (L) Visa and Business (M) Visa allow Indian travelers to visit for sightseeing, to see family, or for business purposes. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We specialize in providing comprehensive <strong className={styles.strong}>China visa assistance for Indians</strong>.</p>
           </section>
 
           <div className={styles.section}>
@@ -254,8 +253,7 @@ export default function Canada() {
           <section>
             <h2 className={styles.subTitle}>🕒 China Visa Duration and Types</h2>
             <p>
-              China offers different visa types based on your travel purpose:
-            </p>
+              China offers different visa types based on your travel purpose:</p>
             <ul>
               <li><strong className={styles.strong}>Single Entry Tourist Visa (L):</strong> Valid for 3 months with stay up to 30 days</li>
               <li><strong className={styles.strong}>Double Entry Tourist Visa (L):</strong> Valid for 6 months with each stay up to 30 days</li>
@@ -263,140 +261,89 @@ export default function Canada() {
               <li><strong className={styles.strong}>10-Year China Visa:</strong> Available for eligible frequent travelers with multiple entries</li>
             </ul>
             <p>
-              👉 With GVI, we'll help you select the right visa type based on your travel needs and ensure full compliance with Chinese immigration rules.
-            </p>
+              👉 With GVI, we'll help you select the right visa type based on your travel needs and ensure full compliance with Chinese immigration rules.</p>
           </section>
 
           <section>
             <h2 className={styles.subTitle}>China Tourist & Business Visa Documents & Requirements for Indian Applicants</h2>
             <p>
-              Before applying, ensure you meet the <strong className={styles.strong}>China visa eligibility for Indians</strong>. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and guide you through submission. We provide a detailed <strong className={styles.strong}>China tourist visa document checklist</strong> and <strong className={styles.strong}>China business visa requirements</strong>.
-            </p>
+              Before applying, ensure you meet the <strong className={styles.strong}>China visa eligibility for Indians</strong>. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and guide you through submission. We provide a detailed <strong className={styles.strong}>China tourist visa document checklist</strong> and <strong className={styles.strong}>China business visa requirements</strong>.</p>
           </section>
 
           <section>
             <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
             <ul>
-              <li>
-                <b className={styles.strong}>Valid Passport:</b> Must be valid for at least six months beyond your intended stay, with at least two blank pages. We guide you on all <strong className={styles.strong}>China visa passport requirements</strong>.
-              </li>
-              <li>
-                <b className={styles.strong}>Old Passport:</b> Mandatory if issued within the last 5 years.
-              </li>
-              <li>
-                <b className={styles.strong}>Travel History:</b> Previous international travel strengthens your application. GVI helps you highlight these to strengthen your China visa application.
-              </li>
+              <li>  <b className={styles.strong}>Valid Passport:</b> Must be valid for at least six months beyond your intended stay, with at least two blank pages. We guide you on all <strong className={styles.strong}>China visa passport requirements</strong>.  </li>
+              <li>  <b className={styles.strong}>Old Passport:</b> Mandatory if issued within the last 5 years.  </li>
+              <li>  <b className={styles.strong}>Travel History:</b> Previous international travel strengthens your application. GVI helps you highlight these to strengthen your China visa application.  </li>
             </ul>
           </section>
 
           <section>
             <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
             <p>
-              You must prove you have sufficient funds to support your trip. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹1.5 lakh in your bank account. This is a key part of the <strong className={styles.strong}>proof of funds for China visitor visa</strong>. Avoid any large, unexplained transactions in the months leading up to your application.
-            </p>
+              You must prove you have sufficient funds to support your trip. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹1.5 lakh in your bank account. This is a key part of the <strong className={styles.strong}>proof of funds for China visitor visa</strong>. Avoid any large, unexplained transactions in the months leading up to your application.</p>
             <ul>
-              <li>
-                <b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. We advise on the <strong className={styles.strong}>China tourist visa bank statement requirements</strong>.
-              </li>
-              <li>
-                <b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 2-3 years to prove a stable income source.
-              </li>
+              <li>  <b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. We advise on the <strong className={styles.strong}>China tourist visa bank statement requirements</strong>.  </li>
+              <li>  <b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 2-3 years to prove a stable income source.  </li>
             </ul>
           </section>
 
           <section>
             <h3 className={styles.subTitle}>3. Employment & Professional Documentation</h3>
             <ul>
-              <li>
-                <b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.
-              </li>
-              <li>
-                <b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 2-3 years' ITRs. We also recommend a brief business profile.
-              </li>
-              <li>
-                <b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university.
-              </li>
+              <li>  <b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.  </li>
+              <li>  <b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 2-3 years' ITRs. We also recommend a brief business profile.  </li>
+              <li>  <b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university.  </li>
             </ul>
           </section>
 
           <section>
             <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
             <ul>
-              <li>
-                <b className={styles.strong}>Flight & Hotel Bookings:</b> Provide confirmed return flight tickets and hotel reservations for your entire stay.
-              </li>
-              <li>
-                <b className={styles.strong}>Hotel Confirmation:</b> Reservation form from the hotel is mandatory for tourist visa applications.
-              </li>
-              <li>
-                <b className={styles.strong}>Business Invitation:</b> For business visas, you need an invitation letter from a Chinese company, company registration copy, and inviting person's ID copy.
-              </li>
+              <li>  <b className={styles.strong}>Flight & Hotel Bookings:</b> Provide confirmed return flight tickets and hotel reservations for your entire stay.  </li>
+              <li>  <b className={styles.strong}>Hotel Confirmation:</b> Reservation form from the hotel is mandatory for tourist visa applications.  </li>
+              <li>  <b className={styles.strong}>Business Invitation:</b> For business visas, you need an invitation letter from a Chinese company, company registration copy, and inviting person's ID copy.  </li>
             </ul>
           </section>
 
           <section>
             <h3 className={styles.subTitle}>5. Additional Requirements</h3>
             <ul>
-              <li>
-                <b className={styles.strong}>Photos:</b> Two recent passport-sized photos (44mm x 33mm) with white background and 80% face visibility.
-              </li>
-              <li>
-                <b className={styles.strong}>Aadhaar Card:</b> Online PDF copy is required for both tourist and business visas.
-              </li>
-              <li>
-                <b className={styles.strong}>Covering Letter:</b> For business visas, an Indian company covering letter is required.
-              </li>
+              <li>  <b className={styles.strong}>Photos:</b> Two recent passport-sized photos (44mm x 33mm) with white background and 80% face visibility.  </li>
+              <li>  <b className={styles.strong}>Aadhaar Card:</b> Online PDF copy is required for both tourist and business visas.  </li>
+              <li>  <b className={styles.strong}>Covering Letter:</b> For business visas, an Indian company covering letter is required.  </li>
             </ul>
           </section>
 
           <section>
             <h2 className={styles.subTitle}>China Tourist & Business Visa Fees (India 2025)</h2>
-            <p>
-              Our transparent pricing includes all government fees and our service charges:
-            </p>
+            <p>  Our transparent pricing includes all government fees and our service charges:  </p>
             <ul>
-              <li>
-                <b className={styles.strong}>Single Entry Tourist Visa:</b> ₹11,500 (including visa fee)
-              </li>
-              <li>
-                <b className={styles.strong}>6-Month Double Entry Visa:</b> ₹13,200 (including visa fee)
-              </li>
-              <li>
-                <b className={styles.strong}>Express Processing:</b> Additional ₹5,000 for faster processing
-              </li>
-              <li>
-                <b className={styles.strong}>Business Visa Without Documents:</b> ₹3,000 service charge (excluding visa fee)
-              </li>
+              <li>  <b className={styles.strong}>Single Entry Tourist Visa:</b> ₹13,000 (including visa fee)  </li>
+              <li>  <b className={styles.strong}>6-Month Double Entry Visa:</b> ₹15,000 (including visa fee)  </li>
+              <li>  <b className={styles.strong}>Express Processing:</b> Additional ₹5,000 for faster processing  </li>
+              <li>  <b className={styles.strong}>Business Visa Without Documents:</b> ₹3,000 service charge (excluding visa fee)  </li>
             </ul>
             <p className={styles.note}>Note: Prices are subject to change based on embassy regulations and exchange rates.</p>
           </section>
 
           <section>
             <h2 className={styles.subTitle}>Processing Time</h2>
-            <p>
-              Understanding the <strong className={styles.strong}>China visa processing time from India</strong> is crucial for planning your trip:
-            </p>
+            <p>  Understanding the <strong className={styles.strong}>China visa processing time from India</strong> is crucial for planning your trip:  </p>
             <ul>
-              <li>
-                <b className={styles.strong}>Normal Processing Time:</b> 7-10 working days
-              </li>
-              <li>
-                <b className={styles.strong}>Express Processing Time:</b> 3-4 working days (additional fee applies)
-              </li>
-              <li>
-                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the embassy in a timely manner. We help you track <strong className={styles.strong}>China visa application status</strong>.
-              </li>
+              <li>  <b className={styles.strong}>Normal Processing Time:</b> 7-10 working days  </li>
+              <li>  <b className={styles.strong}>Express Processing Time:</b> 3-4 working days (additional fee applies)  </li>
+              <li>  <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the embassy in a timely manner. We help you track <strong className={styles.strong}>China visa application status</strong>.  </li>
             </ul>
           </section>
 
           <section>
             <h2 className={styles.subTitle}>Common Reasons for China Visa Rejection & How We Solve Them</h2>
-            <p>
-              Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent <strong className={styles.strong}>China tourist visa rejection reasons</strong>.
-            </p>
+            <p>  Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent <strong className={styles.strong}>China tourist visa rejection reasons</strong>.</p>
             <ul>
               <li><b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per embassy standards to ensure everything is perfect.</li>
-              <li><b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.              </li>
+              <li><b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.       </li>
               <li><b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared documentation clearly explains your travel plans and ties to India.</li>
               <li><b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
             </ul>
@@ -404,46 +351,26 @@ export default function Canada() {
 
           <section>
             <h2 className={styles.subTitle}>The China Visa Application Process: A Step-by-Step Guide</h2>
-            <p>
-              We manage this process for you. Here's a quick overview of what to expect:
-            </p>
+            <p>  We manage this process for you. Here's a quick overview of what to expect:</p>
             <ol>
-              <li>
-                <b className={styles.strong}>Document Preparation:</b> We help you gather and prepare all necessary documents according to embassy requirements.
-              </li>
-              <li>
-                <b className={styles.strong}>Application Form Filling:</b> We complete the China visa application form accurately on your behalf.
-              </li>
-              <li>
-                <b className={styles.strong}>Application Submission:</b> We submit your application to the appropriate visa center or embassy.
-              </li>
-              <li>
-                <b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.
-              </li>
-              <li>
-                <b className={styles.strong}>Passport Return:</b> We ensure safe return of your passport with the visa stamp.
-              </li>
+              <li>  <b className={styles.strong}>Document Preparation:</b> We help you gather and prepare all necessary documents according to embassy requirements.  </li>
+              <li>  <b className={styles.strong}>Application Form Filling:</b> We complete the China visa application form accurately on your behalf.  </li>
+              <li>  <b className={styles.strong}>Application Submission:</b> We submit your application to the appropriate visa center or embassy.  </li>
+              <li>  <b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.  </li>
+              <li>  <b className={styles.strong}>Passport Return:</b> We ensure safe return of your passport with the visa stamp.  </li>
             </ol>
           </section>
 
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
-          <p>
-            Choose the right China visa assistance package for your needs:
-          </p>
+          <p>  Choose the right China visa assistance package for your needs:</p>
           <ul>
 
-            <li>
-              <b className={styles.strong}>Standard (₹12,999):</b> End-to-end application assistance, documentation preparation, and submission guidance
-            </li>
-            <li>
-              <b className={styles.strong}>Express Processing:</b> Additional ₹5,000 for faster processing (3-4 working days)
-            </li>
+            <li>  <b className={styles.strong}>Standard (₹12,999):</b> End-to-end application assistance, documentation preparation, and submission guidance  </li>
+            <li>  <b className={styles.strong}>Express Processing:</b> Additional ₹5,000 for faster processing (3-4 working days)  </li>
           </ul>
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <p>
-            At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:
-          </p>
+          <p>  At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
           <ul>
             <li>2,000+ China visas processed since 2017</li>
             <li>98% client satisfaction rate across India</li>
@@ -452,12 +379,8 @@ export default function Canada() {
           </ul>
 
           <h2 className={styles.subTitle}>Ready to Apply?</h2>
-          <p>
-            With GVI, you don't need to worry about rejections or missing documents.
-          </p>
-          <p>
-            👉 Start your <strong className={styles.strong}>China visa application</strong> today with Global Visa Internationals and experience the rich culture and history of China with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for China</strong>.
-          </p>
+          <p>  With GVI, you don't need to worry about rejections or missing documents.</p>
+          <p>   👉 Start your <strong className={styles.strong}>China visa application</strong> today with Global Visa Internationals and experience the rich culture and history of China with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for China</strong>.</p>
           <br />
           <a href="/contact" className={styles.ctaButton}>
             Get a free consultation today!

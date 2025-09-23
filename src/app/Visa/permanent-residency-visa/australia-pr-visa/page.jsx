@@ -1,1392 +1,442 @@
-"use client";
-import styles from './Australia.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { NextSeo, LocalBusinessJsonLd, FAQPageJsonLd } from 'next-seo';
+
+import styles from '@/Components/Visa.module.css';
+import Head from "next/head";
+import VisaForm from "@/Components/VisaForm";
 
 export default function Australia() {
 
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
-  };
-  //reviews
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
   return (
     <>
-      <head>
-        <title>Australia PR Visa Consultants in Bangalore | Apply for Australia PR from India | Global Visa Internationals</title>
-        <meta name="description" content="Based in Bangalore? Get expert support for your Australia Permanent Residency (PR) Visa application from Global Visa Internationals. We guide you through the process, costs, documents, and requirements for living & working in Australia." />
-        <meta name="keywords" content="Australia PR visa consultants Bangalore, Australia permanent residency India, apply for Australia PR from India, Australia PR cost, Australia visa consultants in Bangalore, Australia PR process, Australia PR requirements, skilled migration Australia, best Australia PR consultants Bangalore" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Global Visa Internationals" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0a66c2" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/permanent-residency/australia" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/australia-pr-visa-banner.jpg" />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Australia PR Visa Consultants Bangalore | Global Visa Internationals" />
-        <meta property="og:description" content="Planning to migrate to Australia from Bangalore? Get expert Australia PR visa application assistance, cost breakdown, and guidance for your new life Down Under from Global Visa Internationals." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/permanent-residency/australia" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/australia-pr-visa-banner.jpg" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:locale:alternate" content="en_US" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Australia PR Visa Consultants in Bangalore | Application, Cost & Documents" />
-        <meta name="twitter:description" content="Migrate to Australia with ease from Bangalore. Get full Australia PR visa support, process guidance, and cost estimate from Global Visa Internationals." />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/australia-pr-visa-banner.jpg" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/permanent-residency/australia" />
-
-        {/* Geo Location Tags */}
-        <meta name="geo.region" content="AU" />
-        <meta name="geo.placename" content="Sydney" />
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-
-        {/* Local Business Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com/visa/permanent-residency/australia", // Changed URL to be more specific to this service/page
-            "logo": "https://www.globalvisainternationals.com/logo.png",
-            "description": "Trusted Australia PR visa consultants in Bangalore helping Indian skilled workers and families with Australia Permanent Residency (PR) visa applications, document verification, and expert support.", // Added Bangalore here
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "MG Road", // Ensure this is your precise street address
-              "addressLocality": "Bengaluru",
-              "addressRegion": "KA",
-              "postalCode": "560025", // Ensure this is your precise postal code
-              "addressCountry": "IN"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-7022213466",
-              "contactType": "Customer Support",
-              "areaServed": "Bengaluru", // Specify area served
-              "availableLanguage": ["en", "hi"] // Add languages if applicable
-            },
-            "sameAs": [
-              "https://www.facebook.com/GlobalVisaInternationals",
-              "https://www.linkedin.com/company/globalvisainternationals",
-              "https://twitter.com/GlobalVisaIntl"
-            ],
-            "servesCuisine": "Australia PR Visa Services", // Use a more descriptive "servesCuisine" or remove if not relevant, consider "hasOfferCatalog" in Service schema.
-            "priceRange": "affordable to premium", // Add a price range
-            "areaServed": { // Duplicate, but good to ensure presence for local search
-              "@type": "City",
-              "name": "Bengaluru"
-            },
-            "openingHoursSpecification": [ // Add opening hours
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "18:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Saturday"],
-                "opens": "09:00",
-                "closes": "14:00"
-              }
-            ],
-            "geo": { // Add geo coordinates for precise location
-              "@type": "GeoCoordinates",
-              "latitude": 12.9716,
-              "longitude": 77.5946
-            }
-          })
-        }} />
-
-        {/* BreadcrumbList Structured Data - No changes needed, already good */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.globalvisainternationals.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Permanent Residency Visa",
-                "item": "https://www.globalvisainternationals.com/visa/permanent-residency"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Australia PR"
-              }
-            ]
-          })
-        }} />
-
-        {/* FAQPage Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How much does an Australia PR visa cost from India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The cost of an Australia PR visa from India varies significantly based on the visa subclass, application type, and additional fees like skills assessment, English language tests, and medical examinations. Generally, the visa application charge starts from AUD 4,640 for the main applicant (approximately ₹2,50,000 to ₹3,00,000) excluding other costs. For a detailed breakdown specific to your profile, contact our Australia PR visa consultants in Bangalore." // Added Bangalore context
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What documents are required for an Australia PR visa application from Bangalore?", // Added Bangalore context
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Key documents for an Australia PR visa include a valid passport, English language test results (IELTS/PTE), educational credential assessment (if applicable), skilled employment references, police clearance certificates, medical examination results, and proof of funds. Our Australia immigration consultants in Bangalore can provide a personalized document checklist." // Added Bangalore context
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What is the processing time for Australia PR from India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Australia PR visa processing times vary greatly depending on the visa subclass, application completeness, and individual circumstances. It can range from several months to over a year. It's recommended to check the official Department of Home Affairs website for the latest processing times for your specific visa. Global Visa Internationals in Bangalore stays updated on all processing changes." // Added Bangalore context
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Why choose Global Visa Internationals as your Australia PR visa consultants in Bangalore?", // New FAQ
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Global Visa Internationals has over 11+ years of experience as leading visa consultants in Bangalore, with a high success rate for Australia PR applications. We offer personalized guidance, expert knowledge of Australian immigration policies, hassle-free document preparation, and comprehensive post-landing support to help you achieve your Australian dream."
-                }
-              }
-            ]
-          })
-        }} />
-
-        {/* Service Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Australia Permanent Residency Visa Application Assistance in Bangalore", // Added Bangalore here
-            "provider": {
-              "@type": "Organization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com"
-            },
-            "areaServed": [ // Changed to an array to include specific cities
-              {
-                "@type": "City",
-                "name": "Bengaluru"
-              },
-              {
-                "@type": "Country",
-                "name": "India"
-              }
-            ],
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Australia PR Visa Services", // More specific name
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Australia Skilled Independent Visa (Subclass 189) Assistance"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Australia Skilled Nominated Visa (Subclass 190) Assistance"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Australia Skilled Work Regional (Provisional) Visa (Subclass 491) Assistance"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Australia Partner Visa (Permanent) Assistance"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Australia Immigration Consulting in Bangalore" // Added local service
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Australia PR Document Preparation Bangalore" // Added local service
-                  }
-                }
-              ]
-            }
-          })
-        }} />
-      </head>
 
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/Australia1.png" alt="Australia Image" className={styles.AustraliaImage} />
+        <img src="/images/Australia1.png" alt="Australia Image" className={styles.VisaImage} />
       </div>
 
-      <div className={styles.AustraliaSec}>
-        <div className={styles.AustraliaData}>
-          <h1 className={styles.AustraliaGuide}>Australia PR Visa Consultants in Bangalore | Your Expert Guide to Permanent Residency Down Under | Global Visa Internationals</h1>
-          <p>Dreaming of a new beginning? Australia, a land of stunning natural beauty, a vibrant multicultural society, and abundant opportunities, is calling! If you're based in **Bangalore** and searching for trusted **Australia PR visa consultants**, Global Visa Internationals is your ideal partner. Securing Permanent Residency (PR) in Australia opens doors to an exceptional quality of life, access to world-class healthcare, top-tier education, and a dynamic job market. It's more than just a visa; it's a chance to build a brighter future for you and your family down under.</p>
-
-          <h3 className={styles.subTitle}>Why Choose Australia for Permanent Residency? What Makes It So Special?</h3>
-          <p>Australia isn't just another country; it's a promise of a better life. Here's what makes it a premier destination for Australian immigration:</p>
-
+      <div className={styles.VisaSec}>
+        <div className={styles.VisaData}>
+          <h1 className={styles.Title}>Australia Permanent Residency (PR) Visa Assistance & Immigration Consulting Services</h1>
+          <h3 className={styles.subTitle}>What is PR in Australia? Why people seek PR (living, work, study rights)</h3>
+          <p>PR in Australia refers to Permanent Residency, a visa status granted to non-citizens that allows them to live, work, and study in Australia indefinitely. A PR visa is one of the most sought-after immigration pathways for individuals who want long-term settlement in the country.</p>
+          <h4 className={styles.subTitle}>Why Do People Seek Australian PR?</h4>
           <ul>
-            <li><strong>High Quality of Life:</strong> Australia consistently ranks among the top countries globally for its high quality of life. You'll find safe, clean cities with a relaxed lifestyle, beautiful beaches, and vast open spaces, making it ideal for families and individuals alike.</li>
-            <li><strong>Excellent Healthcare System:</strong> Say goodbye to healthcare worries! Australia boasts a world-class public healthcare system (Medicare), ensuring comprehensive medical services are available to all its citizens and permanent residents.</li>
-            <li><strong>World-Class Education:</strong> Invest in your future and your children's future with Australia's highly-regarded public education system, from elementary schools to prestigious universities. Australia PR provides access to unparalleled learning opportunities.</li>
-            <li><strong>Strong Economy and Job Opportunities:</strong> Australia's robust and diverse economy, driven by sectors like mining, finance, healthcare, education, and technology, means there's a constant demand for skilled professionals. Whether you're in tech, healthcare, or trades, there's likely a place for you.</li>
-            <li><strong>Multicultural and Inclusive Society:</strong> Australia is celebrated for its welcoming spirit, embracing people from every corner of the globe. You'll feel at home in this truly diverse and inclusive nation, where over 30% of the population is born overseas.</li>
-            <li><strong>Stunning Natural Beauty:</strong> Imagine living surrounded by iconic landmarks, pristine coastlines, and vast, unique outback landscapes. Australia offers incredible natural beauty and endless opportunities for outdoor adventures.</li>
-            <li><strong>Path to Citizenship:</strong> Your Australia PR is just the first step! After meeting residency requirements, you can apply for Australian citizenship, gaining full rights and privileges in your new home.</li>
+            <li><strong className={styles.strong}>Living Rights - </strong> PR holders can live in Australia indefinitely with almost the same benefits as citizens.</li>
+            <li><strong className={styles.strong}>Work Rights - </strong> They can work in any job or sector without restrictions.</li>
+            <li><strong className={styles.strong}>Study Rights -  </strong> PRs enjoy access to local tuition fees and certain government-funded education loans.</li>
+            <li><strong className={styles.strong}>Healthcare Access -  </strong> They get access to Medicare, Australia’s world-class public healthcare system.</li>
+            <li><strong className={styles.strong}>Social Security Benefits -  </strong> Eligible for Centrelink benefits after a waiting period.</li>
+            <li><strong className={styles.strong}>Pathway to Citizenship -  </strong> After meeting residency requirements, PR holders can apply for Australian citizenship.</li>
+            <li><strong className={styles.strong}>Sponsor Family -  </strong> Ability to sponsor relatives for visas.</li>
+            <li><strong className={styles.strong}>Freedom of Travel -  </strong> PR holders can travel in and out of Australia freely within visa validity.</li>
+          </ul>
+          <h3 className={styles.subTitle}>How our service helps: registered agents, personalised assistance, high success rate</h3>
+          <p>Applying for Australia PR can be a complex and time-consuming process. At Global Visa Internationals, we make it simple, stress-free, and successful with our expert guidance.</p>
+          <ul>
+            <li><strong className={styles.strong}>Registered Migration Agents : </strong> We work with MARA-registered migration agents who are authorised to provide immigration advice. This ensures your application is legally compliant and has the highest chance of approval.</li>
+            <li><strong className={styles.strong}>Personalised Assistance : </strong> No two applications are the same. Our team provides tailor-made guidance based on your background, skills, and goals — whether you want to work, study, or settle in Australia permanently.</li>
+            <li><strong className={styles.strong}>High Success Rate </strong>With years of experience and thousands of applications processed, we maintain a high visa success rate. From documentation to lodging your PR application</li>
           </ul>
 
-          <div className={styles.formSection1}>
-
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <h3 className={styles.subTitle}>Key Australian Cities and Regions for PR Seekers</h3>
-          <p>While opportunities for immigrating to Australia exist nationwide, some cities and states are particularly popular for newcomers due to their thriving job markets and strong community support. As your **Australia PR consultants in Bangalore**, we can help you choose the best destination for your profile. Consider these top destinations for your Australia PR journey:</p>
+          <h3 className={styles.subTitle}>Australia PR Visa Pathways</h3>
+          <p>If you are planning to settle in Australia permanently, understanding the Australia PR visa pathways is the first step. The country offers multiple options depending on your skills, family connections, or investment plans. Below are the best PR visa options in Australia:</p>
           <ol>
-            <li><strong>Sydney, New South Wales:</strong> As Australia's largest city and economic powerhouse, Sydney offers unparalleled job opportunities in finance, technology, media, and professional services. It's a true global city with iconic landmarks.</li>
-            <br />
-            <li><strong>Melbourne, Victoria:</strong> Renowned for its culture, arts, and sports, Melbourne is a major hub for healthcare, education, technology, and advanced manufacturing. It consistently ranks as one of the world's most liveable cities.</li>
-            <br />
-            <li><strong>Brisbane, Queensland:</strong> This rapidly growing city offers strong opportunities in healthcare, education, construction, and tourism. Enjoy a subtropical climate and access to stunning coastal areas.</li>
-            <br />
-            <li><strong>Perth, Western Australia:</strong> A major center for the mining and resources sector, Perth also has growing opportunities in technology and renewable energy. Enjoy a relaxed, outdoor lifestyle with beautiful beaches.</li>
-            <li><strong>Adelaide, South Australia:</strong> Known for its affordability and vibrant food and wine scene, Adelaide offers opportunities in healthcare, education, defence, and advanced manufacturing. It's a popular choice for state-nominated visas.</li>
-            <li><strong>Canberra, ACT:</strong> The nation's capital, Canberra provides stable employment opportunities in government, education, and research. It's a planned city with a high quality of life and is often a target for skilled migrants.</li>
-            <li><strong>Hobart, Tasmania:</strong> This charming island state capital is seeing growth in tourism, agriculture, and renewable energy. It offers a unique lifestyle with pristine wilderness at its doorstep.</li>
-            <li><strong>Darwin, Northern Territory:</strong> A gateway to Asia, Darwin offers opportunities in resources, defence, and tourism. It's known for its laid-back atmosphere and tropical climate.</li>
+            <li><strong className={styles.strong}>Skilled Migration (Subclass 189, 190, 491) </strong>
+              <p>One of the most popular ways to secure permanent residency is through skilled migration subclass 189, 190, and 491 visas.</p>
+              <ul>
+                <li><b className={styles.strong}>Subclass 189 (Skilled Independent Visa): </b> For applicants with strong skills who apply independently.</li>
+                <li><b className={styles.strong}>Subclass 190 (Skilled Nominated Visa): </b> Requires nomination by an Australian state or territory.</li>
+                <li><b className={styles.strong}>Subclass 491 (Skilled Work Regional Visa): </b> For applicants willing to live and work in regional areas.</li>
+
+              </ul>
+              <p>This pathway is ideal for professionals in demand, including IT specialists, engineers, and healthcare workers.</p>
+            </li>
+            <li>
+              <b className={styles.strong}>Employer-Sponsored PR Visa Australia</b>
+              <p>If you already have a job offer, the employer-sponsored PR visa Australia route could be the best option. Under schemes like the Employer Nomination Scheme (Subclass 186), employers sponsor skilled workers to fill critical shortages. This is a great pathway for those who want job security while settling in Australia.</p>
+            </li>
+            <li>
+              <b className={styles.strong}>Partner and Family PR Visa Australia</b>
+              <p>For those with close ties in the country, the partner and family PR visa Australia pathway makes it possible to reunite with loved ones. Partner visas, parent visas, and child visas allow Australian citizens or permanent residents to sponsor family members. This option is especially popular for couples and families wanting to live together in Australia.</p>
+            </li>
+            <li>
+              <b className={styles.strong}>Business Investor Visa Australia PR</b>
+              <p>Entrepreneurs and investors can apply under the business investor visa Australia PR stream. Visas such as Subclass 188 and Subclass 888 are designed for business owners and high-net-worth individuals looking to expand or invest in the Australian economy. This pathway opens opportunities not just for migration, but also for business growth.</p>
+            </li>
+            <li><b className={styles.strong}>State Nominated Visa Australia</b>
+              <p>Each Australian state and territory has the authority to nominate skilled migrants for PR. A state nominated visa Australia often has faster processing and higher chances of approval if your occupation is in demand locally. This is an attractive option for applicants ready to contribute to specific regions.</p>
+            </li>
+          </ol>
+          <h3 className={styles.subTitle}>How to Apply for PR in Australia</h3>
+          The process of how to apply for PR in Australia depends on the visa category you choose. Typically, it involves:
+          <ol>
+            <li>Checking eligibility (points test for skilled visas, job offers for employer-sponsored visas, or nomination for family/business).</li>
+            <li>Submitting an Expression of Interest (EOI) via SkillSelect.</li>
+            <li>Receiving an invitation to apply.</li>
+            <li>Lodging the visa application with required documents.</li>
+            <li>Waiting for processing and approval.</li>
+
+          </ol>
+          Getting professional guidance can significantly improve your chances of success.
+          <h2 className={styles.subTitle}>Australia PR Eligibility Criteria Overview</h2>
+          Before applying for an Australia PR visa, it’s essential to understand the eligibility criteria. Meeting these requirements increases your chances of approval and ensures a smooth application process.
+          <ol>
+            <li><strong className={styles.strong}>Points test for Australia PR visa: </strong>
+              <p>The points test evaluates your eligibility for skilled migration visas. Applicants must score at least 65 points to apply. Points are awarded in the following categories:</p>
+              <ul>
+                <li>Age - Younger applicants earn higher points.
+                  <table className={styles.table}>
+                    <thead>
+                      <tr>
+                        <th>Age</th>
+                        <th>Points</th>
+                      </tr>
+
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>18-24 years</td>
+                        <td>25</td>
+                      </tr>
+                      <tr>
+                        <td>25-32 years</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>33-39 years</td>
+                        <td>25</td>
+                      </tr>
+                      <tr>
+                        <td>40-44 years</td>
+                        <td>15</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li>English proficiency - Higher language scores improve your points.
+                  <table className={styles.table}>
+                    <thead>
+                      <tr>
+                        <th>English Test Result</th>
+                        <th>Points</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Superior English (IELTS 8 / PTE 79-90)</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>Proficient English (IELTS 7 / PTE 65-78)</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Competent English (IELTS 6 / PTE 50-64)</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li> Skilled Employment Experience (Outside Australia)
+                  <table className={styles.table}>
+                    <thead>
+                      <tr>
+                        <th>Years of Experience</th>
+                        <th>Points</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>3-4 years</td><td>5</td></tr>
+                      <tr><td>5-7 years</td><td>10</td></tr>
+                      <tr><td>8-10 yearss</td><td>15</td></tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li>Skilled Employment Experience (In Australia)
+                  <table className={styles.table}>
+                    <thead>
+                      <tr>
+                        <th>Years of Experience</th>
+                        <th>Points</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr><td>1-2 years</td><td>5</td></tr>
+                      <tr><td>3-4 years</td><td>10</td></tr>
+                      <tr><td>4-7 years</td><td>15</td></tr>
+                      <tr><td>8-10 years</td><td>20</td></tr>
+                    </tbody>
+
+                  </table>
+                </li>
+                <li>Educational Qualifications:
+                  <table className={styles.table}>
+                    <thead>
+                      <tr>
+                        <th>Qualification</th>
+                        <th>Points</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Doctorate</td><td>20</td></tr>
+                      <tr><td>Bachelor’s or Master’s</td><td>15</td></tr>
+                      <tr><td>Diploma or trade qualification</td><td>10</td></tr>
+                      <tr><td>Australian qualification (Bachelor’s or higher)</td><td>Additional 5 points</td></tr>
+                    </tbody>
+
+                  </table>
+                </li>
+              </ul>
+
+            </li>
+            <li>Health and Character Requirements
+              <p>All applicants must meet strict health and character requirements. This includes:</p>
+              <ul>
+                <li>Medical examinations to ensure you are fit to live in Australia.</li>
+                <li>Police clearance certificates to verify good character.</li>
+              </ul>
+              <p>Meeting these requirements is mandatory for all PR visa pathways.</p>
+            </li>
+            <li><strong>Relevant Occupation Lists for Australia PR</strong>
+              <p>When applying for an Australia PR visa, your job must be on the relevant occupation lists published by the Australian Government. These lists highlight professions that are in demand across the country, making you eligible for certain skilled migration visas such as Subclass 189, Subclass 190, and Subclass 491.</p>
+              <h3 className={styles.subTitle}>Types of Occupation Lists</h3>
+              <ol>
+                <li>Medium and Long-Term Strategic Skills List (MLTSSL)
+                  <ul>
+                    <li>For high-demand occupations across Australia.</li>
+                    <li>Relevant for Skilled Independent Visa (Subclass 189) and some employer-sponsored visas.</li>
+                    <li>Includes professions like IT specialists, engineers, healthcare professionals, and accountants.</li>
+                  </ul>
+                </li>
+                <li>Short-Term Skilled Occupation List (STSOL)
+                  <ul>
+                    <li>For occupations needed in specific sectors and regions.</li>
+                    <li>Primarily used for state-nominated visas (Subclass 190) and employer-sponsored visas.</li>
+                    <li>Includes roles such as marketing specialists, teachers, hospitality managers, and customer service professionals.</li>
+                  </ul>
+                </li>
+                <li>Regional Occupation List (ROL)
+                  <ul>
+                    <li>For occupations required in regional Australia.</li>
+                    <li>Important for Skilled Work Regional Visa (Subclass 491) and regional employer sponsorship.</li>
+                    <li>Includes trades, medical staff, and agricultural workers.</li>
+                  </ul>
+                </li>
+              </ol>
+              <h3 className={styles.subTitle}>Why These Lists Matter</h3>
+              <p>Your eligibility for a PR visa depends heavily on whether your occupation appears in these lists. If your skills are listed, your chances of receiving an invitation to apply for PR in Australia are significantly higher.</p>
+            </li>
+            <li>Other Criteria
+              <p>Depending on the visa type, other factors may include:</p>
+              <ul>
+                <li><b className={styles.strong}>Language scores -</b> IELTS, PTE, or equivalent English tests.</li>
+                <li><b className={styles.strong}>Skills assessment -</b> Conducted by a recognized assessing authority to validate your qualifications and work experience.</li>
+
+              </ul>
+              <p>Ensuring you meet all these criteria is a critical step in how to apply for PR in Australia.</p>
+            </li>
           </ol>
 
-          ---
-          <div className={styles.formSection1}>
+          <p>Applying for an Australia PR visa is a significant step, and the process involves a series of carefully managed stages. This guide provides a clear, step-by-step breakdown of how to apply for permanent residency in Australia, with tips to make your journey smoother and highlight where expert assistance, such as that from Global Visa Internationals, can be invaluable.</p>
 
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <h2 className={styles.subTitle}>Tailor Your Australian PR Pathway with Bangalore's Top Consultants: Find Your Best Fit!</h2>
-          <p>Feeling overwhelmed by the options for Australia PR? Don't worry! As leading **Australia PR visa consultants in Bangalore**, we can help you navigate the various Australian immigration programs. Take our quick assessment to discover your ideal Australian immigration route – it's designed to point you in the right direction! Contact Global Visa Internationals today for a personalized assessment.</p>
-
-          ---
-          <div className={styles.formSection1}>
-
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <h2 className={styles.subTitle}>Understanding the Cost of Australian Permanent Residency in 2025</h2>
-          <p>Investing in your future in Australia is a significant step, and understanding the financial aspects is crucial. The total cost of applying for Australian Permanent Residency can vary based on the specific visa subclass, your family size, and other associated expenses. Here's a general breakdown of potential costs for immigrating to Australia based on current figures (as of May 2025, subject to change by the Department of Home Affairs):</p>
-
-          <h3>Estimated Core Application Costs (Visa Application Charges - VACs)</h3>
-          <p>These are the official fees paid to the Department of Home Affairs for key skilled migration visas (e.g., Subclass 189, 190, 491).</p>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Applicant Type</th>
-                <th>Estimated Cost (AUD)</th>
-                <th>Approx. Cost (INR, @ ₹55/AUD)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Principal Applicant</td>
-                <td>AUD 4,640</td>
-                <td>₹2,55,200</td>
-              </tr>
-              <tr>
-                <td>Additional Applicant (18+ years)</td>
-                <td>AUD 2,320</td>
-                <td>₹1,27,600</td>
-              </tr>
-              <tr>
-                <td>Additional Applicant (under 18 years)</td>
-                <td>AUD 1,160</td>
-                <td>₹63,800</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div className={styles.formSection1}>
-
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-          <p><em>*Note: These are Visa Application Charges (VACs) only and do not include other associated costs. Fees are subject to change by the Australian Department of Home Affairs, typically updated in July each year.</em></p>
-
-          <h3>Other Associated Costs for Australia PR</h3>
-          <ul>
-            <li><strong>Skills Assessment (ECA Equivalent):</strong> If your professional qualifications are from outside Australia, you'll need a skills assessment from a relevant Australian assessing authority (e.g., VETASSESS, ACS, Engineers Australia). The cost varies significantly by assessing body and occupation, typically ranging from AUD 500 to AUD 2,000+ (approximately INR 27,500 - ₹1,10,000+).</li>
-            <br />
-            <li><strong>English Language Proficiency Tests (IELTS/PTE):</strong> These tests are mandatory to prove your English language skills. The cost is typically around INR 17,000-20,000 per test (approximately AUD 300-360). Strong scores here can significantly boost your points score for skilled migration!</li>
-            <br />
-            <li><strong>Medical Examination:</strong> A medical exam is required for all applicants and their dependents to ensure you meet health requirements for Australian immigration. The cost varies by clinic and location in India, generally INR 5,000-8,000 per person (approximately AUD 90-145).</li>
-            <br />
-            <li><strong>Police Certificates:</strong> You'll need police certificates from every country you've lived in for 12 months or more over the last 10 years since turning 16. Costs vary depending on the issuing authority in each country.</li>
-            <br />
-            <li><strong>Translation Fees:</strong> If any of your supporting documents are not in English, you'll need certified (NAATI accredited) translations. Costs for these services will vary.</li>
-            <br />
-            <li><strong>Proof of Funds:</strong> While skilled independent visas (189, 190) don't have a strict 'proof of funds' requirement from the Department of Home Affairs, state/territory nominated visas (like the 491) often require applicants to demonstrate sufficient funds for initial settlement. For a single applicant, this could be approximately AUD 20,000 - AUD 25,000 (approximately INR 11 Lakhs - ₹13.75 Lakhs), with higher amounts for families. This demonstrates your ability to support yourself upon arrival.</li>
-            <br />
-            <li><strong>Consultancy Fees (if applicable):</strong> If you choose to leverage the expertise of an immigration consultant like Global Visa Internationals, their professional fees will be an additional cost. These fees vary based on the comprehensive services provided to guide you through your Australia PR journey. We encourage you to contact **Global Visa Internationals, your trusted Australia PR consultants in Bangalore**, for a transparent breakdown of all costs.</li>
-          </ul>
-
-          <div className={styles.formSection1}>
-
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <h2 className={styles.subTitle}>Example Estimated Total Out-of-Pocket Costs (for a single applicant, excluding consultancy fees and proof of funds):</h2>
-          <ul>
-            <li>Visa Application Charge (VAC): AUD 4,640</li>
-            <li>Skills Assessment: ~AUD 800 (average estimate)</li>
-            <li>IELTS/PTE: ~AUD 320</li>
-            <li>Medical Exam: ~AUD 120</li>
-            <li>Police Certificates: Variable</li>
-            <li>Total Estimated Out-of-Pocket Costs (excluding proof of funds): Approximately AUD 5,880 - AUD 6,500 (approximately INR 3.2 Lakhs - ₹3.5 Lakhs) + Proof of Funds.</li>
-          </ul>
-          <p>Please remember, these are rough estimates, and actual costs can vary. It's always essential to check the official Department of Home Affairs website for the most up-to-date fees and requirements. For a personalized cost breakdown, reach out to Global Visa Internationals, your dedicated **Australia PR visa consultants in Bangalore**!</p>
-          ---
-          <h2 className={styles.subTitle}>Tips for a Successful Australian PR Application: Your Pathway to Success with Global Visa Internationals Bangalore</h2>
+          <h3 className={styles.subTitle}>Step-by-Step Process — How to Apply for PR in Australia</h3>
           <ol>
-            <li><strong>Research Thoroughly:</strong> Before you begin your Australian immigration journey, take the time to understand the different Australia PR programs and their specific eligibility criteria. Finding the right fit for your profile is the first crucial step. Our **Australia PR consultants in Bangalore** can help identify your best pathway.</li>
-            <li><strong>Maximize Your Points Score:</strong> For skilled migration visas (189, 190, 491), your points score is critical. Focus on enhancing factors like strong language test results, higher education, extensive skilled work experience, and potentially studying in regional Australia.</li>
-            <li><strong>Gather Documents Early:</strong> The Australia PR application requires a significant amount of documentation. Start collecting all required documents well in advance to avoid last-minute stress and delays.</li>
-            <li><strong>Maintain a Clean Record:</strong> A clean criminal record is essential for Australian immigration. Ensure you have no issues that could affect your eligibility.</li>
-            <li><strong>Be Financially Prepared:</strong> While not a strict requirement for all skilled visas, demonstrating sufficient funds for initial settlement is vital, especially for state-nominated visas.</li>
-            <li><strong>Seek Professional Guidance:</strong> The Australia PR process can be complex and highly competitive. Consider consulting with experienced immigration professionals like **Global Visa Internationals in Bangalore** to navigate the intricacies, optimize your application, and maximize your chances of success.</li>
-          </ol>
-          ---
-          <div className={styles.formSection1}>
-
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <h2 className={styles.subTitle}>Top Considerations for Australian PR: Beyond the Application</h2>
-          <ul>
-            <li><strong>State/Territory Nomination Programs (STNPs):</strong>
-              <ul>
-                <li>Beyond federal programs, explore State/Territory Nomination Programs. These allow states and territories to nominate individuals who meet their specific economic and labour market needs, often providing a faster pathway to Australia PR or a significant points boost.</li>
-                <li>Understanding how STNPs align with your skills can significantly enhance your chances of successful Australian immigration.</li>
-              </ul>
+            <li><b className={styles.strong}>Initial Eligibility Assessment</b>
+              <p>
+                The first step towards <b className={styles.strong}>Australian permanent residency (PR)</b> is assessing your eligibility. This includes checking your <b className={styles.strong}>points score</b>, English language proficiency, qualifications, work experience, and confirming whether your occupation is on the <b className={styles.strong}>skilled occupation list</b>.
+                <br />
+                <i>Global Visa Internationals can conduct a detailed eligibility check to help you understand your chances of success before you begin the process.</i>
+              </p>
             </li>
-            <li><strong>Language Proficiency:</strong>
-              <ul>
-                <li>"G'day Mate!" Strong English language skills are not just a requirement; they are crucial for thriving in Australia. Aim for the highest possible scores in your English tests (IELTS or PTE Academic) to significantly boost your Australia PR application and future prospects in the job market.</li>
-              </ul>
+
+            <li><b className={styles.strong}>Skills Assessment</b>
+              <p>
+                Your qualifications and professional experience must be assessed by the relevant authority (e.g., <b className={styles.strong}>ACS</b> for IT, <b className={styles.strong}>Engineers Australia</b> for engineers, or <b className={styles.strong}>VETASSESS</b> for many other occupations). A positive assessment is mandatory for most skilled visas.
+                <br />
+                <i>Our team at Global Visa Internationals helps you prepare and submit a strong application, ensuring your documents meet Australian standards.</i>
+              </p>
             </li>
-            <li><strong>Settlement Plan:</strong>
-              <ul>
-                <li>Think beyond the application. Develop a clear plan for how you will integrate into Australian society, including your job search strategy, housing arrangements, and how you'll engage with your new community.</li>
-                <li>Research local resources and support services specifically for newcomers – Australia has many!</li>
-              </ul>
+
+            <li><b className={styles.strong}>Expression of Interest (EOI) via SkillSelect</b>
+              <p>
+                Once you have a positive skills assessment, you can lodge an <b className={styles.strong}>Expression of Interest (EOI)</b> through the SkillSelect system. This showcases your points, qualifications, and preferred visa subclass (189, 190, or 491) to the Department of Home Affairs and state governments.
+                <br />
+                <i>Global Visa Internationals assists in crafting a professional EOI that increases your chances of receiving an invitation to apply.</i>
+              </p>
             </li>
-            <li><strong>Job Market Research:</strong>
-              <ul>
-                <li>Before making the move, research the job market in your target Australian cities or states. This will help you assess the demand for your specific profession (referencing ANZSCO codes) and tailor your job search efforts.</li>
-                <li>Networking and early job search efforts, even before landing your Australia PR, can be incredibly beneficial.</li>
-              </ul>
+
+            <li><b className={styles.strong}>State / Regional Nomination</b>
+              <p>
+                For state-nominated visas (Subclass 190 or 491), you may need sponsorship from an Australian state or territory. Each state has its own occupation list and requirements. Demonstrating a genuine intent to live and work in that region is essential.
+                <br />
+                <i>Our experts guide you on which states are currently sponsoring your occupation and manage your nomination application from start to finish.</i>
+              </p>
             </li>
-            <li><strong>Climate and Lifestyle:</strong>
-              <ul>
-                <li>Australia experiences diverse climates, from tropical north to temperate south. Be prepared for different weather patterns, especially hot summers in many regions.</li>
-                <li>Embrace the unique Australian lifestyle, which often includes a love for outdoor activities, sports, and a relaxed, friendly atmosphere.</li>
-              </ul>
+
+            <li><b className={styles.strong}>Invitation to Apply & Visa Application</b>
+              <p>
+                If selected, you will receive an <b className={styles.strong}>Invitation to Apply (ITA)</b>. You must then lodge your official visa application through ImmiAccount, including all supporting documents such as skills assessment results, English test scores, employment references, and police clearances.
+                <br />
+                <i>Global Visa Internationals ensures your visa application is accurate, complete, and submitted within the strict deadlines.</i>
+              </p>
             </li>
-          </ul>
-          ---
-          <div className={styles.formSection1}>
 
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
+            <li><b className={styles.strong}>Health and Character Checks</b>
+              <p>
+                Applicants must undergo medical examinations and provide police clearance certificates from countries where they have lived for 12 months or more. These checks verify that you meet Australia’s health and character requirements.
+                <br />
+                <i>We assist you in scheduling medicals, obtaining police certificates, and ensuring no delays in your application process.</i>
+              </p>
+            </li>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
+            <li><b className={styles.strong}>Case Officer Assessment & Follow-Up</b>
+              <p>
+                A Department of Home Affairs case officer will review your application. They may request further information, documents, or schedule an interview. If applying from within Australia, you may be granted a bridging visa during processing.
+                <br />
+                <i>With Global Visa Internationals managing your case, you’ll have professional representation to handle all correspondence and requests efficiently.</i>
+              </p>
+            </li>
 
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <h2 className={styles.subTitle}>Additional Tips for Your Australian Journey: Making the Most of Your PR</h2>
-          <ol>
-            <li><strong>Stay Updated:</strong> Australian immigration policies can change. Regularly check the official Department of Home Affairs website for the latest information and updates to ensure your application remains compliant.</li>
-            <li><strong>Network:</strong> Connect with other immigrants and Australians. Building a strong network can provide invaluable insights, support, and opportunities in your new home.</li>
-            <li><strong>Be Patient:</strong> The Australia PR application process can take time. Patience, persistence, and a positive outlook are key throughout your journey.</li>
-            <li><strong>Prepare for Interview (if applicable):</strong> While rare for skilled visas, some PR streams or individual cases may require an interview. Be prepared to discuss your application in detail and articulate your intentions for moving to Australia.</li>
-            <li><strong>Maintain Valid Documents:</strong> Ensure your passport and all other required documents remain valid throughout the entire application process and beyond.</li>
-            <li><strong>Embrace the Adventure:</strong> Moving to a new country is a significant step, full of challenges and incredible opportunities. Embrace the journey, learn from new experiences, and enjoy building your new life in Australia! Let Global Visa Internationals, your trusted **Australia PR visa consultants in Bangalore**, guide you every step of the way.</li>
+            <li><b className={styles.strong}>Visa Decision & Next Steps</b>
+              <p>
+                Once approved, you will receive your <b className={styles.strong}>visa grant notice</b> with all conditions. If refused, reasons will be provided along with any review rights.
+                <br />
+                <i>Global Visa Internationals supports you beyond visa approval, offering post-visa settlement advice to help you transition smoothly into life in Australia.</i>
+              </p>
+            </li>
           </ol>
 
-          <h2 className={styles.subTitle}>Applying for Australian Permanent Residency: Your Pathways to Australia with Global Visa Internationals Bangalore</h2>
-          <p>Navigating the various routes to Australian Permanent Residency can seem daunting, but we're here to simplify it. The most common programs for skilled workers seeking Australia PR include:</p>
+          <p>
+            ✅ Ready to start your <b className={styles.strong}>Australia PR journey</b>? Contact <b className={styles.strong}>Global Visa Internationals</b> today for expert assistance with every step — from eligibility checks to final visa approval.
+            <br /><a href="/contact" class="cta-button">📩 Book Your Free Consultation</a>
+          </p>
+
+
+
+          <h3 className={styles.subTitle}>Quick Document Checklist</h3>
           <ul>
-            <li><strong>Skilled Independent Visa (Subclass 189):</strong> This visa is for invited skilled workers who don't need sponsorship from an Australian employer, state or territory government, or family member. It's a points-tested visa requiring you to meet a minimum points threshold based on age, English language ability, skilled employment, qualifications, etc.</li>
-            <li><strong>Skilled Nominated Visa (Subclass 190):</strong> This visa is for invited skilled workers who are nominated by an Australian state or territory government. It also requires a points test, and nomination by a state/territory adds 5 points to your score.</li>
-            <li><strong>Skilled Work Regional (Provisional) Visa (Subclass 491):</strong> This provisional visa allows skilled migrants to live, work, and study in designated regional areas of Australia for 5 years. It requires nomination by a state or territory government or sponsorship by an eligible family member residing in a designated regional area. After 3 years on this visa, meeting certain criteria, you may be eligible for the Permanent Residence (Skilled Regional) visa (subclass 191). This visa adds 15 points to your score.</li>
-            <li><strong>Employer Sponsored Visas:</strong> These visas allow Australian employers to sponsor skilled workers for temporary or permanent residency if they cannot find a suitable Australian worker.
-              <ul>
-                <li><strong>Employer Nomination Scheme (ENS) visa (Subclass 186):</strong> A permanent visa for skilled workers nominated by an employer.</li>
-                <li><strong>Temporary Skill Shortage (TSS) visa (Subclass 482):</strong> A temporary visa that can sometimes lead to PR.</li>
-              </ul>
-            </li>
-            <li><strong>Partner Visas:</strong> If you are in a genuine relationship with an Australian citizen, Australian permanent resident, or eligible New Zealand citizen, they may be able to sponsor you for a Partner visa (Subclass 820/801 or 309/100).</li>
+            <li>Passport biodata page</li>
+            <li>Skills assessment outcome</li>
+            <li>English test results (IELTS / PTE / OET)</li>
+            <li>Academic transcripts & degrees</li>
+            <li>Employment references & payslips</li>
+            <li>Police clearance certificates</li>
+            <li>Medical examination reports</li>
+            <li>Marriage/birth certificates</li>
+            <li>State/territory nomination evidence</li>
+            <li>Partner/spouse documents (if applicable)</li>
           </ul>
 
-          <div className={styles.formSection1}>
+          <h3 className={styles.subTitle}>💡 Top Practical Tips</h3>
+          <p>
+            ✔️ Start your skills assessment before lodging your EOI. <br />
+            ✔️ Keep all your documents well-organized and certified. <br />
+            ✔️ For complex cases, consult a registered <b className={styles.strong}>migration agent</b>. <br />
+            ✔️ Respond promptly to all Department requests. <br />
+            ✔️ Maintain a valid passport throughout the entire <b className={styles.strong}>Australia PR process</b>.
+          </p>
 
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
+          <h3 className={styles.subTitle}>Why Choose a Registered Migration Agent at Global Visa Internationals</h3>
+          <p>
+            Applying for <b className={styles.strong}>Australia PR</b> is one of the most important steps in your life — and it deserves expert handling. At <b className={styles.strong}>Global Visa Internationals</b>, our <b className={styles.strong}>MARA-registered migration agents</b> provide end-to-end assistance that takes the stress out of the process and maximises your chances of success. With years of experience and a proven track record, we are trusted by clients worldwide to make the dream of <b className={styles.strong}>Australian permanent residency</b> a reality.
+          </p>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
+          <h4 className={styles.subTitle}>✔️ What MARA Registration Means</h4>
+          <p>
+            A <b className={styles.strong}>MARA-registered migration agent</b> is licensed by the <b className={styles.strong}>Office of the Migration Agents Registration Authority (MARA)</b>, ensuring accountability, professionalism, and ethical practice. This means when you work with <b className={styles.strong}>Global Visa Internationals</b>, you are working with professionals who follow strict Australian immigration laws and maintain the highest service standards. We don’t just give advice — we provide guidance you can trust.
+          </p>
 
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
+          <h4 className={styles.subTitle}>✔️ Reducing Errors & Speeding Up Your PR Application</h4>
+          <p>
+            The <b className={styles.strong}>Australia PR visa process</b> is complex, and even the smallest error in your application can result in rejection or long delays. Our agents meticulously review your documents, lodge accurate applications, and respond to Department of Home Affairs queries on your behalf. This reduces risks, saves you time, and helps you reach your goal of <b className={styles.strong}>permanent residency</b> faster.
+          </p>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
+          <h4 className={styles.subTitle}>✔️ Staying Ahead of Law & Policy Changes</h4>
+          <p>
+            Immigration rules, <b className={styles.strong}>occupation lists</b>, and eligibility requirements are updated frequently by the Australian government. At <b className={styles.strong}>Global Visa Internationals</b>, our team stays informed about every policy update and applies this knowledge to your application. By ensuring compliance with the latest visa requirements, we give you a significant advantage in the competitive PR process.
+          </p>
 
+          <h4 className={styles.subTitle}>✔️ Personalised Support at Every Step</h4>
+          <p>
+            No two applicants are the same — your background, career, and goals are unique. That’s why our migration experts provide <b className={styles.strong}>personalised PR strategies</b> tailored to your situation. From selecting the right PR pathway (Skilled Migration, Employer-Sponsored, Partner/Family, Business, or State Nominee visas) to preparing strong documentation, we walk with you every step of the way.
+          </p>
 
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
+          <h4 className={styles.subTitle}>✔️ Proven Success & Global Trust</h4>
+          <p>
+            With a high success rate and hundreds of successful PR visa approvals, <b className={styles.strong}>Global Visa Internationals</b> has built a reputation for reliability and results. Our satisfied clients across India, Australia, and beyond are living proof of the value we bring. When you choose us, you’re not just applying for a visa — you’re securing a partner dedicated to your success.
+          </p>
 
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
+          <p>
+            <i>At <b className={styles.strong}>Global Visa Internationals</b>, we combine MARA accreditation, in-depth expertise, and a client-first approach to make your <b className={styles.strong}>Australia PR journey</b> smooth and stress-free. Let us turn your immigration goals into reality.</i>
+          </p>
 
-          <p><strong>Key Requirements (General for Skilled Worker Programs for 2025):</strong></p>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Factor</th>
-                <th>Requirement/Points (General)</th>
-                <th>Notes for Australia PR</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Age</strong></td>
-                <td>Under 45 years</td>
-                <td>Points highest for 25-32 years (30 pts). Zero points for 45+.</td>
-              </tr>
-              <tr>
-                <td><strong>English Language</strong></td>
-                <td>Competent English (IELTS 6.0/PTE 50) as minimum.</td>
-                <td>Proficient (IELTS 7.0/PTE 65 - 10 pts) or Superior (IELTS 8.0/PTE 79 - 20 pts) boost points significantly.</td>
-              </tr>
-              <tr>
-                <td><strong>Skilled Employment</strong></td>
-                <td>Relevant experience in an ANZSCO occupation on a skilled occupation list.</td>
-                <td>Points awarded for 3, 5, or 8+ years of skilled employment (both Australian and overseas).</td>
-              </tr>
-              <tr>
-                <td><strong>Qualifications</strong></td>
-                <td>Minimum Bachelor's degree or higher.</td>
-                <td>Points awarded for Doctorate (20 pts), Bachelor/Master (15 pts), or Trade Qualification (10 pts). Must have a positive skills assessment.</td>
-              </tr>
-              <tr>
-                <td><strong>Skills Assessment</strong></td>
-                <td>Mandatory for skilled visas.</td>
-                <td>Assessed by relevant Australian assessing authorities (e.g., VETASSESS, ACS, Engineers Australia).</td>
-              </tr>
-              <tr>
-                <td><strong>State/Territory Nomination</strong></td>
-                <td>Required for Subclass 190 & 491.</td>
-                <td>Adds 5 points (190) or 15 points (491) to your score.</td>
-              </tr>
-              <tr>
-                <td><strong>Partner Skills</strong></td>
-                <td>Spouse/partner can add points if they meet certain criteria.</td>
-                <td>Up to 10 points for skilled partner, or 5 points if they have competent English.</td>
-              </tr>
-              <tr>
-                <td><strong>Regional Study</strong></td>
-                <td>At least 2 years of study in regional Australia.</td>
-                <td>Adds 5 points.</td>
-              </tr>
-              <tr>
-                <td><strong>Minimum Points</strong></td>
-                <td>65 points (for EOI submission).</td>
-                <td>Higher points often required for an Invitation to Apply (ITA) due to high demand.</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Providing accurate information and all necessary documents is paramount to avoid delays or even rejection of your Australia PR application. That's where expert guidance from **Global Visa Internationals, your leading Australia PR visa consultants in Bangalore**, comes in handy!</p>
+          <a href="/contact" class="cta-button">📩 Book a Consultation with a Registered Migration Agent</a>
+          <h3 className={styles.subTitle}>Processing Time, Costs & Fees for Australia PR</h3>
+          <p>
+            One of the most common questions applicants ask is: <b className={styles.strong}>“How long does the Australia PR process take and how much will it cost me?”</b> At <b className={styles.strong}>Global Visa Internationals</b>, we believe in complete transparency. While processing times and fees vary depending on your chosen visa subclass, occupation, and personal circumstances, our registered migration agents will give you a clear roadmap of both <b className={styles.strong}>timelines and expenses</b> before you begin.
+          </p>
 
-          ---
-          <div className={styles.formSection1}>
-
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals? Your Trusted Australia PR Consultants in Bangalore</h2>
-          <p>At Global Visa Internationals, we understand that the Australia PR application process can feel complex and overwhelming. That's why we're dedicated to making your journey to Australian immigration smooth and stress-free. As leading **Australia PR visa consultants in Bangalore**, we offer comprehensive support, making us the preferred choice for aspiring permanent residents:</p>
+          <h4 className={styles.subTitle}>⏳ Typical Processing Times</h4>
+          <p>
+            The <b className={styles.strong}>Department of Home Affairs (DHA)</b> sets processing times for each visa, which may change depending on demand, case complexity, and documentation quality. Below is a general guide:
+          </p>
           <ul>
-            <li><strong>Personalized Guidance:</strong> Our team of experienced **Australia PR consultants in Bangalore** provides tailored support throughout your entire application journey, from your initial eligibility assessment to the final submission of your documents.</li>
-            <li><strong>Expert Knowledge:</strong> The world of Australian immigration is constantly evolving. We stay rigorously up-to-date with the latest visa regulations and program changes to ensure your application is always accurate, compliant, and complete.</li>
-            <li><strong>Hassle-Free Process:</strong> Say goodbye to paperwork headaches! We handle the intricacies, guide you through each step, and assist with meticulous document preparation, saving you invaluable time and stress.</li>
-            <li><strong>High Success Rate:</strong> Your success is our priority. We are committed to maximizing your chances of a successful Australia PR outcome with our meticulous approach and deep understanding of the immigration landscape.</li>
-            <li><strong>Additional Services:</strong> Beyond core application support, we offer valuable services like strategies for points score improvement, practical job search assistance, and essential settlement advice to help you thrive in Australia.</li>
+            <li><b className={styles.strong}>Subclass 189 Skilled Independent Visa</b>: 6–12 months (depending on occupation and points score)</li>
+            <li><b className={styles.strong}>Subclass 190 State Nominated Visa</b>: 9–14 months (includes state nomination step)</li>
+            <li><b className={styles.strong}>Subclass 491 Skilled Work Regional Visa</b>: 12–18 months (regional nomination + additional conditions)</li>
+            <li><b className={styles.strong}>Partner & Family Visas</b>: 12–24 months (varies based on category)</li>
+          </ul>
+          <p>
+            <i>Tip: A well-prepared application is often processed faster. At <b className={styles.strong}>Global Visa Internationals</b>, our MARA-registered agents ensure your documents are complete and compliant from the start — minimising delays and boosting your chances of quicker approval.</i>
+          </p>
+
+          <h4 className={styles.subTitle}>💰 Government Fees vs. Consulting Fees</h4>
+          <p>
+            When applying for an <b className={styles.strong}>Australia PR visa</b>, there are two main types of costs:
+          </p>
+          <ul>
+            <li><b className={styles.strong}>Government Fees:</b> Payable directly to the Department of Home Affairs. For example, the primary applicant visa charge can range between AUD $4,000–$5,000, with additional fees for partners and dependent children. These fees are non-refundable even if the application is refused.</li>
+            <li><b className={styles.strong}>Consulting Fees:</b> At <b className={styles.strong}>Global Visa Internationals</b>, our fees are competitive and tailored to the complexity of your case. We offer flexible payment plans so you can spread the cost across stages of your PR journey. Unlike many agencies, we provide <b className={styles.strong}>transparent quotes upfront</b> — no hidden charges.</li>
           </ul>
 
-          <div className={styles.formSection1}>
+          <h4 className={styles.subTitle}>📑 Additional Document-Related Costs</h4>
+          <p>
+            Apart from visa and consultation fees, you may also need to budget for supporting documentation:
+          </p>
+          <ul>
+            <li><b className={styles.strong}>Skills Assessment Fees:</b> Varies by authority (e.g., ACS, Engineers Australia, VETASSESS). Typically ranges between AUD $500–$1,000.</li>
+            <li><b className={styles.strong}>English Language Test:</b> IELTS, PTE, or OET usually costs AUD $350–$400 per attempt.</li>
+            <li><b className={styles.strong}>Police Clearances:</b> Charges vary by country, generally between AUD $20–$100.</li>
+            <li><b className={styles.strong}>Medical Examinations:</b> Around AUD $300–$400 per adult, depending on the clinic and country.</li>
+            <li><b className={styles.strong}>Translations & Certifications:</b> If documents are not in English, certified translations may cost AUD $20–$40 per page.</li>
+          </ul>
 
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
+          <h4 className={styles.subTitle}>🌟 Why Choose Global Visa Internationals for Transparent Guidance</h4>
+          <p>
+            Many applicants underestimate the total cost and end up facing surprises along the way. At <b className={styles.strong}>Global Visa Internationals</b>, we make the financial aspect clear from day one. We provide:
+          </p>
+          <ul>
+            <li>A <b className={styles.strong}>personalised cost breakdown</b> based on your visa pathway</li>
+            <li>Flexible <b className={styles.strong}>installment plans</b> for consulting fees</li>
+            <li>Guidance on <b className={styles.strong}>minimising unnecessary expenses</b></li>
+            <li>Step-by-step advice so you know <b className={styles.strong}>exactly when and where to pay</b></li>
+          </ul>
+          <p>
+            <i>By choosing Global Visa Internationals, you’re not just investing in a visa service — you’re investing in peace of mind, accuracy, and a smoother journey to <b className={styles.strong}>Australia PR</b>.</i>
+          </p>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
+          <a href="/contact" class="cta-button">📩 Get a Free Cost Estimate & Processing Timeline</a>
 
 
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
 
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
-          <p>We at Global Visa Internationals are proud to be India's finest visa consultants. We're dedicated to turning your dreams of Australia PR into reality. With over 11+ years of experience as leading **visa consultants in Bangalore**, we have successfully processed over 55,000+ visas and offered over 75,000 expert visa advice sessions to date. You can confidently rely on our vast experience in **Australia immigration consulting in India and specifically in Bangalore**.</p>
-          <p>Don't let the complexities of the Australia PR process hold you back! Let **Global Visa Internationals, your trusted Australia PR visa consultants in Bangalore**, be your partner in navigating the application and planning your exciting new life in Australia. Contact us today for a free consultation and take the first step towards your Australian dream!</p>
-          <br />
-          <p><strong>Global Visa Internationals - Bangalore Office:</strong></p>
-          <p>[Insert your full Bangalore Address here]</p>
-          <p>Phone: [Your Bangalore Phone Number]</p>
-          <p>Email: [Your Contact Email]</p>
-          <p>Office Hours: [Your Office Hours]</p>
         </div>
 
         <div className={styles.formSection}>
-          <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  <option value="Australia">Australia</option>
-                  {["USA", "UK", "New Zealand", "Europe", "Japan", "Dubai", "Singapore", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-24">18-24</option>
-                  <option value="25-32">25-32</option>
-                  <option value="33-39">33-39</option>
-                  <option value="40-44">40-44</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Trade Qualification", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully! Our expert team will reach out to you shortly to discuss your Australia PR options.</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+          <VisaForm />
         </div>
       </div>
 

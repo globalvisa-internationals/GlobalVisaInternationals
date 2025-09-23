@@ -33,7 +33,7 @@
 .subTitle {
     text-align: left;
     font-size: 1.1rem;
-    color: var(--primary);
+    color: var(--accent);
     font-weight: 600;
     margin: 15px 0 10px;
     line-height: 1.4;
@@ -115,30 +115,88 @@
 
 }
 
-/* === Table === */
-.table {
-    display: block;
+.table-wrapper {
     width: 100%;
     overflow-x: auto;
-    border-collapse: collapse;
-    margin: 1.2rem 0;
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius);
+    /* enables horizontal scroll if table overflows */
+    -webkit-overflow-scrolling: touch;
+    /* smooth scrolling on mobile */
 }
 
+/* === Table === */
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin: 1.2rem 0;
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    border-collapse: collapse;
+    background-color: #fff;
+
+    overflow-x: auto;
+    /* enables horizontal scroll if table overflows */
+    -webkit-overflow-scrolling: touch;
+    /* smooth scrolling on mobile */
+}
+
+/* Table cells */
 .table th,
 .table td {
     font-size: 0.85rem;
-    padding: 0.6rem;
+    padding: 8px 12px;
     border: 1px solid var(--card-border);
     text-align: left;
+    word-break: break-word;
+    /* ensures content wraps within cell */
 }
 
+/* Table header */
 .table th {
     background-color: #f0fafa;
     color: var(--primary);
     font-weight: 600;
 }
+
+/* ===== Responsive ===== */
+
+/* Laptops & tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+
+    .table th,
+    .table td {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+
+    .table th,
+    .table td {
+        font-size: 0.75rem;
+        padding: 5px 8px;
+    }
+}
+
+/* Extra small screens (<400px) */
+@media (max-width: 400px) {
+    .table {
+        width: 100%;
+        border-radius: var(--radius);
+        border: 1px solid #ccc;
+        table-layout: fixed;
+        /* columns adjust to fit width */
+        font-size: 0.7rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 4px 6px;
+        text-align: left;
+    }
+}
+
 
 /* === Pricing === */
 .pricingContainer {
