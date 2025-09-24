@@ -118,7 +118,7 @@ export default async function sitemap() {
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa',
-      lastModified: new Date('2025-09-19'),
+      lastModified: new Date('2025-09-24'),
       changefreq: 'weekly',
       priority: 0.8,
     },
