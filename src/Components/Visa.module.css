@@ -17,7 +17,24 @@
     margin: 0 auto;
     padding: 12px;
     text-align: justify;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.VisaData ul li {
+    padding-bottom: 12px;
+
+}
+
+.VisaData h1 h2 h3 h4,
+.Title,
+.subTitle {
+    font-family: var(--heading-font), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+
+}
+
+.VisaData ol li {
+    padding-bottom: 12px;
 
 }
 
