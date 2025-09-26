@@ -29,7 +29,7 @@ export const metadata = {
     },
     url: "https://www.globalvisainternationals.com/blog/Germany-opens-doors-for-Indian-talent-Opportunity-Card-Work-Pathways",
     author: "Global Visa Internationals",
-    date: "2025-09-25",
+    date: "2025-09-27",
     authors: [{ name: "Global Visa Internationals" }],
     category: "Immigration News & Updates",
     image:
@@ -314,118 +314,127 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                         />
                     </picture>
                 </div>
-                <h3>Why Germany Is in the Spotlight</h3>
-                <p>In September 2025, German Ambassador to India Dr. Philipp Ackermann made headlines with a clear message to skilled Indians:</p>
-                <p className={Styles.note}>“We don’t change our rules fundamentally overnight.”</p>
-                <p>This statement was widely interpreted as a subtle comparison with the United States’ sudden H-1B visa policy changes — which introduced sharp fee hikes and new wage restrictions, creating uncertainty for Indian professionals.</p>
-                <p>Germany, on the other hand, is highlighting its stability, predictability, and openness to global talent. For Indian professionals in IT, engineering, healthcare, and research, Germany is positioning itself as a serious and secure alternative to the U.S.</p>
-                <p>With its strong economy (Europe’s largest GDP), world-class education system, and pro-immigration reforms like the Opportunity Card, Germany is becoming one of the most attractive destinations for skilled Indians.</p>
-                <h3>The Opportunity Card (Chancenkarte) – Germany’s Game-Changer</h3>
-                <p>Launched in June 2024, the Opportunity Card (Chancenkarte) is Germany’s new points-based job-seeker visa. It allows qualified non-EU citizens (including Indians) to enter Germany for up to 12 months to look for a job — without needing an offer in advance.</p>
-                <h4>Key Features</h4>
-                <ul>
-                    <li>Points-based system: You need at least 6 points to qualify.</li>
-                    <li>Categories for points:
-                        <ul>
-                            <li>Recognized university degree or vocational qualification</li>
-                            <li>Professional experience (2+ years, more points for longer experience)</li>
-                            <li>Language skills (German A1 or English B2 and above)</li>
-                            <li>Age: Extra points if you’re under 35</li>
-                            <li>Previous stay in Germany (study/work/short visits)</li>
-                        </ul>
-                    </li>
-                    <li>Stay duration: 12 months (extendable if you secure work).</li>
-                    <li>Work rights: You can work part-time (up to 20 hours/week) during your job search.</li>
-                </ul>
-                <p>This visa is particularly valuable for fresh graduates and young professionals who may not have a job offer but want to explore opportunities in Germany.</p>
-                <h2>Other Visa Options for Indians</h2>
-                <ol>
-                    <li>EU Blue Card
-                        <ul>
-                            <li>Designed for highly qualified professionals with a job offer.</li>
-                            <li>Requirements:
-                                <ul>
-                                    <li>Recognized degree</li>
-                                    <li>Job contract in Germany</li>
-                                    <li>Annual gross salary of at least €45,300 (2025), or €41,000 for shortage occupations (IT specialists, engineers, doctors, nurses).</li>
-                                </ul>
-                            </li>
-                            <li>Benefits:
-                                <ul>
-                                    <li>Pathway to permanent residency (after 33 months, or 21 months with B1 German).</li>
-                                    <li>Family reunification rights.</li>
+                <div className={Styles.content}>
 
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Job Seeker Visa
-                        <ul>
-                            <li>Precursor to the Opportunity Card.</li>
-                            <li>Valid for 6 months.</li>
-                            <li>Requires:
-                                <ul>
-                                    <li>Recognized qualification</li>
-                                    <li>Proof of sufficient funds (~€11,000)</li>
-                                    <li>Health insurance.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Student Visa → Post-Study Work Route
-                        <ul>
-                            <li>Indian students can pursue low-cost or tuition-free higher education in Germany.</li>
-                            <li>After graduation, they can apply for a Job Search Permit (18 months) to find employment.</li>
-                            <li>Once employed, students can switch to a Blue Card or work permit.</li>
-                        </ul>
-                    </li>
-                </ol>
-                <h2>Step-by-Step Guide: How Indians Can Apply for the Opportunity Card</h2>
-                <h3>Step 1: Check Your Eligibility</h3>
-                <ul>
-                    <li>Use the official <a href="https://www.make-it-in-germany.com/en/">Make it in Germany Points Calculator.</a></li>
-                    <li>Ensure you score at least 6 points.</li>
-                </ul>
-                <h3>Step 2: Prepare Documents</h3>
-                <ul>
-                    <li>Valid passport (12+ months).</li>
-                    <li>Degree/diploma certificates (must be recognized in Germany, use the Anabin database for verification).</li>
-                    <li>Proof of funds (blocked account of approx. €12,000 or sponsor affidavit).</li>
-                    <li>Proof of language (German A1 or higher, English B2 or higher).</li>
-                    <li>Health insurance.</li>
-                    <li>CV + work experience letters.</li>
-                </ul>
-                <h3>Step 3: Apply from India</h3>
-                <ul>
-                    <li>Book an appointment with VFS Global / German Embassy.</li>
-                    <li>Fill out the application form, submit biometrics, and pay the visa fee (₹6,500–₹7,500 approx.).</li>
+                    <h3 className={Styles.subtitle}>Why Germany Is in the Spotlight</h3>
+                    <p>In September 2025, German Ambassador to India Dr. Philipp Ackermann made headlines with a clear message to skilled Indians:</p>
+                    <p className={Styles.note}>“We don’t change our rules fundamentally overnight.”</p>
+                    <p>This statement was widely interpreted as a subtle comparison with the United States’ sudden H-1B visa policy changes — which introduced sharp fee hikes and new wage restrictions, creating uncertainty for Indian professionals.</p>
+                    <p>Germany, on the other hand, is highlighting its stability, predictability, and openness to global talent. For Indian professionals in IT, engineering, healthcare, and research, Germany is positioning itself as a serious and secure alternative to the U.S.</p>
+                    <p>With its strong economy (Europe’s largest GDP), world-class education system, and pro-immigration reforms like the Opportunity Card, Germany is becoming one of the most attractive destinations for skilled Indians.</p>
+                    <h3 className={Styles.subtitle}>The Opportunity Card (Chancenkarte) – Germany’s Game-Changer</h3>
+                    <p>Launched in June 2024, the Opportunity Card (Chancenkarte) is Germany’s new points-based job-seeker visa. It allows qualified non-EU citizens (including Indians) to enter Germany for up to 12 months to look for a job — without needing an offer in advance.</p>
+                    <h4 className={Styles.subtitle}>Key Features</h4>
+                    <ul>
+                        <li>Points-based system: You need at least 6 points to qualify.</li>
+                        <li>Categories for points:
+                            <ul>
+                                <li>Recognized university degree or vocational qualification</li>
+                                <li>Professional experience (2+ years, more points for longer experience)</li>
+                                <li>Language skills (German A1 or English B2 and above)</li>
+                                <li>Age: Extra points if you’re under 35</li>
+                                <li>Previous stay in Germany (study/work/short visits)</li>
+                            </ul>
+                        </li>
+                        <li>Stay duration: 12 months (extendable if you secure work).</li>
+                        <li>Work rights: You can work part-time (up to 20 hours/week) during your job search.</li>
+                    </ul>
+                    <p>This visa is particularly valuable for fresh graduates and young professionals who may not have a job offer but want to explore opportunities in Germany.</p>
+                    <h2 className={Styles.subtitle}>Other Visa Options for Indians</h2>
+                    <ol>
+                        <li>EU Blue Card
+                            <ul>
+                                <li>Designed for highly qualified professionals with a job offer.</li>
+                                <li>Requirements:
+                                    <ul>
+                                        <li>Recognized degree</li>
+                                        <li>Job contract in Germany</li>
+                                        <li>Annual gross salary of at least €45,300 (2025), or €41,000 for shortage occupations (IT specialists, engineers, doctors, nurses).</li>
+                                    </ul>
+                                </li>
+                                <li>Benefits:
+                                    <ul>
+                                        <li>Pathway to permanent residency (after 33 months, or 21 months with B1 German).</li>
+                                        <li>Family reunification rights.</li>
 
-                </ul>
-                <h3>Step 4: Processing Time</h3>
-                <li>Typically 8–12 weeks. Apply well in advance.</li>
-                <h3>Step 5: Arrive in Germany</h3>
-                <ul>
-                    <li>Register at the local Einwohnermeldeamt (residents’ office).</li>
-                    <li>Begin job search immediately.</li>
-                    <li>Allowed to work part-time 20 hours/week while searching.</li>
-                </ul>
-                <h2>How Indians Can Apply for Jobs in Germany</h2>
-                <h4>1. Official Portals</h4>
-                <li><a href="https://www.make-it-in-germany.com/en/working-in-germany/job-listings">Make it in Germany Job Exchange</a></li>
-                <li>Federal Employment Agency (Bundesagentur für Arbeit)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Job Seeker Visa
+                            <ul>
+                                <li>Precursor to the Opportunity Card.</li>
+                                <li>Valid for 6 months.</li>
+                                <li>Requires:
+                                    <ul>
+                                        <li>Recognized qualification</li>
+                                        <li>Proof of sufficient funds (~€11,000)</li>
+                                        <li>Health insurance.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Student Visa → Post-Study Work Route
+                            <ul>
+                                <li>Indian students can pursue low-cost or tuition-free higher education in Germany.</li>
+                                <li>After graduation, they can apply for a Job Search Permit (18 months) to find employment.</li>
+                                <li>Once employed, students can switch to a Blue Card or work permit.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h2 className={Styles.subtitle}>Step-by-Step Guide: How Indians Can Apply for the Opportunity Card</h2>
+                    <h3 className={Styles.subtitle}>Step 1: Check Your Eligibility</h3>
+                    <ul>
+                        <li>Use the official <a href="https://www.make-it-in-germany.com/en/">Make it in Germany Points Calculator.</a></li>
+                        <li>Ensure you score at least 6 points.</li>
+                    </ul>
+                    <h3 className={Styles.subtitle}>Step 2: Prepare Documents</h3>
+                    <ul>
+                        <li>Valid passport (12+ months).</li>
+                        <li>Degree/diploma certificates (must be recognized in Germany, use the Anabin database for verification).</li>
+                        <li>Proof of funds (blocked account of approx. €12,000 or sponsor affidavit).</li>
+                        <li>Proof of language (German A1 or higher, English B2 or higher).</li>
+                        <li>Health insurance.</li>
+                        <li>CV + work experience letters.</li>
+                    </ul>
+                    <h3 className={Styles.subtitle}>Step 3: Apply from India</h3>
+                    <ul>
+                        <li>Book an appointment with VFS Global / German Embassy.</li>
+                        <li>Fill out the application form, submit biometrics, and pay the visa fee (₹6,500–₹7,500 approx.).</li>
 
-                <h3>2. Private Platforms</h3>
-                <li>LinkedIn Germany</li>
-                <li>StepStone</li>
-                <li>Indeed Germany</li>
-                <li>Glassdoor DE</li>
-                <h3>3. Direct Applications</h3>
-                <li>Apply directly on company websites (Siemens, Bosch, SAP, BMW, Deutsche Bank, hospitals, IT firms).</li>
-                <h3>4. Networking</h3>
-                <li>Join Indo-German Chamber of Commerce events.</li>
-                <li>Attend online career fairs.</li>
-                <li>Connect with Indian alumni in Germany via LinkedIn.</li>
+                    </ul>
+                    <h3 className={Styles.subtitle}>Step 4: Processing Time</h3>
+                    <li>Typically 8–12 weeks. Apply well in advance.</li>
+                    <h3 className={Styles.subtitle}>Step 5: Arrive in Germany</h3>
+                    <ul>
+                        <li>Register at the local Einwohnermeldeamt (residents’ office).</li>
+                        <li>Begin job search immediately.</li>
+                        <li>Allowed to work part-time 20 hours/week while searching.</li>
+                    </ul>
+                    <h2 className={Styles.subtitle}>How Indians Can Apply for Jobs in Germany</h2>
+                    <h4 className={Styles.subtitle}>1. Official Portals</h4>
+                    <ul>
+                        <li><a href="https://www.make-it-in-germany.com/en/working-in-germany/job-listings">Make it in Germany Job Exchange</a></li>
+                        <li>Federal Employment Agency (Bundesagentur für Arbeit)</li>
+                    </ul>
 
+                    <h3 className={Styles.subtitle}>2. Private Platforms</h3>
+                    <ul>
+                        <li>LinkedIn Germany</li>
+                        <li>StepStone</li>
+                        <li>Indeed Germany</li>
+                        <li>Glassdoor DE</li>
+                    </ul>
+                    <h3 className={Styles.subtitle}>3. Direct Applications</h3>
+                    <ul><li>Apply directly on company websites (Siemens, Bosch, SAP, BMW, Deutsche Bank, hospitals, IT firms).</li></ul>
+                    <h3 className={Styles.subtitle}>4. Networking</h3>
+                    <ul>
+                        <li>Join Indo-German Chamber of Commerce events.</li>
+                        <li>Attend online career fairs.</li>
+                        <li>Connect with Indian alumni in Germany via LinkedIn.</li>
+
+                    </ul>
+                </div>
 
                 <article className={Styles.article}>
                     <p>{metadata.description}</p>

@@ -113,8 +113,12 @@ export default function BlogList({ posts }) {
 
               <div className={styles.cardBody}>
                 <h3 className={styles.cardTitle}>
-                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                  <Link href={`/blog/${post.slug}`} className={styles.hasTooltip}>
+                    {post.title}
+                    <span className={styles.cardTitleTooltip}>{post.title}</span>
+                  </Link>
                 </h3>
+
 
                 <div className={styles.cardMeta}>
                   <span>👤 <strong>{post.author}</strong></span>
@@ -149,7 +153,7 @@ export default function BlogList({ posts }) {
               {categories.map((cat) => (
                 <li
                   key={cat}
-                  className={`${filteredCategory === cat ? styles.activeCategory : ''}`}
+                  className={`${styles.hasTooltip} ${filteredCategory === cat ? styles.activeCategory : ''}`}
                   onClick={() => handleCategoryFilter(cat)}
                   role="button"
                   tabIndex={0}
@@ -157,7 +161,9 @@ export default function BlogList({ posts }) {
                   aria-current={filteredCategory === cat ? "true" : "false"}
                 >
                   {cat}
+                  <span className={styles.tooltip}>Filter posts by {cat}</span>
                 </li>
+
               ))}
             </ul>
           </aside>
@@ -177,12 +183,14 @@ export default function BlogList({ posts }) {
           {[...Array(totalPages)].map((_, i) => (
             <button
               key={i + 1}
-              className={currentPage === i + 1 ? styles.activePage : ''}
+              className={`${currentPage === i + 1 ? styles.activePage : ''} ${styles.hasTooltip}`}
               onClick={() => setCurrentPage(i + 1)}
               aria-current={currentPage === i + 1 ? 'page' : undefined}
             >
               {i + 1}
+              <span className={styles.tooltip}>Go to page {i + 1}</span>
             </button>
+
           ))}
 
           <button
