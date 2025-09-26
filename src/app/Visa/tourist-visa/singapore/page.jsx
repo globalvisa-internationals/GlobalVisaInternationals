@@ -288,40 +288,111 @@ export default function Dubai() {
 
 
 
-          <h1 className={styles.Title}>Singapore Visa Requirements for Indian Citizens with Global Visa Internationals</h1>
-          <p >Planning your dream Singapore holiday? For Indian citizens holding ordinary passports, a valid Singapore tourist visa is essential before you embark on your journey to explore the stunning Singapore skyline and vibrant Singapore culture. <strong className={styles.strong}>Global Visa Internationals</strong> is here to simplify this crucial step, ensuring a smooth and stress-free visa application process. <strong className={styles.strong}>Don't take the risk of visa rejection; contact Global Visa Internationals for expert assistance and guidance!</strong></p>
+          <h1 className={styles.Title}>
+            Singapore Visa Requirements for Indian Citizens with Global Visa Internationals
+          </h1>
 
-          <h2 className={styles.subTitle}>Understanding the Key Singapore Visa Requirements:</h2>
-          <p>To kickstart your Singapore tourist visa application, you'll typically need to prepare the following Singapore visa documents. Let <strong className={styles.strong}>Global Visa Internationals</strong> guide you through each step to ensure your application is complete and accurate:</p>
+          <p>
+            Planning your dream Singapore holiday? For Indian citizens holding ordinary
+            passports, a valid Singapore tourist visa is essential before you embark on your
+            journey to explore the stunning Singapore skyline and vibrant Singapore culture.{" "}
+            <strong className={styles.strong}>Global Visa Internationals</strong> is here to
+            simplify this crucial step, ensuring a smooth and stress-free visa application
+            process.{" "}
+            <strong className={styles.strong}>
+              Don't take the risk of visa rejection; contact Global Visa Internationals for
+              expert assistance and guidance!
+            </strong>
+          </p>
+
+          <h2 className={styles.subTitle}>Complete List of Singapore Visa Requirements</h2>
+          <p>
+            To kickstart your Singapore tourist visa application, you’ll need to provide the
+            following documents. At{" "}
+            <strong className={styles.strong}>Global Visa Internationals</strong>, we guide you
+            through every step to ensure your application is complete and accurate:
+          </p>
+
           <ul>
             <li>
-              <strong className={styles.strong}>Passport:</strong> Original valid passport with at least six months of validity from the date of entry into Singapore and a minimum of two blank pages.
-              <br />Additionally, keep a properly <strong>scanned copy of your passport</strong> for visa processing.</li>
+              <strong className={styles.strong}>Passport:</strong> Original valid passport with
+              at least six months of validity from the date of entry into Singapore and a
+              minimum of two blank pages. <br />
+              Additionally, provide a properly <strong>scanned copy</strong> of your passport.
+            </li>
 
             <li>
-              <strong className={styles.strong}>Application Form (Form 14A):</strong> A correctly filled and signed Singapore visa application form. At
-              <strong className={styles.strong}>Global Visa Internationals</strong>, our experts assist you in preparing and reviewing this form to avoid mistakes that can delay your visa approval.</li>
-
-            <li>  <strong className={styles.strong}>Photographs:</strong> Two recent passport-size photographs (both hard copy and soft copy), taken against a white background, meeting the Singapore visa photo specifications (35mm x 45mm).</li>
-
-            <li>  <strong className={styles.strong}>Cover Letter:</strong> A signed cover letter stating the purpose of your visit, travel dates, and duration of stay in Singapore. For employed applicants, this may need to be on official company letterhead.</li>
-
-            <li>
-              <strong className={styles.strong}>Financial Documents:</strong> Original <strong>bank statements for the last 3 months</strong>, showing a minimum balance of ₹75,000 per applicant. These must be signed and stamped by your bank.
-              <br />Additionally, provide <strong>last 3 months’ salary slips</strong> as proof of steady income.</li>
-
-            <li>  <strong className={styles.strong}>Authorization Form:</strong> A duly signed authorization form allowing Global Visa Internationals to submit and track your <strong>Singapore visa application</strong>.</li>
-
-            <li>  <strong className={styles.strong}>Confirmed Return Flight Ticket:</strong> A valid proof of your return or onward journey from Singapore.</li>
-
-            <li>  <strong className={styles.strong}>Accommodation Proof:</strong> Confirmed hotel booking or invitation letter with complete details (name, address, and contact information of host/accommodation).</li>
-
-            <li>
-              <strong className={styles.strong}>Form V39A (Letter of Introduction):</strong> In certain cases, a Singapore citizen or Permanent Resident may need to issue this letter.
-              <strong className={styles.strong}>Global Visa Internationals</strong> guides you if this requirement applies to your case.</li>
+              <strong className={styles.strong}>Application Form (Form 14A):</strong> Must be
+              signed.{" "}
+              <a
+                href="https://www.globalvisainternationals.com/Documents/Singapore-Application-Form.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Application Form
+              </a>
+              . <br />
+              <em>
+                (Prepared by Global Visa Internationals – you only need to sign and send it to
+                us)
+              </em>
+            </li>
 
             <li>
-              <strong className={styles.strong}>Other Supporting Documents:</strong> Depending on your status, you may need:
+              <strong className={styles.strong}>Authorization Form:</strong> Must be signed.{" "}
+              <a
+                href="https://www.globalvisainternationals.com/Documents/Singapore-Authorisation-Letter.docx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Authorization Form
+              </a>
+              . <br />
+              <em>
+                (Prepared by Global Visa Internationals – you only need to sign and send it to
+                us)
+              </em>
+            </li>
+
+            <li>
+              <strong className={styles.strong}>Photographs:</strong> Two recent passport-size
+              photographs (both hard copy and soft copy), taken against a white background and
+              meeting Singapore visa photo specifications (35mm x 45mm).
+            </li>
+
+            <li>
+              <strong className={styles.strong}>Cover Letter:</strong> We will prepare the
+              cover letter and share the soft copy with you. You only need to sign it and send
+              the signed copy along with your documents to our office address.
+            </li>
+
+            <li>
+              <strong className={styles.strong}>Financial Documents:</strong> Original{" "}
+              <strong>bank statements for the last 3 months</strong>, showing a minimum balance
+              of ₹75,000 per applicant, signed and stamped by the bank. <br />
+              Additionally, last 3 months’ salary slips as proof of steady income.
+            </li>
+
+            <li>
+              <strong className={styles.strong}>Confirmed Return Flight Ticket:</strong> Proof
+              of your return or onward journey from Singapore.
+            </li>
+
+            <li>
+              <strong className={styles.strong}>Accommodation Proof:</strong> Confirmed hotel
+              booking or invitation letter with complete details (name, address, and contact
+              information of host/accommodation).
+            </li>
+
+            <li>
+              <strong className={styles.strong}>Form V39A (Letter of Introduction):</strong>{" "}
+              In certain cases, a Singapore citizen or Permanent Resident may need to issue
+              this letter. We will guide you if this applies to your case.
+            </li>
+
+            <li>
+              <strong className={styles.strong}>Other Supporting Documents:</strong> Depending
+              on your status, you may also need:
               <ul>
                 <li>Business registration certificate (if self-employed)</li>
                 <li>No Objection Certificate (NOC) from parents (if student)</li>
@@ -331,51 +402,67 @@ export default function Dubai() {
             </li>
           </ul>
 
+          <h2 className={styles.subTitle}>Submission & Processing</h2>
+          <p>
+            Once you’ve signed the required forms and gathered all documents, please send them
+            to our office address below. After submission, the Singapore visa processing
+            typically takes <strong>3–5 working days</strong>.
+          </p>
+
+          <address>
+            <strong>Global Visa Internationals</strong> <br />
+            G-F9, Business Point, 137 Brigade Road, <br />
+            Next to Brigade Tower, Bangalore – 560025, Karnataka <br />
+            📞 +91-7022213466 <br />
+            📧 <a href="mailto:operation@globalvisainternationals.com">
+              operation@globalvisainternationals.com
+            </a>
+          </address>
+
+
 
           <h2 className={styles.subTitle}>How to Apply for Your Singapore Visa Online with Global Visa Internationals</h2>
           <p>
-            The Singapore High Commission in India mandates that all <strong>Singapore visa applications</strong> be submitted through authorized visa agents.
+            The Singapore High Commission in India mandates that all Singapore visa applications be submitted through authorized visa agents.
             <strong className={styles.strong}>Global Visa Internationals</strong> is your trusted partner in navigating this process seamlessly.
-            Here's how we assist you in applying for your <strong>Singapore tourist visa</strong> or business visa:
+            Here's how we assist you in applying for your Singapore tourist visa or business visa:
           </p>
           <ul>
             <li>
-              <strong className={styles.strong}>Expert Visa Consultation:</strong> Our knowledgeable consultants provide personalized guidance on the
-              <strong>Singapore visa process</strong> based on your travel plans, employment status, or family requirements.
-              Contact <strong>Global Visa Internationals</strong> today to start your application.
+              <strong className={styles.strong}>Expert Visa Consultation:</strong> Our knowledgeable consultants provide personalized guidance on the  Singapore visa process based on your travel plans, employment status, or family requirements. Contact Global Visa Internationals today to start your application.
             </li>
             <li>
               <strong className={styles.strong}>Authorized Singapore Visa Agent Assistance:</strong> As an officially recognized agent, we manage the entire
-              <strong>Singapore visa application process</strong> on your behalf, ensuring smooth and error-free submission.
+              Singapore visa application process on your behalf, ensuring smooth and error-free submission.
             </li>
             <li>
               <strong className={styles.strong}>Application Form Support:</strong> We assist you in accurately completing the
-              <strong>Singapore visa application form (Form 14A)</strong>, ensuring all required details are correctly filled in.
+              Singapore visa application form (Form 14A), ensuring all required details are correctly filled in.
             </li>
             <li>
               <strong className={styles.strong}>Document Preparation & Checklist:</strong> Our team provides a detailed
-              <strong>Singapore visa documents checklist</strong> and guides you on submitting them in the proper format (PDF or JPG).
+              Singapore visa documents checklist and guides you on submitting them in the proper format (PDF or JPG).
             </li>
             <li>
               <strong className={styles.strong}>Secure Visa Fee Payment:</strong> We facilitate a safe and hassle-free
-              <strong>Singapore visa fee payment</strong> process online.
+              Singapore visa fee payment process online.
             </li>
             <li>
-              <strong className={styles.strong}>Passport Handling & Verification:</strong> If the <strong>original passport</strong> is required for verification,
+              <strong className={styles.strong}>Passport Handling & Verification:</strong> If the original passport is required for verification,
               we provide step-by-step instructions on securely couriering it to the appropriate processing center.
             </li>
             <li>
               <strong className={styles.strong}>Submission to ICA (Immigration & Checkpoints Authority):</strong>
               <strong>Global Visa Internationals</strong> thoroughly reviews your application and supporting
-              <strong>Singapore visa documents</strong> before submitting them to the ICA of Singapore.
+              Singapore visa documents before submitting them to the ICA of Singapore.
             </li>
             <li>
               <strong className={styles.strong}>Regular Visa Application Updates:</strong> We keep you informed about the status of your
-              <strong>Singapore visa online application</strong> for complete peace of mind.
+              Singapore visa online application for complete peace of mind.
             </li>
             <li>
               <strong className={styles.strong}>Visa Approval & Retrieval Guidance:</strong> Once your
-              <strong>Singapore e-visa</strong> is approved, we provide clear instructions on downloading, printing, and carrying it with your passport during travel.
+              Singapore e-visa is approved, we provide clear instructions on downloading, printing, and carrying it with your passport during travel.
             </li>
           </ul>
 

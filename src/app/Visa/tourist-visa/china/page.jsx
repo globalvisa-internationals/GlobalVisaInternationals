@@ -323,7 +323,7 @@ export default function Canada() {
               <li>  <b className={styles.strong}>Single Entry Tourist Visa:</b> ₹13,000 (including visa fee)  </li>
               <li>  <b className={styles.strong}>6-Month Double Entry Visa:</b> ₹15,000 (including visa fee)  </li>
               <li>  <b className={styles.strong}>Express Processing:</b> Additional ₹5,000 for faster processing  </li>
-              <li>  <b className={styles.strong}>Business Visa Without Documents:</b> ₹3,000 service charge (excluding visa fee)  </li>
+              <li>  <b className={styles.strong}>Business Visa Without Documents:</b> ₹5,000 service charge (excluding visa fee)  </li>
             </ul>
             <p className={styles.note}>Note: Prices are subject to change based on embassy regulations and exchange rates.</p>
           </section>
@@ -362,12 +362,29 @@ export default function Canada() {
           </section>
 
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
-          <p>  Choose the right China visa assistance package for your needs:</p>
-          <ul>
+          <p>Choose the right <b className={styles.strong}>China visa assistance package</b> for your needs:</p>
 
-            <li>  <b className={styles.strong}>Standard (₹12,999):</b> End-to-end application assistance, documentation preparation, and submission guidance  </li>
-            <li>  <b className={styles.strong}>Express Processing:</b> Additional ₹5,000 for faster processing (3-4 working days)  </li>
-          </ul>
+          <div className={styles.pricingContainer}>
+            <div className={styles.pricingCard}>
+              <h3 className={styles.planTitle}>Standard</h3>
+              <p className={styles.planPrice}>₹12,999</p>
+              <ul className={styles.planFeatures}>
+                <li>Processing in 10-15 working days</li>
+                <li>End-to-end application assistance</li>
+                <li>Documentation preparation</li>
+                <li>Submission guidance</li>
+              </ul>
+            </div>
+
+            <div className={`${styles.pricingCard} ${styles.highlighted}`}>
+              <h3 className={styles.planTitle}>Express Processing</h3>
+              <p className={styles.planPrice}>+₹5,000</p>
+              <ul className={styles.planFeatures}>
+                <li>Faster processing in 3-4 working days</li>
+                <li>All Standard process benefits included</li>
+              </ul>
+            </div>
+          </div>
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
           <p>  At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
