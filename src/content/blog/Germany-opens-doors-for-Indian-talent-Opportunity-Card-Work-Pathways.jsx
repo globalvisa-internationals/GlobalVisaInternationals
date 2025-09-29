@@ -29,7 +29,7 @@ export const metadata = {
     },
     url: "https://www.globalvisainternationals.com/blog/Germany-opens-doors-for-Indian-talent-Opportunity-Card-Work-Pathways",
     author: "Global Visa Internationals",
-    date: "2025-09-27",
+    date: "2025-09-30",
     authors: [{ name: "Global Visa Internationals" }],
     category: "Immigration News & Updates",
     image:

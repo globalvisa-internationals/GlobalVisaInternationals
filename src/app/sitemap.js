@@ -347,6 +347,12 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/Germany-opens-doors-for-Indian-talent-Opportunity-Card-Work-Pathways',
+      lastModified: new Date('2025-09-12'),
+      changefreq: 'weekly',
+      priority: 0.8,
+    },
 
   ]
 }
