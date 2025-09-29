@@ -128,10 +128,54 @@
 
 }
 
+@media (max-width: 400px) {
+  .HomeSec {
+    max-width: 95%;
+    margin: 0 auto;
+    color: #333;
+    font-family: var(--font-main);
+    margin-top: 80px;
+  }
+
+  .logoCard {
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    padding: 3px;
+    margin: 0 auto;
+    margin-top: 80px;
+
+  }
+
+  .logoWrapper {
+    max-width: 50%;
+    z-index: 2;
+    height: auto;
+  }
+
+  .logoImage {
+    width: 120px;
+  }
+
+  .worldMap {
+    max-width: 50%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+  }
+
+  .tagline {
+    font-size: 0.5rem;
+  }
+
+}
+
 /* ========== HERO TEXT ========== */
 .waveText {
   padding-top: 8px;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.4;
   text-align: center;
   margin: 0 auto;
@@ -153,7 +197,7 @@
 /* ===== IMAGE WRAPPER ===== */
 .imageWrapper {
   width: 100%;
-  max-width: 380px;
+  max-width: 320px;
   aspect-ratio: 3/4;
   overflow: hidden;
   display: flex;
@@ -175,14 +219,14 @@
 /* ===== TEXT CONTENT ===== */
 .textContent {
   max-width: 100%;
-  font-size: 15px;
+  font-size: 10px;
   line-height: 1.6;
   color: var(--text);
   padding: 0 5px;
 }
 
 .textContent h2 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   text-align: center;
   color: var(--primary);
@@ -830,7 +874,7 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .visaCard {
     width: 46%;
     height: 200px;

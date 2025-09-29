@@ -4,28 +4,27 @@ import Head from "next/head";
 
 export const metadata = {
   title:
-    "Schengen Visa Assistance: Tourist, Visitor & Business Visa Requirements | Global Visa Internationals",
+    "Tourist Visa Assistance: Canada, USA, UK, Schengen & More | Global Visa Internationals",
   description:
-    "Apply for a Schengen Visa with Global Visa Internationals. Get expert guidance for Schengen tourist visas, visitor visas, and business visas. Learn requirements, documents, fees, and travel tips for 27 European countries.",
+    "Apply for tourist visas with Global Visa Internationals. Get expert guidance for Schengen, Canada, USA, UK, Australia, Dubai, Singapore, and New Zealand visas. Learn requirements, documents, fees, and travel tips.",
   keywords:
-    "Schengen visa, Schengen tourist visa, apply Schengen visa India, Schengen business visa, Schengen visitor visa, Schengen visa requirements, Schengen visa documents, Schengen visa consultants, Schengen visa fees, Europe tourist visa, apply Schengen visa online",
+    "tourist visa, apply tourist visa India, Canada tourist visa, USA tourist visa, UK tourist visa, Schengen visa, Australia tourist visa, Dubai tourist visa, Singapore tourist visa, New Zealand tourist visa, visa consultants, visa requirements, visa documents, visa fees",
   robots: "index, follow",
   alternates: {
-    canonical:
-      "https://globalvisainternationals.com/Visa/tourist-visa/schengen-tourist-visa",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa",
   },
   openGraph: {
-    title: "Schengen Visa Assistance: Tourist, Visitor & Business Visa Support",
+    title: "Tourist Visa Assistance: Canada, USA, UK, Schengen & More",
     description:
-      "Global Visa Internationals helps Indian travelers apply for Schengen tourist, visitor, and business visas. Get expert guidance on requirements, documents, and travel insurance for 27 Schengen countries.",
-    url: "https://globalvisainternationals.com/Visa/tourist-visa/schengen-tourist-visa",
+      "Global Visa Internationals helps Indian travelers apply for tourist visas worldwide – including Schengen, Canada, USA, UK, Australia, Dubai, Singapore, and New Zealand. Expert help on requirements, documents, and fees.",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa",
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp",
+        url: "https://www.globalvisainternationals.com/visa-banner/Tourist-Visa-Assistance-Banner.webp",
         width: 1200,
         height: 630,
-        alt: "Schengen Tourist Visa Assistance Banner",
+        alt: "Tourist Visa Assistance Banner",
       },
     ],
     type: "website",
@@ -33,14 +32,15 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@GLOBALVISA1505",
-    title: "Schengen Visa Assistance: Tourist, Visitor & Business Visa Support",
+    title: "Tourist Visa Assistance: Canada, USA, UK, Schengen & More",
     description:
-      "Plan your trip to Europe with confidence. Apply for Schengen tourist, visitor, or business visa with Global Visa Internationals – expert help for documents, fees, and approvals.",
+      "Plan your trip with confidence. Apply for tourist visas (Schengen, Canada, USA, UK, Australia, Dubai, Singapore, New Zealand) with Global Visa Internationals – expert guidance for documents, fees, and approvals.",
     images: [
-      "https://www.globalvisainternationals.com/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp",
+      "https://www.globalvisainternationals.com/visa-banner/Tourist-Visa-Assistance-Banner.webp",
     ],
   },
 };
+
 
 export default function Schengen_Visa_Assistance() {
   const pageUrl = metadata.alternates.canonical;
@@ -70,7 +70,7 @@ export default function Schengen_Visa_Assistance() {
     "name": "Global Visa Internationals",
     "url": "https://www.globalvisainternationals.com",
     "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Expert Schengen Visa consultants in Bangalore. Assistance for Schengen Tourist, Visitor, and Business visas including eligibility, documentation, and travel insurance support for 27 European countries.",
+    "description": "Global Visa Internationals is a trusted travel visa consultancy in Bangalore. We assist with Tourist, Visitor, and Business visas for Canada, USA, UK, Schengen, Australia, Dubai, Singapore, New Zealand, and more.",
     "telephone": "+91-7022213466",
     "address": {
       "@type": "PostalAddress",
@@ -109,6 +109,54 @@ export default function Schengen_Visa_Assistance() {
       "https://www.google.com/maps/place/Global+Visa+Internationals"
     ]
   };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to get a Schengen tourist visa from India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On average, a Schengen tourist visa from India takes 15 to 21 working days after submission, depending on the embassy and travel season."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Global Visa Internationals help with USA, UK, and Canada tourist visas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide complete assistance for USA, UK, Canada, Schengen, Australia, Dubai, Singapore, and New Zealand tourist visas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documents are required for a tourist visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The basic documents include a valid passport, recent photographs, travel itinerary, proof of funds, employment proof, and accommodation details. Requirements may vary by country."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you assist with visa interview preparation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, for USA, UK, and Canada visas we provide mock interview preparation, guidance, and practice sessions to help applicants succeed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is visa fee included in the service charges?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our consultancy fees do not include embassy visa fees, except in some cases like Singapore visas where the visa fee is bundled. We will provide a clear breakdown before starting your application."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Head>
@@ -147,25 +195,19 @@ export default function Schengen_Visa_Assistance() {
         {/* Structured Data: JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
       </Head>
-      {/* 
-      <div className={styles.imageContainer}>
-        <img
-          src="/visa-banner/Schengen-Tourist-Visa-assistance-banner.webp"
-          alt="Canada Image"
-          className={styles.VisaImage}
-        />
-      </div> */}
+
 
       <div className={styles.VisaSec}>
-        <p>
+        <h1 className={styles.Title}>
           Choose the right <b className={styles.strong}>Tourist Visa Assistance Package</b> for your needs:
-        </p>
+        </h1>
         <section className={styles.PackCard}>
 
+          {/* Canada */}
           <section className={styles.service}>
-
-            {/* Canada */}
             <h2 className={styles.countryTitle}>Canada Tourist Visa</h2>
             <div className={styles.pricingContainer}>
               <div className={styles.pricingCard}>
@@ -202,9 +244,9 @@ export default function Schengen_Visa_Assistance() {
               </div>
             </div>
           </section>
-          <section className={styles.service}>
 
-            {/* Australia */}
+          {/* Australia */}
+          <section className={styles.service}>
             <h2 className={styles.countryTitle}>Australia Tourist Visa</h2>
             <div className={styles.pricingContainer}>
               <div className={styles.pricingCard}>
@@ -214,7 +256,7 @@ export default function Schengen_Visa_Assistance() {
                   <li>Checklist + document review</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Australia %20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -224,13 +266,13 @@ export default function Schengen_Visa_Assistance() {
               </div>
               <div className={`${styles.pricingCard} ${styles.highlighted}`}>
                 <h3 className={styles.planTitle}>Standard</h3>
-                <p className={styles.planPrice}>₹6,999 + GST</p>
+                <p className={styles.planPrice}>₹8,999 + GST</p>
                 <ul className={styles.planFeatures}>
                   <li>End-to-end application</li>
                   <li>Submission & biometrics assistance</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Australia %20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -240,9 +282,9 @@ export default function Schengen_Visa_Assistance() {
               </div>
             </div>
           </section>
-          <section className={styles.service}>
 
-            {/* USA */}
+          {/* USA */}
+          <section className={styles.service}>
             <h2 className={styles.countryTitle}>USA Tourist Visa</h2>
             <div className={styles.pricingContainer}>
               <div className={styles.pricingCard}>
@@ -252,7 +294,7 @@ export default function Schengen_Visa_Assistance() {
                   <li>DS-160 form review</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20USA%20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -269,7 +311,7 @@ export default function Schengen_Visa_Assistance() {
                   <li>Mock interview prep</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20USA%20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -279,19 +321,19 @@ export default function Schengen_Visa_Assistance() {
               </div>
             </div>
           </section>
-          <section className={styles.service}>
 
-            {/* USA */}
-            <h2 className={styles.countryTitle}>USA Tourist Visa</h2>
+          {/* UK */}
+          <section className={styles.service}>
+            <h2 className={styles.countryTitle}>UK Tourist Visa</h2>
             <div className={styles.pricingContainer}>
               <div className={styles.pricingCard}>
                 <h3 className={styles.planTitle}>Basic</h3>
                 <p className={styles.planPrice}>₹6,499 + GST</p>
                 <ul className={styles.planFeatures}>
-                  <li>DS-160 form review</li>
+                  <li> Review Of application</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20UK%20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -303,12 +345,12 @@ export default function Schengen_Visa_Assistance() {
                 <h3 className={styles.planTitle}>Standard</h3>
                 <p className={styles.planPrice}>₹8,999 + GST</p>
                 <ul className={styles.planFeatures}>
-                  <li>DS-160 form filling</li>
-                  <li>Interview slot booking</li>
-                  <li>Mock interview prep</li>
+                  <li>Application filling</li>
+                  <li>Appointment slot booking</li>
+                  <li>Complet Process Assistance</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20UK%20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -318,19 +360,19 @@ export default function Schengen_Visa_Assistance() {
               </div>
             </div>
           </section>
-          <section className={styles.service}>
 
-            {/* USA */}
-            <h2 className={styles.countryTitle}>USA Tourist Visa</h2>
+          {/* Schengen */}
+          <section className={styles.service}>
+            <h2 className={styles.countryTitle}>Schengen Tourist Visa</h2>
             <div className={styles.pricingContainer}>
               <div className={styles.pricingCard}>
                 <h3 className={styles.planTitle}>Basic</h3>
                 <p className={styles.planPrice}>₹6,499 + GST</p>
                 <ul className={styles.planFeatures}>
-                  <li>DS-160 form review</li>
+                  <li> Review Of application</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Schengen%20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -342,12 +384,12 @@ export default function Schengen_Visa_Assistance() {
                 <h3 className={styles.planTitle}>Standard</h3>
                 <p className={styles.planPrice}>₹8,999 + GST</p>
                 <ul className={styles.planFeatures}>
-                  <li>DS-160 form filling</li>
-                  <li>Interview slot booking</li>
-                  <li>Mock interview prep</li>
+                  <li>Application filling</li>
+                  <li>Appointment slot booking</li>
+                  <li>Complet Process Assistance</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Schengen%20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -357,19 +399,19 @@ export default function Schengen_Visa_Assistance() {
               </div>
             </div>
           </section>
-          <section className={styles.service}>
 
-            {/* USA */}
-            <h2 className={styles.countryTitle}>USA Tourist Visa</h2>
+          {/* New Zealand with a Visitor Visa */}
+          <section className={styles.service}>
+            <h2 className={styles.countryTitle}>New Zealand Tourist Visa</h2>
             <div className={styles.pricingContainer}>
               <div className={styles.pricingCard}>
                 <h3 className={styles.planTitle}>Basic</h3>
                 <p className={styles.planPrice}>₹6,499 + GST</p>
                 <ul className={styles.planFeatures}>
-                  <li>DS-160 form review</li>
+                  <li> Review Of application</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20New%20Zealand%20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -381,12 +423,12 @@ export default function Schengen_Visa_Assistance() {
                 <h3 className={styles.planTitle}>Standard</h3>
                 <p className={styles.planPrice}>₹8,999 + GST</p>
                 <ul className={styles.planFeatures}>
-                  <li>DS-160 form filling</li>
-                  <li>Interview slot booking</li>
-                  <li>Mock interview prep</li>
+                  <li>Application filling</li>
+                  <li>Appointment slot booking</li>
+                  <li>Complet Process Assistance</li>
                 </ul>
                 <a
-                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Canada%20Tourist%20Visa%20(Basic%20Package)"
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20New%20Zealand%20Tourist%20Visa%20(Basic%20Package)"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappBtn}
@@ -396,6 +438,56 @@ export default function Schengen_Visa_Assistance() {
               </div>
             </div>
           </section>
+
+          <section className={styles.service}>
+
+            {/* Singapore with a Visitor Visa */}
+            <h2 className={styles.countryTitle}>Singapore Tourist Visa</h2>
+            <div className={styles.pricingContainer}>
+
+              <div className={`${styles.pricingCard} ${styles.highlighted}`}>
+                <h3 className={styles.planTitle}>Standard</h3>
+                <p className={styles.planPrice}>₹3,850/-</p>
+                <ul className={styles.planFeatures}>
+                  <li>Application filling</li>
+                  <li>Including Visa Fee</li>
+                  <li>Complet Process Assistance</li>
+                </ul>
+                <a
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Singapore%20Tourist%20Visa%20(Basic%20Package)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.whatsappBtn}
+                >
+                  Select The Plan
+                </a>
+              </div>
+            </div>
+          </section>
+          <section className={styles.service}>
+            {/* Dubai with a Visitor Visa */}
+            <h2 className={styles.countryTitle}>Dubai Tourist Visa</h2>
+            <div className={styles.pricingContainer}>
+              <div className={`${styles.pricingCard} ${styles.highlighted}`}>
+                <h3 className={styles.planTitle}>Standard</h3>
+                <p className={styles.planPrice}>₹6,499 + GST</p>
+                <ul className={styles.planFeatures}>
+                  <li>Application filling</li>
+                  <li>Appointment slot booking</li>
+                  <li>Complet Process Assistance</li>
+                </ul>
+                <a
+                  href="https://wa.me/917022213466?text=Hi%20I%20am%20interested%20in%20Dubai %20Tourist%20Visa%20(Basic%20Package)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.whatsappBtn}
+                >
+                  Select The Plan
+                </a>
+              </div>
+            </div>
+          </section>
+
 
           {/* Repeat the same pattern for:
       - UK Tourist Visa

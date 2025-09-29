@@ -25,8 +25,14 @@ export default function VisaForm() {
 
   // Show popup after 10 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setShowPopup(true), 5000);
-    return () => clearTimeout(timer);
+    const submittedDate = localStorage.getItem("popupSubmittedDate");
+
+    const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+
+    if (submittedDate !== today) {
+      const timer = setTimeout(() => setShowPopup(true), 5000);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const handleChange = (e) => {
@@ -88,6 +94,11 @@ export default function VisaForm() {
         setPhone('');
         setAgreedToTerms(false);
         setSuccessPopup(true);
+        const today = new Date().toISOString().split("T")[0];
+        localStorage.setItem("popupSubmittedDate", today);
+
+        setSuccessPopup(true);
+        setShowPopup(false);
       } else {
         alert('❌ Submission failed. Please try again.');
       }
