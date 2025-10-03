@@ -112,11 +112,18 @@ export default function UKTouristVisa() {
   const travelAgencyJsonLd = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
+    "@id": "https://www.globalvisainternationals.com/#travelagency",
     "name": "Global Visa Internationals",
+    "legalName": "Global Visa Internationals Pvt Ltd",
     "url": "https://www.globalvisainternationals.com",
     "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Trusted UK Tourist Visa Consultants in Bangalore. Apply for your UK visitor visa from India with expert help for documents, online application & appointment booking.",
-    "telephone": "+91-7022213466",
+    "image": [
+      "https://www.globalvisainternationals.com/Office/office-photo1.jpg",
+      "https://www.globalvisainternationals.com/Office/team-photo.jpg"
+    ],
+    "description": "Trusted UK Tourist Visa Consultants in Bengaluru. We assist with UK Standard Visitor visas, providing expert guidance on documentation, online application, and appointment booking to ensure a smooth and successful process.",
+    "telephone": "+917022213466",
+    "email": "operations@globalvisainternationals.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "MG Road",
@@ -130,14 +137,127 @@ export default function UKTouristVisa() {
       "latitude": 12.9716,
       "longitude": 77.5946
     },
+    "hasMap": "https://maps.app.goo.gl/W3J5HHqhEma4PG7M8",
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "India"
+      }
+    ],
+    "priceRange": "₹₹",
+    "paymentAccepted": [
+      "Credit Card",
+      "Debit Card",
+      "Bank Transfer",
+      "UPI"
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+917022213466",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Kannada", "Hindi"]
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.6,
+      "reviewCount": 224
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "RAJESH R R"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "datePublished": "2025-09-10",
+        "reviewBody": "I had an excellent experience with Global Visa Internationals. The team was professional, supportive, and guided me through every step of the visa process with clear communication and efficiency. They were always available to answer my questions and made the entire process smooth and stress-free. I highly recommend their services."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "N K Reshma"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "datePublished": "2025-06-15",
+        "reviewBody": "I had an amazing experience with Anusha Prashanth. I had only a week before my travel date, and other agencies told me it was not possible to get a Schengen visa in such a short time. But Anusha was confident and assured me it could be done — and she delivered! I received my Spain visa in just 3 days, exactly as promised, and she also helped me with a priority UK visa. Special thanks to Vidya for ensuring all my documentation was perfect and the process was smooth from start to finish. Truly professional, reliable, and efficient. Highly recommend them for any visa needs!"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Hiba Mohammed"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "datePublished": "2024-12-20",
+        "reviewBody": "Had a very good experience with Global Visas. I got my UK visitor visa within 3 weeks time. They assisted me through all the documentation. They did the legal formalities like affidavits etc. I had a stress-free time as opposed to the time I had applied by myself."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Soumya Sen"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "datePublished": "2024-08-23",
+        "reviewBody": "The team here helped me attain my UK tourist visa and meticulously helped me arrange all documents in order for the process. They are super knowledgeable and helpful. Would strongly recommend everyone to avail their services."
+      },
+
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rohit Gowda"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "datePublished": "2024-05-13",
+        "reviewBody": "Once of the best in town, my friend was struggling to get a Visa to UK, these guys made it for him at affordable cost."
+      }
+
+    ],
+
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
         ],
         "opens": "10:00",
         "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "Closed",
+        "closes": "Closed"
       }
     ],
     "sameAs": [
@@ -145,10 +265,37 @@ export default function UKTouristVisa() {
       "https://www.instagram.com/globalvisa_internationals/",
       "https://www.linkedin.com/company/global-visa-internationals/",
       "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
-    ]
-  };
+      "https://www.youtube.com/@globalVisaInternationals"
+    ],
+    "knowsAbout": [
+      "UK Tourist Visa",
+      "Schengen Tourist Visa",
+      "Canada Tourist Visa",
+      "Australia Tourist Visa",
+      "Travel Visa Assistance",
+      "Visa Consultancy Services"
+    ],
+    "makesOffer": {
+      "@type": "OfferCatalog",
+      "name": "Visa Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "UK Standard Visitor Visa Assistance"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Schengen Tourist Visa Assistance"
+          }
+        }
+      ]
+    }
+  }
 
 
   return (
