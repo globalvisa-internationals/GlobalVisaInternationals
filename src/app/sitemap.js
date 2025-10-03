@@ -40,7 +40,7 @@ export default async function sitemap() {
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom',
-      lastModified: new Date('2025-09-22'),
+      lastModified: new Date('2025-10-03'),
       changefreq: 'weekly',
       priority: 0.8,
     },
