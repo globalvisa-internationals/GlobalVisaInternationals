@@ -15,6 +15,12 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa',
+      lastModified: new Date('2025-09-29'),
+      changefreq: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/canada',
       lastModified: new Date('2025-09-19'),
       changefreq: 'weekly',
@@ -349,7 +355,7 @@ export default async function sitemap() {
     },
     {
       url: 'https://www.globalvisainternationals.com/blog/Germany-opens-doors-for-Indian-talent-Opportunity-Card-Work-Pathways',
-      lastModified: new Date('2025-09-12'),
+      lastModified: new Date('2025-09-29'),
       changefreq: 'weekly',
       priority: 0.8,
     },

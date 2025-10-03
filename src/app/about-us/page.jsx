@@ -189,13 +189,7 @@ export default function About() {
 
           <AnimatedSection direction="right" reverseOnExit={true}>
             <div className={styles.imageWrapper}>
-              {/* <Image
-                src="https://www.globalvisainternationals.com/images/founder.jpg"
-                alt="Founder Image"
-                fill
-                quality={100}
-                className={styles.responsiveImage}
-              /> */}
+
               <img className={styles.responsiveImage} src="https://www.globalvisainternationals.com/images/founder.jpg" alt="Anusha Prashanth" />
             </div>
 

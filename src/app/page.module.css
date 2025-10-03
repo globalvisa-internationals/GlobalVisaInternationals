@@ -1,10 +1,40 @@
 .HomeSec {
-  max-width: 95%;
+  width: 95%;
   margin: 0 auto;
-  padding: 0 auto;
-  color: #333333;
+  color: #333;
   font-family: var(--font-main);
   margin-top: 80px;
+}
+
+@media (min-width: 769px) {
+  .HomeSec {
+    width: 95%;
+    margin: 0 auto;
+    color: #333;
+    font-family: var(--font-main);
+    margin-top: 80px;
+  }
+
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+  .HomeSec {
+    width: 95%;
+    margin: 0 auto;
+    color: #333;
+    font-family: var(--font-main);
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .HomeSec {
+    width: 95%;
+    margin: 0 auto;
+    color: #333;
+    font-family: var(--font-main);
+    margin-top: 80px;
+  }
 }
 
 .videoContainer:hover .carouselTrack {
@@ -26,106 +56,186 @@
   letter-spacing: 0.5px;
 }
 
+.HomeSec {
+  margin: 0 auto;
+  color: #333;
+  font-family: var(--font-main);
+  margin-top: 80px;
+}
+
+.subtitle,
+.mainHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
+  color: #057A7E;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+/* ================== BASE: Mobile First ================== */
 .logoCard {
   position: relative;
-  width: 98%;
-  height: 320px;
+  width: 95%;
+  height: auto;
   margin: 0 auto;
   background: #cefafc;
   border-radius: 14px;
   overflow: hidden;
   display: flex;
-  margin-top: 20px;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-
-
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 20px;
+  gap: 15px;
+  /* Added gap for consistent spacing */
 }
-
 
 .logoWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
   align-items: center;
   text-align: center;
-  height: 100%;
-  max-width: 50%;
+  height: auto;
+  flex: 0 1 auto;
+  /* Changed from fixed width to flexible */
   z-index: 2;
+  min-width: 0;
+  /* Prevents flex item from overflowing */
 }
 
 .logoImage {
-  width: 300px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 120px;
+  /* Mobile default */
   height: auto;
   margin: 0 auto;
 }
 
 .tagline {
   margin-top: 12px;
-  font-size: 1.8rem;
+  font-size: 0.75rem;
+  /* Slightly larger for mobile */
   text-align: center;
   color: #057A7E;
   font-weight: 400;
   font-family: 'Agbalumo', cursive;
   letter-spacing: 1px;
+  line-height: 1.3;
 }
 
-
 .worldMap {
-  max-width: 50%;
-  height: 100%;
+  flex: 0 1 auto;
+  /* Flexible sizing */
+  max-width: 45%;
+  /* Slightly less than half to account for gap */
+  height: auto;
   object-fit: contain;
   opacity: 0.9;
 }
 
+.HomeSec {
+  max-width: 95%;
+  margin: 0 auto;
+  color: #333;
+  font-family: var(--font-main);
+  margin-top: 80px;
+}
 
+/* tag line */
+.waveText {
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--accent);
+  font-weight: 600;
+  max-width: 95%;
+}
 
-
-@media (max-width: 768px) {
-  .HomeSec {
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 0 auto;
-    color: #333333;
-    font-family: var(--font-main);
-    margin-top: 80px;
-  }
-
+/* ================== TABLET ================== */
+@media (min-width: 401px) and (max-width: 768px) {
   .logoCard {
-    flex-wrap: nowrap;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%;
-    height: auto;
-    padding: 5px;
-    margin: 0 auto;
+    padding: 25px 15px;
     margin-top: 80px;
-
-  }
-
-  .logoWrapper {
-    max-width: 50%;
-    z-index: 2;
-    height: auto;
+    gap: 20px;
   }
 
   .logoImage {
-    width: 120px;
-  }
-
-  .worldMap {
-    max-width: 50%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.9;
+    max-width: 150px;
   }
 
   .tagline {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
   }
 
+  .waveText {
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 80%;
+  }
+}
+
+/* ================== DESKTOP ================== */
+/* Replace the intermediate desktop media query with fluid sizing */
+@media (min-width: 769px) {
+
+  .logoCard {
+    height: clamp(280px, 30vw, 320px);
+    /* Fluid height */
+    padding: 0 clamp(30px, 3vw, 40px);
+    margin-top: 20px;
+    gap: clamp(25px, 2.5vw, 30px);
+  }
+
+  .logoImage {
+    max-width: clamp(240px, 25vw, 300px);
+    width: 100%;
+  }
+
+  .tagline {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    margin-top: clamp(15px, 1.5vw, 20px);
+  }
+
+  .waveText {
+    font-size: clamp(20px, 2vw, 22px);
+    line-height: 1.5;
+    max-width: clamp(80%, 82%, 85%);
+  }
+
+  .worldMap {
+    max-width: clamp(40%, 41%, 42%);
+  }
+}
+
+/* Optional: Add a very small screen fix */
+@media (max-width: 400px) {
+  .logoCard {
+    flex-wrap: wrap;
+    /* Stack on very small screens */
+    padding: 15px 5px;
+    gap: 10px;
+  }
+
+  .worldMap,
+  .logoWrapper {
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .worldMap {
+    max-height: 120px;
+  }
 }
 
 @media (max-width: 400px) {

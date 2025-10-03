@@ -1,84 +1,90 @@
+/* Base Styles - Mobile First */
 .aboutSec {
     max-width: 90%;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 60px auto 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .aboutUsContainer {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .textContent {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 1.6;
+    width: 100%;
 }
 
 .textContent h2 {
-    font-size: 24px;
+    font-size: clamp(20px, 6vw, 24px);
     color: #002B5B;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    font-weight: 700;
 }
 
-
+/* Image Section */
 .imageWrapper {
-    position: sticky;
-    top: 20px;
-    width: 365px;
-    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .responsiveImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* About Data Section */
 .aboutdata {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     max-width: 90%;
     margin: 0 auto;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 1.6;
     color: #333;
-    gap: 40px;
+    gap: 30px;
 }
 
 .subTitle {
     text-align: center;
     color: #002B5B;
-    /* Corporate Blue */
-    font-size: 24px;
+    font-size: clamp(20px, 6vw, 24px);
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .subTitle1 {
     color: #057A7E;
-    /* Teal highlights */
     font-weight: 700;
 }
 
 .whydata {
-    flex: 1;
-    text-align: justify;
-    font-size: 16px;
-    line-height: 1.5;
+    width: 100%;
+    text-align: left;
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 1.6;
 }
 
 .whydata h2 {
-    font-size: 24px;
+    font-size: clamp(20px, 6vw, 24px);
     color: #002B5B;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    font-weight: 700;
 }
 
 .whydata ul,
@@ -90,104 +96,229 @@
 
 .whydata ul li,
 .whydata ol li {
-    margin-bottom: 15px;
-    font-size: 16px;
+    margin-bottom: 16px;
+    font-size: clamp(14px, 4vw, 16px);
     line-height: 1.6;
 }
 
 /* Card Design */
-.card {
+.card,
+.card1 {
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    padding: 16px 20px;
-    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin: 16px 0;
     color: #333;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.card p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.card1 {
-    background: #ffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    padding: 16px 20px;
-    margin: 15px 0;
-    color: #333;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
+.card:hover,
 .card1:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
+.card p,
 .card1 p {
     margin: 0;
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 16px);
     line-height: 1.6;
 }
 
 /* Form Section */
 .formSection {
-    width: 400px;
-    position: sticky;
-    top: 70px;
-    margin-top: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    position: relative;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+    .aboutSec {
+        margin-top: 80px;
+        max-width: 85%;
+    }
+
     .aboutUsContainer {
-        flex-wrap: wrap-reverse;
-    }
-
-    .subTitle {
-        font-size: 15px;
-    }
-
-    .imageWrapper {
-        margin: 0 auto;
-        max-width: 80%;
-
-    }
-
-    .responsiveImage {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
     }
 
     .textContent {
-        max-width: 95%;
+        flex: 1;
+        font-size: 16px;
+    }
+
+    .imageWrapper {
+        position: sticky;
+        top: 90px;
+        width: 45%;
+        max-width: 365px;
+        height: 400px;
+        margin: 0;
+    }
+
+    .aboutdata {
+        flex-direction: row;
+        max-width: 85%;
+        gap: 40px;
+    }
+
+    .whydata {
+        flex: 1;
+    }
+
+    .formSection {
+        position: sticky;
+        top: 90px;
+        margin-top: 0;
+        width: 400px;
     }
 
     .card,
     .card1 {
-        padding: 14px 16px;
-        margin: 12px 0;
+        padding: 20px 24px;
+        margin: 20px 0;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+    .aboutSec {
+        max-width: 1200px;
+        margin-top: 100px;
+    }
+
+    .aboutUsContainer {
+        gap: 60px;
+    }
+
+    .imageWrapper {
+        width: 365px;
+        height: 450px;
     }
 
     .aboutdata {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        max-width: 1200px;
+        gap: 60px;
     }
 
-    .formSection {
+    .textContent h2,
+    .whydata h2,
+    .subTitle {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 
-        margin-bottom: 40px;
-        top: 10px;
+    .textContent,
+    .whydata,
+    .card p,
+    .card1 p {
+        font-size: 16px;
+    }
+}
+
+/* Large Desktop Styles */
+@media screen and (min-width: 1440px) {
+    .aboutSec {
+        max-width: 1400px;
+    }
+
+    .aboutdata {
+        max-width: 1400px;
+    }
+}
+
+/* Cross-browser Compatibility */
+@supports (height: 100dvh) {
+    .aboutSec {
+        margin-top: clamp(60px, 10dvh, 100px);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+
+    .card:hover,
+    .card1:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .card1 {
+        transition: none;
+    }
+
+    .card:hover,
+    .card1:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+
+    .card,
+    .card1 {
+        border: 2px solid #000;
+    }
+
+    .textContent h2,
+    .whydata h2,
+    .subTitle {
+        color: #000;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .aboutSec {
+        color: #e1e1e1;
+        background-color: transparent;
+    }
+
+    .card,
+    .card1 {
+        background: #2a2a2a;
+        color: #e1e1e1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .textContent h2,
+    .whydata h2,
+    .subTitle {
+        color: #4a90e2;
+    }
+
+    .subTitle1 {
+        color: #00bcd4;
+    }
+}
+
+/* Print styles */
+@media print {
+    .aboutSec {
+        margin-top: 20px;
+        color: #000;
+    }
+
+    .card,
+    .card1 {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+
+    .imageWrapper {
+        box-shadow: none;
+        border: 1px solid #000;
     }
 }

@@ -1,23 +1,26 @@
+/* ================================
+   Visa Section - Mobile First
+================================ */
 .VisaSec {
     margin: 0 auto;
-    font-family: var(--font-base);
     padding: 20px 15px;
-    color: var(--text);
-    background: var(--background);
-    margin-top: 70px;
+    margin-top: 60px;
+    font-family: var(--font-base, sans-serif);
+    color: var(--text, #333);
+    background: var(--background, #fff);
 }
 
 /* Intro text */
 .VisaSec p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-align: center;
     line-height: 1.5;
 }
 
 .Title {
     text-align: center;
-    color: var(--accent);
+    color: var(--accent, #007bff);
     font-weight: 600;
     margin: 10px 0;
 }
@@ -27,35 +30,41 @@
 }
 
 .countryTitle {
-    font-size: 1.4rem;
-    color: var(--primary);
+    font-size: 1.3rem;
     text-align: center;
     font-weight: 700;
-    margin: 30px 0 15px;
+    margin: 25px 0 12px;
     line-height: 1.3;
+    color: var(--primary, #222);
 }
 
 /* ================================
-   Pricing Cards
+   Pricing Cards - Mobile First
 ================================ */
 .pricingContainer {
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin: 20px auto 40px;
-    max-width: 100%;
+    width: 98%;
+    max-width: 98%;
 }
 
 .pricingCard {
-    background-color: var(--card-bg);
-    border: 1px solid var(--card-border);
+    width: 95%;
+    max-width: 95%;
+    min-height: 320px;
+    margin: 0 auto;
+
+    background-color: var(--card-bg, #fff);
+    border: 1px solid var(--card-border, #ddd);
     border-radius: 12px;
-    padding: 20px 15px;
+    padding: 18px 14px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    width: 100%;
 }
+
 
 .pricingCard:hover {
     transform: translateY(-4px);
@@ -64,28 +73,28 @@
 
 /* Highlighted plan */
 .highlighted {
-    border: 2px solid var(--accent);
+    border: 2px solid var(--accent, #007bff);
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
 }
 
 .highlighted .planTitle,
 .highlighted .planPrice {
-    color: var(--accent);
+    color: var(--accent, #007bff);
 }
 
 /* Titles & Prices */
 .planTitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 8px;
-    color: var(--text);
+    color: var(--text, #333);
 }
 
 .planPrice {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 18px;
-    color: var(--muted);
+    margin-bottom: 16px;
+    color: var(--muted, #666);
 }
 
 /* Features list */
@@ -98,16 +107,16 @@
 
 .planFeatures li {
     font-size: 0.95rem;
-    color: var(--muted);
+    color: var(--muted, #555);
     margin-bottom: 10px;
-    position: relative;
     padding-left: 24px;
+    position: relative;
     line-height: 1.4;
 }
 
 .planFeatures li::before {
     content: "✓";
-    color: var(--success);
+    color: var(--success, #28a745);
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -115,7 +124,7 @@
 
 .whatsappBtn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 14px;
     padding: 10px 18px;
     border-radius: 8px;
     background-color: #25d366;
@@ -131,18 +140,44 @@
     transform: translateY(-2px);
 }
 
+/* ================================
+   Responsive Breakpoints
+================================ */
 
-/* Tablet */
+/* Tablet (≥600px) */
 @media (min-width: 600px) {
     .pricingContainer {
         flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
     }
 
     .pricingCard {
-        width: 260px;
+        flex: 1 1 250px;
+        max-width: 280px;
+        min-height: 340px;
+    }
+
+    .planTitle {
+        font-size: 1.3rem;
+    }
+
+    .planPrice {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+    .pricingCard {
+        max-width: 300px;
+        min-height: 360px;
+    }
+
+    .countryTitle {
+        font-size: 1.6rem;
+        margin: 35px 0 18px;
     }
 
     .planTitle {
@@ -151,21 +186,5 @@
 
     .planPrice {
         font-size: 1.25rem;
-    }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-    .countryTitle {
-        font-size: 1.8rem;
-        margin: 40px 0 20px;
-    }
-
-    .planTitle {
-        font-size: 1.5rem;
-    }
-
-    .planPrice {
-        font-size: 1.3rem;
     }
 }
