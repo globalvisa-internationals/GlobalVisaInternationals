@@ -209,8 +209,7 @@ export default function UKTouristVisa() {
           <h1 className={styles.Title}>UK Tourist Visa from India 2025 – Eligibility, Requirements & Fees | Global Visa Internationals</h1>
 
           <h2 className={styles.subTitle}>✈ Travel to the UK with a Standard Tourist Visa</h2>
-
-          <p>Planning a trip to the United Kingdom? A <b>UK Standard Tourist</b> visa allows Indian travelers to visit for tourism, business, study (up to 6 months), and to see family and friends. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
+          <p>Planning a trip to the United Kingdom? A <b className={styles.strong}>UK Standard Tourist</b> visa allows Indian travelers to visit for tourism, business, study (up to 6 months), and to see family and friends. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
 
           <h2 className={styles.subTitle}>🕒 UK Visa Duration Rule</h2>
           <p>A Standard Visitor visa typically allows you to stay in the UK for up to 6 months per visit. You can apply for a long-term visa (2, 5, or 10 years) if you visit the UK regularly, but you can still only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications. With GVI, you’ll never miscalculate your stay — we ensure full compliance with UK visa rules.</p>
@@ -220,17 +219,14 @@ export default function UKTouristVisa() {
 
           <h2 className={styles.subTitle}>Visa Processing Overview</h2>
           <p>Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your visa application meets the expectations of UK Visas and Immigration (UKVI) and that your travel purpose is clearly and professionally represented.</p>
-          <h3>Our Services Include:</h3>
+          <h3 className={styles.subTitle}>Our Services Include:</h3>
           <ul>
             <li>Application form filling</li>
             <li>Covering letter and documentation preparation</li>
             <li>Personalized checklist and guidance</li>
             <li>Providing accepted samples for the required documents</li>
             <li>Verification of documentation</li>
-            <li>Complete walk-through of the process</li>
-          </ul>
-
-
+            <li>Complete walk-through of the process</li>          </ul>
 
           <h3 className={styles.subTitle}>Timeline:</h3>
           <p>Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days.</p>
@@ -240,34 +236,34 @@ export default function UKTouristVisa() {
           <p>Before applying, ensure you meet the UK visa eligibility requirements. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
 
           <ol>
-            <li> Valid Passport & Travel History
+            <li> <b className={styles.strong}>Valid Passport & Travel History</b>
               <ul>
-                <li>Valid Passport: Must be valid for for 6 months from the day of entry to stay in the UK, with at least two blank page for the visa. All old passports are also required to show your travel history.</li>
-                <li>Travel History: Previous international travel, including visas and entry/exit stamps, is crucial. GVI helps you highlight these to strengthen your application.</li>
+                <li><b className={styles.strong}>Valid Passport:</b> Must be valid for for 6 months from the day of entry to stay in the UK, with at least two blank page for the visa. All old passports are also required to show your travel history.</li>
+                <li><b className={styles.strong}>Travel History:</b> Previous international travel, including visas and entry/exit stamps, is crucial. GVI helps you highlight these to strengthen your application.</li>
               </ul>
             </li>
-            <li>Financial Proof: Bank Statements & Funds
+            <li><b className={styles.strong}>Financial Proof:</b> Bank Statements & Funds
               <p>One of the most critical aspects of your application is proving you have sufficient funds. You must demonstrate that you can support yourself and your dependents for the duration of your trip.</p>
               <ul>
-                <li><b>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. with the clossing ammount 4 to 5 lacks</li>
-                <li><b>Income Tax Returns (ITR):</b> Provide ITRs for the last 3 years to prove a stable income source.</li>
+                <li><b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. with the clossing ammount 4 to 5 lacks</li>
+                <li><b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 3 years to prove a stable income source.</li>
               </ul>
             </li>
-            <li>Employment & Professional Documentation
+            <li><b className={styles.strong}>Employment & Professional Documentation</b>
               <ul>
-                <li><b>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.</li>
-                <li><b>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 3 years’ ITRs.</li>
-                <li><b>Students:</b> Provide an enrolment letter and NOC from your school/university.</li>
+                <li><b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.</li>
+                <li><b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 3 years’ ITRs.</li>
+                <li><b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university.</li>
 
               </ul>
             </li>
-            <li><b>Travel & Accommodation Proof</b>
+            <li><b className={styles.strong}>Travel & Accommodation Proof</b>
               <ul>
-                <li><b>Flight & Hotel Bookings:</b> Provide confirmed return flight tickets and hotel reservations covering your entire stay.</li>
-                <li><b>Travel Insurance (Recommended but not mandatory):</b> While not a mandatory requirement for the visa, it is highly recommended to have travel insurance to cover medical emergencies and other unforeseen events.</li>
+                <li><b className={styles.strong}>Flight & Hotel Bookings:</b> Provide confirmed return flight tickets and hotel reservations covering your entire stay.</li>
+                <li><b className={styles.strong}>Travel Insurance (Recommended but not mandatory):</b> While not a mandatory requirement for the visa, it is highly recommended to have travel insurance to cover medical emergencies and other unforeseen events.</li>
               </ul>
             </li>
-            <li> Visa Cover Letter & Itinerary
+            <li> <b className={styles.strong}>Visa Cover Letter & Itinerary</b>
               <p>A well-written UK visa cover letter is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit, and proof of your strong ties to India (e.g., family, job). Our experts draft a professional cover letter and a detailed itinerary for every client to maximize their chances of success.</p>
             </li>
             <li>Remaining Documents which are required will send you after signup with Global Visa internationals according to your eligiblity and application type </li>
@@ -301,38 +297,30 @@ export default function UKTouristVisa() {
             </div>
           </div>
 
-
-
-
-
           <h2 className={styles.subTitle}>Common Reasons for UK Visa Rejection & How We Solve Them</h2>
 
           <p>Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues.</p>
           <ul>
-            <li><b>Incomplete/Mismatched Documents:</b> We perform a professional document review as per UKVI standards to ensure everything is perfect.</li>
-            <li><b>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.</li>
-            <li><b>Unclear Purpose of Travel:</b> Our expert-prepared cover letters and itineraries clearly explain your travel plans and ties to India.</li>
-            <li><b>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
+            <li><b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per UKVI standards to ensure everything is perfect.</li>
+            <li><b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.</li>
+            <li><b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared cover letters and itineraries clearly explain your travel plans and ties to India.</li>
+            <li><b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
           </ul>
 
           <h2 className={styles.subTitle}>UK Tourist Visa Processing Time from India</h2>
           <p>The processing time for a UK visa can vary depending on the time of year and the completeness of your application. Here are some general timelines:</p>
 
           <ul>
-            <li>Standard Processing Time: 3 weeks (15 working days).</li>
-            <li>Priority Service: A decision is typically made within 5 working days for an extra fee.</li>
-            <li>Super Priority Service: A decision is typically made by the end of the next working day for an extra fee.</li>
-            <li>Our Service: Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to UKVI in a timely manner.</li>
-          </ul>
-
-
+            <li><b className={styles.strong}>Standard Processing Time: </b>3 weeks (15 working days).</li>
+            <li><b className={styles.strong}>Priority Service:</b> A decision is typically made within 5 working days for an extra fee.</li>
+            <li><b className={styles.strong}>Super Priority Service:</b> A decision is typically made by the end of the next working day for an extra fee.</li>            <li>Our Service: Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to UKVI in a timely manner.</li>          </ul>
 
           <h3 className={styles.subTitle}>The VFS Global Application Process: A Step-by-Step Guide</h3>
           <p>Navigating the VFS Global appointment system can be confusing. With GVI's end-to-end service, we manage this process for you. Here’s a quick overview of what to expect:</p>
           <ol>
-            <li><b>Online Application & Appointment Booking:</b> We fill out the online form and book your VFS appointment for you.</li>
-            <li><b>Document Submission & Biometrics:</b> You visit the VFS center in person to submit the verified documents and provide your fingerprints and a photo.</li>
-            <li><b>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.</li>
+            <li><b className={styles.strong}>Online Application & Appointment Booking:</b> We fill out the online form and book your VFS appointment for you.</li>
+            <li><b className={styles.strong}>Document Submission & Biometrics:</b> You visit the VFS center in person to submit the verified documents and provide your fingerprints and a photo.</li>
+            <li><b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.</li>
           </ol>
 
 
