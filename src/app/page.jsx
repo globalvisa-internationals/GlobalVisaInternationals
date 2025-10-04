@@ -212,7 +212,7 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="icon" href="/favicon.ico" />
-
+        <meta name="p:domain_verify" content="eb589ecd94088c14d3f8566f395cf4b7" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
 
@@ -652,7 +652,7 @@ export default function Home() {
             Client Testimonial{" "}
           </h2>
           <ClientVideoCarousel videos={testimonialVideos} />
-        </section> */}
+        </section>  */}
 
         <section>
           <div className={styles.containerLoc}>

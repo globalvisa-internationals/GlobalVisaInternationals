@@ -242,14 +242,7 @@ export default function UKTouristVisa() {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "10:00",
         "closes": "18:00"
       },
@@ -267,14 +260,7 @@ export default function UKTouristVisa() {
       "https://x.com/GLOBALVISA1505",
       "https://www.youtube.com/@globalVisaInternationals"
     ],
-    "knowsAbout": [
-      "UK Tourist Visa",
-      "Schengen Tourist Visa",
-      "Canada Tourist Visa",
-      "Australia Tourist Visa",
-      "Travel Visa Assistance",
-      "Visa Consultancy Services"
-    ],
+    "knowsAbout": ["UK Tourist Visa", "Schengen Tourist Visa", "Canada Tourist Visa", "Australia Tourist Visa", "Travel Visa Assistance", "Visa Consultancy Services"],
     "makesOffer": {
       "@type": "OfferCatalog",
       "name": "Visa Services",
