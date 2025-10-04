@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link"; // For internal navigation
 import styles from "./Footer.module.css";
-import { FaWhatsapp, FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebook } from "react-icons/fa6";
+import { FaWhatsapp, FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebook, FaPinterest } from "react-icons/fa6";
 import { MdLocationOn, MdEmail, MdPhone, MdOutlineBusiness } from "react-icons/md";
 
 export default function Footer() {
@@ -99,6 +99,7 @@ export default function Footer() {
                             <a href="http://linkedin.com/company/globalvisainternationals"><FaLinkedin /></a>
                             <a href="https://www.youtube.com/@GLOBALVISAINTERNATIONALS"><FaYoutube /></a>
                             <a href="https://x.com/GLOBALVISA1505"><FaXTwitter /></a>
+                            <a href="https://in.pinterest.com/globalvisainternationals/"><FaPinterest /></a>
                             <a href="https://www.facebook.com/profile.php?id=61551041483630"><FaFacebook /></a>
                         </div>
                     </div>
