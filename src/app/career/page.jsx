@@ -237,9 +237,22 @@ export default function CareerPage() {
       <div className={styles.JobSec}>
         <div className={styles.JobData}>
 
-          <h2 className={styles.Title}>Job Title: Visa Counselor</h2>
+          <h2 className={styles.Title}>Job Title: Visa Counselor(Sales Executive)</h2>
 
           <p><strong className={styles.subTitle}> Job Overview: </strong> Are you passionate about guiding individuals through their international journey? Join<strong className={styles.subTitle}> Global Visa Internationals </strong>   in Bangalore as a<strong className={styles.subTitle}> Visa Counselor </strong>  . In this client-facing role, you’ll assist applicants with visa procedures,documentation, and eligibility assessments. This position is perfect for candidates looking to build a career in<strong className={styles.subTitle}> visa consultancy in Bangalore </strong>   or grow in the<strong className={styles.subTitle}> immigration services industry </strong>.</p>
+          <p><strong className={styles.subTitle}> Salary: </strong>   ₹15,000 – ₹18,000 per month</p>
+          <h3 className={styles.subTitle}>Qualifications & Skills:</h3>
+          <ul>
+            <li>Experience: Freshers Only</li>
+            <li>Excellent English communication skills (verbal and written)</li>
+            <li>Proficient in MS Office (Word, Excel, Outlook)</li>
+            <li>Strong interpersonal and counseling skills</li>
+            <li>Ability to build trust and rapport with clients</li>
+            <li>Detail-oriented with good organizational skills</li>
+            <li>Goal-driven and proactive approach to work</li>
+            <li>Educational Qualification: Any degree (preferred in Business, Marketing, or Humanities)</li>
+          </ul>
+
 
           <h3 className={styles.subTitle}>Key Responsibilities:</h3>
           <ul>
@@ -251,19 +264,6 @@ export default function CareerPage() {
             <li>Provide professional support throughout the client’s visa journey.</li>
           </ul>
 
-          <h3 className={styles.subTitle}>Qualifications & Skills:</h3>
-          <ul>
-            <li>Experience: Freshers are welcome (Training will be provided)</li>
-            <li>Excellent English communication skills (verbal and written)</li>
-            <li>Proficient in MS Office (Word, Excel, Outlook)</li>
-            <li>Strong interpersonal and counseling skills</li>
-            <li>Ability to build trust and rapport with clients</li>
-            <li>Detail-oriented with good organizational skills</li>
-            <li>Goal-driven and proactive approach to work</li>
-            <li>Team player with a positive attitude</li>
-            <li>Educational Qualification: Any degree (preferred in Business, Marketing, or Humanities)</li>
-          </ul>
-          <p><strong className={styles.subTitle}> Salary: </strong>   ₹15,000 – ₹20,000 per month</p>
 
           <AnimatedHR direction="left" duration={1.2} />
 
@@ -284,7 +284,7 @@ export default function CareerPage() {
 
           <h3 className={styles.subTitle}>Qualifications & Skills:</h3>
           <ul>
-            <li>Experience: Freshers are welcome (Training will be provided)</li>
+            <li>Experience: Freshers only</li>
             <li>Strong attention to detail and organizational skills</li>
             <li>Good written communication skills</li>
             <li>Proficient in MS Office (Word, Excel, Outlook)</li>
@@ -292,15 +292,15 @@ export default function CareerPage() {
             <li>Educational Qualification: Any degree (preferred in Business, Commerce, or Humanities)</li>
           </ul>
 
-          <p><strong className={styles.subTitle}> Salary: </strong>   ₹15,000 – ₹20,000 per month</p>
+          <p><strong className={styles.subTitle}> Salary: </strong>   ₹15,000 – ₹18,000 per month</p>
         </div>
-
-
         <div className={styles.formSection}>
           <CareerPageForm />
         </div>
 
       </div >
+
+
     </>
   );
 }

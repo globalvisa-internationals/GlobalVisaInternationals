@@ -1,3 +1,4 @@
+// src\content\blog\Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.jsx
 import VisaForm from '@/Components/VisaForm';
 import Styles from './blog.module.css';
 import Head from 'next/head';

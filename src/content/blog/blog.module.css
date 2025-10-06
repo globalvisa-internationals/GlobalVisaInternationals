@@ -171,7 +171,7 @@
   .meta {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     font-size: 0.8rem;
     color: #333;
     gap: 0.25rem;
@@ -247,7 +247,7 @@
   .meta {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     font-size: 0.8rem;
     color: #333;
     gap: 0.25rem;
@@ -255,7 +255,7 @@
   }
 
   .blogTitle {
-    align-items: start;
+    align-items: flex-start;
     font-size: 2.5rem;
   }
 

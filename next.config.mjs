@@ -1,23 +1,12 @@
-// next.config.mjs
-
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'mdx'],
-  webpack: (config, { isServer }) => {
-    config.cache = false;
-    return config;
-  },
+  // ✅ Standard Next.js page extensions
+  pageExtensions: ['js', 'jsx'],
 
-  // ✅ Add proper 301 redirects
+  // ✅ Production-friendly redirects for SEO consistency
   async redirects() {
     return [
-      // Redirect non-www to www
+      // Redirect non-www → www
       {
         source: '/:path*',
         has: [
@@ -29,7 +18,7 @@ const nextConfig = {
         destination: 'https://www.globalvisainternationals.com/:path*',
         permanent: true,
       },
-      // Redirect HTTP to HTTPS (extra safeguard)
+      // Redirect HTTP → HTTPS
       {
         source: '/:path*',
         has: [
@@ -42,7 +31,7 @@ const nextConfig = {
         destination: 'https://www.globalvisainternationals.com/:path*',
         permanent: true,
       },
-      // Redirect dashed domain to main www domain
+      // Redirect dashed domain → canonical www
       {
         source: '/:path*',
         has: [
@@ -56,6 +45,15 @@ const nextConfig = {
       },
     ];
   },
+
+  // ✅ Allow remote images (for Google profile avatars, etc.)
+  images: {
+    domains: [
+      'lh3.googleusercontent.com',
+      'images.unsplash.com',
+      'avatars.githubusercontent.com',
+    ],
+  },
 };
 
-export default withMDX(nextConfig);
+export default nextConfig;

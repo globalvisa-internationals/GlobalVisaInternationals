@@ -36,44 +36,51 @@
   
 
 } */
+
+
+/* ================== JOB SECTION STYLES ================== */
+/* ================== JOB SECTION STYLES ================== */
+
 .imageContainer {
   display: flex;
   justify-content: center;
   padding-top: 70px;
-  border-radius: 15px;
+  border-radius: var(--radius);
 }
 
 .JobImage {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border-radius: 15px;
+  border-radius: var(--radius);
   margin: 0 auto;
   height: 300px;
   width: 950px;
+  object-fit: cover;
 }
 
 .JobSec {
   display: flex;
-  justify-content: center;
-  padding: 40px;
-  max-width: 1100px;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  max-width: 95%;
   margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: var(--text);
+  margin-top: 40px;
 }
-
 
 .JobData {
   flex: 1;
-  /* Takes available space */
-  min-width: 60%;
-  max-width: 65%;
-  padding: 10px;
-  gap: 10px;
-  overflow-y: auto;
-  /* Enables scrolling */
+  max-width: 800px;
+  padding: 20px;
+  margin-bottom: 40px;
+  background: var(--card-bg);
+  /* border: 1px solid var(--card-border); */
+  /* border-radius: var(--radius); */
 }
 
 .Title {
@@ -82,26 +89,42 @@
   align-items: center;
   text-align: center;
   color: var(--accent);
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .subTitle {
-
-  color: var(--accent);
+  color: var(--primary);
+  font-weight: 600;
 }
 
+.JobData p {
+  margin-bottom: 15px;
+}
+
+.JobData ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.JobData li {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+/* ================== FORM SECTION STYLES ================== */
 
 .formSection {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  max-width: max-content;
-  /* box-shadow: 0 5px 10px #252525; */
-  border-radius: 10px;
-  padding: 20px;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 30px 20px;
   margin-top: 40px;
-  position: sticky;
-  top: 60px;
-  height: fit-content;
 }
 
 .form {
@@ -109,7 +132,6 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   width: 100%;
-  padding: 20px;
 }
 
 .inputWrapper {
@@ -118,202 +140,126 @@
 }
 
 .label {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 6px;
-  color: #333;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text);
 }
 
 .input,
 .select {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  margin: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  transition: border-color 0.2s ease;
+  padding: 10px 12px;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: border var(--transition);
+  background: var(--background);
+  color: var(--text);
 }
 
 .input:focus,
 .select:focus {
-  border-color: var(--primary);
   outline: none;
+  border-color: var(--primary);
 }
 
 .submittingBtn {
   grid-column: 1 / -1;
-  /* full width row */
-  max-width: 280px;
+  padding: 12px 20px;
   background-color: var(--primary);
+  color: #fff;
   font-size: 16px;
-  font-weight: bold;
-  padding: 12px;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
   cursor: pointer;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-  margin: 20px auto 0;
+  transition: background-color var(--transition);
 }
 
-.submittingBtn:hover {
-  background-color: #85da5d;
+.submittingBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
+.submittingBtn:hover:not(:disabled) {
+  background-color: #01777a;
+  /* slightly darker than --primary */
+}
+
+/* Popup overlay */
 .popupOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 9999;
+  align-items: center;
+  z-index: 1000;
 }
 
 .popupContent {
-  background: #01ac28;
-  /* Bootstrap green */
-  padding: 1.5rem 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(34, 33, 33, 0.3);
+  background: var(--card-bg);
+  padding: 25px 30px;
+  border-radius: var(--radius);
   text-align: center;
-  max-width: 420px;
-  width: 90%;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.popupContent p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
+  max-width: 400px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .popupContent button {
-  color: var(--accent);
-  border: 2px solid #01ac28;
-  border-radius: 6px;
-  padding: 0.5rem 1.2rem;
-  font-weight: bold;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-.popupContent button:hover {
-  background: #e8f5e9;
-}
+/* ================== RESPONSIVE STYLES ================== */
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
-@media screen and (max-width: 768px) {
-  .imageContainer {
-    justify-content: center;
-    padding-top: 70px;
-    width: 100%;
-  }
-
+@media screen and (max-width: 1024px) {
   .JobImage {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
-    height: auto;
     width: 90%;
-    /* Adjusts image width for smaller screens */
-    max-width: 400px;
-    /* Limits max size */
-  }
-
-  .JobSec {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 100%;
+    height: auto;
   }
 
   .JobData {
-    min-width: 100%;
-    text-align: justify;
-    /* Centers text for better readability */
-    padding: 10px;
-    /* Centers text for better readability */
+    padding: 15px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .JobSec {
+    padding: 30px 15px;
   }
 
-
-  .row {
-    flex-direction: column;
-    gap: 10px;
+  .JobData {
+    max-width: 100%;
   }
 
-  .row div {
-    width: 100%;
-    justify-content: center;
+  .formSection {
+    padding: 20px 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Title {
+    font-size: 22px;
+  }
+
+  .subTitle {
+    font-size: 16px;
   }
 
   .input,
   .select {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .submittingBtn {
+    font-size: 14px;
     padding: 10px;
   }
-
-  .formSection {
-    width: 95%;
-    margin-top: 20px;
-    position: relative;
-    margin-bottom: 60px;
-  }
-
-  .popupContent {
-    width: 90%;
-    font-size: 1rem;
-  }
-
-}
-
-.inputWrapper {
-  position: relative;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.floatingLabel {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 4px;
-  font-size: 14px;
-  transition: all 0.2s ease;
-  pointer-events: none;
-  opacity: 0;
-}
-
-.input:focus+.floatingLabel,
-.input:not(:placeholder-shown)+.floatingLabel {
-  top: -10px;
-  left: 8px;
-  font-size: 12px;
-  color: var(--accent);
-  opacity: 1;
-  z-index: 1;
 }

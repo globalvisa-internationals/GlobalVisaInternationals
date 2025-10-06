@@ -13,11 +13,28 @@ export default function CareerPageForm() {
         const form = event.target;
         const formData = new FormData(form);
 
+        // Trim values for safety
+        const gender = form.gender.value.trim();
+        const experience = form.experience.value.trim();
+
+        // Eligibility Checks
+        if (gender !== "Female") {
+            alert("Sorry! Only female candidates are eligible for this job.");
+            return;
+        }
+
+        if (experience !== "0 years") {
+            alert("Only fresher candidates (0 years) are eligible for this job.");
+            return;
+        }
+
+        // reCAPTCHA check
         if (!executeRecaptcha) {
             alert("Oops! Security check not ready. Please try again.");
             return;
         }
 
+        // Resume file size check
         const resumeFile = form.resume.files[0];
         if (resumeFile && resumeFile.size > 2 * 1024 * 1024) {
             alert("Resume file must be under 2MB.");
@@ -79,10 +96,8 @@ export default function CareerPageForm() {
                 <div className={styles.inputWrapper}>
                     <label className={styles.label}>Experience</label>
                     <select className={styles.select} name="experience" required>
-                        <option value="" disabled hidden>Select Your Experience</option>
-                        <option value="0 years">Fresher (0 years)</option>
-                        <option value="0-1 years">0–1 years</option>
-                        {/* Add more later */}
+                        <option value="" >Select Your Experience</option>
+                        <option value="0 years">Fresher(only) (0 years)</option>
                     </select>
                 </div>
 
@@ -91,7 +106,8 @@ export default function CareerPageForm() {
                     <label className={styles.label}>Gender</label>
                     <select className={styles.select} name="gender" required>
                         <option value="" >Select Your Gender</option>
-                        <option value="Female">Female</option>
+                        <option value="Female">Female(only)</option>
+
                     </select>
                 </div>
 
@@ -99,7 +115,7 @@ export default function CareerPageForm() {
                 <div className={styles.inputWrapper}>
                     <label className={styles.label}>Highest Qualification</label>
                     <select className={styles.select} name="education" required>
-                        <option value="">Your Highest Qualification</option>
+                        <option value="" >Your Highest Qualification</option>
                         {["PUC", "Diploma", "Bachelor's", "Master's", "Other"].map((edu) => (
                             <option key={edu} value={edu}>{edu}</option>
                         ))}
@@ -122,7 +138,7 @@ export default function CareerPageForm() {
                 <div className={styles.inputWrapper}>
                     <label className={styles.label}>Applying For</label>
                     <select className={styles.select} name="jobTitle" required>
-                        <option value="" disabled hidden>Choose Role</option>
+                        <option value="" >Choose Role</option>
                         <option value="Visa Counselor">Visa Counselor</option>
                         <option value="Visa Documentation Executive">Visa Documentation Executive</option>
                     </select>
@@ -133,7 +149,6 @@ export default function CareerPageForm() {
                     {isSubmitting ? "Submitting..." : "Submit Application"}
                 </button>
             </form>
-
 
             {showPopup && (
                 <div className={styles.popupOverlay}>

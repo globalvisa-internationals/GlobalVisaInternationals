@@ -3,6 +3,11 @@ import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
 import React from 'react';
 import Head from 'next/head';
+import { ReviewSchema } from "@/components/ReviewSchema";
+import ReviewCarousel from "@/components/ReviewCarousel";
+// import ReviewCard from "@/components/ReviewCard";
+
+
 
 export const metadata = {
   title: "UK Tourist Visa from India | Best UK Visa Consultants in India - Global Visa Internationals",
@@ -503,6 +508,13 @@ export default function UKTouristVisa() {
           <VisaForm />
         </div>
       </div >
+      <section>
+        <h2 style={{ textAlign: "center", marginTop: "2rem" }}>
+          What Our Clients Say
+        </h2>
+        <ReviewSchema />
+        <ReviewCarousel />
+      </section>
     </>
   );
 }
