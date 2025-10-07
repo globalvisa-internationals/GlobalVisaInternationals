@@ -91,7 +91,7 @@ export default function Footer() {
                         <p><MdOutlineBusiness /> <b>Head Office:</b></p>
                         <p><MdLocationOn /> Global Visa Internationals G-F9, Business Point, 137 Brigade Road, Next to Brigade Tower, Bangalore, 560025, Karnataka</p>
                         <p><MdPhone /> <b>+91-7022213466</b></p>
-                        <p><MdEmail /> operation@globalvisainternationals.com</p>
+                        <p><MdEmail /> <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></p>
 
                         {/* Social Icons */}
                         <div className={styles.socialIcons}>
