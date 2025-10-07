@@ -10,8 +10,9 @@ import GalleryCarousel from "@/Components/GalleryCarousel";
 import ClientVideoCarousel from "@/Components/ClientVideoCarousel";
 import FAQAccordion from '@/Components/FAQAccordion';
 import { Agbalumo } from "next/font/google";
-import Services from '@/components/Services';
+
 import MissionVisionValues from "@/Components/missionVisionValues";
+import Services from "@/Components/Services";
 
 
 const agbalumo = Agbalumo({
