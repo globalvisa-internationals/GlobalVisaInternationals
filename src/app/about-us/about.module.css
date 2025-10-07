@@ -1,324 +1,254 @@
-/* Base Styles - Mobile First */
-.aboutSec {
-    max-width: 90%;
-    margin: 60px auto 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: #333;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.aboutUsContainer {
+/* === Main Container === */
+.visaSection {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-}
-
-.textContent {
-    font-size: clamp(14px, 4vw, 16px);
-    line-height: 1.6;
-    width: 100%;
-}
-
-.textContent h2 {
-    font-size: clamp(20px, 6vw, 24px);
-    color: #002B5B;
-    text-align: center;
-    margin-bottom: 16px;
-    font-weight: 700;
-}
-
-/* Image Section */
-.imageWrapper {
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.responsiveImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* About Data Section */
-.aboutdata {
-    display: flex;
-    flex-direction: column;
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: clamp(14px, 4vw, 16px);
-    line-height: 1.6;
-    color: #333;
-    gap: 30px;
-}
-
-.subTitle {
-    text-align: center;
-    color: #002B5B;
-    font-size: clamp(20px, 6vw, 24px);
-    font-weight: 700;
-    margin-bottom: 24px;
-}
-
-.subTitle1 {
-    color: #057A7E;
-    font-weight: 700;
-}
-
-.whydata {
-    width: 100%;
-    text-align: left;
-    font-size: clamp(14px, 4vw, 16px);
-    line-height: 1.6;
-}
-
-.whydata h2 {
-    font-size: clamp(20px, 6vw, 24px);
-    color: #002B5B;
-    text-align: center;
-    margin-bottom: 24px;
-    font-weight: 700;
-}
-
-.whydata ul,
-.whydata ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.whydata ul li,
-.whydata ol li {
-    margin-bottom: 16px;
-    font-size: clamp(14px, 4vw, 16px);
-    line-height: 1.6;
-}
-
-/* Card Design */
-.card,
-.card1 {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    align-items: flex-start;
     padding: 20px;
-    margin: 16px 0;
-    color: #333;
-    transition: all 0.3s ease;
-    -webkit-tap-highlight-color: transparent;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 15px;
+    gap: 18px;
+    top: 80px;
+    z-index: 10000;
 }
 
-.card:hover,
-.card1:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-
-.card p,
-.card1 p {
-    margin: 0;
-    font-size: clamp(14px, 4vw, 16px);
-    line-height: 1.6;
-}
-
-/* Form Section */
-.formSection {
+/* === Hero Banner === */
+.heroBanner {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    max-width: 400px;
-    margin: 30px auto;
-    position: relative;
+    padding-top: 50px;
+    margin: 20px 0;
 }
 
-/* Tablet Styles */
-@media screen and (min-width: 768px) {
-    .aboutSec {
-        margin-top: 80px;
+.heroImage {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+    border: 1px solid var(--card-border);
+}
+
+/* === About Section === */
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aboutText {
+    max-width: 100%;
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--text);
+    padding: 0 5px;
+}
+
+.aboutText h2 {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary);
+    margin: 8px 0 12px;
+}
+
+.founderImageContainer {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+}
+
+.founderImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+/* === Content Section === */
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: justify;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    gap: 30px;
+}
+
+.contentMain {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contentSection ul li {
+    padding-bottom: 12px;
+}
+
+.contentSection ol li {
+    padding-bottom: 12px;
+}
+
+/* === Form Section === */
+.formContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* === Titles & Typography === */
+.pageTitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin: 10px 0;
+    font-family: var(--heading-font), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+.sectionTitle {
+    text-align: left;
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 15px 0 10px;
+    line-height: 1.4;
+    font-family: var(--heading-font), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+.highlightText {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: var(--muted);
+    padding: 1rem;
+    border-left: 3px solid var(--primary);
+    background: #f5f7f8;
+    border-radius: var(--radius);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* ========== TABLET & DESKTOP UPGRADE ========== */
+@media (min-width: 768px) {
+    .visaSection {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px;
         max-width: 85%;
+        margin: 0 auto;
+        gap: 40px;
     }
 
-    .aboutUsContainer {
+    .heroBanner {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .heroImage {
+        max-width: 70%;
+        max-height: 400px;
+        object-fit: fill;
+    }
+
+    .aboutSection {
         flex-direction: row;
-        gap: 40px;
         align-items: flex-start;
+        gap: 30px;
+        padding: 10px;
+        max-width: 1200px;
+        width: 100%;
     }
 
-    .textContent {
+    .aboutContent {
         flex: 1;
+    }
+
+    .aboutText {
+        max-width: 700px;
         font-size: 16px;
+        padding: 0;
     }
 
-    .imageWrapper {
-        position: sticky;
-        top: 90px;
-        width: 45%;
-        max-width: 365px;
-        height: 400px;
-        margin: 0;
-    }
-
-    .aboutdata {
-        flex-direction: row;
-        max-width: 85%;
-        gap: 40px;
-    }
-
-    .whydata {
-        flex: 1;
-    }
-
-    .formSection {
-        position: sticky;
-        top: 90px;
+    .founderImageContainer {
+        max-width: 380px;
+        height: 500px;
         margin-top: 0;
+    }
+
+    .contentSection {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 95%;
+        padding: 20px;
+        position: relative;
+    }
+
+    .contentMain {
+        flex: 1;
+        max-width: calc(100% - 440px);
+        /* Account for form width + gap */
+    }
+
+    .formContainer {
         width: 400px;
+        position: sticky;
+        top: 90px;
+        align-self: flex-start;
+        margin-top: 0;
     }
 
-    .card,
-    .card1 {
-        padding: 20px 24px;
-        margin: 20px 0;
+    .pageTitle {
+        font-size: 1.4rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.3rem;
     }
 }
 
-/* Desktop Styles */
-@media screen and (min-width: 1024px) {
-    .aboutSec {
+@media (min-width: 1200px) {
+    .pageTitle {
+        font-size: 1.6rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.4rem;
+    }
+
+    .contentSection {
         max-width: 1200px;
-        margin-top: 100px;
     }
 
-    .aboutUsContainer {
-        gap: 60px;
+    .contentMain {
+        max-width: calc(100% - 440px);
     }
 
-    .imageWrapper {
-        width: 365px;
-        height: 450px;
-    }
-
-    .aboutdata {
-        max-width: 1200px;
-        gap: 60px;
-    }
-
-    .textContent h2,
-    .whydata h2,
-    .subTitle {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .textContent,
-    .whydata,
-    .card p,
-    .card1 p {
-        font-size: 16px;
-    }
-}
-
-/* Large Desktop Styles */
-@media screen and (min-width: 1440px) {
-    .aboutSec {
-        max-width: 1400px;
-    }
-
-    .aboutdata {
-        max-width: 1400px;
-    }
-}
-
-/* Cross-browser Compatibility */
-@supports (height: 100dvh) {
-    .aboutSec {
-        margin-top: clamp(60px, 10dvh, 100px);
-    }
-}
-
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-
-    .card:hover,
-    .card1:hover {
-        transform: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-
-    .card,
-    .card1 {
-        transition: none;
-    }
-
-    .card:hover,
-    .card1:hover {
-        transform: none;
-    }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-
-    .card,
-    .card1 {
-        border: 2px solid #000;
-    }
-
-    .textContent h2,
-    .whydata h2,
-    .subTitle {
-        color: #000;
-    }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .aboutSec {
-        color: #e1e1e1;
-        background-color: transparent;
-    }
-
-    .card,
-    .card1 {
-        background: #2a2a2a;
-        color: #e1e1e1;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .textContent h2,
-    .whydata h2,
-    .subTitle {
-        color: #4a90e2;
-    }
-
-    .subTitle1 {
-        color: #00bcd4;
-    }
-}
-
-/* Print styles */
-@media print {
-    .aboutSec {
-        margin-top: 20px;
-        color: #000;
-    }
-
-    .card,
-    .card1 {
-        box-shadow: none;
-        border: 1px solid #000;
-    }
-
-    .imageWrapper {
-        box-shadow: none;
-        border: 1px solid #000;
+    .formContainer {
+        width: 400px;
     }
 }

@@ -1,51 +1,64 @@
-/* --- Form Container (Base: Mobile First) --- */
-.formSection {
+/* ============================
+   Base Form Styles (Mobile First)
+============================ */
+
+/* --- Form Container --- */
+.formSection,
+.normalForm {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 95%;
-  border-radius: 12px;
-  background-color: #e9f5b5;
-  padding: 16px;
   margin: 20px auto;
-  position: relative;
-  height: fit-content;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.formSection:hover {
+.formSection {
+  background-color: #e9f5b5;
+}
+
+.formSection:hover,
+.normalForm:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* --- Title --- */
+/* --- Titles --- */
 .formtitle {
-  font-size: 20px;
-  font-weight: bold;
-  color: #002B5B;
-  margin-bottom: 16px;
+  font-weight: 700;
+  color: #002b5b;
   text-align: center;
+  margin-bottom: 16px;
+}
+
+.normalForm .formtitle {
+  font-size: 20px;
+}
+
+.formSection .formtitle {
+  font-size: 20px;
 }
 
 /* --- Form Layout --- */
-.form {
+.form,
+.normalForm form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: center;
-  margin: 0 auto;
 }
 
 .row1,
 .row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .row {
@@ -59,50 +72,78 @@
 
 /* --- Inputs & Selects --- */
 .input,
-.select {
+.select,
+.normalForm .input,
+.normalForm .select {
   width: 100%;
   padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  margin: 4px 0;
   font-size: 15px;
-  margin: 5px;
-  background-color: #ffffff;
-  color: #002B5B;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #002b5b;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .input:focus,
-.select:focus {
+.select:focus,
+.normalForm .input:focus,
+.normalForm .select:focus {
   border-color: #005241;
   box-shadow: 0 0 0 3px rgba(0, 82, 65, 0.15);
   outline: none;
 }
 
+/* --- Terms --- */
+.termsContainer {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  gap: 6px;
+}
+
+.termsContainer a {
+  color: #005241;
+  text-decoration: underline;
+}
+
+.termsContainer a:hover {
+  color: #007b6d;
+}
+
 /* --- Submit Button --- */
-.submittingBtn {
+.submittingBtn,
+.normalForm .submittingBtn,
+.popupContent button {
   display: block;
   width: 100%;
   max-width: 250px;
-  background-color: #005241;
-  color: #ffffff;
+  margin: 15px auto 0;
+  padding: 10px 12px;
   font-size: 15px;
   font-weight: bold;
-  padding: 10px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
+  background-color: #005241;
+  color: #ffffff;
   transition: background 0.3s ease, transform 0.2s ease;
-  margin: 15px auto 0;
 }
 
-.submittingBtn:hover {
+.submittingBtn:hover,
+.normalForm .submittingBtn:hover,
+.popupContent button:hover {
   background-color: #007b6d;
   transform: translateY(-2px);
 }
 
-/* --- Success Popup --- */
+/* ============================
+   Popup Styles
+============================ */
 .popupOverlay {
   position: fixed;
   top: 0;
@@ -119,7 +160,7 @@
 .popupContent {
   background: #ffffff;
   border-top: 6px solid #005241;
-  padding: 1.2rem 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -132,29 +173,21 @@
   font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #002B5B;
+  color: #002b5b;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
 }
 
-.popupContent button {
-  color: #ffffff;
-  background: #005241;
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s ease;
+/* --- Close Button --- */
+.popupContent button.closeBtn {
+  margin-top: 10px;
 }
 
-.popupContent button:hover {
-  background: #007b6d;
-}
-
-/* --- Animations --- */
+/* ============================
+   Animations
+============================ */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -167,77 +200,11 @@
   }
 }
 
-/* === Normal Form Container (Base) === */
-.normalForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 95%;
-  width: 100%;
-  margin: 20px auto;
-  padding: 16px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+/* ============================
+   Responsive Breakpoints
+============================ */
 
-.normalForm:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-
-.normalForm .formtitle {
-  font-size: 20px;
-  font-weight: 700;
-  color: #002B5B;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.normalForm .input,
-.normalForm .select {
-  width: 100%;
-  padding: 8px;
-  margin: 4px 0;
-  font-size: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fff;
-  color: #002B5B;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.normalForm .input:focus,
-.normalForm .select:focus {
-  border-color: #005241;
-  box-shadow: 0 0 0 3px rgba(0, 82, 65, 0.15);
-  outline: none;
-}
-
-.normalForm .submittingBtn {
-  display: block;
-  width: 100%;
-  max-width: 240px;
-  margin: 15px auto 0;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: #005241;
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.normalForm .submittingBtn:hover {
-  background-color: #007b6d;
-  transform: translateY(-2px);
-}
-
-/* === Extra Small Devices (≤400px) === */
+/* Extra Small Devices ≤400px */
 @media (max-width: 400px) {
 
   .formSection,
@@ -247,8 +214,7 @@
     border-radius: 10px;
   }
 
-  .formtitle,
-  .normalForm .formtitle {
+  .formtitle {
     font-size: 18px;
     margin-bottom: 12px;
   }
@@ -268,7 +234,7 @@
   }
 }
 
-/* === Tablet (≥768px) === */
+/* Tablet ≥768px */
 @media (min-width: 768px) {
   .formSection {
     max-width: 400px;
@@ -286,8 +252,8 @@
   }
 
   .submittingBtn {
-    font-size: 16px;
     max-width: 250px;
+    font-size: 16px;
   }
 
   .normalForm {
@@ -310,7 +276,7 @@
   }
 }
 
-/* === Desktop (≥1024px) === */
+/* Desktop ≥1024px */
 @media (min-width: 1024px) {
   .formSection {
     max-width: 420px;

@@ -4,14 +4,16 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 /**
- * @param {ReactNode} children - The content to animate.
- * @param {'up' | 'down' | 'left' | 'right'} direction - Direction of entrance animation.
- * @param {boolean} triggerOnce - If true, animation runs only once.
- * @param {number} threshold - % of element visible to trigger animation (0 to 1).
- * @param {number} delay - Animation delay in seconds.
- * @param {number} duration - Animation duration in seconds.
- * @param {number} scale - Initial scale value.
- * @param {boolean} reverseOnExit - If true, animate out when not in view
+ * AnimatedSection: Cross-platform, SSR-safe entrance animation.
+ *
+ * @param {React.ReactNode} children - Content to animate
+ * @param {'up' | 'down' | 'left' | 'right'} direction - Entrance direction
+ * @param {boolean} triggerOnce - Animate only once
+ * @param {number} threshold - % of element visible to trigger animation (0-1)
+ * @param {number} delay - Animation delay in seconds
+ * @param {number} duration - Animation duration in seconds
+ * @param {number} scale - Initial scale
+ * @param {boolean} reverseOnExit - Animate out when not in view
  */
 const AnimatedSection = ({
   children,
@@ -23,42 +25,44 @@ const AnimatedSection = ({
   scale = 0.95,
   reverseOnExit = true,
 }) => {
+  const isClient = typeof window !== 'undefined';
+  const mobileThreshold = 0.05;
+
   const { ref, inView } = useInView({
     triggerOnce,
-    threshold: typeof window !== 'undefined' && window.innerWidth < 768 ? 0.05 : threshold,
+    threshold: isClient && window.innerWidth < 768 ? mobileThreshold : threshold,
   });
 
-  // Set initial x/y offset
   const getInitialOffset = () => {
     switch (direction) {
       case 'up':
-        return { y: 40 };
+        return { y: 40, x: 0 };
       case 'down':
-        return { y: -40 };
+        return { y: -40, x: 0 };
       case 'left':
-        return { x: 60 };
+        return { x: 60, y: 0 };
       case 'right':
-        return { x: -60 };
+        return { x: -60, y: 0 };
       default:
-        return { y: 40 };
+        return { y: 40, x: 0 };
     }
   };
 
   const initial = { opacity: 0, scale, ...getInitialOffset() };
-
   const visible = { opacity: 1, x: 0, y: 0, scale: 1 };
-  const hidden = initial;
+  const hidden = reverseOnExit ? initial : visible;
 
   return (
     <motion.div
       ref={ref}
       initial={initial}
-      animate={inView ? visible : reverseOnExit ? hidden : visible}
+      animate={inView ? visible : hidden}
       transition={{
         delay,
         duration,
-        ease: [0.25, 0.8, 0.25, 1], // easeOutQuart
+        ease: [0.25, 0.8, 0.25, 1],
       }}
+      style={{ willChange: 'transform, opacity' }} // improves mobile performance
     >
       {children}
     </motion.div>

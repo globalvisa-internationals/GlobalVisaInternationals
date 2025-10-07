@@ -651,7 +651,6 @@
   }
 }
 
-/* --- Base (Mobile First) --- */
 .missionVisionValues {
   display: flex;
   flex-direction: column;
@@ -808,396 +807,76 @@
   }
 }
 
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
 
-/* ===== CARD CONTAINER ===== */
-.visaCard {
-  width: 250px;
-  height: 320px;
-  perspective: 1000px;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.cardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.visaCard:hover {
-  transform: translateY(-6px);
-}
-
-.visaCard:hover .cardInner {
-  transform: rotateX(180deg);
-}
-
-/* ===== FRONT & BACK COMMON STYLES ===== */
-.cardFront,
-.cardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 15px;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-/* ===== FRONT CARD ===== */
-.cardFront {
-  background: var(--background);
-  border: 2px solid var(--accent);
-}
-
-.top1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #057A7E;
-  text-align: center;
-  gap: 12px;
-}
-
-.top1 img {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
-}
-
-.top1 h3 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.top2 {
-  font-size: 14px;
-  color: var(--text);
-  text-align: center;
-  margin-top: 10px;
-  line-height: 1.4;
-}
-
-/* ===== BACK CARD ===== */
-.cardBack {
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  background-color: #e8f6f7;
-  border: 2px solid var(--accent);
-  transform: rotateX(180deg);
-  padding-top: 20px;
-}
-
-.cardBack h3,
-.cardBack h4 {
-  margin: 5px 0 10px;
-  font-size: 18px;
-  color: #057A7E;
-}
-
-.cardBack ul {
-  padding: 0;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  width: 100%;
-  font-size: 15px;
-}
-
-.cardBack li {
-  border-bottom: 0.5px dotted #333;
-  padding: 8px 0;
-  align-items: center;
-  justify-content: center;
-  transition: 0.2s ease;
-}
-
-.cardBack li a {
-  text-decoration: none;
-  color: var(--accent);
-  display: block;
-  font-weight: 500;
-}
-
-.cardBack li:hover {
-  background-color: var(--accent);
-  color: #fff !important;
-  border-radius: 6px;
-}
-
-.cardBack li:hover a {
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .visaCard {
-    width: 45%;
-    height: 240px;
-  }
-
-  .top1 img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .top1 h3 {
-    font-size: 15px;
-  }
-
-  .top2 {
-    font-size: 12px;
-    margin-top: 6px;
-  }
-
-  .cardBack h3 {
-    font-size: 15px;
-  }
-
-  .cardBack ul {
-    font-size: 12px;
-  }
-
-  .cardBack li {
-    padding: 5px 0;
-  }
-}
-
-
-@media (max-width: 400px) {
-  .visaCard {
-    width: 46%;
-    height: 200px;
-  }
-
-  .top1 img {
-    width: 55px;
-    height: 55px;
-  }
-
-  .top1 h3 {
-    font-size: 13px;
-  }
-
-  .top2 {
-    font-size: 11px;
-  }
-}
-
-
-/* ===== MOBILE FIRST ===== */
+/* ===== Container Layout ===== */
 .dataForm {
   display: flex;
-  flex-direction: column;
-  /* stack form & FAQ */
+  justify-content: center;
+  align-items: stretch;
   gap: 20px;
-  /* spacing between sections */
-  margin: 0 auto;
-  max-width: 95%;
-  padding: 20px 0;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  flex-wrap: wrap;
 }
 
+/* ===== Card Style for Both Sections ===== */
 .formSection,
+.mapSection {
+  flex: 1 1 500px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.formSection>* {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+
+
+.iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  /* Fill parent */
+  border-radius: 12px;
+  flex: 1 1 auto;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 900px) {
+  .dataForm {
+    flex-direction: column;
+  }
+
+
+  .formSection,
+  .mapSection {
+    width: 100%;
+  }
+
+  .formSection {
+    width: 90%;
+    height: 90%;
+  }
+
+}
+
+
 .faqSection {
   width: 100%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 30px 10px;
   box-sizing: border-box;
-}
-
-/* Extra small devices ≤400px */
-@media (max-width: 400px) {
-  .dataForm {
-    gap: 15px;
-    padding: 10px 5px;
-  }
-
-  .formSection,
-  .faqSection {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-}
-
-/* ===== TABLET LAYOUT ≥768px ===== */
-@media (min-width: 768px) {
-  .dataForm {
-    flex-direction: row;
-    /* side by side */
-    flex-wrap: wrap;
-    /* allow wrap if needed */
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1200px;
-    gap: 30px;
-  }
-
-  .formSection {
-    width: 45%;
-    /* slightly smaller */
-    padding: 20px;
-  }
-
-  .faqSection {
-    width: 55%;
-    /* slightly larger */
-    padding: 20px;
-  }
-}
-
-/* ===== DESKTOP LAYOUT ≥1024px ===== */
-@media (min-width: 1024px) {
-  .dataForm {
-    flex-direction: row;
-    /* strictly side by side */
-    flex-wrap: nowrap;
-    /* prevent wrap */
-    justify-content: flex-start;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .formSection {
-    width: 40%;
-    /* smaller form */
-    padding: 20px 15px;
-  }
-
-  .faqSection {
-    width: 60%;
-    /* larger FAQ */
-    padding: 20px 15px;
-  }
-}
-
-
-/* ======= LOCATION MAP SECTION ======= */
-/* --- Base (Mobile First) --- */
-.containerLoc {
-  display: flex;
-  flex-direction: column;
-  /* column-first for small screens */
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  margin: 10px auto;
-  border-radius: 12px;
-  max-width: 100%;
-}
-
-.iframe {
-  width: 100%;
-  height: 180px;
-  border-radius: 12px;
-  border: none;
-}
-
-.note {
-  font-size: 0.95rem;
-  color: #333;
-  padding: 14px;
-  margin: 0 auto 16px;
-  border-left: 4px solid #cefafc;
-  background-color: #F5F6F8;
-  max-width: 90%;
-  border-radius: 6px;
-  line-height: 1.4;
-  text-align: center;
-}
-
-/* --- Super Small Devices (≤400px) --- */
-@media (max-width: 400px) {
-  .containerLoc {
-    gap: 8px;
-    padding: 8px;
-  }
-
-  .iframe {
-    height: 150px;
-    border-radius: 10px;
-  }
-
-  .note {
-    font-size: 0.85rem;
-    padding: 10px;
-    max-width: 95%;
-  }
-}
-
-/* --- Small Mobiles (≤480px) --- */
-@media (max-width: 480px) {
-  .iframe {
-    height: 160px;
-  }
-
-  .note {
-    font-size: 0.9rem;
-    max-width: 92%;
-  }
-}
-
-/* --- Tablets (≥768px) --- */
-@media (min-width: 768px) {
-  .containerLoc {
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
-    padding: 20px;
-  }
-
-  .iframe {
-    flex: 1;
-    height: 250px;
-    border-radius: 15px;
-  }
-
-  .note {
-    font-size: 1rem;
-    padding: 16px 18px;
-    max-width: 60%;
-    text-align: left;
-  }
-}
-
-/* --- Desktops (≥1024px) --- */
-@media (min-width: 1024px) {
-  .containerLoc {
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-  }
-
-  .iframe {
-    width: 1000px;
-    height: 300px;
-    border-radius: 18px;
-  }
-
-  .note {
-    font-size: 1.05rem;
-    max-width: 50%;
-    line-height: 1.5;
-  }
+  max-width: 1200px;
 }

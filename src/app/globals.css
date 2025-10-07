@@ -7,10 +7,7 @@
 
 } */
 
-body {
-  margin: 5 auto;
-  padding: 5 auto;
-}
+
 
 
 /* :root {
@@ -24,14 +21,15 @@ body {
   --submenu-bg: #122C52;
 } */
 
+
+
 body {
   background-color: var(--background);
   margin: 0 auto;
   width: 95%;
   max-width: 95%;
+  /* background: linear-gradient(135deg, #cbedee, #fff); */
 }
-
-
 
 
 :root {
