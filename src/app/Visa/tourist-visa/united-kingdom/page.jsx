@@ -3,8 +3,9 @@ import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
 import React from 'react';
 import Head from 'next/head';
-import { ReviewSchema } from "@/components/ReviewSchema";
-import ReviewCarousel from "@/components/ReviewCarousel";
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import { ReviewCarousel } from "@/Components/ReviewCarousel";
+
 // import ReviewCard from "@/components/ReviewCard";
 
 
