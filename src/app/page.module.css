@@ -6,6 +6,12 @@
   margin-top: 80px;
 }
 
+.HomeSec p {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+}
+
 @media (min-width: 769px) {
   .HomeSec {
     width: 95%;
@@ -63,200 +69,94 @@
   margin-top: 80px;
 }
 
-.subtitle,
-.mainHeading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  margin: 0 auto;
-  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
-  color: #057A7E;
-  font-weight: 600;
-  font-size: 2rem;
-  letter-spacing: 0.5px;
+
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 1rem;
+  border-left: 3px solid var(--primary);
+  background: #f5f7f8;
+  border-radius: var(--radius);
+  margin: 20px auto;
+  max-width: 800px;
 }
 
-/* ================== BASE: Mobile First ================== */
+
+
 .logoCard {
   position: relative;
-  width: 95%;
-  height: auto;
+  width: 98%;
+  height: 320px;
   margin: 0 auto;
-  background: #cefafc;
+  background: #fff;
   border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 8px 22px #00000014;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px 10px;
   margin-top: 20px;
-  gap: 15px;
-  /* Added gap for consistent spacing */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
+
 
 .logoWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
   align-items: center;
   text-align: center;
-  height: auto;
-  flex: 0 1 auto;
-  /* Changed from fixed width to flexible */
+  height: 100%;
+  max-width: 50%;
   z-index: 2;
-  min-width: 0;
-  /* Prevents flex item from overflowing */
 }
 
 .logoImage {
-  width: 100%;
-  max-width: 120px;
-  /* Mobile default */
+  width: 300px;
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
 .tagline {
-  margin-top: 12px;
-  font-size: 0.75rem;
-  /* Slightly larger for mobile */
+  font-size: 25px !important;
+  padding: 0 !important;
   text-align: center;
   color: #057A7E;
-  font-weight: 400;
+  font-weight: 600;
   font-family: 'Agbalumo', cursive;
   letter-spacing: 1px;
-  line-height: 1.3;
 }
 
+
 .worldMap {
-  flex: 0 1 auto;
-  /* Flexible sizing */
-  max-width: 45%;
-  /* Slightly less than half to account for gap */
-  height: auto;
+  max-width: 50%;
+  height: 100%;
   object-fit: contain;
   opacity: 0.9;
 }
 
-.HomeSec {
-  max-width: 95%;
-  margin: 0 auto;
-  color: #333;
-  font-family: var(--font-main);
-  margin-top: 80px;
-}
-
-/* tag line */
 .waveText {
-  padding-top: 8px;
-  font-size: 14px;
-  line-height: 1.5;
+  padding-top: 10px;
+  font-size: 22px;
   text-align: center;
   margin: 0 auto;
-  color: var(--accent);
-  font-weight: 600;
-  max-width: 95%;
+  margin-top: 10px;
 }
 
-/* ================== TABLET ================== */
-@media (min-width: 401px) and (max-width: 768px) {
-  .logoCard {
-    padding: 25px 15px;
-    margin-top: 80px;
-    gap: 20px;
-  }
 
-  .logoImage {
-    max-width: 150px;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-  }
-
-  .waveText {
-    font-size: 22px;
-    line-height: 1.5;
-    max-width: 80%;
-  }
-}
-
-/* ================== DESKTOP ================== */
-/* Replace the intermediate desktop media query with fluid sizing */
-@media (min-width: 769px) {
-
-  .logoCard {
-    height: clamp(280px, 30vw, 320px);
-    /* Fluid height */
-    padding: 0 clamp(30px, 3vw, 40px);
-    margin-top: 20px;
-    gap: clamp(25px, 2.5vw, 30px);
-  }
-
-  .logoImage {
-    max-width: clamp(240px, 25vw, 300px);
-    width: 100%;
-  }
-
-  .tagline {
-    font-size: clamp(1.4rem, 2vw, 1.8rem);
-    margin-top: clamp(15px, 1.5vw, 20px);
-  }
-
-  .waveText {
-    font-size: clamp(20px, 2vw, 22px);
-    line-height: 1.5;
-    max-width: clamp(80%, 82%, 85%);
-  }
-
-  .worldMap {
-    max-width: clamp(40%, 41%, 42%);
-  }
-}
-
-/* Optional: Add a very small screen fix */
-@media (max-width: 400px) {
-  .logoCard {
-    flex-wrap: wrap;
-    /* Stack on very small screens */
-    padding: 15px 5px;
-    gap: 10px;
-  }
-
-  .worldMap,
-  .logoWrapper {
-    max-width: 100%;
-    flex: 0 0 auto;
-  }
-
-  .worldMap {
-    max-height: 120px;
-  }
-}
-
-@media (max-width: 400px) {
-  .HomeSec {
-    max-width: 95%;
-    margin: 0 auto;
-    color: #333;
-    font-family: var(--font-main);
-    margin-top: 80px;
-  }
-
+@media (max-width: 768px) {
   .logoCard {
     flex-wrap: nowrap;
     justify-content: center;
     text-align: center;
     max-width: 100%;
     height: auto;
-    padding: 3px;
-    margin: 0 auto;
-    margin-top: 80px;
+    padding: 5px;
 
+    margin: 0 auto;
+    margin-top: 20px;
   }
 
   .logoWrapper {
@@ -280,15 +180,19 @@
     font-size: 0.5rem;
   }
 
+  .waveText {
+    font-size: 11px;
+  }
+
 }
 
-/* ========== HERO TEXT ========== */
+/* ===== WAVE TEXT ===== */
 .waveText {
   padding-top: 8px;
-  font-size: 10px;
+  font-size: 18px;
   line-height: 1.4;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 12px;
   color: var(--accent);
   font-weight: 600;
   max-width: 100%;
@@ -300,14 +204,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
   max-width: 100%;
   margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 /* ===== IMAGE WRAPPER ===== */
 .imageWrapper {
   width: 100%;
-  max-width: 320px;
+  max-width: 360px;
   aspect-ratio: 3/4;
   overflow: hidden;
   display: flex;
@@ -315,13 +222,18 @@
   align-items: center;
   margin: 0 auto;
   box-shadow: var(--shadow-md);
-
+  border-radius: var(--radius);
+  transition: transform 0.3s ease;
 }
 
+.imageWrapper:hover {
+  transform: scale(1.03);
+}
 
+/* ===== IMAGE ===== */
 .responsiveImage {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: var(--radius);
 }
@@ -329,400 +241,161 @@
 /* ===== TEXT CONTENT ===== */
 .textContent {
   max-width: 100%;
-  font-size: 10px;
-  line-height: 1.6;
+  padding: 20px;
+  border-radius: 15px;
   color: var(--text);
-  padding: 0 5px;
+  text-align: justify;
 }
 
 .textContent h2 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  text-align: center;
+  text-align: justify;
   color: var(--primary);
   margin: 8px 0 12px;
 }
 
-/* ========== TABLET & DESKTOP UPGRADE ========== */
+/* ========== TABLET & DESKTOP UPGRADES ========== */
 @media (min-width: 768px) {
   .waveText {
-    font-size: 22px;
     line-height: 1.5;
     max-width: 80%;
   }
 
   .storyContainer {
-    display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
     gap: 30px;
-    padding: 10px;
+    padding: 20px;
     max-width: 1200px;
   }
 
   .imageWrapper {
-    /* margin-top: 35px; */
     max-width: 380px;
-    height: 500px;
+    height: auto;
+    aspect-ratio: 3/4;
+    margin: 0;
   }
 
   .textContent {
-    /* max-width: 700px; */
-    font-size: 16px;
     padding: 0;
+    text-align: left;
+    max-width: 600px;
   }
 
-
-
-}
-
-
-/* ========== BASE: Mobile-First Styling ========== */
-.whyChooseContainer {
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  max-width: 95%;
-  margin: 40px auto;
-  padding: 0 16px;
-}
-
-.whyChooseContainer h2 {
-  color: var(--primary);
-  font-size: 1.6rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-/* ===== CARD GRID ===== */
-.whyGrid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 10px 0;
-}
-
-/* ===== INDIVIDUAL CARD ===== */
-.whyCard {
-  background: var(--background);
-  border: 1px solid #e0e0e0;
-  color: var(--text);
-  padding: 18px;
-  width: 160px;
-  flex: 1 1 160px;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whyCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-}
-
-/* ===== CARD IMAGE ===== */
-.whyImg {
-  height: 40px;
-  width: 40px;
-  margin-bottom: 12px;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-
-.whyCard:hover .whyImg {
-  filter: grayscale(0);
-}
-
-/* ===== CARD TEXT ===== */
-.whyCard strong {
-  font-size: 1.2rem;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-
-.whyCard p {
-  font-size: 0.85rem;
-  line-height: 1.4;
-  color: var(--text);
-}
-
-/* ========== TABLETS (≥ 768px) ========== */
-@media (min-width: 768px) {
-  .whyChooseContainer {
-    margin: 50px auto;
-    padding: 0 20px;
-  }
-
-  .whyChooseContainer h2 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-  }
-
-  .whyGrid {
-    gap: 20px;
-    padding: 16px 0;
-    max-width: 900px;
-  }
-
-  .whyCard {
-    width: 200px;
-    flex: 1 1 200px;
-    padding: 20px;
-  }
-
-  .whyImg {
-    height: 48px;
-    width: 48px;
-    margin-bottom: 14px;
-  }
-
-  .whyCard strong {
-    font-size: 1.3rem;
-  }
-
-  .whyCard p {
-    font-size: 0.9rem;
+  .textContent h2 {
+    text-align: justify;
   }
 }
 
-/* ========== DESKTOPS (≥ 1024px) ========== */
-@media (min-width: 1024px) {
-  .whyChooseContainer {
-    margin: 60px auto;
-  }
-
-  .whyChooseContainer h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-
-  .whyGrid {
-    gap: 28px;
-    max-width: 1200px;
-    padding: 20px 0;
-  }
-
-  .whyCard {
-    width: 230px;
-    flex: 1 1 230px;
-    padding: 24px;
-  }
-
-  .whyImg {
-    height: 52px;
-    width: 52px;
-    margin-bottom: 16px;
-  }
-
-  .whyCard strong {
-    font-size: 1.4rem;
-  }
-
-  .whyCard p {
-    font-size: 0.95rem;
+/* ========== DESKTOP LARGE SCREENS ====== */
+@media (min-width: 1200px) {
+  .waveText {
+    font-size: 25px;
     line-height: 1.5;
+    max-width: 80%;
   }
+
+  .storyContainer {
+    gap: 40px;
+  }
+
+  .imageWrapper {
+    max-width: 380px;
+  }
+
+  .textContent {
+    max-width: 60%;
+    padding: 20px;
+    text-align: justify;
+  }
+
+
 }
 
-
-.serviceCards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 20px auto;
-  max-width: 95%;
-}
-
-.serviceCard {
-  flex: 1 1 100%;
-  background: #cefafc;
-  border: 1px solid #e0e0e0;
-  border-radius: 14px;
-  padding: 20px 18px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.serviceCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-}
-
-.serviceCard h3 {
-  font-size: 1.1rem;
-  color: #057A7E;
-  margin-bottom: 14px;
-  text-align: center;
-}
-
-.serviceCard ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.serviceCard ul li {
-  margin-bottom: 10px;
-  padding-left: 18px;
-  position: relative;
-  font-size: 0.9rem;
-  color: var(--text);
-}
-
-.serviceCard ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--accent);
-  font-weight: bold;
-}
-
-/* --- Super Small Devices (≤400px) --- */
-@media (max-width: 400px) {
-  .serviceCards {
-    gap: 16px;
-    margin: 15px auto;
-  }
-
-  .serviceCard {
-    padding: 16px 14px;
-    border-radius: 10px;
-  }
-
-  .serviceCard h3 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-
-  .serviceCard ul li {
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-  }
-}
-
-/* --- Tablets & Medium Screens (≥768px) --- */
-@media (min-width: 768px) {
-  .serviceCards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    max-width: 900px;
-  }
-
-  .serviceCard {
-    flex: 1 1 45%;
-    padding: 24px 20px;
-  }
-
-  .serviceCard h3 {
-    font-size: 1.2rem;
-  }
-}
-
-/* --- Desktops & Large Screens (≥1024px) --- */
-@media (min-width: 1024px) {
-  .serviceCards {
-    gap: 30px;
-    max-width: 1100px;
-  }
-
-  .serviceCard {
-    flex: 1 1 450px;
-    padding: 30px 25px;
-  }
-
-  .serviceCard h3 {
-    font-size: 1.3rem;
-  }
-
-  .serviceCard ul li {
-    font-size: 0.95rem;
-  }
-}
-
-
-
-
-/* ===== Container Layout ===== */
+/* ===== Main Container ===== */
 .dataForm {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
-  flex-wrap: wrap;
+  max-width: 95%;
+  margin: 0 auto;
+  gap: 30px;
+  box-sizing: border-box;
+  height: auto;
+  flex-wrap: nowrap;
 }
 
-/* ===== Card Style for Both Sections ===== */
-.formSection,
-.mapSection {
-  flex: 1 1 500px;
-  background: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+/* ===== Form Section ===== */
+.formSection {
+  flex: 1 1 35%;
+  display: flex;
+  align-items: stretch;
+  justify-content: start;
   padding: 20px;
   box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 500px;
 }
 
-.formSection>* {
-  flex: 1 1 auto;
+/* ===== Map Section ===== */
+.mapSection {
+  flex: 1 1 55%;
   display: flex;
-  flex-direction: column;
-  overflow-y: auto;
+  align-items: stretch;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
-
-
+/* ===== Iframe Styling ===== */
 .iframe {
-  border: none;
   width: 100%;
   height: 100%;
-  /* Fill parent */
+  min-height: 450px;
+  border: none;
   border-radius: 12px;
-  flex: 1 1 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
-/* ===== Responsive Adjustments ===== */
-@media (max-width: 900px) {
+/* ===== Tablet (Medium Screens) ===== */
+@media (max-width: 1024px) {
   .dataForm {
-    flex-direction: column;
+    gap: 20px;
   }
 
+  .iframe {
+    min-height: 450px;
+    padding: 20px;
+  }
+}
+
+/* ===== Mobile (Small Screens) ===== */
+@media (max-width: 768px) {
+  .dataForm {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
 
   .formSection,
   .mapSection {
     width: 100%;
+    flex: 1 1 100%;
   }
 
-  .formSection {
-    width: 90%;
-    height: 90%;
+  .iframe {
+    width: 100%;
+    min-height: 400px;
   }
-
 }
 
-
-.faqSection {
-  width: 100%;
-  margin: 0 auto;
-  padding: 30px 10px;
-  box-sizing: border-box;
-  max-width: 1200px;
+/* ===== Extra Small Screens ===== */
+@media (max-width: 480px) {
+  .iframe {
+    min-height: 320px;
+  }
 }

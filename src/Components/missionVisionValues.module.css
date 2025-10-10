@@ -3,7 +3,6 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px 10px;
-    background-color: var(--background);
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
@@ -12,7 +11,7 @@
 .valuesCard {
     width: 90%;
     margin: 0 auto;
-    background: #cefafc;
+    background: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
     padding: 18px;

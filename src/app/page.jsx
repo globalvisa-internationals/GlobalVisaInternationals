@@ -13,6 +13,7 @@ import { Agbalumo } from "next/font/google";
 
 import MissionVisionValues from "@/Components/missionVisionValues";
 import Services from "@/Components/Services";
+import WhychoosGVI from "@/Components/whychoosGVI";
 
 
 const agbalumo = Agbalumo({
@@ -245,11 +246,8 @@ export default function Home() {
 
 
 
-
         <h1 className={styles.waveText}>
-          The Visa And Immigration Assistance Experts
-          |
-          We Deal With All Type Of Visas
+          The Visa And Immigration Assistance Experts  |  We Deal With All Type Of Visas
         </h1>
 
 
@@ -264,161 +262,18 @@ export default function Home() {
             <div className={styles.imageWrapper}>
               <img className={styles.responsiveImage} src="https://www.globalvisainternationals.com/images/story.webp" alt="Best visa agents in Bangalore" />
             </div>
-
-
             {/* Right Text */}
             <div className={styles.textContent}>
-              {/* Sequential Animated Cards */}
-
-
-              <div className={styles.storyCard}>
-                <p>  At Global Visa Internationals, we understand that applying for a visa can feel  overwhelming. That's why we're more than just a visa consultancy — we're your  trusted partners throughout the journey. With years of experience as a  professional immigration service provider, our team has helped countless  individuals, families, and professionals achieve their travel and relocation goals  with confidence and peace of mind.</p>
-              </div>
-
-
-
-              <div className={styles.storyCard}>
-                <p>  For students, we know how big the dream of studying abroad is. As one of the best student visa consultants in India, we guide you step by step — from preparing  the visa documentation checklist to visa interview training. Whether it's a  Canada student visa, UK study visa, USA student visa, or Australia study visa,  our goal is to make your journey smooth and stress-free. We also assist travelers  with tourist visas, including Canada visitor visas, Australia tourist visas, and Schengen visas for Europe.</p>
-              </div>
-
-
-
-              <div className={styles.storyCard}>
-
-              </div>
-
-
-              <div className={styles.storyCard}>
-                <p>  What makes us different is the people behind the process. Our team of  certified visa consultants and immigration specialists genuinely care about your  success. We work to reduce waiting times, minimize errors, and improve approval  rates. Whether it's a work visa, study visa, tourist visa, or business visa,  you'll find in us a partner who provides end-to-end visa solutions with clarity,  transparency, and dedication.
-                </p>
-                <p>
-                  This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.
-                </p>
-              </div>
-
+              <p>At Global Visa Internationals, we understand that applying for a visa can feel  overwhelming. That's why we're more than just a visa consultancy — we're your  trusted partners throughout the journey. With years of experience as a  professional immigration service provider, our team has helped countless  individuals, families, and professionals achieve their travel and relocation goals  with confidence and peace of mind.</p>
+              <p>For students, we know how big the dream of studying abroad is. As one of the best student visa consultants in India, we guide you step by step — from preparing  the visa documentation checklist to visa interview training. Whether it's a  Canada student visa, UK study visa, USA student visa, or Australia study visa,  our goal is to make your journey smooth and stress-free. We also assist travelers  with tourist visas, including Canada visitor visas, Australia tourist visas, and Schengen visas for Europe.</p>
+              <p>What makes us different is the people behind the process. Our team of  certified visa consultants and immigration specialists genuinely care about your  success. We work to reduce waiting times, minimize errors, and improve approval  rates. Whether it's a work visa, study visa, tourist visa, or business visa,  you'll find in us a partner who provides end-to-end visa solutions with clarity,  transparency, and dedication.</p>
             </div>
           </section>
         </section>
 
-
-
         <AnimatedHR direction="left" duration={1.2} />
-
-        <section className={styles.whyChooseContainer} id="Why Global Visa Internationals?">
-
-          <h2 className={styles.subtitle}>Why Global Visa Internationals?</h2>
-
-
-          {/* Main Description */}
-
-          <p>  At <strong>Global Visa Internationals</strong>, we specialize in comprehensive   visa consultation services, helping individuals and families  successfully navigate the complex visa process for over 11+ years.  Based in Bangalore, we've processed   55,000+ visas and conducted over  75,000 expert consultations across major visa categories.</p>
-          <p>  While we do not issue visas or represent any government body, our certified  consultants offer personalized advisory,  documentation support, and eligibility guidance  for all visa types.</p>
-
-
-          {/* SIDE-BY-SIDE CARDS */}
-          <div className={styles.serviceCards}>
-
-            <div className={styles.serviceCard}>
-              <h3>Our Services Include:</h3>
-              <ul>
-                <li>Student Visa Assistance & Study Abroad Planning</li>
-                <li>Work Visa Consultation for Professionals</li>
-                <li>Tourist & Visitor Visa Assistance for Indian Citizens</li>
-                <li>Business Travel Visa Assistance</li>
-                <li>Permanent Residency (PR) Visa Guidance</li>
-                <li>Skilled Migration Visa Support</li>
-                <li>Spouse & Dependent Visa Assistance</li>
-                <li>Refused Visa Reapplication & Review Services</li>
-                <li>And more customized solutions…</li>
-              </ul>
-            </div>
-
-
-
-            <div className={styles.serviceCard}>
-              <h3>Popular Visa Destinations:</h3>
-              <ul>
-                <li>Canada Visa Assistance – Study, Work, PR</li>
-                <li>Australia PR Visa Consulting</li>
-                <li>UK Student Visa Assistance</li>
-                <li>USA Visitor & Student Visa Guidance</li>
-                <li>Europe Schengen Visa Assistance</li>
-                <li>Japan Tourist Visa Assistance</li>
-                <li>China Tourist Business Visa Assistance</li>
-                <li>Singapore Tourist Visa Assistance</li>
-                <li>And many more global destinations…</li>
-              </ul>
-            </div>
-
-          </div>
-
-          <p>  Whether you're planning to <strong>work in Australia</strong>,  <strong> study in Canada</strong>, or <strong>travel to Europe</strong>,  our consultancy provides step-by-step guidance tailored to your goals.</p>
-          <p>  <strong>Disclaimer:</strong> Global Visa Internationals is a private visa  consultancy and is not affiliated with any government or embassy.  We provide independent visa and immigration assistance services.</p>
-
-        </section>
-
-
-
-        <section>
-          <div className={styles.whyGrid}>
-            <div className={styles.whyCard}>
-              <img
-                className={styles.whyImg}
-                src="https://www.globalvisainternationals.com//images/networking.png"
-                alt="Visa and immigration industry experience"
-                loading="lazy"
-              />
-              <strong>75+</strong>
-              <p>Years of combined visa & immigration industry experience</p>
-            </div>
-
-            <div className={styles.whyCard}>
-              <img
-                className={styles.whyImg}
-                src="https://www.globalvisainternationals.com//images/globe.png"
-                alt="Immigration destinations offered"
-                loading="lazy"
-              />
-              <strong>15+</strong>
-              <p>
-                Countries offered for study, work & PR immigration services
-              </p>
-            </div>
-
-            <div className={styles.whyCard}>
-              <img
-                className={styles.whyImg}
-                src="https://www.globalvisainternationals.com//images/crowd-of-users.png"
-                alt="Skilled migration and business visa options"
-                loading="lazy"
-              />
-              <strong>50+</strong>
-              <p>Visa options including skilled migration & business visas</p>
-            </div>
-
-            <div className={styles.whyCard}>
-              <img
-                className={styles.whyImg}
-                src=" https://www.globalvisainternationals.com//images/airplane.png"
-                alt="Successful immigration cases"
-                loading="lazy"
-              />
-              <strong>35,000+</strong>
-              <p>Successful visa & immigration cases processed worldwide</p>
-            </div>
-
-            <div className={styles.whyCard}>
-              <img
-                className={styles.whyImg}
-                src="https://www.globalvisainternationals.com//images/calendar.png"
-                alt="Visa consultancy since 2017"
-                loading="lazy"
-              />
-              <strong>Since 2017</strong>
-              <p>Over a decade of visa consulting excellence in India</p>
-            </div>
-          </div>
-        </section>
+        <WhychoosGVI />
+        <p className={styles.note}><strong>Disclaimer:</strong> Global Visa Internationals is a private visa consultancy and is not affiliated with any government or embassy. We provide independent visa and immigration assistance services.</p>
 
         <AnimatedHR direction="left" duration={1.2} />
 
@@ -450,11 +305,12 @@ export default function Home() {
             <iframe
               className={styles.iframe}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486.00853848403034!2d77.60577367689068!3d12.967480835531479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d5613d9a4b%3A0xea0b2fbdf4f08876!2sGlobal%20Visa%20Internationals!5e0!3m2!1sen!2sin!4v1741000774951!5m2!1sen!2sin"
-              allowFullScreen
+
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+
         </section>
 
         <section className={styles.faqSection}>
@@ -462,7 +318,9 @@ export default function Home() {
         </section>
 
         <p className={styles.note}>  {" "}  This service is provided by Global Visa Internationals, an independent  consultancy. We are not affiliated with the Australian Government or  any embassy.</p>
-      </main>
+
+
+      </main >
     </>
   );
 }
