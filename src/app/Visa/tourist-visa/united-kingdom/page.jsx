@@ -510,9 +510,7 @@ export default function UKTouristVisa() {
         </div>
       </div >
       <section>
-        <h2 style={{ textAlign: "center", marginTop: "2rem" }}>
-          What Our Clients Say
-        </h2>
+
         <ReviewSchema />
         <ReviewCarousel />
       </section>

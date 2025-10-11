@@ -1,12 +1,28 @@
+.reviewtitle {
+    display: flex;
+    margin-top: 40px;
+    text-align: center;
+}
+
 /* ===== Main Section ===== */
 .googleReviewSection {
     width: 95%;
     max-width: 1300px;
     margin: 2rem auto;
-    padding: 1rem;
-    overflow: hidden;
-    /* prevents cut-off edges */
+    padding: 1.5rem 1rem;
+    background: #f0eaea;
+    border-radius: 12px;
+    box-sizing: border-box;
+    overflow: visible;
+    /* allow buttons to show outside */
+    position: relative;
+    /* establish positioning context */
+    transition: all 0.3s ease;
+    z-index: 1;
+    /* keep it below buttons but above background */
 }
+
+
 
 /* ===== Header Row ===== */
 .headerRow {
@@ -15,23 +31,19 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+
 }
 
 .googleTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #202124;
 }
 
 .googleLogo {
     font-family: "Product Sans", Arial, sans-serif;
-    background: linear-gradient(90deg,
-            #4285f4 0%,
-            #ea4335 25%,
-            #fbbc05 50%,
-            #34a853 75%,
-            #4285f4 100%);
+    background: linear-gradient(90deg, #4285f4, #ea4335 25%, #fbbc05 50%, #34a853 75%, #4285f4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -40,7 +52,7 @@
 .ratingSummary {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 
 .ratingNumber {
@@ -54,53 +66,57 @@
     color: white;
     border: none;
     border-radius: 50px;
-    padding: 0.5rem 1.2rem;
+    padding: 0.6rem 1.4rem;
     font-weight: 500;
     text-decoration: none;
-    transition: background 0.3s ease;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .googleBtn:hover {
     background-color: #0b7f46;
+    transform: scale(1.05);
 }
 
-/* ===== Star Colors ===== */
+/* ===== Stars ===== */
 .star {
-    color: #fbbc05;
-    /* Always show yellow stars */
+    color: gold;
     font-size: 1.1rem;
+}
+
+.filledStar {
+    color: #fbbc05;
 }
 
 /* ===== Carousel ===== */
 .carouselWrapper {
     overflow: hidden;
-    width: 95%;
+    width: 100%;
+    position: relative;
 }
 
 .reviewRow {
     display: flex;
     gap: 1rem;
-    overflow-x: auto;
-    /* allow horizontal scroll */
-    padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
+    transition: transform 0.6s ease-in-out;
 }
 
+/* Individual Review Cards */
 .card {
     flex: 1 0 calc(20% - 1rem);
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 240px;
-    /* prevents clipping on small screens */
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 /* ===== Card Content ===== */
@@ -139,9 +155,13 @@
 }
 
 .googleLogoSmall {
-    color: #4285f4;
+    background: linear-gradient(90deg, #4285f4, #ea4335 25%, #fbbc05 50%, #34a853 75%, #4285f4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 600;
+    display: inline-block;
 }
+
 
 .time {
     font-size: 0.8rem;
@@ -154,6 +174,9 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
 }
 
 .readMore {
@@ -164,6 +187,7 @@
     font-weight: 500;
     font-size: 0.9rem;
     padding: 0;
+    margin-top: 0.4rem;
 }
 
 .readMore:hover {
@@ -178,21 +202,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 99;
     padding: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto;
 }
 
 .modal {
     background: #fff;
     border-radius: 16px;
-    width: 95%;
+    width: 90%;
     max-width: 600px;
     max-height: 80vh;
+    /* desktop/tablet */
     overflow-y: auto;
     padding: 24px;
     position: relative;
     box-sizing: border-box;
-    /* add this */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     animation: slideUp 0.3s ease-out;
 }
@@ -204,7 +230,8 @@
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
+    color: #333;
 }
 
 .modalHeader {
@@ -221,11 +248,33 @@
     margin-top: 16px;
 }
 
+.reviewText p {
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Owner Reply */
+.replyBox {
+    background: #f9f9f9;
+    border-left: 4px solid #0f9d58;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.replyBox h4 {
+    margin-bottom: 0.3rem;
+    color: #0f9d58;
+    font-size: 0.95rem;
+}
+
 .reviewLink {
     display: inline-block;
     margin-top: 1rem;
     color: #0b57d0;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .reviewLink:hover {
@@ -245,6 +294,24 @@
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== No Reviews ===== */
+.noReviews {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+    font-style: italic;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
     .card {
@@ -256,18 +323,15 @@
 @media (max-width: 768px) {
     .card {
         flex: 0 0 95%;
-        /* Full width */
         max-width: 95%;
-        /* Prevents any shrinking */
     }
 
     .reviewRow {
         flex-wrap: nowrap;
-        /* Keep horizontal scroll if needed */
         overflow-x: auto;
-        /* Allow scrolling if more cards */
         -webkit-overflow-scrolling: touch;
-        /* Smooth scrolling on iOS */
+        gap: 1rem;
+        padding-bottom: 0.5rem;
     }
 
     .headerRow {
@@ -279,10 +343,122 @@
 @media (max-width: 480px) {
     .modal {
         width: 95%;
-        /* smaller width on very small screens */
         padding: 16px;
-        /* reduce padding to fit screen */
-        max-height: 90vh;
-        /* allow taller modal if needed */
+        max-height: 70vh;
+    }
+
+    .googleTitle {
+        font-size: 1.3rem;
+    }
+
+    .googleBtn {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 95%;
+        padding: 12px;
+        max-height: 65vh;
+        /* smaller height on mobile */
+    }
+
+    .modalBody {
+        font-size: 0.9rem;
+        /* optional: reduce font-size slightly */
+    }
+}
+
+/* Reply Header */
+.replyHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.ownerLogoCircle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #0f9d58;
+    background: white;
+}
+
+.ownerLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.replyContent h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #0f9d58;
+}
+
+.ownerTag {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #555;
+    margin-left: 4px;
+}
+
+.replyContent p {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ===== Carousel Navigation Buttons ===== */
+.galleryNavBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(71, 71, 71, 0.2);
+    transition: all 0.3s ease;
+}
+
+.galleryNavBtn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.galleryNavBtn:focus-visible {
+    outline: 2px solid #277a00;
+}
+
+/* Positioning at the edges of .googleReviewSection */
+.galleryPrevBtn {
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: auto;
+}
+
+.galleryNextBtn {
+    right: 0;
+    z-index: auto;
+    transform: translate(50%, -50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .galleryNavBtn {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
     }
 }

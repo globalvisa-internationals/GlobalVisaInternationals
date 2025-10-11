@@ -273,7 +273,6 @@ export default function Home() {
 
         <AnimatedHR direction="left" duration={1.2} />
         <WhychoosGVI />
-        <p className={styles.note}><strong>Disclaimer:</strong> Global Visa Internationals is a private visa consultancy and is not affiliated with any government or embassy. We provide independent visa and immigration assistance services.</p>
 
         <AnimatedHR direction="left" duration={1.2} />
 
