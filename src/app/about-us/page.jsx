@@ -1,11 +1,11 @@
-
 import Image from 'next/image';
 import styles from './about.module.css';
 import React from 'react';
 import VisaForm from '@/Components/VisaForm';
 import Head from 'next/head';
 import AnimatedHR from '@/Components/AnimatedHR';
-import AnimatedSection from '@/Components/AnimatedSection';
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 
 
 export const metadata = {
@@ -261,7 +261,10 @@ export default function About() {
           </div>
         </div>
       </div>
-
+      <section>
+        <ReviewSchema />
+        <ReviewCarousel />
+      </section>
     </>
   );
 }

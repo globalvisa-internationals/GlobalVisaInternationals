@@ -10,6 +10,8 @@ import GalleryCarousel from "@/Components/GalleryCarousel";
 import ClientVideoCarousel from "@/Components/ClientVideoCarousel";
 import FAQAccordion from '@/Components/FAQAccordion';
 import { Agbalumo } from "next/font/google";
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 
 import MissionVisionValues from "@/Components/missionVisionValues";
 import Services from "@/Components/Services";
@@ -287,7 +289,12 @@ export default function Home() {
           <h2 className={styles.subtitle}>Our Values</h2>
           <MissionVisionValues />
         </section>
+        <AnimatedHR direction="left" duration={1.2} />
+        <section>
 
+          <ReviewSchema />
+          <ReviewCarousel />
+        </section>
         <h2 className={styles.subtitle}>Services</h2>
         <Services />
 

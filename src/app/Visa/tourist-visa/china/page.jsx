@@ -1,7 +1,8 @@
 import styles from "@/Components/Visa.module.css";
 import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
-
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
   title:
     "China Tourist & Business Visa: Requirements, Application & Top Places | Global Visa Internationals",
@@ -412,6 +413,11 @@ export default function Canada() {
           className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5"
           data-elfsight-app-lazy
         ></div>
+      </section>
+      <section>
+
+        <ReviewSchema />
+        <ReviewCarousel />
       </section>
     </>
   );

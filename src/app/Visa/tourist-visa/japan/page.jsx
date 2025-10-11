@@ -4,6 +4,8 @@ import React from 'react';
 import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
 
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
   title: "Japan Tourist Visa Consultants in Bangalore | Global Visa Internationals",
   description: "Apply for a Japan Tourist Visa with expert support from Global Visa Internationals. 11+ years of experience. Smooth documentation, fast process, and mock interviews.",
@@ -423,6 +425,11 @@ export default function JapanTouristVisa() {
       <section id='Client Reviews'>
         <h2 className={styles.subtitle}>Client Reviews</h2>
         <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+      </section>
+      <section>
+
+        <ReviewSchema />
+        <ReviewCarousel />
       </section>
     </>
   );
