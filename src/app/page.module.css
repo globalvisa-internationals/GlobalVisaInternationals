@@ -137,14 +137,6 @@
   opacity: 0.9;
 }
 
-.waveText {
-  padding-top: 10px;
-  font-size: 22px;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-
 
 @media (max-width: 768px) {
   .logoCard {
@@ -177,12 +169,10 @@
   }
 
   .tagline {
-    font-size: 0.5rem;
+    font-size: 0.5rem !important;
   }
 
-  .waveText {
-    font-size: 11px;
-  }
+
 
 }
 
