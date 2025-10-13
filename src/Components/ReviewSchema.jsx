@@ -15,7 +15,7 @@ function parseRelativeTime(relative) {
         const days = parseInt(relative) || 1;
         now.setDate(now.getDate() - days);
     }
-    return now.toISOString().split("T")[0]; // YYYY-MM-DD format
+    return now.toISOString().split("T")[0];
 }
 
 export function ReviewSchema() {
@@ -27,19 +27,58 @@ export function ReviewSchema() {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Global Visa Internationals",
+        "image": "https://globalvisainternationals.com/logo.png",
+        "url": "https://globalvisainternationals.com",
+        "telephone": "+91-7022213466",
+        "priceRange": "₹₹",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "G-F9, Business Point, 137 Brigade Road",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "postalCode": "560025",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.9716,
+            "longitude": 77.5946
+        },
+        "sameAs": [
+            "https://www.facebook.com/globalvisainternationals",
+            "https://www.instagram.com/globalvisainternationals",
+            "https://www.linkedin.com/company/globalvisainternationals"
+        ],
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": Number(avgRating),
             "reviewCount": reviews.length
         },
-        "review": reviews.map((r) => ({
-            "@type": "Review",
-            "author": { "@type": "Person", "name": r.name },
-            "datePublished": parseRelativeTime(r.time),
-            "reviewBody": r.text,
-            "reviewRating": { "@type": "Rating", "ratingValue": r.rating },
-            "url": r.link || "https://globalvisainternational.com/reviews"
-        }))
+        "review": reviews.map((r) => {
+            const reviewData = {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": r.name },
+                "datePublished": parseRelativeTime(r.time),
+                "reviewBody": r.text,
+                "reviewRating": { "@type": "Rating", "ratingValue": r.rating },
+                "url": r.link || "https://globalvisainternationals.com/reviews"
+            };
+
+            // ✅ Add reply if it exists
+            if (r.reply) {
+                reviewData.reviewReply = {
+                    "@type": "Comment",
+                    "author": {
+                        "@type": "Organization",
+                        "name": "Global Visa Internationals"
+                    },
+                    "datePublished": new Date().toISOString().split("T")[0],
+                    "text": r.reply
+                };
+            }
+
+            return reviewData;
+        })
     };
 
     return (

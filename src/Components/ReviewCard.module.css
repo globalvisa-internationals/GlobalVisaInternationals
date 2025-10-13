@@ -2,7 +2,6 @@
     display: flex;
     margin-top: 40px;
     text-align: center;
-    justify-content: center;
 }
 
 /* ===== Main Section ===== */
@@ -14,16 +13,12 @@
     background: #f0eaea;
     border-radius: 12px;
     box-sizing: border-box;
-    overflow: visible;
-    /* allow buttons to show outside */
+    overflow: hidden;
+    /* Changed from visible to hidden */
     position: relative;
-    /* establish positioning context */
     transition: all 0.3s ease;
     z-index: 1;
-    /* keep it below buttons but above background */
 }
-
-
 
 /* ===== Header Row ===== */
 .headerRow {
@@ -33,7 +28,6 @@
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
-
 }
 
 .googleTitle {
@@ -94,25 +88,36 @@
     overflow: hidden;
     width: 100%;
     position: relative;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+    /* Add padding for navigation buttons */
 }
 
 .reviewRow {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     transition: transform 0.6s ease-in-out;
+    justify-content: center;
+    /* Center the cards */
+    align-items: stretch;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* Individual Review Cards */
 .card {
-    flex: 1 0 calc(20% - 1rem);
+    flex: 0 0 auto;
+    /* Changed from flex: 1 0 calc(20% - 1rem) */
+    width: calc(20% - 0.8rem);
+    /* Calculate width based on 5 cards */
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    padding: 1rem;
+    padding: 0.6rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-width: 240px;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .card:hover {
@@ -162,7 +167,6 @@
     font-weight: 600;
     display: inline-block;
 }
-
 
 .time {
     font-size: 0.8rem;
@@ -215,13 +219,13 @@
     width: 90%;
     max-width: 600px;
     max-height: 80vh;
-    /* desktop/tablet */
     overflow-y: auto;
     padding: 24px;
     position: relative;
     box-sizing: border-box;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     animation: slideUp 0.3s ease-out;
+    margin-top: 100px;
 }
 
 .closeBtn {
@@ -314,33 +318,78 @@
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1024px) {
+
+/* For 3 cards (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
     .card {
-        flex: 1 0 calc(50% - 1rem);
-        min-width: 260px;
+        width: calc(33.333% - 0.8rem);
     }
 }
 
-@media (max-width: 768px) {
+/* For 2 cards (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
     .card {
-        flex: 0 0 95%;
-        max-width: 95%;
+        width: calc(50% - 0.8rem);
+    }
+}
+
+/* For 1 card (mobile) */
+/* ===== Mobile View (Single Full-Width Card, Snap Scrolling, No Overflow) ===== */
+@media (max-width: 767px) {
+    .carouselWrapper {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        padding: 0;
+        margin: 0 auto;
     }
 
     .reviewRow {
+        display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
+        scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        gap: 1rem;
-        padding-bottom: 0.5rem;
+        gap: 10px;
+        padding: 0.5rem 0;
+        margin: 0;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .reviewRow::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+    }
+
+    .card {
+        flex: 0 0 100%;
+        max-width: 90%;
+        scroll-snap-align: center;
+        border-radius: 12px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .headerRow {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .googleBtn {
+        align-self: flex-start;
     }
 }
 
+
+/* For very small screens */
 @media (max-width: 480px) {
     .modal {
         width: 95%;
@@ -355,6 +404,10 @@
     .googleBtn {
         padding: 0.5rem 1rem;
     }
+
+    .carouselWrapper {
+        padding: 0px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -362,12 +415,10 @@
         width: 95%;
         padding: 12px;
         max-height: 65vh;
-        /* smaller height on mobile */
     }
 
     .modalBody {
         font-size: 0.9rem;
-        /* optional: reduce font-size slightly */
     }
 }
 
@@ -431,6 +482,7 @@
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 5px rgba(71, 71, 71, 0.2);
     transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .galleryNavBtn:hover {
@@ -444,15 +496,11 @@
 
 /* Positioning at the edges of .googleReviewSection */
 .galleryPrevBtn {
-    left: 0;
-    transform: translate(-50%, -50%);
-    z-index: auto;
+    left: 10px;
 }
 
 .galleryNextBtn {
-    right: 0;
-    z-index: auto;
-    transform: translate(50%, -50%);
+    right: 10px;
 }
 
 /* Responsive adjustments */
@@ -461,5 +509,13 @@
         width: 30px;
         height: 30px;
         font-size: 20px;
+    }
+
+    .galleryPrevBtn {
+        left: 5px;
+    }
+
+    .galleryNextBtn {
+        right: 5px;
     }
 }
