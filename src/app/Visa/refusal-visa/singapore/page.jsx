@@ -1,78 +1,10 @@
-"use client";
+
+import VisaForm from '@/Components/VisaForm';
 import styles from './singapore.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { NextSeo, LocalBusinessJsonLd, FAQPageJsonLd } from 'next-seo';
+import React from 'react';
 
 export default function Canada() {
 
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
-  };
-  //reviews
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
   return (
     <>
       <head>
@@ -386,89 +318,17 @@ export default function Canada() {
               <li><strong>End-to-End Support:</strong> From the moment you contact us until your visa is approved, we provide continuous, transparent support. This includes answering your questions, preparing you for potential interviews (if required), and liaising with authorized visa agents on your behalf where possible.</li>
             </ul>
             <p className={styles.note}>Don't let a visa refusal put an end to your aspirations of a life or visit to Singapore. The journey might seem daunting, but with Global Visa Internationals by your side, it becomes manageable and hopeful. Contact Global Visa Internationals today for a comprehensive consultation! We are dedicated to helping you turn your "No" into a "Yes." <strong>Let us take the burden off your shoulders, navigate the complexities of ICA procedures, and guide you every step of the way towards your successful Singapore journey.</strong></p>
-           <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+            <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
           </div>
 
           <div className={styles.formSection}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["Canada", "USA", "UK", "Canada", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa", "Visa Refusal Assistance"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
         </div>
 
 
       </div>
-      <h2 className={styles.subtitle}>Client Reviews</h2>
-      <section id='Client Reviews'>
 
-        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-      </section>
     </>
   );
 }

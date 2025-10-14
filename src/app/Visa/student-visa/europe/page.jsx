@@ -1,69 +1,10 @@
-"use client";
+
 import styles from './Europe.module.css';
-import React, { useState } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import React from 'react';
 import Head from 'next/head';
-export default function Europe() {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
+import VisaForm from '@/Components/VisaForm';
+export default function EuropeStudentVisa() {
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
-  };
 
 
   return (
@@ -139,85 +80,12 @@ export default function Europe() {
 
       <div className={styles.EuropeSec}>
 
-
         <div className={styles.EuropeData}>
           <h1 className={styles.Title}>Dreaming of Studying in Europe? Your Visa Journey Starts Here at Global Visa Internationals</h1>
           <p>Europe is not just home to prestigious universities—it's a vibrant hub for cultural exchange and personal development. Studying in Europe immerses you in a diverse environment that enhances your global networking skills and offers life-changing experiences. From the historical charm of cities like Rome and Prague to the innovative energy of Berlin and Amsterdam, each location presents a unique fusion of tradition and modernity.</p>
           <p>Whether you're delving into engineering in Germany, exploring fashion in Italy, or engaging with literature in France, a European education equips you for an impressive global career. It's clear why thousands of international students choose Europe each year.</p>
           <p>Keep in mind that there isn't a standardized “European Union student visa.” Your visa type will depend on your destination, and you may need to navigate either the Schengen visa regulations or the national rules if you’re headed to non-Schengen countries like the UK or Ireland.</p>
-          <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
           <h3 className={styles.subTitle}>Why choose Europe for your academic pursuits?</h3>
           <p>Beyond the prestigious universities and cutting-edge research opportunities, Europe offers a unique cultural experience. From bustling metropolitan cities to charming historical towns, each country boasts its own distinct character and heritage. Studying in Europe provides an unparalleled chance for personal growth, cross-cultural understanding, and the development of a global network.</p>
           <p>It's important to understand that there isn't a single "European Union student visa." Each member country within the Schengen Area and beyond has its own specific regulations and application procedures for international students. Factors such as your nationality, the duration of your studies, and the specific country you plan to study in will significantly influence the visa requirements you need to fulfill.</p>
@@ -229,22 +97,15 @@ export default function Europe() {
           <h4 className={styles.subTitle}>General Requirements:</h4>
           <ul>
             <li>Valid passport</li>
-
             <li>Visa application form</li>
-
             <li>Passport-sized photos</li>
-
             <li>Acceptance letter from a recognized institution</li>
-
             <li>Proof of sufficient financial means</li>
-
             <li>Travel medical insurance</li>
-
             <li>Proof of accommodation</li>
-
           </ul>
           <p className={styles.note}>
-            <strong>⚠️ Important:</strong> While there are shared rules for Schengen entry, each country has unique requirements. For country-specific advice tailored to your study destination, reach out to our expert team at Global Visa Internationals.</p>
+            <strong> Important:</strong> While there are shared rules for Schengen entry, each country has unique requirements. For country-specific advice tailored to your study destination, reach out to our expert team at Global Visa Internationals.</p>
 
           <h3 className={styles.subTitle}>Non-Schengen Student Visas</h3>
           <p>Countries like the United Kingdom, Ireland, Croatia, and others are not part of the Schengen Area, and they issue their own national student visas.</p>
@@ -265,82 +126,9 @@ export default function Europe() {
             <li>Police clearance or TB test (depends on the country)</li>
           </ul>
           <p className={styles.note}>
-            <strong>📝 Note:</strong>
+            <strong> Note:</strong>
             Non-Schengen countries often have distinct timelines, interview processes, and documentation requirements. To ensure accuracy, speak with a Global Visa Internationals advisor.
           </p>
-
-          <div className={styles.formSection1}>
-            <h2 className={styles.subTitle}>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
 
           <h1 className={styles.subTitle}>
@@ -463,12 +251,9 @@ export default function Europe() {
             </tbody>
           </table>
 
-
           <p className={styles.note}>
             <strong>Note:</strong> Tuition fees and living expenses are approximate and can vary based on the institution, city, and personal lifestyle. Major cities typically have higher living costs compared to smaller towns. Exchange rates fluctuate; the above INR estimates are based on an approximate rate of 1 EUR = ₹90. For the most accurate and up-to-date information, refer to the official websites of your chosen educational institutions and local resources.
           </p>
-
-
 
           <h3 className={styles.subTitle}> Essential Steps in the European Student Visa Application Process</h3>
           <p>Regardless of whether you are applying for a visa to a Schengen or a non-Schengen country, some general steps are commonly involved in the European student visa application process:</p>
@@ -500,91 +285,16 @@ export default function Europe() {
           <h2 className={styles.subTitle}>Why Contact Global Visa Internationals?</h2>
           <p>We specialize in helping international students like you successfully obtain European student visas. With expert insight into both Schengen and non-Schengen requirements, we ensure your application is accurate, timely, and strong.</p>
           <ul className={styles.list}>
-            <li>✅ Personalized guidance</li>
-            <li>✅ Up-to-date regulations</li>
-            <li>✅ Country-specific documentation support</li>
-            <li>✅ End-to-end visa assistance</li>
+            <li> Personalized guidance</li>
+            <li> Up-to-date regulations</li>
+            <li> Country-specific documentation support</li>
+            <li> End-to-end visa assistance</li>
           </ul>
           <p className={styles.note}>📞 Contact us today for a free consultation and unlock your path to European education with confidence.</p>
-
-          <section id='Client Reviews'>
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-          </section>
-          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p> 
         </div>
+
         <div className={styles.formSection}>
-          <h2>Immigration Inquiry Form</h2>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+          <VisaForm />
         </div>
 
       </div>

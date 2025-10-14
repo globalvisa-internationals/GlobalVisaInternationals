@@ -1,3 +1,8 @@
+import VisaForm from "@/Components/VisaForm";
+import styles from "@/Components/Visa.module.css";
+import ReviewCarousel from "@/Components/ReviewCarousel";
+import { ReviewSchema } from "@/Components/ReviewSchema";
+
 export const metadata = {
   title:
     "Australia PR Visa Assistance from India | Skilled Migration Consultants - Global Visa Internationals",
@@ -259,6 +264,7 @@ export default function AustraliaPRVisaPage() {
       </div>
 
       <div className={styles.VisaSec}>
+
         <div className={styles.VisaData}>
           <h1 className={styles.Title}>Australia Permanent Residency (PR) Visa Assistance & Immigration Consulting Services</h1>
           <h3 className={styles.subTitle}>What is PR in Australia? Why people seek PR (living, work, study rights)</h3>
@@ -659,12 +665,13 @@ export default function AustraliaPRVisaPage() {
         <div className={styles.formSection}>
           <VisaForm />
         </div>
+
       </div>
-
-      <section id='Client Reviews'>
-
-        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+      <section>
+        <ReviewSchema />
+        <ReviewCarousel />
       </section>
+
     </>
   );
 }

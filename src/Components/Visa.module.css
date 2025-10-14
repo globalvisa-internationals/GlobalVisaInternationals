@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
     font-size: 15px;
     gap: 18px;
@@ -111,7 +111,7 @@
 
 /* === Table === */
 .table {
-    width: 100%;
+    width: 90%;
     max-width: 100%;
     margin: 1.2rem 0;
     border-radius: var(--radius);
@@ -168,7 +168,7 @@
 /* Extra small screens (<400px) */
 @media (max-width: 400px) {
     .table {
-        width: 100%;
+        width: 90%;
         border-radius: var(--radius);
         border: 1px solid #ccc;
         table-layout: fixed;
@@ -306,7 +306,7 @@
     }
 
     .VisaSec {
-        max-width: 1200px;
+        max-width: 90%;
     }
 
     .formSection {

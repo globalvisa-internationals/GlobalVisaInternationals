@@ -1,70 +1,10 @@
-"use client";
+
 import styles from './newzeland.module.css';
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import VisaForm from '@/Components/VisaForm';
 
 export default function newzeland() {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
-  };
 
 
   return (
@@ -161,79 +101,6 @@ export default function newzeland() {
 
 
 
-          <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
 
           <h3 className={styles.subTitle}> Understanding the New Zealand Student Visa Landscape in 2025:</h3>
           <p>Navigating the different visa categories is essential. Here's an overview of the primary New Zealand student visa types:</p>
@@ -277,9 +144,9 @@ export default function newzeland() {
             <li>English Language Proficiency: While not always a universal requirement, a strong command of English is crucial for academic success and daily life. Your chosen institution may have specific English language requirements (e.g., IELTS score of [Contact Global Visa Internationals for typical score ranges]).</li>
           </ul>
           <p>In addition to these general requirements, specific institutions may have additional criteria or documentation requests. Always check with your chosen institution for any unique requirements.</p>
-            <p className={styles.note}> By Seeing all Details Getting Confuse! <br />Dont Wory We are hear Contact Global Visa internationals, We are the Experts in New-Zeland Student Visa Processing Contact Us Now, We will Guide you through entire Visa process, Make your Visa Process Stress Free Dont Let Your Stops Due to lengthy Visa process , Contact Us now for free Consultation</p>
-          
-          
+          <p className={styles.note}> By Seeing all Details Getting Confuse! <br />Dont Wory We are hear Contact Global Visa internationals, We are the Experts in New-Zeland Student Visa Processing Contact Us Now, We will Guide you through entire Visa process, Make your Visa Process Stress Free Dont Let Your Stops Due to lengthy Visa process , Contact Us now for free Consultation</p>
+
+
           <h3 className={styles.subTitle}>Essential Documents for Your New Zealand Student Visa Application:</h3>
           <p>Meticulous preparation of your documents is key. Here's a general list of what you'll likely need:</p>
           <ol><li>A fully completed student visa application form (usually submitted online via the Immigration New Zealand website).</li>
@@ -419,79 +286,8 @@ export default function newzeland() {
           <p><strong>To get precise and personalized cost estimates based on your chosen program and preferred location, and for the most current information on tuition fees, living expenses, visa application fees, and available scholarships, it is highly recommended to contact Global Visa Internationals.</strong> They can provide tailored guidance and up-to-date details relevant to your specific situation</p>
           <p>
             At Global Visa Internationals, we provide expert assistance to individuals navigating the newzeland immigration process. Whether you aim to study, work, or settle in the newzeland, our team is here to guide you every step of the way. Contact us today to explore your best immigration options!</p>
-          <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
 
 
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
           <h2>Frequently Asked Questions (FAQs)</h2>
           <h3>1. What is the processing time for a New Zealand student visa?</h3>
           <p>The processing time for a New Zealand student visa can vary based on several factors, including the volume of applications and the completeness of your documentation. Generally, it takes around 4 to 8 weeks. However, it's advisable to apply well in advance of your intended start date.</p>
@@ -538,93 +334,15 @@ export default function newzeland() {
           <h3>22. What are the visa requirements for studying in New Zealand?</h3>
           <p>The visa requirements for studying in New Zealand depend on your academic program and the duration of your stay. Generally, you will need a New Zealand student visa, which can be obtained through the New Zealand Immigration Service.</p>
 
-          
- <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+
+          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
-
-
-
-
-
 
         <div className={styles.formSection}>
-          <h2>Immigration Inquiry Form</h2>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+          <VisaForm />
         </div>
       </div>
-      <section id='Client Reviews'>
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-      </section>
+
     </>
   );
 }

@@ -1,336 +1,269 @@
-"use client";
+
+import VisaForm from '@/Components/VisaForm';
 import styles from './USA.module.css';
-import React, { useState, useEffect } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { NextSeo, LocalBusinessJsonLd, FAQPageJsonLd } from 'next-seo';
+import React from 'react';
 
 export default function Canada() {
 
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
-  };
-  //reviews
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
   return (
     <>
-     <head>
-  <title>USA Visa Refusal Help | Global Visa Internationals</title>
-  <meta charset="UTF-8" />
-  <meta
-    name="description"
-    content="USA visa refused? Don't lose hope! Global Visa Internationals offers expert assistance for USA visa re-applications from India. Get help with demonstrating genuine intent, strong ties, and proper documentation for successful re-application after a US visa rejection."
-  />
-  <meta
-    name="keywords"
-    content="USA visa refusal India, USA visa rejection, US visa 214b refusal, US visa reapplication, USA visa consultants India, visa refusal help USA, genuine intent USA visa, student visa refusal USA, work visa refusal USA, visitor visa refusal USA, USA immigration consultant India, Global Visa Internationals"
-  />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Global Visa Internationals" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0A3161" />
-  <link
-    rel="canonical"
-    href="https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
-  />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link
-    rel="preload"
-    as="image"
-    href="https://www.globalvisainternationals.com/images/usa-visa-refusal-banner.jpg"
-  />
-  <link rel="stylesheet" href="./Visa/refusal-visa/usa.module.css" />
-  <meta
-    property="og:title"
-    content="USA Visa Refused? Expert Help from Global Visa Internationals"
-  />
-  <meta
-    property="og:description"
-    content="Facing a USA visa refusal? We provide comprehensive support for re-applications and expert guidance, increasing your chances of success. Contact Global Visa Internationals for help after a US visa rejection."
-  />
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:url"
-    content="https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
-  />
-  <meta
-    property="og:image"
-    content="https://www.globalvisainternationals.com/images/usa-visa-refusal-banner.jpg"
-  />
-  <meta property="og:site_name" content="Global Visa Internationals" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:locale:alternate" content="en_US" />
+      <head>
+        <title>USA Visa Refusal Help | Global Visa Internationals</title>
+        <meta charset="UTF-8" />
+        <meta
+          name="description"
+          content="USA visa refused? Don't lose hope! Global Visa Internationals offers expert assistance for USA visa re-applications from India. Get help with demonstrating genuine intent, strong ties, and proper documentation for successful re-application after a US visa rejection."
+        />
+        <meta
+          name="keywords"
+          content="USA visa refusal India, USA visa rejection, US visa 214b refusal, US visa reapplication, USA visa consultants India, visa refusal help USA, genuine intent USA visa, student visa refusal USA, work visa refusal USA, visitor visa refusal USA, USA immigration consultant India, Global Visa Internationals"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Global Visa Internationals" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0A3161" />
+        <link
+          rel="canonical"
+          href="https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
+        />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://www.globalvisainternationals.com/images/usa-visa-refusal-banner.jpg"
+        />
+        <link rel="stylesheet" href="./Visa/refusal-visa/usa.module.css" />
+        <meta
+          property="og:title"
+          content="USA Visa Refused? Expert Help from Global Visa Internationals"
+        />
+        <meta
+          property="og:description"
+          content="Facing a USA visa refusal? We provide comprehensive support for re-applications and expert guidance, increasing your chances of success. Contact Global Visa Internationals for help after a US visa rejection."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
+        />
+        <meta
+          property="og:image"
+          content="https://www.globalvisainternationals.com/images/usa-visa-refusal-banner.jpg"
+        />
+        <meta property="og:site_name" content="Global Visa Internationals" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:locale:alternate" content="en_US" />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="USA Visa Refusal Assistance | Global Visa Internationals"
-  />
-  <meta
-    name="twitter:description"
-    content="Don't give up on your USA dream after a visa refusal. Global Visa Internationals offers expert guidance and support for re-applications to the US."
-  />
-  <meta
-    name="twitter:image"
-    content="https://www.globalvisainternationals.com/images/usa-visa-refusal-banner.jpg"
-  />
-  <meta
-    name="twitter:url"
-    content="https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
-  />
-  <meta name="twitter:site" content="@GlobalVisaIntl" />
-  <meta name="twitter:creator" content="@GlobalVisaIntl" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="USA Visa Refusal Assistance | Global Visa Internationals"
+        />
+        <meta
+          name="twitter:description"
+          content="Don't give up on your USA dream after a visa refusal. Global Visa Internationals offers expert guidance and support for re-applications to the US."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.globalvisainternationals.com/images/usa-visa-refusal-banner.jpg"
+        />
+        <meta
+          name="twitter:url"
+          content="https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
+        />
+        <meta name="twitter:site" content="@GlobalVisaIntl" />
+        <meta name="twitter:creator" content="@GlobalVisaIntl" />
 
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="black-translucent"
-  />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta name="geo.region" content="US" />
-  <meta name="geo.placename" content="United States" />
-  <meta name="geo.region" content="IN-KA" />
-  <meta name="geo.placename" content="Bengaluru" />
-  <meta name="ICBM" content="37.0902,-95.7129" />
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Global Visa Internationals",
-        "url": "https://www.globalvisainternationals.com",
-        "logo": "https://www.globalvisainternationals.com/logo.png",
-        "description": "Trusted visa consultants helping Indian travelers with USA visa refusal re-applications and expert support.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "MG Road",
-          "addressLocality": "Bengaluru",
-          "addressRegion": "KA",
-          "postalCode": "560025",
-          "addressCountry": "IN"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-7022213466",
-          "contactType": "Customer Support"
-        },
-        "sameAs": [
-          "https://www.facebook.com/GlobalVisaInternationals",
-          "https://www.linkedin.com/company/globalvisainternationals",
-          "https://twitter.com/GlobalVisaIntl"
-        ]
-      })
-    }}
-  />
+        <meta name="geo.region" content="US" />
+        <meta name="geo.placename" content="United States" />
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bengaluru" />
+        <meta name="ICBM" content="37.0902,-95.7129" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com",
+              "logo": "https://www.globalvisainternationals.com/logo.png",
+              "description": "Trusted visa consultants helping Indian travelers with USA visa refusal re-applications and expert support.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "MG Road",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "KA",
+                "postalCode": "560025",
+                "addressCountry": "IN"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-7022213466",
+                "contactType": "Customer Support"
+              },
+              "sameAs": [
+                "https://www.facebook.com/GlobalVisaInternationals",
+                "https://www.linkedin.com/company/globalvisainternationals",
+                "https://twitter.com/GlobalVisaIntl"
+              ]
+            })
+          }}
+        />
 
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.globalvisainternationals.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Visa Refusal",
-            "item": "https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "USA"
-          }
-        ]
-      })
-    }}
-  />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.globalvisainternationals.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Visa Refusal",
+                  "item": "https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "USA"
+                }
+              ]
+            })
+          }}
+        />
 
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What are the common reasons for USA visa refusal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The most common reason for non-immigrant visa refusal is Section 214(b) (failure to overcome the presumption of immigrant intent). Other reasons include failure to meet financial requirements, incomplete or inconsistent documentation, misrepresentation, inadmissibility issues (health, criminal history, prior immigration violations), and failure to meet specific eligibility criteria for the visa category."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I appeal a USA visa refusal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For most U.S. non-immigrant visa refusals (especially under Section 214(b)), there is no formal appeal process or administrative review. The recommended course of action is to reapply if your circumstances have significantly changed or if you have new, substantial evidence to address the previous refusal reason(s). If refused under Section 221(g) for missing information, you must provide the requested documents."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How can I strengthen my USA visa re-application after a refusal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Analyze your refusal reason(s) carefully. Gather new and stronger evidence to address those specific points, particularly demonstrating stronger ties to India (financial, family, employment) and a clear, credible reason for your visit. Ensure all documentation is complete, consistent, and accurately presented. Professional guidance can be highly beneficial."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What does 'presumption of immigrant intent' (Section 214(b)) mean for a USA visa application?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Under U.S. immigration law (Section 214(b) of the Immigration and Nationality Act), every non-immigrant visa applicant is presumed to be an intending immigrant. You must prove to the consular officer that you have strong ties to your home country (India) that would compel you to return after your temporary stay in the U.S. and that your visit is genuinely temporary."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Should I hire an immigration consultant or lawyer after a USA visa refusal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "While not strictly required, it is highly recommended to seek professional guidance from experienced USA visa consultants or immigration experts. They can help you understand the specific reasons for your refusal, identify weaknesses in your previous application, and assist in preparing a robust re-application with compelling evidence, significantly improving your chances of approval."
-            }
-          }
-        ]
-      })
-    }}
-  />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What are the common reasons for USA visa refusal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The most common reason for non-immigrant visa refusal is Section 214(b) (failure to overcome the presumption of immigrant intent). Other reasons include failure to meet financial requirements, incomplete or inconsistent documentation, misrepresentation, inadmissibility issues (health, criminal history, prior immigration violations), and failure to meet specific eligibility criteria for the visa category."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I appeal a USA visa refusal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For most U.S. non-immigrant visa refusals (especially under Section 214(b)), there is no formal appeal process or administrative review. The recommended course of action is to reapply if your circumstances have significantly changed or if you have new, substantial evidence to address the previous refusal reason(s). If refused under Section 221(g) for missing information, you must provide the requested documents."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I strengthen my USA visa re-application after a refusal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Analyze your refusal reason(s) carefully. Gather new and stronger evidence to address those specific points, particularly demonstrating stronger ties to India (financial, family, employment) and a clear, credible reason for your visit. Ensure all documentation is complete, consistent, and accurately presented. Professional guidance can be highly beneficial."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What does 'presumption of immigrant intent' (Section 214(b)) mean for a USA visa application?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Under U.S. immigration law (Section 214(b) of the Immigration and Nationality Act), every non-immigrant visa applicant is presumed to be an intending immigrant. You must prove to the consular officer that you have strong ties to your home country (India) that would compel you to return after your temporary stay in the U.S. and that your visit is genuinely temporary."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Should I hire an immigration consultant or lawyer after a USA visa refusal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "While not strictly required, it is highly recommended to seek professional guidance from experienced USA visa consultants or immigration experts. They can help you understand the specific reasons for your refusal, identify weaknesses in your previous application, and assist in preparing a robust re-application with compelling evidence, significantly improving your chances of approval."
+                  }
+                }
+              ]
+            })
+          }}
+        />
 
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "USA Visa Refusal Assistance",
-        "provider": {
-          "@type": "Organization",
-          "name": "Global Visa Internationals",
-          "url": "https://www.globalvisainternationals.com"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "India"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "USA Visa Refusal Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "USA Visitor Visa Refusal Assistance"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "USA Visa Refusal Assistance",
+              "provider": {
+                "@type": "Organization",
+                "name": "Global Visa Internationals",
+                "url": "https://www.globalvisainternationals.com"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "India"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "USA Visa Refusal Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "USA Visitor Visa Refusal Assistance"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "USA Business Visa Refusal Assistance"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "USA Student Visa Refusal Assistance"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "USA Work Visa Refusal Assistance"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "USA Visa Reapplication Strategy"
+                    }
+                  }
+                ]
               }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "USA Business Visa Refusal Assistance"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "USA Student Visa Refusal Assistance"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "USA Work Visa Refusal Assistance"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "USA Visa Reapplication Strategy"
-              }
-            }
-          ]
-        }
-      })
-    }}
-  />
-</head>
+            })
+          }}
+        />
+      </head>
 
 
       <div className={styles.imageContainer}>
@@ -386,89 +319,17 @@ export default function Canada() {
               <li><strong>End-to-End Support:</strong> From the moment you contact us until your visa is approved, we provide continuous, transparent support. This includes answering your questions, preparing you thoroughly for your visa interview, and guiding you through every step of the process.</li>
             </ul>
             <p className={styles.note}>Don't let a visa refusal put an end to your aspirations of a life or visit to the USA. The journey might seem daunting, but with Global Visa Internationals by your side, it becomes manageable and hopeful. Contact Global Visa Internationals today for a comprehensive consultation! We are dedicated to helping you turn your "No" into a "Yes." <strong>Let us take the burden off your shoulders, navigate the complexities of U.S. visa procedures, and guide you every step of the way towards your successful USA journey.</strong></p>
-           <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+            <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
           </div>
 
           <div className={styles.formSection}>
-            <h1 className={styles.subTitle}>Visa Inquiry Form</h1>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["Canada", "USA", "USA", "Canada", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa", "Visa Refusal Assistance"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number of applicants" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
+            <VisaForm />
           </div>
         </div>
 
 
       </div>
-      <h2 className={styles.subtitle}>Client Reviews</h2>
-      <section id='Client Reviews'>
 
-        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-      </section>
     </>
   );
 }

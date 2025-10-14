@@ -1,8 +1,8 @@
 /* ========== WHY CHOOSE SECTION ========== */
 .whyChooseContainer {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0;
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
 }
@@ -12,11 +12,9 @@
     color: var(--primary);
     font-size: 1.75rem;
     font-weight: 600;
-    margin-bottom: 24px;
 }
 
 .whyChooseContainer p {
-    margin-bottom: 16px;
     text-align: justify;
 }
 
@@ -79,27 +77,27 @@
 /* ========== TABLET (≥768px) ========== */
 @media (min-width: 768px) {
     .whyChooseContainer {
-        margin: 60px auto;
+        margin: 10px auto;
         padding: 0 32px;
     }
 
     .whyChooseContainer h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 32px;
     }
 
     .serviceCards {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
-        margin: 40px 0;
+        margin: 10px 0;
     }
 
     .serviceCard {
-        padding: 28px;
+        padding: 20px;
     }
 
     .serviceCard h3 {
-        font-size: 1.375rem;
+        font-size: 1.5rem;
     }
 
 }
@@ -107,17 +105,17 @@
 /* ========== DESKTOP (≥1024px) ========== */
 @media (min-width: 1024px) {
     .whyChooseContainer {
-        margin: 80px auto;
+        margin: 0 auto;
     }
 
     .whyChooseContainer h2 {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     .serviceCards {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
-        margin: 48px 0;
+        margin: 10px 0;
     }
 
     .serviceCard {
@@ -130,11 +128,11 @@
 /* ========== LARGE DESKTOP (≥1200px) ========== */
 @media (min-width: 1200px) {
     .whyChooseContainer {
-        max-width: 1200px;
+        max-width: 95%px;
     }
 
     .serviceCards {
-        max-width: 1100px;
+        max-width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -262,8 +260,7 @@
 
 
 
-.subtitle,
-.mainHeading {
+.subtitle {
     display: flex;
     align-items: center;
     justify-content: center;

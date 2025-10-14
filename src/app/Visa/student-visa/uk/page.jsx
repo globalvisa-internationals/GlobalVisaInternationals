@@ -1,7 +1,7 @@
-"use client";
+
+import VisaForm from '@/Components/VisaForm';
 import styles from './Uk.module.css';
-import React, { useState } from 'react';
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import React from 'react';
 
 export default function UK() {
   const jsonLd = {
@@ -21,66 +21,6 @@ export default function UK() {
       "https://www.instagram.com/GlobalVisaInternationals"
       // Add other social media links as needed
     ]
-  };
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement)) {
-      alert("❌ Unexpected form submission target.");
-      return;
-    }
-
-    const formData = new FormData(form);
-
-
-    if (!executeRecaptcha) {
-      alert("❌ reCAPTCHA not ready");
-      return;
-    }
-
-    const token = await executeRecaptcha("inquiry_form");
-
-    if (!token) {
-      alert("❌ Please verify you're not a robot");
-      return;
-    }
-
-    const payload = {
-      ...Object.fromEntries(formData.entries()),
-      recaptchaToken: token,
-    };
-
-    // Optimistic UX
-    setShowPopup(true);
-    form.reset();
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 4000);
-
-
-
-    // Send email in background
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).then(async (res) => {
-      const data = await res.json();
-      if (!data.success) {
-        alert("❌ Email sending failed. Please try again.");
-      }
-    }).catch((err) => {
-      alert("❌ Something went wrong while submitting the form.");
-      console.error(err);
-    }).finally(() => {
-      setIsSubmitting(false);
-    });
   };
 
   return (
@@ -178,79 +118,7 @@ export default function UK() {
             <li>Biological Sciences</li>
             <li>Media and Communication</li>
           </ul>
-          <div className={styles.formSection1}>
-            <h2>Immigration Inquiry Form</h2>
-            <form id="inquiry-form" onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div>
-                  <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-                </div>
-              </div>
 
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="country" required>
-                    <option value="">Select Country</option>
-                    {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <select className={styles.select} name="immigration_type" required>
-                    <option value="">Select Immigration Type</option>
-                    {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-                </div>
-                <div>
-                  <select className={styles.select} name="age" required>
-                    <option value="">Select Age</option>
-                    <option value="18-45">18-45</option>
-                    <option value="45+">45+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.row}>
-                <div>
-                  <select className={styles.select} name="education" required>
-                    <option value="">Select Qualification</option>
-                    {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                      <option key={edu} value={edu}>{edu}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-                </div>
-              </div>
-
-
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-
-            </form>
-            {showPopup && (
-              <div className={styles.popupOverlay}>
-                <div className={styles.popupContent}>
-                  <p>✅ Your form has been submitted successfully!</p>
-                  <button onClick={() => setShowPopup(false)}>Close</button>
-                </div>
-              </div>
-            )}
-          </div>
           <h2 className={styles.subTitle}>UK Culture & Lifestyle</h2>
           <h3>Top MBA Programs in the UK</h3>
           <p>For those looking to pursue an MBA, the UK offers some of the best business schools in the world. These institutions provide students with exceptional networking opportunities, industry exposure, and leadership skills essential for a successful career.</p>
@@ -330,88 +198,15 @@ export default function UK() {
           <p>To apply for a UK student visa, you need to complete the online application form, pay the visa fee, provide biometric information, and submit supporting documents, including proof of acceptance from a UK university.</p>
           <h4>17. What is the duration of a UK student visa?</h4>
           <p>The duration of a UK student visa depends on the length of your course. Generally, it covers the duration of your studies plus an additional period for post-study work.</p>
- <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
         </div>
 
 
         <div className={styles.formSection}>
-          <h2>Immigration Inquiry Form</h2>
-          <form id="inquiry-form" onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="text" name="name" placeholder="Enter your name" required />
-              </div>
-              <div>
-                <input className={styles.input} type="text" name="phone" placeholder="Enter your phone number" required />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="country" required>
-                  <option value="">Select Country</option>
-                  {["newzeland", "USA", "UK", "Australia", "Europe", "Japan", "Dubai", "Singapore", "New-Zealand", "Other"].map((country) => (
-                    <option key={country} value={country}>{country}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <select className={styles.select} name="immigration_type" required>
-                  <option value="">Select Immigration Type</option>
-                  {["Work Visa", "Student Visa", "Visitor/Tourist Visa", "Business Visa", "Dependent Visa", "Permanent Residency Visa"].map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <input className={styles.input} type="number" name="applicants" min="1" placeholder="Enter number" required />
-              </div>
-              <div>
-                <select className={styles.select} name="age" required>
-                  <option value="">Select Age</option>
-                  <option value="18-45">18-45</option>
-                  <option value="45+">45+</option>
-                </select>
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div>
-                <select className={styles.select} name="education" required>
-                  <option value="">Select Qualification</option>
-                  {["Diploma", "Bachelor's", "Master's", "Doctorate", "Doctor", "Other"].map((edu) => (
-                    <option key={edu} value={edu}>{edu}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input className={styles.input} type="email" name="email" placeholder="Enter your email" required />
-              </div>
-            </div>
-
-
-            <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </button>
-
-          </form>
-          {showPopup && (
-            <div className={styles.popupOverlay}>
-              <div className={styles.popupContent}>
-                <p>✅ Your form has been submitted successfully!</p>
-                <button onClick={() => setShowPopup(false)}>Close</button>
-              </div>
-            </div>
-          )}
+          <VisaForm />
         </div>
       </div>
-      <section id='Client Reviews'>
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-      </section>
+
     </>
   );
 }
