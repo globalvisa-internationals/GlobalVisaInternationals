@@ -76,7 +76,7 @@ export default async function sitemap() {
     },
     {
       url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/china',
-      lastModified: new Date('2025-10-13'),
+      lastModified: new Date('2025-10-14'),
       changefreq: 'weekly',
       priority: 0.8,
     },
@@ -358,7 +358,7 @@ export default async function sitemap() {
       lastModified: new Date('2025-09-29'),
       changefreq: 'weekly',
       priority: 0.8,
-    },
+    }
 
   ]
 }

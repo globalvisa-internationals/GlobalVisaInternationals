@@ -74,60 +74,7 @@
 }
 
 /* ========== STATS GRID ========== */
-.whyGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 40px 0;
-    max-width: 100%;
-}
 
-.whyCard {
-    background: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: justify;
-    transition: all 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 1 160px;
-    max-width: 200px;
-}
-
-.whyCard:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.whyImg {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 12px;
-    object-fit: contain;
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-}
-
-.whyCard:hover .whyImg {
-    opacity: 1;
-}
-
-.whyCard strong {
-    display: block;
-    font-size: 1.25rem;
-    color: var(--accent);
-    margin: 8px 0;
-}
-
-.whyCard p {
-    font-size: 0.875rem;
-    line-height: 1.4;
-    margin: 0;
-    text-align: justify;
-}
 
 /* ========== TABLET (≥768px) ========== */
 @media (min-width: 768px) {
@@ -155,28 +102,6 @@
         font-size: 1.375rem;
     }
 
-    .whyGrid {
-        gap: 24px;
-        margin: 48px 0;
-    }
-
-    .whyCard {
-        flex: 0 1 200px;
-        padding: 24px;
-    }
-
-    .whyImg {
-        width: 56px;
-        height: 56px;
-    }
-
-    .whyCard strong {
-        font-size: 1.375rem;
-    }
-
-    .whyCard p {
-        font-size: 0.9375rem;
-    }
 }
 
 /* ========== DESKTOP (≥1024px) ========== */
@@ -199,17 +124,7 @@
         padding: 32px;
     }
 
-    .whyGrid {
-        gap: 28px;
-        /* On desktop, we want exactly 5 cards in one row */
-        justify-content: space-between;
-    }
 
-    .whyCard {
-        flex: 0 1 calc(20% - 23px);
-        /* 5 cards with gaps */
-        max-width: calc(20% - 23px);
-    }
 }
 
 /* ========== LARGE DESKTOP (≥1200px) ========== */
@@ -224,26 +139,128 @@
         margin-right: auto;
     }
 
+}
+
+
+/* ===== CARD GRID ===== */
+.whyGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* centers rows */
+    gap: 16px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* ===== INDIVIDUAL CARD ===== */
+.whyCard {
+    background: var(--background);
+    border: 1px solid #e0e0e0;
+    color: var(--text);
+    padding: 10px;
+    width: 160px;
+    flex: 0 1 160px;
+    /* prevents stretching */
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whyCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== CARD IMAGE ===== */
+.whyImg {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 12px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.whyCard:hover .whyImg {
+    filter: grayscale(0);
+}
+
+/* ===== CARD TEXT ===== */
+.whyCard strong {
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.whyCard p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 768px) {
     .whyGrid {
-        justify-content: center;
+        gap: 15px;
+        max-width: 90%;
     }
 
     .whyCard {
+        width: 90%px;
         flex: 0 1 200px;
-        max-width: 200px;
+        padding: 20px;
+    }
+
+    .whyImg {
+        height: 48px;
+        width: 48px;
+        margin-bottom: 14px;
+    }
+
+    .whyCard strong {
+        font-size: 1.3rem;
+    }
+
+    .whyCard p {
+        font-size: 0.9rem;
     }
 }
 
-/* ========== FALLBACK FOR OLDER BROWSERS ========== */
-@supports not (gap: 20px) {
+@media (min-width: 1024px) {
     .whyGrid {
-        margin: -10px;
+        gap: 15px;
+        max-width: 1200px;
     }
 
     .whyCard {
-        margin: 10px;
+        max-width: 230px;
+        flex: 0 1 230px;
+        padding: 24px;
+    }
+
+    .whyImg {
+        height: 52px;
+        width: 52px;
+        margin-bottom: 16px;
+    }
+
+    .whyCard strong {
+        font-size: 1.4rem;
+    }
+
+    .whyCard p {
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
 }
+
+
 
 .subtitle,
 .mainHeading {
