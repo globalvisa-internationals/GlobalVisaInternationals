@@ -254,27 +254,30 @@ export default function Important_Travel_Update_E_Arrival_Card_for_India_Effecti
 
 
             <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose dark:prose-invert">
-                <div className={Styles.meta}>
-                    <span>By {metadata.author}</span>
-                    <span>•</span>
-                    <span>
-                        {new Date(metadata.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                        })}
-                    </span>
-                </div>
                 <article>
-                    <header className="mb-6">
-                        <h1 className="text-3xl sm:text-4xl font-extrabold">Important Travel Update for Visitors to India — E-Arrival Card (From 1 Oct 2025)</h1>
-                        <p className="mt-3 text-gray-600">All international travellers (including OCI cardholders) must complete the new Electronic Arrival Card before entering India. This guide explains how to apply, why it helps, and what to do if your visa expires.</p>
+                    <div className={Styles.meta}>
+                        <span>By {metadata.author}</span>
+                        <span>•</span>
+                        <span>
+                            {new Date(metadata.date).toLocaleDateString("en-US", {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                            })}
+                        </span>
+                    </div>
 
-                        <div className="mt-4 flex flex-wrap gap-2 text-sm">
-                            <span className="px-3 py-1 bg-blue-50 text-blue-800 rounded">Effective: 1 Oct 2025</span>
-                            <span className="px-3 py-1 bg-green-50 text-green-800 rounded">Mandatory for: All foreign nationals</span>
-                        </div>
-                    </header>
+                    <div className={Styles.imageCard}>
+                        <picture>
+                            <source srcSet={fullImageWebp} type="image/webp" />
+                            <img
+                                src={fullImage}
+                                alt={metadata.title}
+                                className={Styles.image}
+                                loading="lazy"
+                            />
+                        </picture>
+                    </div>
 
                     <section>
                         <h2>What is the E-Arrival Card?</h2>
