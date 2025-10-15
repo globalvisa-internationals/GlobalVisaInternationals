@@ -27,7 +27,7 @@ export const metadata = {
     date: "2025-10-15",
     authors: [{ name: "Global Visa Internationals" }],
     category: "Visa Policy & Immigration News",
-    image: "https://www.globalvisainternationals.com/blogBannerImages/india-earrival-card-2025.jpg",
+    image: "https://www.globalvisainternationals.com/blogBannerImages/India-launched-E-arival-card-for-FOREIGNERs.jpg",
     imagealt: "Foreign traveler filling out India's new E-Arrival Card 2025 online",
     siteName: "Global Visa Internationals",
     type: "article",
@@ -41,7 +41,7 @@ export const metadata = {
         url: "https://www.globalvisainternationals.com/blog/india-e-arrival-card-2025-update",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/blogBannerImages/india-earrival-card-2025.jpg",
+                url: "https://www.globalvisainternationals.com/blogBannerImages/India-launched-E-arival-card-for-FOREIGNERs.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Foreign traveler filling out India's new E-Arrival Card 2025 online",
@@ -58,7 +58,7 @@ export const metadata = {
         description:
             "Starting October 2025, all travelers to India — including OCI cardholders — must complete the E-Arrival Card online before entry. Learn how to apply and avoid immigration delays.",
         images: [
-            "https://www.globalvisainternationals.com/blogBannerImages/india-earrival-card-2025.jpg",
+            "https://www.globalvisainternationals.com/blogBannerImages/India-launched-E-arival-card-for-FOREIGNERs.jpg",
         ],
     },
 
@@ -254,6 +254,17 @@ export default function Important_Travel_Update_E_Arrival_Card_for_India_Effecti
 
 
             <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose dark:prose-invert">
+                <div className={Styles.meta}>
+                    <span>By {metadata.author}</span>
+                    <span>•</span>
+                    <span>
+                        {new Date(metadata.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                        })}
+                    </span>
+                </div>
                 <article>
                     <header className="mb-6">
                         <h1 className="text-3xl sm:text-4xl font-extrabold">Important Travel Update for Visitors to India — E-Arrival Card (From 1 Oct 2025)</h1>
