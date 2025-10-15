@@ -7,48 +7,61 @@ import React from "react";
 
 export const metadata = {
     title: "US Adds Four Countries to the $15,000 Visa Bond List — Should Indian Tourists Worry?",
-    description: "The United States has once again tightened its visitor visa policy by expanding its “visa bond” program, adding four more countries to the list where travelers may be asked to pay up to $15,000 as a refundable bond before entering the country.",
-    keywords: ["US Visa Integrity Fee 2025", "Do Indians need to pay Visa Integrity Fee", "USA tourist visa fee for Indians", "US student visa fee from India", "US H1B visa fee increase 2025", "Visa MRV vs Integrity Fee explained", "Refund of US Visa Integrity Fee", "Trump visa fee policy criticism", "Extra charges for Indian travelers USA", "US visa news for Indians 2025"],
+    description:
+        "The United States has expanded its controversial ‘visa bond’ program, now including four additional countries whose travelers may be asked to pay a refundable bond of up to $15,000 before entering the country. Here's what it means, how it works, and whether Indian visitors should be concerned.",
+    keywords: [
+        "US visa bond 2025",
+        "US visitor visa bond countries",
+        "15,000 USD visa bond list",
+        "US travel policy update 2025",
+        "Indian tourists US visa bond",
+        "US B1 B2 visa bond",
+        "US immigration rules 2025",
+        "Refundable visa bond USA",
+        "Trump-era visa bond reinstated",
+        "Global visa news 2025"
+    ],
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    alternates: { canonical: "https://www.globalvisainternationals.com/blog/US-Adds-Four-Countries-to-the-$15000-Visa-Bond-List-Should-Indian-Tourists-Worry", },
-    url: "https://www.globalvisainternationals.com/blog/US-Adds-Four-Countries-to-the-$15000-Visa-Bond-List-Should-Indian-Tourists-Worry",
+    alternates: {
+        canonical: "https://www.globalvisainternationals.com/blog/US-Adds-Four-Countries-to-the-Dollar-15000-Visa-Bond-List-Should-Indian-Tourists-Worry",
+    },
+    url: "https://www.globalvisainternationals.com/blog/US-Adds-Four-Countries-to-the-Dollar-15000-Visa-Bond-List-Should-Indian-Tourists-Worry",
     author: "Global Visa Internationals",
     date: "2025-10-11",
     authors: [{ name: "Global Visa Internationals" }],
     category: "Visa Policy & Immigration News",
-    image: "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
-    imagealt: "Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate",
+    image: "https://www.globalvisainternationals.com/blogBannerImages/us-visa-bond-program-2025.jpg",
+    imagealt: "US Consulate with travelers affected by new $15,000 visa bond policy",
     siteName: "Global Visa Internationals",
     type: "article",
+
     openGraph: {
         type: "article",
         locale: "en_US",
-        title: "US Adds Four Countries to the $15,000 Visa Bond List — Should Indian Tourists Worry?",
-        description: "The United States has once again tightened its visitor visa policy by expanding its “visa bond” program, adding four more countries to the list where travelers may be asked to pay up to $15,000 as a refundable bond before entering the country.",
-        url: "https://www.globalvisainternationals.com/blog/do-indians-pay-250-usa-visa-integrity-fee",
-
+        title: "US Expands $15,000 Visa Bond List — New Countries Added in 2025",
+        description:
+            "The U.S. has added four more nations to its $15,000 refundable visa bond list. Learn what the rule means, how it affects travelers, and whether Indian visitors should worry.",
+        url: "https://www.globalvisainternationals.com/blog/US-Adds-Four-Countries-to-the-Dollar-15000-Visa-Bond-List-Should-Indian-Tourists-Worry",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+                url: "https://www.globalvisainternationals.com/blogBannerImages/us-visa-bond-program-2025.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Indian traveler facing extra $250 Visa Integrity Fee at U.S. consulate",
+                alt: "US Consulate and travelers affected by new visa bond list 2025",
                 type: "image/jpeg",
             },
         ],
     },
 
-
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
         creator: "@GLOBALVISA1505",
-        title:
-            "US Adds Four Countries to the $15,000 Visa Bond List — Should Indian Tourists Worry?",
+        title: "US Adds Four Countries to the $15,000 Visa Bond List — Should Indian Tourists Worry?",
         description:
-            "The United States has once again tightened its visitor visa policy by expanding its “visa bond” program, adding four more countries to the list where travelers may be asked to pay up to $15,000 as a refundable bond before entering the country",
+            "The U.S. expands its refundable $15,000 visa bond policy to four more nations. Here’s what travelers — especially Indians — need to know about this new rule.",
         images: [
-            "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+            "https://www.globalvisainternationals.com/blogBannerImages/us-visa-bond-program-2025.jpg",
         ],
     },
 
@@ -56,23 +69,23 @@ export const metadata = {
         "article:published_time": "2025-10-11",
         "article:modified_time": new Date().toISOString(),
         "article:section": "Visa Policy & Immigration News",
-        "article:tag": "US Visa Integrity Fee, Indian travelers, Trump visa policies, immigration news",
+        "article:tag": "US visa bond, Indian tourists, immigration policy 2025, refundable bond USA, global travel updates",
     },
 };
 
 
-export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
+export default function US_Visa_Bond_List_Expanded_2025() {
 
-    const fullImageUrl = `https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg`;
-    const fullImageWebp = metadata.image;
-    const fullImage = metadata.image;
+    const fullImageUrl = metadata.image;
 
+    // === STRUCTURED DATA ===
     const blogStructuredData = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": metadata.title,
-        "description": "The U.S. has announced a $250 Visa Integrity Fee for non-immigrant visas. Indians already pay high MRV fees — is this fair or just another hidden cost? Full guide on who pays, exemptions, refund rules, and criticism of Trump-style policies.",
-        "image": "https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg",
+        "description":
+            "The United States has expanded its refundable $15,000 visa bond program to include four additional countries. This article explains how the policy works, who is affected, and whether Indian travelers need to worry.",
+        "image": metadata.image,
         "author": {
             "@type": "Organization",
             "name": metadata.author,
@@ -102,8 +115,8 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
             ]
         },
         "datePublished": metadata.date,
-        "dateModified": metadata.date,
-        "mainEntityOfPage": "https://www.globalvisainternationals.com/blog/US-Adds-Four-Countries-to-the-$15000-Visa-Bond-List-Should-Indian-Tourists-Worry"
+        "dateModified": new Date().toISOString(),
+        "mainEntityOfPage": metadata.url
     };
 
     const breadcrumbStructuredData = {
@@ -125,8 +138,8 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
             {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "🌍 Visa Friday Updates: Key Global Changes Indians Need to Know (August 29, 2025)",
-                "item": `https://www.globalvisainternationals.com/blog/US-Adds-Four-Countries-to-the-$15000-Visa-Bond-List-Should-Indian-Tourists-Worry`
+                "name": metadata.title,
+                "item": metadata.url
             }
         ]
     };
@@ -137,50 +150,50 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "What is the new U.S. Visa Integrity Fee and how much is it?",
+                "name": "What is the US Visa Bond Program?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "The U.S. Visa Integrity Fee is a new $250 charge introduced in 2025 under Section 100007 of H.R.1 / Public Law 119-21. It is collected when a U.S. non-immigrant visa (B1/B2, F1, H1B, J1, etc.) is issued. This fee is in addition to the MRV fee and cannot be waived."
+                    "text": "The US Visa Bond Program requires certain travelers from high overstay-risk countries to deposit a refundable bond of $5,000 to $15,000 before entering the country. The bond is returned if the traveler leaves before their visa expires."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Do Indians really need to pay the U.S. Visa Integrity Fee on top of the MRV fee?",
+                "name": "Which countries are included in the expanded visa bond list?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Indian applicants must pay both the MRV fee and the $250 Visa Integrity Fee if their visa is issued on or after October 1, 2025. Even if you booked and paid the MRV earlier, the Integrity Fee applies at the time of issuance. Many criticize this as unfair double-charging targeting Indian travelers."
+                    "text": "As of October 2025, the U.S. has added four more countries to the bond list, primarily from regions with high overstay rates. The exact countries will be listed in the Federal Register notice for the updated rule."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Are there any exemptions from the Visa Integrity Fee?",
+                "name": "Do Indian tourists have to pay this $15,000 bond?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Exemptions are very limited. Travelers under the Visa Waiver Program (ESTA), Canadians, and those who do not require a visa are exempt. Applicants whose visas are denied also do not pay. Almost all Indians applying for U.S. non-immigrant visas must pay the fee."
+                    "text": "No. India is not part of the U.S. visa bond list. Indian tourists and business travelers applying for B1/B2 visas are not required to pay any refundable visa bond."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What if I paid the MRV fee before October 1, 2025?",
+                "name": "Why did the U.S. reintroduce this policy?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Paying MRV before October 1 does not exempt you. If your visa is issued on or after October 1, 2025, you must still pay the $250 Visa Integrity Fee. The law ties the fee to the visa issuance date, not the MRV payment date."
+                    "text": "The U.S. government says the visa bond helps ensure compliance with visa terms and discourages overstays. Critics argue that it unfairly targets low- and middle-income travelers and complicates tourism and business travel."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Can Indians get a refund of the U.S. Visa Integrity Fee?",
+                "name": "Can the visa bond be refunded?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Refunds are only possible after the visa’s full validity ends, not immediately after a trip. You must comply with all visa rules (no overstays, no unauthorized work). For example, a 10-year B1/B2 visa issued in 2025 would only be refundable in 2035, assuming full compliance. Returning early to India does not trigger a refund."
+                    "text": "Yes. The bond is fully refundable if the traveler departs the U.S. within their authorized stay period and meets all immigration conditions. Refunds are processed after confirmation of departure."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Why is the U.S. charging Indians this Integrity Fee?",
+                "name": "How can travelers confirm if their country is affected?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "The U.S. claims the fee offsets immigration enforcement costs, but many critics argue it is a Trump-era style policy unfairly targeting Indian and other non-immigrant visa holders. Since Indians are among the largest visa applicants, the financial burden falls heavily on them, raising concerns about discrimination and hidden taxation."
+                    "text": "Travelers can check the official U.S. State Department website or announcements in the Federal Register for the current list of countries included in the visa bond program."
                 }
             }
         ]
@@ -205,7 +218,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
                 {/* Preload hero image */}
-                <link rel="preload" as="image" href="https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg" />
+                <link rel="preload" as="image" href="https://www.globalvisainternationals.com/blogBannerImages/us-visa-bond-program-2025.jpg" />
 
                 {/* Open Graph */}
 
@@ -225,7 +238,7 @@ export default function US_Visa_Integrity_Fee_For_Indians_Explained_2025() {
                     // ensure absolute URLs
                     const imageUrl = img.url.startsWith("http")
                         ? img.url
-                        : `https://www.globalvisainternationals.com/blogBannerImages/us-visa-integrity-fee-indians-2025.jpeg`;
+                        : `https://www.globalvisainternationals.com/blogBannerImages/us-visa-bond-program-2025.jpg`;
                     return (
                         <React.Fragment key={index}>
                             <meta property="og:image" content={imageUrl} />
