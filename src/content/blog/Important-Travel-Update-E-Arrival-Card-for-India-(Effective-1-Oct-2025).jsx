@@ -269,7 +269,6 @@ export default function Important_Travel_Update_E_Arrival_Card_for_India_Effecti
 
                     <div className={Styles.imageCard}>
                         <picture>
-                            <source srcSet={fullImageWebp} type="image/webp" />
                             <img
                                 src={fullImage}
                                 alt={metadata.title}
