@@ -285,7 +285,7 @@ export default function CanadaPRPage() {
         <div className={styles.VisaSec}>
 
           <div className={styles.VisaData}>
-            <h1 classNam={styles.VisaGuide}>Canada PR Visa Consultants in Bangalore | Your Trusted Guide to Canadian Immigration | Global Visa Internationals</h1>
+            <h1 classNam={styles.Title}>Canada PR Visa Consultants in Bangalore | Your Trusted Guide to Canadian Immigration | Global Visa Internationals</h1>
             <p>Dreaming of a new beginning? Canada, a land of breathtaking landscapes, a vibrant multicultural society, and endless opportunities, is calling! If you're based in Bangalore and seeking expert Canada PR visa consultants, Global Visa Internationals is your dedicated partner. Securing Permanent Residency (PR) in Canada opens doors to an exceptional quality of life, access to world-class healthcare, top-tier education, and a thriving job market. It's more than just a visa; it's a chance to build a brighter future for you and your family.</p>
             <p></p>
             <h3 className={styles.subTitle}>Why Choose Canada for Permanent Residency? What Makes It So Special?</h3>
