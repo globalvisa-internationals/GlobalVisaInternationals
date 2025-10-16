@@ -464,34 +464,36 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
-    <url>
-      <loc>https://www.globalvisainternationals.com/blog/Important-Travel-Update-E-Arrival-Card-for-India-(Effective-1-Oct-2025)</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/blogBannerImages/India-launched-E-arival-card-for-FOREIGNERs.jpg</image:loc>
-        <image:caption>E-Arrival Card Update for India</image:caption>
-        <image:title>E-Arrival Card India 2025</image:title>
-      </image:image>
-    </url>,
-
-    <url>
-      <loc>https://www.globalvisainternationals.com/blog/whats-new-in-us-visa-process-for-indians-2025</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/blogBannerImages/us-visa-policy-changes-2025.jpg</image:loc>
-        <image:caption>Indian travelers at US Consulate facing new visa policy changes 2025</image:caption>
-        <image:title>new visa policy changes 2025</image:title>
-      </image:image>
-    </url>
-
+    {
+      url: 'https://www.globalvisainternationals.com/blog/Important-Travel-Update-E-Arrival-Card-for-India-(Effective-1-Oct-2025)',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/blogBannerImages/India-launched-E-arival-card-for-FOREIGNERs.jpg',
+          caption:
+            'E-Arrival Card for India — New Travel Update 2025 for Foreign Tourists | Online Arrival Form Requirements & Registration Process',
+          title:
+            'E-Arrival Card India 2025 — New Mandatory Online Entry Form for Foreign Travelers | Visa-Free Entry Update',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/whats-new-in-us-visa-process-for-indians-2025',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/blogBannerImages/us-visa-policy-changes-2025.jpg',
+          caption:
+            'US Visa Policy Changes 2025 for Indian Travelers — New Rules, Interview Waivers, and Visa Fee Updates',
+          title:
+            'US Visa Policy Changes 2025 — What Indian Tourists & Students Should Know | New Visa Rules & Process Updates',
+        },
+      ],
+    },
 
   ]
 } 
