@@ -13,13 +13,13 @@ export const metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://www.globalvisainternationals.com/Visa/tourist-visa/china-tourist-visa",
+      "https://www.globalvisainternationals.com/Visa/tourist-visa/china",
   },
   openGraph: {
     title: "China Tourist & Business Visa: Application, Requirements & Tips",
     description:
       "Get expert help from Global Visa Internationals on applying for a China tourist or business visa. Learn the visa process, documents needed, and explore popular Chinese destinations.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/china-tourist-visa",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/china",
     siteName: "Global Visa Internationals",
     images: [
       {

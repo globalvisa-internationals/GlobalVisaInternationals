@@ -14,72 +14,152 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/canada',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/australia',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/usa',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/europe',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/japan',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/dubai',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/singapore',
-      lastModified: new Date('2025-10-13'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/china',
-      lastModified: new Date('2025-10-14'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    },
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/australia</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>Australia Tourist Visa: Application, Requirements & Top Travel Tips</image:caption>
+        <image:title>Australia Tourist Visa Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/canada</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>Canada Tourist Visa Assistance</image:caption>
+        <image:title>Canada Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/china</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/China-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>Chins Tourist Visa Assistance</image:caption>
+        <image:title>CHina Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/dubai</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Dubai-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>Dubai Tourist Visa Assistance</image:caption>
+        <image:title>Dubai Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/europe</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/images/Europe1.png</image:loc>
+        <image:caption>Europe Tourist Visa Assistance</image:caption>
+        <image:title>Europe Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/japan</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>Japan Tourist Visa Assistance</image:caption>
+        <image:title>Japan Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/New-Zealand-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>New Zealand Tourist Visa Assistance</image:caption>
+        <image:title>New Zealand Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/schengen</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>Schengen Tourist Visa Assistance</image:caption>
+        <image:title>Schengen Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/singapore</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Singapore-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>Singapore Tourist Visa Assistance</image:caption>
+        <image:title>Singapore Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>UK Tourist Visa Assistance</image:caption>
+        <image:title>UK Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>UK Tourist Visa Assistance</image:caption>
+        <image:title>UK Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
+    <url>
+      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/usa</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg</image:loc>
+        <image:caption>USA Tourist Visa Assistance</image:caption>
+        <image:title>USA Tourist Viss Assistance</image:title>
+      </image:image>
+    </url>,
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/canada',
       lastModified: new Date('2025-10-13'),
@@ -365,12 +445,34 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
-    {
-      url: 'https://www.globalvisainternationals.com/blog/Important-Travel-Update-E-Arrival-Card-for-India-(Effective-1-Oct-2025)',
-      lastModified: new Date('2025-10-16'),
-      changefreq: 'weekly',
-      priority: 0.8,
-    }
+    <url>
+      <loc>https://www.globalvisainternationals.com/blog/Important-Travel-Update-E-Arrival-Card-for-India-(Effective-1-Oct-2025)</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/blogBannerImages/India-launched-E-arival-card-for-FOREIGNERs.jpg</image:loc>
+        <image:caption>E-Arrival Card Update for India</image:caption>
+        <image:title>E-Arrival Card India 2025</image:title>
+      </image:image>
+    </url>,
+
+    <url>
+      <loc>https://www.globalvisainternationals.com/blog/whats-new-in-us-visa-process-for-indians-2025</loc>
+      <lastmod>2025-10-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+
+
+      <image:image>
+        <image:loc>https://www.globalvisainternationals.com/blogBannerImages/us-visa-policy-changes-2025.jpg</image:loc>
+        <image:caption>Indian travelers at US Consulate facing new visa policy changes 2025</image:caption>
+        <image:title>new visa policy changes 2025</image:title>
+      </image:image>
+    </url>
+
 
   ]
-}
+} 

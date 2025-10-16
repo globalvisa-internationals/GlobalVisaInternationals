@@ -15,13 +15,13 @@ export const metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://www.globalvisainternationals.com/Visa/tourist-visa/canada-tourist-visa",
+      "https://www.globalvisainternationals.com/Visa/tourist-visa/canada",
   },
   openGraph: {
     title: "Canada Tourist Visa: Application, Requirements & Top Travel Tips",
     description:
       "Get expert help from Global Visa Internationals on applying for a Canada tourist visa. Learn the visa process, documents needed, and explore popular Canadian destinations.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/canada-tourist-visa",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/canada",
     siteName: "Global Visa Internationals",
     images: [
       {

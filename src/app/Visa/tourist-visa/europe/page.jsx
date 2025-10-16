@@ -120,7 +120,7 @@ export default function Australia() {
           content="Europe tourist visa, apply for US tourist visa from India, B2 visa Europe, cost of Europe trip, flight to Europe cost, US visa consultants in India, tourist attractions in Europe, visa process Europe, Europe visa fees"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/tourist-visa/europe-tourist-visa" />
+        <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/tourist-visa/europe" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:title" content="Apply for Europe Tourist Visa From India | Global Visa Internationals" />
@@ -129,7 +129,7 @@ export default function Australia() {
           content="Planning to visit the Europe? Get expert assistance for your B-2 visa application, flight booking, cost estimate, and must-visit places. Start your Europe journey with Global Visa Internationals."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/tourist-visa/europe-tourist-visa" />
+        <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/tourist-visa/europe" />
         <meta property="og:image" content="https://www.globalvisainternationals.com/images//images/Europe1.png" />
 
         {/* Twitter Card */}
@@ -140,7 +140,7 @@ export default function Australia() {
           content="Explore the Europe with the right tourist visa. Get visa application support, interview preparation, and travel cost breakdown from Global Visa Internationals."
         />
         <meta name="twitter:image" content="https://www.globalvisainternationals.com/images//images/Europe1.png" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/Visa/tourist-visa/europe-tourist-visa" />
+        <meta name="twitter:url" content="https://www.globalvisainternationals.com/Visa/tourist-visa/europe" />
 
         {/* Geo Location Tags */}
         <meta name="geo.region" content="US" />
