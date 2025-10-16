@@ -1,7 +1,7 @@
 // app/sitemap.js
-
-export default async function sitemap() {
-  return [
+import { NextResponse } from "next/server";
+export async function GET() {
+  const pages = [
     {
       url: 'https://www.globalvisainternationals.com/',
       lastModified: new Date('2025-05-15'),
