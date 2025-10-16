@@ -30,152 +30,167 @@ export default async function sitemap() {
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/canada',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
           caption:
-            'Canada Tourist Visa from India — Visa Requirements, Online Application, Processing Time & Fees 2025',
+            "Apply for Australia Tourist Visa from India — Online Application, Processing Time, Documents & Visa Requirements",
           title:
-            'Canada Tourist Visa Assistance — Apply Online from India | Documents, Processing Time & Requirements',
+            "Australia Tourist Visa 2025 — How to Apply Online from India | Documents, Fees & Travel Guide",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/china',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/canada",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/China-Tourist-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg",
           caption:
-            'China Tourist Visa for Indian Citizens — Application Process, Required Documents & Visa Fees',
+            "Canada Tourist Visa from India — Visa Requirements, Online Application, Processing Time & Fees 2025",
           title:
-            'China Tourist Visa 2025 — How to Apply from India | Visa Requirements & Processing Time',
+            "Canada Tourist Visa Assistance — Apply Online from India | Documents, Processing Time & Requirements",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/dubai',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/china",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/Dubai-Tourist-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/China-Tourist-Visa-Assistance-GVI.jpg",
           caption:
-            'Dubai Tourist Visa from India — Apply Online, Visa on Arrival, Processing Time & Travel Tips',
+            "China Tourist Visa for Indian Citizens — Application Process, Required Documents & Visa Fees",
           title:
-            'Dubai Tourist Visa Assistance — Easy Online Application from India | Requirements & Processing Time',
+            "China Tourist Visa 2025 — How to Apply from India | Visa Requirements & Processing Time",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/europe',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/dubai",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/images/Europe1.png',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/Dubai-Tourist-Visa-Assistance-GVI.jpg",
           caption:
-            'Europe Tourist Visa from India — Schengen Visa Requirements, Processing Time & Documents',
+            "Dubai Tourist Visa from India — Apply Online, Visa on Arrival, Processing Time & Travel Tips",
           title:
-            'Europe Tourist Visa Assistance — Apply for Schengen Visa from India | Documents & Guidelines 2025',
+            "Dubai Tourist Visa Assistance — Easy Online Application from India | Requirements & Processing Time",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/japan',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/europe",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/images/Europe1.png",
           caption:
-            'Japan Tourist Visa from India — Documents Required, Visa Fees & Application Steps 2025',
+            "Europe Tourist Visa from India — Schengen Visa Requirements, Processing Time & Documents",
           title:
-            'Japan Tourist Visa Assistance — How to Apply for Japan Visa from India | Processing Time & Fees',
+            "Europe Tourist Visa Assistance — Apply for Schengen Visa from India | Documents & Guidelines 2025",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/New-Zealand-Tourist-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg",
           caption:
-            'New Zealand Tourist Visa — Apply from India, Required Documents, Visa Fees & Processing Time',
+            "Japan Tourist Visa from India — Documents Required, Visa Fees & Application Steps 2025",
           title:
-            'New Zealand Tourist Visa Assistance — Online Visa Application & Requirements for Indian Travellers',
+            "Japan Tourist Visa Assistance — How to Apply for Japan Visa from India | Processing Time & Fees",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/schengen',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/New-Zealand-Tourist-Visa-Assistance-GVI.jpg",
           caption:
-            'Schengen Tourist Visa from India — Application Process, Visa Fee, Documents & Processing Time 2025',
+            "New Zealand Tourist Visa — Apply from India, Required Documents, Visa Fees & Processing Time",
           title:
-            'Schengen Visa Assistance — Apply for Europe Tourist Visa from India | Visa Guide 2025',
+            "New Zealand Tourist Visa Assistance — Online Visa Application & Requirements for Indian Travellers",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/singapore',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/Singapore-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg",
           caption:
-            'Singapore Tourist Visa for Indians — Apply Online, Documents Required & Processing Time',
+            "Schengen Tourist Visa from India — Application Process, Visa Fee, Documents & Processing Time 2025",
           title:
-            'Singapore Tourist Visa Assistance — Online Visa Application & Travel Requirements from India',
+            "Schengen Visa Assistance — Apply for Europe Tourist Visa from India | Visa Guide 2025",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/singapore",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/Singapore-Visa-Assistance-GVI.jpg",
           caption:
-            'UK Tourist Visa from India — Apply Online, Visa Fees, Documents Required & Processing Time',
+            "Singapore Tourist Visa for Indians — Apply Online, Documents Required & Processing Time",
           title:
-            'UK Tourist Visa Assistance — How to Apply for UK Visitor Visa from India | Requirements & Fees',
+            "Singapore Tourist Visa Assistance — Online Visa Application & Travel Requirements from India",
         },
       ],
     },
     {
-      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/usa',
-      lastModified: '2025-10-16',
-      changefreq: 'weekly',
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
       priority: 0.8,
       images: [
         {
-          loc: 'https://www.globalvisainternationals.com/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg',
+          loc: "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
           caption:
-            'USA Tourist Visa (B2) from India — How to Apply Online, Visa Fees, Documents & Interview Tips',
+            "UK Tourist Visa from India — Apply Online, Visa Fees, Documents Required & Processing Time",
           title:
-            'USA Tourist Visa Assistance (B2) — Apply Online from India | Documents, Interview & Processing Time',
+            "UK Tourist Visa Assistance — How to Apply for UK Visitor Visa from India | Requirements & Fees",
+        },
+      ],
+    },
+    {
+      url: "https://www.globalvisainternationals.com/Visa/tourist-visa/usa",
+      lastModified: "2025-10-16",
+      changefreq: "weekly",
+      priority: 0.8,
+      images: [
+        {
+          loc: "https://www.globalvisainternationals.com/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg",
+          caption:
+            "USA Tourist Visa (B2) from India — How to Apply Online, Visa Fees, Documents & Interview Tips",
+          title:
+            "USA Tourist Visa Assistance (B2) — Apply Online from India | Documents, Interview & Processing Time",
         },
       ],
     },
@@ -496,4 +511,37 @@ export default async function sitemap() {
     },
 
   ]
-} 
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+          xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    ${pages
+      .map(
+        (page) => `
+      <url>
+        <loc>${page.url}</loc>
+        <lastmod>${page.lastModified}</lastmod>
+        <changefreq>${page.changefreq}</changefreq>
+        <priority>${page.priority}</priority>
+        ${page.images
+            .map(
+              (img) => `
+            <image:image>
+              <image:loc>${img.loc}</image:loc>
+              <image:caption><![CDATA[${img.caption}]]></image:caption>
+              <image:title><![CDATA[${img.title}]]></image:title>
+            </image:image>
+          `
+            )
+            .join("")}
+      </url>`
+      )
+      .join("")}
+  </urlset>`;
+
+  return new NextResponse(xml, {
+    headers: {
+      "Content-Type": "application/xml",
+    },
+  });
+}
