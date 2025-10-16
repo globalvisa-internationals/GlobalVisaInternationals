@@ -14,152 +14,171 @@ export default async function sitemap() {
       changefreq: 'weekly',
       priority: 0.8,
     },
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/australia</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>Australia Tourist Visa: Application, Requirements & Top Travel Tips</image:caption>
-        <image:title>Australia Tourist Visa Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/canada</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>Canada Tourist Visa Assistance</image:caption>
-        <image:title>Canada Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/china</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/China-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>Chins Tourist Visa Assistance</image:caption>
-        <image:title>CHina Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/dubai</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Dubai-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>Dubai Tourist Visa Assistance</image:caption>
-        <image:title>Dubai Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/europe</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/images/Europe1.png</image:loc>
-        <image:caption>Europe Tourist Visa Assistance</image:caption>
-        <image:title>Europe Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/japan</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>Japan Tourist Visa Assistance</image:caption>
-        <image:title>Japan Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/New-Zealand-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>New Zealand Tourist Visa Assistance</image:caption>
-        <image:title>New Zealand Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/schengen</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>Schengen Tourist Visa Assistance</image:caption>
-        <image:title>Schengen Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/singapore</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/Singapore-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>Singapore Tourist Visa Assistance</image:caption>
-        <image:title>Singapore Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>UK Tourist Visa Assistance</image:caption>
-        <image:title>UK Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>UK Tourist Visa Assistance</image:caption>
-        <image:title>UK Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
-    <url>
-      <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/usa</loc>
-      <lastmod>2025-10-16</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-
-      <image:image>
-        <image:loc>https://www.globalvisainternationals.com/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg</image:loc>
-        <image:caption>USA Tourist Visa Assistance</image:caption>
-        <image:title>USA Tourist Viss Assistance</image:title>
-      </image:image>
-    </url>,
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/australia',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'Apply for Australia Tourist Visa from India — Online Application, Processing Time, Documents & Visa Requirements',
+          title:
+            'Australia Tourist Visa 2025 — How to Apply Online from India | Documents, Fees & Travel Guide',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/canada',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'Canada Tourist Visa from India — Visa Requirements, Online Application, Processing Time & Fees 2025',
+          title:
+            'Canada Tourist Visa Assistance — Apply Online from India | Documents, Processing Time & Requirements',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/china',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/China-Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'China Tourist Visa for Indian Citizens — Application Process, Required Documents & Visa Fees',
+          title:
+            'China Tourist Visa 2025 — How to Apply from India | Visa Requirements & Processing Time',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/dubai',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/Dubai-Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'Dubai Tourist Visa from India — Apply Online, Visa on Arrival, Processing Time & Travel Tips',
+          title:
+            'Dubai Tourist Visa Assistance — Easy Online Application from India | Requirements & Processing Time',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/europe',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/images/Europe1.png',
+          caption:
+            'Europe Tourist Visa from India — Schengen Visa Requirements, Processing Time & Documents',
+          title:
+            'Europe Tourist Visa Assistance — Apply for Schengen Visa from India | Documents & Guidelines 2025',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/japan',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'Japan Tourist Visa from India — Documents Required, Visa Fees & Application Steps 2025',
+          title:
+            'Japan Tourist Visa Assistance — How to Apply for Japan Visa from India | Processing Time & Fees',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/new-zealand',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/New-Zealand-Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'New Zealand Tourist Visa — Apply from India, Required Documents, Visa Fees & Processing Time',
+          title:
+            'New Zealand Tourist Visa Assistance — Online Visa Application & Requirements for Indian Travellers',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/schengen',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'Schengen Tourist Visa from India — Application Process, Visa Fee, Documents & Processing Time 2025',
+          title:
+            'Schengen Visa Assistance — Apply for Europe Tourist Visa from India | Visa Guide 2025',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/singapore',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/Singapore-Visa-Assistance-GVI.jpg',
+          caption:
+            'Singapore Tourist Visa for Indians — Apply Online, Documents Required & Processing Time',
+          title:
+            'Singapore Tourist Visa Assistance — Online Visa Application & Travel Requirements from India',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'UK Tourist Visa from India — Apply Online, Visa Fees, Documents Required & Processing Time',
+          title:
+            'UK Tourist Visa Assistance — How to Apply for UK Visitor Visa from India | Requirements & Fees',
+        },
+      ],
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/Visa/tourist-visa/usa',
+      lastModified: '2025-10-16',
+      changefreq: 'weekly',
+      priority: 0.8,
+      images: [
+        {
+          loc: 'https://www.globalvisainternationals.com/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg',
+          caption:
+            'USA Tourist Visa (B2) from India — How to Apply Online, Visa Fees, Documents & Interview Tips',
+          title:
+            'USA Tourist Visa Assistance (B2) — Apply Online from India | Documents, Interview & Processing Time',
+        },
+      ],
+    },
     {
       url: 'https://www.globalvisainternationals.com/Visa/student-visa/canada',
       lastModified: new Date('2025-10-13'),
