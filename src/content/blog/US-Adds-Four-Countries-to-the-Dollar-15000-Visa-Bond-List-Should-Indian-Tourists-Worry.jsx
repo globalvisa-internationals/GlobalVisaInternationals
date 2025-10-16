@@ -292,28 +292,29 @@ export default function US_Visa_Bond_List_Expanded_2025() {
 
 
             <main className={Styles.article}>
-                <div className={Styles.meta}>
-                    <span>By {metadata.author}</span>
-                    <span>•</span>
-                    <span>
-                        {new Date(metadata.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                        })}
-                    </span>
-                </div>
+                 <div className={Styles.meta}>
+                        <span>By {metadata.author}</span>
+                        <span>•</span>
+                        <span>
+                            {new Date(metadata.date).toLocaleDateString("en-US", {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                            })}
+                        </span>
+                    </div>
 
-                <div className={Styles.imageCard}>
-                    
-                        <img
-                            src={fullImage}
-                            alt={metadata.title}
-                            className={Styles.image}
-                            loading="lazy"
-                        />
-                    
-                </div>
+                    <div className={Styles.imageCard}>
+    <picture>
+        <img
+            src={fullImageUrl}
+            alt={metadata.title}
+            className={Styles.image}
+            loading="lazy"
+        />
+    </picture>
+</div>
+
 
                 <AnimatedHR direction="left" duration={1.2} />
 
