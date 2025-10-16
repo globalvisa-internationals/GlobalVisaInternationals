@@ -305,15 +305,14 @@ export default function US_Visa_Bond_List_Expanded_2025() {
                 </div>
 
                 <div className={Styles.imageCard}>
-                    <picture>
-                        <source srcSet={fullImageWebp} type="image/webp" />
+                    
                         <img
                             src={fullImage}
                             alt={metadata.title}
                             className={Styles.image}
                             loading="lazy"
                         />
-                    </picture>
+                    
                 </div>
 
                 <AnimatedHR direction="left" duration={1.2} />
