@@ -358,6 +358,18 @@ export default async function sitemap() {
       lastModified: new Date('2025-09-29'),
       changefreq: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/Important-Travel-Update-E-Arrival-Card-for-India-(Effective-1-Oct-2025)',
+      lastModified: new Date('2025-10-16'),
+      changefreq: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://www.globalvisainternationals.com/blog/Important-Travel-Update-E-Arrival-Card-for-India-(Effective-1-Oct-2025)',
+      lastModified: new Date('2025-10-16'),
+      changefreq: 'weekly',
+      priority: 0.8,
     }
 
   ]
