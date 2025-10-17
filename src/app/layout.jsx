@@ -10,12 +10,20 @@ import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 
 export default function RootLayout({ children }) {
-
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
+  const siteVerificationCode = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION; // Add your code in .env
 
   return (
     <html lang="en">
       <head>
+        {/* Google Site Verification */}
+        {siteVerificationCode && (
+          <meta
+            name="google-site-verification"
+            content={siteVerificationCode}
+          />
+        )}
+
         {/* Google Analytics */}
         {gaId && (
           <>
@@ -33,8 +41,6 @@ export default function RootLayout({ children }) {
             </Script>
           </>
         )}
-
-
       </head>
 
       <body className="body">
