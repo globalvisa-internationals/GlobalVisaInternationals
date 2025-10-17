@@ -290,8 +290,18 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
             </Head>
 
+            <article>
 
-            <main className={Styles.article}>
+                <div className={Styles.imageCard}>
+                    <picture>
+                        <img
+                            src={fullImageUrl}
+                            alt={metadata.title}
+                            className={Styles.image}
+                            loading="lazy"
+                        />
+                    </picture>
+                </div>
                 <div className={Styles.meta}>
                     <span>By {metadata.author}</span>
                     <span>•</span>
@@ -304,99 +314,240 @@ export default function US_Visa_Changes_For_Indians_2025() {
                     </span>
                 </div>
 
-                <div className={Styles.imageCard}>
-                    <picture>
-                        <img
-                            src={fullImageUrl}
-                            alt={metadata.title}
-                            className={Styles.image}
-                            loading="lazy"
-                        />
-                    </picture>
-                </div>
+                {/* --- INTRODUCTION --- */}
                 <p>
-                    The United States has rolled out a new set of visa policy changes that will directly impact Indian travelers — from students and professionals to tourists and dependents. While the U.S. claims these updates are aimed at “improving security and efficiency,” many argue that they will only make the already complex visa process more expensive and inconvenient for genuine applicants.
+                    <b>New Delhi, October 2025:</b> The United States has unveiled major
+                    updates to its visa system — introducing new fees, stricter passport
+                    collection rules, and tightened interview exemptions. These{" "}
+                    <a
+                        href="https://www.globalvisainternationals.com/Visa/tourist-visa/usa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        U.S. visa changes
+                    </a>{" "}
+                    directly affect Indian tourists, students, professionals, and families.
+                    While Washington calls the move a “modernization effort,” critics warn
+                    it could make the process more expensive and restrictive.
+                </p>
 
-                    <p> Here’s what you need to know about the latest U.S. visa changes for Indian citizens in 2025 — and why they’re drawing criticism.</p>
+                <p>
+                    For anyone planning to travel, study, or work in the U.S., understanding
+                    these new visa policies is essential. Here’s a full breakdown of what’s
+                    changing — and how it affects Indian applicants in 2025.
                 </p>
 
                 <AnimatedHR direction="left" duration={1.2} />
-                <h2>1. No More Third-Party Passport Collection</h2>
-                <p><b>Effective from:</b> August 1, 2025</p>
-                <p>If you’re applying for a U.S. visa, you can no longer authorize an agent or travel agency to collect your passport. Either you or an immediate family member must collect it in person from the Visa Application Center.</p>
-                <p>Exception: Only parents or legal guardians can collect passports for minors — and even then, they must present a signed physical authorization letter from both parents. Digital or scanned copies will not be accepted.</p>
-                <p><b>What this means:</b><br />
-                    This policy ends a long-standing convenience for busy professionals and travelers who relied on third-party services. Critics argue that the move is unnecessarily rigid and creates logistical hurdles, especially for applicants living far from major cities.</p>
+
+                {/* --- 1. PASSPORT COLLECTION --- */}
+                <h2>1. U.S. Ends Third-Party Passport Collection</h2>
+                <p>
+                    <b>Effective from:</b> August 1, 2025
+                </p>
+                <p>
+                    Applicants can no longer authorize agents or travel agencies to collect
+                    passports after visa stamping. Only the applicant or an immediate family
+                    member can collect it in person from the Visa Application Center.
+                </p>
+                <p>
+                    <b>Exception:</b> Parents or legal guardians may collect passports for
+                    minors with a signed physical authorization letter from both parents.
+                    Scanned or digital copies will not be accepted.
+                </p>
+                <p>
+                    <b>What this means:</b> The new policy removes a long-standing
+                    convenience for professionals who rely on agents. Critics say this move
+                    is unnecessarily rigid and logistically challenging for applicants far
+                    from metro cities.
+                </p>
 
                 <AnimatedHR direction="left" duration={1.2} />
-                <h2>2. Introduction of a Paid Passport Delivery Service</h2>
-                <p>Effective from: August 1, 2025 <br />
-                    Cost: ₹1,200 per applicant</p>
-                <p>To offset the inconvenience of mandatory in-person collection, the U.S. now offers a paid delivery option. You can have your passport delivered directly to your home or office by updating your preferences on</p>
-                <p>Critics say this move essentially monetizes convenience that used to be free, turning a necessary process into a paid service. For families or corporate travelers applying in groups, the added cost quickly adds up.</p>
+
+                {/* --- 2. PAID DELIVERY --- */}
+                <h2>2. ₹1,200 Paid Passport Delivery Option Introduced</h2>
+                <p>
+                    <b>Effective from:</b> August 1, 2025 <br />
+                    <b>Cost:</b> ₹1,200 per applicant
+                </p>
+                <p>
+                    To offset the inconvenience of in-person collection, the U.S. now offers
+                    a paid passport delivery option. Applicants can opt for doorstep
+                    delivery by updating preferences on the official U.S. visa portal.
+                </p>
+                <p>
+                    Critics call this a monetization of basic convenience — especially for
+                    group or family applications where the additional cost quickly adds up.
+                </p>
 
                 <AnimatedHR direction="left" duration={1.2} />
-                <h2>3. The New “Visa Integrity Fee” – A $250 Burden on Applicants</h2>
-                <p>Effective from: October 1, 2025 <br />Fee amount: $250 (approx. ₹21,000)</p>
-                <p>A new <b>“Visa Integrity Fee”  </b>has been introduced for most non-immigrant visa categories, under the U.S. “One Big Beautiful Bill” passed in July 2025.</p>
-                <p>According to U.S. officials, this fee will fund “enhanced screening and security procedures.” However, immigration experts view it as another financial barrier targeting travelers from developing nations, especially India — one of the top countries applying for U.S. visas annually.</p>
-                <p>While the government claims applicants may get a partial refund if they fully comply with visa rules, no clear refund mechanism has been outlined yet.</p>
 
+                {/* --- 3. VISA INTEGRITY FEE --- */}
+                <h2>3. New $250 “Visa Integrity Fee” Announced</h2>
+                <p>
+                    <b>Effective from:</b> October 1, 2025 <br />
+                    <b>Fee amount:</b> $250 (approx. ₹21,000)
+                </p>
+                <p>
+                    A new <b>Visa Integrity Fee</b> has been introduced for most
+                    non-immigrant categories under the “One Big Beautiful Bill” passed in
+                    July 2025. The U.S. government says this will fund enhanced security
+                    screenings and fraud detection.
+                </p>
+                <p>
+                    However, immigration experts argue it’s an additional burden that
+                    disproportionately affects travelers from developing countries such as
+                    India. Refund procedures, though promised, remain unclear.
+                </p>
+                <p>
+                    For detailed insights into visa types and costs, read our{" "}
+                    <a
+                        href="https://www.globalvisainternationals.com/Visa/tourist-visa/usa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        USA Tourist Visa Guide
+                    </a>
+                    .
+                </p>
 
                 <AnimatedHR direction="left" duration={1.2} />
-                <h2>4. Tightening of the Interview Waiver (Dropbox) Programme</h2>
-                <p>Effective from: September 2, 2025</p>
-                <p>The popular Interview Waiver Programme (or Dropbox) — which allowed certain applicants to renew their visas without an in-person interview — is being narrowed down.</p>
-                <p>Now, even experienced travelers and repeat applicants in categories like H, L, F, M, J, E, and O will have to attend interviews in person.</p>
-                <p><b>Major change:</b> <br />  Even children under 14 and senior citizens over 79, who were previously exempt, must now appear in person.</p>
-                <p>This rollback has been met with strong criticism for being bureaucratic and discriminatory, especially toward elderly and family applicants who will now face travel burdens.</p>
 
+                {/* --- 4. DROPBOX PROGRAMME --- */}
+                <h2>4. U.S. Narrows Dropbox Interview Waiver Programme</h2>
+                <p>
+                    <b>Effective from:</b> September 2, 2025
+                </p>
+                <p>
+                    The popular Interview Waiver (Dropbox) Programme — which allowed certain
+                    applicants to renew visas without attending interviews — is now being
+                    significantly restricted.
+                </p>
+                <p>
+                    Even frequent travelers and repeat applicants in H, L, F, M, J, E, and O
+                    categories must now appear in person. Children under 14 and seniors over
+                    79 are no longer exempt.
+                </p>
+                <p>
+                    This rollback has been criticized as discriminatory and inconvenient for
+                    elderly or family-based applicants.
+                </p>
+                <p>
+                    Planning to study in the U.S.? Explore our{" "}
+                    <a
+                        href="https://www.globalvisainternationals.com/Visa/student-visa/usa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        U.S. Student Visa Page
+                    </a>{" "}
+                    for updated eligibility and interview guidance.
+                </p>
 
                 <AnimatedHR direction="left" duration={1.2} />
-                <h2>5. Visa Categories Exempt from These Changes</h2>
-                <p>Some categories remain unaffected by the new rules, including:</p>
+
+                {/* --- 5. EXEMPT CATEGORIES --- */}
+                <h2>5. Which U.S. Visa Categories Remain Unaffected?</h2>
                 <ul>
                     <li>A-1, A-2 diplomatic visas</li>
                     <li>C-3, G-1 to G-4, and NATO-1 to NATO-6 visas</li>
                     <li>TECRO E-1 visas</li>
                 </ul>
-                <p>These are typically issued to diplomats, government officials, or international organization employees — meaning the stricter rules mainly affect regular travelers, not privileged visa holders.</p>
+                <p>
+                    These exemptions primarily cover diplomats and international
+                    organization employees, leaving most regular travelers subject to the
+                    new restrictions.
+                </p>
+
                 <AnimatedHR direction="left" duration={1.2} />
-                <h2>What Hasn’t Changed in the U.S. Visa Process</h2>
-                <p>Despite these new restrictions, a few things remain consistent:</p>
+
+                {/* --- 6. UNCHANGED RULES --- */}
+                <h2>6. What Remains Unchanged in the 2025 U.S. Visa Process</h2>
                 <ul>
                     <li>Visa fee validity: Still valid for 365 days after payment.</li>
-                    <li>Appointment scheduling: Must be done via the official U.S. visa portal.</li>
-                    <li>Document checklist: Requirements remain the same as before.</li>
+                    <li>Appointment scheduling: Must be done via the official U.S. portal.</li>
+                    <li>Document checklist: Requirements remain unchanged.</li>
                 </ul>
 
                 <AnimatedHR direction="left" duration={1.2} />
-                <h2>What To Do If Your Dropbox Appointment Was Cancelled</h2>
+
+                {/* --- 7. CANCELLED DROPBOX --- */}
+                <h2>7. What To Do If Your Dropbox Appointment Was Cancelled</h2>
                 <ol>
-                    <li>If your Dropbox appointment in August or September 2025 was canceled due to the new rules:</li>
                     <li>Check your email for an official cancellation notice.</li>
-                    <li>Log in to your visa profile on <a href="https://www.ustraveldocs.com/">ustraveldocs.com</a> to reschedule.</li>
-                    <li>Update eligibility questions to reflect the new interview requirements.</li>
-                    <li>Use your existing MRV receipt — it remains valid for one reschedule without extra payment.</li>
+                    <li>
+                        Log in to{" "}
+                        <a href="https://www.ustraveldocs.com/" target="_blank">
+                            ustraveldocs.com
+                        </a>{" "}
+                        to reschedule.
+                    </li>
+                    <li>
+                        Update your eligibility questions according to the new interview
+                        requirements.
+                    </li>
+                    <li>Use your existing MRV receipt — it remains valid for one reschedule.</li>
                 </ol>
-                <AnimatedHR direction="left" duration={1.2} />
-                <h2>Why These Changes Are Controversial</h2>
-                <p>While the U.S. government frames these changes as a push for “integrity and modernization,” many see them as a strategic tightening aimed at reducing visa inflows from countries like India.</p>
-                <p>Critics argue that instead of improving efficiency, the new system:</p>
-                <ol>
-                    <li>Increases financial strain with new and hidden fees.</li>
-                    <li>Removes conveniences like third-party collection and dropbox exemptions.</li>
-                    <li>Adds bureaucratic hurdles for families, students, and frequent travelers.</li>
-                </ol>
-                <p>For a country that benefits immensely from Indian talent and tourism, these measures are seen as counterproductive and unwelcoming — signaling a shift toward tougher scrutiny rather than smoother facilitation.</p>
 
                 <AnimatedHR direction="left" duration={1.2} />
-                <h2>Final Thoughts</h2>
-                <p>The 2025 U.S. visa rule changes mark a clear shift toward stricter control and higher costs for Indian applicants. While security and compliance are important, the approach risks alienating legitimate travelers and slowing down people-to-people exchange between two key partners.</p>
-                <p>Until further clarification from the U.S. Embassy, Indian travelers are advised to plan their visa timelines early, budget for higher costs, and stay updated on official notices through ustraveldocs.com
-                    or the U.S. Embassy in India.</p>
+
+                {/* --- 8. CRITICISM --- */}
+                <h2>8. Why Experts Are Calling the 2025 Visa Rules “Unfair”</h2>
+                <p>
+                    While the U.S. government promotes these changes as measures for
+                    “integrity and modernization,” many experts argue they could reduce visa
+                    approvals for genuine Indian travelers.
+                </p>
+                <ol>
+                    <li>Added financial strain through new fees.</li>
+                    <li>Loss of flexibility with third-party collection removal.</li>
+                    <li>More interviews creating backlogs and travel barriers.</li>
+                </ol>
+                <p>
+                    If your previous visa was denied, visit our{" "}
+                    <a
+                        href="https://www.globalvisainternationals.com/Visa/refusal-visa/usa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        U.S. Visa Refusal Assistance Page
+                    </a>{" "}
+                    to learn how to strengthen your next application.
+                </p>
+
+                <AnimatedHR direction="left" duration={1.2} />
+
+                {/* --- 9. CONCLUSION + CTA --- */}
+                <h2>Conclusion: What Indian Travelers Should Do Next</h2>
+                <p>
+                    The 2025 U.S. visa rule changes signal tighter controls and higher costs
+                    for Indian applicants. While compliance and security are vital, the
+                    process now demands more preparation and awareness.
+                </p>
+                <p>
+                    Applicants are advised to apply early, budget for additional fees, and
+                    rely only on verified sources like{" "}
+                    <a href="https://www.ustraveldocs.com/" target="_blank">
+                        ustraveldocs.com
+                    </a>{" "}
+                    and the{" "}
+                    <a href="https://in.usembassy.gov/" target="_blank">
+                        U.S. Embassy in India
+                    </a>{" "}
+                    for official updates.
+                </p>
+                <p>
+                    <b>
+                        Start your U.S. visa journey with expert help today — visit{" "}
+                        <a href="https://www.globalvisainternationals.com/Visa/tourist-visa/usa" target="_blank" rel="noopener noreferrer">
+                            Global Visa Internationals
+                        </a>{" "}
+                        to simplify your visa process and stay ahead of the 2025 rule changes.
+                    </b>
+                </p>
+
+                {/* --- VISA FORM COMPONENT --- */}
                 <VisaForm />
-            </main>
+            </article>
 
         </>
     );

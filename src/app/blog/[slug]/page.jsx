@@ -1,4 +1,4 @@
-//src\app\blog\[slug]\page.jsx
+
 // src/app/blog/[slug]/page.jsx
 import { getPostBySlug } from '@/lib/blog';
 import { notFound } from 'next/navigation';
@@ -31,11 +31,11 @@ export default async function BlogPostPage({ params }) {
       <h1 className={styles.blogTitle}>{post.title}</h1>
       <div className={styles.meta}>
         <span><strong>Category:</strong> {post.category}</span>
-        <span>|</span>
+        <span> | </span>
         <span><strong>Author:</strong> {post.author}</span>
+        <span> | </span>
+        <span> <strong>Date</strong><em>{new Date(post.date).toLocaleDateString()}</em></span>
       </div>
-      <p><em>{new Date(post.date).toLocaleDateString()}</em></p>
-
       <div className={styles.content}>
         <Content />
       </div>

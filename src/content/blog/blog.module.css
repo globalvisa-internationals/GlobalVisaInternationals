@@ -1,15 +1,10 @@
-/* ========================
-   BASE (Mobile First <400px – 480px)
-   ======================== */
-
 .article {
   max-width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
   color: #333;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 
@@ -28,8 +23,6 @@
   justify-content: center;
   font-size: 0.8rem;
   color: #333;
-  gap: 0.25rem;
-  margin-bottom: 15px;
 }
 
 .content {
@@ -46,21 +39,21 @@
 
 .imageCard {
   width: 100%;
-  height: 200px;
+  height: auto;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .image {
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: var(--radius);
   object-fit: cover;
+  border: 1px solid var(--card-border);
 }
 
 .paragraph {
@@ -163,7 +156,6 @@
     font-size: 0.8rem;
     color: #333;
     gap: 0.25rem;
-    margin-bottom: 15px;
   }
 
   .VisaForm {
@@ -189,7 +181,7 @@
   }
 
   .imageCard {
-    height: 300px;
+    height: auto;
     max-width: 700px;
   }
 
@@ -238,7 +230,7 @@
     justify-content: flex-start;
     font-size: 0.8rem;
     color: #333;
-    gap: 0.25rem;
+
   }
 
   .blogTitle {
@@ -253,7 +245,7 @@
 
   .imageCard {
     max-width: 900px;
-    height: 400px;
+    height: auto;
     border-radius: 0.75rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
