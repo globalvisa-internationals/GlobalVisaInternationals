@@ -1,72 +1,253 @@
 
 import VisaForm from '@/Components/VisaForm';
-import styles from './Uk.module.css';
+
 import React from 'react';
 
-export default function UK() {
-  const jsonLd = {
+export const metadata = {
+  title: "UK Student Visa Consultants | Global Visa Internationals",
+  description:
+    "Apply for your **UK Student Visa (Student Route)** with Global Visa Internationals. Expert guidance on the application process, Confirmation of Acceptance for Studies (CAS), financial requirements, Immigration Health Surcharge (IHS), and top UK universities for Indian students.",
+  keywords:
+    "UK student visa, Student Route visa, study in UK for Indian students, apply for UK student visa, Confirmation of Acceptance for Studies CAS, UK student visa requirements, UK study permit from India, UK study visa consultant, study in UK without IELTS, student visa UK cost, Graduate Visa UK, apply for UK study visa, Immigration Health Surcharge UK",
+  robots: "index, follow",
+  images: "https://www.globalvisainternationals.com/student-visa/UK-student-Visa-ASSISTANCE.webp", // Updated image name
+
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/student-visa/uk", // Updated canonical URL
+  },
+  openGraph: {
+    title: "UK Student Visa (Student Route): Application, CAS & Requirements",
+    description:
+      "Plan your education in the UK with expert visa support. Learn about the Student Route visa process, CAS requirements, required maintenance funds (£1,334 or £1,023 per month), and best universities for Indian students.",
+    url: "https://www.globalvisainternationals.com/Visa/student-visa/uk", // Updated OpenGraph URL
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/student-visa/UK-student-Visa-ASSISTANCE.webp", // Updated image name
+        width: 1200,
+        height: 630,
+        alt: "UK Student Visa Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "UK Student Visa: Apply, Requirements & Top Universities",
+    description:
+      "Study in the UK with a valid Student Route visa. Get expert help from Global Visa Internationals on CAS, financial proof, tuition fees, and top universities for Indian students.",
+    images: [
+      "https://www.globalvisainternationals.com/student-visa/UK-student-Visa-ASSISTANCE.webp", // Updated image name
+    ],
+  },
+};
+
+export default function UK() { // Changed function name
+  const pageUrl = metadata.alternates.canonical;
+
+  const TopUniversitiesList = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "description": "Helping international students apply for UK student visas and choose the best courses and universities in the UK.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://www.facebook.com/GlobalVisaInternationals",
-      "https://www.instagram.com/GlobalVisaInternationals"
-      // Add other social media links as needed
+    "@type": "ItemList",
+    "name": "Top Universities in the UK for International Students", // Updated name
+    "description": "Prestigious UK universities frequently chosen by Indian students applying for a Student Route Visa. Essential information for securing a CAS and starting your application.", // Updated description
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Oxford",
+          "description": "One of the world's most renowned institutions, known for its excellence in research, humanities, and sciences.",
+          "url": "https://www.ox.ac.uk/",
+          "image": "https://www.ox.ac.uk/sites/files/oxford/styles/oxford_ratio_1_5/public/2021-03/oxford-university-banner.jpg" // Placeholder for Oxford image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Cambridge",
+          "description": "A historic, world-leading university famous for scientific breakthroughs and its collegiate system.",
+          "url": "https://www.cam.ac.uk/",
+          "image": "https://www.cam.ac.uk/sites/www.cam.ac.uk/files/styles/featured_image/public/images/college-and-university-buildings/king-s-college-chapel.jpg" // Placeholder for Cambridge image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Imperial College London",
+          "description": "A top-tier London university specializing in science, engineering, medicine, and business.",
+          "url": "https://www.imperial.ac.uk/",
+          "image": "https://www.imperial.ac.uk/ImageGen.ashx?image=/media/imperial-college-london/main/campus/south-kensington-campus-main.jpg&width=1200" // Placeholder for Imperial image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University College London (UCL)",
+          "description": "A major public research university located in the heart of London, part of the prestigious Russell Group.",
+          "url": "https://www.ucl.ac.uk/",
+          "image": "https://www.ucl.ac.uk/about/ucl-main-image-placeholder.jpg" // Placeholder for UCL image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "The University of Edinburgh",
+          "description": "Scotland's highest-ranked university, known for its historic campus and strong global outlook.",
+          "url": "https://www.ed.ac.uk/",
+          "image": "https://www.ed.ac.uk/sites/default/files/styles/panel_item_image/public/Edinburgh-University-Campus.jpg" // Placeholder for Edinburgh image
+        }
+      }
     ]
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "UK Student Visa", // Updated name
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const educationConsultancyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Global Visa Internationals provides UK Student Visa Assistance for Indian students — expert help with the Student Route visa, Confirmation of Acceptance for Studies (CAS), financial proof (Maintenance Funds: £1,334/month for London, £1,023/month outside London), IHS guidance, tuberculosis (TB) testing, and university admissions.", // Updated description with specific UK financial figures
+    "keywords": "UK student visa, Student Route visa, CAS UK, UK study visa, financial requirements UK, UK student visa for Indian students, apply for UK student visa, Graduate Visa UK, Immigration Health Surcharge", // Updated keywords
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ],
+    "serviceType": [
+      "UK Student Visa Assistance (Student Route)", // Updated service
+      "CAS & Financial Documentation Consultation", // Updated service
+      "Immigration Health Surcharge (IHS) Guidance", // Updated service
+      "University Admission Guidance for Indian Students in UK" // Updated service
+    ],
+    "potentialAction": {
+      "@type": "Action",
+      "name": "Book a Consultation",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${pageUrl}#contact`,
+        "inLanguage": "en-IN",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      }
+    }
+  };
   return (
     <>
-      <head>
-        <title>UK Student Visa: Top Universities, Courses & Application Guide | Global Visa Internationals</title>
-        <meta name="description" content="Your comprehensive guide to UK student visas, top-ranked universities, popular courses, costs, and the application process. Unlock your UK education dream with Global Visa Internationals." />
-        <meta name="keywords" content="UK student visa, study in UK, UK universities, top UK universities, courses in UK, MBA UK, cost of studying UK, UK student visa requirements, UK visa application, international students UK, student life UK, UK education system, Tier 4 visa UK, UK scholarships, post study work UK" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/student-visa/uk" />
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="UK Student Visa: Top Universities, Courses & Application Guide | Global Visa Internationals" />
-        <meta property="og:description" content="Your comprehensive guide to UK student visas, top-ranked universities, popular courses, costs, and the application process. Unlock your UK education dream with Global Visa Internationals." />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/student-visa/uk" />
-        <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content="URL_TO_YOUR_UK_IMAGE" /> */}
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UK Student Visa: Top Universities, Courses & Application Guide | Global Visa Internationals" />
-        <meta name="twitter:description" content="Your comprehensive guide to UK student visas, top-ranked universities, popular courses, costs, and the application process. Unlock your UK education dream with Global Visa Internationals." />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/Visa/student-visa/uk" />
-        {/* <meta name="twitter:image" content="URL_TO_YOUR_UK_IMAGE" /> */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        {/* Geo-related meta tags */}
-        <meta name="geo.region" content="GB" />
-        <meta name="geo.placename" content="United Kingdom" />
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Structured Data - EducationalOrganization Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TopUniversitiesList) }}
         />
-      </head>
+
+      </Head>
       <div className={styles.imageContainer}>
-        <img src="/images/UK-Student-Visa.png" alt="UK Image" className={styles.UKImage} />
+        <img src={metadata.images} alt="UK Image" className={styles.VisaImage} />
       </div>
 
-      <div className={styles.UKSec}>
+      <div className={styles.VisaSec}>
 
 
-        <div className={styles.UKData}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>UK Student Visa | Top Universities, Courses, Costs and Application Guide</h1>
           <h2>Why Choose the UK for Higher Education?</h2>
           <p>When it comes to international education, the United Kingdom stands out as a leading destination. Known for its commitment to academic excellence, cutting-edge research, and innovative teaching methods, the UK attracts over 500,000 international students annually.

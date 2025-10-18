@@ -13,7 +13,7 @@ export const metadata = {
   keywords:
     "Canada student visa, Canada study visa, study permit Canada, Canada student visa for Indian students, apply for Canada study permit, SDS Canada visa, Canada student visa requirements, Canada study permit from India",
   robots: "index, follow",
-  images: "https://www.globalvisainternationals.com/visa-banner/Canada-Visa-&-Passport-Services.webp",
+  images: "https://www.globalvisainternationals.com/visa-banner/Canada-student-Visa-ASSISTANCE.webp",
 
   alternates: {
     canonical: "https://www.globalvisainternationals.com/visa/student-visa/canada",
@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/Canada-Visa-&-Passport-Services.webp",
+        url: "https://www.globalvisainternationals.com/visa-banner/Canada-student-Visa-ASSISTANCE.webp",
         width: 1200,
         height: 630,
         alt: "Canada Student Visa Banner",
@@ -41,7 +41,7 @@ export const metadata = {
     description:
       "Study in Canada with a valid study permit. Get expert help from Global Visa Internationals on SDS visa process, tuition fees, and top universities for Indian students.",
     images: [
-      "https://www.globalvisainternationals.com/visa-banner/Canada-Visa-&-Passport-Services.webp",
+      "https://www.globalvisainternationals.com/visa-banner/Canada-student-Visa-ASSISTANCE.webp",
     ],
   },
 };

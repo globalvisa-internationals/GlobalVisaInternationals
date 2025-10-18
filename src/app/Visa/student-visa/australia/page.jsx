@@ -13,7 +13,7 @@ export const metadata = {
   keywords:
     "Australia student visa, subclass 500 visa, Australian study visa, study in Australia for Indian students, apply for Australia student visa, GTE Australia, Australia student visa requirements, Australia study permit from India,australia student visa, australia study visa consultant, australia student visa agency, study in australia without ielts, student visa australia cost, 485 visa australia, apply for student visa australia, australia without ielts study visa 2023, graduate visa,australia, apply for australia study visa",
   robots: "index, follow",
-  images: "https://www.globalvisainternationals.com/visa-banner/Australia-Visa-&-Passport-Services.webp",
+  images: "https://www.globalvisainternationals.com/student-visa/Australia-student-Visa-ASSISTANCE.webp",
 
   alternates: {
     canonical: "https://www.globalvisainternationals.com/Visa/student-visa/australia",
@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/visa-banner/Australia-Visa-&-Passport-Services.webp",
+        url: "https://www.globalvisainternationals.com/student-visa/Australia-student-Visa-ASSISTANCE.webp",
         width: 1200,
         height: 630,
         alt: "Australia Student Visa Banner",
@@ -41,7 +41,7 @@ export const metadata = {
     description:
       "Study in Australia with a valid student visa (subclass 500). Get expert help from Global Visa Internationals on GTE, tuition fees, and top universities for Indian students.",
     images: [
-      "https://www.globalvisainternationals.com/visa-banner/Australia-Visa-&-Passport-Services.webp",
+      "https://www.globalvisainternationals.com/student-visa/Australia-student-Visa-ASSISTANCE.webp",
     ],
   },
 };
@@ -246,7 +246,7 @@ export default function Australia() {
       </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/images/Australia-banner.png" alt="Australia Image" className={styles.VisaImage} />
+        <img src={metadata.images} alt="Australia Image" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>
@@ -262,14 +262,14 @@ export default function Australia() {
           <h3>Our End-to-End Student Visa Application Support</h3>
           <p>When you apply for an Australia student visa with us, you get more than just basic assistance — you get a strategic partner in your education journey. We offer full-cycle support that ensures no detail is overlooked, whether you’re applying for a student visa for Australia from India or renewing your visa for further studies.</p>
           <ul>
-            <li>Application Guidance for All Study Levels – From helping you apply to study in Australia to preparing your student dependent visa Australia or student spouse visa Australia documents, our team ensures each form, attachment, and statement meets immigration requirements. We also arrange financial documentation, lodge online applications, and book your VFS Global or biometric appointments.</li>
-            <li>Specialised Visa Categories – We handle all types of student applications, including masters in Australia without IELTS, schooling visa Australia, graduate visa Australia, and visa 500 Australia. If you’re looking to work while you study, we also explain Australia student visa working hours regulations and your working rights in Australia for international students.</li>
-            <li>IELTS-Free Study Pathways – Many students benefit from our expertise in Australia without IELTS study visa 2022 and Australia without IELTS study visa 2023 programs. We know exactly which schools in Australia without IELTS and universities accept alternative English proficiency proof, ensuring your eligibility without extra hurdles.</li>
-            <li>Online & In-Person Services – Whether you prefer to apply for student visa Australia online or submit through our local partner offices, we offer flexibility to match your schedule. We assist clients nationwide and even support applicants from other countries, such as student visa Australia from Fiji or student visa in Australia for Filipino students.</li>
+            <li>Application Guidance for All Study Levels - From helping you apply to study in Australia to preparing your student dependent visa Australia or student spouse visa Australia documents, our team ensures each form, attachment, and statement meets immigration requirements. We also arrange financial documentation, lodge online applications, and book your VFS Global or biometric appointments.</li>
+            <li>Specialised Visa Categories - We handle all types of student applications, including masters in Australia without IELTS, schooling visa Australia, graduate visa Australia, and visa 500 Australia. If you’re looking to work while you study, we also explain Australia student visa working hours regulations and your working rights in Australia for international students.</li>
+            <li>IELTS-Free Study Pathways - Many students benefit from our expertise in Australia without IELTS study visa 2022 and Australia without IELTS study visa 2023 programs. We know exactly which schools in Australia without IELTS and universities accept alternative English proficiency proof, ensuring your eligibility without extra hurdles.</li>
+            <li>Online & In-Person Services - Whether you prefer to apply for student visa Australia online or submit through our local partner offices, we offer flexibility to match your schedule. We assist clients nationwide and even support applicants from other countries, such as student visa Australia from Fiji or student visa in Australia for Filipino students.</li>
           </ul>
 
 
-          <h3>MARA-Registered Migration Agents – Legal, Trustworthy Guidance</h3>
+          <h3>MARA-Registered Migration Agents - Legal, Trustworthy Guidance</h3>
           <p>One of the most important factors in choosing an Australia student visa agency is knowing your application will be handled legally and ethically. Our team works closely with MARA-registered migration agents, ensuring every piece of advice and every application step complies with Australian immigration law. Whether you’re applying for a student spouse visa Australia, a student partner visa Australia, or transitioning from a visa student Australia 2022 to a post-study work pathway, we guide you every step of the way with complete transparency.</p>
           <p>This legal oversight is especially important for students applying for complex visa categories like the global talent visa Australia 2023, a student visa in Australia for Filipino applicants, or those switching from a student visa Australia from Fiji to another visa type. With our legal framework and compliance-first approach, you avoid costly mistakes, unnecessary delays, and rejection risks.</p>
           <p>Our commitment to trust and accuracy has made us a top choice for the best agent for Australia student visa services. We don’t just process paperwork — we educate you about your working rights in Australia for international students, what’s allowed on your Australia student visa working hours, and how to remain compliant while studying.</p>
@@ -277,11 +277,11 @@ export default function Australia() {
           <h4>Why our MARA-registered guidance makes a difference:</h4>
 
           <ul>
-            <li>100% Legal Compliance – Every application meets current Australian migration regulations.</li>
-            <li>Case-Specific Strategies – Tailored solutions for visas like partner, dependent, and graduate categories.</li>
-            <li>Error-Free Submissions – Reduced chance of rejection or costly appeals.</li>
-            <li>Clear Communication – We explain each step, from eligibility to visa cost estimators.</li>
-            <li>Future Pathway Advice – Guidance for moving from student visas to work or residency options.</li>
+            <li>100% Legal Compliance - Every application meets current Australian migration regulations.</li>
+            <li>Case-Specific Strategies - Tailored solutions for visas like partner, dependent, and graduate categories.</li>
+            <li>Error-Free Submissions - Reduced chance of rejection or costly appeals.</li>
+            <li>Clear Communication - We explain each step, from eligibility to visa cost estimators.</li>
+            <li>Future Pathway Advice - Guidance for moving from student visas to work or residency options.</li>
           </ul>
           <p>With us, you can apply for your Australia study visa knowing your case is in safe, experienced hands — backed by official MARA accreditation.</p>
 
@@ -295,10 +295,10 @@ export default function Australia() {
 
           <ul>
             <li><strong>Detailed Fee Breakdown -</strong>  Covering application charges, OSHC, medicals, and biometrics.</li>
-            <li><strong>Accurate Time Estimates –</strong> Based on the latest Department of Home Affairs data.</li>
-            <li><strong>Special Category Insights –</strong>From graduate visa Australia to partner and dependent visas.</li>
-            <li><strong>Budget Planning Support –</strong> Helping you manage tuition, living costs, and visa expenses together.</li>
-            <li><strong>Real-Time Updates –</strong> We notify you of any changes in fees or processing times.</li>
+            <li><strong>Accurate Time Estimates -</strong> Based on the latest Department of Home Affairs data.</li>
+            <li><strong>Special Category Insights -</strong>From graduate visa Australia to partner and dependent visas.</li>
+            <li><strong>Budget Planning Support -</strong> Helping you manage tuition, living costs, and visa expenses together.</li>
+            <li><strong>Real-Time Updates -</strong> We notify you of any changes in fees or processing times.</li>
           </ul>
           <p>With our support, you’ll never be left guessing about costs or timelines — every step is planned so you can focus on your study in Australia journey.</p>
 
@@ -538,8 +538,8 @@ export default function Australia() {
               <tbody>
                 <tr>
                   <td>Tuition Fees (UG & PG)</td>
-                  <td>AUD 20,000 – 50,000/year</td>
-                  <td>₹11 – ₹27.5 lakhs/year</td>
+                  <td>AUD 20,000 - 50,000/year</td>
+                  <td>₹11 - ₹27.5 lakhs/year</td>
                 </tr>
                 <tr>
                   <td>Living Expenses</td>
@@ -548,8 +548,8 @@ export default function Australia() {
                 </tr>
                 <tr>
                   <td>Accommodation</td>
-                  <td>AUD 150 – 450/week</td>
-                  <td>₹8,200 – ₹24,750/week</td>
+                  <td>AUD 150 - 450/week</td>
+                  <td>₹8,200 - ₹24,750/week</td>
                 </tr>
                 <tr>
                   <td>Visa Application Fee</td>
@@ -558,18 +558,18 @@ export default function Australia() {
                 </tr>
                 <tr>
                   <td>OSHC (Health Cover)</td>
-                  <td>AUD 500 – 700/year</td>
-                  <td>₹27,500 – ₹38,500/year</td>
+                  <td>AUD 500 - 700/year</td>
+                  <td>₹27,500 - ₹38,500/year</td>
                 </tr>
                 <tr>
                   <td>Study Materials</td>
-                  <td>AUD 500 – 1,000/year</td>
-                  <td>₹27,500 – ₹55,000/year</td>
+                  <td>AUD 500 - 1,000/year</td>
+                  <td>₹27,500 - ₹55,000/year</td>
                 </tr>
                 <tr>
                   <td>Local Travel</td>
-                  <td>AUD 30 – 60/week</td>
-                  <td>₹1,650 – ₹3,300/week</td>
+                  <td>AUD 30 - 60/week</td>
+                  <td>₹1,650 - ₹3,300/week</td>
                 </tr>
               </tbody>
             </table>

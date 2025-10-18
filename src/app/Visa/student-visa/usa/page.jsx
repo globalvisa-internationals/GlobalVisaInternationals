@@ -1,74 +1,257 @@
 
 import VisaForm from '@/Components/VisaForm';
-import styles from './USA.module.css';
+
 import React from 'react';
 
-export default function USA() {
-  const jsonLd = {
+export const metadata = {
+  title: "USA Student Visa Consultants (F-1 Visa) | Global Visa Internationals",
+  description:
+    "Apply for your **USA F-1 Student Visa** with Global Visa Internationals. Expert guidance on the application process, Form I-20, SEVIS fee payment, financial documentation, and top universities for Indian students. Prepare for your visa interview.",
+  keywords:
+    "USA F-1 visa, US student visa, F1 visa requirements, study in USA for Indian students, apply for F-1 visa, Form I-20, SEVIS fee, DS-160, US student visa interview, OPT, CPT, US study visa consultant, study in USA without IELTS, student visa USA cost, post-study work USA",
+  robots: "index, follow",
+  images: "https://www.globalvisainternationals.com/student-visa/USA-student-Visa-ASSISTANCE.webp", // Updated image name
+
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/student-visa/usa", // Updated canonical URL
+  },
+  openGraph: {
+    title: "USA F-1 Student Visa: I-20, SEVIS, Interview & Requirements",
+    description:
+      "Plan your education in the United States with expert visa support. Learn about the F-1 visa process, I-20 issuance, SEVIS I-901 fee, financial proof, and top universities for Indian students.",
+    url: "https://www.globalvisainternationals.com/Visa/student-visa/usa", // Updated OpenGraph URL
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/student-visa/USA-student-Visa-ASSISTANCE.webp", // Updated image name
+        width: 1200,
+        height: 630,
+        alt: "USA Student Visa Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "USA Student Visa (F-1): Application, I-20 & Top Universities",
+    description:
+      "Study in the US with a valid F-1 visa. Get expert help from Global Visa Internationals on I-20, SEVIS payment, financial evidence, and top universities for Indian students.",
+    images: [
+      "https://www.globalvisainternationals.com/student-visa/USA-student-Visa-ASSISTANCE.webp", // Updated image name
+    ],
+  },
+};
+
+export default function USA() { // Changed function name
+  const pageUrl = metadata.alternates.canonical;
+
+  const TopUniversitiesList = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "description": "Helping international students apply for USA student visas and choose the best courses and universities in the USA.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://www.facebook.com/GlobalVisaInternationals",
-      "https://www.instagram.com/GlobalVisaInternationals"
-      // Add other social media links as needed
+    "@type": "ItemList",
+    "name": "Top Universities in the USA for International Students", // Updated name
+    "description": "Elite US universities frequently chosen by Indian students applying for the F-1 Student Visa. Essential for securing a Form I-20 and visa preparation.", // Updated description
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Massachusetts Institute of Technology (MIT)",
+          "description": "World-leading research university located in Cambridge, Massachusetts, renowned for its focus on science, engineering, and technology.",
+          "url": "https://www.mit.edu/",
+          "image": "https://www.mit.edu/files/images/mit-dome-campus.jpg" // Placeholder for MIT image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Stanford University",
+          "description": "Located in California's Silicon Valley, a top-tier private research university known for its strength in technology and entrepreneurship.",
+          "url": "https://www.stanford.edu/",
+          "image": "https://www.stanford.edu/sites/default/files/styles/full_width_100/public/image/stanford_campus_aerial.jpg" // Placeholder for Stanford image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Harvard University",
+          "description": "One of the world's most prestigious Ivy League institutions, known for academic excellence across all disciplines.",
+          "url": "https://www.harvard.edu/",
+          "image": "https://www.harvard.edu/wp-content/uploads/2021/06/harvard-yard.jpg" // Placeholder for Harvard image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of California, Berkeley (UC Berkeley)",
+          "description": "A top public research university, globally respected for its engineering, computer science, and liberal arts programs.",
+          "url": "https://www.berkeley.edu/",
+          "image": "https://www.berkeley.edu/sites/default/files/styles/full_width_100/public/2021-09/uc-berkeley-campus-aerial.jpg" // Placeholder for UC Berkeley image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Columbia University",
+          "description": "A world-class Ivy League research university located in New York City, offering a diverse urban learning environment.",
+          "url": "https://www.columbia.edu/",
+          "image": "https://www.columbia.edu/content/dam/about-columbia/images/columbia-university-campus.jpg" // Placeholder for Columbia image
+        }
+      }
     ]
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "USA Student Visa", // Updated name
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const educationConsultancyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Global Visa Internationals provides USA F-1 Student Visa Assistance for Indian students — expert help with Form I-20 processing, SEVIS I-901 fee payment, financial proof documentation, DS-160 application, interview preparation, and university admissions.", // Updated description with US specific terms
+    "keywords": "USA F-1 visa, US student visa, Form I-20, SEVIS fee, DS-160, US study visa, financial requirements USA, US student visa for Indian students, apply for F-1 visa, OPT, CPT", // Updated keywords
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ],
+    "serviceType": [
+      "USA F-1 Student Visa Application Assistance", // Updated service
+      "Form I-20 & Financial Documentation", // Updated service
+      "SEVIS I-901 Fee Guidance", // Updated service
+      "US Student Visa Interview Preparation" // Updated service
+    ],
+    "potentialAction": {
+      "@type": "Action",
+      "name": "Book a Consultation",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${pageUrl}#contact`,
+        "inLanguage": "en-IN",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      }
+    }
+  };
 
 
   return (
     <>
-      <head>
-        <title>Study in USA: Visa, Top Universities, Courses & Scholarships | Global Visa Internationals</title>
-        <meta name="description" content="Your guide to a USA study visa. Explore top US universities, popular courses (STEM, MBA, Medicine), scholarships, and the visa application process with Global Visa Internationals." />
-        <meta name="keywords" content="study in USA, USA student visa, US universities, scholarships USA, international students USA, F1 visa USA, J1 visa USA, M1 visa USA, top courses USA, MBA in USA, engineering in USA, medicine in USA, liberal arts USA, apply for US student visa, cost of studying in USA, student life USA, visa interview tips USA, SEVIS fee, Form DS-160" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/student-visa/usa" />
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Study in USA: Visa, Top Universities, Courses & Scholarships | Global Visa Internationals" />
-        <meta property="og:description" content="Your guide to a USA study visa. Explore top US universities, popular courses (STEM, MBA, Medicine), scholarships, and the visa application process with Global Visa Internationals." />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/student-visa/usa" />
-        <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content="URL_TO_YOUR_USA_IMAGE" /> */}
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Study in USA: Visa, Top Universities, Courses & Scholarships | Global Visa Internationals" />
-        <meta name="twitter:description" content="Your guide to a USA study visa. Explore top US universities, popular courses (STEM, MBA, Medicine), scholarships, and the visa application process with Global Visa Internationals." />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/Visa/student-visa/usa" />
-        {/* <meta name="twitter:image" content="URL_TO_YOUR_USA_IMAGE" /> */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        {/* Geo-related meta tags */}
-        <meta name="geo.region" content="US" />
-        <meta name="geo.placename" content="United States" />
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
         <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Structured Data - EducationalOrganization Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TopUniversitiesList) }}
         />
-      </head>
+
+      </Head>
+
+
       <div className={styles.imageContainer}>
-        <img src="/images/USA1.png" alt="USA Image" className={styles.USAImage} />
+        <img src={metadata.images} alt={metadata.title} className={styles.VisaImage} />
       </div>
 
-      <div className={styles.USASec}>
+      <div className={styles.VisaSec}>
 
 
-        <div className={styles.USAData}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>USA Study Visa | Study in the USA | Global Visa Internationals</h1>
 
           <h2 className={styles.subTitle}>Study in USA – Features, Opportunities & More</h2>

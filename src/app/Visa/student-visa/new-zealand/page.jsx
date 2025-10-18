@@ -1,87 +1,255 @@
 
-import styles from './newzeland.module.css';
+import styles from '@/Components/Visa.module.css';
 import React from 'react';
 import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
+;
 
-export default function newzeland() {
+export const metadata = {
+  title: "New Zealand Student Visa Consultants | Global Visa Internationals",
+  description:
+    "Apply for your **New Zealand Fee Paying Student Visa** with Global Visa Internationals. Expert guidance on study permit process, financial requirements, costs, and top universities for Indian students. Get help with the Offer of Place, visa application, and post-study work options.",
+  keywords:
+    "New Zealand student visa, Fee Paying Student Visa New Zealand, New Zealand study visa, study in New Zealand for Indian students, apply for New Zealand student visa, financial requirements New Zealand student visa, New Zealand student visa requirements, New Zealand study permit from India, New Zealand study visa consultant, study in New Zealand without ielts, student visa New Zealand cost, Post Study Work Visa New Zealand, apply for New Zealand study visa",
+  robots: "index, follow",
+  images: "https://www.globalvisainternationals.com/student-visa/New-Zealand-student-Visa-ASSISTANCE.webp", // Updated image name
 
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/Visa/student-visa/new-zealand", // Updated canonical URL
+  },
+  openGraph: {
+    title: "New Zealand Student Visa: Application, Requirements & Study Tips",
+    description:
+      "Plan your education in New Zealand with expert visa support. Learn about the Fee Paying Student Visa process, financial requirements, tuition fees, and best universities for Indian students.",
+    url: "https://www.globalvisainternationals.com/Visa/student-visa/new-zealand", // Updated OpenGraph URL
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/student-visa/New-Zealand-student-Visa-ASSISTANCE.webp", // Updated image name
+        width: 1200,
+        height: 630,
+        alt: "New Zealand Student Visa Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GLOBALVISA1505",
+    title: "New Zealand Student Visa: Apply, Requirements & Top Universities",
+    description:
+      "Study in New Zealand with a valid student visa. Get expert help from Global Visa Internationals on financial proof, tuition fees, and top universities for Indian students.",
+    images: [
+      "https://www.globalvisainternationals.com/student-visa/New-Zealand-student-Visa-ASSISTANCE.webp", // Updated image name
+    ],
+  },
+};
 
+export default function NewZealand() { // Changed function name
+  const pageUrl = metadata.alternates.canonical;
+
+  const TopUniversitiesList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Top Universities in New Zealand for International Students", // Updated name
+    "description": "Popular New Zealand universities frequently chosen by Indian students applying for a Fee Paying Student Visa. Helpful when planning admissions, financial preparation, and post-study work opportunities.", // Updated description
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Auckland",
+          "description": "New Zealand's largest and highest-ranked university, known for world-class research and located in the country's main city.",
+          "url": "https://www.auckland.ac.nz/",
+          "image": "https://www.auckland.ac.nz/content/auckland/en/about/the-university/our-campuses-and-locations/city-campus/_jcr_content/image.coreimg.jpeg/1684364028308/city-campus-header-4.jpeg" // Placeholder for Uni of Auckland image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Otago",
+          "description": "New Zealand's oldest university, located in Dunedin, with a strong reputation in health sciences, law, and humanities.",
+          "url": "https://www.otago.ac.nz/",
+          "image": "https://www.otago.ac.nz/news/files/img/campus-aerial.jpg" // Placeholder for Uni of Otago image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Victoria University of Wellington",
+          "description": "A leading university in the capital city, renowned for law, politics, and international relations programs.",
+          "url": "https://www.wgtn.ac.nz/",
+          "image": "https://www.wgtn.ac.nz/international/get-ready-to-study/student-visa/images/victoria-university-of-wellington-hero.jpg" // Placeholder for VUW image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Canterbury",
+          "description": "Located in Christchurch, known for its excellence in engineering, science, and education programs.",
+          "url": "https://www.canterbury.ac.nz/",
+          "image": "https://www.canterbury.ac.nz/assets/hero-images/UC-Campus.jpg" // Placeholder for Uni of Canterbury image
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CollegeOrUniversity",
+          "name": "Massey University",
+          "description": "A multi-campus university (Auckland, Wellington, Palmerston North) leading in veterinary science, agriculture, and design.",
+          "url": "https://www.massey.ac.nz/",
+          "image": "https://www.massey.ac.nz/assets/massey/images/massey-university-logo-and-buildings.jpg" // Placeholder for Massey University image
+        }
+      }
+    ]
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.globalvisainternationals.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "New Zealand Student Visa", // Updated name
+        "item": pageUrl
+      }
+    ]
+  };
+
+  const educationConsultancyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Global Visa Internationals",
+    "url": "https://www.globalvisainternationals.com",
+    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+    "description": "Global Visa Internationals provides New Zealand Student Visa Assistance for Indian students — expert help with Fee Paying Student Visa, financial proof (NZD $20,000/year), Offer of Place guidance, medicals, police certificates, SOPs, and university admissions.", // Updated description
+    "keywords": "New Zealand student visa, Fee Paying Student Visa New Zealand, New Zealand study visa, financial requirements New Zealand, New Zealand student visa for Indian students, apply for New Zealand student visa, Post Study Work Visa New Zealand", // Updated keywords
+    "telephone": "+91-7022213466",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG Road",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/globalvisainternationals/",
+      "https://www.instagram.com/globalvisa_internationals/",
+      "https://www.linkedin.com/company/global-visa-internationals/",
+      "https://x.com/GLOBALVISA1505",
+      "https://www.youtube.com/@globalVisaInternationals",
+      "https://www.google.com/maps/place/Global+Visa+Internationals"
+    ],
+    "serviceType": [
+      "New Zealand Student Visa Assistance", // Updated service
+      "Fee Paying Student Visa Consultation", // Updated service
+      "Financial Proof & Offer of Place Guidance", // Updated service
+      "University Admission Guidance for Indian Students in New Zealand" // Updated service
+    ],
+    "potentialAction": {
+      "@type": "Action",
+      "name": "Book a Consultation",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${pageUrl}#contact`,
+        "inLanguage": "en-IN",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      }
+    }
+  };
   return (
     <>
       <Head>
-        <title>Study in New Zealand: Visa, Universities & Costs Guide | Global Visa Internationals</title>
-        <meta
-          name="description"
-          content="Your comprehensive guide to a New Zealand student visa in 2025. Explore top NZ universities, eligibility, required documents, costs, and the application process with Global Visa Internationals."
-        />
-        <meta
-          name="keywords"
-          content="study in New Zealand, New Zealand student visa, NZ universities, New Zealand education, student visa NZ, international students New Zealand, cost of studying New Zealand, NZ visa requirements, apply for NZ student visa, Pathway Student Visa, Fee-Paying Student Visa, Exchange Student Visa, Immigration New Zealand, NZQA"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/student-visa/new-zealand" /> {/* Replace with your actual URL */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content={metadata.robots} />
+        <link rel="canonical" href={pageUrl} />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Study in New Zealand: Visa, Universities & Costs Guide | Global Visa Internationals" />
-        <meta
-          property="og:description"
-          content="Your comprehensive guide to a New Zealand student visa in 2025. Explore top NZ universities, eligibility, required documents, costs, and the application process with Global Visa Internationals."
-        />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/student-visa/new-zealand" /> {/* Replace with your actual Facebook URL */}
-        <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content="URL_TO_YOUR_NEW_ZEALAND_IMAGE" /> */} {/* Add your New Zealand image URL */}
+        {/* Open Graph */}
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Study in New Zealand: Visa, Universities & Costs Guide | Global Visa Internationals" />
-        <meta
-          name="twitter:description"
-          content="Your comprehensive guide to a New Zealand student visa in 2025. Explore top NZ universities, eligibility, required documents, costs, and the application process with Global Visa Internationals."
-        />
-        <meta property="twitter:url" content="https://www.globalvisainternationals.com/Visa/student-visa/new-zealand" /> {/* Replace with your actual Twitter URL */}
-        {/* <meta name="twitter:image" content="URL_TO_YOUR_NEW_ZEALAND_IMAGE" /> */} {/* Add your New Zealand image URL */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        {/* Geo-related meta tags */}
-        <meta name="geo.region" content="NZ" />
-        <meta name="geo.placename" content="New Zealand" />
-        {/* Assuming your target audience might be in Bengaluru */}
+        {/* Geo & Mobile SEO */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="latitude, longitude" /> {/* Replace with actual latitude and longitude of your business location if relevant */}
+        <meta name="ICBM" content="12.9716,77.5946" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="format-detection" content="telephone=no" />
 
-        {/* Structured Data - EducationalOrganization Schema */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com",
-              "description": "Helping international students obtain New Zealand student visas and navigate the application process for studying in New Zealand.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "Karnataka",
-                "addressCountry": "IN"
-              },
-              "sameAs": [
-                "YOUR_FACEBOOK_PAGE_URL",
-                "YOUR_INSTAGRAM_PAGE_URL"
-                // Add other social media links
-              ]
-            }
-          `}
-        </script>
+        {/* Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TopUniversitiesList) }}
+        />
+
       </Head>
       <div className={styles.imageContainer}>
-        <img src="/images/Australia1.png" alt="New-Zeland Image" className={styles.newzelandImage} />
+        <img src={metadata.images} alt="New-Zeland Image" className={styles.VisaImage} />
       </div>
 
-      <div className={styles.newzelandSec}>
+      <div className={styles.VisaSec}>
 
 
-        <div className={styles.newzelandData}>
+        <div className={styles.VisaData}>
           <h1 className={styles.Title}>New Zealand Student Visa: A Comprehensive Guide for International Students</h1>
           <p>Dreaming of pursuing world-class education amidst the breathtaking landscapes of Aotearoa, the Land of the Long White Cloud? New Zealand has become a coveted destination for international students seeking academic excellence and a unique cultural experience. Navigating the student visa process is your crucial first step. This in-depth guide will illuminate the path to obtaining your New Zealand student visa in 2025, providing you with essential information to kickstart your Kiwi adventure.</p>
           <h3 className={styles.subTitle}>Why New Zealand Beckons International Students:</h3>

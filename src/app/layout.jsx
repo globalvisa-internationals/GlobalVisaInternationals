@@ -11,7 +11,7 @@ import "./globals.css";
 
 export default function RootLayout({ children }) {
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
-  const siteVerificationCode = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION; // Add your code in .env
+  const siteVerificationCode = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
   return (
     <html lang="en">

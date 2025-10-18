@@ -4,18 +4,52 @@
 
     <url>
         <loc>https://www.globalvisainternationals.com/</loc>
-        <lastmod>2025-05-15</lastmod>
+        <lastmod>2025-10-17</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>1</priority>
+        <priority>1.0</priority>
+
+        <!-- Optional image entries for richer search display -->
+        <image:image>
+            <image:loc>https://www.globalvisainternationals.com/images/story.webp</image:loc>
+            <image:title>Global Visa Internationals Story</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.globalvisainternationals.com/svg/World-Map.gif</image:loc>
+            <image:title>Global Visa Internationals World Map</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.globalvisainternationals.com/Global-Visa-Internationals-Logo.svg</image:loc>
+            <image:title>Global Visa Internationals Logo</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.globalvisainternationals.com/GVI_Banner.webp</image:loc>
+            <image:title>Global Visa Internationals Banner</image:title>
+        </image:image>
     </url>
+
 
     <!-- About Us -->
     <url>
         <loc>https://www.globalvisainternationals.com/about-us</loc>
-        <lastmod>2025-09-19</lastmod>
+        <lastmod>2025-10-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+
+        <!-- Associated Images -->
+        <image:image>
+            <image:loc>https://www.globalvisainternationals.com/GVI_Banner.webp</image:loc>
+            <image:title>Global Visa Internationals About Us Banner</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.globalvisainternationals.com/images/founder.jpg</image:loc>
+            <image:title>Founder of Global Visa Internationals</image:title>
+        </image:image>
     </url>
+
 
     <!-- Australia Tourist Visa -->
     <url>
