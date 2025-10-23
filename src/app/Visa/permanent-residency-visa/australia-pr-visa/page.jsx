@@ -2,6 +2,7 @@ import VisaForm from "@/Components/VisaForm";
 import styles from "@/Components/Visa.module.css";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 import { ReviewSchema } from "@/Components/ReviewSchema";
+import Head from "next/head";
 
 export const metadata = {
   title:

@@ -1,29 +1,30 @@
 
 import VisaForm from '@/Components/VisaForm';
-
+import styles from '@/Components/Visa.module.css';
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 import React from 'react';
+import Head from 'next/head';
 
 export const metadata = {
   title: "UK Student Visa Consultants | Global Visa Internationals",
   description:
-    "Apply for your **UK Student Visa (Student Route)** with Global Visa Internationals. Expert guidance on the application process, Confirmation of Acceptance for Studies (CAS), financial requirements, Immigration Health Surcharge (IHS), and top UK universities for Indian students.",
+    "Apply for your UK Student Visa (Student Route) with Global Visa Internationals. Expert guidance on the application process, Confirmation of Acceptance for Studies (CAS), financial requirements, Immigration Health Surcharge (IHS), and top UK universities for Indian students.",
   keywords:
     "UK student visa, Student Route visa, study in UK for Indian students, apply for UK student visa, Confirmation of Acceptance for Studies CAS, UK student visa requirements, UK study permit from India, UK study visa consultant, study in UK without IELTS, student visa UK cost, Graduate Visa UK, apply for UK study visa, Immigration Health Surcharge UK",
   robots: "index, follow",
-  images: "https://www.globalvisainternationals.com/student-visa/UK-student-Visa-ASSISTANCE.webp", // Updated image name
-
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/student-visa/uk", // Updated canonical URL
+    canonical: "https://www.globalvisainternationals.com/Visa/student-visa/uk",
   },
   openGraph: {
     title: "UK Student Visa (Student Route): Application, CAS & Requirements",
     description:
       "Plan your education in the UK with expert visa support. Learn about the Student Route visa process, CAS requirements, required maintenance funds (£1,334 or £1,023 per month), and best universities for Indian students.",
-    url: "https://www.globalvisainternationals.com/Visa/student-visa/uk", // Updated OpenGraph URL
+    url: "https://www.globalvisainternationals.com/Visa/student-visa/uk",
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/student-visa/UK-student-Visa-ASSISTANCE.webp", // Updated image name
+        url: "https://www.globalvisainternationals.com/student-visa/UK-student-Visa-ASSISTANCE.webp",
         width: 1200,
         height: 630,
         alt: "UK Student Visa Banner",
@@ -38,12 +39,12 @@ export const metadata = {
     description:
       "Study in the UK with a valid Student Route visa. Get expert help from Global Visa Internationals on CAS, financial proof, tuition fees, and top universities for Indian students.",
     images: [
-      "https://www.globalvisainternationals.com/student-visa/UK-student-Visa-ASSISTANCE.webp", // Updated image name
+      "https://www.globalvisainternationals.com/student-visa/UK-student-Visa-ASSISTANCE.webp",
     ],
   },
 };
 
-export default function UK() { // Changed function name
+export default function UK_Student_Visa() { // Changed function name
   const pageUrl = metadata.alternates.canonical;
 
   const TopUniversitiesList = {

@@ -3,6 +3,7 @@ import styles from "@/Components/Visa.module.css";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 
+
 export const metadata = {
   title:
     "Canada PR Visa Consultants in Bangalore | Requirements, Cost & Application Process from India | Global Visa Internationals",
@@ -45,7 +46,7 @@ export const metadata = {
     ],
     site: "@GlobalVisaIntl",
   },
-  themeColor: "#0a66c2",
+
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 };
 
@@ -274,7 +275,7 @@ export default function CanadaPRPage() {
   return (
     <>
       <main className={styles.visaContainer}>
-        {/* Inject all structured data */}
+
         {schemaData.map((schema, i) => (<script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />))}
 
 

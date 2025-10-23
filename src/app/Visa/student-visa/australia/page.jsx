@@ -1,6 +1,5 @@
 import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
-
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 import React from 'react';

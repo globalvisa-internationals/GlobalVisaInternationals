@@ -1,7 +1,11 @@
 
-import VisaForm from '@/Components/VisaForm';
 
+import VisaForm from '@/Components/VisaForm';
+import styles from '@/Components/Visa.module.css';
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 import React from 'react';
+import Head from 'next/head';
 
 export const metadata = {
   title: "USA Student Visa Consultants (F-1 Visa) | Global Visa Internationals",
