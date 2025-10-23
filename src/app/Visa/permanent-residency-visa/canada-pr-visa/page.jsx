@@ -15,18 +15,18 @@ export const metadata = {
   authors: [{ name: "Global Visa Internationals" }],
   alternates: {
     canonical:
-      "https://www.globalvisainternationals.com/visa/permanent-residency/canada",
+      "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada-pr-visa",
   },
   openGraph: {
     title:
       "Canada PR Visa Consultants Bangalore: Requirements, Cost & Application | Global Visa Internationals",
     description:
       "Plan your move to Canada from Bangalore. Global Visa Internationals provides expert assistance for Canada Permanent Residency (PR) visa applications, including Express Entry and PNP pathways. Get detailed guidance on requirements and costs.",
-    url: "https://www.globalvisainternationals.com/visa/permanent-residency/canada",
+    url: "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada-pr-visa",
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/images/canada-pr-visa-banner.jpg",
+        url: "https://www.globalvisainternationals.com/PR-visa/canada-pr-visa-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Canada PR Visa Consultants in Bangalore",
@@ -42,7 +42,7 @@ export const metadata = {
     description:
       "Migrate to Canada with confidence from Bangalore! Global Visa Internationals offers comprehensive support for Canada PR visas, covering application steps, required documents, and eligibility criteria.",
     images: [
-      "https://www.globalvisainternationals.com/images/canada-pr-visa-banner.jpg",
+      "https://www.globalvisainternationals.com/PR-visa/canada-pr-visa-banner.jpg",
     ],
     site: "@GlobalVisaIntl",
   },
@@ -58,7 +58,7 @@ export default function CanadaPRPage() {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
       name: "Global Visa Internationals",
-      url: "https://www.globalvisainternationals.com/visa/permanent-residency/canada",
+      url: "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada-pr-visa",
       logo: "https://www.globalvisainternationals.com/gvilogo.png",
       description:
         "Unlock Your Canada Adventure! Global Visa Internationals provides expert guidance for your Canada tourist visa application. Simplify the process and explore Canada's wonders. Contact us today!",
@@ -92,7 +92,7 @@ export default function CanadaPRPage() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Global Visa Internationals",
-      url: "https://www.globalvisainternationals.com/visa/permanent-residency/canada",
+      url: "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada-pr-visa",
       logo: "https://www.globalvisainternationals.com/logo.png",
       description:
         "Trusted Canada PR visa consultants in Bangalore helping Indian skilled workers and families achieve Canada Permanent Residency (PR) with expert application and documentation support.",
@@ -155,13 +155,8 @@ export default function CanadaPRPage() {
           "@type": "ListItem",
           position: 2,
           name: "Permanent Residency Visa",
-          item: "https://www.globalvisainternationals.com/visa/permanent-residency",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Canada PR",
-        },
+          item: "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada-pr-visa",
+        }
       ],
     },
 
@@ -280,7 +275,7 @@ export default function CanadaPRPage() {
 
 
         <div className={styles.imageContainer}>
-          <img src="/images/Canada1.png" alt="Canada Image" className={styles.VisaImage} />
+          <img src="/PR-visa/canada-pr-visa-banner.jpg" alt="Canada PR Visa assistence Image" className={styles.VisaImage} />
         </div>
 
         <div className={styles.VisaSec}>
