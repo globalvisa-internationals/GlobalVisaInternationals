@@ -1,4 +1,3 @@
-
 import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
 import { ReviewSchema } from "@/Components/ReviewSchema";
@@ -6,140 +5,81 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 import React from 'react';
 import Head from 'next/head';
 
-export const metadata = {
-  title: "Canada Student Visa Consultants | Global Visa Internationals",
-  description:
-    "Apply for your Canada Student Visa with Global Visa Internationals. Expert guidance on study permit Canada process, SDS applications, costs, and top universities for Indian students.",
-  keywords:
-    "Canada student visa, Canada study visa, study permit Canada, Canada student visa for Indian students, apply for Canada study permit, SDS Canada visa, Canada student visa requirements, Canada study permit from India",
-  robots: "index, follow",
-  images: "https://www.globalvisainternationals.com/visa-banner/Canada-student-Visa-ASSISTANCE.webp",
+export async function generateMetadata() {
+  const url = "https://www.globalvisainternationals.com/visa/student-visa/canada";
+  const imageUrl = "https://www.globalvisainternationals.com/student-visa/Canada-student-Visa-ASSISTANCE.webp";
 
-  alternates: {
-    canonical: "https://www.globalvisainternationals.com/visa/student-visa/canada",
-  },
-  openGraph: {
-    title: "Canada Student Visa: Application, Requirements & Study Tips",
+  return {
+    title: "Canada Student Visa Consultants | Global Visa Internationals",
     description:
-      "Plan your education in Canada with expert visa support. Learn about study permit Canada process, SDS Canada requirements, tuition fees, and best universities for Indian students.",
-    url: "https://www.globalvisainternationals.com/visa/student-visa/canada",
-    siteName: "Global Visa Internationals",
-    images: [
-      {
-        url: "https://www.globalvisainternationals.com/visa-banner/Canada-student-Visa-ASSISTANCE.webp",
-        width: 1200,
-        height: 630,
-        alt: "Canada Student Visa Banner",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@GLOBALVISA1505",
-    title: "Canada Student Visa: Apply, Requirements & Top Universities",
-    description:
-      "Study in Canada with a valid study permit. Get expert help from Global Visa Internationals on SDS visa process, tuition fees, and top universities for Indian students.",
-    images: [
-      "https://www.globalvisainternationals.com/visa-banner/Canada-student-Visa-ASSISTANCE.webp",
-    ],
-  },
+      "Apply for your Canada Student Visa with Global Visa Internationals. Expert guidance on the study permit Canada process, SDS applications, costs, and top universities for Indian students.",
+    keywords:
+      "Canada student visa, Canada study visa, study permit Canada, Canada student visa for Indian students, SDS Canada visa, apply for Canada study permit, Canada study visa requirements, study in Canada from India",
+    robots: "index, follow",
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: "Canada Student Visa: Application, Requirements & Study Tips",
+      description:
+        "Plan your education in Canada with Global Visa Internationals. Learn about the study permit process, SDS requirements, tuition fees, and top universities for Indian students.",
+      url,
+      siteName: "Global Visa Internationals",
+      type: "website",
+      locale: "en_IN",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: "Canada Student Visa Assistance for Indian Students",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@GLOBALVISA1505",
+      title: "Canada Student Visa: Apply, Requirements & Top Universities",
+      description:
+        "Study in Canada with a valid study permit. Get expert help from Global Visa Internationals on SDS process, tuition fees, and top universities for Indian students.",
+      images: [imageUrl],
+    },
+    other: {
+      "geo.region": "IN-KA",
+      "geo.placename": "Bengaluru",
+      "ICBM": "12.9716,77.5946",
+    },
+  };
+}
+
+// ✅ 2. Modern Viewport Export
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
+// ✅ 3. Structured Data (injected as <script> tags)
 export default function Canada() {
-  const pageUrl = metadata.alternates.canonical;
-
-  const TopUniversitiesList = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Top Universities in Canada for International Students",
-    "description": "Popular Canadian universities frequently chosen by Indian students applying for a Canada student visa or study permit Canada. Helpful when planning admissions, SDS applications, and PGWP pathways.",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Toronto",
-          "description": "One of Canada's largest and most research-intensive universities, popular with international applicants.",
-          "url": "https://www.utoronto.ca/",
-          "image": "https://www.utoronto.ca/sites/default/files/styles/ut_thumbnail/public/2020-04/uoft-shaw.jpg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "University of British Columbia",
-          "description": "Highly ranked public university with major campuses in Vancouver and Okanagan, a common choice for Indian students.",
-          "url": "https://www.ubc.ca/",
-          "image": "https://www.ubc.ca/_assets/vancouver-campus.jpg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "McGill University",
-          "description": "A top Montreal university known for strong programs and international student support.",
-          "url": "https://www.mcgill.ca/",
-          "image": "https://www.mcgill.ca/sites/default/files/styles/header_image/public/2020-06/mcgill-campus.jpg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Alberta",
-          "description": "Major Canadian research university offering competitive programs for international students.",
-          "url": "https://www.ualberta.ca/",
-          "image": "https://www.ualberta.ca/-/media/ualberta/centres/ualberta-images/homepage.jpg"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "McMaster University",
-          "description": "Renowned for engineering, health sciences, and research opportunities for international students.",
-          "url": "https://www.mcmaster.ca/",
-          "image": "https://dailynews.mcmaster.ca/wp-content/uploads/2019/09/mcmaster-campus.jpg"
-        }
-      }
-    ]
-  };
+  const pageUrl = "https://www.globalvisainternationals.com/visa/student-visa/canada";
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.globalvisainternationals.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Canada Student Visa",
-        "item": pageUrl
-      }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.globalvisainternationals.com" },
+      { "@type": "ListItem", "position": 2, "name": "Canada Student Visa", "item": pageUrl }
     ]
   };
 
   const educationConsultancyJsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "EducationalOrganization",
     "name": "Global Visa Internationals",
     "url": "https://www.globalvisainternationals.com",
     "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Global Visa Internationals provides Canada Student Visa Assistance for Indian students — expert help with study permit Canada, SDS Canada applications, proof of funds, GIC guidance, biometrics, medicals, police certificates, SOPs, and university admissions.",
-    "keywords": "Canada student visa, Canada study visa, study permit Canada, SDS Canada, Canada student visa for Indian students, apply for Canada study permit, Canada study visa requirements",
+    "description": "Global Visa Internationals provides Canada Student Visa assistance for Indian students — expert help with study permit, SDS applications, proof of funds, SOPs, and university admissions.",
     "telephone": "+91-7022213466",
     "address": {
       "@type": "PostalAddress",
@@ -149,30 +89,7 @@ export default function Canada() {
       "postalCode": "560025",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 12.9716,
-      "longitude": 77.5946
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "IN"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "10:00",
-        "closes": "18:00"
-      }
-    ],
+    "geo": { "@type": "GeoCoordinates", "latitude": 12.9716, "longitude": 77.5946 },
     "sameAs": [
       "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
@@ -184,72 +101,32 @@ export default function Canada() {
     "serviceType": [
       "Canada Student Visa Assistance",
       "Study Permit Canada Consultation",
-      "SDS Canada Application Support",
-      "University Admission Guidance for Indian Students"
-    ],
-    "potentialAction": {
-      "@type": "Action",
-      "name": "Book a Consultation",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${pageUrl}#contact`,
-        "inLanguage": "en-IN",
-        "actionPlatform": [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform"
-        ]
-      }
-    }
+      "SDS Canada Application Support"
+    ]
   };
 
-  // Usage: inject these JSON-LD objects into your page head as <script type="application/ld+json">JSON.stringify(obj)</script>
+  const universitiesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Top Universities in Canada for International Students",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "CollegeOrUniversity", "name": "University of Toronto", "url": "https://www.utoronto.ca/" } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "CollegeOrUniversity", "name": "University of British Columbia", "url": "https://www.ubc.ca/" } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "CollegeOrUniversity", "name": "McGill University", "url": "https://www.mcgill.ca/" } }
+    ]
+  };
 
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
+      {/* ✅ Structured Data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(universitiesJsonLd) }} />
 
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TopUniversitiesList) }}
-        />
-
-      </Head>
 
       <div className={styles.imageContainer}>
         <img
-          src={metadata.images}
+          src="/student-visa/Canada-student-Visa-ASSISTANCE.webp"
           alt="Study in Canada with Global Visa Internationals"
           className={styles.VisaImage}
           loading="lazy"

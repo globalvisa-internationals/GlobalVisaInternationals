@@ -1,19 +1,18 @@
 import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
+import ReviewCarousel from '@/Components/ReviewCarousel';
 import { ReviewSchema } from "@/Components/ReviewSchema";
-import ReviewCarousel from "@/Components/ReviewCarousel";
-import React from 'react';
-import Head from 'next/head';
+import Script from 'next/script';
 
+// ✅ SERVER-SIDE SEO metadata (next/head is not needed now)
 export const metadata = {
   title: "Australia Student Visa Consultants | Global Visa Internationals",
   description:
     "Apply for your Australia Student Visa (subclass 500) with Global Visa Internationals. Expert guidance on study permit process, GTE requirements, costs, and top universities for Indian students.",
   keywords:
-    "Australia student visa, subclass 500 visa, Australian study visa, study in Australia for Indian students, apply for Australia student visa, GTE Australia, Australia student visa requirements, Australia study permit from India,australia student visa, australia study visa consultant, australia student visa agency, study in australia without ielts, student visa australia cost, 485 visa australia, apply for student visa australia, australia without ielts study visa 2023, graduate visa,australia, apply for australia study visa",
+    "Australia student visa, subclass 500 visa, Australian study visa, study in Australia for Indian students, apply for Australia student visa, GTE Australia, Australia student visa requirements, Australia study permit from India, australia study visa consultant, australia student visa agency, study in australia without ielts, student visa australia cost, 485 visa australia, apply for student visa australia, australia without ielts study visa 2023, graduate visa australia, apply for australia study visa",
   robots: "index, follow",
   images: "https://www.globalvisainternationals.com/student-visa/Australia-student-Visa-ASSISTANCE.webp",
-
   alternates: {
     canonical: "https://www.globalvisainternationals.com/Visa/student-visa/australia",
   },
@@ -45,207 +44,168 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
+// ✅ PAGE COMPONENT
 export default function Australia() {
   const pageUrl = metadata.alternates.canonical;
 
   const TopUniversitiesList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Top Universities in Australia for International Students",
-    "description": "Popular Australian universities frequently chosen by Indian students applying for a student visa subclass 500. Helpful when planning admissions, GTE preparation, and post-study work opportunities.",
-    "itemListElement": [
+    name: "Top Universities in Australia for International Students",
+    description:
+      "Popular Australian universities frequently chosen by Indian students applying for a student visa subclass 500. Helpful when planning admissions, GTE preparation, and post-study work opportunities.",
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "item": {
+        position: 1,
+        item: {
           "@type": "CollegeOrUniversity",
-          "name": "University of Melbourne",
-          "description": "One of Australia's top-ranked universities, known for research and global employability.",
-          "url": "https://www.unimelb.edu.au/",
-          "image": "https://about.unimelb.edu.au/__data/assets/image/0021/243563/UniversitySquare-hero.jpg"
-        }
+          name: "University of Melbourne",
+          description:
+            "One of Australia's top-ranked universities, known for research and global employability.",
+          url: "https://www.unimelb.edu.au/",
+          image:
+            "https://about.unimelb.edu.au/__data/assets/image/0021/243563/UniversitySquare-hero.jpg",
+        },
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "item": {
+        position: 2,
+        item: {
           "@type": "CollegeOrUniversity",
-          "name": "Australian National University (ANU)",
-          "description": "Renowned for academic excellence and located in Canberra, a popular choice for international students.",
-          "url": "https://www.anu.edu.au/",
-          "image": "https://www.anu.edu.au/files/styles/anu_full_920_518/public/story/anu-campus-hero.jpg"
-        }
+          name: "Australian National University (ANU)",
+          description:
+            "Renowned for academic excellence and located in Canberra, a popular choice for international students.",
+          url: "https://www.anu.edu.au/",
+          image:
+            "https://www.anu.edu.au/files/styles/anu_full_920_518/public/story/anu-campus-hero.jpg",
+        },
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "item": {
+        position: 3,
+        item: {
           "@type": "CollegeOrUniversity",
-          "name": "University of Sydney",
-          "description": "Historic Australian university with world-class facilities and diverse programs.",
-          "url": "https://www.sydney.edu.au/",
-          "image": "https://www.sydney.edu.au/content/dam/corporate/images/about-us/our-campus/camperdown-darlington-campus.jpg"
-        }
+          name: "University of Sydney",
+          description:
+            "Historic Australian university with world-class facilities and diverse programs.",
+          url: "https://www.sydney.edu.au/",
+          image:
+            "https://www.sydney.edu.au/content/dam/corporate/images/about-us/our-campus/camperdown-darlington-campus.jpg",
+        },
       },
       {
         "@type": "ListItem",
-        "position": 4,
-        "item": {
+        position: 4,
+        item: {
           "@type": "CollegeOrUniversity",
-          "name": "University of Queensland",
-          "description": "Leading Australian research university located in Brisbane with strong industry links.",
-          "url": "https://www.uq.edu.au/",
-          "image": "https://about.uq.edu.au/files/43658/UQ-Great-Court.jpg"
-        }
+          name: "University of Queensland",
+          description:
+            "Leading Australian research university located in Brisbane with strong industry links.",
+          url: "https://www.uq.edu.au/",
+          image: "https://about.uq.edu.au/files/43658/UQ-Great-Court.jpg",
+        },
       },
       {
         "@type": "ListItem",
-        "position": 5,
-        "item": {
+        position: 5,
+        item: {
           "@type": "CollegeOrUniversity",
-          "name": "Monash University",
-          "description": "Known for innovation, global research, and high employability of graduates.",
-          "url": "https://www.monash.edu/",
-          "image": "https://www.monash.edu/__data/assets/image/0015/2333991/monash-campus.jpg"
-        }
-      }
-    ]
+          name: "Monash University",
+          description:
+            "Known for innovation, global research, and high employability of graduates.",
+          url: "https://www.monash.edu/",
+          image:
+            "https://www.monash.edu/__data/assets/image/0015/2333991/monash-campus.jpg",
+        },
+      },
+    ],
   };
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.globalvisainternationals.com"
+        position: 1,
+        name: "Home",
+        item: "https://www.globalvisainternationals.com",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Australia Student Visa",
-        "item": pageUrl
-      }
-    ]
+        position: 2,
+        name: "Australia Student Visa",
+        item: pageUrl,
+      },
+    ],
   };
 
   const educationConsultancyJsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Global Visa Internationals provides Australia Student Visa Assistance for Indian students — expert help with subclass 500 visa, GTE requirements, proof of funds, OSHC guidance, biometrics, medicals, police certificates, SOPs, and university admissions.",
-    "keywords": "Australia student visa, subclass 500 visa, Australian study visa, GTE Australia, Australia student visa for Indian students, apply for Australia student visa, Australia study visa requirements",
-    "telephone": "+91-7022213466",
-    "address": {
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    logo: "https://www.globalvisainternationals.com/gvilogo.png",
+    description:
+      "Global Visa Internationals provides Australia Student Visa Assistance for Indian students — expert help with subclass 500 visa, GTE requirements, proof of funds, OSHC guidance, biometrics, medicals, police certificates, SOPs, and university admissions.",
+    telephone: "+91-7022213466",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
+      streetAddress: "MG Road",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560025",
+      addressCountry: "IN",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": 12.9716,
-      "longitude": 77.5946
+      latitude: 12.9716,
+      longitude: 77.5946,
     },
-    "areaServed": {
+    areaServed: {
       "@type": "Country",
-      "name": "IN"
+      name: "IN",
     },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "10:00",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
+    sameAs: [
       "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
       "https://www.linkedin.com/company/global-visa-internationals/",
       "https://x.com/GLOBALVISA1505",
       "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
+      "https://www.google.com/maps/place/Global+Visa+Internationals",
     ],
-    "serviceType": [
-      "Australia Student Visa Assistance",
-      "Subclass 500 Visa Consultation",
-      "GTE Preparation & Documentation",
-      "University Admission Guidance for Indian Students"
-    ],
-    "potentialAction": {
-      "@type": "Action",
-      "name": "Book a Consultation",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${pageUrl}#contact`,
-        "inLanguage": "en-IN",
-        "actionPlatform": [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform"
-        ]
-      }
-    }
   };
 
+  // ✅ Combine all schemas
+  const allSchemas = [
+    breadcrumbJsonLd,
+    educationConsultancyJsonLd,
+    TopUniversitiesList,
+  ];
+
   return (
-    <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
-
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TopUniversitiesList) }}
+    <main className={styles.visaContainer}>
+      {/* Inject structured data scripts into <head> */}
+      {allSchemas.map((schema, index) => (
+        <Script
+          key={index}
+          id={`structured-data-${index}`}
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
+      ))}
 
-      </Head>
 
       <div className={styles.imageContainer}>
-        <img src={metadata.images} alt="Australia Image" className={styles.VisaImage} />
+        <img src='/student-visa/Australia-student-Visa-ASSISTANCE.webp' alt="Australia Image" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>
@@ -739,6 +699,6 @@ export default function Australia() {
         <ReviewSchema />
         <ReviewCarousel />
       </section>
-    </>
+    </main>
   );
 }
