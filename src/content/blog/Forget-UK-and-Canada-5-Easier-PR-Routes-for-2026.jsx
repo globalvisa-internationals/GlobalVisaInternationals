@@ -1,298 +1,228 @@
-import AnimatedHR from '@/Components/AnimatedHR';
-import Styles from './blog.module.css';
-import Head from 'next/head';
-import VisaForm from '@/Components/VisaForm';
+import AnimatedHR from "@/Components/AnimatedHR";
+import Styles from "./blog.module.css";
+import VisaForm from "@/Components/VisaForm";
 import React from "react";
 
+// ✅ Export Metadata (Static SEO)
 export const metadata = {
     title: "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
+    image: "/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg",
     description:
         "Tired of complex PR systems in the UK and Canada? Discover 5 easier countries for PR in 2026 — New Zealand, Germany, Ireland, Australia, and the Netherlands — offering faster, transparent pathways for skilled professionals.",
-    keywords: ["easy PR countries 2026", "fastest PR countries", "permanent residency abroad", "PR after work visa", "migration options 2026", "skilled worker immigration", "visa to PR pathways"],
-    robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    keywords: [
+        "easy PR countries 2026",
+        "fastest PR countries",
+        "permanent residency abroad",
+        "PR after work visa",
+        "migration options 2026",
+        "skilled worker immigration",
+        "visa to PR pathways",
+    ],
+    date: "2025-10-27",
     alternates: {
-        canonical: "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
+        canonical:
+            "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
     },
-    url: "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
     author: "Global Visa Internationals",
-    date: "2025-10-16",
-    authors: [{ name: "Global Visa Internationals" }],
-    category: "Visa Policy & Immigration News",
-    image: "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg",
-    imagealt: "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
-    siteName: "Global Visa Internationals",
-    type: "article",
-
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    metadataBase: new URL("https://www.globalvisainternationals.com"),
     openGraph: {
         type: "article",
-        locale: "en_US",
-        title: "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
+        url: "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
+        title:
+            "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
         description:
             "Tired of complex PR systems in the UK and Canada? Discover 5 easier countries for PR in 2026 — New Zealand, Germany, Ireland, Australia, and the Netherlands — offering faster, transparent pathways for skilled professionals.",
-        url: "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
+        siteName: "Global Visa Internationals",
         images: [
             {
                 url: "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
-                type: "image/jpeg",
             },
         ],
     },
-
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
         creator: "@GLOBALVISA1505",
-        title: "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
+        title:
+            "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
         description:
             "Tired of complex PR systems in the UK and Canada? Discover 5 easier countries for PR in 2026 — New Zealand, Germany, Ireland, Australia, and the Netherlands — offering faster, transparent pathways for skilled professionals.",
         images: [
             "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg",
         ],
     },
-
+    robots: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+    },
+    category: "Visa Policy & Immigration News",
     other: {
         "article:published_time": "2025-10-16",
         "article:modified_time": new Date().toISOString(),
         "article:section": "Visa Policy & Immigration News",
-        "article:tag": "US visa policy 2025, Indian travelers, Visa Integrity Fee, US embassy India, global visa updates",
     },
 };
 
-export default function US_Visa_Changes_For_Indians_2025() {
-    const fullImageUrl = metadata.image;
-
-    // === STRUCTURED DATA ===
-    // === STRUCTURED DATA ===
+// ✅ Add Structured Data
+function StructuredData() {
     const blogStructuredData = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": metadata.title,
-        "description": metadata.description,
-        "image": metadata.image,
-        "author": {
+        headline: metadata.title,
+        description: metadata.description,
+        image:
+            "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg",
+        author: {
             "@type": "Organization",
-            "name": metadata.author,
-            "sameAs": [
+            name: "Global Visa Internationals",
+            sameAs: [
                 "https://www.facebook.com/globalvisainternationals/",
                 "https://www.instagram.com/globalvisa_internationals/",
                 "https://www.linkedin.com/company/global-visa-internationals/",
                 "https://x.com/GLOBALVISA1505",
                 "https://www.youtube.com/@globalVisaInternationals",
-                "https://www.google.com/maps/place/Global+Visa+Internationals"
-            ]
+                "https://www.google.com/maps/place/Global+Visa+Internationals",
+            ],
         },
-        "publisher": {
+        publisher: {
             "@type": "Organization",
-            "name": metadata.author,
-            "logo": {
+            name: "Global Visa Internationals",
+            logo: {
                 "@type": "ImageObject",
-                "url": "https://www.globalvisainternationals.com/gvilogo.png"
+                url: "https://www.globalvisainternationals.com/gvilogo.png",
             },
-            "sameAs": [
-                "https://www.facebook.com/globalvisainternationals/",
-                "https://www.instagram.com/globalvisa_internationals/",
-                "https://www.linkedin.com/company/global-visa-internationals/",
-                "https://x.com/GLOBALVISA1505",
-                "https://www.youtube.com/@globalVisaInternationals",
-                "https://www.google.com/maps/place/Global+Visa+Internationals"
-            ]
         },
-        "datePublished": metadata.date,
-        "dateModified": new Date().toISOString(),
-        "mainEntityOfPage": metadata.url
+        datePublished: "2025-10-27",
+        dateModified: new Date().toISOString(),
+        mainEntityOfPage:
+            "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
     };
 
     const breadcrumbStructuredData = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": [
+        itemListElement: [
             {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.globalvisainternationals.com"
+                position: 1,
+                name: "Home",
+                item: "https://www.globalvisainternationals.com",
             },
             {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Blog",
-                "item": "https://www.globalvisainternationals.com/blog"
+                position: 2,
+                name: "Blog",
+                item: "https://www.globalvisainternationals.com/blog",
             },
             {
                 "@type": "ListItem",
-                "position": 3,
-                "name": metadata.title,
-                "item": metadata.url
-            }
-        ]
+                position: 3,
+                name: metadata.title,
+                item:
+                    "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
+            },
+        ],
     };
 
     const faqStructuredData = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [
+        mainEntity: [
             {
                 "@type": "Question",
-                "name": "Which countries offer easier PR options than the UK and Canada in 2026?",
-                "acceptedAnswer": {
+                name: "Which countries offer easier PR options than the UK and Canada in 2026?",
+                acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "In 2026, the easiest countries for skilled professionals to secure permanent residency include New Zealand, Germany, Ireland, Australia, and the Netherlands — each offering transparent and faster PR routes."
-                }
+                    text: "In 2026, the easiest countries for skilled professionals to secure permanent residency include New Zealand, Germany, Ireland, Australia, and the Netherlands — each offering transparent and faster PR routes.",
+                },
             },
             {
                 "@type": "Question",
-                "name": "How does New Zealand’s Green List PR pathway work?",
-                "acceptedAnswer": {
+                name: "How does New Zealand’s Green List PR pathway work?",
+                acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "New Zealand’s Green List has two categories — Tier 1 (Straight to Residence) for high-demand jobs that allow immediate PR, and Tier 2 (Work to Residence) for applicants who can apply for PR after 24 months with an accredited employer."
-                }
+                    text: "New Zealand’s Green List has two categories — Tier 1 (Straight to Residence) for high-demand jobs that allow immediate PR, and Tier 2 (Work to Residence) for applicants who can apply for PR after 24 months with an accredited employer.",
+                },
             },
             {
                 "@type": "Question",
-                "name": "How can I get PR in Germany through the EU Blue Card?",
-                "acceptedAnswer": {
+                name: "How can I get PR in Germany through the EU Blue Card?",
+                acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "Holders of Germany’s EU Blue Card can apply for permanent residency after 21 to 27 months, depending on their language proficiency and work duration, making it one of Europe’s fastest PR options."
-                }
+                    text: "Holders of Germany’s EU Blue Card can apply for permanent residency after 21 to 27 months, depending on their language proficiency and work duration, making it one of Europe’s fastest PR options.",
+                },
             },
             {
                 "@type": "Question",
-                "name": "What is the PR process in Ireland for Critical Skills Employment Permit holders?",
-                "acceptedAnswer": {
+                name: "What is the PR process in Ireland for Critical Skills Employment Permit holders?",
+                acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "After holding Ireland’s Critical Skills Employment Permit for 2 years, professionals can transition to Stamp 4, which offers PR-like rights to live and work freely in Ireland without needing a work permit."
-                }
+                    text: "After holding Ireland’s Critical Skills Employment Permit for 2 years, professionals can transition to Stamp 4, which offers PR-like rights to live and work freely in Ireland without needing a work permit.",
+                },
             },
             {
                 "@type": "Question",
-                "name": "How does Australia’s Employer Nomination Scheme (ENS 186) lead to PR?",
-                "acceptedAnswer": {
+                name: "How does Australia’s Employer Nomination Scheme (ENS 186) lead to PR?",
+                acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "Australia’s ENS 186 visa allows skilled workers nominated by an approved employer to obtain permanent residency directly or transition from a Temporary Skill Shortage (TSS 482) visa after meeting eligibility requirements."
-                }
+                    text: "Australia’s ENS 186 visa allows skilled workers nominated by an approved employer to obtain permanent residency directly or transition from a Temporary Skill Shortage (TSS 482) visa after meeting eligibility requirements.",
+                },
             },
             {
                 "@type": "Question",
-                "name": "What is the PR pathway in the Netherlands?",
-                "acceptedAnswer": {
+                name: "What is the PR pathway in the Netherlands?",
+                acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "The Netherlands offers PR after 5 years of legal residence under a Highly Skilled Migrant or EU Blue Card. This allows individuals to apply for Long-Term EU Residency, granting work and residence rights across the EU."
-                }
+                    text: "The Netherlands offers PR after 5 years of legal residence under a Highly Skilled Migrant or EU Blue Card. This allows individuals to apply for Long-Term EU Residency, granting work and residence rights across the EU.",
+                },
             },
             {
                 "@type": "Question",
-                "name": "Why are these PR routes easier than those in the UK or Canada?",
-                "acceptedAnswer": {
+                name: "Why are these PR routes easier than those in the UK or Canada?",
+                acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "These countries offer more flexible eligibility criteria, shorter waiting periods, and direct employer-based PR routes compared to the UK and Canada’s strict points-based systems and long processing timelines."
-                }
-            }
-        ]
+                    text: "These countries offer more flexible eligibility criteria, shorter waiting periods, and direct employer-based PR routes compared to the UK and Canada’s strict points-based systems and long processing timelines.",
+                },
+            },
+        ],
     };
-    // Return JSX (your blog page component logic)
-
-
-
 
     return (
         <>
-            <Head>
-                {/* Basic */}
-                <meta charSet="utf-8" />
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-                <meta name="robots" content={metadata.robots} />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="canonical" href='https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026' />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+            />
+        </>
+    );
+}
 
-                {/* Preconnect / DNS-prefetch */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-
-                {/* Preload hero image */}
-                <link rel="preload" as="image" href="https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg" />
-
-                {/* Open Graph */}
-
-                <meta property="og:type" content={metadata.type} />
-                <meta property="og:title" content={metadata.title} />
-                <meta property="og:description" content={metadata.description} />
-                <meta property="og:url" content={metadata.url} />
-                <meta property="og:image" content={metadata.image} />
-                <meta property="og:image:alt" content={metadata.imagealt} />
-                <meta property="og:site_name" content={metadata.siteName} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-
-
-                {/* Social Images */}
-                {metadata.openGraph.images.map((img, index) => {
-                    // ensure absolute URLs
-                    const imageUrl = img.url.startsWith("http")
-                        ? img.url
-                        : `https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg`;
-                    return (
-                        <React.Fragment key={index}>
-                            <meta property="og:image" content={imageUrl} />
-                            {img.width && <meta property="og:image:width" content={img.width.toString()} />}
-                            {img.height && <meta property="og:image:height" content={img.height.toString()} />}
-                            {img.alt && <meta property="og:image:alt" content={img.alt} />}
-                            {img.type && <meta property="og:image:type" content={img.type} />}
-                        </React.Fragment>
-                    );
-                })}
-
-
-                {/* Article meta */}
-                <meta property="article:published_time" content={metadata.other["article:published_time"]} />
-                <meta property="article:modified_time" content={metadata.other["article:modified_time"]} />
-                <meta property="article:author" content={metadata.authors[0].name} />
-                <meta property="article:section" content={metadata.other["article:section"]} />
-                {metadata.other["article:tag"].split(",").map((tag, i) => (<meta key={i} property="article:tag" content={tag.trim()} />))}
-
-                {/* Twitter */}
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@GLOBALVISA1505" />
-                <meta name="twitter:creator" content="@GLOBALVISA1505" />
-                <meta name="twitter:title" content={metadata.title} />
-                <meta name="twitter:description" content={metadata.description} />
-                <meta name="twitter:image" content={metadata.image} />
-                <meta name="twitter:image:alt" content={metadata.imagealt} />
-
-
-                {/* Fallback */}
-                <link rel="image_src" href={metadata.image} />
-
-                {/* PWA / Icons */}
-                <link rel="manifest" href="/site.webmanifest" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-                <meta name="theme-color" content="#ffffff" />
-
-                {/* Local SEO */}
-                <meta name="geo.region" content="IN-KA" />
-                <meta name="geo.placename" content="Bengaluru" />
-                <meta name="geo.position" content="12.9716;77.5946" />
-                <meta name="ICBM" content="12.9716,77.5946" />
-
-                {/* JSON-LD Structured Data */}
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }} />
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }} />
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
-            </Head>
+export default function ForgetUKAndCanadaPR2026() {
+    return (
+        <>
 
             <article>
 
                 <div className={Styles.imageCard}>
                     <picture>
                         <img
-                            src={fullImageUrl}
+                            src={metadata.image}
                             alt={metadata.title}
                             className={Styles.image}
                             loading="lazy"
@@ -301,7 +231,7 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 </div>
                 <div className={Styles.meta}>
                     <span>By {metadata.author}</span>
-                    <span>•</span>
+                    <span> | • | </span>
                     <span>
                         {new Date(metadata.date).toLocaleDateString("en-US", {
                             year: "numeric",
@@ -383,7 +313,7 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <p><b>Why Ireland?</b><br />
                     Ireland is a tech and finance hub, home to global companies like Google, Meta, Apple, and Pfizer. It’s also the only English-speaking country in the EU, offering a familiar environment and easy integration for international professionals.</p>
 
-                ✅ <h3>Advantages:</h3>
+                <h3>Advantages:</h3>
                 <ul>
                     <li>PR-like rights after 2 years on CSEP</li>
                     <li>Access to top-tier education and healthcare</li>
@@ -408,7 +338,7 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <p><b>Why Australia?</b><br />
                     Australia’s immigration policy strongly supports skilled migration. It offers high living standards, robust healthcare, and a multicultural society — all backed by a transparent PR process.</p>
 
-                ✅ <h3>Advantages:</h3>
+                <h3>Advantages:</h3>
 
                 <ul>
                     <li>Immediate PR upon visa grant</li>
@@ -439,7 +369,7 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <p><b>Why the Netherlands?</b><br />
                     The Netherlands is a top destination for professionals in tech, logistics, and finance. With its English-friendly environment, high salaries, and strong social benefits, it’s one of Europe’s most livable countries.</p>
 
-                ✅ <h3>Advantages:</h3>
+                <h3>Advantages:</h3>
 
                 <ul>
                     <li>PR after 5 years of legal stay</li>
