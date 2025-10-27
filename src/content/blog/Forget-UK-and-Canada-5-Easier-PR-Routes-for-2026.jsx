@@ -282,10 +282,9 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <meta name="ICBM" content="12.9716,77.5946" />
 
                 {/* JSON-LD Structured Data */}
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringif(blogStructuredData) }} />
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringif(breadcrumbStructuredData) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
-
             </Head>
 
             <article>
@@ -459,16 +458,6 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <p>Start early, plan strategically, and secure your global future in 2026.</p>
 
                 <AnimatedHR direction="left" duration={1.2} />
-
-
-                <AnimatedHR direction="left" duration={1.2} />
-
-
-
-                <AnimatedHR direction="left" duration={1.2} />
-
-
-
                 {/* --- VISA FORM COMPONENT --- */}
                 <VisaForm />
             </article>
