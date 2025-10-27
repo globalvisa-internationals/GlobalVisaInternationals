@@ -1,0 +1,107 @@
+.container {
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    /* background: #fff; */
+    line-height: 1.6;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0 0 12px 12px;
+}
+
+.heroText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.socialLinks a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.socialLinks a:hover {
+    color: #ffcc00;
+}
+
+.container section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #003366;
+}
+
+.countries ul,
+.visaTypes ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.services {
+    /* background: #f9fafc; */
+    border-radius: 16px;
+}
+
+.serviceCard {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+}
+
+.vision {
+    background: #003366;
+    color: #fff;
+    border-radius: 16px;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.values h4 {
+    color: #ffcc00;
+    margin-bottom: 0.5rem;
+}

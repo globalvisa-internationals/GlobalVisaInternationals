@@ -267,7 +267,7 @@ export default function UKStudentVisaPage() {
           />
         ))}
         <div className={styles.imageContainer}>
-          <img src="/student-visa/UK-student-Visa-ASSISTANCE.webp" alt="UK Student Visa" className={styles.VisaImage} />
+          <img src="/student-visa/UK-student-Visa-ASSISTANCE.webp" alt="UK Student Visa Consultants in Bangalore" className={styles.VisaImage} />
         </div>
 
         <div className={styles.VisaSec}>
