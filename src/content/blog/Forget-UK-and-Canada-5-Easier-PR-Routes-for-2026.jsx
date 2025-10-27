@@ -11,14 +11,14 @@ export const metadata = {
     keywords: ["easy PR countries 2026", "fastest PR countries", "permanent residency abroad", "PR after work visa", "migration options 2026", "skilled worker immigration", "visa to PR pathways"],
     robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     alternates: {
-        canonical: "https://www.globalvisainternationals.com/blog/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026",
+        canonical: "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
     },
-    url: "https://www.globalvisainternationals.com/blog/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026",
+    url: "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
     author: "Global Visa Internationals",
     date: "2025-10-16",
     authors: [{ name: "Global Visa Internationals" }],
     category: "Visa Policy & Immigration News",
-    image: "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026.jpg",
+    image: "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg",
     imagealt: "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
     siteName: "Global Visa Internationals",
     type: "article",
@@ -29,10 +29,10 @@ export const metadata = {
         title: "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
         description:
             "Tired of complex PR systems in the UK and Canada? Discover 5 easier countries for PR in 2026 — New Zealand, Germany, Ireland, Australia, and the Netherlands — offering faster, transparent pathways for skilled professionals.",
-        url: "https://www.globalvisainternationals.com/blog/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026",
+        url: "https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026.jpg",
+                url: "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Forget UK & Canada: 5 Easier PR Routes for 2026 | Fast & Simple Permanent Residency Options",
@@ -49,7 +49,7 @@ export const metadata = {
         description:
             "Tired of complex PR systems in the UK and Canada? Discover 5 easier countries for PR in 2026 — New Zealand, Germany, Ireland, Australia, and the Netherlands — offering faster, transparent pathways for skilled professionals.",
         images: [
-            "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026.jpg",
+            "https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg",
         ],
     },
 
@@ -207,7 +207,7 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <meta name="keywords" content={metadata.keywords} />
                 <meta name="robots" content={metadata.robots} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="canonical" href='https://www.globalvisainternationals.com/blog/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026' />
+                <link rel="canonical" href='https://www.globalvisainternationals.com/blog/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026' />
 
                 {/* Preconnect / DNS-prefetch */}
                 <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
@@ -215,7 +215,7 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
                 {/* Preload hero image */}
-                <link rel="preload" as="image" href="https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026.jpg" />
+                <link rel="preload" as="image" href="https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg" />
 
                 {/* Open Graph */}
 
@@ -235,7 +235,7 @@ export default function US_Visa_Changes_For_Indians_2025() {
                     // ensure absolute URLs
                     const imageUrl = img.url.startsWith("http")
                         ? img.url
-                        : `https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-&-Canada-5-Easier-PR-Routes-for-2026.jpg`;
+                        : `https://www.globalvisainternationals.com/blogBannerImages/Forget-UK-and-Canada-5-Easier-PR-Routes-for-2026.jpg`;
                     return (
                         <React.Fragment key={index}>
                             <meta property="og:image" content={imageUrl} />
@@ -458,7 +458,7 @@ export default function US_Visa_Changes_For_Indians_2025() {
                 <p>Start early, plan strategically, and secure your global future in 2026.</p>
 
                 <AnimatedHR direction="left" duration={1.2} />
-                {/* --- VISA FORM COMPONENT --- */}
+
                 <VisaForm />
             </article>
 
