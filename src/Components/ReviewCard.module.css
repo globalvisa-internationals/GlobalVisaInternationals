@@ -44,6 +44,34 @@
     font-weight: 700;
 }
 
+.googleLogo1 {
+    font-family: "Product Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    /* adjust as needed */
+    letter-spacing: -1px;
+}
+
+.googleLogo1 span {
+    display: inline-block;
+}
+
+.blue {
+    color: #4285f4;
+}
+
+.red {
+    color: #ea4335;
+}
+
+.yellow {
+    color: #fbbc05;
+}
+
+.green {
+    color: #34a853;
+}
+
 .ratingSummary {
     display: flex;
     align-items: center;

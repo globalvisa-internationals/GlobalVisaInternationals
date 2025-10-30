@@ -61,15 +61,24 @@ export default function ReviewCarouselClient({ reviews = [] }) {
 
     return (
         <>
-            <h2 className={styles.reviewtitle} style={{ textAlign: "center", marginTop: "2rem" }}>
+            {/* <h2 className={styles.reviewtitle} style={{ textAlign: "center", marginTop: "2rem" }}>
                 What Our Clients Say
-            </h2>
+            </h2> */}
             <div className={styles.googleReviewSection}>
                 {/* Header */}
 
                 <div className={styles.headerRow}>
                     <div className={styles.googleTitle}>
-                        <span className={styles.googleLogo}>Google</span> Reviews
+                        <span className={styles.googleLogo1}>
+                            <span className={styles.blue}>G</span>
+                            <span className={styles.red}>o</span>
+                            <span className={styles.yellow}>o</span>
+                            <span className={styles.blue}>g</span>
+                            <span className={styles.green}>l</span>
+                            <span className={styles.red}>e</span>
+                            <span> </span>
+                        </span>
+                        Reviews
                     </div>
 
                     <div className={styles.ratingSummary}>
@@ -120,7 +129,13 @@ export default function ReviewCarouselClient({ reviews = [] }) {
                                             <FaCheckCircle className={styles.verified} />
                                         </div>
                                         <span className={styles.time}>
-                                            {r.time} ago on <b className={styles.googleLogo}>Google </b>
+                                            {r.time} ago on <b className={styles.googleLogo}><span className={styles.blue}>G</span>
+                                                <span className={styles.red}>o</span>
+                                                <span className={styles.yellow}>o</span>
+                                                <span className={styles.blue}>g</span>
+                                                <span className={styles.green}>l</span>
+                                                <span className={styles.red}>e</span>
+                                                <span> </span> </b>
                                         </span>
                                     </div>
                                 </div>
@@ -156,7 +171,13 @@ export default function ReviewCarouselClient({ reviews = [] }) {
                                 <div>
                                     <h3>{selectedReview.name}</h3>
                                     <p>
-                                        {selectedReview.time} ago on <b className={styles.googleLogo}>Google</b>
+                                        {selectedReview.time} ago on <b className={styles.googleLogo}><span className={styles.blue}>G</span>
+                                            <span className={styles.red}>o</span>
+                                            <span className={styles.yellow}>o</span>
+                                            <span className={styles.blue}>g</span>
+                                            <span className={styles.green}>l</span>
+                                            <span className={styles.red}>e</span>
+                                            <span> </span></b>
                                     </p>
                                     <div className={styles.stars}>
                                         {[...Array(selectedReview.rating)].map((_, j) => (
@@ -202,7 +223,13 @@ export default function ReviewCarouselClient({ reviews = [] }) {
                                         rel="noopener noreferrer"
                                         className={styles.reviewLink}
                                     >
-                                        View on <span className={styles.googleLogo}>Google</span>
+                                        View on <span className={styles.googleLogo}><span className={styles.blue}>G</span>
+                                            <span className={styles.red}>o</span>
+                                            <span className={styles.yellow}>o</span>
+                                            <span className={styles.blue}>g</span>
+                                            <span className={styles.green}>l</span>
+                                            <span className={styles.red}>e</span>
+                                            <span> </span></span>
                                     </a>
                                 )}
                             </div>

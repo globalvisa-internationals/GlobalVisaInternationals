@@ -218,12 +218,44 @@
     position: relative;
 }
 
-.planFeatures li::before {
+/* .planFeatures li::before {
     content: '✓';
     color: var(--primary);
     font-weight: bold;
     position: absolute;
     left: 0;
+} */
+
+/* === Pricing Feature Status === */
+.included::before {
+    content: '✓';
+    color: var(--primary);
+    font-weight: 600;
+    position: absolute;
+    left: 0;
+}
+
+.excluded::before {
+    content: '✗';
+    color: #d9534f;
+    font-weight: 600;
+    position: absolute;
+    left: 0;
+}
+
+.excluded {
+    color: #999;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+
+/* === Highlighted Card (Standard) === */
+.highlighted {
+    border: 2px solid var(--primary);
+    background: #f9fcff;
+    box-shadow: 0 0 10px rgba(0, 85, 255, 0.1);
+    transform: scale(1.02);
 }
 
 /* === Larger Screens Enhancements === */
@@ -361,7 +393,6 @@
 .highlightGrid {
     display: grid;
     grid-template-columns: 1fr;
-    /* Single column on mobile */
     gap: 20px;
 }
 

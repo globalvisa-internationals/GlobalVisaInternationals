@@ -1,46 +1,86 @@
-
 import styles from '@/Components/Visa.module.css';
-import React from 'react';
-import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
-
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
-export const metadata = {
-  title: "Japan Tourist Visa Consultants in Bangalore | Global Visa Internationals",
-  description: "Apply for a Japan Tourist Visa with expert support from Global Visa Internationals. 11+ years of experience. Smooth documentation, fast process, and mock interviews.",
-  keywords: "Japan tourist visa, Japan visa consultants in Bangalore, Japan visitor visa from India, how to apply for Japan visa, Japan travel visa assistance",
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan",
-  },
-  openGraph: {
-    type: "website",
-    title: "Apply for Japan Tourist Visa from India | Global Visa Internationals",
-    description: "Trusted visa agents for Japan in Bangalore. Expert documentation, embassy interview prep, and high visa success rate.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/japan",
-    images: [
-      {
-        url: "https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg",
-        alt: "Japan Tourist Visa Assistance",
-      }
+
+export const dynamic = 'force-static'; // helps SEO caching in Next.js
+
+export async function generateMetadata() {
+  const baseUrl = "https://www.globalvisainternationals.com";
+
+  return {
+    title: "Japan Tourist Visa Consultants in Bangalore | Global Visa Internationals",
+    description: "Apply for a Japan Tourist Visa with expert support from Global Visa Internationals. 11+ years of experience. Smooth documentation, fast process, and mock interviews.",
+    keywords: [
+      "Japan tourist visa",
+      "Japan visa consultants in Bangalore",
+      "Japan visitor visa from India",
+      "how to apply for Japan visa",
+      "Japan travel visa assistance"
     ],
-    siteName: "Global Visa Internationals"
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@globalvisainternationals",
-    title: "Japan Tourist Visa Experts – Global Visa Internationals",
-    description: "Planning to travel to Japan? Get full visa support from trusted consultants in Bangalore.",
-    images: ["https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg"]
-  }
-};
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `https://www.globalvisainternationals.com/Visa/tourist-visa/japan`,
+      languages: {
+        "en-IN": `https://www.globalvisainternationals.com/Visa/tourist-visa/japan`, // regional targeting
+      },
+    },
+    openGraph: {
+      type: "article",
+      locale: "en_IN",
+      url: `https://www.globalvisainternationals.com/Visa/tourist-visa/japan`,
+      title: "Apply for Japan Tourist Visa from India | Global Visa Internationals",
+      description: "Trusted visa agents for Japan in Bangalore. Expert documentation, embassy interview prep, and high visa success rate.",
+      siteName: "Global Visa Internationals",
+      images: [
+        {
+          url: `https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg`,
+          width: 1200,
+          height: 630,
+          alt: "Japan Tourist Visa Assistance",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@globalvisainternationals",
+      title: "Japan Tourist Visa Experts - Global Visa Internationals",
+      description: "Planning to travel to Japan? Get full visa support from trusted consultants in Bangalore.",
+      images: [`https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        maxSnippet: -1,
+        maxImagePreview: "large",
+        maxVideoPreview: -1,
+      },
+    },
 
-
+    image: `https://www.globalvisainternationals.com/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg`,
+    authors: [{ name: "Global Visa Internationals", url: baseUrl }],
+    publisher: {
+      name: "Global Visa Internationals",
+      url: baseUrl,
+      logo: `https://www.globalvisainternationals.com/gvilogo.png`,
+    },
+    other: {
+      "geo.region": "IN-KA",
+      "geo.placename": "Bengaluru",
+      "ICBM": "12.9716,77.5946",
+      "theme-color": "#ffffff",
+      "format-detection": "telephone=no",
+      "article:published_time": "2025-01-20T00:00:00+05:30",
+      "article:modified_time": "2025-10-29T00:00:00+05:30",
+    },
+  };
+}
 
 export default function JapanTouristVisa() {
-  const pageUrl = metadata.alternates.canonical;
-  const TouristAttraction = {
+  const touristAttractions = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Top Tourist Attractions in Japan",
@@ -50,7 +90,7 @@ export default function JapanTouristVisa() {
         "name": "Mount Fuji",
         "description": "Japan's tallest mountain and iconic symbol, popular for hiking and photography.",
         "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Mount_Fuji_from_Yamanaka.jpg",
-        "url": "https://www.Visa.travel/en/uk/uk-destinations/fuji-five-lakes-mount-fuji/"
+        "url": "https://www.japan.travel/en/uk/uk-destinations/fuji-five-lakes-mount-fuji/"
       },
       {
         "@type": "TouristAttraction",
@@ -71,7 +111,7 @@ export default function JapanTouristVisa() {
         "name": "Arashiyama Bamboo Grove",
         "description": "A scenic bamboo forest located in Kyoto, popular for tranquil walks and photography.",
         "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Arashiyama_Bamboo_Grove.jpg",
-        "url": "https://www.Visa.travel/en/spot/1207/"
+        "url": "https://www.japan.travel/en/spot/1207/"
       },
       {
         "@type": "TouristAttraction",
@@ -81,10 +121,9 @@ export default function JapanTouristVisa() {
         "url": "https://www.himejicastle.jp/en/"
       }
     ]
+  };
 
-
-  }
-  const breadcrumbJsonLd = {
+  const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -98,12 +137,12 @@ export default function JapanTouristVisa() {
         "@type": "ListItem",
         "position": 2,
         "name": "Japan Tourist Visa",
-        "item": pageUrl
+        "item": "https://www.globalvisainternationals.com/Visa/tourist-visa/japan"
       }
     ]
   };
 
-  const travelAgencyJsonLd = {
+  const travelAgency = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     "name": "Global Visa Internationals",
@@ -124,16 +163,12 @@ export default function JapanTouristVisa() {
       "latitude": 12.9716,
       "longitude": 77.5946
     },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-        ],
-        "opens": "10:00",
-        "closes": "18:00"
-      }
-    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    }],
     "sameAs": [
       "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
@@ -143,289 +178,292 @@ export default function JapanTouristVisa() {
       "https://www.google.com/maps/place/Global+Visa+Internationals"
     ]
   };
+
+  const visaService = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Japan Tourist Visa Application Assistance",
+    "provider": {
+      "@type": "Organization",
+      "name": "Global Visa Internationals",
+      "url": "https://www.globalvisainternationals.com"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Bangalore, India"
+    },
+    "description": "Expert assistance for Japan tourist visa applications. Support with documents, application submission, and embassy interview preparation.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.globalvisainternationals.com/Visa/tourist-visa/japan"
+    }
+  };
+
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
 
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([breadcrumb, travelAgency, visaService, touristAttractions])
+        }}
+      />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
 
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TouristAttraction) }}
-        />
-
-      </Head>
 
       <div className={styles.imageContainer}>
-        <img src="/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg" alt="Japan Tourist Visa Assistance GVI" className={styles.VisaImage} />
+        <img src="/tourist-visa/Japan-Tourist-Visa-Assistance-GVI.jpg" loading="lazy" alt="Japan Tourist Visa Assistance in Bangalore by Global Visa Internationals" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>
 
 
         <div className={styles.VisaData}>
+          {/* ✅ NEW INTRO + CORRECT HEADING STRUCTURE */}
           <section>
-            <h2 className={styles.subTitle}>✈ Travel to Japan with a Visitor Visa</h2>
+            <h1 className={styles.mainTitle}>
+              Japan Tourist Visa from India - Apply with Global Visa Internationals
+            </h1>
             <p>
-              Planning a trip to Japan? The Japan Tourist Visa allows Indian travelers to visit for tourism, to see family, or for short-term business purposes. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We specialize in providing comprehensive <strong className={styles.strong}>Japan visa assistance for Indians</strong>.
+              Looking to apply for a <strong className={styles.strong}>Japan Tourist Visa from India</strong>?
+              <strong className={styles.strong}> Global Visa Internationals (GVI)</strong> in Bangalore helps Indian travelers
+              obtain Japan visitor visas smoothly and professionally. Our expert consultants guide you through every step —
+              from <strong>document verification</strong> to <strong>embassy coordination</strong> — ensuring faster visa approval
+              and peace of mind.
             </p>
           </section>
 
-          <div className={styles.section}>
-            <section>
-              <h2 className={styles.subTitle}>Visa Processing Overview</h2>
-              <p>
-                Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your <strong className={styles.strong}>Japan visa application from India</strong> meets the expectations of the Japanese Embassy and that your travel purpose is clearly and professionally represented. We are a trusted <strong className={styles.strong}>Japan visa consultant in India</strong>.
-              </p>
-            </section>
 
-            <section>
-              <h3 className={styles.subTitle}>Our Services Include:</h3>
-              <ul>
-                <li>Visa application form filling assistance</li>
-                <li>Covering letter and documentation preparation</li>
-                <li>Personalized Japan tourist visa checklist and guidance</li>
-                <li>Providing accepted samples for the required documents</li>
-                <li>Verification of documentation</li>
-                <li>Complete walk-through of the Japan tourist visa process</li>
-              </ul>
-            </section>
-
-            <section>
-              <h3 className={styles.subTitle}>Timeline:</h3>
-              <p>
-                Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days. This is an essential first step in the overall <strong className={styles.strong}>Japan visa processing time from India</strong>.
-              </p>
-            </section>
-          </div>
 
           <section>
-            <h2 className={styles.subTitle}>🕒 Japan Visa Duration Rule</h2>
+            <h2 className={styles.subTitle}>Travel to Japan with a Visitor Visa</h2>
             <p>
-              A Japan Tourist Visa typically allows you to stay for up to 15, 30 or 90 days depending on the visa issued. A <strong className={styles.strong}>Japan multiple entry visa for Indians</strong> may be issued with a validity of 1, 3, or 5 years for eligible applicants. Note that even with a multiple-entry visa, you can only stay for the authorized period on each visit. Overstaying may lead to fines, entry bans, or refusal of future visa applications.
-            </p>
-            <p>
-              👉 With GVI, you'll never miscalculate your stay—we ensure full compliance with Japanese immigration rules.
+              The <strong className={styles.strong}>Japan Tourist Visa</strong> allows Indian nationals to visit Japan
+              for tourism, family visits, or short-term business trips.
+              At <strong className={styles.strong}>Global Visa Internationals (GVI)</strong>, we make the process stress-free
+              with expert documentation, transparent communication, and end-to-end visa file handling.
             </p>
           </section>
 
           <section>
-            <h2 className={styles.subTitle}>Japan Visitor Visa Documents & Requirements for Indian Applicants</h2>
+            <h2 className={styles.subTitle}>Japan Airlines Free Domestic Flight Offer</h2>
             <p>
-              Before applying, ensure you meet the <strong className={styles.strong}>Japan visa eligibility for Indians</strong>. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and guide you through submission. You may need to visit the application center or embassy for submission. We provide a detailed <strong className={styles.strong}>Japan tourist visa document checklist</strong>.
+              <strong className={styles.strong}>Japan Airlines (JAL)</strong> now offers free domestic flights within Japan
+              to international passengers booking JAL international tickets.
+              This means travelers from India can fly to <strong>Sapporo</strong>, <strong>Fukuoka</strong>, or
+              <strong>Okinawa</strong> without extra airfare (taxes apply).
+            </p>
+            <p>
+              This initiative aims to reduce overtourism in <strong>Tokyo</strong>, <strong>Kyoto</strong>, and
+              <strong>Osaka</strong>, encouraging exploration of Japan’s hidden gems.
+              <br />
+              <b>Eligible Countries:</b> India, USA, Canada, Australia, Singapore, Thailand, Vietnam, Indonesia, China, and more.
+              Both international and domestic flights must be booked in the same reservation.
             </p>
           </section>
 
           <section>
-            <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
+            <h2 className={styles.subTitle}>Japan Visa Processing Overview</h2>
+            <p>
+              Applying for a <strong>Japan Tourist Visa from India</strong> may seem complicated, but
+              <strong> GVI </strong> makes it simple and fast. Our team manages all paperwork, form completion, and embassy coordination,
+              ensuring full compliance with <strong>Japan’s Ministry of Foreign Affairs (MOFA)</strong> guidelines.
+            </p>
+          </section>
+
+          <section>
+            <h3 className={styles.subTitle}>Our Japan Visa Services Include:</h3>
             <ul>
-              <li>
-                <b className={styles.strong}>Valid Passport:</b> Must be valid for at least six months beyond your intended stay, with at least two blank pages. We guide you on all <strong className={styles.strong}>Japan visa passport requirements</strong>.
-              </li>
-              <li>
-                <b className={styles.strong}>Travel History:</b> Previous international travel to developed countries strengthens your application. GVI helps you highlight these to strengthen your Japan visa application.
-              </li>
+              <li>Visa application form completion (MOFA & VFS)</li>
+              <li>Covering letter and documentation preparation</li>
+              <li>Personalized Japan tourist visa checklist</li>
+              <li>Document verification for accuracy and consistency</li>
+              <li>Appointment booking and passport courier coordination</li>
+              <li>Templates for financial and employment documentation</li>
+              <li>Fast Track / eVISA / Visit Japan Web assistance</li>
             </ul>
           </section>
 
           <section>
-            <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
+            <h3 className={styles.subTitle}>Japan Visa Processing Timeline</h3>
+            <ul>
+              <li><b className={styles.strong}>GVI Internal Review:</b> 3-5 working days</li>
+              <li><b className={styles.strong}>Embassy Processing:</b> 5-10 working days (varies by jurisdiction)</li>
+            </ul>
             <p>
-              You must prove you have sufficient funds to support your trip without working. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹1–2 lakh (or approx. ¥200,000-¥400,000) in your bank account. This is a key part of the <strong className={styles.strong}>proof of funds for Japan visitor visa</strong>. Avoid any large, unexplained transactions in the months leading up to your application.
-            </p>
-            <ul>
-              <li>
-                <b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. We advise on the <strong className={styles.strong}>Japan tourist visa bank statement requirements</strong>.
-              </li>
-              <li>
-                <b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 2-3 years to prove a stable income source.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h3 className={styles.subTitle}>3. Employment & Professional Documentation</h3>
-            <ul>
-              <li>
-                <b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.
-              </li>
-              <li>
-                <b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 2-3 years' ITRs. We also recommend a brief business profile. This also applies for <strong className={styles.strong}>Japan visa for retired persons</strong>.
-              </li>
-              <li>
-                <b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university. We also assist with <strong className={styles.strong}>Japan tourist visa for minors</strong>.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
-            <ul>
-              <li>
-                <b className={styles.strong}>Flight & Hotel Bookings:</b> Provide a detailed day-by-day travel itinerary covering your entire stay. It's recommended to have confirmed return flight tickets and hotel reservations.
-              </li>
-              <li>
-                <b className={styles.strong}>Accommodation Proof:</b> Provide confirmed hotel reservations covering your entire stay. If staying with a friend or relative, you will need a <strong className={styles.strong}>Japan visa invitation letter</strong> and proof of their Japanese address and residency status. We assist with applications for a <strong className={styles.strong}>Japan visa for family</strong> and <strong className={styles.strong}>Japan visa for parents</strong>.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h3 className={styles.subTitle}>5. Visa Application Form & Itinerary</h3>
-            <p>
-              A well-written day-by-day itinerary is crucial for your Japan visa application. It should include your travel plans, places to visit, and proof of your strong ties to India (e.g., family, job). Our experts draft a professional <strong className={styles.strong}>Japan tourist visa itinerary sample</strong> for every client to maximize their chances of success.
+              <b>Note:</b> The Embassy may request additional documentation or require verification through Tokyo headquarters in special cases.
             </p>
           </section>
 
           <section>
-            <h2 className={styles.subTitle}>Japan Tourist Visa Fees (India 2025)</h2>
-            <p>
-              As of 2025, the Japan visa fees are subject to change. The fees listed below are approximate and do not include additional services. We provide transparent guidance on the <strong className={styles.strong}>Japan tourist visa cost in rupees</strong>.
-            </p>
+            <h3 className={styles.subTitle}>Important Points to Note</h3>
             <ul>
-              <li>
-                <b className={styles.strong}>Single Entry Visa Fee:</b> ¥3,000 (approx. ₹1,700)
-              </li>
-              <li>
-                <b className={styles.strong}>Multiple Entry Visa Fee:</b> ¥6,000 (approx. ₹3,400)
-              </li>
-              <li>
-                <b className={styles.strong}>Service Charges:</b> Vary based on services availed (e.g., documentation assistance, consultation, etc.)
-              </li>
+              <li>Confirmed flight and hotel bookings are mandatory — dummy bookings not accepted.</li>
+              <li>Ensure all travel dates match across documents.</li>
+              <li>Only genuine, signed, and updated documents are accepted.</li>
+              <li>GVI assists with confirmed flight, hotel, and forex arrangements.</li>
+            </ul>
+          </section>
+
+          {/* ✅ UPDATED JAPAN VISA CHECKLIST & TRANSPARENT PRICING SECTIONS */}
+
+          <section>
+            <h2 className={styles.subTitle}>Japan Tourist Visa Checklist (2025)</h2>
+            <p>
+              <b>Temporary Visitor Visa for Tourism (Without Guarantor)</b><br />
+              <small>(For residents of Karnataka — processed by the Consulate General of Japan, Bengaluru)</small>
+            </p>
+
+            <h3>✅ Mandatory Documents</h3>
+            <ul>
+              <li><b>Valid Passport:</b> At least 2 blank pages; include old passports if available.</li>
+              <li><b>Passport Photocopy:</b> First and last page of the current passport.</li>
+              <li><b>Visa Application Form:</b> Completely filled and signed by the applicant.</li>
+              <li><b>Recent Photograph:</b> 45mm x 35mm, white background, 80% face coverage, taken within the last 6 months.</li>
+              <li><b>Covering Letter:</b> Signed by the applicant, including travel dates, purpose, companions, and expense bearer details.</li>
+              <li><b>Travel Schedule:</b> Flight/cruise itinerary and day-by-day Japan travel plan with hotel details.</li>
+              <li><b>Accommodation Proof:</b> Hotel booking under the applicant’s name (single name if travelling alone).</li>
+              <li><b>Financial Documents:</b> Latest 6-month bank statement, last 2 years’ ITR acknowledgements, and last 3 months’ salary slips (if employed).</li>
+            </ul>
+
+            <h3>💼 Employment / Occupation Documents</h3>
+            <ul>
+              <li><b>If Employed:</b> Original NOC / Leave Approval Letter + company ID copy.</li>
+              <li><b>If Self-Employed:</b> GST Registration Certificate.</li>
+              <li><b>If Doctor:</b> KMC Certificate.</li>
+              <li><b>If Lawyer:</b> Bar Council Card.</li>
+              <li><b>If Landlord / Agriculturist:</b> Property ownership proof.</li>
+              <li><b>If Student:</b> Bonafide certificate from school/college/institution.</li>
+            </ul>
+
+            <h3>👨‍👩‍👧 Family / Dependent Travelers</h3>
+            <ul>
+              <li><b>Proof of Relationship:</b> Marriage/Birth certificate or passport copy.</li>
+              <li><b>Accompanying Person’s Documents:</b> Passport, visa copy, and flight tickets (even if travelling from another state).</li>
+              <li><b>If Sponsored:</b> Sponsor Letter, 3-month bank statement, 2-year ITR, and ID proof.</li>
+              <li><b>If Divorced:</b> Divorce decree copy.</li>
+              <li><b>If Family/Friends Travelling Together:</b> Submit all applications together.</li>
+            </ul>
+
+            <h3>🏠 Residence Proof (for Passports Issued Outside Karnataka)</h3>
+            <ul>
+              <li>Valid Rental/Lease Agreement</li>
+              <li>Sales Deed</li>
+              <li>Electricity / Gas Bill</li>
+              <li>Aadhaar Card (current address)</li>
+            </ul>
+
+            <h3>💰 Recommended Bank Balance (Per Person)</h3>
+            <table className={styles.table}>
+              <thead>
+                <tr><th>Trip Duration</th><th>Recommended Minimum Funds</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1 week</td><td>₹1.5 – ₹2.0 lakhs</td></tr>
+                <tr><td>10–15 days</td><td>₹2.5 – ₹3.5 lakhs</td></tr>
+                <tr><td>2–3 weeks</td><td>₹3.5 – ₹5.0 lakhs</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          {/* ✅ UPDATED TRANSPARENT PRICING SECTION */}
+          <section>
+            <h2 className={styles.subTitle}>Transparent Pricing</h2>
+            <p>
+              Choose the right <b className={styles.strong}>Japan Tourist Visa Assistance Package</b> that fits your travel needs:
+            </p>
+            <div className={styles.pricingContainer}>
+              {/* BASIC PLAN */}
+              <div className={styles.pricingCard}>
+                <h3 className={styles.planTitle}>Basic</h3>
+                <p className={styles.planPrice}>₹2,500</p>
+                <ul className={styles.planFeatures}>
+                  <li className={styles.included}>Personalized document checklist</li>
+                  <li className={styles.included}>Document review & feedback</li>
+                  <li className={styles.excluded}>Embassy filing & appointment booking</li>
+                  <li className={styles.excluded}>Complete documentation & coordination</li>
+                  <li className={styles.excluded}>Visa status tracking & updates</li>
+                </ul>
+              </div>
+
+              {/* STANDARD PLAN */}
+              <div className={`${styles.pricingCard} ${styles.highlighted}`}>
+                <h3 className={styles.planTitle}>Standard</h3>
+                <p className={styles.planPrice}>₹3,500</p>
+                <ul className={styles.planFeatures}>
+                  <li className={styles.included}>Personalized document checklist</li>
+                  <li className={styles.included}>Document review & feedback</li>
+                  <li className={styles.included}>Embassy filing & appointment booking</li>
+                  <li className={styles.included}>Complete documentation & coordination</li>
+                  <li className={styles.included}>Visa status tracking & updates</li>
+                </ul>
+              </div>
+
+              {/* PREMIUM PLAN */}
+              <div className={styles.pricingCard}>
+                <h3 className={styles.planTitle}>Premium</h3>
+                <p className={styles.planPrice}>₹4,999</p>
+                <ul className={styles.planFeatures}>
+                  <li className={styles.included}>Everything in Standard</li>
+                  <li className={styles.included}>Priority processing & concierge support</li>
+                  <li className={styles.included}>Visit Japan Web + eVisa assistance</li>
+                  <li className={styles.included}>Dedicated consultant support (1-on-1)</li>
+                  <li className={styles.included}>Complimentary travel insurance quote</li>
+                </ul>
+              </div>
+            </div>
+
+
+            <p>
+              <b>Note:</b> Embassy Fee ₹800 + VFS ₹500 are paid directly to authorized centers.
+              Prices include GST where applicable.
+            </p>
+          </section>
+
+
+          <section>
+            <h2 className={styles.subTitle}>Why Choose Global Visa Internationals (GVI)</h2>
+            <ul>
+              <li>99% Visa Success Rate for Japan applications</li>
+              <li>Trusted Japan Visa Consultants in Bangalore</li>
+              <li>Transparent pricing — no hidden fees</li>
+              <li>Complete documentation & submission assistance</li>
+              <li>Fast, reliable, and personalized support</li>
             </ul>
           </section>
 
           <section>
-            <h2 className={styles.subTitle}>Common Reasons for Japan Visa Rejection & How We Solve Them</h2>
+            <h2 className={styles.subTitle}>Ready to Apply for Your Japan Visa?</h2>
             <p>
-              Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent <strong className={styles.strong}>Japan tourist visa rejection reasons</strong>.
+              Start your <strong className={styles.strong}>Japan visa application</strong> with
+              <strong className={styles.strong}> Global Visa Internationals </strong> today and travel stress-free.
+              Our expert consultants ensure a smooth, reliable, and transparent process.
             </p>
-            <ul>
-              <li>
-                <b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per embassy standards to ensure everything is perfect.
-              </li>
-              <li>
-                <b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.
-              </li>
-              <li>
-                <b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared itineraries clearly explain your travel plans and ties to India.
-              </li>
-              <li>
-                <b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className={styles.subTitle}>Japan Visa Processing Time from India</h2>
             <p>
-              The <strong className={styles.strong}>Japan visa processing time from India</strong> can vary. Here are some general timelines:
+              <b>Office:</b> Brigade Road, Bangalore, Karnataka<br />
+              <b>Email:</b> info@globalvisainternationals.com<br />
+              <b>Phone / WhatsApp:</b> +91-7022213466
             </p>
-            <ul>
-              <li>
-                <b className={styles.strong}>Standard Processing Time:</b> Typically 5 to 7 working days after submission to the embassy/consulate.
-              </li>
-              <li>
-                <b className={styles.strong}>Peak Season:</b> Can extend to 10-12 working days during holiday seasons.
-              </li>
-              <li>
-                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the embassy in a timely manner. We help you track <strong className={styles.strong}>Japan visa application status</strong>.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className={styles.subTitle}>The Japan Visa Application Process: A Step-by-Step Guide</h2>
             <p>
-              We manage this process for you. Here's a quick overview of what to expect:
+              ✨ Explore Japan — from Tokyo’s neon lights to Okinawa’s beaches — with GVI’s expert visa support.
             </p>
-            <ol>
-              <li>
-                <b className={styles.strong}>Document Preparation:</b> We help you gather and prepare all necessary documents according to embassy requirements.
-              </li>
-              <li>
-                <b className={styles.strong}>Application Submission:</b> Depending on your location, you may need to submit documents through an authorized visa application center or directly to the consulate.
-              </li>
-              <li>
-                <b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.
-              </li>
-            </ol>
+            <a href="/contact" className={styles.ctaButton}>
+              Apply for Your Japan Visa Now
+            </a>
           </section>
-
-          <h2 className={styles.subTitle}>Transparent Pricing</h2>
-          <p>
-            Choose the right Japan visa assistance package for your needs:
-          </p>
-          <ul>
-            <li>
-              <b className={styles.strong}>Basic (₹4,999):</b> Checklist + document review
-            </li>
-            <li>
-              <b className={styles.strong}>Standard (₹7,999):</b> End-to-end application assistance, documentation preparation, and submission guidance
-            </li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <p>
-            At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:
-          </p>
-          <ul>
-            <li>1,800+ Japan visas processed since 2017</li>
-            <li>97% client satisfaction rate across India</li>
-            <li>Specialized assistance for re-application after rejection</li>
-            <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Ready to Apply?</h2>
-          <p>
-            With GVI, you don't need to worry about rejections or missing documents.
-          </p>
-          <p>
-            👉 Start your <strong className={styles.strong}>Japan visa application</strong> today with Global Visa Internationals and experience the beauty of Japan with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for Japan</strong>.
-          </p>
-          <br />
-          <a href="/contact" className={styles.ctaButton}>
-            Get a free consultation today!
-          </a>
         </div>
+
+
         <div className={styles.formSection}>
           <VisaForm />
         </div>
       </div >
-      <section id='Client Reviews'>
-        <h2 className={styles.subtitle}>Client Reviews</h2>
-        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-      </section>
+
       <section>
 
         <ReviewSchema />
