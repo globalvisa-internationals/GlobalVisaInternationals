@@ -1,260 +1,361 @@
-    .container {
-        font-family: "Poppins", sans-serif;
-        color: #1b1b1b;
-        line-height: 1.7;
-        overflow-x: hidden;
-        margin-top: 70px;
-    }
+/* -------------------------------------- */
+/* GLOBAL CONTAINER */
+/* -------------------------------------- */
+.container {
+    font-family: "Poppins", sans-serif;
+    color: #0A2540;
+    line-height: 1.7;
+    overflow-x: hidden;
+    margin-top: 70px;
 
-    .contactCardSection {
-        display: flex;
-        justify-content: center;
-        padding: 3rem 1rem;
+}
 
-    }
+/* -------------------------------------- */
+/* CEO / CONTACT CARD SECTIONS */
+/* -------------------------------------- */
+.contactCardSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
 
+}
+
+/* BUSINESS CARD */
+.businessCard {
+    background: #fff;
+    border-radius: 16px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 1.2rem 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.businessCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------------------------- */
+/* HEADER / PROFILE IMAGE */
+/* -------------------------------------- */
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.ceoPhoto,
+.cardImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ffcc00;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ceoPhoto:hover,
+.cardImage:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------------------------- */
+/* INFO TEXT */
+/* -------------------------------------- */
+.cardInfo h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0A2540;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.cardInfo p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 4px 0 0;
+}
+
+/* -------------------------------------- */
+/* BODY */
+/* -------------------------------------- */
+.cardBody {
+    margin: 1.5rem 0;
+}
+
+.cardBody p {
+    margin: 0.6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #0A2540;
+    font-weight: 500;
+}
+
+.cardBody a {
+    color: #0A2540;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cardBody a:hover {
+    color: #ffcc00;
+}
+
+.icon {
+    color: #ffcc00;
+    font-size: 1.1rem;
+}
+
+/* -------------------------------------- */
+/* FOOTER & BUTTONS */
+/* -------------------------------------- */
+.cardFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.vcardBtn {
+    background: #0A2540;
+    color: #fff;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.vcardBtn:hover {
+    background: #ffcc00;
+    color: #0A2540;
+    transform: translateY(-2px);
+}
+
+/* -------------------------------------- */
+/* SOCIAL ICONS */
+/* -------------------------------------- */
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.socialIcons a {
+    font-size: 1.3rem;
+    color: #0A2540;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialIcons a:hover {
+    transform: scale(1.15);
+    color: #ffcc00;
+}
+
+/* -------------------------------------- */
+/* ABOUT SECTION */
+/* -------------------------------------- */
+.about {
+    padding: 1rem 1rem;
+    /* background: #F9FBFD; */
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1.8rem;
+    color: #0A2540;
+    margin-bottom: 1.2rem;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+.countries,
+.visaTypes {
+    padding: 1rem 1.5rem;
+
+}
+
+.countries h2,
+.visaTypes h2 {
+    text-align: center;
+    color: #0A2540;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.countries ul,
+.visaTypes ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.countries li,
+.visaTypes li {
+    background: #F4F7FB;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.countries li:hover,
+.visaTypes li:hover {
+    background: #0A2540;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* -------------------------------------- */
+/* SERVICES */
+/* -------------------------------------- */
+.services {
+    padding: 4rem 1.5rem;
+    /* background: #F9FBFD; */
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #0A2540;
+    margin-bottom: 2.5rem;
+}
+
+.serviceCard {
+    background: #fff;
+    border-left: 4px solid #0A2540;
+    border-radius: 10px;
+    padding: 1.6rem 1.5rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-4px);
+    border-color: #ffcc00;
+}
+
+.serviceCard h3 {
+    color: #0A2540;
+    margin-bottom: 0.5rem;
+}
+
+.serviceCard p {
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+/* -------------------------------------- */
+/* VISION */
+/* -------------------------------------- */
+.vision {
+    background: linear-gradient(135deg, #0A2540, #071A2D);
+    color: #fff;
+    border-radius: 16px;
+    padding: 4rem 2rem;
+}
+
+.vision h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.vision p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+    color: #dbe2ef;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.8rem;
+}
+
+.values h4 {
+    color: #ffcc00;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.values p {
+    color: #e0e6ee;
+    font-size: 0.95rem;
+}
+
+/* -------------------------------------- */
+/* FULL SITE LINK */
+/* -------------------------------------- */
+.fullSite {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 1px solid #e5e7eb;
+
+}
+
+.fullSite h3 {
+    color: #0A2540;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.fullSite a {
+    display: inline-block;
+    background: #0A2540;
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.fullSite a:hover {
+    background: #ffcc00;
+    color: #0A2540;
+    transform: translateY(-2px);
+}
+
+/* -------------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------------- */
+@media (max-width: 480px) {
     .businessCard {
-        background: #fff;
-        border-radius: 20px;
-        max-width: 500px;
-        width: 100%;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-        padding: 2rem 1.8rem;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .businessCard:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-    }
-
-    .cardHeader {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-    }
-
-    .cardImage {
-        border-radius: 50%;
-        border: 3px solid #ffcc00;
-        object-fit: cover;
+        padding: 1.8rem 1.2rem;
     }
 
     .cardInfo h2 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #003366;
-        margin: 0;
-    }
-
-    .cardInfo p {
-        font-size: 0.95rem;
-        color: #444;
-        margin: 4px 0 0;
-    }
-
-    .cardBody {
-        margin: 1.5rem 0;
-    }
-
-    .cardBody p {
-        margin: 0.5rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        color: #003366;
-        font-weight: 500;
-    }
-
-    .cardBody a {
-        color: #003366;
-        text-decoration: none;
-    }
-
-    .cardBody a:hover {
-        color: #ffcc00;
-    }
-
-    .icon {
-        color: #ffcc00;
-        font-size: 1.1rem;
-    }
-
-    /* Footer */
-    .cardFooter {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.2rem;
-    }
-
-    .vcardBtn {
-        background: #003366;
-        color: #fff;
-        padding: 0.8rem 1.8rem;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .vcardBtn:hover {
-        background: #ffcc00;
-        color: #003366;
-        transform: translateY(-3px);
-    }
-
-    /* Social Icons */
-    .socialIcons {
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-        flex-wrap: wrap;
+        font-size: 1.2rem;
     }
 
     .socialIcons a {
-        font-size: 1.4rem;
-        color: #003366;
-        transition: transform 0.3s ease, color 0.3s ease;
+        font-size: 1.2rem;
     }
-
-    .socialIcons a:hover {
-        transform: scale(1.2);
-        color: #ffcc00;
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-        .businessCard {
-            padding: 1.8rem 1.2rem;
-        }
-
-        .cardInfo h2 {
-            font-size: 1.2rem;
-        }
-
-        .socialIcons a {
-            font-size: 1.2rem;
-        }
-    }
-
-
-    /* ---------------- ABOUT ---------------- */
-    .about p {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-        color: #333;
-        font-size: 1.05rem;
-    }
-
-    /* ---------------- COUNTRIES & VISA TYPES ---------------- */
-    .countries ul,
-    .visaTypes ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1rem;
-        list-style: none;
-        padding: 0;
-        text-align: center;
-    }
-
-    .countries li,
-    .visaTypes li {
-        background: #fff;
-        border-radius: 8px;
-        padding: 0.8rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
-    }
-
-    .countries li:hover,
-    .visaTypes li:hover {
-        background: #003366;
-        color: #fff;
-        transform: translateY(-4px);
-    }
-
-    /* ---------------- SERVICES ---------------- */
-    .services {
-        border-radius: 16px;
-    }
-
-    .serviceCard {
-        background: #fdfdfd;
-        border-radius: 10px;
-        padding: 1.5rem;
-        margin-bottom: 1.2rem;
-        border-left: 4px solid #003366;
-        transition: all 0.3s;
-    }
-
-    .serviceCard:hover {
-        transform: translateY(-5px);
-        border-color: #ffcc00;
-    }
-
-    /* ---------------- VISION ---------------- */
-    .vision {
-        background: linear-gradient(135deg, #003366, #012a4a);
-        color: #fff;
-        border-radius: 16px;
-        padding: 3rem 2rem;
-    }
-
-    .vision h2 {
-        color: #fff;
-    }
-
-    .values {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 1.5rem;
-        margin-top: 2rem;
-    }
-
-    .values h4 {
-        color: #ffcc00;
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .values p {
-        color: #e0e0e0;
-        font-size: 0.95rem;
-    }
-
-    /* ---------------- VISIT FULL WEBSITE ---------------- */
-    .fullSite {
-        text-align: center;
-        padding: 2rem 1rem;
-        border-top: 1px solid #eee;
-    }
-
-    .fullSite h3 {
-        color: #003366;
-        font-size: 1.6rem;
-        margin-bottom: 1rem;
-    }
-
-    .fullSite a {
-        display: inline-block;
-        background: #003366;
-        color: #fff;
-        padding: 0.9rem 2rem;
-        border-radius: 50px;
-        font-weight: 500;
-        transition: background 0.3s ease, transform 0.3s ease;
-        text-decoration: none;
-    }
-
-    .fullSite a:hover {
-        background: #ffcc00;
-        color: #003366;
-        transform: translateY(-3px);
-    }
+}

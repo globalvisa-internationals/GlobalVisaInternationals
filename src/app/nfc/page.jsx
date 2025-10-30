@@ -1,6 +1,8 @@
 import styles from "./nfc.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 import {
     FaWhatsapp,
     FaInstagram,
@@ -28,7 +30,79 @@ export const metadata = {
 export default function LandingPage() {
     return (
         <main className={styles.container}>
+            <section className={styles.contactCardSection}>
+                <div className={styles.businessCard}>
+                    <div className={styles.cardHeader}>
+                        <img
+                            src="gallery/anushaprashanth.png" // replace with correct public image path
+                            alt="CEO - Global Visa Internationals"
+                            className={styles.ceoPhoto}
+                        />
+                        <div className={styles.cardInfo}>
+                            <h2>Anusha prashanth</h2>
+                            <p>Founder & CEO, Global Visa Internationals</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.cardBody}>
+                        <p>
+                            “At GVI, our goal is to simplify international travel documentation
+                            with transparency, accuracy, and trust.”
+                        </p>
+                    </div>
+
+                    <div className={styles.cardFooter}>
+                        <a href="https://www.globalvisainternationals.com/about-us" className={styles.vcardBtn}>
+                            Know More
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             {/* Hero Section */}
+
+
+            {/* About Section */}
+            <section className={styles.about}>
+                <h2>About Us</h2>
+                <p>
+                    At <strong>Global Visa Internationals</strong>, we simplify the complex
+                    world of international travel and immigration. Our certified experts
+                    help students, professionals, and families achieve their global goals
+                    confidently and efficiently.
+                </p>
+            </section>
+
+            {/* Countries Section */}
+            <section className={styles.countries}>
+                <h2>Countries We Serve</h2>
+                <ul>
+                    <li>Canada</li>
+                    <li>Australia</li>
+                    <li>United Kingdom</li>
+                    <li>United States</li>
+                    <li>Germany</li>
+                    <li>France</li>
+                    <li>Italy</li>
+                    <li>Spain</li>
+                    <li>New Zealand</li>
+                    <li>Singapore</li>
+                </ul>
+            </section>
+
+            {/* Visa Types Section */}
+            <section className={styles.visaTypes}>
+                <h2>Visa Types We Handle</h2>
+                <ul>
+                    <li>Student Visas</li>
+                    <li>Work Visas</li>
+                    <li>Tourist & Visitor Visas</li>
+                    <li>Business & Investor Visas</li>
+                    <li>Dependent & Family Visas</li>
+                </ul>
+            </section>
+
+            {/* Business Card */}
             <section className={styles.contactCardSection}>
                 <div className={styles.businessCard}>
                     <div className={styles.cardHeader}>
@@ -72,47 +146,6 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </div>
-            </section>
-
-
-            {/* About Section */}
-            <section className={styles.about}>
-                <h2>About Us</h2>
-                <p>
-                    At <strong>Global Visa Internationals</strong>, we simplify the complex
-                    world of international travel and immigration. Our certified experts
-                    help students, professionals, and families achieve their global goals
-                    confidently and efficiently.
-                </p>
-            </section>
-
-            {/* Countries Section */}
-            <section className={styles.countries}>
-                <h2>Countries We Serve</h2>
-                <ul>
-                    <li>Canada</li>
-                    <li>Australia</li>
-                    <li>United Kingdom</li>
-                    <li>United States</li>
-                    <li>Germany</li>
-                    <li>France</li>
-                    <li>Italy</li>
-                    <li>Spain</li>
-                    <li>New Zealand</li>
-                    <li>Singapore</li>
-                </ul>
-            </section>
-
-            {/* Visa Types Section */}
-            <section className={styles.visaTypes}>
-                <h2>Visa Types We Handle</h2>
-                <ul>
-                    <li>Student Visas</li>
-                    <li>Work Visas</li>
-                    <li>Tourist & Visitor Visas</li>
-                    <li>Business & Investor Visas</li>
-                    <li>Dependent & Family Visas</li>
-                </ul>
             </section>
 
             {/* Services Section */}
@@ -180,6 +213,10 @@ export default function LandingPage() {
                 <Link href="https://globalvisainternationals.com" target="_blank">
                     Visit Full Website
                 </Link>
+            </section>
+            <section>
+                <ReviewSchema />
+                <ReviewCarousel />
             </section>
         </main>
     );

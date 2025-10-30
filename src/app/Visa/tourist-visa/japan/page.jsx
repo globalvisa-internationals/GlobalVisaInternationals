@@ -226,14 +226,14 @@ export default function JapanTouristVisa() {
         <div className={styles.VisaData}>
           {/* ✅ NEW INTRO + CORRECT HEADING STRUCTURE */}
           <section>
-            <h1 className={styles.mainTitle}>
+            <h1 className={styles.Title}>
               Japan Tourist Visa from India - Apply with Global Visa Internationals
             </h1>
             <p>
               Looking to apply for a <strong className={styles.strong}>Japan Tourist Visa from India</strong>?
               <strong className={styles.strong}> Global Visa Internationals (GVI)</strong> in Bangalore helps Indian travelers
               obtain Japan visitor visas smoothly and professionally. Our expert consultants guide you through every step —
-              from <strong>document verification</strong> to <strong>embassy coordination</strong> — ensuring faster visa approval
+              from document verification to embassy coordination — ensuring faster visa approval
               and peace of mind.
             </p>
           </section>
@@ -255,14 +255,14 @@ export default function JapanTouristVisa() {
             <p>
               <strong className={styles.strong}>Japan Airlines (JAL)</strong> now offers free domestic flights within Japan
               to international passengers booking JAL international tickets.
-              This means travelers from India can fly to <strong>Sapporo</strong>, <strong>Fukuoka</strong>, or
-              <strong>Okinawa</strong> without extra airfare (taxes apply).
+              This means travelers from India can fly to Sapporo, Fukuoka, or
+              Okinawa without extra airfare (taxes apply).
             </p>
             <p>
-              This initiative aims to reduce overtourism in <strong>Tokyo</strong>, <strong>Kyoto</strong>, and
-              <strong>Osaka</strong>, encouraging exploration of Japan’s hidden gems.
+              This initiative aims to reduce overtourism in Tokyo, Kyoto, and
+              Osaka, encouraging exploration of Japan’s hidden gems.
               <br />
-              <b>Eligible Countries:</b> India, USA, Canada, Australia, Singapore, Thailand, Vietnam, Indonesia, China, and more.
+              Eligible Countries: India, USA, Canada, Australia, Singapore, Thailand, Vietnam, Indonesia, China, and more.
               Both international and domestic flights must be booked in the same reservation.
             </p>
           </section>
@@ -270,9 +270,9 @@ export default function JapanTouristVisa() {
           <section>
             <h2 className={styles.subTitle}>Japan Visa Processing Overview</h2>
             <p>
-              Applying for a <strong>Japan Tourist Visa from India</strong> may seem complicated, but
-              <strong> GVI </strong> makes it simple and fast. Our team manages all paperwork, form completion, and embassy coordination,
-              ensuring full compliance with <strong>Japan’s Ministry of Foreign Affairs (MOFA)</strong> guidelines.
+              Applying for a Japan Tourist Visa from India may seem complicated, but
+              GVI  makes it simple and fast. Our team manages all paperwork, form completion, and embassy coordination,
+              ensuring full compliance with Japan’s Ministry of Foreign Affairs (MOFA) guidelines.
             </p>
           </section>
 
@@ -296,7 +296,7 @@ export default function JapanTouristVisa() {
               <li><b className={styles.strong}>Embassy Processing:</b> 5-10 working days (varies by jurisdiction)</li>
             </ul>
             <p>
-              <b>Note:</b> The Embassy may request additional documentation or require verification through Tokyo headquarters in special cases.
+              <b className={styles.strong}>Note:</b> The Embassy may request additional documentation or require verification through Tokyo headquarters in special cases.
             </p>
           </section>
 
@@ -315,42 +315,42 @@ export default function JapanTouristVisa() {
           <section>
             <h2 className={styles.subTitle}>Japan Tourist Visa Checklist (2025)</h2>
             <p>
-              <b>Temporary Visitor Visa for Tourism (Without Guarantor)</b><br />
+              <b className={styles.strong}>Temporary Visitor Visa for Tourism (Without Guarantor)</b><br />
               <small>(For residents of Karnataka — processed by the Consulate General of Japan, Bengaluru)</small>
             </p>
 
-            <h3>✅ Mandatory Documents</h3>
+            <h3 className={styles.subTitle}>Mandatory Documents</h3>
             <ul>
-              <li><b>Valid Passport:</b> At least 2 blank pages; include old passports if available.</li>
-              <li><b>Passport Photocopy:</b> First and last page of the current passport.</li>
-              <li><b>Visa Application Form:</b> Completely filled and signed by the applicant.</li>
-              <li><b>Recent Photograph:</b> 45mm x 35mm, white background, 80% face coverage, taken within the last 6 months.</li>
-              <li><b>Covering Letter:</b> Signed by the applicant, including travel dates, purpose, companions, and expense bearer details.</li>
-              <li><b>Travel Schedule:</b> Flight/cruise itinerary and day-by-day Japan travel plan with hotel details.</li>
-              <li><b>Accommodation Proof:</b> Hotel booking under the applicant’s name (single name if travelling alone).</li>
-              <li><b>Financial Documents:</b> Latest 6-month bank statement, last 2 years’ ITR acknowledgements, and last 3 months’ salary slips (if employed).</li>
+              <li><b className={styles.strong}>Valid Passport:</b> At least 2 blank pages; include old passports if available.</li>
+              <li><b className={styles.strong}>Passport Photocopy:</b> First and last page of the current passport.</li>
+              <li><b className={styles.strong}>Visa Application Form:</b> Completely filled and signed by the applicant.</li>
+              <li><b className={styles.strong}>Recent Photograph:</b> 45mm x 35mm, white background, 80% face coverage, taken within the last 6 months.</li>
+              <li><b className={styles.strong}>Covering Letter:</b> Signed by the applicant, including travel dates, purpose, companions, and expense bearer details.</li>
+              <li><b className={styles.strong}>Travel Schedule:</b> Flight/cruise itinerary and day-by-day Japan travel plan with hotel details.</li>
+              <li><b className={styles.strong}>Accommodation Proof:</b> Hotel booking under the applicant’s name (single name if travelling alone).</li>
+              <li><b className={styles.strong}>Financial Documents:</b> Latest 6-month bank statement, last 2 years’ ITR acknowledgements, and last 3 months’ salary slips (if employed).</li>
             </ul>
 
-            <h3>💼 Employment / Occupation Documents</h3>
+            <h3 className={styles.subTitle}>Employment / Occupation Documents</h3>
             <ul>
-              <li><b>If Employed:</b> Original NOC / Leave Approval Letter + company ID copy.</li>
-              <li><b>If Self-Employed:</b> GST Registration Certificate.</li>
-              <li><b>If Doctor:</b> KMC Certificate.</li>
-              <li><b>If Lawyer:</b> Bar Council Card.</li>
-              <li><b>If Landlord / Agriculturist:</b> Property ownership proof.</li>
-              <li><b>If Student:</b> Bonafide certificate from school/college/institution.</li>
+              <li><b className={styles.strong}>If Employed:</b> Original NOC / Leave Approval Letter + company ID copy.</li>
+              <li><b className={styles.strong}>If Self-Employed:</b> GST Registration Certificate.</li>
+              <li><b className={styles.strong}>If Doctor:</b> KMC Certificate.</li>
+              <li><b className={styles.strong}>If Lawyer:</b> Bar Council Card.</li>
+              <li><b className={styles.strong}>If Landlord / Agriculturist:</b> Property ownership proof.</li>
+              <li><b className={styles.strong}>If Student:</b> Bonafide certificate from school/college/institution.</li>
             </ul>
 
-            <h3>👨‍👩‍👧 Family / Dependent Travelers</h3>
+            <h3 className={styles.subTitle}>Family / Dependent Travelers</h3>
             <ul>
-              <li><b>Proof of Relationship:</b> Marriage/Birth certificate or passport copy.</li>
-              <li><b>Accompanying Person’s Documents:</b> Passport, visa copy, and flight tickets (even if travelling from another state).</li>
-              <li><b>If Sponsored:</b> Sponsor Letter, 3-month bank statement, 2-year ITR, and ID proof.</li>
-              <li><b>If Divorced:</b> Divorce decree copy.</li>
-              <li><b>If Family/Friends Travelling Together:</b> Submit all applications together.</li>
+              <li><b className={styles.strong}>Proof of Relationship:</b> Marriage/Birth certificate or passport copy.</li>
+              <li><b className={styles.strong}>Accompanying Person’s Documents:</b> Passport, visa copy, and flight tickets (even if travelling from another state).</li>
+              <li><b className={styles.strong}>If Sponsored:</b> Sponsor Letter, 3-month bank statement, 2-year ITR, and ID proof.</li>
+              <li><b className={styles.strong}>If Divorced:</b> Divorce decree copy.</li>
+              <li><b className={styles.strong}>If Family/Friends Travelling Together:</b> Submit all applications together.</li>
             </ul>
 
-            <h3>🏠 Residence Proof (for Passports Issued Outside Karnataka)</h3>
+            <h3 className={styles.subTitle}>Residence Proof (for Passports Issued Outside Karnataka)</h3>
             <ul>
               <li>Valid Rental/Lease Agreement</li>
               <li>Sales Deed</li>
@@ -358,15 +358,15 @@ export default function JapanTouristVisa() {
               <li>Aadhaar Card (current address)</li>
             </ul>
 
-            <h3>💰 Recommended Bank Balance (Per Person)</h3>
+            <h3 className={styles.subTitle}> Recommended Bank Balance (Per Person)</h3>
             <table className={styles.table}>
               <thead>
                 <tr><th>Trip Duration</th><th>Recommended Minimum Funds</th></tr>
               </thead>
               <tbody>
-                <tr><td>1 week</td><td>₹1.5 – ₹2.0 lakhs</td></tr>
-                <tr><td>10–15 days</td><td>₹2.5 – ₹3.5 lakhs</td></tr>
-                <tr><td>2–3 weeks</td><td>₹3.5 – ₹5.0 lakhs</td></tr>
+                <tr><td>1 week</td><td>₹1.5 - ₹2.0 lakhs</td></tr>
+                <tr><td>10-15 days</td><td>₹2.5 - ₹3.5 lakhs</td></tr>
+                <tr><td>2-3 weeks</td><td>₹3.5 - ₹5.0 lakhs</td></tr>
               </tbody>
             </table>
           </section>
@@ -404,23 +404,12 @@ export default function JapanTouristVisa() {
                 </ul>
               </div>
 
-              {/* PREMIUM PLAN */}
-              <div className={styles.pricingCard}>
-                <h3 className={styles.planTitle}>Premium</h3>
-                <p className={styles.planPrice}>₹4,999</p>
-                <ul className={styles.planFeatures}>
-                  <li className={styles.included}>Everything in Standard</li>
-                  <li className={styles.included}>Priority processing & concierge support</li>
-                  <li className={styles.included}>Visit Japan Web + eVisa assistance</li>
-                  <li className={styles.included}>Dedicated consultant support (1-on-1)</li>
-                  <li className={styles.included}>Complimentary travel insurance quote</li>
-                </ul>
-              </div>
+
             </div>
 
 
             <p>
-              <b>Note:</b> Embassy Fee ₹800 + VFS ₹500 are paid directly to authorized centers.
+              <b className={styles.strong}>Note:</b> Embassy Fee ₹800 + VFS ₹500 are paid directly to authorized centers.
               Prices include GST where applicable.
             </p>
           </section>
@@ -445,12 +434,12 @@ export default function JapanTouristVisa() {
               Our expert consultants ensure a smooth, reliable, and transparent process.
             </p>
             <p>
-              <b>Office:</b> Brigade Road, Bangalore, Karnataka<br />
-              <b>Email:</b> info@globalvisainternationals.com<br />
-              <b>Phone / WhatsApp:</b> +91-7022213466
+              <b className={styles.strong}>Office:</b> Brigade Road, Bangalore, Karnataka<br />
+              <b className={styles.strong}>Email:</b> operations@globalvisainternationals.com <br />
+              <b className={styles.strong}>Phone / WhatsApp:</b> +91-7022213466
             </p>
             <p>
-              ✨ Explore Japan — from Tokyo’s neon lights to Okinawa’s beaches — with GVI’s expert visa support.
+              Explore Japan — from Tokyo’s neon lights to Okinawa’s beaches — with GVI’s expert visa support.
             </p>
             <a href="/contact" className={styles.ctaButton}>
               Apply for Your Japan Visa Now

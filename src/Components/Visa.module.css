@@ -49,7 +49,7 @@
 .Title,
 .subTitle {
     font-family: var(--heading-font), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-    text-align: center !important;
+    /* text-align: center !important; */
     justify-content: center !important;
     color: var(--primary);
 }
