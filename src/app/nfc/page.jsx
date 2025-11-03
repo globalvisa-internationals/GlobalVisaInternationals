@@ -35,7 +35,7 @@ export default function LandingPage() {
                     <div className={styles.businessCard}>
                         <div className={styles.cardHeader}>
                             <img
-                                src="gallery/anushaprashanth.png" // replace with correct public image path
+                                src="https://www.globalvisainternationals.com/gallery/anushaprashanth.png" // replace with correct public image path
                                 alt="CEO - Global Visa Internationals"
                                 className={styles.ceoPhoto}
                             />
@@ -108,7 +108,7 @@ export default function LandingPage() {
                     <div className={styles.businessCard}>
                         <div className={styles.cardHeader}>
                             <Image
-                                src="/globalvisainternationals.webp"
+                                src="https://www.globalvisainternationals.com/globalvisainternationals.webp"
                                 alt="Global Visa Internationals"
                                 width={100}
                                 height={100}
@@ -152,33 +152,64 @@ export default function LandingPage() {
                 {/* Services Section */}
                 <section className={styles.services}>
                     <h2>Our Services</h2>
-                    <div className={styles.serviceCard}>
-                        <h3>01. Visa Consultation & Assessment</h3>
-                        <p>
-                            Personalized guidance to help you choose the right visa type based on
-                            your profile, goals, and eligibility.
-                        </p>
-                    </div>
-                    <div className={styles.serviceCard}>
-                        <h3>02. Complete Documentation Assistance</h3>
-                        <p>
-                            From forms to supporting documents, we make your visa process smooth
-                            and compliant.
-                        </p>
-                    </div>
-                    <div className={styles.serviceCard}>
-                        <h3>03. Mock Interview Preparation</h3>
-                        <p>Train with experienced professionals through real interview simulations.</p>
-                    </div>
-                    <div className={styles.serviceCard}>
-                        <h3>04. Application Review & Submission</h3>
-                        <p>We double-check every part of your application to ensure accuracy and timely approvals.</p>
-                    </div>
-                    <div className={styles.serviceCard}>
-                        <h3>05. Post-Visa Support</h3>
-                        <p>From travel guidance to accommodation tips, our support continues after approval.</p>
+
+                    <div className={styles.serviceGrid}>
+                        <div className={styles.serviceCard}>
+                            {/* <img src="/gallery/anushaprashanth.png" alt="Visa Consultation" /> */}
+                            <div className={styles.serviceText}>
+                                <h3>01. Visa Consultation & Assessment</h3>
+                                <p>
+                                    Personalized guidance to help you choose the right visa type based on
+                                    your profile, goals, and eligibility.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className={styles.serviceCard}>
+
+                            <div className={styles.serviceText}>
+                                <h3>02. Complete Documentation Assistance</h3>
+                                <p>
+                                    From forms to supporting documents, we make your visa process smooth
+                                    and compliant.
+                                </p>
+                            </div>
+                            {/* <img src="/gallery/anushaprashanth.png" alt="Documentation Assistance" /> */}
+                        </div>
+
+                        <div className={styles.serviceCard}>
+                            {/* <img src="/gallery/anushaprashanth.png" alt="Mock Interview" /> */}
+                            <div className={styles.serviceText}>
+                                <h3>03. Mock Interview Preparation</h3>
+                                <p>Train with experienced professionals through real interview simulations.</p>
+                            </div>
+                        </div>
+
+                        <div className={styles.serviceCard}>
+
+                            <div className={styles.serviceText}>
+                                <h3>04. Application Review & Submission</h3>
+                                <p>
+                                    We double-check every part of your application to ensure accuracy and
+                                    timely approvals.
+                                </p>
+                            </div>
+                            {/* <img src="/gallery/anushaprashanth.png" alt="Application Review" /> */}
+                        </div>
+
+                        <div className={styles.serviceCard}>
+                            {/* <img src="/gallery/anushaprashanth.png" alt="Post Visa Support" /> */}
+                            <div className={styles.serviceText}>
+                                <h3>05. Post-Visa Support</h3>
+                                <p>
+                                    From travel guidance to accommodation tips, our support continues
+                                    after approval.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
+
 
                 {/* Vision Section */}
                 <section className={styles.vision}>
