@@ -10,7 +10,7 @@ import styles from "./NavBar.module.css";
 const NAV_ITEMS = [
   { title: "TOURIST VISA", path: "tourist-visa", countries: ["Canada", "Australia", "USA", "United-Kingdom", "Europe", "Schengen", "Japan", "Dubai", "New-Zealand", "Singapore", "China"] },
   { title: "STUDENT VISA", path: "student-visa", countries: ["Canada", "Australia", "USA", "UK", "Europe", "New-Zealand"] },
-  { title: "BUSINESS VISA", path: "business", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
+  { title: "BUSINESS VISA", path: "business", countries: ["Canada", "Australia", "UK", "Schengen", "New-Zealand"] },
   { title: "PERMANENT RESIDENCY (PR)", path: "permanent-residency-visa", countries: ["Canada-PR-Visa", "Australia-PR-Visa"] },
   // { title: "WORK", path: "work", countries: ["Canada", "Australia", "UK", "Europe", "New-Zealand"] },
   { title: "REFUSAL VISA", path: "refusal-visa", countries: ["Canada", "Australia", "USA", "UK", "Europe", "New-Zealand"] },

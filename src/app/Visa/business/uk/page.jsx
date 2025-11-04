@@ -1,8 +1,10 @@
-
-import VisaForm from '@/Components/VisaForm';
-import styles from '@/Components/Visa.module.css';
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 import React from 'react';
-import Head from 'next/head';
+import Script from 'next/script';
+import styles from '@/Components/Visa.module.css';
+import VisaForm from '@/Components/VisaForm';
+
 
 export const metadata = {
   title: "UK Business Visa from India | Best UK Visa Consultants in India - Global Visa Internationals",
@@ -12,21 +14,21 @@ export const metadata = {
     "UK Business visa from India, UK visitor visa consultants, UK visa agents in India, apply UK visa online India, UK visa assistance Bangalore, UK travel visa for Indian citizens, UK visa documentation help, UK visa consultants near me, UK visa process from India, UK visa cost 2025",
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk-tourist-visa",
+    canonical: "https://www.globalvisainternationals.com/visa/business/uk",
   },
   openGraph: {
     title: "Apply for UK Business Visa from India | Trusted UK Visa Consultants",
     description:
-      "Looking to travel to the UK from India? Global Visa Internationals offers full support for UK Business visa applications, documentation, and embassy appointments. Fast processing. Reliable service since 2012.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/uk-tourist-visa",
+      "Looking to travel to the UK from India? Global Visa Internationals offers complete support for UK business visa applications, documentation, and embassy appointments. Trusted since 2012.",
+    url: "https://www.globalvisainternationals.com/visa/business/uk",
     siteName: "Global Visa Internationals",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
+        url: "https://www.globalvisainternationals.com/visa/UK-Business-Visa-Assistance-GVI.webp",
         width: 1200,
         height: 630,
-        alt: "UK Business Visa Assistance from India - Global Visa Internationals",
-      }
+        alt: "UK Business Visa Assistance - Global Visa Internationals",
+      },
     ],
     type: "website",
   },
@@ -37,165 +39,181 @@ export const metadata = {
     description:
       "Get expert help to apply for your UK Business visa from India. Global Visa Internationals provides visa application assistance, documentation support, and embassy appointment guidance.",
     images: [
-      "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
+      "https://www.globalvisainternationals.com/visa/UK-Business-Visa-Assistance-GVI.webp",
     ],
+  },
+  other: {
+    "geo.region": "IN-KA",
+    "geo.placename": "Bengaluru",
+    "ICBM": "12.9716,77.5946",
+    "theme-color": "#ffffff",
+    "format-detection": "telephone=no",
   },
 };
 
-
 export default function UK_Business_Visa() {
-  const pageUrl = metadata.alternates.canonical;
-
-  const TouristAttraction = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Top Tourist Attractions in the UK",
-    "itemListElement": [
-      {
-        "@type": "TouristAttraction",
-        "name": "Big Ben & Houses of Parliament",
-        "description": "Historic clock tower and iconic British Parliament building in London.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Elizabeth_Tower%2C_June_2022.jpg",
-        "url": "https://www.parliament.Visa/"
+  // ✅ Structured Data (Schema.org)
+  const structuredData = [
+    // 1️⃣ Organization / LocalBusiness
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "TravelAgency", "LocalBusiness"],
+      "name": "Global Visa Internationals",
+      "url": "https://www.globalvisainternationals.com",
+      "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+      "description":
+        "Trusted UK Business Visa Consultants in Bangalore. Apply for your UK visitor or business visa with expert help for documents, online application & appointment booking.",
+      "telephone": "+91-7022213466",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "MG Road",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560025",
+        "addressCountry": "IN",
       },
-      {
-        "@type": "TouristAttraction",
-        "name": "Buckingham Palace",
-        "description": "Official London residence of the British monarch with Changing of the Guard ceremony.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Buckingham_Palace%2C_London_-_April_2009.jpg",
-        "url": "https://www.rct.Visa/visit/the-state-rooms-buckingham-palace"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.9716,
+        "longitude": 77.5946,
       },
-      {
-        "@type": "TouristAttraction",
-        "name": "Tower of London",
-        "description": "Historic fortress housing the Crown Jewels and offering guided tours.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tower_of_London_viewed_from_the_River_Thames.jpg",
-        "url": "https://www.hrp.org.Visa/tower-of-london/"
-      },
-      {
-        "@type": "TouristAttraction",
-        "name": "Stonehenge",
-        "description": "Mysterious prehistoric stone circle and world heritage site in Wiltshire.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Stonehenge2007_07_30.jpg",
-        "url": "https://www.english-heritage.org.Visa/visit/places/stonehenge/"
-      },
-      {
-        "@type": "TouristAttraction",
-        "name": "Edinburgh Castle",
-        "description": "Famous Scottish fortress offering panoramic views of Edinburgh.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/View_of_Edinburgh_Castle_%28from_the_south_east%29.jpg",
-        "url": "https://www.edinburghcastle.scot/"
-      }
-    ]
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.globalvisainternationals.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "UK Business Visa",
-        "item": pageUrl
-      }
-    ]
-  };
-
-  const travelAgencyJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Trusted UK Business Visa Consultants in Bangalore. Apply for your UK visitor visa from India with expert help for documents, online application & appointment booking.",
-    "telephone": "+91-7022213466",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "18:00",
+        },
+      ],
+      "sameAs": [
+        "https://www.facebook.com/globalvisainternationals/",
+        "https://www.instagram.com/globalvisa_internationals/",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://x.com/GLOBALVISA1505",
+        "https://www.youtube.com/@globalVisaInternationals",
+        "https://www.google.com/maps/place/Global+Visa+Internationals",
+      ],
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 12.9716,
-      "longitude": 77.5946
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+
+    // 2️⃣ Service Schema (Visa Assistance)
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "UK Business Visa Assistance",
+      "provider": {
+        "@type": "Organization",
+        "name": "Global Visa Internationals",
+        "url": "https://www.globalvisainternationals.com",
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India",
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Visa & Immigration Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "UK Business Visa Assistance" },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "UK Tourist Visa Guidance" },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "UK Student Visa Consultancy" },
+          },
         ],
-        "opens": "10:00",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/globalvisainternationals/",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/global-visa-internationals/",
-      "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
-    ]
-  };
+      },
+    },
+
+    // 3️⃣ BreadcrumbList
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.globalvisainternationals.com",
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Business Visa",
+          "item": "https://www.globalvisainternationals.com/visa/business",
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "UK Business Visa",
+          "item": "https://www.globalvisainternationals.com/visa/business/uk",
+        },
+      ],
+    },
+
+    // 4️⃣ FAQPage Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who can apply for a UK Business Visa from India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indian citizens who wish to travel to the UK for business meetings, conferences, or short-term trade activities can apply for a UK Business Visa.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What documents are required for a UK Business Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You’ll need a valid passport, business invitation letter, financial documents, travel itinerary, and completed visa application form. Additional documents may be needed based on your profile.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get a UK Business Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard UK Business Visa processing time is around 15 working days. Priority and super-priority services are available for faster decisions.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What is the cost of a UK Business Visa from India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cost for a UK Business Visa typically starts around ₹13,000–₹15,000, excluding documentation and consultancy assistance fees.",
+          },
+        },
+      ],
+    },
+  ];
 
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
-
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TouristAttraction) }}
+      {/* ✅ Add all structured data dynamically */}
+      {structuredData.map((data, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
         />
+      ))}
 
-      </Head>
-
-
-
+      {/* ✅ Page Visuals */}
       <div className={styles.imageContainer}>
-        <img src="/visa/Europe-business-visa-banner.webp" alt="new-zealand Business Visa Image" className={styles.VisaImage} />
+        <img
+          src="/visa/UK-Business-Visa-Assistance-GVI.webp"
+          alt="UK Business Visa Assistance Image"
+          className={styles.VisaImage}
+        />
       </div>
 
       <div class={styles.VisaSec}>
@@ -503,11 +521,11 @@ export default function UK_Business_Visa() {
           <VisaForm />
         </div>
       </div>
-
-      <section id='Client Reviews'>
-
-        <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
+      <section>
+        <ReviewSchema />
+        <ReviewCarousel />
       </section>
+
     </>
   );
 }

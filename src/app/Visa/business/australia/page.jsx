@@ -1,192 +1,238 @@
-import VisaForm from '@/Components/VisaForm';
-import styles from './Australia.module.css';
+// app/Visa/business/australia/page.js
+import styles from '@/Components/Visa.module.css';
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 import React from 'react';
+import Script from 'next/script';
+import VisaForm from '@/Components/VisaForm';
+
+export const metadata = {
+  metadataBase: new URL('https://www.globalvisainternationals.com'),
+  title: 'Australia Business Visa and Immigration Assistance',
+  description:
+    'Apply for an Australia Business Visa with expert help from Global Visa Internationals. Learn about business visa requirements, eligibility, fees, and the application process.',
+  keywords: [
+    'Australia business visa',
+    'apply business visa Australia',
+    'Australia business visa from India',
+    'Australia investor visa',
+    'business visa consultants',
+    'business migration to Australia',
+  ],
+  authors: [{ name: 'Global Visa Internationals' }],
+  robots: 'index, follow',
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#0a66c2',
+  alternates: {
+    canonical: '/Visa/business/australia',
+  },
+  openGraph: {
+    title: 'Apply for Australia Business Visa | Global Visa Internationals',
+    description:
+      'Get complete assistance in applying for an Australia Business Visa from India. Learn about visa types, requirements, eligibility, and costs with Global Visa Internationals.',
+    url: 'https://www.globalvisainternationals.com/Visa/business/australia',
+    siteName: 'Global Visa Internationals',
+    type: 'website',
+    locale: 'en_IN',
+    alternateLocale: 'en_US',
+    images: [
+      {
+        url: 'https://www.globalvisainternationals.com/images/australia-business-visa-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Australia Business Visa Assistance',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Australia Business Visa | Application, Cost & Requirements',
+    description:
+      'Explore Australia Business Visa options with expert guidance. Apply from India for investor or business innovation visas.',
+    images: [
+      'https://www.globalvisainternationals.com/images/australia-business-visa-banner.jpg',
+    ],
+    site: 'https://www.globalvisainternationals.com/Visa/business/australia',
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
+  other: {
+    'geo.region': 'AU',
+    'geo.placename': 'Sydney',
+    'geo.region': 'IN-KA',
+    'geo.placename': 'Bengaluru',
+    ICBM: '12.9716,77.5946',
+  },
+};
+
+
 
 export default function Australia() {
-
-
   return (
     <>
-      <head>
-        <title>Australia Business Visa and Immigration Assistance </title>
-        <meta name="description" content="Apply for an Australia Business Visa with expert help from Global Visa Internationals. Learn about business visa requirements, eligibility, fees, and the application process." />
-        <meta name="keywords" content="Australia business visa, apply business visa Australia, Australia business visa from India, Australia investor visa, business visa consultants, business migration to Australia" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Global Visa Internationals" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0a66c2" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/business/australia" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/australia-business-visa-banner.jpg" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Apply for Australia Business Visa | Global Visa Internationals" />
-        <meta property="og:description" content="Get complete assistance in applying for an Australia Business Visa from India. Learn about visa types, requirements, eligibility, and costs with Global Visa Internationals." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/business/australia" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/australia-business-visa-banner.jpg" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:locale:alternate" content="en_US" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Australia Business Visa | Application, Cost & Requirements" />
-        <meta name="twitter:description" content="Explore Australia Business Visa options with expert guidance. Apply from India for investor or business innovation visas." />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/australia-business-visa-banner.jpg" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/business/australia" />
-
-        {/* Location */}
-        <meta name="geo.region" content="AU" />
-        <meta name="geo.placename" content="Sydney" />
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-
-        {/* Local Business */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
+      {/* ✅ JSON-LD STRUCTURED DATA */}
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com",
-            "logo": "https://www.globalvisainternationals.com/logo.png",
-            "description": "Visa experts offering Australia business visa assistance for investors, entrepreneurs, and business owners from India.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "MG Road",
-              "addressLocality": "Bengaluru",
-              "addressRegion": "KA",
-              "postalCode": "560025",
-              "addressCountry": "IN"
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'Global Visa Internationals',
+            url: 'https://www.globalvisainternationals.com',
+            logo: 'https://www.globalvisainternationals.com/logo.png',
+            description:
+              'Visa experts offering Australia business visa assistance for investors, entrepreneurs, and business owners from India.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'MG Road',
+              addressLocality: 'Bengaluru',
+              addressRegion: 'KA',
+              postalCode: '560025',
+              addressCountry: 'IN',
             },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-7022213466",
-              "contactType": "Customer Support"
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+91-7022213466',
+              contactType: 'Customer Support',
             },
-            "sameAs": [
-              "https://www.facebook.com/GlobalVisaInternationals",
-              "https://www.linkedin.com/company/globalvisainternationals",
-              "https://twitter.com/GlobalVisaIntl"
-            ]
-          })
-        }} />
+            sameAs: [
+              'https://www.facebook.com/GlobalVisaInternationals',
+              'https://www.linkedin.com/company/globalvisainternationals',
+              'https://twitter.com/GlobalVisaIntl',
+            ],
+          }),
+        }}
+      />
 
-        {/* Breadcrumb */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
               {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.globalvisainternationals.com"
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://www.globalvisainternationals.com',
               },
               {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Business Visa",
-                "item": "https://www.globalvisainternationals.com/visa/business"
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Business Visa',
+                item: 'https://www.globalvisainternationals.com/Visa/business/australia',
               },
               {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Australia Business Visa"
-              }
-            ]
-          })
-        }} />
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Australia Business Visa',
+              },
+            ],
+          }),
+        }}
+      />
 
-        {/* FAQPage */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
               {
-                "@type": "Question",
-                "name": "What types of Australia Business Visas are available?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Australia offers various business visa subclasses, including Business Innovation and Investment (Subclass 188), Business Talent (Subclass 132), and Permanent Business Visas (Subclass 888). Each has specific criteria related to investment, ownership, and business experience."
-                }
+                '@type': 'Question',
+                name: 'What types of Australia Business Visas are available?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Australia offers various business visa subclasses, including Business Innovation and Investment (Subclass 188), Business Talent (Subclass 132), and Permanent Business Visas (Subclass 888). Each has specific criteria related to investment, ownership, and business experience.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "How much does an Australia Business Visa cost from India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Costs vary by subclass but generally start from AUD 5,000 to AUD 9,000 for primary applicants. Additional charges apply for dependents, documentation, and processing."
-                }
+                '@type': 'Question',
+                name: 'How much does an Australia Business Visa cost from India?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Costs vary by subclass but generally start from AUD 5,000 to AUD 9,000 for primary applicants. Additional charges apply for dependents, documentation, and processing.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "Who is eligible for an Australia Business Visa?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Eligibility depends on your business or investment background, net assets, business turnover, and your intention to own or manage a business in Australia. Requirements vary by visa stream."
-                }
-              }
-            ]
-          })
-        }} />
+                '@type': 'Question',
+                name: 'Who is eligible for an Australia Business Visa?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Eligibility depends on your business or investment background, net assets, business turnover, and your intention to own or manage a business in Australia. Requirements vary by visa stream.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
-        {/* Service Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Australia Business Visa Application Assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com"
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Australia Business Visa Application Assistance',
+            provider: {
+              '@type': 'Organization',
+              name: 'Global Visa Internationals',
+              url: 'https://www.globalvisainternationals.com',
             },
-            "areaServed": {
-              "@type": "Country",
-              "name": "India"
+            areaServed: {
+              '@type': 'Country',
+              name: 'India',
             },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Business Visa Services",
-              "itemListElement": [
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Business Visa Services',
+              itemListElement: [
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Subclass 188 Business Innovation Visa Assistance"
-                  }
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Subclass 188 Business Innovation Visa Assistance',
+                  },
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Subclass 132 Business Talent Visa Guidance"
-                  }
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Subclass 132 Business Talent Visa Guidance',
+                  },
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Subclass 888 Permanent Business Visa Support"
-                  }
-                }
-              ]
-            }
-          })
-        }} />
-      </head>
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Subclass 888 Permanent Business Visa Support',
+                  },
+                },
+              ],
+            },
+          }),
+        }}
+      />
 
-
+      {/* PAGE CONTENT */}
       <div className={styles.imageContainer}>
-        <img src="/visa/Australia-Business-Visa-Assistance.png" alt="Australia Business Visa Assistance Image" className={styles.AustraliaImage} />
+        <img
+          src="/visa/Australia-Business-Visa-Assistance.png"
+          alt="Australia Business Visa Assistance Image"
+          className={styles.VisaImage}
+        />
       </div>
 
-      <div className={styles.AustraliaSec}>
-        <div className={styles.AustraliaData}>
-          <h1 className={styles.AustraliaGuide}> Australian Business Visas Assistancs | Global Visa Internationals</h1>
+      <div className={styles.VisaSec}>
+        <div className={styles.VisaData}>
+          <h1 className={styles.VisaGuide}> Australian Business Visas Assistancs | Global Visa Internationals</h1>
           <p>Dreaming of expanding your business horizons or investing in a thriving economy? Australia, a land of robust economic growth, strategic global connections, and abundant opportunities, is calling! Securing an Australian Business Visa opens doors to an exceptional environment for entrepreneurs, investors, and business professionals. It's more than just a visa; it's a chance to establish a brighter future for your enterprise and potentially your family down under.</p>
 
           <h3 className={styles.subTitle}>Why Choose Australia for Business? What Makes It So Special?</h3>
@@ -457,7 +503,10 @@ export default function Australia() {
           <VisaForm />
         </div>
       </div >
-
+      <section>
+        <ReviewSchema />
+        <ReviewCarousel />
+      </section>
     </>
   );
 }

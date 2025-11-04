@@ -1,194 +1,232 @@
-
-
-import VisaForm from '@/Components/VisaForm';
-import styles from './Australia.module.css';
+import styles from '@/Components/Visa.module.css';
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 import React from 'react';
+import Script from 'next/script';
+import VisaForm from '@/Components/VisaForm';
 
-export default function Australia() {
 
+export const metadata = {
+  metadataBase: new URL('https://www.globalvisainternationals.com'),
+  title:
+    'Canada Business Visa Assistance from India | Requirements, Process & Cost',
+  description:
+    'Apply for a Canada Business Visa with expert help from Global Visa Internationals. Learn about business visa requirements, eligibility, fees, and the application process.',
+  keywords: [
+    'Canada business visa',
+    'apply business visa Canada',
+    'Canada business visa from India',
+    'Canada investor visa',
+    'Canada startup visa',
+    'business migration to Canada',
+  ],
+  authors: [{ name: 'Global Visa Internationals' }],
+  robots: 'index, follow',
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#0a66c2',
+  alternates: {
+    canonical: '/Visa/business/canada',
+  },
+  openGraph: {
+    title: 'Apply for Canada Business Visa | Global Visa Internationals',
+    description:
+      'Get expert guidance to apply for a Canada Business Visa from India. Explore requirements, visa types like Start-Up and Investor visas, and application costs.',
+    url: 'https://www.globalvisainternationals.com/Visa/business/canada',
+    type: 'website',
+    siteName: 'Global Visa Internationals',
+    locale: 'en_IN',
+    alternateLocale: 'en_CA',
+    images: [
+      {
+        url: 'https://www.globalvisainternationals.com/images/canada-business-visa-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Canada Business Visa Banner',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Canada Business Visa | Application, Cost & Requirements',
+    description:
+      'Apply for a Canada Business Visa with Global Visa Internationals. We help Indian entrepreneurs and investors with the entire visa process.',
+    images: [
+      'https://www.globalvisainternationals.com/images/canada-business-visa-banner.jpg',
+    ],
+    site: 'https://www.globalvisainternationals.com/Visa/business/canada',
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
+  other: {
+    'geo.region': 'CA',
+    'geo.placename': 'Toronto',
+    'geo.region:2': 'IN-KA', // unique key for duplicate field
+    'geo.placename:2': 'Bengaluru',
+    ICBM: '12.9716,77.5946',
+  },
+};
 
+export default function Canada_Business_Visa_Assistance() {
   return (
     <>
-      <head>
-        <title>Canada Business Visa Assistance from India | Requirements, Process & Cost</title>
-        <meta name="description" content="Apply for a Canada Business Visa with expert help from Global Visa Internationals. Learn about business visa requirements, eligibility, fees, and the application process." />
-        <meta name="keywords" content="Canada business visa, apply business visa Canada, Canada business visa from India, Canada investor visa, Canada startup visa, business migration to Canada" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Global Visa Internationals" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0a66c2" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/visa/business/canada" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preload" as="image" href="https://www.globalvisainternationals.com/images/canada-business-visa-banner.jpg" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Apply for Canada Business Visa | Global Visa Internationals" />
-        <meta property="og:description" content="Get expert guidance to apply for a Canada Business Visa from India. Explore requirements, visa types like Start-Up and Investor visas, and application costs." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/visa/business/canada" />
-        <meta property="og:image" content="https://www.globalvisainternationals.com/images/canada-business-visa-banner.jpg" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:locale:alternate" content="en_CA" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Canada Business Visa | Application, Cost & Requirements" />
-        <meta name="twitter:description" content="Apply for a Canada Business Visa with Global Visa Internationals. We help Indian entrepreneurs and investors with the entire visa process." />
-        <meta name="twitter:image" content="https://www.globalvisainternationals.com/images/canada-business-visa-banner.jpg" />
-        <meta name="twitter:url" content="https://www.globalvisainternationals.com/visa/business/canada" />
-
-        {/* Location */}
-        <meta name="geo.region" content="CA" />
-        <meta name="geo.placename" content="Toronto" />
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-
-        {/* Local Business Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
+      {/* ✅ Structured Data (JSON-LD) */}
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com",
-            "logo": "https://www.globalvisainternationals.com/logo.png",
-            "description": "Visa experts offering Canada business visa assistance for investors, entrepreneurs, and business owners from India.",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "MG Road",
-              "addressLocality": "Bengaluru",
-              "addressRegion": "KA",
-              "postalCode": "560025",
-              "addressCountry": "IN"
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'Global Visa Internationals',
+            url: 'https://www.globalvisainternationals.com',
+            logo: 'https://www.globalvisainternationals.com/logo.png',
+            description:
+              'Visa experts offering Canada business visa assistance for investors, entrepreneurs, and business owners from India.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'MG Road',
+              addressLocality: 'Bengaluru',
+              addressRegion: 'KA',
+              postalCode: '560025',
+              addressCountry: 'IN',
             },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-7022213466",
-              "contactType": "Customer Support"
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+91-7022213466',
+              contactType: 'Customer Support',
             },
-            "sameAs": [
-              "https://www.facebook.com/GlobalVisaInternationals",
-              "https://www.linkedin.com/company/globalvisainternationals",
-              "https://twitter.com/GlobalVisaIntl"
-            ]
-          })
-        }} />
+            sameAs: [
+              'https://www.facebook.com/GlobalVisaInternationals',
+              'https://www.linkedin.com/company/globalvisainternationals',
+              'https://twitter.com/GlobalVisaIntl',
+            ],
+          }),
+        }}
+      />
 
-        {/* Breadcrumb Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
               {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.globalvisainternationals.com"
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://www.globalvisainternationals.com',
               },
               {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Business Visa",
-                "item": "https://www.globalvisainternationals.com/visa/business"
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Business Visa',
+                item: 'https://www.globalvisainternationals.com/Visa/business/canada',
               },
               {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Canada Business Visa"
-              }
-            ]
-          })
-        }} />
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Canada Business Visa',
+              },
+            ],
+          }),
+        }}
+      />
 
-        {/* FAQPage Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
               {
-                "@type": "Question",
-                "name": "What types of Canada Business Visas are available?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Canada offers the Start-Up Visa Program, Self-Employed Visa, and various Provincial Nominee Program (PNP) entrepreneur streams depending on the province."
-                }
+                '@type': 'Question',
+                name: 'What types of Canada Business Visas are available?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Canada offers the Start-Up Visa Program, Self-Employed Visa, and various Provincial Nominee Program (PNP) entrepreneur streams depending on the province.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "How much does a Canada Business Visa cost from India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Costs vary depending on visa type. Expect government processing fees starting from CAD 1,540, plus biometrics, documentation, and consulting charges."
-                }
+                '@type': 'Question',
+                name: 'How much does a Canada Business Visa cost from India?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Costs vary depending on visa type. Expect government processing fees starting from CAD 1,540, plus biometrics, documentation, and consulting charges.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "Who is eligible for a Canada Business Visa?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Eligible candidates include entrepreneurs, self-employed individuals, or investors with a solid business plan, proof of funds, and relevant experience."
-                }
-              }
-            ]
-          })
-        }} />
+                '@type': 'Question',
+                name: 'Who is eligible for a Canada Business Visa?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Eligible candidates include entrepreneurs, self-employed individuals, or investors with a solid business plan, proof of funds, and relevant experience.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
-        {/* Service Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Canada Business Visa Application Assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com"
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Canada Business Visa Application Assistance',
+            provider: {
+              '@type': 'Organization',
+              name: 'Global Visa Internationals',
+              url: 'https://www.globalvisainternationals.com',
             },
-            "areaServed": {
-              "@type": "Country",
-              "name": "India"
+            areaServed: {
+              '@type': 'Country',
+              name: 'India',
             },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Business Visa Services",
-              "itemListElement": [
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Business Visa Services',
+              itemListElement: [
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Start-Up Visa Application Guidance"
-                  }
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Start-Up Visa Application Guidance',
+                  },
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Self-Employed Visa Support"
-                  }
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Self-Employed Visa Support',
+                  },
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "PNP Entrepreneur Stream Application"
-                  }
-                }
-              ]
-            }
-          })
-        }} />
-      </head>
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'PNP Entrepreneur Stream Application',
+                  },
+                },
+              ],
+            },
+          }),
+        }}
+      />
 
-
+      {/* ✅ PAGE CONTENT */}
       <div className={styles.imageContainer}>
-        <img src="/visa/Canada-Business-Visa-Assistance.png" alt="Canada Business Visa Assistance.png" className={styles.AustraliaImage} />
+        <img src="/visa/Canada-Business-Visa-Assistance.png" alt="Canada Business Visa Assistance Image" className={styles.AustraliaImage} />
       </div>
-
-      <div class={styles.canadaSec}>
-        <div class={styles.canadaData}>
-          <h1 class={styles.canadaGuide}> Canada Business Visas Assistance | Global Visa Internationals</h1>
+      <div class={styles.VisaSec}>
+        <div class={styles.VisaData}>
+          <h1 class={styles.VisaGuide}> Canada Business Visas Assistance | Global Visa Internationals</h1>
           <p>Dreaming of expanding your business horizons or investing in a thriving, welcoming economy? Canada, a land of robust economic growth, strategic global connections, and abundant opportunities, is calling! Securing a Canada Business Visa opens doors to an exceptional environment for entrepreneurs, investors, and business professionals. It's more than just a visa; it's a chance to establish a brighter future for your enterprise and potentially your family in the Great White North.</p>
 
           <h3 class={styles.subTitle}>Why Choose Canada for Business? What Makes It So Special?</h3>
@@ -223,13 +261,13 @@ export default function Australia() {
             <li><strong>Halifax, Nova Scotia:</strong> A growing Atlantic hub with strengths in ocean technology, clean energy, and an emerging tech sector. Offers a more relaxed pace of life and potential for regional specific immigration programs.</li>
           </ol>
 
-          ---
+
 
 
           <h2 class={styles.subTitle}>Tailor Your Canada Business Visa Pathway: Find Your Best Fit!</h2>
           <p>Feeling overwhelmed by the options for a Canada Business Visa? Don't worry! We can help you navigate the various Canadian immigration programs for entrepreneurs and investors. Take our quick assessment to discover your ideal Canada business visa route – it's designed to point you in the right direction! Contact Global Visa Internationals today for a personalized assessment.</p>
 
-          ---
+
 
 
 
@@ -328,7 +366,7 @@ export default function Australia() {
             <li>Total Estimated Out-of-Pocket Costs (excluding business/investment funds/settlement funds): Approximately CAD 3,385 - CAD 3,700 (approximately INR 2.03 Lakhs - ₹2.22 Lakhs) + Required Business/Investment Funds/Settlement Funds.</li>
           </ul>
           <p>Please remember, these are rough estimates, and actual costs can vary. It's always essential to check the official IRCC website (Canada.ca) and relevant provincial government websites for the most up-to-date fees and requirements. For a personalized cost breakdown and detailed guidance on financial requirements, reach out to Global Visa Internationals!</p>
-          ---
+
 
 
           <h2 class={styles.subTitle}>Tips for a Successful Canada Business Visa Application: Your Pathway to Success</h2>
@@ -342,7 +380,7 @@ export default function Australia() {
             <li><strong>Maintain a Clean Record:</strong> A clean financial and criminal record is essential for Canadian immigration.</li>
             <li><strong>Seek Professional Guidance:</strong> The Canada Business Visa process is complex and requires meticulous preparation. Consulting with experienced immigration professionals like Global Visa Internationals is crucial to navigate the intricacies, optimize your application, and maximize your chances of success.</li>
           </ol>
-          ---
+
 
           <h2 class={styles.subTitle}>Top Considerations for Your Canada Business Venture: Beyond the Visa Application</h2>
           <ul>
@@ -371,7 +409,7 @@ export default function Australia() {
               </ul>
             </li>
           </ul>
-          ---
+
 
           <h2 class={styles.subTitle}>Additional Tips for Your Canada Business Journey: Making the Most of Your Visa</h2>
           <ol>
@@ -463,7 +501,7 @@ export default function Australia() {
           </table>
           <p>Providing accurate information and all necessary documents, especially regarding your business history and financial standing, is paramount to avoid delays or even rejection of your Canada Business Visa application. That's where expert guidance from Global Visa Internationals comes in handy!</p>
 
-          ---
+
 
 
           <h2 class={styles.subTitle}>Why Choose Global Visa Internationals? Your Trusted Partner for Canada Business Visas</h2>
@@ -484,7 +522,10 @@ export default function Australia() {
         </div>
       </div>
 
-
+      <section>
+        <ReviewSchema />
+        <ReviewCarousel />
+      </section>
     </>
   );
 }
