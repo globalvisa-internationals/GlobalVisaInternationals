@@ -20,14 +20,14 @@ const Services = () => {
                         <div className={styles.cardBack}>
                             <h3>Tourist Visa</h3>
                             <ul>
-                                <li><a href="/Visa/tourist-visa/canada-tourist-visa">CANADA</a></li>
-                                <li><a href="/Visa/tourist-visa/australia-tourist-visa">AUSTRALIA</a></li>
-                                <li><a href="/Visa/tourist-visa/usa-tourist-visa">USA</a></li>
-                                <li><a href="/Visa/tourist-visa/uk-tourist-visa">UK</a></li>
-                                <li><a href="/Visa/tourist-visa/europe-tourist-visa">EUROPE</a></li>
-                                <li><a href="/Visa/tourist-visa/japan-tourist-visa">JAPAN</a></li>
-                                <li><a href="/Visa/tourist-visa/dubai-tourist-visa">DUBAI</a></li>
-                                <li><a href="/Visa/tourist-visa/singapore-tourist-visa">SINGAPORE</a></li>
+                                <li><a href="/Visa/tourist-visa/canada">CANADA</a></li>
+                                <li><a href="/Visa/tourist-visa/australia">AUSTRALIA</a></li>
+                                <li><a href="/Visa/tourist-visa/usa">USA</a></li>
+                                <li><a href="/Visa/tourist-visa/united-kingdom">UK</a></li>
+                                <li><a href="/Visa/tourist-visa/europe">EUROPE</a></li>
+                                <li><a href="/Visa/tourist-visa/japan">JAPAN</a></li>
+                                <li><a href="/Visa/tourist-visa/dubai">DUBAI</a></li>
+                                <li><a href="/Visa/tourist-visa/singapore">SINGAPORE</a></li>
                             </ul>
                         </div>
                     </div>
@@ -69,8 +69,8 @@ const Services = () => {
                         <div className={styles.cardBack}>
                             <h3>PR Visa</h3>
                             <ul>
-                                <li><a href="/Visa/permanent-residency-visa/canada">CANADA</a></li>
-                                <li><a href="/Visa/permanent-residency-visa/australia">AUSTRALIA</a></li>
+                                <li><a href="/Visa/permanent-residency-visa/canada-pr-visa">CANADA</a></li>
+                                <li><a href="/Visa/permanent-residency-visa/australia-pr-visa">AUSTRALIA</a></li>
                             </ul>
                         </div>
                     </div>
