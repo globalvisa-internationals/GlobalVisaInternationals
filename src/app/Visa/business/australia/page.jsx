@@ -37,7 +37,7 @@ export const metadata = {
     alternateLocale: 'en_US',
     images: [
       {
-        url: 'https://www.globalvisainternationals.com/images/australia-business-visa-banner.jpg',
+        url: 'https://www.globalvisainternationals.com/business-visa/Australian_Business_Visa_Assistance.webp',
         width: 1200,
         height: 630,
         alt: 'Australia Business Visa Assistance',
@@ -50,7 +50,7 @@ export const metadata = {
     description:
       'Explore Australia Business Visa options with expert guidance. Apply from India for investor or business innovation visas.',
     images: [
-      'https://www.globalvisainternationals.com/images/australia-business-visa-banner.jpg',
+      'https://www.globalvisainternationals.com/business-visa/Australian_Business_Visa_Assistance.webp',
     ],
     site: 'https://www.globalvisainternationals.com/Visa/business/australia',
   },
@@ -71,155 +71,263 @@ export const metadata = {
 export default function Australia() {
   return (
     <>
-      {/* ✅ JSON-LD STRUCTURED DATA */}
+      {/* ✅ LOCAL BUSINESS SCHEMA */}
       <Script
         id="local-business-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Global Visa Internationals',
-            url: 'https://www.globalvisainternationals.com',
-            logo: 'https://www.globalvisainternationals.com/logo.png',
-            description:
-              'Visa experts offering Australia business visa assistance for investors, entrepreneurs, and business owners from India.',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: 'MG Road',
-              addressLocality: 'Bengaluru',
-              addressRegion: 'KA',
-              postalCode: '560025',
-              addressCountry: 'IN',
-            },
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+91-7022213466',
-              contactType: 'Customer Support',
-            },
-            sameAs: [
-              'https://www.facebook.com/GlobalVisaInternationals',
-              'https://www.linkedin.com/company/globalvisainternationals',
-              'https://twitter.com/GlobalVisaIntl',
-            ],
-          }),
-        }}
+        dangerouslySetInnerHTML={
+          {
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Global Visa Internationals",
+                "url": "https://www.globalvisainternationals.com",
+                "logo": "https://www.globalvisainternationals.com/logo.png",
+                "description":
+                  "Visa experts offering Australia business visa assistance for investors, entrepreneurs, and business owners from India.",
+                "image": "https://www.globalvisainternationals.com/business-visa/Australian_Business_Visa_Assistance.webp",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "MG Road",
+                  "addressLocality": "Bengaluru",
+                  "addressRegion": "KA",
+                  "postalCode": "560025",
+                  "addressCountry": "IN"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 12.9716,
+                  "longitude": 77.5946
+                },
+                "openingHours": "Mo-Fr 09:00-18:00",
+                "telephone": "+91-7022213466",
+                "priceRange": "$$",
+                "sameAs": [
+                  "https://www.facebook.com/globalvisainternationals/",
+                  "https://www.instagram.com/globalvisa_internationals/",
+                  "https://www.linkedin.com/company/global-visa-internationals/",
+                  "https://x.com/GLOBALVISA1505",
+                  "https://www.youtube.com/@globalVisaInternationals",
+                  "https://www.google.com/maps/place/Global+Visa+Internationals"
+                ]
+              })
+          }}
       />
 
+      {/* ✅ ORGANIZATION SCHEMA */}
       <Script
-        id="breadcrumb-schema"
+        id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Global Visa Internationals",
+            "url": "https://www.globalvisainternationals.com",
+            "logo": "https://www.globalvisainternationals.com/logo.png",
+            "description":
+              "Global Visa Internationals provides expert visa and immigration consulting services for Canada, Australia, UK, USA, and Europe.",
+            "contactPoint": [
               {
-                '@type': 'ListItem',
-                position: 1,
-                name: 'Home',
-                item: 'https://www.globalvisainternationals.com',
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Business Visa',
-                item: 'https://www.globalvisainternationals.com/Visa/business/australia',
-              },
-              {
-                '@type': 'ListItem',
-                position: 3,
-                name: 'Australia Business Visa',
-              },
+                "@type": "ContactPoint",
+                "telephone": "+91-7022213466",
+                "contactType": "Customer Support",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Hindi", "Kannada"]
+              }
             ],
-          }),
+            "sameAs": [
+              "https://www.facebook.com/globalvisainternationals/",
+              "https://www.instagram.com/globalvisa_internationals/",
+              "https://www.linkedin.com/company/global-visa-internationals/",
+              "https://x.com/GLOBALVISA1505",
+              "https://www.youtube.com/@globalVisaInternationals"
+            ]
+          })
         }}
       />
 
+      {/* ✅ WEBSITE + SEARCHACTION SCHEMA */}
       <Script
-        id="faq-schema"
+        id="website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'What types of Australia Business Visas are available?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Australia offers various business visa subclasses, including Business Innovation and Investment (Subclass 188), Business Talent (Subclass 132), and Permanent Business Visas (Subclass 888). Each has specific criteria related to investment, ownership, and business experience.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How much does an Australia Business Visa cost from India?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Costs vary by subclass but generally start from AUD 5,000 to AUD 9,000 for primary applicants. Additional charges apply for dependents, documentation, and processing.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Who is eligible for an Australia Business Visa?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Eligibility depends on your business or investment background, net assets, business turnover, and your intention to own or manage a business in Australia. Requirements vary by visa stream.',
-                },
-              },
-            ],
-          }),
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.globalvisainternationals.com",
+            "name": "Global Visa Internationals",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.globalvisainternationals.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
         }}
       />
 
+      {/* ✅ WEBPAGE SCHEMA */}
+      <Script
+        id="webpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Australia Business Visa Assistance | Global Visa Internationals",
+            "url": "https://www.globalvisainternationals.com/Visa/business/australia",
+            "description":
+              "Apply for an Australia Business Visa with expert assistance from Global Visa Internationals. Get guidance on Subclass 188, 132, and 888 visa categories.",
+            "inLanguage": "en-IN",
+            "isPartOf": {
+              "@type": "WebSite",
+              "@id": "https://www.globalvisainternationals.com"
+            }
+          })
+        }}
+      />
+
+      {/* ✅ SERVICE SCHEMA */}
       <Script
         id="service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            serviceType: 'Australia Business Visa Application Assistance',
-            provider: {
-              '@type': 'Organization',
-              name: 'Global Visa Internationals',
-              url: 'https://www.globalvisainternationals.com',
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Australia Business Visa Application Assistance",
+            "provider": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com"
             },
-            areaServed: {
-              '@type': 'Country',
-              name: 'India',
+            "areaServed": {
+              "@type": "Country",
+              "name": "India"
             },
-            hasOfferCatalog: {
-              '@type': 'OfferCatalog',
-              name: 'Business Visa Services',
-              itemListElement: [
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Business Visa Services",
+              "itemListElement": [
                 {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Subclass 188 Business Innovation Visa Assistance',
-                  },
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Subclass 188 Business Innovation Visa Assistance"
+                  }
                 },
                 {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Subclass 132 Business Talent Visa Guidance',
-                  },
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Subclass 132 Business Talent Visa Guidance"
+                  }
                 },
                 {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Subclass 888 Permanent Business Visa Support',
-                  },
-                },
-              ],
-            },
-          }),
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Subclass 888 Permanent Business Visa Support"
+                  }
+                }
+              ]
+            }
+          })
         }}
       />
+
+      {/* ✅ FAQ SCHEMA */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What types of Australia Business Visas are available?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "Australia offers various business visa subclasses, including Business Innovation and Investment (Subclass 188), Business Talent (Subclass 132), and Permanent Business Visas (Subclass 888)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does an Australia Business Visa cost from India?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "Visa costs range from AUD 5,000–9,000 for main applicants, with extra charges for dependents and documentation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is eligible for an Australia Business Visa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "Applicants with business or investment backgrounds, sufficient net assets, and intent to manage or own a business in Australia."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* ✅ BREADCRUMB SCHEMA */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.globalvisainternationals.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Business Visa",
+                "item": "https://www.globalvisainternationals.com/Visa/business/australia"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Australia Business Visa"
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* ✅ AGGREGATE RATING SCHEMA (Optional but boosts CTR) */}
+      <Script
+        id="aggregate-rating-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AggregateRating",
+            "itemReviewed": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals"
+            },
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "reviewCount": "240"
+          })
+        }}
+      />
+
 
       {/* PAGE CONTENT */}
       <div className={styles.imageContainer}>

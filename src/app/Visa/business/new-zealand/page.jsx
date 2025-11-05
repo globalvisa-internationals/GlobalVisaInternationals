@@ -27,7 +27,7 @@ export const metadata = {
     alternateLocale: "en_US",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/images/new-zealand-business-visa-banner.jpg",
+        url: "https://www.globalvisainternationals.com/business-visa/New-Zealand_Business_Visa_Assistance.webp",
         width: 1200,
         height: 630,
         alt: "New Zealand Business Visa Banner",
@@ -39,7 +39,7 @@ export const metadata = {
     title: "New Zealand Business Visa | Application, Cost & Requirements",
     description:
       "Explore New Zealand Business Visa options with expert guidance. Apply from India for investor or entrepreneur visas to New Zealand.",
-    images: ["https://www.globalvisainternationals.com/images/new-zealand-business-visa-banner.jpg"],
+    images: ["https://www.globalvisainternationals.com/business-visa/New-Zealand_Business_Visa_Assistance.webp"],
   },
   other: {
     "geo.region": "NZ",
@@ -51,7 +51,7 @@ export const metadata = {
 export default function NewZealand() {
   return (
     <>
-      {/* Structured Data */}
+      {/* ✅ JSON-LD Structured Data */}
       <Script
         id="ld-localbusiness"
         type="application/ld+json"
@@ -70,19 +70,22 @@ export default function NewZealand() {
               "addressLocality": "Bengaluru",
               "addressRegion": "KA",
               "postalCode": "560025",
-              "addressCountry": "IN",
+              "addressCountry": "IN"
             },
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+91-7022213466",
-              "contactType": "Customer Support",
+              "contactType": "Customer Support"
             },
             "sameAs": [
-              "https://www.facebook.com/GlobalVisaInternationals",
-              "https://www.linkedin.com/company/globalvisainternationals",
-              "https://twitter.com/GlobalVisaIntl",
+              "https://www.facebook.com/globalvisainternationals/",
+              "https://www.instagram.com/globalvisa_internationals/",
+              "https://www.linkedin.com/company/global-visa-internationals/",
+              "https://x.com/GLOBALVISA1505",
+              "https://www.youtube.com/@globalVisaInternationals",
+              "https://www.google.com/maps/place/Global+Visa+Internationals",
             ],
-          }),
+          })
         }}
       />
 
@@ -96,9 +99,9 @@ export default function NewZealand() {
             "itemListElement": [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://www.globalvisainternationals.com" },
               { "@type": "ListItem", position: 2, name: "Business Visa", item: "https://www.globalvisainternationals.com/Visa/business/new-zealand" },
-              { "@type": "ListItem", position: 3, name: "New Zealand Business Visa" },
-            ],
-          }),
+              // { "@type": "ListItem", position: 3, name: "New Zealand Business Visa" }
+            ]
+          })
         }}
       />
 
@@ -115,27 +118,60 @@ export default function NewZealand() {
                 "name": "Who is eligible for a New Zealand Business Visa?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Entrepreneurs, investors, and business owners with a valid business plan and financial backing can apply for a New Zealand Business Visa.",
-                },
+                  "text": "Entrepreneurs, investors, and business owners with a valid business plan and sufficient financial capacity can apply for a New Zealand Business Visa."
+                }
               },
               {
                 "@type": "Question",
                 "name": "What are the requirements for a New Zealand Business Visa?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Applicants generally need a business plan, investment capital, clean background, and relevant experience. Requirements vary by visa stream (entrepreneur/investor).",
-                },
+                  "text": "Applicants must present a solid business plan, investment funds, proof of clean background, and relevant experience. Requirements vary by visa stream, such as Entrepreneur Work Visa or Investor Visa."
+                }
               },
               {
                 "@type": "Question",
                 "name": "How much does a New Zealand Business Visa cost?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Costs range based on visa category. Expect application fees around NZD 3,000–5,000, excluding document preparation and legal/consulting fees.",
-                },
-              },
-            ],
-          }),
+                  "text": "Application fees typically range between NZD 3,000 and 5,000 depending on the visa type. Additional documentation, consulting, and legal service charges may apply."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
+      <Script
+        id="ld-article"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "New Zealand Business Visa Assistance from India",
+            "description": "Apply for a New Zealand Business Visa with expert help from Global Visa Internationals. We guide Indian entrepreneurs, investors, and business owners through every step of the process.",
+            "image": "https://www.globalvisainternationals.com/business-visa/New-Zealand_Business_Visa_Assistance.webp",
+            "author": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.globalvisainternationals.com/logo.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.globalvisainternationals.com/visa/business/new-zealand"
+            },
+            "datePublished": "2025-01-05",
+            "dateModified": "2025-11-05"
+          })
         }}
       />
 
@@ -150,36 +186,150 @@ export default function NewZealand() {
             "provider": {
               "@type": "Organization",
               "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com",
+              "url": "https://www.globalvisainternationals.com"
             },
-            "areaServed": { "@type": "Country", name: "India" },
+            "areaServed": { "@type": "Country", "name": "India" },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              name: "Business Visa Services",
+              "name": "New Zealand Visa Services",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    name: "New Zealand Entrepreneur Visa Assistance",
-                  },
+                    "name": "New Zealand Entrepreneur Visa Assistance"
+                  }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    name: "New Zealand Investor Visa Guidance",
-                  },
+                    "name": "New Zealand Investor Visa Guidance"
+                  }
                 },
-              ],
-            },
-          }),
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "New Zealand Business Migration Consulting"
+                  }
+                }
+              ]
+            }
+          })
         }}
       />
 
+      <Script
+        id="ld-organization"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Global Visa Internationals",
+            "url": "https://www.globalvisainternationals.com",
+            "logo": "https://www.globalvisainternationals.com/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/GlobalVisaInternationals",
+              "https://www.linkedin.com/company/globalvisainternationals",
+              "https://twitter.com/GlobalVisaIntl"
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91-7022213466",
+                "contactType": "Customer Service",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Hindi"]
+              }
+            ]
+          })
+        }}
+      />
+
+      <Script
+        id="ld-website"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.globalvisainternationals.com",
+            "name": "Global Visa Internationals",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.globalvisainternationals.com/search?query={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
+
+      <Script
+        id="ld-webpage"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "New Zealand Business Visa Assistance from India",
+            "url": "https://www.globalvisainternationals.com/visa/business/new-zealand",
+            "description": "Learn how to apply for a New Zealand Business Visa from India. Expert guidance for entrepreneurs, investors, and business professionals.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.globalvisainternationals.com/logo.png"
+              }
+            }
+          })
+        }}
+      />
+
+      <Script
+        id="ld-contactpoint"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPoint",
+            "telephone": "+91-7022213466",
+            "contactType": "Book Visa Consultation",
+            "url": "https://www.globalvisainternationals.com/contact",
+            "availableLanguage": ["English", "Hindi"]
+          })
+        }}
+      />
+
+      <Script
+        id="ld-potentialaction"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Global Visa Internationals",
+            "url": "https://www.globalvisainternationals.com",
+            "potentialAction": {
+              "@type": "ContactAction",
+              "target": "https://www.globalvisainternationals.com/contact",
+              "name": "Book a Visa Consultation",
+              "description": "Schedule a consultation with visa experts to start your New Zealand Business Visa application.",
+              "result": {
+                "@type": "Reservation",
+                "name": "Visa Consultation Appointment"
+              }
+            }
+          })
+        }}
+      />
+
+
       <div className={styles.imageContainer}>
         <img
-          src="/images/new-zealand-business-visa-banner.jpg"
+          src="/business-visa/New-Zealand_Business_Visa_Assistance.webp"
           alt="New Zealand Business Visa"
           className={styles.VisaImage}
         />

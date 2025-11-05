@@ -28,7 +28,7 @@ export const metadata = {
     alternateLocale: "en_US",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/images/europe-business-visa-banner.jpg",
+        url: "https://www.globalvisainternationals.com/business-visa/Schengen_Business_Visa_Assistance.webp",
         width: 1200,
         height: 630,
         alt: "Schengen Business Visa Assistance",
@@ -41,7 +41,7 @@ export const metadata = {
     description:
       "Explore Schengen Business Visa options with expert guidance. Apply from India for investor or entrepreneur visas in EU countries.",
     images: [
-      "https://www.globalvisainternationals.com/images/europe-business-visa-banner.jpg",
+      "https://www.globalvisainternationals.com/business-visa/Schengen_Business_Visa_Assistance.webp",
     ],
   },
   other: {
@@ -51,7 +51,7 @@ export const metadata = {
   },
 };
 
-export default function Europe() {
+export default function schengen_Tourist_Visa_assistence() {
   return (
     <>
       {/* ✅ JSON-LD Structured Data */}
@@ -81,9 +81,12 @@ export default function Europe() {
               "contactType": "Customer Support",
             },
             "sameAs": [
-              "https://www.facebook.com/GlobalVisaInternationals",
-              "https://www.linkedin.com/company/globalvisainternationals",
-              "https://twitter.com/GlobalVisaIntl",
+              "https://www.facebook.com/globalvisainternationals/",
+              "https://www.instagram.com/globalvisa_internationals/",
+              "https://www.linkedin.com/company/global-visa-internationals/",
+              "https://x.com/GLOBALVISA1505",
+              "https://www.youtube.com/@globalVisaInternationals",
+              "https://www.google.com/maps/place/Global+Visa+Internationals",
             ],
           }),
         }}
@@ -158,6 +161,65 @@ export default function Europe() {
           }),
         }}
       />
+
+      <Script
+        id="ld-article"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Schengen Business Visa Assistance from India",
+            "description":
+              "Comprehensive guide and professional help for Schengen Business Visa application from India. Trusted by Indian entrepreneurs since 2012.",
+            "image": "https://www.globalvisainternationals.com/business-visa/Schengen_Business_Visa_Assistance.webp",
+            "author": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Global Visa Internationals",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.globalvisainternationals.com/logo.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.globalvisainternationals.com/visa/business/schengen"
+            },
+            "datePublished": "2025-01-05",
+            "dateModified": "2025-11-05"
+          }),
+        }}
+      />
+
+
+      <Script
+        id="ld-potentialaction"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Global Visa Internationals",
+            "url": "https://www.globalvisainternationals.com",
+            "potentialAction": {
+              "@type": "ContactAction",
+              "target": "https://www.globalvisainternationals.com/contact",
+              "name": "Book a Visa Consultation",
+              "description": "Schedule a consultation with visa experts to start your business visa application.",
+              "result": {
+                "@type": "Reservation",
+                "name": "Visa Consultation Appointment"
+              }
+            }
+          }),
+        }}
+      />
+
 
       <Script
         id="ld-service"
@@ -288,7 +350,7 @@ export default function Europe() {
 
       {/* ✅ Page Content */}
       <div className={styles.imageContainer}>
-        <img src="/visa/Europe-Business-Visa-Assistance.png" alt="Europe Business Visa Assistance" className={styles.VisaImage} />
+        <img src="/business-visa/Schengen_Business_Visa_Assistance.webp" alt="Schegen Business Visa Assistance" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>

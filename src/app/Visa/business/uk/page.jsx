@@ -6,55 +6,9 @@ import styles from '@/Components/Visa.module.css';
 import VisaForm from '@/Components/VisaForm';
 
 
-export const metadata = {
-  title: "UK Business Visa from India | Best UK Visa Consultants in India - Global Visa Internationals",
-  description:
-    "Apply for your UK Business visa from India with the best UK visa consultants. Get expert help for UK visitor visa application, documents, fees, and embassy interview. Trusted by thousands of Indian travellers.",
-  keywords:
-    "UK Business visa from India, UK visitor visa consultants, UK visa agents in India, apply UK visa online India, UK visa assistance Bangalore, UK travel visa for Indian citizens, UK visa documentation help, UK visa consultants near me, UK visa process from India, UK visa cost 2025",
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://www.globalvisainternationals.com/visa/business/uk",
-  },
-  openGraph: {
-    title: "Apply for UK Business Visa from India | Trusted UK Visa Consultants",
-    description:
-      "Looking to travel to the UK from India? Global Visa Internationals offers complete support for UK business visa applications, documentation, and embassy appointments. Trusted since 2012.",
-    url: "https://www.globalvisainternationals.com/visa/business/uk",
-    siteName: "Global Visa Internationals",
-    images: [
-      {
-        url: "https://www.globalvisainternationals.com/visa/UK-Business-Visa-Assistance-GVI.webp",
-        width: 1200,
-        height: 630,
-        alt: "UK Business Visa Assistance - Global Visa Internationals",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@GLOBALVISA1505",
-    title: "UK Business Visa from India | Fast UK Visa Application Help",
-    description:
-      "Get expert help to apply for your UK Business visa from India. Global Visa Internationals provides visa application assistance, documentation support, and embassy appointment guidance.",
-    images: [
-      "https://www.globalvisainternationals.com/visa/UK-Business-Visa-Assistance-GVI.webp",
-    ],
-  },
-  other: {
-    "geo.region": "IN-KA",
-    "geo.placename": "Bengaluru",
-    "ICBM": "12.9716,77.5946",
-    "theme-color": "#ffffff",
-    "format-detection": "telephone=no",
-  },
-};
-
 export default function UK_Business_Visa() {
-  // ✅ Structured Data (Schema.org)
   const structuredData = [
-    // 1️⃣ Organization / LocalBusiness
+    // ✅ 1️⃣ Organization + LocalBusiness
     {
       "@context": "https://schema.org",
       "@type": ["Organization", "TravelAgency", "LocalBusiness"],
@@ -80,11 +34,28 @@ export default function UK_Business_Visa() {
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
           "opens": "10:00",
           "closes": "18:00",
         },
       ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-7022213466",
+          "contactType": "Customer Service",
+          "areaServed": "IN",
+          "availableLanguage": "English",
+        },
+      ],
+      "hasMap": "https://www.mappls.com/digipin/4P3-J4J-8849",
       "sameAs": [
         "https://www.facebook.com/globalvisainternationals/",
         "https://www.instagram.com/globalvisa_internationals/",
@@ -95,7 +66,50 @@ export default function UK_Business_Visa() {
       ],
     },
 
-    // 2️⃣ Service Schema (Visa Assistance)
+    // ✅ 2️⃣ WebSite + SearchAction
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Global Visa Internationals",
+      "url": "https://www.globalvisainternationals.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target":
+          "https://www.globalvisainternationals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+
+    // ✅ 3️⃣ WebPage / Article
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "UK Business Visa from India",
+      "url": "https://www.globalvisainternationals.com/visa/business/uk",
+      "description":
+        "Learn how to apply for a UK Business Visa from India with the best consultants. Step-by-step guidance for documents, fees, and interview process.",
+      "breadcrumb": {
+        "@id": "#breadcrumb",
+      },
+      "mainEntity": {
+        "@type": "Article",
+        "headline": "UK Business Visa from India",
+        "author": {
+          "@type": "Organization",
+          "name": "Global Visa Internationals",
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Global Visa Internationals",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.globalvisainternationals.com/gvilogo.png",
+          },
+        },
+      },
+    },
+
+    // ✅ 4️⃣ Service Schema
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -105,34 +119,41 @@ export default function UK_Business_Visa() {
         "name": "Global Visa Internationals",
         "url": "https://www.globalvisainternationals.com",
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "India",
-      },
+      "areaServed": { "@type": "Country", "name": "India" },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Visa & Immigration Services",
         "itemListElement": [
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "UK Business Visa Assistance" },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "UK Business Visa Assistance",
+            },
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "UK Tourist Visa Guidance" },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "UK Tourist Visa Guidance",
+            },
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "UK Student Visa Consultancy" },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "UK Student Visa Consultancy",
+            },
           },
         ],
       },
     },
 
-    // 3️⃣ BreadcrumbList
+    // ✅ 5️⃣ BreadcrumbList
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": "#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -144,18 +165,17 @@ export default function UK_Business_Visa() {
           "@type": "ListItem",
           "position": 2,
           "name": "Business Visa",
-          "item": "https://www.globalvisainternationals.com/visa/business",
+          "item": "https://www.globalvisainternationals.com/visa/business/uk",
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "UK Business Visa",
-          "item": "https://www.globalvisainternationals.com/visa/business/uk",
         },
       ],
     },
 
-    // 4️⃣ FAQPage Schema
+    // ✅ 6️⃣ FAQPage Schema
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -194,8 +214,27 @@ export default function UK_Business_Visa() {
         },
       ],
     },
-  ];
 
+    // ✅ 7️⃣ ContactPoint / PotentialAction
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPoint",
+      "telephone": "+91-7022213466",
+      "contactType": "Customer Support",
+      "areaServed": "IN",
+      "availableLanguage": "English",
+      "potentialAction": {
+        "@type": "CommunicateAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate":
+            "https://wa.me/917022213466?text=Hello%20Global%20Visa%20Internationals,%20I%20need%20assistance%20with%20the%20UK%20Business%20Visa",
+        },
+        "name": "WhatsApp Chat",
+        "description": "Contact Global Visa Internationals via WhatsApp for quick visa assistance",
+      },
+    },
+  ];
   return (
     <>
       {/* ✅ Add all structured data dynamically */}
@@ -210,7 +249,7 @@ export default function UK_Business_Visa() {
       {/* ✅ Page Visuals */}
       <div className={styles.imageContainer}>
         <img
-          src="/visa/UK-Business-Visa-Assistance-GVI.webp"
+          src="/business-visa/UK_Business_Visa_Assistance.webp"
           alt="UK Business Visa Assistance Image"
           className={styles.VisaImage}
         />

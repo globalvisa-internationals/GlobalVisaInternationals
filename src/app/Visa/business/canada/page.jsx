@@ -38,7 +38,7 @@ export const metadata = {
     alternateLocale: 'en_CA',
     images: [
       {
-        url: 'https://www.globalvisainternationals.com/images/canada-business-visa-banner.jpg',
+        url: 'https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp',
         width: 1200,
         height: 630,
         alt: 'Canada Business Visa Banner',
@@ -51,7 +51,7 @@ export const metadata = {
     description:
       'Apply for a Canada Business Visa with Global Visa Internationals. We help Indian entrepreneurs and investors with the entire visa process.',
     images: [
-      'https://www.globalvisainternationals.com/images/canada-business-visa-banner.jpg',
+      'https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp',
     ],
     site: 'https://www.globalvisainternationals.com/Visa/business/canada',
   },
@@ -70,159 +70,263 @@ export const metadata = {
 export default function Canada_Business_Visa_Assistance() {
   return (
     <>
-      {/* ✅ Structured Data (JSON-LD) */}
+      {/* ✅ Structured Data (JSON-LD) - Complete SEO Setup */}
       <Script
-        id="local-business-schema"
+        id="all-schema-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Global Visa Internationals',
-            url: 'https://www.globalvisainternationals.com',
-            logo: 'https://www.globalvisainternationals.com/logo.png',
-            description:
-              'Visa experts offering Canada business visa assistance for investors, entrepreneurs, and business owners from India.',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: 'MG Road',
-              addressLocality: 'Bengaluru',
-              addressRegion: 'KA',
-              postalCode: '560025',
-              addressCountry: 'IN',
-            },
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+91-7022213466',
-              contactType: 'Customer Support',
-            },
-            sameAs: [
-              'https://www.facebook.com/GlobalVisaInternationals',
-              'https://www.linkedin.com/company/globalvisainternationals',
-              'https://twitter.com/GlobalVisaIntl',
-            ],
-          }),
+          __html: JSON.stringify(
+            [
+              // 🔹 1. Organization Schema
+              // 🔹 1. Organization Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Global Visa Internationals",
+                "url": "https://www.globalvisainternationals.com",
+                "logo": "https://www.globalvisainternationals.com/logo.png",
+                "image": "https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp",
+                "hasMap": "https://www.mappls.com/digipin/4P3-J4J-8849",
+                "sameAs": [
+                  "https://www.facebook.com/globalvisainternationals/",
+                  "https://www.instagram.com/globalvisa_internationals/",
+                  "https://www.linkedin.com/company/global-visa-internationals/",
+                  "https://x.com/GLOBALVISA1505",
+                  "https://www.youtube.com/@globalVisaInternationals",
+                  "https://www.google.com/maps/place/Global+Visa+Internationals"
+                ],
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-7022213466",
+                    "contactType": "Customer Service",
+                    "areaServed": "IN",
+                    "availableLanguage": ["English", "Hindi"]
+                  }
+                ],
+                "department": {
+                  "@type": "Organization",
+                  "name": "Canada Business Visa Assistance Department",
+                  "url": "https://www.globalvisainternationals.com/visa/business/canada",
+                  "description": "Dedicated support team for Canada Business Visa applications, providing document verification, application filing, and personalized consultation."
+                }
+              },
+
+              // 🔹 2. LocalBusiness Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Global Visa Internationals",
+                "image": "https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp",
+                "url": "https://www.globalvisainternationals.com/visa/business/canada",
+                "telephone": "+91-7022213466",
+                "priceRange": "₹₹₹",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "MG Road",
+                  "addressLocality": "Bengaluru",
+                  "addressRegion": "KA",
+                  "postalCode": "560025",
+                  "addressCountry": "IN"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 12.9716,
+                  "longitude": 77.5946
+                },
+                "hasMap": "https://www.google.com/maps/place/Global+Visa+Internationals",
+                "openingHours": "Mo-Sa 10:00-18:00",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "India"
+                },
+                "hasMap": "https://www.mappls.com/digipin/4P3-J4J-8849",
+                "sameAs": [
+                  "https://www.facebook.com/globalvisainternationals/",
+                  "https://www.instagram.com/globalvisa_internationals/",
+                  "https://www.linkedin.com/company/global-visa-internationals/",
+                  "https://x.com/GLOBALVISA1505",
+                  "https://www.youtube.com/@globalVisaInternationals",
+                  "https://www.google.com/maps/place/Global+Visa+Internationals"
+                ],
+                "description": "Get expert assistance for Canada Business Visa applications from India. Global Visa Internationals helps investors, entrepreneurs, and business owners with documentation, appointments, and smooth visa approval."
+              },
+
+              // 🔹 3. WebSite + SearchAction Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "url": "https://www.globalvisainternationals.com",
+                "name": "Global Visa Internationals",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.globalvisainternationals.com/search?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              },
+
+              // 🔹 4. WebPage / Article Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Canada Business Visa Assistance from India",
+                "url": "https://www.globalvisainternationals.com/Visa/business/canada",
+                "description":
+                  "Apply for a Canada Business Visa with expert help from Global Visa Internationals. Learn about visa requirements, eligibility, documentation, and the application process.",
+                "inLanguage": "en-IN",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Global Visa Internationals",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.globalvisainternationals.com/logo.png"
+                  }
+                },
+                "datePublished": "2025-01-10",
+                "dateModified": "2025-11-04"
+              },
+
+              // 🔹 5. BreadcrumbList Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.globalvisainternationals.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Business Visa",
+                    "item": "https://www.globalvisainternationals.com/Visa/business/canada"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Canada Business Visa"
+                  }
+                ]
+              },
+
+              // 🔹 6. Service Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "serviceType": "Canada Business Visa Application Assistance",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Global Visa Internationals",
+                  "url": "https://www.globalvisainternationals.com"
+                },
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "India"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Business Visa Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Start-Up Visa Application Guidance"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Self-Employed Visa Support"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "PNP Entrepreneur Stream Application"
+                      }
+                    }
+                  ]
+                }
+              },
+
+              // 🔹 7. FAQPage Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What types of Canada Business Visas are available?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Canada offers the Start-Up Visa Program, Self-Employed Visa, and various Provincial Nominee Program (PNP) entrepreneur streams depending on the province."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How much does a Canada Business Visa cost from India?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Costs vary depending on visa type. Expect government processing fees starting from CAD 1,540, plus biometrics, documentation, and consulting charges."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Who is eligible for a Canada Business Visa?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Eligible candidates include entrepreneurs, self-employed individuals, or investors with a solid business plan, proof of funds, and relevant experience."
+                    }
+                  }
+                ]
+              },
+
+              // 🔹 8. AggregateRating / Review Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Global Visa Internationals",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "185"
+                },
+                "review": [
+                  {
+                    "@type": "Review",
+                    "author": "Suman Sharma",
+                    "reviewBody":
+                      "Professional and smooth experience. Got my Canada Business Visa approved quickly with their help.",
+                    "reviewRating": {
+                      "@type": "Rating",
+                      "ratingValue": "5"
+                    }
+                  }
+                ]
+              },
+
+              // 🔹 9. ContactPoint / PotentialAction Schema
+              {
+                "@context": "https://schema.org",
+                "@type": "ContactPoint",
+                "telephone": "+91-7022213466",
+                "contactType": "Book Visa Consultation",
+                "url": "https://www.globalvisainternationals.com/contact",
+                "availableLanguage": ["English", "Hindi"]
+              }
+            ])
         }}
       />
 
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                name: 'Home',
-                item: 'https://www.globalvisainternationals.com',
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Business Visa',
-                item: 'https://www.globalvisainternationals.com/Visa/business/canada',
-              },
-              {
-                '@type': 'ListItem',
-                position: 3,
-                name: 'Canada Business Visa',
-              },
-            ],
-          }),
-        }}
-      />
-
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'What types of Canada Business Visas are available?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Canada offers the Start-Up Visa Program, Self-Employed Visa, and various Provincial Nominee Program (PNP) entrepreneur streams depending on the province.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How much does a Canada Business Visa cost from India?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Costs vary depending on visa type. Expect government processing fees starting from CAD 1,540, plus biometrics, documentation, and consulting charges.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Who is eligible for a Canada Business Visa?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Eligible candidates include entrepreneurs, self-employed individuals, or investors with a solid business plan, proof of funds, and relevant experience.',
-                },
-              },
-            ],
-          }),
-        }}
-      />
-
-      <Script
-        id="service-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            serviceType: 'Canada Business Visa Application Assistance',
-            provider: {
-              '@type': 'Organization',
-              name: 'Global Visa Internationals',
-              url: 'https://www.globalvisainternationals.com',
-            },
-            areaServed: {
-              '@type': 'Country',
-              name: 'India',
-            },
-            hasOfferCatalog: {
-              '@type': 'OfferCatalog',
-              name: 'Business Visa Services',
-              itemListElement: [
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Start-Up Visa Application Guidance',
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Self-Employed Visa Support',
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'PNP Entrepreneur Stream Application',
-                  },
-                },
-              ],
-            },
-          }),
-        }}
-      />
 
       {/* ✅ PAGE CONTENT */}
       <div className={styles.imageContainer}>
-        <img src="/visa/Canada-Business-Visa-Assistance.png" alt="Canada Business Visa Assistance Image" className={styles.AustraliaImage} />
+        <img src="/business-visa/Canada_Business_Visa_ASSISTANCE.webp" alt="Canada Business Visa Assistance Image" className={styles.AustraliaImage} />
       </div>
       <div class={styles.VisaSec}>
         <div class={styles.VisaData}>
