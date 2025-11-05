@@ -77,41 +77,41 @@ export default function Australia() {
         type="application/ld+json"
         dangerouslySetInnerHTML={
           {
-            __html: JSON.stringify(
-              {
-                "@context": "https://schema.org",
-                "@type": "LocalBusiness",
-                "name": "Global Visa Internationals",
-                "url": "https://www.globalvisainternationals.com",
-                "logo": "https://www.globalvisainternationals.com/logo.png",
-                "description":
-                  "Visa experts offering Australia business visa assistance for investors, entrepreneurs, and business owners from India.",
-                "image": "https://www.globalvisainternationals.com/business-visa/Australian_Business_Visa_Assistance.webp",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "MG Road",
-                  "addressLocality": "Bengaluru",
-                  "addressRegion": "KA",
-                  "postalCode": "560025",
-                  "addressCountry": "IN"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 12.9716,
-                  "longitude": 77.5946
-                },
-                "openingHours": "Mo-Fr 09:00-18:00",
-                "telephone": "+91-7022213466",
-                "priceRange": "$$",
-                "sameAs": [
-                  "https://www.facebook.com/globalvisainternationals/",
-                  "https://www.instagram.com/globalvisa_internationals/",
-                  "https://www.linkedin.com/company/global-visa-internationals/",
-                  "https://x.com/GLOBALVISA1505",
-                  "https://www.youtube.com/@globalVisaInternationals",
-                  "https://www.google.com/maps/place/Global+Visa+Internationals"
-                ]
-              })
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Global Visa Internationals",
+              "url": "https://www.globalvisainternationals.com",
+              "logo": "https://www.globalvisainternationals.com/logo.png",
+              "description":
+                "Visa experts offering Australia business visa assistance for investors, entrepreneurs, and business owners from India.",
+              "image": "https://www.globalvisainternationals.com/business-visa/Australian_Business_Visa_Assistance.webp",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "MG Road",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "KA",
+                "postalCode": "560025",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.9716,
+                "longitude": 77.5946
+              },
+              "openingHours": "Mo-Fr 10:00-17:00",
+              "telephone": "+91-7022213466",
+              "priceRange": "$$",
+              "hasMap": "https://www.mappls.com/digipin/4P3-J4J-8849",
+              "sameAs": [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+                "https://www.google.com/maps/place/Global+Visa+Internationals"
+              ]
+            })
           }}
       />
 
@@ -332,7 +332,7 @@ export default function Australia() {
       {/* PAGE CONTENT */}
       <div className={styles.imageContainer}>
         <img
-          src="/visa/Australia-Business-Visa-Assistance.png"
+          src="/business-visa/Australian_Business_Visa_Assistance.webp"
           alt="Australia Business Visa Assistance Image"
           className={styles.VisaImage}
         />
