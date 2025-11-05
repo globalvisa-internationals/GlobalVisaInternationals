@@ -333,7 +333,7 @@ export default function Australia() {
       <div className={styles.imageContainer}>
         <img
           src="/business-visa/Australian_Business_Visa_Assistance.webp"
-          alt="Australia Business Visa Assistance Image"
+          alt="Australia Business Visa Assistance"
           className={styles.VisaImage}
         />
       </div>

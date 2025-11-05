@@ -326,7 +326,7 @@ export default function Canada_Business_Visa_Assistance() {
 
       {/* ✅ PAGE CONTENT */}
       <div className={styles.imageContainer}>
-        <img src="/business-visa/Canada_Business_Visa_ASSISTANCE.webp" alt="Canada Business Visa Assistance Image" className={styles.AustraliaImage} />
+        <img src="/business-visa/Canada_Business_Visa_ASSISTANCE.webp" alt="Canada Business Visa Assistance Image" className={styles.VisaImage} />
       </div>
       <div class={styles.VisaSec}>
         <div class={styles.VisaData}>

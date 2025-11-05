@@ -77,6 +77,7 @@ export default function NewZealand() {
               "telephone": "+91-7022213466",
               "contactType": "Customer Support"
             },
+            "hasMap": "https://www.mappls.com/digipin/4P3-J4J-8849",
             "sameAs": [
               "https://www.facebook.com/globalvisainternationals/",
               "https://www.instagram.com/globalvisa_internationals/",
@@ -99,7 +100,7 @@ export default function NewZealand() {
             "itemListElement": [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://www.globalvisainternationals.com" },
               { "@type": "ListItem", position: 2, name: "Business Visa", item: "https://www.globalvisainternationals.com/Visa/business/new-zealand" },
-              // { "@type": "ListItem", position: 3, name: "New Zealand Business Visa" }
+              { "@type": "ListItem", position: 3, name: "New Zealand Business Visa" }
             ]
           })
         }}

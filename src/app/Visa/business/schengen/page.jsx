@@ -80,6 +80,7 @@ export default function schengen_Tourist_Visa_assistence() {
               "telephone": "+91-7022213466",
               "contactType": "Customer Support",
             },
+            "hasMap": "https://www.mappls.com/digipin/4P3-J4J-8849",
             "sameAs": [
               "https://www.facebook.com/globalvisainternationals/",
               "https://www.instagram.com/globalvisa_internationals/",
