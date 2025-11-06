@@ -216,6 +216,7 @@ function StructuredData() {
 export default function ForgetUKAndCanadaPR2026() {
     return (
         <>
+            <StructuredData />
 
             <article>
 

@@ -446,7 +446,6 @@ export default function Australia() {
         </div>
 
       </div>
-      <section id='Client Reviews'>  <div className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>  </section>
       <section>
 
         <ReviewSchema />
