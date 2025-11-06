@@ -573,10 +573,10 @@ export default function schengen_Tourist_Visa_assistence() {
           <div className={styles.section}>
             <h2 className={styles.subTitle}> Why Choose Global Visa Internationals (GVI)?</h2>
             <ul>
-              <li><b>1,000+ Schengen Business Visas</b> processed successfully</li>
-              <li><b>End-to-end file management</b> with embassy compliance checks</li>
-              <li><b>Dedicated business visa experts</b> with European documentation experience</li>
-              <li><b>98% success rate</b> for properly filed Schengen business applications</li>
+              <li><b className={styles.strong}>1,000+ Schengen Business Visas</b> processed successfully</li>
+              <li><b className={styles.strong}>End-to-end file management</b> with embassy compliance checks</li>
+              <li><b className={styles.strong}>Dedicated business visa experts</b> with European documentation experience</li>
+              <li><b className={styles.strong}>98% success rate</b> for properly filed Schengen business applications</li>
             </ul>
             <p>
               Whether you’re traveling for a trade show, client meeting, or investment visit — GVI ensures a seamless business
