@@ -46,11 +46,11 @@ const Services = () => {
                         <div className={styles.cardBack}>
                             <h3>Business Visa</h3>
                             <ul>
-                                <li><a href="/Visa/business/canada">CANADA</a></li>
-                                <li><a href="/Visa/business/australia">AUSTRALIA</a></li>
-                                <li><a href="/Visa/business/uk">UK</a></li>
-                                <li><a href="/Visa/business/europe">EUROPE</a></li>
-                                <li><a href="/Visa/business/new-zealand">NEW-ZEALAND</a></li>
+                                <li><a href="/Visa/business-visa/canada">CANADA</a></li>
+                                <li><a href="/Visa/business-visa/australia">AUSTRALIA</a></li>
+                                <li><a href="/Visa/business-visa/uk">UK</a></li>
+                                <li><a href="/Visa/business-visa/europe">EUROPE</a></li>
+                                <li><a href="/Visa/business-visa/new-zealand">NEW-ZEALAND</a></li>
                             </ul>
                         </div>
                     </div>
