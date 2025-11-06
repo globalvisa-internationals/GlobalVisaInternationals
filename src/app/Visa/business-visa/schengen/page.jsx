@@ -16,13 +16,13 @@ export const metadata = {
   authors: [{ name: "Global Visa Internationals" }],
   themeColor: "#0a66c2",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/visa/business/schengen",
+    canonical: "https://www.globalvisainternationals.com/Visa/business-visa/schengen",
   },
   openGraph: {
     title: "Apply for Schengen Business Visa | Global Visa Internationals",
     description:
       "Get complete assistance in applying for a Schengen Business Visa from India. Learn about visa types, eligibility, and process with Global Visa Internationals.",
-    url: "https://www.globalvisainternationals.com/visa/business/schengen",
+    url: "https://www.globalvisainternationals.com/Visa/business-visa/schengen",
     type: "website",
     locale: "en_IN",
     alternateLocale: "en_US",
@@ -111,7 +111,7 @@ export default function schengen_Tourist_Visa_assistence() {
                 "@type": "ListItem",
                 position: 2,
                 name: "Business Visa",
-                item: "https://www.globalvisainternationals.com/visa/business/schengen",
+                item: "https://www.globalvisainternationals.com/Visa/business-visa/schengen",
               },
               {
                 "@type": "ListItem",
@@ -189,7 +189,7 @@ export default function schengen_Tourist_Visa_assistence() {
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.globalvisainternationals.com/visa/business/schengen"
+              "@id": "https://www.globalvisainternationals.com/Visa/business-visa/schengen"
             },
             "datePublished": "2025-01-05",
             "dateModified": "2025-11-05"
@@ -303,7 +303,7 @@ export default function schengen_Tourist_Visa_assistence() {
             "name": "Global Visa Internationals",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://www.globalvisainternationals.com/visa/business/schengen",
+              "target": "https://www.globalvisainternationals.com/Visa/business-visa/schengen",
               "query-input": "required name=search_term_string"
             }
           })
@@ -319,7 +319,7 @@ export default function schengen_Tourist_Visa_assistence() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Schengen Business Visa Assistance from India",
-            "url": "https://www.globalvisainternationals.com/visa/business/schengen",
+            "url": "https://www.globalvisainternationals.com/Visa/business-visa/schengen",
             "description": "Apply for a Schengen Business Visa with expert help from Global Visa Internationals. Learn about visa requirements, eligibility, documentation, and the application process.",
             "publisher": {
               "@type": "Organization",
@@ -357,240 +357,151 @@ export default function schengen_Tourist_Visa_assistence() {
       <div className={styles.VisaSec}>
         <div className={styles.VisaData}>
           <h1 className={styles.Title}>
-            Schengen Business Visa | Global Visa Internationals
+            UK Business Visa / London Business Visa / Paris Business Visa | Global Visa Internationals
           </h1>
 
-          <h2 className={styles.subTitle}> Attend Meetings & Business Events Across Europe with a Single Visa</h2>
+          <h2 className={styles.subTitle}>
+            Expand Your Global Footprint: Attend Meetings, Trade Fairs & Business Events in London & Paris with One Expert-Assisted Business Visa
+          </h2>
           <p>
-            Planning to visit Europe for business meetings, trade fairs, or client visits? A{" "}
-            <b className={styles.strong}>Schengen Business Visa</b> allows Indian professionals and entrepreneurs to attend
-            official business activities across 29 European countries with one visa. At{" "}
-            <b className={styles.strong}>Global Visa Internationals (GVI)</b>, we provide expert assistance to make your
-            business travel smooth, compliant, and successful.
+            Planning to visit the UK or France for business meetings, corporate networking, trade exhibitions or client visits? A <b className={styles.strong}>UK Business Visa</b> (for London) or a <b className={styles.strong}>Paris Business Visa</b> allows Indian professionals and entrepreneurs to enter prestigious business hubs—London and Paris—with confidence. At <b className={styles.strong}>Global Visa Internationals (GVI)</b>, we provide expert assistance for your business travel to London and Paris—ensuring smooth, compliant and high-success applications for Indian nationals.
           </p>
 
-          <h2 className={styles.subTitle}>What is a Schengen Business Visa?</h2>
+          <h2 className={styles.subTitle}>What is a UK Business Visa / Paris Business Visa?</h2>
           <p>
-            The <b className={styles.strong}>Schengen Business Visa</b> permits Indian citizens to travel to the{" "}
-            <b className={styles.strong}>Schengen Zone</b> for official business purposes — such as attending conferences,
-            client meetings, training sessions, or signing contracts. It’s valid for short stays of up to 90 days within a
-            180-day period.
+            The <b className={styles.strong}>UK Business Visa</b> permits Indian citizens to travel to the United Kingdom (London) for official business purposes such as attending conferences, client meetings, trade shows, signing contracts, or setting up a branch office. :contentReference[oaicite:0]{index = 0}
+            <br />
+            The <b className={styles.strong}>Paris Business Visa</b> (via France / Schengen) enables Indian professionals to attend business-events, meetings or trade fairs in Paris (and the wider Schengen region) with full compliance. :contentReference[oaicite:1]{index = 1}
           </p>
-          <div className={styles.schengenCard}>
-            <div className={styles.cardHeader}>
-              <h2 className={styles.cardTitle}>29 Schengen Countries</h2>
-              <p className={styles.cardSubtitle}>Visit Europe with a single Business visa from India.</p>
-            </div>
 
-            <div className={styles.countryList}>
-              <h3 className={styles.subTitle}>All Member States</h3>
-              <ul className={styles.countryGrid}>
-                <li>Austria</li>
-                <li>Belgium</li>
-                <li>Bulgaria</li>
-                <li>Croatia</li>
-                <li>Czech Republic</li>
-                <li>Denmark</li>
-                <li>Estonia</li>
-                <li>Finland</li>
-                <li>France</li>
-                <li>Germany</li>
-                <li>Greece</li>
-                <li>Hungary</li>
-                <li>Iceland</li>
-                <li>Italy</li>
-                <li>Latvia</li>
-                <li>Liechtenstein</li>
-                <li>Lithuania</li>
-                <li>Luxembourg</li>
-                <li>Malta</li>
-                <li>Netherlands</li>
-                <li>Norway</li>
-                <li>Poland</li>
-                <li>Portugal</li>
-                <li>Romania</li>
-                <li>Slovakia</li>
-                <li>Slovenia</li>
-                <li>Spain</li>
-                <li>Sweden</li>
-                <li>Switzerland</li>
-              </ul>
-            </div>
-
-            <div className={styles.highlightSection}>
-              <h3 className={styles.subTitle}>Newest Members & Key Additions</h3>
-              <div className={styles.highlightGrid}>
-                <div className={styles.highlightItem}>
-                  <span className={styles.countryName}>Bulgaria</span>
-                  <p className={styles.countryInfo}>Joined in 2024 (air & sea border)</p>
-                </div>
-                <div className={styles.highlightItem}>
-                  <span className={styles.countryName}>Croatia</span>
-                  <p className={styles.countryInfo}>Joined in 2023</p>
-                </div>
-                <div className={styles.highlightItem}>
-                  <span className={styles.countryName}>Romania</span>
-                  <p className={styles.countryInfo}>Joined in 2024 (air & sea border)</p>
-                </div>
-                <div className={styles.highlightItem}>
-                  <span className={styles.countryName}>Liechtenstein</span>
-                  <p className={styles.countryInfo}>Joined in 2011</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h2 className={styles.subTitle}>Visa Validity & Duration Rule</h2>
+          <h2 className={styles.subTitle}>High-Value Keywords You Should Know</h2>
           <p>
-            The duration granted depends on your travel purpose, documentation, and history. Initially, you may get a
-            single-entry visa, but regular, compliant travelers can progress to{" "}
-            <b className={styles.strong}>2-year and 5-year multiple-entry business visas</b> under the Schengen “Cascade”
-            system. Overstaying beyond your visa validity can lead to fines or bans — GVI ensures full compliance with{" "}
-            <b className={styles.strong}>Schengen visa rules</b>.
+            UK business visa India, London business visa Indian citizen, Paris business visa from India, France business visa India documentation, UK business visitor visa London meetings, business visa for India to UK trade fair, European business travel India, London corporate travel visa India, Paris trade show visa Indian company, UK visitor business visa London up to 6 months, France business travel visa Paris multiple entry, London business conferences visa India, UK business visa documents India bank statements, Paris business visa requirements India invitation letter, UK business visa fee India, France business visa processing India, UK business visitor visa India eligibility, Paris business visa India processing time, London business meetings visa India application, UK business visa India short stay, France business visa India multiple entry, London branch setup visa India business expansion, European business visa India London Paris, UK business visa India sponsor letter, France business visa India cost, London investor business visa India, UK business visa India travel insurance, Paris business visa India trade fair attendance, Europe business travel India London Paris.
           </p>
 
           <div className={styles.section}>
-            <h2 className={styles.subTitle}> Schengen Visa 'Cascade' System for Business Travelers</h2>
+            <h2 className={styles.subTitle}>Why Choose GVI for Your UK & Paris Business Visa?</h2>
             <p>
-              The European Union’s <b className={styles.strong}>cascade system</b> rewards lawful, frequent business travelers
-              with longer validity visas. For Indian nationals:
+              At Global Visa Internationals (GVI), we specialise in guiding Indian entrepreneurs, company directors and seasoned professionals through the complex visa terrain for London and Paris business travel.
+              Whether you’re applying for a short-stay UK Business Visa (London meetings) or a Paris Business Visa (France / Schengen trade fair), our expert team helps you avoid common pitfalls and improves your visa success rate.
             </p>
-            <ul>
-              <li>
-                <b className={styles.strong}>Initial Visa:</b> Short-term single or multiple-entry visa for up to 90 days.
-              </li>
-              <li>
-                <b className={styles.strong}>2-Year Visa:</b> After lawfully using at least two Schengen visas in the past
-                three years.
-              </li>
-              <li>
-                <b className={styles.strong}>5-Year Visa:</b> After holding and lawfully using a two-year visa.
-              </li>
-            </ul>
-            <p>
-              GVI helps you maintain compliance and prepares documentation for progressive, long-term Schengen business visas.
-            </p>
+            <a href="/contact-us" className={styles.ctaButton}>
+              Get Your Free Business Visa Consultation Now!
+            </a>
           </div>
 
+          <h2 className={styles.subTitle}>Business Visa Validity & Duration Rules (UK & Paris)</h2>
+          <p>
+            For the <b className={styles.strong}>UK Business Visa (London)</b>: Typically you can stay up to **6 months** for business activities like meetings, conferences and trade fairs. :contentReference[oaicite:2]{index = 2}
+            For the <b className={styles.strong}>Paris Business Visa</b>: As part of the Schengen / France business travel route, stay durations vary depending on purpose—short-stay business visits up to 90 days often apply. :contentReference[oaicite:3]{index = 3}
+            Regular, compliant business travellers may secure multiple-entry visas for frequent trips to London or Paris.
+          </p>
+
           <div className={styles.section}>
-            <h2 className={styles.subTitle}> Schengen Business Visa Application Assistance</h2>
+            <h2 className={styles.subTitle}>Business Visa Application Assistance (UK & Paris)</h2>
             <p>
-              Global Visa Internationals (GVI) handles your entire{" "}
-              <b className={styles.strong}>business visa application process</b> — from documentation to embassy appointment
-              — ensuring a professional, compliant, and successful submission.
+              At GVI we handle end-to-end assistance for your UK Business Visa and Paris Business Visa application—from documentation to embassy submission—giving Indian business travellers a stress-free experience.
             </p>
             <h3 className={styles.subTitle}>Our Services Include:</h3>
             <ul>
-              <li>Filling the Schengen business visa application form</li>
-              <li>Drafting of professional covering letter & business purpose letter</li>
-              <li>Personalized checklist & document verification</li>
-              <li>Assistance with invitation letter from the host company in Europe</li>
-              <li>Flight, hotel & travel insurance arrangement</li>
-              <li>Appointment scheduling with VFS Global</li>
+              <li>Filling the UK or Paris business visa application form</li>
+              <li>Drafting of professional invitation/covering letters for London & Paris purposes</li>
+              <li>Personalised checklist & document verification tailored to “UK business visa India” or “Paris business visa India” criteria</li>
+              <li>Assistance with invitation letter from the UK host company (London) or French company (Paris)</li>
+              <li>Flight, hotel & travel insurance arrangement for business travel to London or Paris</li>
+              <li>Appointment scheduling with visa application centres (VFS / UKVCAS / France Visas) in India</li>
             </ul>
           </div>
 
           <div className={styles.section}>
-            <h2 className={styles.subTitle}> Schengen Business Visa Document Checklist (India 2025)</h2>
+            <h2 className={styles.subTitle}>Business Visa Document Checklist – India (2025 Edition)</h2>
             <p>
-              To apply for a Schengen business visa, you’ll need to submit the following verified documents. GVI ensures every
-              file is embassy-compliant.
+              To apply for a UK Business Visa (London) or Paris Business Visa (France) from India, you must submit comprehensive, verified documents. GVI ensures every file is embassy-compliant.
             </p>
 
             <h3 className={styles.subTitle}>1. Passport & Travel History</h3>
             <ul>
-              <li>Valid passport (minimum 6 months validity beyond return date, 2 blank pages)</li>
-              <li>Previous Schengen or international travel history</li>
+              <li>Valid passport (minimum 6 months validity beyond return date, with 2-3 blank pages) :contentReference[oaicite:4]{index = 4}</li>
+              <li>Previous international travel history (especially UK/Europe) where applicable</li>
             </ul>
 
             <h3 className={styles.subTitle}>2. Business Invitation & Purpose Documents</h3>
             <ul>
-              <li>
-                Invitation letter from the host company in Europe specifying business relationship and meeting purpose
-              </li>
+              <li>Invitation letter from the UK host company (London) or French partner (Paris) specifying business relationship and meeting/trade fair purpose</li>
               <li>Cover letter from your Indian company stating travel reason, duration & expense responsibility</li>
-              <li>Company registration certificate, GST & business profile</li>
+              <li>Company registration certificate, GST registration & business profile of your Indian company</li>
             </ul>
 
             <h3 className={styles.subTitle}>3. Financial & Employment Proof</h3>
             <ul>
-              <li>6 months of business/current account bank statements</li>
-              <li>Income Tax Returns (ITR) for 3 years</li>
-              <li>Salary slips or business income proof</li>
+              <li>6 months of current account / business account bank statements</li>
+              <li>Income Tax Returns (ITR) for the last 3 years</li>
+              <li>Salary slips or business income proof if you are self-employed or a director</li>
             </ul>
 
-            <h3 className={styles.subTitle}>4. Travel Arrangements</h3>
+            <h3 className={styles.subTitle}>4. Travel Arrangements & Support Documents</h3>
             <ul>
-              <li>Flight reservation (round-trip)</li>
-              <li>Hotel/accommodation confirmation</li>
-              <li>
-                Schengen business travel insurance covering €30,000 (GVI arranges insurance meeting embassy standards)
-              </li>
+              <li>Flight reservation (round-trip) for your London or Paris business stay</li>
+              <li>Hotel or accommodation confirmation in London or Paris</li>
+              <li>Travel insurance covering business travel to the UK or France (we help arrange it to meet embassy standards)</li>
             </ul>
           </div>
 
           <div className={styles.section}>
-            <h2 className={styles.subTitle}> Schengen Business Visa Fees (India 2025)</h2>
+            <h2 className={styles.subTitle}>Business Visa Fees & Processing Time (India)</h2>
             <ul>
-              <li><b className={styles.strong}>Embassy Visa Fee:</b> €90 (~₹9,300)</li>
-              <li><b className={styles.strong}>Children (6–12 years):</b> €45</li>
-              <li><b className={styles.strong}>VFS Service Fee:</b> ₹1,000–₹2,000 approx.</li>
-              <li><b className={styles.strong}>GVI Service Fee:</b> ₹6,999 onwards (end-to-end application assistance)</li>
+              <li><b className={styles.strong}>UK Business Visitor Visa Fee:</b> Approx. £115 (~₹12,000) for up to 6 months. :contentReference[oaicite:5]{index = 5}</li>
+              <li><b className={styles.strong}>Paris Business Visa Fee (France / Schengen):</b> For business short-stay, adult fee approx. €90 (~₹9,300) plus service charges. :contentReference[oaicite:6]{index = 6}</li>
+              <li><b className={styles.strong}>Processing Time:</b> UK: ~15-21 working days from India (may vary). :contentReference[oaicite:7]{index = 7} France/Schengen (Paris Business Visa): ~5-15 working days for short-stay business applications. :contentReference[oaicite:8]{index = 8}</li>
             </ul>
           </div>
 
           <div className={styles.section}>
-            <h2 className={styles.subTitle}> Schengen Business Visa Processing Time (India)</h2>
-            <ul>
-              <li><b>Standard Embassy Processing:</b> 15–20 working days</li>
-              <li><b>Peak Season:</b> 30–45 working days</li>
-              <li><b>GVI File Preparation:</b> 3–5 working days after receiving all documents</li>
-            </ul>
-          </div>
-
-          <div className={styles.section}>
-            <h2 className={styles.subTitle}> Common Business Visa Rejection Reasons (and How GVI Helps)</h2>
+            <h2 className={styles.subTitle}>Common Business Visa Rejection Reasons (UK & Paris) – and How GVI Helps</h2>
             <ul>
               <li>Incomplete or mismatched documents → GVI performs embassy-level document validation</li>
-              <li>Unclear business purpose → Professionally drafted cover & invitation letters</li>
-              <li>Weak financial proof → Pre-verification of bank & business income records</li>
-              <li>Inconsistent travel plans → Verified itinerary prepared by GVI experts</li>
+              <li>Unclear business purpose or weak invitation letter → Professionally drafted cover & invitation letters for UK (London) and Paris (France)</li>
+              <li>Weak financial proof or insufficient funds → Pre-verification of bank & business income records</li>
+              <li>Inconsistent travel plans or accommodation details → Verified itinerary prepared by GVI experts for London/Paris trips</li>
             </ul>
           </div>
 
           <div className={styles.section}>
-            <h2 className={styles.subTitle}> VFS Global Schengen Business Visa Process (Step-by-Step)</h2>
+            <h2 className={styles.subTitle}>UK & Paris Business Visa Process (Step-by-Step for Indian Applicants)</h2>
             <ol>
-              <li>Online form filling & appointment booking by GVI</li>
-              <li>Document verification & submission at VFS Global center</li>
-              <li>Biometrics collection (fingerprints & photo)</li>
-              <li>Tracking & passport collection</li>
+              <li>Online application form submission (UKVI for UK; France-Visas / VFS for France) for UK Business Visa or Paris Business Visa</li>
+              <li>Document verification & submission at visa application centre in India (UKVCAS / VFS Global) for your London or Paris business visa trip</li>
+              <li>Biometrics collection (fingerprints & photo) during appointment</li>
+              <li>Tracking & passport collection once decision is made</li>
             </ol>
-            <a href="https://visa.vfsglobal.com/" target="_blank" rel="noopener noreferrer">
-              Visit VFS Global – India
+            <a href="https://www.gov.uk/standard-visitor/visit-on-business" target="_blank" rel="noopener noreferrer">
+              Visit UK Business Visitor Visa – UK Government
+            </a>
+            <br />
+            <a href="https://france-visas.gouv.fr/en/india" target="_blank" rel="noopener noreferrer">
+              Visit France Business Visa – France Visas (Indian Applicants)
             </a>
           </div>
 
           <div className={styles.section}>
-            <h2 className={styles.subTitle}> Why Choose Global Visa Internationals (GVI)?</h2>
+            <h2 className={styles.subTitle}>Why Choose Global Visa Internationals (GVI) for UK & Paris Business Visas?</h2>
             <ul>
-              <li><b>1,000+ Schengen Business Visas</b> processed successfully</li>
-              <li><b>End-to-end file management</b> with embassy compliance checks</li>
-              <li><b>Dedicated business visa experts</b> with European documentation experience</li>
-              <li><b>98% success rate</b> for properly filed Schengen business applications</li>
+              <li><b>1,000+ business visas processed</b> for Indian professionals traveling to London & Paris</li>
+              <li><b>End-to-end file management</b> with visa-centre compliance checks for UK & France</li>
+              <li><b>Dedicated business visa experts</b> with European documentation experience (UK & Paris routes)</li>
+              <li><b>98% success rate</b> for properly filed UK and Paris business visa applications</li>
             </ul>
             <p>
-              Whether you’re traveling for a trade show, client meeting, or investment visit — GVI ensures a seamless business
-              visa experience from start to finish.
+              Whether you’re traveling to London for a trade show, Paris for a business conference or corporate meeting—GVI ensures a seamless business visa experience from start to finish.
             </p>
           </div>
 
-          <h2 className={styles.subTitle}> Ready to Apply?</h2>
+          <h2 className={styles.subTitle}>Ready to Apply for Your UK Business Visa or Paris Business Visa?</h2>
           <p>
-            Start your <b className={styles.strong}>Schengen Business Visa application</b> today with Global Visa Internationals
-            and get professional guidance for faster approvals.
+            Start your <b className={styles.strong}>UK Business Visa application</b> or <b className={styles.strong}>Paris Business Visa application</b> today with Global Visa Internationals and get professional guidance for faster approvals.
             <br />
             <a href="/contact-us" className={styles.ctaButton}>
-              Get a Free Consultation Now!
+              Book Your Free Consultation & Visa Audit Now!
             </a>
           </p>
         </div>

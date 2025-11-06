@@ -272,7 +272,7 @@
         flex-direction: row;
         /* Row layout on desktop */
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         padding: 40px;
         max-width: 85%;
         margin: 0 auto;
@@ -316,6 +316,8 @@
     }
 
     .VisaSec {
+        justify-content: center;
+        align-items: center;
         max-width: 90%;
     }
 

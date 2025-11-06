@@ -15,13 +15,13 @@ export const metadata = {
   authors: [{ name: "Global Visa Internationals" }],
   themeColor: "#0a66c2",
   alternates: {
-    canonical: "https://www.globalvisainternationals.com/visa/business/new-zealand",
+    canonical: "https://www.globalvisainternationals.com/Visa/business-visa/new-zealand",
   },
   openGraph: {
     title: "Apply for New Zealand Business Visa | Global Visa Internationals",
     description:
       "Get complete assistance in applying for a New Zealand Business Visa from India. Learn about visa types, eligibility, and process with Global Visa Internationals.",
-    url: "https://www.globalvisainternationals.com/visa/business/new-zealand",
+    url: "https://www.globalvisainternationals.com/Visa/business-visa/new-zealand",
     type: "website",
     locale: "en_IN",
     alternateLocale: "en_US",
@@ -99,7 +99,7 @@ export default function NewZealand() {
             "@type": "BreadcrumbList",
             "itemListElement": [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://www.globalvisainternationals.com" },
-              { "@type": "ListItem", position: 2, name: "Business Visa", item: "https://www.globalvisainternationals.com/Visa/business/new-zealand" },
+              { "@type": "ListItem", position: 2, name: "Business Visa", item: "https://www.globalvisainternationals.com/Visa/business-visa/new-zealand" },
               { "@type": "ListItem", position: 3, name: "New Zealand Business Visa" }
             ]
           })
@@ -168,7 +168,7 @@ export default function NewZealand() {
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.globalvisainternationals.com/visa/business/new-zealand"
+              "@id": "https://www.globalvisainternationals.com/Visa/business-visa/new-zealand"
             },
             "datePublished": "2025-01-05",
             "dateModified": "2025-11-05"
@@ -275,7 +275,7 @@ export default function NewZealand() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "New Zealand Business Visa Assistance from India",
-            "url": "https://www.globalvisainternationals.com/visa/business/new-zealand",
+            "url": "https://www.globalvisainternationals.com/Visa/business-visa/new-zealand",
             "description": "Learn how to apply for a New Zealand Business Visa from India. Expert guidance for entrepreneurs, investors, and business professionals.",
             "publisher": {
               "@type": "Organization",

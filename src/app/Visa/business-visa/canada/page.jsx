@@ -25,13 +25,13 @@ export const metadata = {
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#0a66c2',
   alternates: {
-    canonical: '/Visa/business/canada',
+    canonical: 'https://www.globalvisainternationals.com/Visa/business-visa/canada',
   },
   openGraph: {
     title: 'Apply for Canada Business Visa | Global Visa Internationals',
     description:
       'Get expert guidance to apply for a Canada Business Visa from India. Explore requirements, visa types like Start-Up and Investor visas, and application costs.',
-    url: 'https://www.globalvisainternationals.com/Visa/business/canada',
+    url: 'https://www.globalvisainternationals.com/Visa/business-visa/canada',
     type: 'website',
     siteName: 'Global Visa Internationals',
     locale: 'en_IN',
@@ -53,7 +53,7 @@ export const metadata = {
     images: [
       'https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp',
     ],
-    site: 'https://www.globalvisainternationals.com/Visa/business/canada',
+    site: 'https://www.globalvisainternationals.com/Visa/business-visa/canada',
   },
   icons: {
     icon: '/favicon.ico',
@@ -107,7 +107,7 @@ export default function Canada_Business_Visa_Assistance() {
                 "department": {
                   "@type": "Organization",
                   "name": "Canada Business Visa Assistance Department",
-                  "url": "https://www.globalvisainternationals.com/visa/business/canada",
+                  "url": "https://www.globalvisainternationals.com/Visa/business-visa/canada",
                   "description": "Dedicated support team for Canada Business Visa applications, providing document verification, application filing, and personalized consultation."
                 }
               },
@@ -118,7 +118,7 @@ export default function Canada_Business_Visa_Assistance() {
                 "@type": "LocalBusiness",
                 "name": "Global Visa Internationals",
                 "image": "https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp",
-                "url": "https://www.globalvisainternationals.com/visa/business/canada",
+                "url": "https://www.globalvisainternationals.com/Visa/business-visa/canada",
                 "telephone": "+91-7022213466",
                 "priceRange": "₹₹₹",
                 "address": {
@@ -170,7 +170,7 @@ export default function Canada_Business_Visa_Assistance() {
                 "@context": "https://schema.org",
                 "@type": "WebPage",
                 "name": "Canada Business Visa Assistance from India",
-                "url": "https://www.globalvisainternationals.com/Visa/business/canada",
+                "url": "https://www.globalvisainternationals.com/Visa/business-visa/canada",
                 "description":
                   "Apply for a Canada Business Visa with expert help from Global Visa Internationals. Learn about visa requirements, eligibility, documentation, and the application process.",
                 "inLanguage": "en-IN",
@@ -201,7 +201,7 @@ export default function Canada_Business_Visa_Assistance() {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Business Visa",
-                    "item": "https://www.globalvisainternationals.com/Visa/business/canada"
+                    "item": "https://www.globalvisainternationals.com/Visa/business-visa/canada"
                   },
                   {
                     "@type": "ListItem",

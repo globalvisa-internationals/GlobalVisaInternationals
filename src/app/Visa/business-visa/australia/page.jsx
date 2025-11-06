@@ -25,13 +25,13 @@ export const metadata = {
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#0a66c2',
   alternates: {
-    canonical: '/Visa/business/australia',
+    canonical: 'https://www.globalvisainternationals.com/Visa/business-visa/australia',
   },
   openGraph: {
     title: 'Apply for Australia Business Visa | Global Visa Internationals',
     description:
       'Get complete assistance in applying for an Australia Business Visa from India. Learn about visa types, requirements, eligibility, and costs with Global Visa Internationals.',
-    url: 'https://www.globalvisainternationals.com/Visa/business/australia',
+    url: 'https://www.globalvisainternationals.com/Visa/business-visa/australia',
     siteName: 'Global Visa Internationals',
     type: 'website',
     locale: 'en_IN',
@@ -53,7 +53,7 @@ export const metadata = {
     images: [
       'https://www.globalvisainternationals.com/business-visa/Australian_Business_Visa_Assistance.webp',
     ],
-    site: 'https://www.globalvisainternationals.com/Visa/business/australia',
+    site: 'https://www.globalvisainternationals.com/Visa/business-visa/australia',
   },
   icons: {
     icon: '/favicon.ico',
@@ -177,7 +177,7 @@ export default function Australia() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Australia Business Visa Assistance | Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com/Visa/business/australia",
+            "url": "https://www.globalvisainternationals.com/Visa/business-visa/australia",
             "description":
               "Apply for an Australia Business Visa with expert assistance from Global Visa Internationals. Get guidance on Subclass 188, 132, and 888 visa categories.",
             "inLanguage": "en-IN",
@@ -298,7 +298,7 @@ export default function Australia() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Business Visa",
-                "item": "https://www.globalvisainternationals.com/Visa/business/australia"
+                "item": "https://www.globalvisainternationals.com/Visa/business-visa/australia"
               },
               {
                 "@type": "ListItem",
