@@ -343,7 +343,7 @@ export default function UK_Business_Visa() {
             UK Business Visa | Expand, Invest & Grow Your Business in the United Kingdom
           </h1>
 
-          <h4 className={styles.subTitle}>
+          <h4 className={styles.strong}>
             Expand Your Global Footprint: Attend Meetings, Trade Fairs & Business Events in London & Paris with One Expert-Assisted European Business Visa
           </h4>
           <p>
@@ -464,10 +464,10 @@ export default function UK_Business_Visa() {
           <div className={styles.section}>
             <h2 className={styles.subTitle}>Why Choose Global Visa Internationals (GVI) for UK & Paris Business Visas?</h2>
             <ul>
-              <li><b>1,000+ business visas processed for Indian professionals traveling to London & Paris</b> covering all European business travel India needs.</li>
-              <li><b>End-to-end file management with visa-centre compliance checks for UK & France</b>, ensuring UK business visitor visa India eligibility is met.</li>
-              <li><b>Dedicated business visa experts with European documentation experience</b> (UK & Paris routes)</li>
-              <li><b>98% success rate for properly filed UK and Paris business visa applications</b>.</li>
+              <li><b className={styles.strong}>1,000+ business visas processed for Indian professionals traveling to London & Paris</b> covering all European business travel India needs.</li>
+              <li><b className={styles.strong}>End-to-end file management with visa-centre compliance checks for UK & France</b>, ensuring UK business visitor visa India eligibility is met.</li>
+              <li><b className={styles.strong}>Dedicated business visa experts with European documentation experience</b> (UK & Paris routes)</li>
+              <li><b className={styles.strong}>98% success rate for properly filed UK and Paris business visa applications</b>.</li>
             </ul>
             <p>
               Whether you’re traveling to London for a trade show, Paris for a business conference or corporate meeting—GVI ensures a seamless business visa experience from start to finish for your Europe business travel India London Paris itinerary.
