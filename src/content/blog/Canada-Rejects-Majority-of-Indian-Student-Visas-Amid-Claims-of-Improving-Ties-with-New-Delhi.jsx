@@ -83,7 +83,7 @@ function StructuredData() {
             "@type": "Article",
             headline: metadata.title,
             description: metadata.description,
-            image: `${baseUrl}${metadata.image}`,
+            image: `https://www.globalvisainternationals.com${metadata.image}`,
             author: {
                 "@type": "Organization",
                 name: "Global Visa Internationals",
@@ -101,12 +101,12 @@ function StructuredData() {
                 name: "Global Visa Internationals",
                 logo: {
                     "@type": "ImageObject",
-                    url: `${baseUrl}/gvilogo.png`,
+                    url: `https://www.globalvisainternationals.com/gvilogo.png`,
                 },
             },
             datePublished: "2025-11-06",
             dateModified: new Date().toISOString(),
-            mainEntityOfPage: `${baseUrl}/blog/Canada-Rejects-Majority-of-Indian-Student-Visas-Amid-Claims-of-Improving-Ties-with-New-Delhi`,
+            mainEntityOfPage: `https://www.globalvisainternationals.com/blog/Canada-Rejects-Majority-of-Indian-Student-Visas-Amid-Claims-of-Improving-Ties-with-New-Delhi`,
         },
 
         // 🔹 Local Business Schema
@@ -114,7 +114,7 @@ function StructuredData() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Global Visa Internationals",
-            image: `${baseUrl}/gvilogo.png`,
+            image: `https://www.globalvisainternationals.com/gvilogo.png`,
             url: baseUrl,
             telephone: "+91-7022-213-466",
             email: "operations@globalvisainternationals.com",
@@ -147,7 +147,7 @@ function StructuredData() {
             "@type": "Organization",
             name: "Global Visa Internationals",
             url: baseUrl,
-            logo: `${baseUrl}/gvilogo.png`,
+            logo: `https://www.globalvisainternationals.com/gvilogo.png`,
             sameAs: [
                 "https://www.facebook.com/globalvisainternationals/",
                 "https://www.instagram.com/globalvisa_internationals/",
@@ -172,7 +172,7 @@ function StructuredData() {
             url: baseUrl,
             potentialAction: {
                 "@type": "SearchAction",
-                target: `${baseUrl}/search?q={search_term_string}`,
+                target: `https://www.globalvisainternationals.com/search?q={search_term_string}`,
                 "query-input": "required name=search_term_string",
             },
         },
@@ -181,7 +181,7 @@ function StructuredData() {
         {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            url: `${baseUrl}/blog/Canada-Rejects-Majority-of-Indian-Student-Visas-Amid-Claims-of-Improving-Ties-with-New-Delhi`,
+            url: `https://www.globalvisainternationals.com/blog/Canada-Rejects-Majority-of-Indian-Student-Visas-Amid-Claims-of-Improving-Ties-with-New-Delhi`,
             name: metadata.title,
             description: metadata.description,
             isPartOf: {
@@ -209,17 +209,17 @@ function StructuredData() {
             offers: [
                 {
                     "@type": "Offer",
-                    url: `${baseUrl}/Visa/student-visa/canada`,
+                    url: `https://www.globalvisainternationals.com/Visa/student-visa/canada`,
                     name: "Canada Student Visa Assistance",
                 },
                 {
                     "@type": "Offer",
-                    url: `${baseUrl}/Visa/refusal-visa/canada`,
+                    url: `https://www.globalvisainternationals.com/Visa/refusal-visa/canada`,
                     name: "Canada Visa Refusal Assistance",
                 },
                 {
                     "@type": "Offer",
-                    url: `${baseUrl}/Visa/permanent-residency-visa/canada-pr-visa`,
+                    url: `https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada-pr-visa`,
                     name: "Canada PR Visa Guidance",
                 },
             ],
@@ -272,13 +272,13 @@ function StructuredData() {
                     "@type": "ListItem",
                     position: 2,
                     name: "Blog",
-                    item: `${baseUrl}/blog`,
+                    item: `https://www.globalvisainternationals.com/blog`,
                 },
                 {
                     "@type": "ListItem",
                     position: 3,
                     name: metadata.title,
-                    item: `${baseUrl}/blog/Canada-Rejects-Majority-of-Indian-Student-Visas-Amid-Claims-of-Improving-Ties-with-New-Delhi`,
+                    item: `https://www.globalvisainternationals.com/blog/Canada-Rejects-Majority-of-Indian-Student-Visas-Amid-Claims-of-Improving-Ties-with-New-Delhi`,
                 },
             ],
         },
