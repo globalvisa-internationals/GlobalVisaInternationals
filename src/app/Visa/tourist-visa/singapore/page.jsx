@@ -415,8 +415,8 @@ export default function Dubai() {
             <strong>Global Visa Internationals</strong> <br />
             G-F9, Business Point, 137 Brigade Road, <br />
             Next to Brigade Tower, Bangalore – 560025, Karnataka <br />
-            📞 +91-7022213466 <br />
-            📧 <a href="mailto:operation@globalvisainternationals.com">
+            +91-7022213466 <br />
+            <a href="mailto:operation@globalvisainternationals.com">
               operation@globalvisainternationals.com
             </a>
           </address>

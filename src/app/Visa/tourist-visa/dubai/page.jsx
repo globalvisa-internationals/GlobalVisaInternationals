@@ -34,7 +34,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@globalvisainternationals",
-    title: "Dubai Tourist Visa Experts – Fast Processing from Bangalore",
+    title: "Dubai Tourist Visa Experts - Fast Processing from Bangalore",
     description:
       "Need a Dubai Tourist Visa? Get complete assistance with fast processing and expert support. Trusted consultants in Bangalore since 2012.",
     images: [
@@ -160,31 +160,31 @@ export default function DubaiVisaPage() {
 
 
           <p >Planning your dream trip to the UAE? <strong className={styles.strong}>Dubai tourist visa India</strong> is now easier to obtain with expert assistance from <strong className={styles.strong}>Global Visa International</strong>. Whether you are looking for a <strong className={styles.strong}>30 day Dubai visa from India</strong>, <strong className={styles.strong}>60 day Dubai visa India</strong>, or <strong className={styles.strong}>90 day Dubai tourist visa Indians</strong>, our team ensures a smooth process from documentation to approval. For those who wish to explore the region multiple times, the <strong className={styles.strong}>Dubai multiple entry tourist visa India</strong> offers flexible travel options. We also guide you on eligibility for <strong className={styles.strong}>Dubai visa on arrival Indian citizens</strong> and updates on <strong className={styles.strong}>UAE visa on arrival India</strong> policies.</p>
-          <p >✅ <strong className={styles.strong}>Get started today</strong> with a free consultation from Global Visa International – your trusted partner for Dubai visa assistance!</p>
+          <p > <strong className={styles.strong}>Get started today</strong> with a free consultation from Global Visa International - your trusted partner for Dubai visa assistance!</p>
 
           <h2 className={styles.subTitle}>Dubai Transit Visa India</h2>
           <p >For short layovers or stopovers, a <strong className={styles.strong}>Dubai transit visa India</strong> might be what you need. Whether you're flying with Emirates or another airline, we assist you in booking the right visa and meeting all travel requirements. Wondering about the <strong className={styles.strong}>Dubai tourist visa cost India</strong> or the <strong className={styles.strong}>30 day Dubai visa fee in rupees</strong>? We offer transparent pricing with no hidden charges, guiding you through options including <strong className={styles.strong}>cheap Dubai visa India</strong>, <strong className={styles.strong}>Dubai visa price extra charges</strong>, and <strong className={styles.strong}>Dubai visa agent charges India</strong> — so you know exactly what you're paying for.</p>
-          <p >✈️ <strong className={styles.strong}>Ready to travel?</strong> Contact Global Visa International now and let us simplify your Dubai visa journey.</p>
+          <p > <strong className={styles.strong}>Ready to travel?</strong> Contact Global Visa International now and let us simplify your Dubai visa journey.</p>
 
           <h2 className={styles.subTitle}>Apply Dubai Visa Online from India</h2>
           <p >Want a quick and reliable visa application experience? You can now <strong className={styles.strong}>apply Dubai visa online from India</strong> without stress. Whether you’re going through <strong className={styles.strong}>Dubai visa through MakeMyTrip</strong>, <strong className={styles.strong}>Emirates visa service Indian passport</strong>, or other platforms like <strong className={styles.strong}>Akbar Travels Dubai visa process</strong>, we help you compare and choose the best route. You can also <strong className={styles.strong}>apply Dubai visa via airline</strong> depending on your travel booking. If you're unsure about hotel reservations, we provide assistance with <strong className={styles.strong}>Dubai visa booking hotel QR code</strong> and share insights from <strong className={styles.strong}>Atlys Dubai visa India reviews</strong> to help you make informed decisions.</p>
-          <p >📱 <strong className={styles.strong}>Apply online today</strong> with Global Visa International and get expert guidance every step of the way!</p>
+          <p > <strong className={styles.strong}>Apply online today</strong> with Global Visa International and get expert guidance every step of the way!</p>
 
           <h2 className={styles.subTitle}>Dubai Visa Documents for Indians</h2>
           <p >Having the correct documents is crucial. We help you prepare your <strong className={styles.strong}>Dubai visa documents for Indians</strong>, including <strong className={styles.strong}>Dubai visa hotel booking proof</strong>, <strong className={styles.strong}>return ticket requirement Dubai visa</strong>, and even the <strong className={styles.strong}>PAN card for Dubai visa</strong>. You’ll also need a <strong className={styles.strong}>bank statement for Dubai visa</strong> and ensure <strong className={styles.strong}>passport validity six months UAE visa</strong>. For many travelers, a <strong className={styles.strong}>travel insurance requirement Dubai visa</strong> is mandatory. With our help, you’ll meet all requirements with confidence.</p>
-          <p >📄 <strong className={styles.strong}>Avoid rejection and delays</strong> — Get a document checklist from our visa experts now.</p>
+          <p > <strong className={styles.strong}>Avoid rejection and delays</strong> — Get a document checklist from our visa experts now.</p>
 
           <h2 className={styles.subTitle}>Dubai Visa Processing Time India</h2>
-          <p >Processing your visa on time is essential. Our team explains <strong className={styles.strong}>Dubai visa processing time India</strong>, offers support for <strong className={styles.strong}>express Dubai visa 48 hours</strong>, and tracks progress on your <strong className={styles.strong}>Dubai tourist visa 3–5 days</strong> processing. Need your visa faster? Ask us about <strong className={styles.strong}>Dubai visa urgent processing India</strong>. Planning a longer stay? We’ll guide you on how to <strong className={styles.strong}>extend Dubai tourist visa from India</strong>, understand <strong className={styles.strong}>Dubai visa extension cost UAE</strong>, and the difference between <strong className={styles.strong}>visa validity vs stay duration Dubai</strong>.</p>
-          <p >🚀 <strong className={styles.strong}>In a rush?</strong> Fast-track your visa with Global Visa International’s priority service.</p>
+          <p >Processing your visa on time is essential. Our team explains <strong className={styles.strong}>Dubai visa processing time India</strong>, offers support for <strong className={styles.strong}>express Dubai visa 48 hours</strong>, and tracks progress on your <strong className={styles.strong}>Dubai tourist visa 3-5 days</strong> processing. Need your visa faster? Ask us about <strong className={styles.strong}>Dubai visa urgent processing India</strong>. Planning a longer stay? We’ll guide you on how to <strong className={styles.strong}>extend Dubai tourist visa from India</strong>, understand <strong className={styles.strong}>Dubai visa extension cost UAE</strong>, and the difference between <strong className={styles.strong}>visa validity vs stay duration Dubai</strong>.</p>
+          <p > <strong className={styles.strong}>In a rush?</strong> Fast-track your visa with Global Visa International’s priority service.</p>
 
           <h2 className={styles.subTitle}>Trusted Dubai Visa Agent India</h2>
           <p >When it comes to finding a <strong className={styles.strong}>trusted Dubai visa agent India</strong> or the <strong className={styles.strong}>best visa consultancy for Dubai India</strong>, thousands of Indian travelers trust us. We help you <strong className={styles.strong}>avoid Dubai visa scams India</strong> with transparent guidance. Want real feedback? Explore <strong className={styles.strong}>Indian forum Dubai visa recommendations</strong> and learn more about <strong className={styles.strong}>visa-on-arrival eligibility Indian passport UAE</strong> and <strong className={styles.strong}>UAE visa policy India 2025</strong> updates. Stay informed with the <strong className={styles.strong}>new Dubai visa rules India 2024</strong> and the truth about <strong className={styles.strong}>visa on arrival cancelled for Indians UAE</strong>.</p>
-          <p >🛡️ <strong className={styles.strong}>Don’t take risks.</strong> Choose Global Visa International – reliable, experienced, and trusted by Indian travelers.</p>
+          <p > <strong className={styles.strong}>Don’t take risks.</strong> Choose Global Visa International - reliable, experienced, and trusted by Indian travelers.</p>
 
           <h2 className={styles.subTitle}>Reddit Indian Dubai Visa Help</h2>
           <p >Looking for peer feedback? Many travelers share tips on <strong className={styles.strong}>Reddit Indian Dubai visa help</strong>, offering firsthand <strong className={styles.strong}>Indian travellers Dubai visa experience</strong>. Still unsure? We explain <strong className={styles.strong}>visa rejection reasons Dubai India</strong> and answer “<strong className={styles.strong}>how much bank balance for Dubai visa Indians</strong>” to boost your approval rate. Need help with paperwork? Get <strong className={styles.strong}>dummy hotel booking Dubai visa India</strong> assistance and complete your <strong className={styles.strong}>Dubai tourist visa INR</strong> submission stress-free.</p>
-          <p >🌐 <strong className={styles.strong}>Connect with experts</strong> who’ve helped thousands of Indians travel to Dubai successfully — only at Global Visa International.</p>
+          <p > <strong className={styles.strong}>Connect with experts</strong> who’ve helped thousands of Indians travel to Dubai successfully — only at Global Visa International.</p>
 
 
 
@@ -226,7 +226,7 @@ export default function DubaiVisaPage() {
 
           <p ><strong className={styles.strong}>Get in touch today with a trusted <span style={{ color: '#c00' }}>Dubai Tourist Visa consultant</span> and start your journey to the Emirates.</strong></p>
 
-          <h1 className={styles.Title}>Dubai Tourist Visa – Easy Application & Assistance from India</h1>
+          <h1 className={styles.Title}>Dubai Tourist Visa - Easy Application & Assistance from India</h1>
 
           <p >Planning your dream trip to the UAE? Whether you're drawn to Dubai’s luxurious malls, iconic landmarks like the Burj Khalifa, or vibrant desert adventures, securing your <strong className={styles.strong}>Dubai Tourist Visa</strong> is the first step. Our professional <strong className={styles.strong}>Dubai visa consultants</strong> are here to provide end-to-end <strong className={styles.strong}>Dubai Tourist Visa assistance</strong> to make the process simple and stress-free.</p>
 
@@ -253,25 +253,25 @@ export default function DubaiVisaPage() {
                 <td>14 Days Tourist Visa</td>
                 <td>14 Days</td>
                 <td>14 Days</td>
-                <td>2–4 working days</td>
+                <td>2-4 working days</td>
               </tr>
               <tr>
                 <td>30 Days Tourist Visa</td>
                 <td>58 Days Validity</td>
                 <td>30 Days Stay</td>
-                <td>2–4 working days</td>
+                <td>2-4 working days</td>
               </tr>
               <tr>
                 <td>60 Days Tourist Visa</td>
                 <td>60 Days</td>
                 <td>60 Days</td>
-                <td>2–4 working days</td>
+                <td>2-4 working days</td>
               </tr>
               <tr>
                 <td>96 Hours Transit Visa</td>
                 <td>4 Days</td>
                 <td>4 Days</td>
-                <td>1–2 working days</td>
+                <td>1-2 working days</td>
               </tr>
             </tbody>
           </table>
@@ -296,19 +296,19 @@ export default function DubaiVisaPage() {
             <tbody>
               <tr>
                 <td>14 Days Visa</td>
-                <td>₹5,500 – ₹6,000</td>
+                <td>₹5,500 - ₹6,000</td>
               </tr>
               <tr>
                 <td>30 Days Visa</td>
-                <td>₹6,500 – ₹7,500</td>
+                <td>₹6,500 - ₹7,500</td>
               </tr>
               <tr>
                 <td>60 Days Visa</td>
-                <td>₹13,000 – ₹14,000</td>
+                <td>₹13,000 - ₹14,000</td>
               </tr>
               <tr>
                 <td>96 Hours Transit Visa</td>
-                <td>₹2,500 – ₹3,000</td>
+                <td>₹2,500 - ₹3,000</td>
               </tr>
             </tbody>
           </table>
@@ -390,7 +390,7 @@ export default function DubaiVisaPage() {
             <li ><strong className={styles.strong}>Accuracy First:</strong> All your forms and documents are reviewed multiple times.</li>
             <li ><strong className={styles.strong}>End-to-End Support:</strong> From visa form filling to travel tips, we’re with you at every step.</li>
             <li ><strong className={styles.strong}>Proven Success:</strong> With over <strong className={styles.strong}>55,000+ visas processed</strong>, we have the expertise to get it done right.</li>
-            <li ><strong className={styles.strong}>Quick Turnaround:</strong> Get your Dubai visa within 2–5 working days (sometimes faster!).</li>
+            <li ><strong className={styles.strong}>Quick Turnaround:</strong> Get your Dubai visa within 2-5 working days (sometimes faster!).</li>
           </ul>
 
           <p >We’re not just visa agents — we’re your travel partners. With 11+ years of visa expertise and 75,000+ consultations delivered, we at Global Visa Internationals proudly serve as India’s leading <strong className={styles.strong}>Dubai Tourist Visa consultants</strong>.</p>

@@ -34,7 +34,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@globalvisainternationals",
-    title: "New Zealand Tourist Visa Experts – Global Visa Internationals",
+    title: "New Zealand Tourist Visa Experts - Global Visa Internationals",
     description:
       "Planning a trip to New Zealand? Get full visa support from trusted consultants in Bangalore.",
     images: [
@@ -253,12 +253,12 @@ export default function NewZealand() {
           </div>
 
           <section>
-            <h2 className={styles.subTitle}>🕒 New Zealand Visa Duration Rule</h2>
+            <h2 className={styles.subTitle}>New Zealand Visa Duration Rule</h2>
             <p>
               A New Zealand Visitor Visa typically allows you to stay for up to 9 months within an 18-month period. A <strong className={styles.strong}>New Zealand multiple entry visa for Indians</strong> may be issued with a validity of up to 5 years for eligible applicants. Note that even with a multiple-entry visa, you can only stay for the authorized period on each visit. Overstaying may lead to fines, entry bans, or refusal of future visa applications.
             </p>
             <p>
-              👉 With GVI, you'll never miscalculate your stay—we ensure full compliance with New Zealand immigration rules.
+              With GVI, you'll never miscalculate your stay—we ensure full compliance with New Zealand immigration rules.
             </p>
           </section>
 
@@ -284,7 +284,7 @@ export default function NewZealand() {
           <section>
             <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
             <p>
-              You must prove you have sufficient funds to support your trip without working. Immigration New Zealand needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹1.5–2.5 lakh (or approx. NZD$3,000-$5,000) in your bank account. This is a key part of the <strong className={styles.strong}>proof of funds for New Zealand visitor visa</strong>. Avoid any large, unexplained transactions in the months leading up to your application.
+              You must prove you have sufficient funds to support your trip without working. Immigration New Zealand needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹1.5-2.5 lakh (or approx. NZD$3,000-$5,000) in your bank account. This is a key part of the <strong className={styles.strong}>proof of funds for New Zealand visitor visa</strong>. Avoid any large, unexplained transactions in the months leading up to your application.
             </p>
             <ul>
               <li>
@@ -385,7 +385,7 @@ export default function NewZealand() {
                 <b className={styles.strong}>Peak Season:</b> Can extend to 30-35 working days during holiday seasons.
               </li>
               <li>
-                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to INZ in a timely manner. We help you track <strong className={styles.strong}>New Zealand visa application status</strong>.
+                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3-5 working days, ensuring it is submitted to INZ in a timely manner. We help you track <strong className={styles.strong}>New Zealand visa application status</strong>.
               </li>
             </ul>
           </section>
@@ -442,8 +442,8 @@ export default function NewZealand() {
           <p>
             With GVI, you don't need to worry about rejections or missing documents.
           </p>
-          <p>
-            👉 Start your <strong className={styles.strong}>New Zealand visa application</strong> today with Global Visa Internationals and experience the breathtaking landscapes of New Zealand with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for New Zealand</strong>.
+          <p className={styles.note}>
+            Start your <strong className={styles.strong}>New Zealand visa application</strong> today with Global Visa Internationals and experience the breathtaking landscapes of New Zealand with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for New Zealand</strong>.
           </p>
           <br />
           <a href="/contact" className={styles.ctaButton}>

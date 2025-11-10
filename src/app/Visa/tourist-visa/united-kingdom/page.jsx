@@ -409,7 +409,7 @@ export default function UKTouristVisa() {
           </ol>
 
 
-
+          {/* 
           <div className={styles.highlightSection}>
             <h3 className={styles.subTitle}>UK Tourist Visa Fees (India 2025)</h3>
             <div className={styles.highlightGrid}>
@@ -434,7 +434,7 @@ export default function UKTouristVisa() {
                 <p className={styles.countryInfo}>These are additional fees paid at the visa application center.</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <h2 className={styles.subTitle}>Common Reasons for UK Visa Rejection & How We Solve Them</h2>
 

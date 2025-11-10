@@ -5,7 +5,7 @@ import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
-// import { BreadcrumbJsonLd, LocalBusinessJsonLd, WebPageJsonLd, } from 'next-seo';
+
 
 
 export const metadata = {
@@ -15,6 +15,7 @@ export const metadata = {
   keywords:
     "Australia tourist visa, apply Australia visitor visa, Australia visa consultant, Australia travel guide, visa for Australia from India, Australia immigration, best tourist places in Australia",
   robots: "index, follow",
+  canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
   alternates: {
     canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
   },
@@ -22,8 +23,12 @@ export const metadata = {
     title: "Australia Tourist Visa: Application, Requirements & Top Travel Tips",
     description:
       "Get expert help from Global Visa Internationals on applying for an Australia tourist visa. Learn about visa process, travel costs, and iconic Australian destinations.",
-    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
+    url: "https://www.globalvisainternationals.com/visa/tourist-visa/australia",
     siteName: "Global Visa Internationals",
+    locale: "en_IN",
+    determiner: "the",
+    type: "website",
+    updated_time: "2025-11-07T00:00:00+05:30",
     images: [
       {
         url: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
@@ -31,128 +36,230 @@ export const metadata = {
         height: 630,
         alt: "Australia Tourist Visa Banner",
       },
+      {
+        url: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI-small.jpg",
+        width: 600,
+        height: 315,
+        alt: "Australia Tourist Visa Thumbnail",
+      },
     ],
-    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     site: "@GLOBALVISA1505",
+    creator: "@GLOBALVISA1505",
     title: "Australia Tourist Visa: Application, Requirements & Top Places",
     description:
       "Plan your dream trip to Australia. Discover visa requirements, estimated expenses, and top attractions. Trusted consultants since 2017.",
+    image: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
     images: [
-      "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
-    ],
+      {
+        url: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
+        alt: "Australia Tourist Visa Assistance - Global Visa Internationals"
+      }
+    ]
   },
+
+  other: {
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      logo: "https://www.globalvisainternationals.com/logo.png",
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals",
+        "https://www.instagram.com/globalvisainternationals"
+      ],
+    },
+  }
 };
 
 
 
 export default function Australia() {
-  const pageUrl = metadata.alternates.canonical;
+  const canonicalUrl =
+    "https://www.globalvisainternationals.com/Visa/tourist-visa/australia";
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.globalvisainternationals.com"
+  
+  const schemas = [
+    // 1️⃣ Organization
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      logo: "https://www.globalvisainternationals.com/logo.png",
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals",
+        "https://www.instagram.com/globalvisainternationals",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://x.com/GLOBALVISA1505",
+        "https://www.youtube.com/@globalVisaInternationals",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+91-7022213466",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: "English",
       },
+    },
 
-      {
-        "@type": "ListItem",
-        position: 2,
+    // 2️⃣ LocalBusiness
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Global Visa Internationals",
+      image:
+        "https://www.globalvisainternationals.com/gvilogo.png",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "MG Road",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560025",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 12.9716,
+        longitude: 77.5946,
+      },
+      url: "https://www.globalvisainternationals.com",
+      telephone: "+91-7022213466",
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          opens: "10:00",
+          closes: "18:00",
+        },
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "230",
+      },
+    },
+
+    // 3️⃣ WebSite
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target:
+          "https://www.globalvisainternationals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+
+    // 4️⃣ WebPage
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Australia Tourist Visa Consultants",
+      url: canonicalUrl,
+      description:
+        "Apply for your Australia Tourist Visa with expert help from Global Visa Internationals.",
+      inLanguage: "en-IN",
+      isPartOf: {
+        "@type": "WebSite",
+        url: "https://www.globalvisainternationals.com",
+      },
+    },
+
+    // 5️⃣ Service (Visa Assistance)
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Australia Tourist Visa Assistance",
+      provider: {
+        "@type": "Organization",
+        name: "Global Visa Internationals",
+      },
+      areaServed: {
+        "@type": "Country",
         name: "Australia",
-        item: pageUrl
-      }
-    ]
-  };
+      },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: "5000",
+        description: "Comprehensive Australia tourist visa application support",
+      },
+    },
 
-  const travelAgencyJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Trusted Australia Tourist & Visitor Visa consultants in Bangalore. End-to-end visa assistance, documentation, and interview prep.",
-    "telephone": "+91-7022213466",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
+    // 6️⃣ BreadcrumbList
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.globalvisainternationals.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Australia Tourist Visa",
+          item: canonicalUrl,
+        },
+      ],
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 12.9716,
-      "longitude": 77.5946
+
+    // 7️⃣ FAQPage
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How long does it take to get an Australia Tourist Visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Processing times vary from 15 to 25 working days depending on the applicant’s profile and season.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What documents are required for an Australia Tourist Visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Valid passport, financial proof, employment letter, travel itinerary, and visa application form.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need an interview for an Australia Visitor Visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Interviews are not mandatory for all applicants, but may be required in certain cases.",
+          },
+        },
+      ],
     },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
-        ],
-        "opens": "10:00",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/globalvisainternationals/",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/global-visa-internationals/",
-      "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
-    ]
-  };
+  ];
+
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
-
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data: JSON-LD */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
-      </Head>
-
-
-
+      {/* ✅ All JSON-LD Schemas */}
+      {schemas.map((schema, index) => (
+        <Script key={index} id={`schema-${index}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
 
 
       <div className={styles.imageContainer}>

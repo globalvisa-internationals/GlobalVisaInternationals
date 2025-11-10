@@ -37,7 +37,7 @@ export const metadata = {
     site: "@GLOBALVISA1505",
     title: "Schengen Visa Assistance: Tourist, Visitor & Business Visa Support",
     description:
-      "Plan your trip to Europe with confidence. Apply for Schengen tourist, visitor, or business visa with Global Visa Internationals – expert help for documents, fees, and approvals.",
+      "Plan your trip to Europe with confidence. Apply for Schengen tourist, visitor, or business visa with Global Visa Internationals - expert help for documents, fees, and approvals.",
     images: [
       "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg",
     ],
@@ -161,11 +161,11 @@ export default function Schengen_Visa_Assistance() {
 
       <div className={styles.VisaSec}>
         <div className={styles.VisaData}>
-          <h1 className={styles.Title}>Schengen Tourist Visa from India 2025 – Eligibility, Requirements & Fees | Global Visa Internationals</h1>
+          <h1 className={styles.Title}>Schengen Tourist Visa from India 2025 - Eligibility, Requirements & Fees | Global Visa Internationals</h1>
 
           <h2 className={styles.subTitle}>✈ Travel to Europe with a Schengen Visa</h2>
           <p>Planning a trip to Europe? A <b className={styles.strong}>Schengen tourist visa</b> allows Indian travelers to explore 29 European countries with a single visa. At <b className={styles.strong}>Global Visa Internationals (GVI)</b>, we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
-          <h2 className={styles.subTitle}>🕒 Schengen Visa Duration Rule</h2>
+          <h2 className={styles.subTitle}>Schengen Visa Duration Rule</h2>
           <p>A short-stay Schengen visa permits you to stay according to your travel dates in the Schengen Zone. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications. With GVI, you’ll never miscalculate your stay — we ensure full compliance with <b className={styles.strong}>Schengen visa rules</b>.</p>
           <p>The duration you are granted on your Schengen visa depends on your travel history and the embassy's discretion. The standard is a single-entry visa for the specific dates of your trip, but with a proven track record, you can qualify for longer-term, multiple-entry visas.</p>
 
@@ -266,11 +266,11 @@ export default function Schengen_Visa_Assistance() {
             </div>
           </div>
 
-          <h2 className={styles.subTitle}>🕒 Schengen Visa Duration Rule</h2>
+          <h2 className={styles.subTitle}>Schengen Visa Duration Rule</h2>
           <p>A short-stay Schengen visa permits you to stay according to your travel dates in the Schengen Zone  also if some condetion is meat then you can get up to 5 years
             <br />
             Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.
-            👉 With GVI, you’ll never miscalculate your stay — we ensure full compliance with <b className={styles.strong}>Schengen visa rules</b>.</p>
+            With GVI, you’ll never miscalculate your stay — we ensure full compliance with <b className={styles.strong}>Schengen visa rules</b>.</p>
 
           <h2 className={styles.subTitle}>Schengen Tourist Visa Documents Cheack List for Indian Applicants</h2>
           <p>Before applying, ensure you meet the <b className={styles.strong}>Schengen visa eligibility requirements</b>. If these criteria are met, <b className={styles.strong}>Global Visa Internationals (GVI)</b> will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
@@ -283,7 +283,7 @@ export default function Schengen_Visa_Assistance() {
 
           <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
           <p>One of the most critical aspects of your application is proving you have sufficient funds. The consulate needs to be convinced you can support your entire trip.
-            We recommend maintaining a minimum balance of <b className={styles.strong}>₹3–4 lakh</b> (or €3,000-€4,000) in your bank account for 3 to 6 months. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.</p>
+            We recommend maintaining a minimum balance of <b className={styles.strong}>₹3-4 lakh</b> (or €3,000-€4,000) in your bank account for 3 to 6 months. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.</p>
           <ul>
             <li><b className={styles.strong}>Bank Statements</b>: Submit original bank statements for the last 6 months, stamped by the bank.</li>
             <li><b className={styles.strong}>Income Tax Returns (ITR)</b>: Provide ITRs for the last 3 years to prove a stable income source.</li>
@@ -301,7 +301,7 @@ export default function Schengen_Visa_Assistance() {
           <ul>
             <li><b className={styles.strong}>Flight & Hotel Bookings</b>: Provide confirmed return flight tickets and hotel reservations covering your entire stay.</li>
             <li><b className={styles.strong}>Travel Insurance (Mandatory)</b>: Must cover at least €30,000 for medical emergencies, hospitalisation, and repatriation across all Schengen countries.
-              👉 GVI assists you in securing <b className={styles.strong}>Schengen travel insurance</b> that meets embassy requirements.</li>
+              GVI assists you in securing <b className={styles.strong}>Schengen travel insurance</b> that meets embassy requirements.</li>
           </ul>
 
           <h3 className={styles.subTitle}>5. Visa Cover Letter & Itinerary</h3>
@@ -311,9 +311,9 @@ export default function Schengen_Visa_Assistance() {
           <h2 className={styles.subTitle}>Schengen Tourist Visa Fees (India 2025)</h2>
           <ul>
             <li><b className={styles.strong}>Adult Visa Fee (Embassy)</b>: €90 (~₹9,300) per person</li>
-            <li><b className={styles.strong}>Children (6–12 years)</b>: €45 per person</li>
+            <li><b className={styles.strong}>Children (6-12 years)</b>: €45 per person</li>
             <li><b className={styles.strong}>Children below 6 years</b>: Free</li>
-            <li><b className={styles.strong}>VFS Service Charges</b>: ₹1,000 – ₹2,000 approx.</li>
+            <li><b className={styles.strong}>VFS Service Charges</b>: ₹1,000 - ₹2,000 approx.</li>
           </ul>
 
           <h2 className={styles.subTitle}>Common Reasons for Schengen Visa Rejection & How We Solve Them</h2>
@@ -330,7 +330,7 @@ export default function Schengen_Visa_Assistance() {
           <ul>
             <li><b className={styles.strong}>Standard Processing Time</b>: 15-20 working days.</li>
             <li><b className={styles.strong}>Peak Season (May-August)</b>: Can extend up to 30-45 working days.</li>
-            <li><b className={styles.strong}>Our Service</b>: Once we receive your documents, GVI finalizes your file within <b className={styles.strong}>3–5 working days</b>, ensuring it is submitted to the embassy in a timely manner.</li>
+            <li><b className={styles.strong}>Our Service</b>: Once we receive your documents, GVI finalizes your file within <b className={styles.strong}>3-5 working days</b>, ensuring it is submitted to the embassy in a timely manner.</li>
           </ul>
 
           <h2 className={styles.subTitle}>The VFS Global Application Process: A Step-by-Step Guide</h2>
@@ -341,7 +341,7 @@ export default function Schengen_Visa_Assistance() {
             <li><b className={styles.strong}>Application Tracking</b>: Once submitted, we help you track your application status until your passport is ready for collection.</li>
           </ol>
           <a href="https://visa.vfsglobal.com/" target="_blank" rel="noopener noreferrer">VFS Global — India</a>
-
+          {/* 
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
           <p>Choose the right <b className={styles.strong}>Schengen visa assistance package</b> for your needs:</p>
           <div className={styles.pricingContainer}>
@@ -361,7 +361,7 @@ export default function Schengen_Visa_Assistance() {
                 <li>Biometrics guidance</li>
               </ul>
             </div>
-          </div>
+          </div> */}
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
           <p>At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
@@ -377,7 +377,7 @@ export default function Schengen_Visa_Assistance() {
 
           <h2 className={styles.subTitle}>Ready to Apply?</h2>
           <p>With GVI, you don’t need to worry about rejections or missing documents.
-            👉 <b className={styles.strong}>Start your Schengen visa application today</b> with Global Visa Internationals and travel to Europe with confidence.
+            <b className={styles.strong}>Start your Schengen visa application today</b> with Global Visa Internationals and travel to Europe with confidence.
             <br />
             <a href="/contact" className={styles.ctaButton}>Get a free consultation today!</a></p>
         </div>

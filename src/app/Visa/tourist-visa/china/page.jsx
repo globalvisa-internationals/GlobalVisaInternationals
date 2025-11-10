@@ -252,7 +252,7 @@ export default function Canada() {
           </div>
 
           <section>
-            <h2 className={styles.subTitle}>🕒 China Visa Duration and Types</h2>
+            <h2 className={styles.subTitle}> China Visa Duration and Types</h2>
             <p>
               China offers different visa types based on your travel purpose:</p>
             <ul>
@@ -262,7 +262,7 @@ export default function Canada() {
               <li><strong className={styles.strong}>10-Year China Visa:</strong> Available for eligible frequent travelers with multiple entries</li>
             </ul>
             <p>
-              👉 With GVI, we'll help you select the right visa type based on your travel needs and ensure full compliance with Chinese immigration rules.</p>
+              With GVI, we'll help you select the right visa type based on your travel needs and ensure full compliance with Chinese immigration rules.</p>
           </section>
 
           <section>
@@ -398,7 +398,7 @@ export default function Canada() {
 
           <h2 className={styles.subTitle}>Ready to Apply?</h2>
           <p>  With GVI, you don't need to worry about rejections or missing documents.</p>
-          <p>   👉 Start your <strong className={styles.strong}>China visa application</strong> today with Global Visa Internationals and experience the rich culture and history of China with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for China</strong>.</p>
+          <p>    Start your <strong className={styles.strong}>China visa application</strong> today with Global Visa Internationals and experience the rich culture and history of China with confidence. We are recognized as a <strong className={styles.strong}>best visa consultancy for China</strong>.</p>
           <br />
           <a href="/contact" className={styles.ctaButton}>
             Get a free consultation today!
@@ -408,12 +408,12 @@ export default function Canada() {
           <VisaForm />
         </div>
       </div>
-      <section id="ClientReviews" className={styles.reviewSection}>
+      {/* <section id="ClientReviews" className={styles.reviewSection}>
         <div
           className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5"
           data-elfsight-app-lazy
         ></div>
-      </section>
+      </section> */}
       <section>
 
         <ReviewSchema />

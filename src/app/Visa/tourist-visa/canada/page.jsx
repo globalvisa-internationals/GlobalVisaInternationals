@@ -254,12 +254,12 @@ export default function Canada() {
           </div>
 
           <section>
-            <h2 className={styles.subTitle}>🕒 Canada Visa Duration Rule</h2>
+            <h2 className={styles.subTitle}> Canada Visa Duration Rule</h2>
             <p>
               A Canada Visitor Visa typically allows you to stay for up to 6 months. A multiple entry Canada visa for Indians may be issued with a validity of up to 10 years, or until your passport expires, whichever comes first. Note that even with a multiple-entry visa, you can only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.
             </p>
             <p>
-              👉 With GVI, you’ll never miscalculate your stay—we ensure full compliance with Canadian visa rules.
+              With GVI, you’ll never miscalculate your stay—we ensure full compliance with Canadian visa rules.
             </p>
           </section>
 
@@ -437,7 +437,7 @@ export default function Canada() {
             With GVI, you don’t need to worry about rejections or missing documents.
           </p>
           <p>
-            👉 Start your Canada visa application today with Global Visa Internationals and travel to Canada with confidence. We are recognized as a best visa consultancy for Canada.
+            Start your Canada visa application today with Global Visa Internationals and travel to Canada with confidence. We are recognized as a best visa consultancy for Canada.
           </p>
           <br />
           <a href="/contact" className={styles.ctaButton}>
@@ -448,12 +448,12 @@ export default function Canada() {
           <VisaForm />
         </div>
       </div>
-      <section id="ClientReviews" className={styles.reviewSection}>
+      {/* <section id="ClientReviews" className={styles.reviewSection}>
         <div
           className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5"
           data-elfsight-app-lazy
         ></div>
-      </section>
+      </section> */}
       <section>
 
         <ReviewSchema />
