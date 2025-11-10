@@ -6,6 +6,8 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 import React from 'react';
 import Head from "next/head";
 
+
+
 export const metadata = {
   title: "Get Your Singapore Tourist Visa in Bangalore | Global Visa Internationals",
   description: "Planning a trip to Singapore? Let Global Visa Internationals simplify your visa process. Trusted consultants in Bangalore offering end-to-end visa support with fast approvals.",

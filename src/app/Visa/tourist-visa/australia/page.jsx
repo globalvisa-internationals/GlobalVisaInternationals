@@ -5,6 +5,8 @@ import Head from 'next/head';
 import VisaForm from '@/Components/VisaForm';
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
+import Script from "next/script";
+
 
 
 
@@ -82,7 +84,7 @@ export default function Australia() {
   const canonicalUrl =
     "https://www.globalvisainternationals.com/Visa/tourist-visa/australia";
 
-  
+
   const schemas = [
     // 1️⃣ Organization
     {

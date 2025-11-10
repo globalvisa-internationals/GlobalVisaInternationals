@@ -3,6 +3,8 @@ import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
+import Script from "next/script";
+
 export const metadata = {
   title:
     "China Tourist & Business Visa: Requirements, Application & Top Places | Global Visa Internationals",

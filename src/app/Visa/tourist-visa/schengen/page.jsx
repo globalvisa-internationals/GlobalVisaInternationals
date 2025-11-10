@@ -4,6 +4,8 @@ import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 
+
+
 export const metadata = {
   title:
     "Schengen Visa Assistance: Tourist, Visitor & Business Visa Requirements | Global Visa Internationals",
