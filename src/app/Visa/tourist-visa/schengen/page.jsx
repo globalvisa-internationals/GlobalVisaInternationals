@@ -3,20 +3,34 @@ import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
+import Link from "next/link";
 
+
+import { Metadata } from "next";
 
 
 export const metadata = {
+  metadataBase: new URL("https://www.globalvisainternationals.com"),
   title:
     "Schengen Visa Assistance: Tourist, Visitor & Business Visa Requirements | Global Visa Internationals",
   description:
     "Apply for a Schengen Visa with Global Visa Internationals. Get expert guidance for Schengen tourist visas, visitor visas, and business visas. Learn requirements, documents, fees, and travel tips for 27 European countries.",
-  keywords:
-    "Schengen visa, Schengen tourist visa, apply Schengen visa India, Schengen business visa, Schengen visitor visa, Schengen visa requirements, Schengen visa documents, Schengen visa consultants, Schengen visa fees, Europe tourist visa, apply Schengen visa online",
+  keywords: [
+    "Schengen visa",
+    "Schengen tourist visa",
+    "apply Schengen visa India",
+    "Schengen business visa",
+    "Schengen visitor visa",
+    "Schengen visa requirements",
+    "Schengen visa documents",
+    "Schengen visa consultants",
+    "Schengen visa fees",
+    "Europe tourist visa",
+    "apply Schengen visa online",
+  ],
   robots: "index, follow",
   alternates: {
-    canonical:
-      "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen",
   },
   openGraph: {
     title: "Schengen Visa Assistance: Tourist, Visitor & Business Visa Support",
@@ -44,114 +58,255 @@ export const metadata = {
       "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg",
     ],
   },
+  other: {
+    "geo.region": "IN-KA",
+    "geo.placename": "Bengaluru",
+    ICBM: "12.9716,77.5946",
+  },
 };
 
 export default function Schengen_Visa_Assistance() {
-  const pageUrl = metadata.alternates.canonical;
+  const pageUrl =
+    "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen";
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.globalvisainternationals.com"
+  const jsonLdSchemas = [
+    // Breadcrumb
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.globalvisainternationals.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Schengen Visa",
+          item: pageUrl,
+        },
+      ],
+    },
+
+    // TravelAgency
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      logo: "https://www.globalvisainternationals.com/gvilogo.png",
+      description:
+        "Expert Schengen Visa consultants in Bangalore. Assistance for Schengen Tourist, Visitor, and Business visas including eligibility, documentation, and travel insurance support for 27 European countries.",
+      telephone: "+91-7022213466",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "MG Road",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560025",
+        addressCountry: "IN",
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Schengen Visa",
-        "item": pageUrl
-      }
-    ]
-  };
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 12.9716,
+        longitude: 77.5946,
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          opens: "10:00",
+          closes: "18:00",
+        },
+      ],
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals/",
+        "https://www.instagram.com/globalvisa_internationals/",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://x.com/GLOBALVISA1505",
+        "https://www.youtube.com/@globalVisaInternationals",
+        "https://www.google.com/maps/place/Global+Visa+Internationals",
+      ],
+    },
 
-  const travelAgencyJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Expert Schengen Visa consultants in Bangalore. Assistance for Schengen Tourist, Visitor, and Business visas including eligibility, documentation, and travel insurance support for 27 European countries.",
-    "telephone": "+91-7022213466",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
+    // Organization
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      logo: "https://www.globalvisainternationals.com/gvilogo.png",
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals/",
+        "https://www.instagram.com/globalvisa_internationals/",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://x.com/GLOBALVISA1505",
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-7022213466",
+          contactType: "Customer Service",
+          areaServed: "IN",
+          availableLanguage: ["English", "Kannada", "Hindi"],
+        },
+      ],
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 12.9716,
-      "longitude": 77.5946
+
+    // LocalBusiness with AggregateRating
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Global Visa Internationals",
+      image:
+        "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg",
+      "@id": "https://www.globalvisainternationals.com",
+      url: "https://www.globalvisainternationals.com",
+      telephone: "+91-7022213466",
+      priceRange: "₹₹",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "MG Road",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560025",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 12.9716,
+        longitude: 77.5946,
+      },
+      openingHours: "Mo-Sa 10:00-18:00",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "314",
+      },
     },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
+
+    // WebSite
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target:
+          "https://www.globalvisainternationals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+
+    // WebPage
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Schengen Visa Assistance",
+      url: pageUrl,
+      description:
+        "Expert Schengen Visa Assistance for tourists, business travelers, and visitors. Learn about eligibility, documentation, and visa processing with GVI.",
+      inLanguage: "en-IN",
+      isPartOf: {
+        "@type": "WebSite",
+        url: "https://www.globalvisainternationals.com",
+      },
+    },
+
+    // Service
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Schengen Visa Assistance",
+      provider: {
+        "@type": "Organization",
+        name: "Global Visa Internationals",
+      },
+      areaServed: {
+        "@type": "Place",
+        name: "India",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Visa Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Schengen Tourist Visa Assistance",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Schengen Business Visa Assistance",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Schengen Visitor Visa Guidance",
+            },
+          },
         ],
-        "opens": "10:00",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/globalvisainternationals/",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/global-visa-internationals/",
-      "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
-    ]
-  };
+      },
+    },
+
+    // FAQPage
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How long does it take to get a Schengen Visa from India?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Schengen visa processing usually takes 15 working days from the date of application, depending on the country and season.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What documents are required for a Schengen tourist visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You will need a valid passport, visa application form, recent photos, travel itinerary, proof of accommodation, financial proof, and travel insurance covering at least €30,000.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can Global Visa Internationals help with Schengen business visa applications?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, GVI provides full support for Schengen business visas, including documentation, invitation letter verification, and appointment scheduling.",
+          },
+        },
+      ],
+    },
+  ];
+
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
-
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data: JSON-LD */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
-      </Head>
+      {jsonLdSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
 
       <div className={styles.imageContainer}>
         <img
@@ -222,7 +377,7 @@ export default function Schengen_Visa_Assistance() {
                 <li>Estonia</li>
                 <li>Finland</li>
                 <li>France</li>
-                <li>Germany</li>
+                <li>  <Link href="/Visa/tourist-visa/schengen/germany">Germany</Link></li>
                 <li>Greece</li>
                 <li>Hungary</li>
                 <li>Iceland</li>
