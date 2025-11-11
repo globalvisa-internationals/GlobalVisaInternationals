@@ -324,9 +324,9 @@ export default function Germany_Tourist_Visa_Assistance() {
                         Apply for Germany Tourist Visa from India | Schengen Visa Experts
                     </h1>
 
-                    <h2 className={styles.subTitle}>
+                    <h4 className={styles.subTitle}>
                         ✈ Travel to Germany with Confidence — Expert Visa Guidance for Indian Travellers
-                    </h2>
+                    </h4>
                     <p>    Planning a trip to Germany? A Germany tourist visa from India (short-stay Schengen Type C) allows Indian    travellers to visit Germany and other Schengen countries for tourism, leisure, or visiting family and friends.    Whether you wish to explore Berlin’s heritage, the castles of Bavaria, or Munich’s Christmas markets,{" "}    Global Visa Internationals (GVI) — your trusted Germany visa consultancy in India — provides complete    support, from document preparation to Germany visa appointment booking, interview training, and    post-submission tracking.</p>
                     <p>    With years of Schengen-visa experience, GVI ensures a transparent, reliable, and success-focused application    journey for every traveller.</p>
 

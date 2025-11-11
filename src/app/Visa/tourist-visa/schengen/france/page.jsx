@@ -1,0 +1,521 @@
+import styles from "@/Components/Visa.module.css";
+import Head from "next/head";
+import VisaForm from "@/Components/VisaForm";
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
+
+import { Metadata } from "next";
+export const metadata = {
+    metadataBase: new URL("https://www.globalvisainternationals.com"),
+    title: "Apply for France Tourist Visa from India | France Schengen Visa Experts",
+    description:
+        "Apply for your France Tourist Visa from India with Global Visa Internationals (GVI). Get expert guidance for documentation, appointment booking, and interview preparation to travel smoothly across France and the Schengen area.",
+    keywords: [
+        "France tourist visa from India",
+        "France Schengen visa",
+        "apply France visa India",
+        "France visitor visa",
+        "France business visa",
+        "France visa consultants Bangalore",
+        "France visa application process",
+        "France visa documents required",
+        "France visa fees India",
+        "Schengen visa for France",
+    ],
+    robots: "index, follow",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france",
+    alternates: {
+        canonical:
+            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france",
+    },
+    openGraph: {
+        title:
+            "France Tourist Visa from India | Expert France Schengen Visa Assistance",
+        description:
+            "Global Visa Internationals helps Indian travellers apply for France tourist, visitor, and business visas. Get expert help with requirements, documentation, and appointments for your France visa.",
+        url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france",
+        siteName: "Global Visa Internationals",
+        images: [
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg",
+                width: 1200,
+                height: 630,
+                alt: "France Tourist Visa Assistance by Global Visa Internationals",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        site: "@GLOBALVISA1505",
+        title:
+            "France Tourist Visa from India | Global Visa Internationals (GVI)",
+        description:
+            "Planning a trip to France? Get professional visa guidance from Global Visa Internationals — experts in France tourist and Schengen visa processing for Indian travellers.",
+        images: [
+            "https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg",
+        ],
+    },
+    other: {
+        "geo.region": "IN-KA",
+        "geo.placename": "Bangalore",
+        ICBM: "12.9716,77.5946",
+    },
+};
+
+export default function France_Tourist_Visa_Assistance() {
+    const pageUrl =
+        "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france";
+
+    const jsonLdSchemas = [
+        // Breadcrumb Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://www.globalvisainternationals.com",
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "France Tourist Visa",
+                    item: pageUrl,
+                },
+            ],
+        },
+
+        // Organization (Primary Entity)
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Global Visa Internationals",
+            url: "https://www.globalvisainternationals.com",
+            logo: "https://www.globalvisainternationals.com/gvilogo.png",
+            email: "operations@globalvisainternationals.com",
+            contactPoint: [
+                {
+                    "@type": "ContactPoint",
+                    telephone: "+91-7022213466",
+                    contactType: "Customer Service",
+                    areaServed: "IN",
+                    availableLanguage: ["English", "Kannada", "Hindi"],
+                },
+            ],
+            sameAs: [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+                "https://www.google.com/maps/place/Global+Visa+Internationals",
+            ],
+            address: {
+                "@type": "PostalAddress",
+                streetAddress:
+                    "G-F9, Business Point, 137 Brigade Road, Next to Brigade Tower",
+                addressLocality: "Bangalore",
+                addressRegion: "Karnataka",
+                postalCode: "560025",
+                addressCountry: "IN",
+            },
+        },
+
+        // LocalBusiness Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Global Visa Internationals",
+            image:
+                "https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg",
+            "@id": "https://www.globalvisainternationals.com",
+            url: "https://www.globalvisainternationals.com",
+            telephone: "+91-7022213466",
+            email: "operations@globalvisainternationals.com",
+            priceRange: "₹₹",
+            address: {
+                "@type": "PostalAddress",
+                streetAddress:
+                    "G-F9, Business Point, 137 Brigade Road, Next to Brigade Tower",
+                addressLocality: "Bangalore",
+                addressRegion: "Karnataka",
+                postalCode: "560025",
+                addressCountry: "IN",
+            },
+            geo: {
+                "@type": "GeoCoordinates",
+                latitude: 12.9716,
+                longitude: 77.5946,
+            },
+            openingHours: "Mo-Sa 10:00-18:00",
+            aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                reviewCount: "314",
+            },
+        },
+
+        // Service Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "France Tourist Visa Assistance",
+            provider: {
+                "@type": "Organization",
+                name: "Global Visa Internationals",
+                url: "https://www.globalvisainternationals.com",
+            },
+            areaServed: {
+                "@type": "Place",
+                name: "India",
+            },
+            description:
+                "End-to-end France Tourist Visa assistance for Indian travellers — documentation, form filling, appointment scheduling, and interview guidance by Global Visa Internationals.",
+            hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Visa Services",
+                itemListElement: [
+                    {
+                        "@type": "Offer",
+                        itemOffered: {
+                            "@type": "Service",
+                            name: "France Tourist Visa Assistance",
+                        },
+                    },
+                    {
+                        "@type": "Offer",
+                        itemOffered: {
+                            "@type": "Service",
+                            name: "France Business Visa Assistance",
+                        },
+                    },
+                    {
+                        "@type": "Offer",
+                        itemOffered: {
+                            "@type": "Service",
+                            name: "France Visitor Visa Guidance",
+                        },
+                    },
+                ],
+            },
+        },
+
+        // WebPage Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "France Tourist Visa Assistance from India",
+            url: pageUrl,
+            description:
+                "Expert France Tourist Visa assistance for Indian travellers — from documentation to embassy appointments, GVI makes your visa process hassle-free.",
+            inLanguage: "en-IN",
+            isPartOf: {
+                "@type": "WebSite",
+                url: "https://www.globalvisainternationals.com",
+            },
+        },
+
+        // FAQPage Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How long does it take to get a France tourist visa from India?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Processing for a France tourist visa from India usually takes 10–15 working days after your appointment, depending on the consulate and season.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What documents are required for a France tourist visa?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "You’ll need a valid passport, completed visa form, travel itinerary, proof of accommodation, travel insurance, financial proof, and a cover letter stating your purpose of visit.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "Does Global Visa Internationals assist with France business visas?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Yes, Global Visa Internationals offers full support for France business visa applications — including document review, invitation letter verification, and appointment scheduling.",
+                    },
+                },
+            ],
+        },
+    ];
+
+    return (
+        <>
+            {jsonLdSchemas.map((schema, index) => (
+                <script
+                    key={index}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                />
+            ))}
+
+            <div className={styles.imageContainer}>
+                <img
+                    src="/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg"
+                    alt="France Tourist Visa Assistance GVI"
+                    className={styles.VisaImage}
+                />
+            </div>
+
+            <div className={styles.VisaSec}>
+                <div className={styles.VisaData}>
+                    <h1 className={styles.Title}>
+                        Apply for France Tourist Visa from India | Schengen Visa Experts
+                    </h1>
+
+                    <h4 className={styles.subTitle}>
+                        ✈ Travel to France with Confidence — Expert Visa Guidance for Indian Travellers
+                    </h4>
+                    <p>    Planning a trip to France? A France tourist visa from India (short-stay Schengen Type C)    allows Indian travellers to visit France and other Schengen countries for tourism, leisure, or visiting family and friends.    Whether you wish to explore Paris’s Eiffel Tower, the French Riviera, or Lyon’s culinary delights,{" "}    Global Visa Internationals (GVI) — your trusted France visa consultancy in India — provides complete    support, from document preparation to France visa appointment booking, interview training, and    post-submission tracking.</p>
+
+                    {/* --- Sales Pitch Added Here --- */}
+                    <div className={styles.salesPitch}>
+                        <p>
+                            <b className={styles.strong}>Let Global Visa Internationals (GVI) take the stress out of your France visa process.</b>
+                            We handle everything professionally, ensuring accuracy, speed, and embassy compliance.
+                        </p>
+                        <ul>
+                            <li><b className={styles.strong}> Complete Documentation:</b> We collect, prepare, and verify all required visa documents for you.</li>
+                            <li><b className={styles.strong}> Application Form Filing:</b> Our team accurately fills out your France visa form as per embassy standards.</li>
+                            <li><b className={styles.strong}> Tailored Case File:</b> We create your case checklist and documentation plan based on your travel history.</li>
+                            <li><b className={styles.strong}> Professional Drafting:</b> GVI drafts your cover letter and provides NOC or leave approval letter samples.</li>
+                            <li><b className={styles.strong}> Notarization Support:</b> If required, we handle notarization — no need to contact lawyers or visit courts.</li>
+                            <li><b className={styles.strong}> Simple Process for You:</b> Just share your documents, review the set we prepare, then visit VFS/BLS for biometrics and submission.</li>
+                            <li><b className={styles.strong}> A-to-Z Handling:</b> After submission, GVI manages the entire process — tracking, updates, and final delivery.</li>
+                        </ul>
+                        <p>
+                            <b className={styles.strong}>With GVI, your France visa application is smooth, accurate, and completely stress-free.</b>
+                        </p>
+                    </div>
+
+                    {/* --- End Sales Pitch --- */}
+
+                    <p>    With years of Schengen-visa experience, GVI ensures a transparent, reliable, and success-focused    application journey for every traveller.</p>
+
+                    <h2 className={styles.subTitle}>What Is a France Tourist Visa?</h2>
+                    <p>    A France tourist visa for Indian citizens is a Schengen tourist visa (Type C - short stay)    that allows travel for sightseeing or visiting relatives. It also enables entry into other    Schengen countries for up to 90 days within a 180-day period.</p>
+                    <p>    Our experts help you apply for a France Schengen visa from India, guiding you through documentation,{" "}    France tourist visa requirements, and France visa appointment booking to ensure a seamless process.</p>
+
+                    <h2 className={styles.subTitle}>Schengen to France Visa Duration Rule</h2>
+                    <p>    A France Schengen visa for Indian citizens is typically issued for up to 90 days within a 180-day    period. The validity and number of entries (single or multiple) depend on your travel history and    embassy discretion. Overstaying can lead to fines or travel bans — GVI ensures you meet all conditions    and avoid compliance issues.</p>
+
+                    <h2 className={styles.subTitle}>France Visa ‘Cascade’ Progression & Long-Term Eligibility</h2>
+                    <p>    Regular and lawful travel within the Schengen Area can improve your eligibility for longer-validity    multiple-entry visas.</p>
+
+                    <h3 className={styles.subTitle}>Progression Overview:</h3>
+                    <ul>
+                        <li>    <b className={styles.strong}>Initial Eligibility:</b> Most applicants start with a short-stay France tourist visa (Type C).</li>
+                        <li>    <b className={styles.strong}>Multiple-Entry Progression:</b> Proper use of previous Schengen visas strengthens your case for multi-year visas.</li>
+                        <li>    <b className={styles.strong}>Passport Validity:</b> Your passport must remain valid for at least six months beyond your return date; for long-term    visas, maintain validity past the visa’s expiry.</li>
+                    </ul>
+                    <p>    GVI advises you on this progression and helps present your case effectively to the{" "}    France embassy visa application India.</p>
+
+                    <h2 className={styles.subTitle}>How to Apply for France Tourist Visa</h2>
+                    <p>    If you’re wondering how to apply for a France tourist visa, here’s how Global Visa Internationals{" "}    makes it simple:</p>
+                    <ol>
+                        <li>    <b className={styles.strong}>Check eligibility for free —</b> Ensure your travel purpose fits the France short-stay visa (Type C) category.</li>
+                        <li>    <b className={styles.strong}>Gather documents —</b> We assist with the official France tourist visa documents checklist.</li>
+                        <li>    <b className={styles.strong}>Complete the application form —</b> Our experts accurately fill out the{" "}    France tourist visa application form online or offline.</li>
+                        <li>    <b className={styles.strong}>Book your appointment —</b> GVI schedules your France visa appointment booking at the nearest    VFS center or embassy.</li>
+                        <li>    <b className={styles.strong}>Prepare for the interview —</b> Mock sessions cover France visa interview questions for tourists.</li>
+                        <li>    <b className={styles.strong}>Track your application —</b> We monitor updates until your passport is returned.</li>
+                    </ol>
+
+                    <h2 className={styles.subTitle}>
+                        <b className={styles.strong}>France Visa Processing Overview —</b> What GVI Does for You
+                    </h2>
+                    <p>Our visa team ensures your file meets embassy expectations and avoids common pitfalls.</p>
+
+                    <h4 className={styles.strong}>Our Services Include:</h4>
+                    <ol>
+                        <li>Filling the France tourist visa application form correctly</li>
+                        <li>Guidance to apply France tourist visa online</li>
+                        <li>Drafting professional cover letters & travel itineraries</li>
+                        <li>Document verification & France tourist visa documents checklist review</li>
+                        <li>France visa appointment booking & biometrics guidance</li>
+                    </ol>
+                    <p className={styles.note}>    <b className={styles.strong}>Timeline:</b> Typical France tourist visa processing time is 15–20 working days, depending on season and    embassy workload. GVI expedites file preparation to ensure timely submission.</p>
+
+                    <h2 className={styles.subTitle}>France Tourist Visa Requirements for Indian Citizens</h2>
+                    <p>To meet the France tourist visa requirements, applicants must provide:</p>
+                    <ul>
+                        <li>Valid passport (minimum 6 months validity)</li>
+                        <li>Completed France tourist visa application form</li>
+                        <li>Photos meeting France tourist visa photo requirements</li>
+                        <li>Travel insurance (€30,000 minimum coverage)</li>
+                        <li>
+                            Financial proof (bank statements with closing balance of ₹3,00,000 to ₹5,00,000 lakhs, salary slips or sponsorship letters)
+                        </li>
+                        <li>Cover letter explaining travel purpose and itinerary</li>
+                    </ul>
+                    <p className={styles.note}>    Global Visa Internationals reviews each document for accuracy before submission.</p>
+
+                    <h2 className={styles.subTitle}>France Tourist Visa Documents Checklist for Indian Applicants</h2>
+                    <p>Before applying for a France visit visa from India, ensure your documentation is complete:</p>
+                    <ul>
+                        <li>
+                            <b className={styles.strong}>Valid Passport & Travel History —</b> Minimum 6 months validity beyond return; past Schengen visas support
+                            credibility.
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Financial Proof —</b> Bank statements (3–6 months) with closing balance ₹3,00,000 to ₹5,00,000 lakhs, ITRs, or sponsor letters to prove you can fund your trip and meet France tourist visa fees in India expectations.
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Employment Documents —</b> NOC for employees, business proof for self-employed, and student enrollment letters.
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Travel & Accommodation Proof —</b> Confirmed return tickets and hotel bookings, plus mandatory Schengen travel
+                            insurance (min. €30,000).
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Photo & Form Compliance —</b> Photos and forms must match France tourist visa photo requirements and
+                            embassy formats.
+                        </li>
+                    </ul>
+                    <p>
+                        GVI cross-checks each document to enhance your France tourist visa success rate from India.
+                    </p>
+
+                    <h2 className={styles.subTitle}>France Tourist Visa Fees & Appointment Info (India 2025)</h2>
+                    <ul>
+                        <li>
+                            <b className={styles.strong}>Adult Visa Fee:</b> €90 (~₹9,300) per person
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Children (6–12 yrs):</b> €45 (~₹4,700)
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Children below 6 yrs:</b> Free
+                        </li>
+                        <li>
+                            <b className={styles.strong}>VFS Service Charges:</b> Additional (as per center)
+                        </li>
+                    </ul>
+                    <p>
+                        All payments follow current embassy & exchange-rate guidelines. Global Visa Internationals maintains complete
+                        transparency — no hidden costs.
+                    </p>
+
+                    <h2 className={styles.subTitle}>Common Reasons for France Tourist Visa Rejection — and How We Solve Them</h2>
+                    <p>
+                        Rejections often occur due to incomplete paperwork or unclear intent. GVI focuses on eliminating these issues:
+                    </p>
+                    <ul>
+                        <li>
+                            <b className={styles.strong}>Incomplete/Mismatched Documents:</b> We audit your file before submission.
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Insufficient Funds:</b> We advise minimum balances and financial proof formats.
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Unclear Purpose:</b> We draft clear cover letters and travel plans.
+                        </li>
+                        <li>
+                            <b className={styles.strong}>Poor Interview Performance:</b> Our mock sessions prepare you for real{" "}
+                            France visa interview questions for tourists.
+                        </li>
+                    </ul>
+                    <p>Our goal: boost your France tourist visa success rate from India and reduce risk of refusal.</p>
+
+                    <h2 className={styles.subTitle}>France Tourist Visa Processing Time & Tracking</h2>
+                    <p>
+                        Average France tourist visa processing time is 15–20 working days. During peak season, it may take longer.{" "}
+                        GVI tracks each stage — from submission to passport collection — and updates you promptly.
+                    </p>
+
+                    <h2 className={styles.subTitle}>France Embassy Visa Application in India</h2>
+                    <p>
+                        You can submit your France embassy visa application India through authorized VFS Global centers in New Delhi,
+                        Mumbai, Chennai, Hyderabad, Kolkata, and Bengaluru. Our team handles your slot booking, documentation, and biometric
+                        appointment to ensure smooth processing.
+                    </p>
+
+                    <h2 className={styles.subTitle}>Why Choose Global Visa Internationals — Best France Tourist Visa Agents in India</h2>
+                    <p>
+                        Global Visa Internationals (GVI) is a specialized France visa consultancy in India offering end-to-end
+                        Schengen visa services.
+                    </p>
+
+                    <h4 className={styles.strong}>Why Travellers Trust Us:</h4>
+                    <ul>
+                        <li>1,200+ Schengen visas processed since 2018</li>
+                        <li>High approval & France tourist visa success rate from India</li>
+                        <li>Personalized support for first-time applicants</li>
+                        <li>Complete document review & VFS appointment support</li>
+                        <li>Transparent pricing & dedicated case managers</li>
+                        <li>Special assistance for re-applications after rejection</li>
+                    </ul>
+
+                    {/* --- Reinforced Sales Pitch Before CTA --- */}
+                    <div className={styles.salesPitch}>
+                        <p>
+                            <b className={styles.strong}>Leave the stress to us — we handle everything from A to Z.</b>
+                            From filling your visa application to drafting personalized cover letters, verifying documents, and booking appointments,
+                            <b> Global Visa Internationals ensures your France visa application is professionally managed, error-free, and submission-ready.</b>
+                            You only need to provide your documents — we’ll do the rest.
+                        </p>
+                    </div>
+                    {/* --- End Reinforced Sales Pitch --- */}
+
+                    <h2 className={styles.subTitle}>✈ Apply for Your France Tourist Visa Online — Start Your Journey Today!</h2>
+                    <p>
+                        Whether you’re planning a family holiday, honeymoon, or solo Europe trip, it’s now easier than ever to{" "}
+                        apply for a France tourist visa online with Global Visa Internationals.
+                    </p>
+                    <p>
+                        Our consultants simplify each step of your France visit visa from India or{" "}
+                        France travel visa for Indians, ensuring accuracy and timely submission.
+                    </p>
+
+                    <div className={styles.ctaBox}>
+                        <p>
+                            Contact Global Visa Internationals today to start your application — and let our experts turn your European travel
+                            plans into reality.
+                        </p>
+                        <ul>
+                            <li>
+                                <b className={styles.strong}>Call Now:</b> +91-7022213466
+                            </li>
+                            <li>
+                                <b className={styles.strong}>Email:</b> operations@globalvisainternationals.com
+                            </li>
+                            <li>
+                                <b className={styles.strong}>Start Online Application:</b> <a href="#">Apply Now</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        Your journey to Europe begins with Global Visa Internationals — your trusted partner for hassle-free France
+                        visa assistance.
+                    </p>
+                </div>
+
+
+
+
+                <div className={styles.formSection}>
+                    <VisaForm />
+                </div>
+
+            </div >
+            <section>
+                <ReviewSchema />
+                <ReviewCarousel />
+            </section>
+
+        </>
+    );
+}

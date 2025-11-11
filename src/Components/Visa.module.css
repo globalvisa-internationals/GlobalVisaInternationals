@@ -18,6 +18,12 @@
     border: 1px solid var(--card-border);
 }
 
+.VisaImage:hover,
+.responsiveImage:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* === Sections === */
 .VisaSec {
     display: flex;
@@ -166,6 +172,30 @@
     }
 }
 
+
+
+.salesPitch ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.salesPitch li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 1rem;
+}
+
+.salesPitch li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1;
+}
 
 /* === Pricing === */
 .pricingContainer {
@@ -524,4 +554,28 @@
     .pricingCard {
         width: 250px;
     }
+}
+
+.callButton {
+    display: inline-block;
+    background: linear-gradient(90deg, #00f37a 0%, #00ccb1 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 112, 243, 0.3);
+}
+
+.callButton:hover {
+    background: linear-gradient(90deg, #00cc22 0%, #00998c 100%);
+    box-shadow: 0 6px 18px rgba(0, 85, 204, 0.4);
+    transform: translateY(-2px);
+}
+
+.callButton:active {
+    transform: scale(0.97);
 }

@@ -182,7 +182,7 @@
                 Guide 2025</image:title>
         </image:image>
     </url>
-
+    <!-- germany -->
     <url>
         <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/germany</loc>
 
@@ -217,7 +217,151 @@
         <xhtml:link rel="alternate" hreflang="en"
             href="https://www.globalvisainternationals.com/Visa/tourist-visa/germany" />
     </url>
+    <!-- france -->
+    <url>
+        <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france</loc>
 
+        <lastmod>2025-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+
+        <news:news>
+            <news:publication>
+                <news:name>Global Visa Internationals</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-11-11</news:publication_date>
+            <news:title>France Tourist Visa Assistance | Global Visa Internationals</news:title>
+            <news:keywords>
+                France tourist visa, apply France visa from India, France Schengen visa,
+                France visitor visa, France travel visa, Global Visa Internationals
+            </news:keywords>
+        </news:news>
+
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg
+            </image:loc>
+            <image:caption>
+                Apply for the France Tourist Visa from India with Global Visa Internationals —
+                expert support for documentation, appointment booking, and visa interview
+                assistance.
+            </image:caption>
+            <image:title>France Tourist Visa Assistance | Global Visa Internationals</image:title>
+        </image:image>
+
+        <xhtml:link rel="alternate" hreflang="en"
+            href="https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france" />
+    </url>
+
+    <!-- spain -->
+    <url>
+        <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/spain</loc>
+
+        <lastmod>2025-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+
+        <news:news>
+            <news:publication>
+                <news:name>Global Visa Internationals</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-11-11</news:publication_date>
+            <news:title>Spain Tourist Visa Assistance | Global Visa Internationals</news:title>
+            <news:keywords>
+                Spain tourist visa, apply Spain visa from India, Spain Schengen visa,
+                Spain visitor visa, Spain travel visa, Global Visa Internationals
+            </news:keywords>
+        </news:news>
+
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/tourist-visa/Spain-Tourist-Visa-Assistance-GVI.jpg
+            </image:loc>
+            <image:caption>
+                Apply for the Spain Tourist Visa from India with Global Visa Internationals — expert
+                support for documentation, appointment booking, and visa interview preparation.
+            </image:caption>
+            <image:title>Spain Tourist Visa Assistance | Global Visa Internationals</image:title>
+        </image:image>
+
+        <xhtml:link rel="alternate" hreflang="en"
+            href="https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/spain" />
+    </url>
+
+    <!-- greece -->
+    <url>
+        <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/greece</loc>
+
+        <lastmod>2025-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+
+        <news:news>
+            <news:publication>
+                <news:name>Global Visa Internationals</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-11-11</news:publication_date>
+            <news:title>Greece Tourist Visa Assistance | Global Visa Internationals</news:title>
+            <news:keywords>
+                Greece tourist visa, apply Greece visa from India, Greece Schengen visa,
+                Greece visitor visa, Greece travel visa, Global Visa Internationals
+            </news:keywords>
+        </news:news>
+
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/tourist-visa/Greece-Tourist-Visa-Assistance-GVI.jpg
+            </image:loc>
+            <image:caption>
+                Apply for the Greece Tourist Visa from India with Global Visa Internationals —
+                expert support for documentation, appointment booking, and visa interview
+                preparation.
+            </image:caption>
+            <image:title>Greece Tourist Visa Assistance | Global Visa Internationals</image:title>
+        </image:image>
+
+        <xhtml:link rel="alternate" hreflang="en"
+            href="https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/greece" />
+    </url>
+
+    <!-- italy -->
+    <url>
+        <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/italy</loc>
+
+        <lastmod>2025-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+
+        <news:news>
+            <news:publication>
+                <news:name>Global Visa Internationals</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-11-11</news:publication_date>
+            <news:title>Italy Tourist Visa Assistance | Global Visa Internationals</news:title>
+            <news:keywords>
+                Italy tourist visa, apply Italy visa from India, Italy Schengen visa,
+                Italy visitor visa, Italy travel visa, Global Visa Internationals
+            </news:keywords>
+        </news:news>
+
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/tourist-visa/Italy-Tourist-Visa-Assistance-GVI.jpg
+            </image:loc>
+            <image:caption>
+                Apply for the Italy Tourist Visa from India with Global Visa Internationals — expert
+                support for documentation, appointment booking, and visa interview preparation.
+            </image:caption>
+            <image:title>Italy Tourist Visa Assistance | Global Visa Internationals</image:title>
+        </image:image>
+
+        <xhtml:link rel="alternate" hreflang="en"
+            href="https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/italy" />
+    </url>
 
     <!-- Singapore Tourist Visa -->
     <url>
@@ -540,7 +684,7 @@
                 <news:language>en</news:language>
             </news:publication>
             <news:publication_date>2025-11-06</news:publication_date>
-            <news:title>New Zealand Business Visas & Immigration Assistance | Global Visa
+            <news:title>New Zealand Business Visas and Immigration Assistance | Global Visa
                 Internationals</news:title>
             <news:keywords>New Zealand business visa, NZ investor visa, entrepreneur visa New
                 Zealand, business immigration NZ, Global Visa Internationals</news:keywords>
@@ -552,7 +696,7 @@
                 https://www.globalvisainternationals.com/business-visa/New-Zealand_Business_Visa_Assistance.webp</image:loc>
             <image:caption>Apply for the New Zealand Business Visa with Global Visa Internationals —
                 expert guidance for investors and entrepreneurs seeking to expand into New Zealand.</image:caption>
-            <image:title>New Zealand Business Visas & Immigration Assistance | Global Visa
+            <image:title>New Zealand Business Visas and Immigration Assistance | Global Visa
                 Internationals</image:title>
         </image:image>
 

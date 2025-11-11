@@ -376,8 +376,8 @@ export default function Schengen_Visa_Assistance() {
                 <li>Denmark</li>
                 <li>Estonia</li>
                 <li>Finland</li>
-                <li>France</li>
-                <li>  <Link href="/Visa/tourist-visa/schengen/germany">Germany</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/france">France</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/germany">Germany</Link></li>
                 <li>Greece</li>
                 <li>Hungary</li>
                 <li>Iceland</li>
