@@ -1,459 +1,444 @@
 import styles from "@/Components/Visa.module.css";
 import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
-
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
+import Script from "next/script";
 
 export const metadata = {
   title:
     "Canada Tourist Visa Assistance: Requirements, Application & Top Places | Global Visa Internationals",
   description:
-    "Apply for a Canada Tourist Visa with expert help from Global Visa Internationals. Learn visa requirements, estimated travel expenses, and must-visit places in Canada.",
+    "Apply for your Canada Tourist Visa from India with Global Visa Internationals (GVI). Get expert help for documentation, visa process, IRCC appointment, and explore top tourist destinations in Canada.",
   keywords:
-    "Canada tourist visa, apply Canada visitor visa, Canada visa consultant, Canada travel guide, visa for Canada from India, Canada immigration, top tourist places in Canada",
+    "Canada tourist visa, apply Canada visitor visa, Canada visa consultant, Canada tourist visa from India, Canada visa requirements 2025, Canada visitor visa fees, Canada visa agents, Canada travel visa assistance",
   robots: "index, follow",
+  canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/canada",
   alternates: {
-    canonical:
-      "https://www.globalvisainternationals.com/Visa/tourist-visa/canada",
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/canada",
   },
+
   openGraph: {
-    title: "Canada Tourist Visa: Application, Requirements & Top Travel Tips",
+    title:
+      "Apply for Canada Tourist Visa from India | Trusted Visa Consultants - GVI",
     description:
-      "Get expert help from Global Visa Internationals on applying for a Canada tourist visa. Learn the visa process, documents needed, and explore popular Canadian destinations.",
+      "Get expert guidance on your Canada Tourist Visa from Global Visa Internationals. Learn about the visa application process, required documents, processing time, and travel tips.",
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/canada",
     siteName: "Global Visa Internationals",
+    locale: "en_IN",
+    type: "website",
+    determiner: "the",
+    countryName: "India",
+    updated_time: "2025-11-12T00:00:00+05:30",
     images: [
       {
         url: "https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg",
         width: 1200,
         height: 630,
-        alt: "Canada Tourist Visa Banner",
+        alt: "Canada Tourist Visa Assistance Banner - Global Visa Internationals",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI-small.jpg",
+        width: 600,
+        height: 315,
+        alt: "Canada Tourist Visa Thumbnail - Global Visa Internationals",
+        type: "image/jpeg",
       },
     ],
-    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     site: "@GLOBALVISA1505",
-    title: "Canada Tourist Visa: Application, Requirements & Top Places",
+    creator: "@GLOBALVISA1505",
+    title: "Canada Tourist Visa: Application, Requirements & Top Places | GVI",
     description:
-      "Plan your dream trip to Canada. Discover visa requirements, costs, and must-see destinations with help from Global Visa Internationals.",
+      "Apply for your Canada Tourist Visa from India with Global Visa Internationals. Expert guidance for visa process, documentation, and IRCC submissions. Trusted consultants since 2017.",
     images: [
-      "https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg",
+      {
+        url: "https://www.globalvisainternationals.com/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg",
+        alt: "Canada Tourist Visa Assistance - Global Visa Internationals",
+      },
     ],
+  },
+
+  other: {
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      logo: "https://www.globalvisainternationals.com/logo.png",
+      foundingDate: "2017",
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals",
+        "https://www.instagram.com/globalvisainternationals",
+        "https://x.com/GLOBALVISA1505",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://www.youtube.com/@globalVisaInternationals",
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-7022213466",
+          contactType: "Customer Service",
+          areaServed: "IN",
+          availableLanguage: ["English", "Hindi"],
+        },
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "No. 61, 2nd Floor, Above Axis Bank, Jyothi Nivas College Road, Koramangala 5th Block",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560095",
+        addressCountry: "IN",
+      },
+    },
   },
 };
 
+
 export default function Canada() {
-  const pageUrl = metadata.alternates.canonical;
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.globalvisainternationals.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Canada Tourist Visa",
-        item: pageUrl,
-      },
-    ],
-  };
+  const canonicalUrl =
+    "https://www.globalvisainternationals.com/Visa/tourist-visa/canada";
 
-  const travelAgencyJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    name: "Global Visa Internationals",
-    url: "https://www.globalvisainternationals.com",
-    logo: "https://www.globalvisainternationals.com/gvilogo.png",
-    description:
-      "Expert Canada Tourist Visa Consultants in Bangalore. Complete documentation, application submission, and personalized guidance.",
-    telephone: "+91-7022213466",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "MG Road",
-      addressLocality: "Bengaluru",
-      addressRegion: "Karnataka",
-      postalCode: "560025",
-      addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 12.9716,
-      longitude: 77.5946,
-    },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-        ],
-        opens: "10:00",
-        closes: "18:00",
+  const schemas = [
+    // 1️⃣ Organization
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      logo: "https://www.globalvisainternationals.com/logo.png",
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals",
+        "https://www.instagram.com/globalvisainternationals",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://x.com/GLOBALVISA1505",
+        "https://www.youtube.com/@globalVisaInternationals",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+91-7022213466",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: "English",
       },
-    ],
-    sameAs: [
-      "https://www.facebook.com/globalvisainternationals/",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/global-visa-internationals/",
-      "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals",
-      "[suspicious link removed]",
-    ],
-  };
+    },
 
-  const touristAttractionsJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Top Tourist Attractions in Canada",
-    itemListElement: [
-      {
-        "@type": "TouristAttraction",
-        name: "Niagara Falls",
-        description:
-          "The world-famous waterfalls on the border of Canada and the United States.",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/e/e0/Niagara_Falls_2017.jpg",
-        url: "https://en.wikipedia.org/wiki/Niagara_Falls",
+    // 2️⃣ LocalBusiness
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Global Visa Internationals",
+      image:
+        "https://www.globalvisainternationals.com/gvilogo.png",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "MG Road",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560025",
+        addressCountry: "IN",
       },
-      {
-        "@type": "TouristAttraction",
-        name: "Banff National Park",
-        description:
-          "Canada's oldest national park, known for its turquoise lakes and stunning Rocky Mountain scenery.",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/1/11/Lake_Louise_Banff_National_Park_Canada.jpg",
-        url: "https://en.wikipedia.org/wiki/Banff_National_Park",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 12.9716,
+        longitude: 77.5946,
       },
-      {
-        "@type": "TouristAttraction",
-        name: "Toronto's CN Tower",
-        description:
-          "An iconic observation and communications tower offering panoramic city views.",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/d/d4/Toronto_-ON-CN_Tower-2015-05-24-_01.jpg",
-        url: "https://en.wikipedia.org/wiki/CN_Tower",
+      url: "https://www.globalvisainternationals.com",
+      telephone: "+91-7022213466",
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          opens: "10:00",
+          closes: "18:00",
+        },
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "230",
       },
-      {
-        "@type": "TouristAttraction",
-        name: "Old Quebec",
-        description:
-          "A historic, walled city with cobblestone streets, charming architecture, and a rich European feel.",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/d/d3/Quebec_City_at_dusk.jpg",
-        url: "https://en.wikipedia.org/wiki/Old_Quebec",
+    },
+
+    // 3️⃣ WebSite
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target:
+          "https://www.globalvisainternationals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
       },
-      {
-        "@type": "TouristAttraction",
-        name: "Vancouver's Stanley Park",
-        description:
-          "A massive urban park with a famous seawall, rainforest trails, and beaches.",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/c/c3/Stanley_Park%2C_Vancouver%2C_BC%2C_Canada.jpg",
-        url: "https://en.wikipedia.org/wiki/Stanley_Park_(Vancouver",
+    },
+
+    // 4️⃣ WebPage
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Canada Tourist Visa Consultants",
+      url: canonicalUrl,
+      description:
+        "Apply for your Canada Tourist Visa from India with expert guidance from Global Visa Internationals. Get complete assistance for documentation, VFS appointment, and IRCC-compliant filing.",
+      inLanguage: "en-IN",
+      isPartOf: {
+        "@type": "WebSite",
+        url: "https://www.globalvisainternationals.com",
       },
-    ],
-  };
+    },
+
+    // 5️⃣ Service (Visa Assistance)
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Canada Tourist Visa Assistance",
+      provider: {
+        "@type": "Organization",
+        name: "Global Visa Internationals",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Canada",
+      },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: "5000",
+        description: "Professional Canada tourist visa consultation, documentation, and application support from India.",
+      },
+    },
+
+    // 6️⃣ BreadcrumbList
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.globalvisainternationals.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Canada Tourist Visa",
+          item: canonicalUrl,
+        },
+      ],
+    },
+
+    // 7️⃣ FAQPage
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How long does it take to get a Canada Tourist Visa from India?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Canada tourist visa processing time usually takes 2 to 6 weeks depending on the IRCC workload and applicant profile.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What are the requirements for a Canada Tourist Visa from India?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You need a valid passport, photo as per IRCC specs, financial proof (bank statements, ITR), travel itinerary, and a cover letter showing purpose of visit and return plans.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need biometrics for a Canada Visitor Visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, biometrics are mandatory for Indian applicants applying for a Canada Tourist Visa. You must visit your nearest VFS center after submitting the online application.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I apply for a Canada Tourist Visa online from India?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, you can apply online through the IRCC portal with professional guidance from Global Visa Internationals for a smooth and accurate submission.",
+          },
+        },
+      ],
+    },
+  ];
+
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
-
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(touristAttractionsJsonLd) }}
+      {/* ✅ All JSON-LD Schemas */}
+      {schemas.map((schema, index) => (
+        <Script
+          key={index}
+          id={`schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
-
-      </Head>
+      ))}
 
       <div className={styles.imageContainer}>
         <img
           src="/tourist-visa/Canada-Tourist-Visa-Assistance-GVI.jpg"
-          alt="Canada Tourist Visa Assistance GVI"
+          alt="Canada Tourist Visa Assistance Banner Global Visa Internationals"
           className={styles.VisaImage}
         />
       </div>
 
+
+
       <div className={styles.VisaSec}>
         <div className={styles.VisaData}>
-          <section>
-            <h2 className={styles.subTitle}>✈ Travel to Canada with a Visitor Visa</h2>
-            <p>
-              Planning a trip to Canada? The Canada Visitor Visa (also known as a Temporary Resident Visa or TRV) allows Indian travelers to visit for tourism, to see family, or for a short-term business trip. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling. We specialize in providing comprehensive Canada visa assistance for Indians.
-            </p>
+
+          {/* ✅ HERO SECTION — SALES + SEO OPTIMIZED */}
+          <section className={styles.salesPitch}>
+            <h1 className={styles.Title}>  Apply for Canada Tourist Visa from India | Expert Canada Visitor Visa Consultants</h1>
+
+            <h4 className={styles.subTitle}>  ✈ Hassle-Free Canada Tourist Visa Assistance by Global Visa Internationals (GVI)</h4>
+
+            <p>  Planning to explore Canada’s breathtaking landscapes, visit your loved ones, or attend short-term business meetings?   Global Visa Internationals (GVI) — India’s trusted Canada tourist visa consultants — makes the process easy, accurate, and stress-free.  From Canada visitor visa application filing to IRCC-compliant documentation and VFS submission,  our expert team ensures your visa is processed smoothly and efficiently.</p>
+
+            <div className={styles.salesPitch}>
+              <p>  Let Global Visa Internationals (GVI) take the stress out of your Canada tourist visa application.  Our experienced consultants provide full Canada visitor visa assistance — ensuring accuracy, embassy compliance,  and faster approval for single or multiple-entry Canada tourist visas.</p>
+              <ul>
+                <li>End-to-End Visa Support: Documentation, form filling, biometrics, and VFS coordination.</li>
+                <li>Higher Success Rate: IRCC-standard documentation and expert case review.</li>
+                <li>Pan-India Support: Bengaluru, Mumbai, Delhi, Hyderabad, Chennai & more.</li>
+              </ul>
+              <p>Fast Approvals • Transparent Pricing • Free Eligibility Assessment</p>
+            </div>
+
+            <a href="tel:+917022213466" className={styles.callButton}>📞 Get Free Eligibility Check</a>
           </section>
 
-          <div className={styles.section}>
-            <section>
-              <h2 className={styles.subTitle}>Visa Processing Overview</h2>
-              <p>
-                Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your Canada visa application from India meets the expectations of Immigration, Refugees and Citizenship Canada (IRCC) and that your travel purpose is clearly and professionally represented. We are a trusted Canada visa consultant in India.
-              </p>
-            </section>
+          {/* ✅ SECTION 2 — WHAT IS A CANADA TOURIST VISA */}
+          <section>
+            <h2 className={styles.subTitle}>What Is a Canada Tourist Visa (Temporary Resident Visa - TRV)?</h2>
+            <p>  A Canada Tourist Visa — officially called a Temporary Resident Visa (TRV) — allows you to visit Canada for tourism, leisure, or short family and business visits.  Indian citizens and other eligible applicants must obtain this visa before entering Canada.   Global Visa Internationals assists with Canada tourist visa online application, document verification, and personalized checklists to meet IRCC standards.</p>
+          </section>
 
-            <section>
-              <h3 className={styles.subTitle}>Our Services Include:</h3>
-              <ul>
-                <li>Online application form filling</li>
-                <li>Covering letter and documentation preparation</li>
-                <li>Personalized checklist and guidance</li>
-                <li>Providing accepted samples for the required documents</li>
-                <li>Verification of documentation</li>
-                <li>Complete walk-through of the Canada tourist visa process</li>
-              </ul>
-            </section>
+          {/* ✅ SECTION 3 — HOW TO APPLY */}
+          <section>
+            <h2 className={styles.subTitle}>How to Apply for a Canada Tourist Visa from India</h2>
+            <p>Our step-by-step process ensures a smooth and compliant Canada visitor visa application:</p>
+            <ol>
+              <li><b>Step 1:</b> Check your <i>Canada tourist visa eligibility 2025</i>.</li>
+              <li><b>Step 2:</b> Gather documents — we create a custom <i>Canada tourist visa document checklist</i>.</li>
+              <li><b>Step 3:</b> Complete the official <i>Canada visa application form (IMM5257)</i> correctly.</li>
+              <li><b>Step 4:</b> Book VFS biometrics appointment and submit your passport.</li>
+              <li><b>Step 5:</b> Track your <i>Canada visa status</i> with real-time updates from our consultants.</li>
+            </ol>
+            <p>  GVI ensures every submission aligns with IRCC visa requirements for higher Canada tourist visa approval rates.</p>
+          </section>
 
-            <section>
-              <h3 className={styles.subTitle}>Timeline:</h3>
-              <p>
-                Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days. This is an essential first step in the overall Canada visa processing time.
-              </p>
-            </section>
+          {/* ✅ SECTION 4 — DOCUMENTS & REQUIREMENTS */}
+          <section>
+            <h2 className={styles.subTitle}>Canada Tourist Visa Requirements (India 2025)</h2>
+            <p>Documents required for Canada tourist visa include:</p>
+            <ul>
+              <li>Valid passport (minimum 6 months validity)</li>
+              <li>Recent digital photo (as per IRCC specifications)</li>
+              <li>Completed Canada visa application form</li>
+              <li>Proof of funds — bank statement (₹4–5 lakh closing balance), ITR, salary slips</li>
+              <li>Travel itinerary, flight tickets, and hotel bookings (handled by GVI)</li>
+              <li>Cover letter and travel purpose (drafted professionally by GVI)</li>
+              <li>Travel insurance — we provide the right plan for your duration</li>
+              <li>Invitation letter if visiting family/friends — GVI shares embassy-approved templates and NOC formats</li>
+            </ul>
+            <p>  Every file is verified by Global Visa Internationals to meet IRCC submission standards and avoid rejections.</p>
+          </section>
+
+          {/* ✅ SECTION 5 — WHY CHOOSE GVI */}
+          <div className={styles.salesPitch}>
+            <p>  Choose Global Visa Internationals (GVI) — your expert Canada tourist visa consultant in India.  Whether it’s a family visit, vacation, or sightseeing trip, our team ensures your Canada visitor visa application is complete and compliant.</p>
+            <ul>
+              <li>Accurate document verification — zero errors or missing details</li>
+              <li>Strong proof of funds & intent letters — improved IRCC credibility</li>
+              <li>Dedicated case manager — real-time updates until visa approval</li>
+            </ul>
+            <a href="tel:+917022213466" className={styles.callButton}>📞 Call Now for a Free Eligibility Check</a>
           </div>
 
+          {/* ✅ SECTION 6 — BANK STATEMENT */}
           <section>
-            <h2 className={styles.subTitle}> Canada Visa Duration Rule</h2>
-            <p>
-              A Canada Visitor Visa typically allows you to stay for up to 6 months. A multiple entry Canada visa for Indians may be issued with a validity of up to 10 years, or until your passport expires, whichever comes first. Note that even with a multiple-entry visa, you can only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications.
-            </p>
-            <p>
-              With GVI, you’ll never miscalculate your stay—we ensure full compliance with Canadian visa rules.
-            </p>
+            <h2 className={styles.subTitle}>Canada Tourist Visa Bank Statement Requirement</h2>
+            <p>  To meet Canada tourist visa financial proof guidelines, applicants should maintain a balance of ₹3–5 lakh or more for the past 6 months.  Include ITRs, salary slips, and property/business proofs.  Our experts help align your bank statement for Canada visitor visa with IRCC’s financial expectations.</p>
           </section>
 
+          {/* ✅ SECTION 7 — FEES */}
           <section>
-            <h2 className={styles.subTitle}>Canada Visitor & Business Visa Documents & Requirements for Indian Applicants</h2>
-            <p>
-              Before applying, ensure you meet the Canada visa eligibility for Indians. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents. We provide a detailed Canada tourist visa checklist.
-            </p>
-          </section>
-
-          <section>
-            <h3 className={styles.subTitle}>1. Valid Passport & Travel History</h3>
+            <h2 className={styles.subTitle}>Canada Tourist Visa Fees (India 2025)</h2>
             <ul>
-              <li>
-                <b className={styles.strong}>Valid Passport:</b> Must be valid for the entire duration of your stay in Canada, with at least one blank page for the visa stamp. We guide you on all Canada visa on Indian passport requirements.
-              </li>
-              <li>
-                <b className={styles.strong}>Travel History:</b> Previous international travel and a record of international travel stamps are crucial. GVI helps you highlight these to strengthen your Canada visa application.
-              </li>
+              <li>IRCC Visa Fee: CAD$100 (approx. ₹6,100)</li>
+              <li>Biometrics Fee: CAD$85 (approx. ₹5,200)</li>
+              <li>VFS Service Fee: ₹800–₹1,200 (approx.)</li>
+            </ul>
+            <p>
+              GVI’s visa service charge covers document preparation, form filing, review, and embassy coordination.
+            </p>
+          </section>
+
+          {/* ✅ SECTION 8 — PROCESSING TIME */}
+          <section>
+            <h2 className={styles.subTitle}>Canada Tourist Visa Processing Time (India 2025)</h2>
+            <p>  Processing time: Typically 2–6 weeks, depending on IRCC workload.  Global Visa Internationals prepares your file within 3–5 working days for prompt submission and tracking.</p>
+          </section>
+
+          {/* ✅ SECTION 9 — AVOID REJECTION */}
+          <section>
+            <h2 className={styles.subTitle}>Avoid Rejection — Apply Professionally</h2>
+            <p>  Most Canada tourist visa rejections happen due to missing paperwork or weak financial proof.  Global Visa Internationals ensures:</p>
+            <ul>
+              <li>Complete documentation as per IRCC checklist</li>
+              <li>Clear proof of funds and family ties to home country</li>
+              <li>Professionally drafted travel intent and cover letter</li>
             </ul>
           </section>
 
-          <section>
-            <h3 className={styles.subTitle}>2. Financial Proof: Bank Statements & Funds</h3>
-            <p>
-              You must prove you have sufficient funds to support your trip without working or relying on public funds. The consulate needs to be convinced you can support your entire stay. We recommend maintaining a minimum balance of ₹3–4 lakh (or approx. CAD$4,700-$62,000) in your bank account. This is a key part of the proof of funds for Canada visitor visa. Avoid any large, unexplained transactions in the months leading up to your application, as this may raise suspicion with the embassy.
-            </p>
+          {/* ✅ FINAL CTA */}
+          <section className={styles.ctaSection}>
+            <div className={styles.salesPitch}>
+              <p>  Ready to start your Canada tourist visa application? Let Global Visa Internationals handle your case from start to finish!  Enjoy accurate filing, quick eligibility checks, and stress-free embassy coordination.</p>
+              <p>  With our expert Canada visitor visa assistance, you can focus on planning your Canada trip while we take care of the paperwork.</p>
+            </div>
+
+            <h2 className={styles.subTitle}>Contact Global Visa Internationals (GVI)</h2>
             <ul>
-              <li>
-                <b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. We advise on the Canada tourist visa bank statement requirement.
-              </li>
-              <li>
-                <b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 3 years to prove a stable income source.
-              </li>
+              <li><b>Call Now:</b> +91-7022213466</li>
+              <li><b>Email:</b> operations@globalvisainternationals.com</li>
+              <li><b>Start Online Application:</b> <a href="#">Apply Now</a></li>
             </ul>
+
+            <a href="tel:+917022213466" className={styles.callButton}>📞 Get Free Eligibility Check</a>
           </section>
 
-          <section>
-            <h3 className={styles.subTitle}>3. Employment & Professional Documentation</h3>
-            <ul>
-              <li>
-                <b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.
-              </li>
-              <li>
-                <b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 3 years’ ITRs. We also recommend a brief business profile. This also applies for Canada visa for retired persons.
-              </li>
-              <li>
-                <b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university. We also assist with Canada tourist visa for minors.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h3 className={styles.subTitle}>4. Travel & Accommodation Proof</h3>
-            <ul>
-              <li>
-                <b className={styles.strong}>Flight & Hotel Bookings:</b> Provide a detailed travel itinerary covering your entire stay. It's not mandatory to have confirmed return flight tickets, but a travel plan is required.
-              </li>
-              <li>
-                <b className={styles.strong}>Accommodation Proof:</b> Provide confirmed hotel reservations covering your entire stay. If staying with a friend or relative, you will need a Canada visa invitation letter and proof of their Canadian address and immigration status. We assist with applications for a Canada visa for family and Canada visa for aged parents.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h3 className={styles.subTitle}>5. Visa Cover Letter & Itinerary</h3>
-            <p>
-              A well-written cover letter is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism, business meeting), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional Canada tourist visa cover letter sample for every client to maximize their chances of success.
-            </p>
-          </section>
-
-          <section>
-            <h2 className={styles.subTitle}>Canada Visitor Visa Fees (India 2025)</h2>
-            <p>
-              As of 2025, the Canada visa fees are subject to change. Fees are paid to the Government of Canada (IRCC) and VFS Global. The fees listed below are approximate and do not include additional services. We provide transparent guidance on the Canada tourist visa cost in rupees.
-            </p>
-            <ul>
-              <li>
-                <b className={styles.strong}>IRCC Visitor Visa Application Fee:</b> CAD$100 (approx. ₹6,100)
-                <br />
-                <b className={styles.strong}>Biometrics Fee:</b> CAD$85 (approx. ₹5,200)
-              </li>
-              <li>
-                <b className={styles.strong}>VFS Global Service Charges:</b> Vary based on services availed (e.g., package transmission, courier, etc.)
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className={styles.subTitle}>Common Reasons for Canada Visa Rejection & How We Solve Them</h2>
-            <p>
-              Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues. We help you understand the most frequent Canada tourist visa rejection reasons.
-            </p>
-            <ul>
-              <li>
-                <b className={styles.strong}>Incomplete/Mismatched Documents:</b> We perform a professional document review as per IRCC standards to ensure everything is perfect.
-              </li>
-              <li>
-                <b className={styles.strong}>Insufficient Proof of Funds:</b> We advise you on the exact financial requirements and review your bank statements to ensure compliance.
-              </li>
-              <li>
-                <b className={styles.strong}>Unclear Purpose of Travel:</b> Our expert-prepared cover letters and itineraries clearly explain your travel plans and ties to India.
-              </li>
-              <li>
-                <b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className={styles.subTitle}>Canada Visa Processing Time from India</h2>
-            <p>
-              The Canada visa processing time from India can vary. Here are some general timelines:
-            </p>
-            <ul>
-              <li>
-                <b className={styles.strong}>Standard Processing Time:</b> The IRCC service standard is to process most visitor visa applications within a few weeks. Wait times can vary and are often updated on the official IRCC website. The Canada tourist visa processing time VFS is a key part of this.
-              </li>
-              <li>
-                <b className={styles.strong}>Peak Season:</b> Can extend to 60 working days or more.
-              </li>
-              <li>
-                <b className={styles.strong}>Our Service:</b> Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to the IRCC in a timely manner. We help you track Canada visa application status and understand Canada visa appointment waiting time in India.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className={styles.subTitle}>The VFS Global Application Process: A Step-by-Step Guide</h2>
-            <p>
-              As VFS Global is the official partner for Canada Visas and Immigration in India, we manage this process for you. Here’s a quick overview of what to expect:
-            </p>
-            <ol>
-              <li>
-                <b className={styles.strong}>Online Application & Appointment Booking:</b> We fill out the online form on the IRCC website and book your VFS appointment for you. We are experts in the VFS Global Canada visa process.
-              </li>
-              <li>
-                <b className={styles.strong}>Document Submission & Biometrics:</b> You visit the VFS center in person to submit the verified documents and provide your fingerprints and a photo.
-              </li>
-              <li>
-                <b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.
-              </li>
-            </ol>
-            <a href="https://visa.vfsglobal.com/ind/en/can/" target="_blank" rel="noopener noreferrer">
-              VFS Global — Canada Visas & Immigration
-            </a>
-          </section>
-
-          <h2 className={styles.subTitle}>Transparent Pricing</h2>
-          <p>
-            Choose the right Canada visa assistance package for your needs:
-          </p>
-          <ul>
-            <li>
-              <b className={styles.strong}>Basic (₹5,999):</b> Checklist + document review
-            </li>
-            <li>
-              <b className={styles.strong}>Standard (₹8,999):</b> End-to-end application, filing, appointment booking, and biometrics guidance
-            </li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <p>
-            At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:
-          </p>
-          <ul>
-            <li>2,200+ Canada visas processed since 2017</li>
-            <li>98% client satisfaction rate across India</li>
-            <li>Specialized assistance for re-application after rejection</li>
-            <li>Experienced visa consultants who provide personalized, country-specific advice.</li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Ready to Apply?</h2>
-          <p>
-            With GVI, you don’t need to worry about rejections or missing documents.
-          </p>
-          <p>
-            Start your Canada visa application today with Global Visa Internationals and travel to Canada with confidence. We are recognized as a best visa consultancy for Canada.
-          </p>
-          <br />
-          <a href="/contact" className={styles.ctaButton}>
-            Get a free consultation today!
-          </a>
+          <p>  Global Visa Internationals (GVI) — your trusted Canada tourist visa consultant in India —  offers end-to-end Canada visa assistance with a high visa approval success rate.  Start your Canada travel journey today with expert guidance from GVI.</p>
         </div>
+
+
         <div className={styles.formSection}>
           <VisaForm />
         </div>
       </div>
-      {/* <section id="ClientReviews" className={styles.reviewSection}>
-        <div
-          className="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5"
-          data-elfsight-app-lazy
-        ></div>
-      </section> */}
+
       <section>
 
         <ReviewSchema />
