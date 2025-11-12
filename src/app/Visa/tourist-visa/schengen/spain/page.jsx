@@ -344,7 +344,7 @@ export default function Spain_Tourist_Visa_Assistance() {
                     <p>
                         The standard rule is 90 days in any 180-day period. Visa validity, multiple-entry permissions and the length of stay are
                         decided by the consulate — a clean travel history and strong documentation increase your chances for
-                        <b className={styles.strong}> multiple-entry tourist visas for Spain</b>. :contentReference[oaicite:0]{index = 0}
+                        <b className={styles.strong}> multiple-entry tourist visas for Spain</b>
                     </p>
 
                     <h2 className={styles.subTitle}>How to Apply for a Spain Tourist Visa (India)</h2>
@@ -376,7 +376,7 @@ export default function Spain_Tourist_Visa_Assistance() {
 
                     <p className={styles.note}>
                         <b className={styles.strong}>Timeline:</b> Typical Spain tourist visa processing time from India is usually processed within around 15 calendar days,
-                        though some applications may take longer depending on the consulate, peak season or additional checks. Apply early to avoid delays. :contentReference[oaicite:1]{index = 1}
+                        though some applications may take longer depending on the consulate, peak season or additional checks. Apply early to avoid delays.
                     </p>
 
                     <h2 className={styles.subTitle}>Spain Tourist Visa Requirements (India)</h2>
@@ -389,7 +389,7 @@ export default function Spain_Tourist_Visa_Assistance() {
                         <li>Proof of funds — bank statements and/or sponsor letter (see <i>Spain visa bank statement requirement India</i>)</li>
                         <li>Return flight booking and confirmed hotel reservation or host invitation</li>
                     </ul>
-                    <p className={styles.note}>GVI verifies each document to ensure compliance with Spanish consulate and visa-centre standards. :contentReference[oaicite:2]{index = 2}</p>
+                    <p className={styles.note}>GVI verifies each document to ensure compliance with Spanish consulate and visa-centre standards.</p>
 
                     <h2 className={styles.subTitle}>Spain Tourist Visa Documents Checklist (India)</h2>
                     <p>Complete checklist we verify for you:</p>
@@ -404,10 +404,10 @@ export default function Spain_Tourist_Visa_Assistance() {
 
                     <h2 className={styles.subTitle}>Spain Tourist Visa Fees India — 2025 (Indicative)</h2>
                     <ul>
-                        <li><b className={styles.strong}>Adult Short-Stay Schengen Fee:</b> Generally in the range of €80–€90 (approx. INR 7,200–9,300) depending on exchange rates and the consulate/payment method. :contentReference[oaicite:3]{index = 3}</li>
-                        <li><b className={styles.strong}>Children (6–12 yrs):</b> Reduced fee (commonly half the adult fee). :contentReference[oaicite:4]{index = 4}</li>
+                        <li><b className={styles.strong}>Adult Short-Stay Schengen Fee:</b> Generally in the range of €80–€90 (approx. INR 7,200–9,300) depending on exchange rates and the consulate/payment method.</li>
+                        <li><b className={styles.strong}>Children (6–12 yrs):</b> Reduced fee (commonly half the adult fee).</li>
                         <li><b className={styles.strong}>Children below 6 yrs:</b> Usually exempt.</li>
-                        <li><b className={styles.strong}>Visa-centre / Service Charges:</b> Additional; BLS/VFS or other centre fees and courier charges vary by city. :contentReference[oaicite:5]{index = 5}</li>
+                        <li><b className={styles.strong}>Visa-centre / Service Charges:</b> Additional; BLS/VFS or other centre fees and courier charges vary by city. </li>
                     </ul>
                     <p>
                         Fees are set by the consulate and may change — GVI provides a current fee breakdown at application time so there are no surprises.
@@ -444,14 +444,14 @@ export default function Spain_Tourist_Visa_Assistance() {
                     <p>
                         Standard processing is usually around 15 calendar days from the date of submission, but processing can extend to 25–30 days
                         (or more during peak season or where additional checks are required). GVI tracks your application at every stage and provides
-                        timely updates so you always know where your file is. :contentReference[oaicite:6]{index = 6}
+                        timely updates so you always know where your file is.
                     </p>
 
                     <h2 className={styles.subTitle}>Spain Embassy & Visa-Centre Appointments in India</h2>
                     <p>
                         Spain applications in India are submitted through authorised visa-centres (BLS International / VFS in some jurisdictions) or directly
                         to Spanish consulates in major cities. GVI handles slot booking, biometrics appointment coordination and submission logistics to
-                        ensure smooth, on-time filing. :contentReference[oaicite:7]{index = 7}
+                        ensure smooth, on-time filing.
                     </p>
 
                     <h2 className={styles.subTitle}>Special Cases — Family, Students & Multi-Entry</h2>
@@ -515,7 +515,7 @@ export default function Spain_Tourist_Visa_Assistance() {
 
                     <h2 className={styles.subTitle}>FAQ — Quick Answers</h2>
                     <ul>
-                        <li><b className={styles.strong}>Q: How long does a Spain tourist visa take in India?</b> — Typical processing time is around 15 calendar days; allow extra time during peak season. :contentReference[oaicite:8]{index = 8}</li>
+                        <li><b className={styles.strong}>Q: How long does a Spain tourist visa take in India?</b> — Typical processing time is around 15 calendar days; allow extra time during peak season. </li>
                         <li><b className={styles.strong}>Q: What is the Schengen travel insurance requirement?</b> — Minimum €30,000 medical coverage valid across the Schengen area.</li>
                         <li><b className={styles.strong}>Q: What bank balance is needed?</b> — Depends on travel plan; GVI recommends amounts and formats that strengthen submissions.</li>
                         <li><b className={styles.strong}>Q: Can students apply?</b> — Yes — we help with student travel documents and supporting evidence for short academic visits.</li>
