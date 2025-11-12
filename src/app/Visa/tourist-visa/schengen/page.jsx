@@ -378,10 +378,10 @@ export default function Schengen_Visa_Assistance() {
                 <li>Finland</li>
                 <li><Link href="/Visa/tourist-visa/schengen/france">France</Link></li>
                 <li><Link href="/Visa/tourist-visa/schengen/germany">Germany</Link></li>
-                <li>Greece</li>
+                <li><Link href="/Visa/tourist-visa/schengen/greece">Greece</Link></li>
                 <li>Hungary</li>
                 <li>Iceland</li>
-                <li>Italy</li>
+                <li><Link href="/Visa/tourist-visa/schengen/italy">Italy</Link></li>
                 <li>Latvia</li>
                 <li>Liechtenstein</li>
                 <li>Lithuania</li>
@@ -394,7 +394,7 @@ export default function Schengen_Visa_Assistance() {
                 <li>Romania</li>
                 <li>Slovakia</li>
                 <li>Slovenia</li>
-                <li>Spain</li>
+                <li><Link href="/Visa/tourist-visa/schengen/spain">Spain</Link></li>
                 <li>Sweden</li>
                 <li>Switzerland</li>
               </ul>
