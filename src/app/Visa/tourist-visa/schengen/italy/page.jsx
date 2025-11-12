@@ -511,10 +511,6 @@ export default function Italy_Tourist_Visa_Assistance() {
                     </ul>
                 </div>
 
-
-
-
-
                 <div className={styles.formSection}>
                     <VisaForm />
                 </div>
