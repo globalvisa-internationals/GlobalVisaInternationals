@@ -76,9 +76,9 @@ export default function ReviewCarouselClient({ reviews = [] }) {
                             <span className={styles.blue}>g</span>
                             <span className={styles.green}>l</span>
                             <span className={styles.red}>e</span>
-                            <span> </span>
+                            <span></span>
                         </span>
-                        Reviews
+                        {" "} Reviews
                     </div>
 
                     <div className={styles.ratingSummary}>
@@ -177,7 +177,7 @@ export default function ReviewCarouselClient({ reviews = [] }) {
                                             <span className={styles.blue}>g</span>
                                             <span className={styles.green}>l</span>
                                             <span className={styles.red}>e</span>
-                                            <span> </span></b>
+                                            <span>{" "} </span></b>
                                     </p>
                                     <div className={styles.stars}>
                                         {[...Array(selectedReview.rating)].map((_, j) => (

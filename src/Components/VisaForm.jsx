@@ -30,7 +30,7 @@ export default function VisaForm() {
     const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
 
     if (submittedDate !== today) {
-      const timer = setTimeout(() => setShowPopup(true), 5000);
+      const timer = setTimeout(() => setShowPopup(true), 1000);
       return () => clearTimeout(timer);
     }
   }, []);

@@ -298,6 +298,10 @@ export default function France_Tourist_Visa_Assistance() {
                         <p>
                             <b className={styles.strong}>With GVI, your France visa application is smooth, accurate, and completely stress-free.</b>
                         </p>
+                        {/* Call-to-Action Button */}
+                        <a href="tel:+917022213466" className={styles.callButton}>
+                            📞 Get Free Eligibility Check
+                        </a>
                     </div>
 
                     {/* --- End Sales Pitch --- */}
@@ -495,6 +499,10 @@ export default function France_Tourist_Visa_Assistance() {
                                 <b className={styles.strong}>Start Online Application:</b> <a href="#">Apply Now</a>
                             </li>
                         </ul>
+                        {/* Call-to-Action Button */}
+                        <a href="tel:+917022213466" className={styles.callButton}>
+                            📞 Get Free Eligibility Check
+                        </a>
                     </div>
 
                     <p>
