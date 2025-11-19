@@ -328,6 +328,7 @@ export default function EU_Entry_Exit_System_EES_Explained_For_Indians() {
                         })}
                     </span>
                 </div>
+
                 <AnimatedHR direction="left" duration={1.2} />
 
                 <p>
@@ -338,6 +339,19 @@ export default function EU_Entry_Exit_System_EES_Explained_For_Indians() {
                     efficient, and transparent while helping authorities track travel durations more
                     accurately.
                 </p>
+
+                {/* CTA BLOCK 1 – Schengen Tourist Visa */}
+                <div className="ctaBox">
+                    <h3>Planning to Visit Europe?</h3>
+                    <p>
+                        If you're preparing for a Europe trip, get expert help for smooth and fast
+                        visa approval. Apply for your Schengen Tourist Visa with Global Visa
+                        Internationals.
+                    </p>
+                    <a href="https://www.globalvisainternationals.com/Visa/tourist-visa/schengen">
+                        Apply for Schengen Tourist Visa →
+                    </a>
+                </div>
 
                 <h2>What Is the Entry/Exit System (EES)?</h2>
 
@@ -359,6 +373,18 @@ export default function EU_Entry_Exit_System_EES_Explained_For_Indians() {
                     These digital records completely replace the manual passport stamps previously
                     used at Schengen borders.
                 </p>
+
+                {/* CTA BLOCK 2 – UK Tourist Visa */}
+                <div className="ctaBox">
+                    <h3>Travelling to the UK Instead?</h3>
+                    <p>
+                        The UK has its own biometric system separate from the EU. Get professional
+                        guidance for faster visa approvals.
+                    </p>
+                    <a href="https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom">
+                        Apply for UK Tourist Visa →
+                    </a>
+                </div>
 
                 <h2>When Did the EES Start?</h2>
 
@@ -393,6 +419,18 @@ export default function EU_Entry_Exit_System_EES_Explained_For_Indians() {
                     and all other non-EU nations.
                 </p>
 
+                {/* CTA BLOCK 3 – Schengen Business Visa */}
+                <div className="ctaBox">
+                    <h3>Travelling to Europe for Business?</h3>
+                    <p>
+                        Get assistance with documentation, appointments, and smooth business visa
+                        processing for all Schengen countries.
+                    </p>
+                    <a href="https://www.globalvisainternationals.com/Visa/business-visa/schengen">
+                        Apply for Schengen Business Visa →
+                    </a>
+                </div>
+
                 <h2>Which Countries Are Included in the EES?</h2>
 
                 <p>The EES applies across the entire Schengen area, including:</p>
@@ -411,6 +449,22 @@ export default function EU_Entry_Exit_System_EES_Explained_For_Indians() {
                     Indian travellers entering any of these countries will be processed under the
                     new EES system.
                 </p>
+
+                {/* CTA BLOCK 4 – EU/UK Refusal Support */}
+                <div className="ctaBox">
+                    <h3>Faced a Visa Refusal?</h3>
+                    <p>
+                        Get expert help for reapplication after a refusal from the UK or any European
+                        country. Strong documentation improves approval chances.
+                    </p>
+                    <a href="https://www.globalvisainternationals.com/Visa/refusal-visa/uk">
+                        UK Refusal Assistance →
+                    </a>
+                    <br />
+                    <a href="https://www.globalvisainternationals.com/Visa/refusal-visa/europe">
+                        Europe Visa Refusal Assistance →
+                    </a>
+                </div>
 
                 <h2>How Will the EES Work for Indian Travellers?</h2>
 
@@ -470,7 +524,7 @@ export default function EU_Entry_Exit_System_EES_Explained_For_Indians() {
                     <li>Ensure your passport is valid and undamaged for smooth biometric capture</li>
                     <li>
                         Even if you gave biometrics during your Schengen visa application, you must
-                        <strong>give biometrics again at the border</strong> under EES
+                        <strong> give biometrics again at the border</strong> under EES
                     </li>
                     <li>Keep extra buffer time during arrival for the initial transition period</li>
                 </ul>
@@ -485,12 +539,11 @@ export default function EU_Entry_Exit_System_EES_Explained_For_Indians() {
                     smooth and stress-free entry into the Schengen zone.
                 </p>
 
-
-
                 <AnimatedHR direction="left" duration={1.2} />
                 <VisaForm />
 
             </article>
+
 
 
 
