@@ -990,5 +990,41 @@
         </image:image>
     </url>
 
+    <url>
+        <loc>
+            https://www.globalvisainternationals.com/blog/EU-Introduces-New-Digital-Entry-Exit-System-for-Foreign-Travellers-Important-Update-for-Indian-Travellers
+        </loc>
+        <news:news>
+            <news:publication>
+                <news:name>Global Visa Internationals</news:name>
+                <news:language>en</news:language>
+            </news:publication>
+            <news:publication_date>2025-11-19</news:publication_date>
+            <news:title>
+                EU Introduces New Digital Entry/Exit System (EES) for Foreign Travellers | Important
+                Update for Indian Travellers
+            </news:title>
+            <news:keywords>
+                EU Entry Exit System 2025, EES for Indian travellers, Schengen border changes,
+                Europe travel update, biometric entry exit system EU
+            </news:keywords>
+        </news:news>
+        <lastmod>2025-11-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/blogBannerImages/EU-Entry-Exit-System-EES-Explained-For-Indians.jpg
+            </image:loc>
+            <image:caption>
+                The EU has introduced a new digital Entry/Exit System (EES) requiring biometric
+                checks for all non-EU travellers, including Indian visitors.
+            </image:caption>
+            <image:title>
+                EU Entry/Exit System (EES) Explained for Indian Travellers | Global Visa
+                Internationals
+            </image:title>
+        </image:image>
+    </url>
 
 </urlset>
