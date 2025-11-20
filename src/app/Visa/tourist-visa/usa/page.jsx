@@ -206,52 +206,106 @@ export default function USATouristVisa() {
 
         <div className={styles.VisaData}>
           <h1 className={styles.Title}>USA Tourist Visa Assistance from India</h1>
+          <p>Planning to travel to the United States? The process of applying for a USA tourist visa or USA visitor visa can feel overwhelming—especially when you're unsure about the right category, documents, or interview preparation. That’s where Global Visa Internationals makes the difference.</p>
+          <p>Understanding the US B1 visa (Business), US B2 visa (Tourism/Visit), and the combined B1/B2 visa is essential before you begin your USA visa application. Our expert team simplifies the entire journey, guiding you through every step with clarity, accuracy, and professional support.</p>
 
-          <p>Planning your dream trip to the United States? Navigating the USA tourist visa process from India can be complex, but with expert assistance from Global Visa International, it becomes remarkably straightforward. Whether you need a B2 visa USA from India, the popular 10 year US tourist visa for Indians, or guidance on USA visitor visa requirements, our dedicated team ensures a seamless process from documentation to approval.</p>
-
-          <p> Get started today with a free consultation from Global Visa Internationals – your trusted partner for USA visa assistance!</p>
-
-          <h2 className={styles.subTitle}>Understanding the USA Visa Process for Indians</h2>
-          <p>Successfully navigating the US visa process from India requires meticulous preparation and understanding of specific requirements. At Global Visa Internationals, we provide comprehensive USA Visa Application form filling assistance, personalized US visa interview preparation, and clear explanations of all US visa fees from India. Many applicants wonder about the exact USA tourist visa cost from India or the current US visa application fee in rupees – we offer completely transparent pricing with no hidden charges.</p>
-
-          <p>Our experts guide you through all available options including US visa premium processing India services and explain typical USA visa agent charges India so you know exactly what you're paying for with no surprises.</p>
-
-          <p>Ready to begin your American journey? Contact Global Visa Internationals now and let us simplify your entire USA visa process!</p>
-
-          <h2 className={styles.subTitle}>How to Apply for USA Visa Online from India</h2>
-          <p>Want a streamlined, stress-free visa application experience? You can now apply for US visa online from India with confidence through Global Visa Internationals. Whether you're applying through the official US visa through VFS Global channel, visiting a US visa application center in India, or exploring other authorized platforms, we help you compare and select the optimal application route for your specific situation.</p>
-
-          <p>Our services extend beyond the initial application – we assist you in learning how to check US visa status India updates and provide comprehensive US visa document checklist India guidance. We also share valuable insights from previous US visa success stories India applicants to help you make informed decisions and strengthen your application.</p>
-
-          <p> Apply online with confidence today with Global Visa Internationals and receive expert guidance at every step!</p>
-
-          <h2 className={styles.subTitle}>Essential USA Visa Documents for Indian Applicants</h2>
-          <p>Submitting complete and accurate documentation is arguably the most crucial aspect of your US visa application process. Our team at Global Visa Internationals provides meticulous assistance in preparing your complete US visa documents for Indians package, including proper preparation of USA visa financial documents, understanding the US visa bank balance requirements, and correctly submitting your ITR for US visa India applicants.</p>
-
-          <p>We ensure you have the appropriate bank statements for US visa applications, verify your passport validity for US visa requirements, and help craft a convincing US visa travel itinerary. For those needing sponsor support, we provide expert guidance on preparing proper USA visa sponsor documents. With our comprehensive document support, you'll meet all requirements with complete confidence.</p>
-
-          <p> Avoid rejection and unnecessary delays — Request your personalized document checklist from Global Visa Internationals experts today!</p>
-
-          <h2 className={styles.subTitle}>USA Visa Processing Time from India</h2>
-          <p>Understanding realistic timelines is essential for planning your American adventure. Our team at Global Visa Internationals provides clear explanations of typical US visa processing time from India, offers specialized support for urgent US visa India requests, and diligently tracks progress throughout your application journey. While standard US tourist visa processing typically takes 15-20 working days, we can explore US visa premium processing India options if you need expedited service.</p>
-
-          <p>For those planning extended visits, we provide guidance on how to potentially extend US tourist visa from India, help you understand the US visa validity period nuances, and clarify the important difference between visa validity vs stay duration USA regulations.</p>
-
-          <p> Facing time constraints? Inquire about Global Visa International's priority fast-track visa service!</p>
-
-          <h2 className={styles.subTitle}>Finding a Trusted USA Visa Agent in India</h2>
-          <p>When searching for a genuinely trusted US visa agent India or identifying the truly best visa consultancy for USA India, thousands of Indian travelers consistently choose Global Visa Internationals. We protect you from potential pitfalls by helping you avoid US visa scams India operators through completely transparent guidance and ethical practices.</p>
-
-          <p>Want authentic, unbiased feedback? We encourage exploring genuine Indian forum US visa recommendations and provide current information on actual US visa approval rates India statistics and upcoming USA visa policy India 2025 updates. Stay thoroughly informed about new US visa rules India 2024 implementations and understand the real facts behind common US visa rejection reasons India scenarios.</p>
-
-          <p>Don't gamble with your travel plans. Choose Global Visa Internationals – consistently reliable, thoroughly experienced, and trusted by Indian travelers nationwide!</p>
+          <h2>Exclusive GVI Advantage — Get Your US Visa Appointment in as Fast as 7 Days!</h2>
+          <ul>
+            <li>US Visa Appointment in Just 7 Days — Yes, GVI makes it happen!</li>
+            <li>While others wait 13–15 months, we unlock early slots within 7 to 30 days.</li>
+            <li>Even high-risk nationalities secure approvals with our expert case preparation.</li>
+            <li>From DS-160 filing to interview coaching, GVI handles everything end-to-end.</li>
+            <li>Don’t waste a year waiting — get your US visa appointment much sooner!</li>
+          </ul>
+          <address className={styles.address}>
+            <li>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore – 560025, Karnataka</li>
+            <a href="tel:+917022213466" className={styles.callButton}>  📞 Get Free Eligibility Check</a>
+            <li>Email: <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></li>
+          </address>
 
 
+          <p>From identifying the exact USA tourist visa requirements and USA visitor visa requirements to assembling your USA tourist visa documents and USA visitor visa documents, we ensure your application is strong, complete, and well-prepared. Our documentation checks and form-filling assistance reduce errors and save you time.</p>
+          <p>The USA visa appointment and USA visa interview are crucial stages. Many applicants feel unsure about commonly asked USA visa interview questions, interview strategy, and required documents. Our personalized mock interviews and one-on-one coaching help you attend with confidence. We also guide you on USA visa processing time, USA tourist visa fees, USA visitor visa fees, and next steps after your appointment.</p>
+          <p>Whether you're applying for the first time or seeking guidance after a previous rejection, we help you understand USA tourist visa eligibility, USA visitor visa eligibility, and provide strategies to avoid common US visa rejection reasons. Our proven USA visa approval tips ensure your profile is presented in the best possible way.</p>
+          <p>If you need step-by-step help with your USA tourist visa checklist, USA visitor visa checklist, biometrics, DS-160 completion, or the overall USA visa online application, Global Visa Internationals is here to support you from start to finish.          </p>
+
+          <h2>How Global Visa Internationals Helps You</h2>
+
+          <p>Global Visa Internationals (GVI) takes the stress out of your USA visa process by managing everything with precision, speed, and embassy-compliant accuracy. Whether you're applying for a B1, B2, or B1/B2 visa, our expert team handles your case from start to finish.</p>
+          <h2>Complete, End-to-End USA Visa Assistance</h2>
+          <h4>A-to-Z Documentation Handling</h4>
+          <ul>
+            <li>We collect, prepare, and thoroughly verify all your required USA visa documents.</li>
+            <li>Your documents are organized exactly as per US Embassy standards.</li>
+          </ul>
+
+          <h4>Accurate DS-160 Form Filling</h4>
+          <ul>
+            <li>Our experts complete your DS-160 form with precision, ensuring all information is accurate and consistent.</li>
+            <li>This minimizes errors that could lead to delays or rejections.</li>
+          </ul>
+          <h3>Tailored Case File Based on Your Profile</h3>
+          <p>Every traveler is unique — your case file should be too.</p>
+          We build a customized documentation plan and checklist based on:
+          <ul>
+            <li>Travel history</li>
+            <li>Personal background</li>
+            <li>Financial profile</li>
+            <li>Purpose of travel</li>
+          </ul>
+          <h3>Professional Drafting Support</h3>
+          We prepare all essential drafts:
+          <ul>
+            <li>Expert cover letter for the US Embassy</li>
+            <li>NOC / Leave approval letter samples</li>
+            <li>Supporting financial explanations if needed</li>
+          </ul>
+          <h3>Notarization Assistance</h3>
+          <p>If any document needs notarization, GVI handles everything.
+            <br />
+            No need to visit lawyers or courts.</p>
+
+
+          <h2>Global visa internationals USA Expert Support for All USA Visa Categories</h2>
+
+          <h4>B1 Visa — Business Purpose  </h4>
+          Business meetings, conferences, training travel.
+          <h4>B2 Visa — Tourism & Family Visits</h4>
+          Holiday trips, tourism, visiting friends and family.
+          <h4>B1/B2 Visa — Combined Travel</h4>
+          For travelers who need both tourism + business flexibility.
+
+          <h2>Interview & Biometrics Preparation</h2>
+          <ul>
+            <li>Mock interview sessions to help you answer confidently</li>
+            <li>Guidance on US visa appointment booking</li>
+            <li>Step-by-step support for biometric procedures at VAC</li>
+
+          </ul>
+          We make sure you walk into your U.S. Embassy interview fully prepared.
+          <h2>Avoid USA Visa Rejection</h2>
+          <p>Our specialists review your case deeply to:</p>
+          <ul>
+            <li>Identify potential red flags</li>
+            <li>Strengthen weak areas</li>
+            <li>Strategize your approval approach</li>
+          </ul>
+          <p>Your profile receives a complete eligibility review to maximize your success rate</p>
+          <h2> Global visa internationals will make a Simple and Hassle-Free Process for You</h2>
+          <ol>
+            <li>Share your basic documents</li>
+            <li>GVI prepares and finalizes your entire case</li>
+            <li>You visit VAC for biometrics & attend the interview</li>
+            <li>We handle tracking, updates, and final guidance</li>
+
+          </ol>
+          <p>From the moment you contact us until your passport is in your hand — Global visa internationals manages everything.</p>
 
           <div className={styles.ctaBox}>
             <h3>Begin Your American Journey Today!</h3>
             <p>Let Global Visa Internationals handle the complex visa process while you focus on planning your unforgettable trip to the United States. Our team of experts provides personalized guidance tailored to your specific circumstances.</p>
-            <button className={styles.ctaButton}>Schedule Your Free Consultation Now</button>
+            <a href="tel:+917022213466" className={styles.callButton}>  📞 Get Free Eligibility Check</a>
+
           </div>
 
           <p>Planning your inaugural trip to the United States? Securing the proper USA Tourist Visa is your essential gateway to exploring one of the world's most diverse and captivating destinations. From iconic landmarks and breathtaking natural wonders to rich cultural experiences and exciting urban adventures, America offers something extraordinary for every type of traveler. Our expert USA Tourist Visa assistance ensures a smooth, efficient, and hassle-free process allowing you to focus entirely on planning your dream holiday itinerary.</p>
@@ -309,31 +363,39 @@ export default function USATouristVisa() {
             <li>Year-round destinations: Different regions offer ideal visiting conditions during various seasons.</li>
           </ul>
 
-          <h2 className={styles.subTitle}>Types of USA Tourist Visas Available for Indian Citizens</h2>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Visa Type</th>
-                <th>Validity Duration</th>
-                <th>Maximum Stay Period</th>
-                <th>Estimated Processing Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>B2 Tourist Visa (Standard)</td>
-                <td>10 Years (typically)</td>
-                <td>Up to 6 months per entry</td>
-                <td>15-20 working days</td>
-              </tr>
-              <tr>
-                <td>B2 Tourist Visa (Limited Validity)</td>
-                <td>1-5 Years (case specific)</td>
-                <td>Up to 6 months per entry</td>
-                <td>15-20 working days</td>
-              </tr>
-            </tbody>
-          </table>
+
+
+
+          <div className={styles.highlightSection}>
+            <h3 className={styles.subTitle}>Types of USA Tourist Visas Available for Indian Citizens</h3>
+            <div className={styles.highlightGrid}>
+              <div className={styles.highlightItem}>
+                <span className={styles.countryName}>B2 Tourist Visa (Standard)</span>
+                <p className={styles.countryInfo}>10 Years (typically)</p>
+                <p className={styles.countryInfo}>Up to 6 months per entry</p>
+                <p className={styles.countryInfo}>15-20 working days</p>
+              </div>
+              <div className={styles.highlightItem}>
+                <span className={styles.countryName}>B2 Tourist Visa (Standard)</span>
+                <p className={styles.countryInfo}>1-5 Years (case specific)</p>
+                <p className={styles.countryInfo}>Up to 6 months per entry</p>
+                <p className={styles.countryInfo}>15-20 working days</p>
+              </div>
+              <div className={styles.highlightItem}>
+                <span className={styles.countryName}>B1 Business Visa (Standard)</span>
+                <p className={styles.countryInfo}>10 Years (typically)</p>
+                <p className={styles.countryInfo}>Up to 6 months per entry</p>
+                <p className={styles.countryInfo}>15-20 working days</p>
+              </div>
+              <div className={styles.highlightItem}>
+                <span className={styles.countryName}>B1 Business Visa (Standard)</span>
+                <p className={styles.countryInfo}>1-5 Years (case specific)</p>
+                <p className={styles.countryInfo}>Up to 6 months per entry</p>
+                <p className={styles.countryInfo}>15-20 working days</p>
+              </div>
+
+            </div>
+          </div>
 
           <h2 className={styles.subTitle}>U.S. Tourist Visa (B1/B2) Documents Checklist for Indian Applicants</h2>
           <p>Unlike the Schengen visa, the U.S. tourist visa process is primarily interview-based. While documents are important, the consular officer's decision is heavily influenced by your ability to demonstrate your purpose of travel and your strong ties to India. You must convince the officer you have no intention of immigrating to the U.S. and will return home after your visit.</p>
@@ -418,6 +480,27 @@ export default function USATouristVisa() {
               </tr>
             </tbody>
           </table>
+
+
+          <div className={styles.highlightSection}>
+            <h3 className={styles.subTitle}>USA Tourist Visa Fee Structure from India (Approximate)</h3>
+            <div className={styles.highlightGrid}>
+              <div className={styles.highlightItem}>
+                <span className={styles.countryName}>USA B1/B2 Visa Fee</span>
+                <p className={styles.countryInfo}>₹15,200</p>
+              </div>
+              <div className={styles.highlightItem}>
+
+                <span className={styles.countryName}>USA B1/B2 VFS Fee</span>
+                <p className={styles.countryInfo}>₹1,320</p>
+
+              </div>
+              <div className={styles.highlightItem}>
+                <span className={styles.countryName}>Premium Processing (Optional)</span>
+                <p className={styles.countryInfo}>Additional ₹8,200-₹16,400</p>
+              </div>
+            </div>
+          </div>
 
           <p className={styles.note}>Note: All prices are approximate and may vary based on current exchange rates and policy updates.</p>
 
