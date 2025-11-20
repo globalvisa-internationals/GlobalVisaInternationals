@@ -351,7 +351,82 @@ export default function UKTouristVisa() {
           <h2 className={styles.subTitle}>✈ Travel to the UK with a Standard Tourist Visa</h2>
           <p>Planning a trip to the United Kingdom? A <b className={styles.strong}>UK Standard Tourist</b> visa allows Indian travelers to visit for tourism, business, study (up to 6 months), and to see family and friends. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
 
-          <h2 className={styles.subTitle}>🕒 UK Visa Duration Rule</h2>
+          <p>Global Visa Internationals makes applying for a UK tourist visa or UK visitor visa easier, faster, and completely stress-free for every traveler. Whether you’re applying for a UK visit visa, a UK standard visitor visa, or planning your trip from India, our experts guide you from the first consultation to final approval. We help you understand the full process for a UK tourist visa from India or UK visitor visa from India, ensuring you meet every requirement with confidence.</p>
+          <p>Our team specializes in handling your entire UK visa application with precision—explaining UK visa requirements, preparing paperwork, and offering reliable guidance on UK tourist visa fees, UK visa processing time, and all documentation needed for a successful submission. With GVI’s end-to-end documentation support, you never have to worry about missing details, errors, or compliance issues.</p>
+          <p><b>We provide complete, structured assistance for every applicant, including:</b></p>
+          <h3 className={styles.subTitle}>Documentation & File Preparation</h3>
+          <ul>
+            <li>UK tourist visa documents required</li>
+            <li>Personalized document checklist</li>
+            <li>Verified paperwork aligned with embassy standards</li>
+            <li><b className={styles.strong}>Professional drafting:</b>
+              <ul>
+                <li>Cover letters</li>
+                <li>NOC / Leave approval</li>
+                <li>Travel explanations</li>
+              </ul>
+            </li>
+          </ul>
+          <h3 className={styles.subTitle}>Application Accuracy</h3>
+          <ul>
+            <li>Accurate form filling by experienced experts</li>
+            <li>UK visitor visa appointment booking</li>
+            <li>UK tourist visa online application support</li>
+            <li>Guidance on UK tourist visa eligibility</li>
+          </ul>
+          <h3 className={styles.subTitle}>Interview & Biometrics</h3>
+          <ul>
+            <li>UK visitor visa biometric preparation</li>
+            <li>UK tourist visa interview guidance</li>
+            <li>Rejection-proofing and addressing UK tourist visa rejection reasons</li>
+          </ul>
+          <h3 className={styles.subTitle}>Specialized Visa Categories</h3>
+          <ul>
+            <li>UK visitor visa for family visit</li>
+            <li>London tourist visa & London visitor visa</li>
+            <li>UK short-term visitor visa</li>
+          </ul>
+          <p>GVI further enhances your experience with complete guidance throughout your journey—from building your UK tourist visa checklist to choosing the right UK visitor visa insurance, monitoring UK visitor visa processing, and offering ongoing UK visit visa support to keep your travel plans on track.</p>
+          <h3 className={styles.subTitle}>Step-by-Step Assistance</h3>
+          <ul>
+            <li>UK tourist visa application India guidance</li>
+            <li>Improving UK visitor visa success rate</li>
+            <li>UK tourist visa interview questions</li>
+            <li>UK visitor visa travel itinerary planning</li>
+            <li>Apply London tourist visa from India</li>
+            <li>London visitor visa requirements</li>
+          </ul>
+          <h3 className={styles.subTitle}>Full Visa Category Support</h3>
+          We help you choose the most suitable visa based on your travel purpose:
+          <ul>
+            <li>UK travel visa</li>
+            <li>UK holiday visa</li>
+            <li>UK short stay visa</li>
+            <li>UK trip visa</li>
+            <li>UK vacation visa</li>
+            <li>UK entry visa</li>
+          </ul>
+          <h3 className={styles.subTitle}>Complete Form & Submission Support</h3>
+          <ul>
+            <li>UK visa form preparation</li>
+            <li>UK visa online submission</li>
+            <li>UK visa form filling service India</li>
+            <li>Document collection to final submission</li>
+          </ul>
+
+
+
+          <p>Recognized as one of the Best UK visa agencies in India, Global Visa Internationals is trusted by travelers nationwide. From UK VFS appointment India coordination to full UK visa documentation support and even UK multiple entry tourist visa applications, we provide complete A-to-Z case handling until your passport and final result are safely back in your hands.</p>
+          <address className={styles.address}>
+            <li>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore – 560025, Karnataka</li>
+            <a href="tel:+917022213466" className={styles.callButton}>  📞 Get Free Eligibility Check</a>
+            <li>Email: <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></li>
+          </address>
+          {/* Call-to-Action Button */}
+
+
+
+          <h2 className={styles.subTitle}>UK Visa Duration Rule</h2>
           <p>A Standard Visitor visa typically allows you to stay in the UK for up to 6 months per visit. You can apply for a long-term visa (2, 5, or 10 years) if you visit the UK regularly, but you can still only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications. With GVI, you’ll never miscalculate your stay — we ensure full compliance with UK visa rules.</p>
 
           <p>The UK does not have a "cascade" system like the Schengen zone, but a history of lawful travel and adherence to visa rules can strengthen your application for a longer-term visa.</p>
@@ -410,7 +485,7 @@ export default function UKTouristVisa() {
           </ol>
 
 
-          {/* 
+
           <div className={styles.highlightSection}>
             <h3 className={styles.subTitle}>UK Tourist Visa Fees (India 2025)</h3>
             <div className={styles.highlightGrid}>
@@ -435,7 +510,7 @@ export default function UKTouristVisa() {
                 <p className={styles.countryInfo}>These are additional fees paid at the visa application center.</p>
               </div>
             </div>
-          </div> */}
+          </div>
 
           <h2 className={styles.subTitle}>Common Reasons for UK Visa Rejection & How We Solve Them</h2>
 
@@ -466,7 +541,7 @@ export default function UKTouristVisa() {
 
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
           <p>Choose the right UK visa assistance plan for your needs:</p>
-          <div className={styles.pricingContainer}>
+          {/* <div className={styles.pricingContainer}>
             <div className={styles.pricingCard}>
               <h3 className={styles.planTitle}>Basic</h3>
               <p className={styles.planPrice}>₹4,999</p>
@@ -484,7 +559,12 @@ export default function UKTouristVisa() {
                 <li>Appointment booking</li>
               </ul>
             </div>
-          </div>
+          </div> */}
+          <address className={styles.address}>
+            <li>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore – 560025, Karnataka</li>
+            <a href="tel:+917022213466" className={styles.callButton}>  📞 Get Free Eligibility Check</a>
+            <li>Email: <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></li>
+          </address>
 
           <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
           <p>At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
