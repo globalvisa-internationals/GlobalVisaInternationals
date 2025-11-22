@@ -3,33 +3,39 @@ import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
 import React from 'react';
 import Head from 'next/head';
-
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
-// import SeoSchemaUSA from '@/Components/SeoSchemaUSA';
 
 
 export const metadata = {
   title: "USA Tourist Visa Consultants | Global Visa Internationals",
-  description: "Apply for your USA Tourist Visa with Global Visa Internationals. Expert help with B2 visa process, costs, and travel planning from India.",
-  keywords: "USA tourist visa, B2 visa consultants, USA visa from India, US travel visa application, apply for visitor visa USA",
+  description:
+    "Apply for your USA Tourist Visa with Global Visa Internationals. Expert help with B2 visa process, documents, costs, appointments, and travel planning from India.",
+  keywords:
+    "USA tourist visa, B2 visa consultants, USA visa from India, US travel visa application, apply for visitor visa USA, USA B2 visa India, USA visa agents Bangalore",
   robots: "index, follow",
+  canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/usa",
   alternates: {
     canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/usa",
   },
+
   openGraph: {
     title: "USA Tourist Visa: Application, Requirements & Top Travel Tips",
     description:
       "Plan your USA trip with expert visa support. Learn about B2 visa process, travel costs, and top U.S. destinations. Trusted since 2017.",
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/usa",
     siteName: "Global Visa Internationals",
-    images: [{
-      url: "https://www.globalvisainternationals.com/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg",
-      width: 1200,
-      height: 630,
-      alt: "USA Tourist Visa Banner",
-    },], type: "website",
+    type: "website",
+    images: [
+      {
+        url: "https://www.globalvisainternationals.com/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg",
+        width: 1200,
+        height: 630,
+        alt: "USA Tourist Visa Banner",
+      },
+    ],
   },
+
   twitter: {
     card: "summary_large_image",
     site: "@GLOBALVISA1505",
@@ -42,160 +48,291 @@ export const metadata = {
   },
 };
 
-
 export default function USATouristVisa() {
   const pageUrl = metadata.alternates.canonical;
 
-  const TouristAttraction = {
+  // ----------- SCHEMAS START ------------ //
+
+  const touristAttraction = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Top Tourist Attractions in the USA",
-    "itemListElement": [
+    name: "Top Tourist Attractions in the USA",
+    itemListElement: [
       {
         "@type": "TouristAttraction",
-        "name": "Statue of Liberty",
-        "description": "Iconic symbol of freedom in New York City, offering scenic views and tours.",
-        "image": "https://en.wikipedia.org/wiki/Statue_of_Liberty#/media/File:Front_view_of_Statue_of_Liberty_with_pedestal_and_base_2024.jpg ",
-        "url": "https://www.nps.gov/stli/index.htm"
+        name: "Statue of Liberty",
+        description:
+          "Iconic symbol of freedom in New York City, offering scenic views and tours.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg",
+        url: "https://www.nps.gov/stli/index.htm",
       },
       {
         "@type": "TouristAttraction",
-        "name": "Grand Canyon – Pima Point",
-        "description": "Panoramic viewpoint overlooking the Grand Canyon’s South Rim.",
-        "image": "https://www.nps.gov/common/uploads/cropped_image/primary/FF126CF3-9FCB-3F85-33DB711059064278.jpg?width=1600&quality=90&mode=crop",
-        "url": "https://www.nps.gov/places/000/pima-point.htm"
+        name: "Grand Canyon – Pima Point",
+        description:
+          "Panoramic viewpoint overlooking the Grand Canyon’s South Rim.",
+        image:
+          "https://www.nps.gov/common/uploads/cropped_image/primary/FF126CF3-9FCB-3F85-33DB711059064278.jpg",
+        url: "https://www.nps.gov/places/000/pima-point.htm",
       },
       {
         "@type": "TouristAttraction",
-        "name": "Yellowstone National Park – Morning Glory Pool",
-        "description": "Vibrant hot spring in Yellowstone’s Upper Geyser Basin, famous for its blue‑green hues.",
-        "image": "https://en.wikipedia.org/wiki/Morning_Glory_Pool#/media/File:Morning_Glory_Pool.jpg",
-        "url": "https://www.nps.gov/places/000/morning-glory-pool.htm"
+        name: "Yellowstone National Park – Morning Glory Pool",
+        description:
+          "Vibrant hot spring in Yellowstone’s Upper Geyser Basin, known for blue-green hues.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/2/27/Morning_Glory_Pool.jpg",
+        url: "https://www.nps.gov/places/000/morning-glory-pool.htm",
       },
       {
         "@type": "TouristAttraction",
-        "name": "Walt Disney World Resort – Cinderella Castle",
-        "description": "Fairy‑tale castle at the heart of Magic Kingdom Park in Florida.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Cinderella_Castle%2C_Magic_Kingdom.JPG",
-        "url": "https://disneyworld.disney.go.com/attractions/magic-kingdom/cinderella-castle/"
+        name: "Walt Disney World Resort – Cinderella Castle",
+        description:
+          "Fairy-tale castle at the heart of Magic Kingdom Park in Florida.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d6/Cinderella_Castle%2C_Magic_Kingdom.JPG",
+        url: "https://disneyworld.disney.go.com/attractions/magic-kingdom/cinderella-castle/",
       },
       {
         "@type": "TouristAttraction",
-        "name": "Golden Gate Bridge",
-        "description": "Famous suspension bridge in San Francisco with panoramic skyline views.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg",
-        "url": "https://www.goldengate.org/"
-      }
-    ]
+        name: "Golden Gate Bridge",
+        description:
+          "Famous suspension bridge in San Francisco with panoramic skyline views.",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg",
+        url: "https://www.goldengate.org/",
+      },
+    ],
   };
-
-
 
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.globalvisainternationals.com"
+        position: 1,
+        name: "Home",
+        item: "https://www.globalvisainternationals.com",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "USA Tourist Visa",
-        "item": pageUrl
-      }
-    ]
+        position: 2,
+        name: "USA Tourist Visa",
+        item: pageUrl,
+      },
+    ],
   };
 
   const travelAgencyJsonLd = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Expert USA Tourist Visa Consultants in Bangalore. We assist with complete USA visa documentation, application submission, and personalized guidance.",
-    "telephone": "+91-7022213466",
-    "address": {
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    logo: "https://www.globalvisainternationals.com/gvilogo.png",
+    description:
+      "Expert USA Tourist Visa Consultants in Bangalore. We assist with complete USA visa documentation, application submission, and personalized guidance.",
+    telephone: "+91-7022213466",
+
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
+      streetAddress: "MG Road",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560025",
+      addressCountry: "IN",
     },
-    "geo": {
+
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": 12.9716,
-      "longitude": 77.5946
+      latitude: 12.9716,
+      longitude: 77.5946,
     },
-    "openingHoursSpecification": [
+
+    openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
         ],
-        "opens": "10:00",
-        "closes": "18:00"
-      }
+        opens: "10:00",
+        closes: "18:00",
+      },
     ],
-    "sameAs": [
+
+    sameAs: [
       "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
       "https://www.linkedin.com/company/global-visa-internationals/",
       "https://x.com/GLOBALVISA1505",
       "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
-    ]
+      "https://www.google.com/maps/place/Global+Visa+Internationals",
+    ],
   };
 
+  // ------- LocalBusiness Schema ------- //
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    image:
+      "https://www.globalvisainternationals.com/gvilogo.png",
+    priceRange: "₹₹₹",
+    telephone: "+91-7022213466",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "MG Road",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560025",
+      addressCountry: "IN",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "579",
+    },
+  };
 
+  // -------- Organization Schema -------- //
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    logo: "https://www.globalvisainternationals.com/gvilogo.png",
+    sameAs: travelAgencyJsonLd.sameAs,
+  };
 
+  // ---------- Website Schema ---------- //
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.globalvisainternationals.com/search?q={query}",
+      "query-input": "required name=query",
+    },
+  };
+
+  // ---------- WebPage Schema ---------- //
+  const webpageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: metadata.title,
+    url: pageUrl,
+    description: metadata.description,
+    about: {
+      "@type": "Thing",
+      name: "USA Tourist Visa (B2)",
+    },
+  };
+
+  // ---------- Service Schema ---------- //
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "USA Tourist Visa Assistance",
+    provider: {
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+    },
+    areaServed: "India",
+    serviceType: "B2 Tourist Visa Documentation & Filing",
+    description:
+      "Complete USA Tourist Visa (B2) assistance including DS-160, documentation, scheduling, and interview preparation.",
+  };
+
+  // -------- FAQ Schema -------- //
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does a USA Tourist Visa take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Processing time varies based on consulate appointments. Generally, it ranges from a few weeks to a few months.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What documents are required for a USA B2 visa?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Passport, DS-160 confirmation, bank statements, employment proof, travel itinerary, and supporting financial documents.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can Global Visa Internationals help with USA visa interview preparation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We provide complete guidance, practice Q&A sessions, and personalized interview training.",
+        },
+      },
+    ],
+  };
+
+  // ---------- RENDER BELOW ---------- //
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(touristAttraction) }}
+      />
 
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }}
+      />
 
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
 
-        {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TouristAttraction) }}
-        />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
 
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageJsonLd) }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
 
       <div className={styles.imageContainer}>
         <img src="/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg" alt="USA Tourist Visa assistance banner" className={styles.VisaImage} />
