@@ -12,331 +12,345 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 
 export const metadata = {
-  title: "UK Tourist Visa from India | Best UK Visa Consultants in India - Global Visa Internationals",
+  metadataBase: new URL("https://www.globalvisainternationals.com"),
+
+  title: "Best UK Visa Consultants   | UK Tourist Visa from India | Global Visa Internationals",
   description:
-    "Apply for your UK tourist visa from India with the best UK visa consultants. Get expert help for UK visitor visa application, documents, fees, and embassy interview. Trusted by thousands of Indian travellers.",
+    "Apply for your UK tourist visa from India with expert UK visa consultants. Get help for documents, online application, fees, processing time & appointments.",
   keywords:
-    "UK tourist visa from India, UK visitor visa consultants, UK visa agents in India, apply UK visa online India, UK visa assistance Bangalore, UK travel visa for Indian citizens, UK visa documentation help, UK visa consultants near me, UK visa process from India, UK visa cost 2025",
+    "UK tourist visa from India, UK visitor visa consultants, UK visa agents in India, apply UK visa online India, UK visa assistance Bangalore, UK visa documentation help",
+
   robots: "index, follow",
+  category: "Travel Agency, Visa Consultancy",
+  canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom",
   alternates: {
     canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom",
   },
+
+  applicationName: "Global Visa Internationals",
+  publisher: "Global Visa Internationals",
+  creator: "Global Visa Internationals Team",
+
+  authors: [
+    {
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+    },
+  ],
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+
+  manifest: "/site.webmanifest",
+
+
   openGraph: {
-    title: "Apply for UK Tourist Visa from India | Trusted UK Visa Consultants",
+    title: "Apply UK Tourist Visa from India | Fast UK Visa Assistance",
     description:
-      "Looking to travel to the UK from India? Global Visa Internationals offers full support for UK tourist visa applications, documentation, and embassy appointments. Fast processing. Reliable service since 2012.",
+      "Global Visa Internationals provides complete support for UK tourist visa applications, including documentation, online filing, and appointment scheduling.",
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom",
     siteName: "Global Visa Internationals",
+    type: "website",
+    locale: "en_IN",
     images: [
       {
         url: "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
         width: 1200,
         height: 630,
-        alt: "UK Tourist Visa Assistance from India - Global Visa Internationals",
-      }
+        alt: "UK Tourist Visa Assistance - Global Visa Internationals",
+      },
     ],
-    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     site: "@GLOBALVISA1505",
-    title: "UK Tourist Visa from India | Fast UK Visa Application Help",
+    creator: "@GLOBALVISA1505",
+    title: "UK Tourist Visa from India | Best UK Visa Help",
     description:
-      "Get expert help to apply for your UK tourist visa from India. Global Visa Internationals provides visa application assistance, documentation support, and embassy appointment guidance.",
+      "Get fast UK tourist visa assistance in India. Expert documentation, application filing & appointment help by Global Visa Internationals.",
     images: [
       "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
     ],
   },
+
+  other: {
+    "theme-color": "#ffffff",
+    "og:locale": "en_IN",
+    "twitter:creator": "@GLOBALVISA1505",
+    "msapplication-TileColor": "#ffffff",
+  },
+
+  language: "en-IN",
+  abstract:
+    "UK Tourist Visa assistance from India with expert support in documentation, filing, and appointment scheduling.",
+
+  rating: "General",
+  revisitAfter: "7 days",
 };
+
 
 
 
 export default function UKTouristVisa() {
   const pageUrl = metadata.alternates.canonical;
 
-  const TouristAttraction = {
+  const schemaData = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Top Tourist Attractions in the UK",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "TouristAttraction",
-        "name": "Big Ben & Houses of Parliament",
-        "description": "Historic clock tower and iconic British Parliament building in London.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Elizabeth_Tower%2C_June_2022.jpg",
-        "url": "https://www.parliament.Visa/"
+        "@type": "Organization",
+        "@id": "https://www.globalvisainternationals.com/#organization",
+        "name": "Global Visa Internationals",
+        "legalName": "Global Visa Internationals Pvt Ltd",
+        "url": "https://www.globalvisainternationals.com",
+        "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+        "sameAs": [
+          "https://www.facebook.com/globalvisainternationals/",
+          "https://www.instagram.com/globalvisa_internationals/",
+          "https://www.linkedin.com/company/global-visa-internationals/",
+          "https://x.com/GLOBALVISA1505",
+          "https://www.youtube.com/@globalVisaInternationals",
+          "https://www.google.com/maps/place/Global+Visa+Internationals"
+        ]
       },
-      {
-        "@type": "TouristAttraction",
-        "name": "Buckingham Palace",
-        "description": "Official London residence of the British monarch with Changing of the Guard ceremony.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Buckingham_Palace%2C_London_-_April_2009.jpg",
-        "url": "https://www.rct.Visa/visit/the-state-rooms-buckingham-palace"
-      },
-      {
-        "@type": "TouristAttraction",
-        "name": "Tower of London",
-        "description": "Historic fortress housing the Crown Jewels and offering guided tours.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tower_of_London_viewed_from_the_River_Thames.jpg",
-        "url": "https://www.hrp.org.Visa/tower-of-london/"
-      },
-      {
-        "@type": "TouristAttraction",
-        "name": "Stonehenge",
-        "description": "Mysterious prehistoric stone circle and world heritage site in Wiltshire.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Stonehenge2007_07_30.jpg",
-        "url": "https://www.english-heritage.org.Visa/visit/places/stonehenge/"
-      },
-      {
-        "@type": "TouristAttraction",
-        "name": "Edinburgh Castle",
-        "description": "Famous Scottish fortress offering panoramic views of Edinburgh.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/View_of_Edinburgh_Castle_%28from_the_south_east%29.jpg",
-        "url": "https://www.edinburghcastle.scot/"
-      }
-    ]
-  };
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.globalvisainternationals.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "UK Tourist Visa",
-        "item": pageUrl
-      }
-    ]
-  };
-
-  const travelAgencyJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "@id": "https://www.globalvisainternationals.com/#travelagency",
-    "name": "Global Visa Internationals",
-    "legalName": "Global Visa Internationals Pvt Ltd",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "image": [
-      "https://www.globalvisainternationals.com/Office/office-photo1.jpg",
-      "https://www.globalvisainternationals.com/Office/team-photo.jpg"
-    ],
-    "description": "Trusted UK Tourist Visa Consultants in Bengaluru. We assist with UK Standard Visitor visas, providing expert guidance on documentation, online application, and appointment booking to ensure a smooth and successful process.",
-    "telephone": "+917022213466",
-    "email": "operations@globalvisainternationals.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 12.9716,
-      "longitude": 77.5946
-    },
-    "hasMap": "https://maps.app.goo.gl/W3J5HHqhEma4PG7M8",
-    "areaServed": [
-      {
-        "@type": "Country",
-        "name": "India"
-      }
-    ],
-    "priceRange": "₹₹",
-    "paymentAccepted": [
-      "Credit Card",
-      "Debit Card",
-      "Bank Transfer",
-      "UPI"
-    ],
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
+        "@type": "LocalBusiness",
+        "@id": "https://www.globalvisainternationals.com/#localbusiness",
+        "name": "Global Visa Internationals",
+        "image": "https://www.globalvisainternationals.com/gvilogo.png",
+        "url": "https://www.globalvisainternationals.com",
         "telephone": "+917022213466",
-        "contactType": "customer service",
-        "availableLanguage": ["English", "Kannada", "Hindi"]
-      }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": 4.6,
-      "reviewCount": 224
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "RAJESH R R"
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "MG Road",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "postalCode": "560025",
+          "addressCountry": "IN"
         },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 12.9716,
+          "longitude": 77.5946
         },
-        "datePublished": "2025-09-10",
-        "reviewBody": "I had an excellent experience with Global Visa Internationals. The team was professional, supportive, and guided me through every step of the visa process with clear communication and efficiency. They were always available to answer my questions and made the entire process smooth and stress-free. I highly recommend their services."
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "N K Reshma"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
-        },
-        "datePublished": "2025-06-15",
-        "reviewBody": "I had an amazing experience with Anusha Prashanth. I had only a week before my travel date, and other agencies told me it was not possible to get a Schengen visa in such a short time. But Anusha was confident and assured me it could be done — and she delivered! I received my Spain visa in just 3 days, exactly as promised, and she also helped me with a priority UK visa. Special thanks to Vidya for ensuring all my documentation was perfect and the process was smooth from start to finish. Truly professional, reliable, and efficient. Highly recommend them for any visa needs!"
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Hiba Mohammed"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
-        },
-        "datePublished": "2024-12-20",
-        "reviewBody": "Had a very good experience with Global Visas. I got my UK visitor visa within 3 weeks time. They assisted me through all the documentation. They did the legal formalities like affidavits etc. I had a stress-free time as opposed to the time I had applied by myself."
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Soumya Sen"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
-        },
-        "datePublished": "2024-08-23",
-        "reviewBody": "The team here helped me attain my UK tourist visa and meticulously helped me arrange all documents in order for the process. They are super knowledgeable and helpful. Would strongly recommend everyone to avail their services."
-      },
-
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Rohit Gowda"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
-        },
-        "datePublished": "2024-05-13",
-        "reviewBody": "Once of the best in town, my friend was struggling to get a Visa to UK, these guys made it for him at affordable cost."
-      }
-
-    ],
-
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "10:00",
-        "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "Closed",
-        "closes": "Closed"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/globalvisainternationals/",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/global-visa-internationals/",
-      "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals"
-    ],
-    "knowsAbout": ["UK Tourist Visa", "Schengen Tourist Visa", "Canada Tourist Visa", "Australia Tourist Visa", "Travel Visa Assistance", "Visa Consultancy Services"],
-    "makesOffer": {
-      "@type": "OfferCatalog",
-      "name": "Visa Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "UK Standard Visitor Visa Assistance"
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "10:00",
+            "closes": "18:00"
           }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Schengen Tourist Visa Assistance"
-          }
+        ],
+        "parentOrganization": {
+          "@id": "https://www.globalvisainternationals.com/#organization"
         }
-      ]
-    }
-  }
+      },
 
+      {
+        "@type": "TravelAgency",
+        "@id": "https://www.globalvisainternationals.com/#travelagency",
+        "name": "Global Visa Internationals",
+        "legalName": "Global Visa Internationals Pvt Ltd",
+        "url": "https://www.globalvisainternationals.com",
+        "logo": "https://www.globalvisainternationals.com/gvilogo.png",
+        "image": [
+          "https://www.globalvisainternationals.com/Office/office-photo1.jpg",
+          "https://www.globalvisainternationals.com/Office/team-photo.jpg"
+        ],
+        "description": "Trusted UK Tourist Visa Consultants in Bengaluru. Expert guidance on UK Standard Visitor visas including documentation, online filing, and appointment booking.",
+        "telephone": "+917022213466",
+        "email": "operations@globalvisainternationals.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "MG Road",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "postalCode": "560025",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 12.9716,
+          "longitude": 77.5946
+        },
+        "hasMap": "https://maps.app.goo.gl/W3J5HHqhEma4PG7M8",
+        "areaServed": [{ "@type": "Country", "name": "India" }],
+        "priceRange": "₹₹",
+        "paymentAccepted": [
+          "Credit Card",
+          "Debit Card",
+          "Bank Transfer",
+          "UPI"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+917022213466",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Kannada", "Hindi"]
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.6,
+          "reviewCount": 224
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "RAJESH R R" },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5,
+              "bestRating": 5
+            },
+            "datePublished": "2025-09-10",
+            "reviewBody":
+              "Excellent experience with Global Visa Internationals. Very supportive and helpful."
+          }
+        ]
+      },
+
+      {
+        "@type": "WebSite",
+        "@id": "https://www.globalvisainternationals.com/#website",
+        "name": "Global Visa Internationals",
+        "url": "https://www.globalvisainternationals.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target":
+            "https://www.globalvisainternationals.com/search?q={search_term}",
+          "query-input": "required name=search_term"
+        },
+        "publisher": {
+          "@id": "https://www.globalvisainternationals.com/#organization"
+        }
+      },
+
+      {
+        "@type": "WebPage",
+        "@id":
+          "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom#webpage",
+        "url":
+          "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom",
+        "name": "UK Tourist Visa from India | Apply UK Visitor Visa",
+        "isPartOf": {
+          "@id": "https://www.globalvisainternationals.com/#website"
+        },
+        "about": {
+          "@id": "https://www.globalvisainternationals.com/#organization"
+        },
+        "primaryImageOfPage":
+          "https://www.globalvisainternationals.com/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg",
+        "description":
+          "Apply for UK tourist visa with expert consultants. Assistance with documentation, online filing, visa fees, and appointment scheduling.",
+        "breadcrumb": {
+          "@id": "https://www.globalvisainternationals.com/#breadcrumb"
+        }
+      },
+
+      {
+        "@type": "Service",
+        "@id": "https://www.globalvisainternationals.com/#service",
+        "serviceType": "UK Tourist Visa Assistance",
+        "provider": {
+          "@id": "https://www.globalvisainternationals.com/#organization"
+        },
+        "description":
+          "Full UK tourist visa support including documentation, filing, cover letter drafting, financial guidance, and appointment booking.",
+        "areaServed": "India",
+        "offers": {
+          "@type": "Offer",
+          "price": "Contact for pricing",
+          "priceCurrency": "INR",
+          "url":
+            "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom"
+        }
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.globalvisainternationals.com/#faqpage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does a UK tourist visa take in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard UK visa processing takes 15 working days. Priority options available."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What documents are required for a UK tourist visa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text":
+                "Passport, bank statements, employment proof, travel itinerary, financial documents."
+            }
+          }
+        ]
+      },
+
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.globalvisainternationals.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.globalvisainternationals.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "UK Tourist Visa",
+            "item":
+              "https://www.globalvisainternationals.com/Visa/tourist-visa/united-kingdom"
+          }
+        ]
+      },
+
+      {
+        "@type": "ItemList",
+        "@id": "https://www.globalvisainternationals.com/#uk-attractions",
+        "name": "Top Tourist Attractions in the UK",
+        "itemListElement": [
+          {
+            "@type": "TouristAttraction",
+            "name": "Big Ben & Houses of Parliament",
+            "description":
+              "Historic British Parliament and iconic clock tower.",
+            "image":
+              "https://upload.wikimedia.org/wikipedia/commons/4/43/Elizabeth_Tower%2C_June_2022.jpg",
+            "url": "https://www.parliament.uk/"
+          }
+        ]
+      }
+    ]
+  };
 
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
-
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TouristAttraction) }}
-        />
-
-      </Head>
-
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <div className={styles.imageContainer}>
-
         <img
           src="/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg"
           alt="UK Tourist Visa Assistance GVI"
