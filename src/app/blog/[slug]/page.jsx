@@ -31,9 +31,9 @@ export default async function BlogPostPage({ params }) {
       <h1 className={styles.blogTitle}>{post.title}</h1>
       <div className={styles.meta}>
         <span><strong>Category: </strong> {post.category}</span>
-        <span> | </span>
+        <span> | • | </span>
         <span><strong>Author: </strong> {post.author}</span>
-        <span> | </span>
+        <span> | • | </span>
         <span> <strong>Date: </strong><em>{new Date(post.date).toLocaleDateString()}</em></span>
       </div>
       <div className={styles.content}>

@@ -1,10 +1,8 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 
-import { Metadata } from "next";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
