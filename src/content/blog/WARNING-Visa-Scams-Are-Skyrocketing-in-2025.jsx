@@ -383,14 +383,14 @@ export default function WARNING_Visa_Scams_Are_Skyrocketing_in_2025() {
 
                 <h3 className={Styles.strong}>1. Fake Agents Pretending to Be Officials</h3>
                 <p>
-                    Scammers often say <span className={Styles.warning}>they know someone inside an embassy or immigration office.</span>
+                    Scammers often say <b>they know someone inside an embassy or immigration office.</b>
                     Some even use fake ID cards or WhatsApp calls to sound official.
                 </p>
                 <p><strong>Warning:</strong> Official officers never contact applicants directly.</p>
 
                 <h3 className={Styles.strong}>2. Guaranteed Visa Claims</h3>
                 <p>
-                    You may hear things like <span className={Styles.warning}>100% percent visa sure </span> or We can get your visa approved.
+                    You may hear things like <b>100% percent visa sure </b> or We can get your visa approved.
                     These are common scam phrases. Only immigration officers can approve or reject
                     a visa.
                 </p>
