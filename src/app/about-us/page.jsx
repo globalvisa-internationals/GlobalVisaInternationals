@@ -1,180 +1,253 @@
-import Image from 'next/image';
-import styles from './about.module.css';
-import React from 'react';
-import VisaForm from '@/Components/VisaForm';
-import Head from 'next/head';
-import AnimatedHR from '@/Components/AnimatedHR';
-import { ReviewSchema } from "@/Components/ReviewSchema";
+import Image from "next/image";
+import styles from "./about.module.css";
+import React from "react";
+import VisaForm from "@/Components/VisaForm";
+import AnimatedHR from "@/Components/AnimatedHR";
 import ReviewCarousel from "@/Components/ReviewCarousel";
+import { ReviewSchema } from "@/Components/ReviewSchema";
 
-
+// ---------------------------
+// ✅ NEXT.JS METADATA API
+// ---------------------------
 export const metadata = {
-  title: "About Us |  Global Visa Internationals  - Leading Visa & Immigration Consultants in Bangalore",
+  title: "About Us | Global Visa Internationals – Leading Visa & Immigration Consultants in Bangalore",
   description:
-    "Learn more about  Global Visa Internationals , a trusted visa and immigration consultancy in Bangalore. We provide expert assistance for Tourist, Student, Work, PR, and Business Visas for Canada, USA, UK, Australia, Europe, and more with 75,000+ happy clients.",
+    "Learn more about Global Visa Internationals, a trusted visa and immigration consultancy in Bangalore. We assist with Student, Tourist, Work, PR & Business visas with 75,000+ happy clients.",
   keywords: [
-    "about  global visa internationals ",
+    "Global Visa Internationals",
     "visa consultants in Bangalore",
     "immigration consultants in Bangalore",
-    "visa services Bangalore",
     "study visa experts",
     "tourist visa assistance",
     "work permit consultants",
+    "PR visa consultants",
     "Canada visa consultant",
     "Australia visa consultant",
     "UK visa consultant",
     "USA visa consultant"
   ],
-  alternates: { canonical: "https://www.globalvisainternationals.com/about-us" },
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/about-us",
+  },
+
   openGraph: {
-    title: "About Us |  Global Visa Internationals  - Trusted Immigration Consultants in Bangalore",
+    title: "About Us | Global Visa Internationals – Trusted Immigration Consultants in Bangalore",
     description:
-      "Discover the story and services of  Global Visa Internationals . Leading experts in PR, Work, Study & Visit visas for Canada, Australia, USA, UK, and more.",
+      "Discover Global Visa Internationals, experts in PR, Work, Study & Visit visas for Canada, Australia, USA, UK, and Europe.",
     url: "https://www.globalvisainternationals.com/about-us",
-    siteName: "Global Visa Internationals ",
+    siteName: "Global Visa Internationals",
     type: "website",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/banner.webp",
+        url: "https://www.globalvisainternationals.com/GVI_Banner.webp",
         width: 1200,
         height: 630,
-        alt: "About  Global Visa Internationals  - Visa and Immigration Consultants",
+        alt: "About Global Visa Internationals",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "About Us |Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
+    title: "About Us | Global Visa Internationals – Trusted Immigration Consultants",
     description:
-      "Learn more about  Global Visa Internationals, offering expert PR, Work, Study & Tourist visa services with 75,000+ satisfied clients.",
+      "Learn about Global Visa Internationals, offering PR, Work, Study & Tourist visa support with 75,000+ satisfied clients.",
     site: "@GLOBALVISA1505",
     creator: "@GLOBALVISA1505",
-    images: ["https://www.globalvisainternationals.com/banner.webp"],
+    images: ["https://www.globalvisainternationals.com/GVI_Banner.webp"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
-
-
-
-export default function About() {
-
+// ---------------------------
+// ✅ JSON-LD SCHEMA (MULTIPLE)
+// ---------------------------
+function StructuredData() {
   const pageUrl = "https://www.globalvisainternationals.com/about-us";
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.globalvisainternationals.com"
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "About Us",
-        item: pageUrl
-      }
-    ]
-  };
+  const jsonData = [
+    // Breadcrumb
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.globalvisainternationals.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "About Us",
+          item: pageUrl,
+        },
+      ],
+    },
 
-  const travelAgencyJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "@id": "https://www.globalvisainternationals.com/#organization",
-    name: "Global Visa Internationals",
-    url: "https://www.globalvisainternationals.com",
-    logo: "https://www.globalvisainternationals.com/gvilogo.png",
-    description:
-      " Global Visa Internationals is a leading visa and immigration consultancy in Bangalore, offering expert assistance for Tourist, PR, Student, Work, and Business Visas to countries like Canada, Australia, UK, USA, Europe, and more.",
-    telephone: "+91-7022213466",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "GF-9, Business Point, MG Road",
-      addressLocality: "Bengaluru",
-      addressRegion: "Karnataka",
-      postalCode: "560025",
-      addressCountry: "IN"
+    // Organization
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      logo: "https://www.globalvisainternationals.com/gvilogo.png",
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals/",
+        "https://www.instagram.com/globalvisa_internationals/",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://x.com/GLOBALVISA1505",
+        "https://www.youtube.com/@globalVisaInternationals",
+      ],
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 12.9716,
-      longitude: 77.5946
-    },
-    openingHoursSpecification: [
-      {
+
+    // Local Business
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Global Visa Internationals",
+      image: "https://www.globalvisainternationals.com/GVI_Banner.webp",
+      telephone: "+91-7022213466",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "GF-9, Business Point, MG Road",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560025",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 12.9716,
+        longitude: 77.5946,
+      },
+      openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
         opens: "10:00",
-        closes: "18:00"
-      }
-    ],
-    sameAs: [
-      "https://www.facebook.com/globalvisainternationals/",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/global-visa-internationals/",
-      "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
-    ],
-    potentialAction: {
-      "@type": "ReserveAction",
-      target: "https://www.globalvisainternationals.com/contact",
-      result: {
-        "@type": "Thing",
-        name: "Book a Free Visa Consultation"
-      }
-    }
-  };
+        closes: "18:00",
+      },
+    },
+
+    // Travel Agency
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      name: "Global Visa Internationals",
+      url: "https://www.globalvisainternationals.com",
+      description:
+        "Global Visa Internationals is a leading consultant in Tourist, Work, PR, Student, and Business visas.",
+      telephone: "+91-7022213466",
+      logo: "https://www.globalvisainternationals.com/gvilogo.png",
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals/",
+        "https://www.instagram.com/globalvisa_internationals/",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://www.youtube.com/@globalVisaInternationals",
+      ],
+    },
+
+    // WebSite
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      url: "https://www.globalvisainternationals.com",
+      name: "Global Visa Internationals",
+      potentialAction: {
+        "@type": "SearchAction",
+        target:
+          "https://www.globalvisainternationals.com/search?query={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+
+    // WebPage
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "About Us – Global Visa Internationals",
+      url: pageUrl,
+    },
+
+    // Services Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Visa & Immigration Services",
+      provider: {
+        "@type": "Organization",
+        name: "Global Visa Internationals",
+      },
+      areaServed: "Worldwide",
+      serviceType: [
+        "Student Visa",
+        "Tourist Visa",
+        "Work Visa",
+        "Business Visa",
+        "PR Visa",
+      ],
+    },
+
+    // FAQ Page Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do you provide Tourist Visa assistance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes, we help with documentation, application filing, travel support, and interview guidance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How many countries do you support?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "We assist with visas for over 30+ countries including Canada, USA, UK, Australia, and Europe.",
+          },
+        },
+      ],
+    },
+  ];
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonData) }}
+    />
+  );
+}
+
+// ---------------------------
+// PAGE UI
+// ---------------------------
+export default function About() {
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
-
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-        <link rel="icon" href="/favicon.ico" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }}
-        />
-      </Head>
-
+      {/* Inject All Schema JSON-LD */}
+      <StructuredData />
       <div className={styles.heroBanner}>
-        <img src="https://www.globalvisainternationals.com/GVI_Banner.webp" alt="About Global Visa Internationals" className={styles.heroImage} />
+        <img
+          src="https://www.globalvisainternationals.com/GVI_Banner.webp"
+          alt="About Global Visa Internationals"
+          className={styles.heroImage}
+        />
       </div>
 
       <div className={styles.visaSection}>
@@ -183,13 +256,14 @@ export default function About() {
         <section className={styles.aboutSection}>
           <div className={styles.aboutContent}>
             <div className={styles.aboutText}>
-              <p>It is our mission at Global Visa Internationals to simplify the complex business of global mobility. Founded by visionary leader Mrs. Anusha Prashanth, a seasoned professional with more than a decade's experience in immigration and visa consultancy, we have happily helped over 55,000+ people secure their visas and advised more than 75,000+ clients worldwide seeking global mobility solutions.</p>
+              <p>At Global Visa Internationals our mission is to make global travel and immigration feel simple and easy to understand. The company was started by our founder Mrs Anusha Prashanth who has over ten years of real experience in the visa and immigration field. We have supported more than 55000 people to get their visas and guided over 75000 clients who are looking for better global mobility options.</p>
 
-              <p>With offices in London, UK, providing UK visa services, and Bangalore, India, offering premier India visa consultancy, we provide a global perspective and local expertise to every case we handle. Whether you want to study abroad with our study visa assistance, seek work opportunities through our work visa and permits guidance, or reunite with family via our family visa services, we provide customized visa solutions to meet your goals for international relocation.</p>
+              <p>We run offices in London UK for UK visa services and in Bangalore India for all major India visa support. This gives us both a wide global view and the local knowledge that most people really need. If you want to study in another country or search for work with the right permits or join your family abroad we offer simple visa help that is shaped around what you want for your next step.</p>
 
               <h2>Meet the Visionary Behind Our Success</h2>
-              <p>Mrs. Anusha Prashanth leads a team of efficient visa professionals dedicated to delivering hassle-free visa processing and professional immigration guidance, making your international journey seamless and successful.</p>
+              <p>Mrs Anusha Prashanth leads a skilled and friendly team who try their best to make the visa process smooth and stress free. Her guidance helps many travellers take confident steps toward their international goals.</p>
             </div>
+
           </div>
 
           <div className={styles.founderImageContainer}>
@@ -201,59 +275,115 @@ export default function About() {
 
         <div className={styles.contentSection}>
           <div className={styles.contentMain}>
-            <h2 className={styles.sectionTitle}>Why Trust Global Visa Internationals for Your Immigration Needs?</h2>
+            <h2 className={styles.sectionTitle}>Why Trust Global Visa Internationals for Your Immigration Needs</h2>
 
-            <p>Trust is more than a word at Global Visa Internationals —it's the cornerstone of all our services. With more than a decade of experience in the immigration industry and thousands of successful client experiences, we are a name that stands for reliability in visa services, integrity in immigration consulting, and positive results in visa outcomes. Here's why people, families, and professionals worldwide select us for their immigration needs:</p>
+            <p>
+              Trust is not just a fancy word at Global Visa Internationals
+              It is the heart of everything we do. After helping people for more than a decade in the immigration field and guiding thousands of happy clients we have slowly built a name that people feel safe with. Our work speaks for itself and many families and professionals from different countries choose us because they see real honesty real support and real results.
+            </p>
 
             <ul>
-              <li><strong className={styles.highlightText}>Demonstrated Track Record: </strong> We have been able to represent more than 75,000+ clients across different visa categories—starting from visitor visas and student visas to work permits, dependent visas, and visa refusal cases. Our high visa success rate speaks volumes about our thorough understanding of immigration laws, visa documentation, and immigration procedures.</li>
-              <li><strong className={styles.highlightText}>Expert Guidance, Every Step of the Way :</strong> Our experienced immigration consultants provide transparent visa guidance, honest immigration advice, and customized visa strategies designed to meet your individual objectives and immigration journey. Whether you are a visa newbie or an experienced international traveler, we ensure that you are well-informed throughout the visa application process.</li>
-              <li><strong className={styles.highlightText}>Transparency and Ethical Behavior :</strong> We operate with transparency in all our visa dealings and uphold ethical behavior in immigration consultancy. No bait-and-switch pricing, no misleading information about our capabilities. Just honest advice, proper case analysis, and total openness—because your trust is paramount to us as your trusted visa consultants.</li>
-              <li><strong className={styles.highlightText}>End-to-End Support :</strong> From document authentication and visa application preparation to interview scheduling and post-approval counseling, we handle everything—so you can focus on your future while we manage the complete visa process.</li>
-              <li><strong className={styles.highlightText}>Global Reach, Local Insight:</strong> Global Reach, Local Insight: Headquartered in India (Bangalore) and London, UK, we provide international standards in visa services combined with local insight, offering the perfect combination of global reach and local touch in immigration assistance.</li>
+              <li><strong className={styles.highlightText}>Strong Track Record </strong> We have worked with more than 75000 clients in different visa categories like visitor visas student visas work permits dependent visas and even visa refusal cases. Our steady success rate comes from a clear understanding of visa rules documentation and how immigration systems work in real life.</li>
+
+              <li><strong className={styles.highlightText}>Guidance Step by Step </strong> Our team gives clear and practical guidance that matches your personal goals. Whether you are applying for the first time or you already travelled before we make sure you feel confident at every step of the journey.</li>
+
+              <li><strong className={styles.highlightText}>Honest Approach </strong> We keep things simple and truthful. No confusing information no fake promises. Everything we explain is based on real facts and current rules because your trust matters more than anything.</li>
+
+              <li><strong className={styles.highlightText}>Full Support from Start to End </strong> We assist with everything including document checks visa file preparation interview help appointment support and after approval guidance. You can relax while we take care of the tricky parts.</li>
+
+              <li><strong className={styles.highlightText}>Global View with Local Experience </strong> Our offices in Bengaluru and London help us understand both local and international expectations. This balance gives our clients a smooth and realistic experience.</li>
             </ul>
 
             <AnimatedHR direction="left" duration={1.2} />
 
-            <h3 className={styles.sectionTitle}>Our Key Strengths</h3>
-            <strong>What Makes Global Visa Internationals Unique</strong>?
+            <h3>Our Key Strengths</h3>
 
-            <p>At Global Visa Internationals, we do not just file applications; we create positive immigration experiences, build client trust, and transform lives through successful visa outcomes. Here's what truly sets us apart in the world of visa and immigration consultancy:</p>
+            <ul>
+              <li><strong className={styles.highlightText}>Who We Are </strong><br />
+                Global Visa Internationals is a friendly and dependable visa consultancy that aims to make your travel study and migration plans possible. We do not just fill forms for you. We offer complete support with honesty care and the right method.</li>
 
-            <strong> Industry Experience of 11+ Years</strong>
-            <p> Having spent over a decade in the immigration services sector, we've gained in-depth knowledge of the detailed immigration policies and procedures of multiple countries around the world</p>
+              <li><strong className={styles.highlightText}>11 Plus Years of Experience</strong><br />
+                With more than eleven years in this field we have seen how immigration rules keep changing and we understand what documents are really required and how different embassies work.</li>
 
-            <strong> Brilliant Visa Success Ratio</strong>
-            <p>Our right visa strategy, meticulous visa documentation, and expert case handling contribute to our exceptional visa approval rate across all visa categories—making us a top choice for visa success.</p>
+              <li><strong className={styles.highlightText}>High Success Rate</strong><br />
+                Our success rate stays strong because we focus on correct planning and neat documentation. Many clients reach success because we always try to improve the chances with the right process.</li>
 
-            <strong> True and Honest Approach</strong>
-            <p> We operate with complete honesty and transparency in our immigration services. No unrealistic promises—just clear, accurate, and reliable guidance based on real eligibility and potential outcomes in your visa application.</p>
+              <li><strong className={styles.highlightText}>Honesty and Clarity</strong><br />
+                From the first day we try to keep everything clear. We do not give false hope or unnecessary talk. Your case is handled using real details and practical guidance.</li>
 
-            <strong> Personalized Consultancy</strong>
-            <p>Recognizing that no two immigration cases are alike, each dedicated case advisor crafts a personalized immigration strategy tailored to every client's unique profile, purpose of travel/relocation, and destination country.</p>
+              <li><strong className={styles.highlightText}>Personalized Support</strong><br />
+                Every client is different so we do not follow a one size method. We study your profile your purpose of travel and your dream country then share the best path that suits you.</li>
 
-            <strong> Global Network, Local Expertise</strong>
-            <p>With company-owned offices in India (Bangalore) and London, we blend international immigration insight with regional understanding to deliver exceptional visa and immigration service worldwide.</p>
+              <li><strong className={styles.highlightText}>Strong Global Network</strong><br />
+                With our teams in India and the United Kingdom we have exposure to global practices as well as local requirements. This helps us support clients more effectively.</li>
 
-            <strong>End-to-End Process Handling</strong>
-            <p>End-to-End Process Handling: From initial profile evaluation and thorough documentation assistance to visa filing, interview preparation, and post-visa support—we manage every aspect of the immigration process under one roof.</p>
+              <li><strong className={styles.highlightText}>Complete Visa Assistance</strong><br />
+                We help with profile study document list preparation form filing visa submission appointment booking mock interviews and even after visa support. Everything is handled in one place so you do not have to struggle.</li>
 
-            <strong> Inclusive Visa Services</strong>
-            We cover all the major visa categories such as:
+              <li><strong className={styles.highlightText}>Clients Come First</strong><br />
+                We always try to respond as fast as we can solve doubts and make your full visa experience smooth and stress free.</li>
+            </ul>
 
+            <h4>Visa Services We Offer</h4>
+
+            <p>We support a wide range of visa categories like</p>
             <ol>
-              <li>Visitor/Tourist Visa</li>
-              <li>Work Visa & Work Permits</li>
-              <li>Student Visa</li>
-              <li>Business & Investor Visas</li>
-              <li>Dependent/Family Visa</li>
-              <li>Visa Refusals & Appeals</li>
+              <li>Tourist and Visitor Visas</li>
+              <li>Work Visas and Work Permits</li>
+              <li>Student Visas and Study Abroad Guidance</li>
+              <li>Business and Investor Visas</li>
+              <li>Dependent Family and Spouse Visas</li>
+              <li>Visa Refusal Review and Re application Help</li>
+              <li>Visa Appeal Support</li>
+              <li>Permanent Residency Pathway Advice</li>
             </ol>
 
-            <strong> Client-Centric Culture </strong>
-            <p> We treat every client with the same empathy, commitment, and care as we would our own family. We ensure that your immigration journey will be smooth, stress-free, and ultimately successful with our dedicated support.</p>
+            <h4>Countries We Guide For</h4>
 
-            <p className={styles.disclaimer}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+            <ul>
+              <li>United States of America</li>
+              <li>United Kingdom</li>
+              <li>Schengen Europe</li>
+              <li>Canada</li>
+              <li>Australia</li>
+              <li>New Zealand</li>
+              <li>Japan</li>
+              <li>Singapore</li>
+              <li>United Arab Emirates</li>
+              <li>And more than twenty other destinations</li>
+            </ul>
+
+            <div className={styles.salesPitch}>
+              <p>
+                <b className={styles.strong}>Let Global Visa Internationals help you get through your full visa process without stress</b>
+                We work carefully on documentation and filing to make the full journey smooth and simple for you.
+              </p>
+
+              <ul>
+                <li><b className={styles.strong}>Document Support </b> We check and prepare all papers based on embassy standards.</li>
+                <li><b className={styles.strong}>Form Filing </b> Forms are filled with accuracy by our trained team.</li>
+                <li><b className={styles.strong}>Case Planning </b> We share a personalized plan based on your profile.</li>
+                <li><b className={styles.strong}>Professional Drafting </b> Cover letters SOP and supporting letters included.</li>
+                <li><b className={styles.strong}>Notary Help </b> If required we guide with notarization too.</li>
+                <li><b className={styles.strong}>Smooth Flow </b> You only attend biometrics and we manage the rest.</li>
+                <li><b className={styles.strong}>Regular Tracking </b> We keep an eye on your file until the final decision arrives.</li>
+              </ul>
+
+              <p><b className={styles.strong}>With GVI the full visa journey becomes smoother simpler and worry free</b></p>
+
+              <a href="tel:+917022213466" className={styles.callButton}>
+                📞 Free Eligibility Check
+              </a>
+            </div>
+
+            <p>
+              <strong>Client Focused Care</strong><br />
+              We treat every client with kindness patience and commitment. Our goal is to help you move ahead in your journey with the least stress and the best possible support.
+            </p>
+
+            <p className={styles.disclaimer}>
+              This service is provided by Global Visa Internationals an independent consultancy. We are not linked to the Australian Government or any embassy.
+            </p>
           </div>
 
           <div className={styles.formContainer}>
