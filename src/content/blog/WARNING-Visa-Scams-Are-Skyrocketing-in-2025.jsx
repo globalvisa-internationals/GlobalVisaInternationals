@@ -67,11 +67,11 @@ export const metadata = {
         "max-image-preview": "large",
         "max-video-preview": -1,
     },
-    category: "Visa Awareness & Fraud Prevention",
+    category: "Immigration News & Updates",
     other: {
         "article:published_time": "2025-11-24",
         "article:modified_time": "2025-11-24T00:00:00.000Z",
-        "article:section": "Visa Awareness & Fraud Prevention",
+        "article:section": "Immigration News & Updates",
     },
 };
 
