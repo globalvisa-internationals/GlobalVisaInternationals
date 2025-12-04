@@ -112,7 +112,12 @@ export default function VisaForm() {
 
   // Form fields configuration for cleaner JSX
   const formFields = [
-    { type: 'text', name: 'name', placeholder: 'Enter your name', required: true },
+    {
+      type: 'text',
+      name: 'name',
+      placeholder: 'Enter your name',
+      required: true
+    },
     {
       type: 'custom',
       name: 'phone',
@@ -134,14 +139,14 @@ export default function VisaForm() {
         {
           type: 'select',
           name: 'country',
-          options: ['', 'New Zealand', 'USA', 'UK', 'Canada', 'Australia', 'Europe', 'Japan', 'Dubai', 'Singapore', 'Other'],
+          options: ['', 'USA', 'UK', 'Canada', 'Europe', 'Schengen', 'Australia', 'New Zealand', 'Singapore', 'Japan', 'Dubai', 'Other'],
           placeholder: 'Select Country'
         },
         {
           type: 'select',
           name: 'immigration_type',
-          options: ['', 'Work Visa', 'Student Visa', 'Visitor/Tourist Visa', 'Business Visa', 'Dependent Visa', 'Permanent Residency Visa'],
-          placeholder: 'Select Immigration Type'
+          options: ['', 'Visitor/Tourist Visa', 'Business Visa', 'Student Visa', 'Dependent Visa', 'Permanent Residency Visa', 'Work Visa', 'Other'],
+          placeholder: 'Select Visa/Immigration Type'
         }
       ]
     },

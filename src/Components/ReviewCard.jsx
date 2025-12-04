@@ -188,12 +188,24 @@ export default function ReviewCarouselClient({ reviews = [] }) {
                             </div>
 
                             <div className={styles.modalBody}>
+
+                                {/* === Review Text === */}
                                 <div className={styles.reviewText}>
-                                    {selectedReview.text.split("\n").map((para, idx) =>
-                                        para.trim() ? <p key={idx}>{para.trim()}</p> : null
-                                    )}
+                                    {selectedReview.text &&
+                                        selectedReview.text.split("\n\n").map((block, idx) => (
+                                            <p key={idx}>
+                                                {block.split("\n").map((line, lineIdx) => (
+                                                    <React.Fragment key={lineIdx}>
+                                                        {line}
+                                                        {lineIdx < block.split("\n").length - 1 && <br />}
+                                                    </React.Fragment>
+                                                ))}
+                                            </p>
+                                        ))
+                                    }
                                 </div>
 
+                                {/* === Owner Reply === */}
                                 {selectedReview.reply && (
                                     <div className={styles.replyBox}>
                                         <div className={styles.replyHeader}>
@@ -206,16 +218,35 @@ export default function ReviewCarouselClient({ reviews = [] }) {
                                                     className={styles.ownerLogo}
                                                 />
                                             </div>
+
                                             <div className={styles.replyContent}>
                                                 <h4>
-                                                    Global Visa Internationals <span className={styles.ownerTag}>(Owner Reply)</span>
+                                                    Global Visa Internationals{" "}
+                                                    <span className={styles.ownerTag}>(Owner Reply)</span>
                                                 </h4>
-                                                <p>{selectedReview.reply}</p>
+
+                                                <p>
+                                                    {selectedReview.reply.split("\n\n").map((block, idx) => (
+                                                        <React.Fragment key={idx}>
+                                                            {block.split("\n").map((line, lineIdx) => (
+                                                                <React.Fragment key={lineIdx}>
+                                                                    {line}
+                                                                    {lineIdx < block.split("\n").length - 1 && <br />}
+                                                                </React.Fragment>
+                                                            ))}
+
+                                                            {/* Double line break between blocks */}
+                                                            {idx < selectedReview.reply.split("\n\n").length - 1 && <><br /><br /></>}
+                                                        </React.Fragment>
+                                                    ))}
+                                                </p>
+
                                             </div>
                                         </div>
                                     </div>
                                 )}
 
+                                {/* === Google Link === */}
                                 {selectedReview.link && (
                                     <a
                                         href={selectedReview.link}
@@ -223,16 +254,19 @@ export default function ReviewCarouselClient({ reviews = [] }) {
                                         rel="noopener noreferrer"
                                         className={styles.reviewLink}
                                     >
-                                        View on <span className={styles.googleLogo}><span className={styles.blue}>G</span>
+                                        View on <span className={styles.googleLogo}>
+                                            <span className={styles.blue}>G</span>
                                             <span className={styles.red}>o</span>
                                             <span className={styles.yellow}>o</span>
                                             <span className={styles.blue}>g</span>
                                             <span className={styles.green}>l</span>
                                             <span className={styles.red}>e</span>
-                                            <span> </span></span>
+                                        </span>
                                     </a>
                                 )}
+
                             </div>
+
                         </div>
                     </div>
                 )}
