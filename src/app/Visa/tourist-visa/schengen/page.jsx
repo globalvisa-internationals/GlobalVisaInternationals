@@ -370,9 +370,9 @@ export default function Schengen_Visa_Assistance() {
               <ul className={styles.countryGrid}>
                 <li><Link href="/Visa/tourist-visa/schengen/austria">Austria</Link></li>
                 <li><Link href="/Visa/tourist-visa/schengen/belgium">Belgium</Link></li>
-                <li>Bulgaria</li>
-                <li>Croatia</li>
-                <li>Czech Republic</li>
+                <li><Link href="/Visa/tourist-visa/schengen/bulgaria">Bulgaria</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/croatia">Croatia</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/czech-republic">Czech Republic</Link></li>
                 <li>Denmark</li>
                 <li>Estonia</li>
                 <li>Finland</li>

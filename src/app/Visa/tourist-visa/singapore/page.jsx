@@ -477,7 +477,7 @@ export default function Dubai() {
           <h2 className={styles.subTitle}>Understanding the Singapore Visa Cost (Tourist Visa Fees Singapore):</h2>
           <p >The total Singapore visa cost for Indian citizens typically comprises a non-refundable visa processing fee levied by the ICA and a service charge by the authorized agent, such as <strong className={styles.strong}>Global Visa Internationals</strong>.</p>
           <ul >
-            <li>The standard <strong className={styles.strong}>visa and processing fee is usually around INR 3,850</strong>.</li>
+            <li>The standard <strong className={styles.strong}>visa and processing fee is usually around INR 3,950</strong>.</li>
             <li><strong className={styles.strong}>Global Visa Internationals</strong> offers competitive service charges for our expert assistance. For detailed information on our service fees, please fill out the form, and our experts will contact you immediately.</li>
           </ul>
           <p  >Therefore, the overall cost for your Singapore tourist visa will be the sum of these two components. Contact Global Visa Internationals for transparent and accurate information regarding the tourist visa fees Singapore.</p>
