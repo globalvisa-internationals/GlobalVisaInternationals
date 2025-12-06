@@ -204,7 +204,7 @@ export default function BlogList({ posts }) {
       )}
 
       {/* Subscribe Box */}
-      <div className={styles.subscribeBox}>
+      {/* <div className={styles.subscribeBox}>
         <h3>Subscribe to Our Blog</h3>
         <p>Get the latest visa updates, tips, and news directly in your inbox.</p>
 
@@ -222,17 +222,17 @@ export default function BlogList({ posts }) {
           <button type="submit" className={styles.subscribeButton}>
             Subscribe
           </button>
-        </form>
+        </form> */}
 
-        {/* Custom Popup */}
-        {popup.show && (
+      {/* Custom Popup */}
+      {/* {popup.show && (
           <div
             className={`${styles.popup} ${popup.type === "success" ? styles.success : styles.error}`}
           >
             {popup.message}
           </div>
-        )}
-      </div>
+        )} */}
+      {/* </div> */}
     </div>
   );
 }
