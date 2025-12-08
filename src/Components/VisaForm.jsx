@@ -4,6 +4,9 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import styles from './VisaForm.module.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+// Get stored GCLID from cookie
+import { getCookie } from "@/lib/getCookie";
+
 
 export default function VisaForm() {
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -81,7 +84,37 @@ export default function VisaForm() {
       const data = await response.json();
 
       if (data.success) {
+
+        // Google Ads Conversion Tracking
+        // Get stored GCLID from cookie
+        const gclid = getCookie("gclid");
+
+        // Prevent double conversions
+        if (!localStorage.getItem("alreadyConverted")) {
+
+          // Fire Google Ads conversion ONLY if GCLID exists
+          if (gclid && typeof window !== "undefined" && typeof window.gtag === "function") {
+            window.gtag("event", "conversion", {
+              send_to: `${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}/${process.env.NEXT_PUBLIC_GOOGLE_CONVERSION_LABEL}`,
+              value: 1,
+              currency: "INR"
+            });
+
+            // Mark conversion fired
+            localStorage.setItem("alreadyConverted", "yes");
+          }
+
+          // Fire SEO conversion event → GA4 only
+          if (!gclid && typeof window.gtag === "function") {
+            window.gtag("event", "seo_form_submit", {
+              event_category: "SEO Lead",
+              event_label: "Visa Form Submission"
+            });
+          }
+        }
+
         // Reset form
+
         setFormData({
           name: '',
           country: '',

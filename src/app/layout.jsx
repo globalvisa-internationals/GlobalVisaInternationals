@@ -39,6 +39,21 @@ export default function RootLayout({ children }) {
                 gtag('config', '${gaId}');
               `}
             </Script>
+            {/* Google Ads tracking code */}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_TAG_ID}`}
+              strategy="afterInteractive"
+            />
+
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_TAG_ID}');
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');
+          `}
+            </Script>
           </>
         )}
       </head>
@@ -54,6 +69,7 @@ export default function RootLayout({ children }) {
           <Footer />
           <SpeedInsights />
         </GoogleReCaptchaProvider>
+
       </body>
     </html>
   );
