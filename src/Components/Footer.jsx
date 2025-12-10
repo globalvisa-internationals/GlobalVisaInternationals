@@ -65,11 +65,11 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h4>Immigration Services</h4>
                         <ul>
-                            <li><a href="https://www.globalvisainternationals.com/Visa/permanent-residency-visa/canada-pr-visa"> Canada Immigration</a></li>
-                            <li><a href="https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa"> Australia Immigration</a></li>
-                            <li><a href="https://www.globalvisainternationals.com/Visa/tourist-visa/schengen"> Europe Immigration</a></li>
-                            <li><a href="https://www.globalvisainternationals.com/Visa/business/uk"> Business & Investor Visas</a></li>
-                            <li><a href="https://www.globalvisainternationals.com/Visa/student-visa/uk"> Student Visas</a></li>
+                            <li><a href="./Visa/permanent-residency-visa/canada-pr-visa"> Canada Immigration</a></li>
+                            <li><a href="./Visa/permanent-residency-visa/australia-pr-visa"> Australia Immigration</a></li>
+                            <li><a href="./Visa/tourist-visa/schengen"> Europe Immigration</a></li>
+                            <li><a href="./Visa/business/uk"> Business & Investor Visas</a></li>
+                            <li><a href="./Visa/student-visa/uk"> Student Visas</a></li>
                         </ul>
                     </div>
 
@@ -77,11 +77,11 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h4>Quick Assistance</h4>
                         <ul>
-                            <li><a href="https://www.globalvisainternationals.com/contact">Free Consultation</a></li>
-                            <li><a href="https://www.globalvisainternationals.com/blog">Blog</a></li>
-                            <li><a href="https://www.globalvisainternationals.com/career">Careers</a></li>
-                            <li><a href="https://www.globalvisainternationals.com/privacy-policy">Privacy Policy</a></li>
-                            <li><a href="https://www.globalvisainternationals.com/terms-and-conditions">Terms & Conditions</a></li>
+                            <li><a href="./contact">Free Consultation</a></li>
+                            <li><a href="./blog">Blog</a></li>
+                            <li><a href="./career">Careers</a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                            <li><a href="./terms-and-conditions">Terms & Conditions</a></li>
                         </ul>
                     </div>
 

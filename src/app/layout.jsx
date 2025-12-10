@@ -6,13 +6,21 @@ import Footer from "@/Components/Footer";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/next';
+import { useEffect } from "react";
 
 import "./globals.css";
 
 export default function RootLayout({ children }) {
   const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
   const siteVerificationCode = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const gclid = urlParams.get("gclid");
 
+    if (gclid) {
+      document.cookie = `gclid=${gclid}; path=/; max-age=${90 * 24 * 60 * 60}`;
+    }
+  }, []);
   return (
     <html lang="en">
       <head>
