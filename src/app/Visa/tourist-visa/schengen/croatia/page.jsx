@@ -1,5 +1,4 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
@@ -281,12 +280,12 @@ export default function Bulgaria_Tourist_Visa_Assistance() {
 
                 <div className={styles.VisaData}>
                     {/* --- H1: High-Impact, SEO-Rich Title --- */}
-                    <h1 className={styles.Title}>Croatia Tourist Visa for Indians (2025): Expert Assistance in Bangalore</h1>
+                    <h1 className={styles.Title}>Croatia Tourist Visa for Indians (2026): Expert Assistance in Bangalore</h1>
 
                     <h5 className={styles.subTitle}>✈ Premium Guidance for the Croatia 'Type C' Schengen Visa | VFS Bangalore Appointment Priority | Zero-Error Application Process</h5>
 
                     {/* --- The Hook: Context & Urgency --- */}
-                    <p><strong>The Adriatic is calling, but the borders are stricter.</strong> With Croatia now fully integrated into the <strong>Schengen Zone</strong> and the Eurozone, it has become one of the most desirable destinations for 2025. From the walled city of Dubrovnik to the waterfalls of Plitvice, the allure is undeniable.</p>
+                    <p><strong>The Adriatic is calling, but the borders are stricter.</strong> With Croatia now fully integrated into the <strong>Schengen Zone</strong> and the Eurozone, it has become one of the most desirable destinations for 2026. From the walled city of Dubrovnik to the waterfalls of Plitvice, the allure is undeniable.</p>
                     <p>However, this new status means the <strong>Croatia Tourist Visa</strong> application is no longer a simple formality. The documentation standards now match the rigor of Switzerland or Germany. A vague itinerary, insufficient travel insurance, or a booking that cannot be verified can lead to an instant rejection—jeopardizing not just your summer holiday, but your future ability to enter Europe.</p>
                     <p><b className={styles.strong}>Global Visa Internationals (GVI)</b> serves discriminating travelers in Bangalore and across India. We navigate the complex bureaucratic requirements so you can focus on the Adriatic sunset.</p>
 

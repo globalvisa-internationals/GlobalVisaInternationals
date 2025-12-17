@@ -391,7 +391,7 @@ export default function France_Tourist_Visa_Assistance() {
                         GVI cross-checks each document to enhance your France tourist visa success rate from India.
                     </p>
 
-                    <h2 className={styles.subTitle}>France Tourist Visa Fees & Appointment Info (India 2025)</h2>
+                    <h2 className={styles.subTitle}>France Tourist Visa Fees & Appointment Info (India 2026)</h2>
                     <ul>
                         <li>
                             <b className={styles.strong}>Adult Visa Fee:</b> €90 (~₹9,300) per person

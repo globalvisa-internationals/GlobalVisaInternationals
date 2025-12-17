@@ -22,7 +22,7 @@ export const metadata = {
   authors: 'Global Visa Internationals',
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#0a66c2',
+
   alternates: {
     canonical: 'https://www.globalvisainternationals.com/Visa/business-visa/uk',
   },
@@ -70,8 +70,7 @@ export default function UK_Business_Visa() {
 
   return (
     <>
-      {/* ✅ Add all structured data dynamically */}
-      {/* ✅ LOCAL BUSINESS SCHEMA */}
+
       <Script
         id="local-business-schema"
         type="application/ld+json"

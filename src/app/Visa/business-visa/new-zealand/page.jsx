@@ -13,7 +13,7 @@ export const metadata = {
     "New Zealand business visa, apply business visa New Zealand, New Zealand business visa from India, investor visa, entrepreneur visa, business migration to New Zealand",
   robots: "index, follow",
   authors: [{ name: "Global Visa Internationals" }],
-  themeColor: "#0a66c2",
+
   alternates: {
     canonical: "https://www.globalvisainternationals.com/Visa/business-visa/new-zealand",
   },

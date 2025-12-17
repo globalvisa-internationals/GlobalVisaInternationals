@@ -1,5 +1,5 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
+
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
@@ -247,7 +247,7 @@ export default function Bulgaria_Tourist_Visa_Assistance() {
 
                 <div className={styles.VisaData}>
                     {/* --- H1: High-Impact, SEO-Rich Title --- */}
-                    <h1 className={styles.Title}>Bulgaria Tourist Visa for Indians (2025): Your Gateway to the Schengen Zone</h1>
+                    <h1 className={styles.Title}>Bulgaria Tourist Visa for Indians (2026): Your Gateway to the Schengen Zone</h1>
 
                     <h4 className={styles.subTitle}>✈ Expert Guidance for the Bulgarian 'Type C' Schengen Visa | 99% Success Rate Strategy | VFS Appointment Assistance</h4>
 
@@ -275,7 +275,7 @@ export default function Bulgaria_Tourist_Visa_Assistance() {
                     </div>
 
                     {/* --- NEW SECTION: Detailed Document Checklist --- */}
-                    <h2 className={styles.subTitle}>Comprehensive Document Checklist (2025 Updates)</h2>
+                    <h2 className={styles.subTitle}>Comprehensive Document Checklist (2026 Updates)</h2>
                     <p>The Bulgarian Consulate requires a specific set of documents depending on your employment status. GVI ensures every document meets the ISO standards.</p>
 
                     <h4 style={{ color: '#0056b3', marginTop: '15px' }}> General Mandatory Documents</h4>

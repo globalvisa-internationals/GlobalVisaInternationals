@@ -1,10 +1,9 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
+
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 
-import { Metadata } from "next";
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
     title: "Apply for Spain Tourist Visa from India | Spain Schengen Visa Experts",
@@ -402,7 +401,7 @@ export default function Spain_Tourist_Visa_Assistance() {
                         <li><b className={styles.strong}>Photos & Form Compliance:</b> Correct photo size and fully completed forms.</li>
                     </ul>
 
-                    <h2 className={styles.subTitle}>Spain Tourist Visa Fees India — 2025 (Indicative)</h2>
+                    <h2 className={styles.subTitle}>Spain Tourist Visa Fees India — 2026 (Indicative)</h2>
                     <ul>
                         <li><b className={styles.strong}>Adult Short-Stay Schengen Fee:</b> Generally in the range of €80–€90 (approx. INR 7,200–9,300) depending on exchange rates and the consulate/payment method.</li>
                         <li><b className={styles.strong}>Children (6–12 yrs):</b> Reduced fee (commonly half the adult fee).</li>

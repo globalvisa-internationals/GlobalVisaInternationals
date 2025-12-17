@@ -1,10 +1,7 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
-
-import { Metadata } from "next";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
@@ -402,7 +399,7 @@ export default function Germany_Tourist_Visa_Assistance() {
                         GVI cross-checks each document to enhance your Germany tourist visa success rate from India.
                     </p>
 
-                    <h2 className={styles.subTitle}>Germany Tourist Visa Fees & Appointment Info (India 2025)</h2>
+                    <h2 className={styles.subTitle}>Germany Tourist Visa Fees & Appointment Info (India 2026)</h2>
                     <ul>
                         <li><b className={styles.strong}>Adult Visa Fee</b>: €90 (~₹9,300) per person</li>
                         <li><b className={styles.strong}>Children (6-12 yrs):</b> €45 (~₹4,700)</li>

@@ -1,12 +1,9 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
+
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 import Link from "next/link";
-
-
-import { Metadata } from "next";
 
 
 export const metadata = {
@@ -318,7 +315,7 @@ export default function Schengen_Visa_Assistance() {
 
       <div className={styles.VisaSec}>
         <div className={styles.VisaData}>
-          <h1 className={styles.Title}>Schengen Tourist Visa from India 2025 - Eligibility, Requirements & Fees | Global Visa Internationals</h1>
+          <h1 className={styles.Title}>Schengen Tourist Visa from India 2026 - Eligibility, Requirements & Fees | Global Visa Internationals</h1>
 
           <h2 className={styles.subTitle}>✈ Travel to Europe with a Schengen Visa</h2>
           <p>Planning a trip to Europe? A <b className={styles.strong}>Schengen tourist visa</b> allows Indian travelers to explore 29 European countries with a single visa. At <b className={styles.strong}>Global Visa Internationals (GVI)</b>, we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
@@ -465,7 +462,7 @@ export default function Schengen_Visa_Assistance() {
           <p>A well-written <b className={styles.strong}>Schengen visa cover letter</b> is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit (e.g., tourism), and proof of your strong ties to India (e.g., family, job). Our experts draft a professional cover letter and a detailed itinerary for every client to maximize their chances of success.</p>
           <a href="/cover-letter-guide" target="_blank">Read our detailed guide on how to write a Schengen visa cover letter.</a>
 
-          <h2 className={styles.subTitle}>Schengen Tourist Visa Fees (India 2025)</h2>
+          <h2 className={styles.subTitle}>Schengen Tourist Visa Fees (India 2026)</h2>
           <ul>
             <li><b className={styles.strong}>Adult Visa Fee (Embassy)</b>: €90 (~₹9,300) per person</li>
             <li><b className={styles.strong}>Children (6-12 years)</b>: €45 per person</li>

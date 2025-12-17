@@ -1,5 +1,4 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
@@ -285,12 +284,12 @@ export default function Bulgaria_Tourist_Visa_Assistance() {
 
                 <div className={styles.VisaData}>
                     {/* --- H1: High-Impact, SEO-Rich Title --- */}
-                    <h1 className={styles.Title}>Czech Republic Schengen Visa for Indians (2025): Expert Assistance in Bangalore</h1>
+                    <h1 className={styles.Title}>Czech Republic Schengen Visa for Indians (2026): Expert Assistance in Bangalore</h1>
 
                     <h5 className={styles.subTitle}>✈ Premium Guidance for the Czech 'Type C' Tourist Visa | VFS Appointment Priority | Zero-Error Application Process</h5>
 
                     {/* --- The Hook: Context & Urgency --- */}
-                    <p><strong>The spires of Prague are timeless, but the window to visit them is narrowing.</strong> As the heart of the "Central European Triangle" (Prague-Vienna-Budapest), the <strong>Czech Republic</strong> has become a top-tier destination for 2025. From the Charles Bridge at sunrise to the fairytale streets of Český Krumlov, the Bohemian allure is undeniable.</p>
+                    <p><strong>The spires of Prague are timeless, but the window to visit them is narrowing.</strong> As the heart of the "Central European Triangle" (Prague-Vienna-Budapest), the <strong>Czech Republic</strong> has become a top-tier destination for 2026. From the Charles Bridge at sunrise to the fairytale streets of Český Krumlov, the Bohemian allure is undeniable.</p>
                     <p>However, the <strong>Czech Republic Schengen Visa</strong> is notoriously rigorous. With high demand comes stricter scrutiny. The Consulate requires more than just a flight booking; they demand a cohesive travel narrative. A misunderstood itinerary, a "dummy" hotel booking, or a bank statement that doesn't align with your profession can lead to immediate rejection.</p>
                     <p><b className={styles.strong}>Global Visa Internationals (GVI)</b> provides specialized visa consulting for discerning travelers in Bangalore, Mumbai, and Delhi. We manage the bureaucratic complexities so you can focus on your Bohemian itinerary.</p>
 
@@ -313,7 +312,7 @@ export default function Bulgaria_Tourist_Visa_Assistance() {
                     </div>
 
                     {/* --- NEW SECTION: Detailed Document Checklist --- */}
-                    <h2 className={styles.subTitle}>Required Documents for Czech Republic Tourist Visa (2025)</h2>
+                    <h2 className={styles.subTitle}>Required Documents for Czech Republic Tourist Visa (2026)</h2>
                     <p>The Embassy of the Czech Republic in New Delhi maintains strict standards. GVI ensures your file is perfectly ordered according to the latest VFS checklist.</p>
 
                     <h4 style={{ color: '#0056b3', marginTop: '15px' }}>📄 General Mandatory Documents</h4>

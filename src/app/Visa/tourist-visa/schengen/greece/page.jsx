@@ -1,10 +1,10 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
+
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 
-import { Metadata } from "next";
+
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
     title: "Apply for Greece Tourist Visa from India | Greece Schengen Visa Experts",
@@ -19,7 +19,7 @@ export const metadata = {
         "Greece visa consultants Bangalore",
         "Greece visa application process",
         "Greece tourist visa documents required",
-        "Greece tourist visa fees India 2025",
+        "Greece tourist visa fees India 2026",
         "Schengen visa for Greece",
         "Greece tourist visa agency India",
         "Greece visa consultancy India",
@@ -396,7 +396,7 @@ export default function Greece_Tourist_Visa_Assistance() {
                         <li><b className={styles.strong}>Support Letters:</b> Sponsor letters, invitation, and travel plan summary.</li>
                     </ul>
 
-                    <h2 className={styles.subTitle}>Greece Tourist Visa Fees India — 2025</h2>
+                    <h2 className={styles.subTitle}>Greece Tourist Visa Fees India — 2026</h2>
                     <ul>
                         <li><b className={styles.strong}>Adult Visa Fee:</b> €90 (~₹9,300)</li>
                         <li><b className={styles.strong}>Children (6–12 years):</b> €45 (~₹4,700)</li>

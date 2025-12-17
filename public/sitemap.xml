@@ -363,6 +363,98 @@
             href="https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/italy" />
     </url>
 
+    <!-- Bulgaria -->
+    <url>
+        <loc>
+            https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/bulgaria
+        </loc>
+
+        <lastmod>2025-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/tourist-visa/Bulgaria-Tourist-Visa-Assistance-GVI.jpg
+            </image:loc>
+            <image:caption>
+                Bulgaria Tourist Visa Assistance for Indian Travellers | Global Visa Internationals
+            </image:caption>
+            <image:title>
+                Bulgaria Tourist Visa Assistance – Schengen Visa | Global Visa Internationals
+            </image:title>
+        </image:image>
+    </url>
+    <!-- belgium -->
+    <url>
+        <loc>
+            https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/belgium
+        </loc>
+
+        <lastmod>2025-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/tourist-visa/Belgium-Tourist-Visa-Assistance-GVI.jpg
+            </image:loc>
+            <image:caption>
+                Belgium Tourist Visa Assistance for Indian Travellers | Global Visa Internationals
+            </image:caption>
+            <image:title>
+                Belgium Tourist Visa Assistance – Schengen Visa | Global Visa Internationals
+            </image:title>
+        </image:image>
+    </url>
+    <!-- croatia -->
+    <url>
+        <loc>
+            https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/croatia
+        </loc>
+
+        <lastmod>2025-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/tourist-visa/Croatia-Tourist-Visa-Assistance-GVI.jpg
+            </image:loc>
+            <image:caption>
+                Croatia Tourist Visa Assistance for Indian Travellers | Global Visa Internationals
+            </image:caption>
+            <image:title>
+                Croatia Tourist Visa Assistance – Schengen Visa | Global Visa Internationals
+            </image:title>
+        </image:image>
+    </url>
+
+    <!-- czech-republic -->
+    <url>
+        <loc>
+            https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/czech-republic
+        </loc>
+
+        <lastmod>2025-12-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+
+        <image:image>
+            <image:loc>
+                https://www.globalvisainternationals.com/tourist-visa/czech-republic-Tourist-Visa-Assistance-GVI.jpg
+            </image:loc>
+            <image:caption>
+                Czech Republic Tourist Visa Assistance for Indian Travellers | Global Visa
+                Internationals
+            </image:caption>
+            <image:title>
+                Czech Republic Tourist Visa Assistance – Schengen Visa | Global Visa Internationals
+            </image:title>
+        </image:image>
+    </url>
+
+
     <!-- Singapore Tourist Visa -->
     <url>
         <loc>https://www.globalvisainternationals.com/Visa/tourist-visa/singapore</loc>
@@ -1089,6 +1181,5 @@
             </image:title>
         </image:image>
     </url>
-
 
 </urlset>

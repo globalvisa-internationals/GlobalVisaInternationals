@@ -329,7 +329,7 @@ export default function Austria_Tourist_Visa_Assistance() {
                     <p>    GVI reviews and verifies every document to ensure{" "}    embassy compliance and avoid unnecessary delays or rejections.</p>
                     <a href="tel:+917022213466" className={styles.callButton}>    📞 Get Free Eligibility Check</a>
 
-                    <h2 className={styles.subTitle}>Austria Tourist Visa Fee & Processing Time (India 2025)</h2>
+                    <h2 className={styles.subTitle}>Austria Tourist Visa Fee & Processing Time (India 2026)</h2>
                     <ul>
                         <li><b className={styles.strong}>Adult Visa Fee:</b> €90 (~₹9,300)</li>
                         <li><b className={styles.strong}>Children (6-12 years):</b> €45 (~₹4,700)</li>

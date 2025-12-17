@@ -23,7 +23,7 @@ export const metadata = {
   authors: [{ name: 'Global Visa Internationals' }],
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#0a66c2',
+
   alternates: {
     canonical: 'https://www.globalvisainternationals.com/Visa/business-visa/canada',
   },

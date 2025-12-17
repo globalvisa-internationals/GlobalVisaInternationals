@@ -14,7 +14,7 @@ export const metadata = {
     "European business visa, apply business visa Europe, Europe business visa from India, EU investor visa, business migration to Europe",
   robots: "index, follow",
   authors: [{ name: "Global Visa Internationals" }],
-  themeColor: "#0a66c2",
+
   alternates: {
     canonical: "https://www.globalvisainternationals.com/visa/business/schengen",
   },

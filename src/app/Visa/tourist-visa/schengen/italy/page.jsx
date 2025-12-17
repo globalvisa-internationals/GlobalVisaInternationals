@@ -1,10 +1,8 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 
-import { Metadata } from "next";
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
     title: "Apply for Italy Tourist Visa from India | Italy Schengen Visa Experts",
@@ -19,7 +17,7 @@ export const metadata = {
         "Italy visa consultants Bangalore",
         "Italy visa application process",
         "Italy tourist visa documents required",
-        "Italy tourist visa fees India 2025",
+        "Italy tourist visa fees India 2026",
         "Schengen visa for Italy",
         "Italy tourist visa agency India",
         "Italy visa consultancy India",
@@ -395,9 +393,9 @@ export default function Italy_Tourist_Visa_Assistance() {
                         <li><b className={styles.strong}>Photos & Form Compliance:</b> Correct photo size and fully completed forms.</li>
                     </ul>
 
-                    <h2 className={styles.subTitle}>Italy Tourist Visa Fees India — 2025</h2>
+                    <h2 className={styles.subTitle}>Italy Tourist Visa Fees India — 2026</h2>
                     <ul>
-                        <li><b className={styles.strong}>Adult Visa Fee (2025):</b> €90 (~₹9,300) per applicant</li>
+                        <li><b className={styles.strong}>Adult Visa Fee (2026):</b> €90 (~₹9,300) per applicant</li>
                         <li><b className={styles.strong}>Children (6–12 yrs):</b> €45 (~₹4,700)</li>
                         <li><b className={styles.strong}>Children below 6 yrs:</b> Free</li>
                         <li><b className={styles.strong}>VFS / Service Charges:</b> Additional, per center</li>

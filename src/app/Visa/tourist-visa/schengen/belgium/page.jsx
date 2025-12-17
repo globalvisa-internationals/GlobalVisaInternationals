@@ -1,10 +1,9 @@
 import styles from "@/Components/Visa.module.css";
-import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 
-import { Metadata } from "next";
+
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
     title: "Apply for Belgium Tourist Visa from India | Belgium Schengen Visa Experts",
@@ -397,7 +396,7 @@ export default function Belgium_Tourist_Visa_Assistance() {
                     <a href="tel:+917022213466" className={styles.callButton}>
                         📞 Get Free Eligibility Check
                     </a>
-                    <h2 className={styles.subTitle}>Belgium Tourist Visa Fees & Processing Time (India 2025)</h2>
+                    <h2 className={styles.subTitle}>Belgium Tourist Visa Fees & Processing Time (India 2026)</h2>
                     <ul>
                         <li>
                             <b className={styles.strong}>Adult Visa Fee:</b> €90 (~₹9,300)
