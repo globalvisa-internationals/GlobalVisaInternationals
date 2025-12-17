@@ -370,23 +370,23 @@ export default function Schengen_Visa_Assistance() {
                 <li><Link href="/Visa/tourist-visa/schengen/bulgaria">Bulgaria</Link></li>
                 <li><Link href="/Visa/tourist-visa/schengen/croatia">Croatia</Link></li>
                 <li><Link href="/Visa/tourist-visa/schengen/czech-republic">Czech Republic</Link></li>
-                <li>Denmark</li>
-                <li>Estonia</li>
-                <li>Finland</li>
+                <li><Link href="/Visa/tourist-visa/schengen/denmark">Denmark</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/estonia">Estonia</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/finland">Finland</Link></li>
                 <li><Link href="/Visa/tourist-visa/schengen/france">France</Link></li>
                 <li><Link href="/Visa/tourist-visa/schengen/germany">Germany</Link></li>
                 <li><Link href="/Visa/tourist-visa/schengen/greece">Greece</Link></li>
-                <li>Hungary</li>
-                <li>Iceland</li>
+                <li><Link href="/Visa/tourist-visa/schengen/hungary">Hungary</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/iceland">Iceland</Link></li>
                 <li><Link href="/Visa/tourist-visa/schengen/italy">Italy</Link></li>
-                <li>Latvia</li>
-                <li>Liechtenstein</li>
-                <li>Lithuania</li>
-                <li>Luxembourg</li>
-                <li>Malta</li>
-                <li>Netherlands</li>
-                <li>Norway</li>
-                <li>Poland</li>
+                <li><Link href="/Visa/tourist-visa/schengen/latvia">Latvia</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/liechtenstein">Liechtenstein</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/lithuania">Lithuania</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/luxembourg">Luxembourg</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/malta">Malta</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/netherlands">Netherlands</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/norway">Norway</Link></li>
+                <li><Link href="/Visa/tourist-visa/schengen/poland">Poland</Link></li>
                 <li>Portugal</li>
                 <li>Romania</li>
                 <li>Slovakia</li>

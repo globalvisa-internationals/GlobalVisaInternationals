@@ -146,7 +146,16 @@ export default function AustralianTouristVisaBlog() {
 
             <div className={Styles.blogContainer}>
                 <h1>{metadata.title}</h1>
-                <img src={fullImageUrl} alt={metadata.title} className={Styles.blogImage} />
+                <div className={Styles.imageCard}>
+                    <img
+                        src={metadata.image}
+                        alt={metadata.title}
+                        className={Styles.image}
+                        loading="lazy"
+                        width="1200"
+                        height="630"
+                    />
+                </div>
                 <p>{metadata.excerpt}</p>
 
                 <h2>🌏 Advantages of an Australian Tourist Visa for Indians</h2>

@@ -146,87 +146,87 @@ export default function SchengenVisaCascadeLongTermGuide() {
           />
         </div>
         <h1 className={Styles.subtitle}>{metadata.title}</h1>
-        <p>For Indian nationals dreaming of extended stays in Europe, the European Commission's <strong>Schengen Visa Cascade Regime</strong>, introduced on April 18, 2024, offers a structured pathway to obtaining <strong>long-term multiple-entry visas</strong>. This guide will help you understand this regime and answer your questions about securing a <strong>long term Schengen visa</strong>.</p>
+        <p>For Indian nationals dreaming of extended stays in Europe, the European Commission's  Schengen Visa Cascade Regime , introduced on April 18, 2024, offers a structured pathway to obtaining  long-term multiple-entry visas . This guide will help you understand this regime and answer your questions about securing a  long term Schengen visa .</p>
 
-        <h2 className={Styles.subtitle}>🌍 Understanding the <strong>Schengen Visa Cascade</strong>: Your Route to a <strong>Long Term Schengen Visa</strong></h2>
-        <p>The <strong>visa cascade regime</strong> is a tiered <strong>Schengen visa application</strong> system designed to reward frequent travelers from India who comply with <strong>visa requirements</strong>. This system allows for progressively longer <strong>Schengen visa durations</strong>, effectively serving as a route to a <strong>long term Schengen visa</strong>:</p>
+        <h2 className={Styles.subtitle}>🌍 Understanding the  Schengen Visa Cascade : Your Route to a  Long Term Schengen Visa </h2>
+        <p>The  visa cascade regime  is a tiered  Schengen visa application  system designed to reward frequent travelers from India who comply with  visa requirements . This system allows for progressively longer  Schengen visa durations , effectively serving as a route to a  long term Schengen visa :</p>
         <ul>
-          <li>Initial Visa: A <strong>short-term Schengen visa</strong>, typically single-entry for first-time travelers.</li>
-          <li>Two-Year <strong>Multiple-Entry Schengen Visa</strong>: Available to Indian nationals who have lawfully used two previous <strong>Schengen visas for Indians</strong> within the last three years.</li>
-          <li>Five-Year <strong>Multiple-Entry Schengen Visa</strong>: For travelers who have successfully used a two-year visa without any issues and can demonstrate strong ties to India, simplifying future <strong>Europe travel</strong>.</li>
+          <li>Initial Visa: A  short-term Schengen visa , typically single-entry for first-time travelers.</li>
+          <li>Two-Year  Multiple-Entry Schengen Visa : Available to Indian nationals who have lawfully used two previous  Schengen visas for Indians  within the last three years.</li>
+          <li>Five-Year  Multiple-Entry Schengen Visa : For travelers who have successfully used a two-year visa without any issues and can demonstrate strong ties to India, simplifying future  Europe travel .</li>
         </ul>
-        <p>This initiative provides predictability for those seeking a <strong>Schengen visa from India</strong> and aligns with the EU's goal of strengthening ties with India. <strong>Confused about how the cascade applies to you? Contact Global Visa Internationals in Bangalore for expert clarification.</strong></p>
+        <p>This initiative provides predictability for those seeking a  Schengen visa from India  and aligns with the EU's goal of strengthening ties with India.  Confused about how the cascade applies to you? Contact Global Visa Internationals in Bangalore for expert clarification. </p>
 
-        <h2 className={Styles.subtitle}>✅ Determining Your <strong>Schengen Visa Eligibility</strong> for Long-Term Access</h2>
-        <p>To qualify for the two-year <strong>multiple-entry visa</strong> under the cascade:</p>
+        <h2 className={Styles.subtitle}>✅ Determining Your  Schengen Visa Eligibility  for Long-Term Access</h2>
+        <p>To qualify for the two-year  multiple-entry visa  under the cascade:</p>
         <ul>
-          <li>You must have obtained and lawfully used two <strong>previous Schengen visas</strong> within the last three years.</li>
-          <li>Ensure you have no record of <strong>Schengen visa violations</strong>, such as overstaying or unauthorized employment.</li>
-          <li>Provide clear documentation outlining legitimate reasons for your <strong>frequent travel to Europe</strong> for your <strong>Schengen visa application</strong> (e.g., business, tourism, family).</li>
+          <li>You must have obtained and lawfully used two  previous Schengen visas  within the last three years.</li>
+          <li>Ensure you have no record of  Schengen visa violations , such as overstaying or unauthorized employment.</li>
+          <li>Provide clear documentation outlining legitimate reasons for your  frequent travel to Europe  for your  Schengen visa application  (e.g., business, tourism, family).</li>
         </ul>
-        <p>For the coveted five-year <strong>multiple-entry visa</strong>, you should:</p>
+        <p>For the coveted five-year  multiple-entry visa , you should:</p>
         <ul>
-          <li>Have successfully utilized a two-year <strong>Schengen visa</strong> without any incidents.</li>
-          <li>Present compelling evidence of your consistent need for <strong>frequent travel to the Schengen Area</strong> to support your <strong>long-term visa</strong> request.</li>
-          <li>Maintain strong ties to India to assure your intent to return, a crucial factor for <strong>Schengen visa approval</strong>.</li>
+          <li>Have successfully utilized a two-year  Schengen visa  without any incidents.</li>
+          <li>Present compelling evidence of your consistent need for  frequent travel to the Schengen Area  to support your  long-term visa  request.</li>
+          <li>Maintain strong ties to India to assure your intent to return, a crucial factor for  Schengen visa approval .</li>
         </ul>
-        <p><strong>Important Note:</strong> The validity of your Indian passport plays a crucial role in the maximum duration of the visa issued. Your <strong>Schengen visa</strong> will not extend beyond your passport's expiry date. <strong>Need help understanding how your passport validity affects your long-term visa prospects? Reach out to Global Visa Internationals.</strong></p>
+        <p> Important Note:  The validity of your Indian passport plays a crucial role in the maximum duration of the visa issued. Your  Schengen visa  will not extend beyond your passport's expiry date.  Need help understanding how your passport validity affects your long-term visa prospects? Reach out to Global Visa Internationals. </p>
 
-        <h2 className={Styles.subtitle}>✈️ Unlocking the <strong>Benefits of the Schengen Visa Cascade Regime</strong> for Frequent Indian Travelers</h2>
+        <h2 className={Styles.subtitle}>✈️ Unlocking the  Benefits of the Schengen Visa Cascade Regime  for Frequent Indian Travelers</h2>
         <ul>
-          <li><strong>Extended Visa Validity</strong>: Reducing the need for frequent <strong>Schengen visa renewals</strong>.</li>
-          <li><strong>Multiple Entries to Schengen Area</strong>: Granting the freedom to travel across 29 <strong>Schengen countries</strong> for up to 90 days within any 180-day period, offering significant <strong>travel flexibility</strong>.</li>
-          <li><strong>Simplified Visa Process</strong>: Streamlining the application for <strong>frequent travelers</strong> with a history of compliance, making the <strong>Schengen visa process easier</strong>.</li>
+          <li> Extended Visa Validity : Reducing the need for frequent  Schengen visa renewals .</li>
+          <li> Multiple Entries to Schengen Area : Granting the freedom to travel across 29  Schengen countries  for up to 90 days within any 180-day period, offering significant  travel flexibility .</li>
+          <li> Simplified Visa Process : Streamlining the application for  frequent travelers  with a history of compliance, making the  Schengen visa process easier .</li>
         </ul>
-        <p>Remember, these visas do not permit employment or income generation within <strong>Schengen countries</strong>.</p>
+        <p>Remember, these visas do not permit employment or income generation within  Schengen countries .</p>
 
-        <h2 className={Styles.subtitle}>📄 Navigating the <strong>Schengen Visa Application Process for Indians</strong> Seeking Long-Term Visas</h2>
+        <h2 className={Styles.subtitle}>📄 Navigating the  Schengen Visa Application Process for Indians  Seeking Long-Term Visas</h2>
         <ol>
-          <li><strong>Assess Your Eligibility for the Schengen Cascade</strong>: Determine which tier of the cascade you qualify for based on your travel history.</li>
-          <li><strong>Prepare Your Comprehensive Schengen Visa Documentation</strong>: Gather all required documents, including:
+          <li> Assess Your Eligibility for the Schengen Cascade : Determine which tier of the cascade you qualify for based on your travel history.</li>
+          <li> Prepare Your Comprehensive Schengen Visa Documentation : Gather all required documents, including:
             <ul>
-              <li>Your valid Indian passport (with at least three months' validity beyond your intended <strong>Schengen travel</strong>).</li>
-              <li>Copies of your previous <strong>Schengen visas</strong> and evidence of their lawful use.</li>
-              <li>A detailed <strong>travel itinerary</strong> and clear explanation of your purpose of visit for your <strong>Schengen application</strong>.</li>
-              <li>Proof of your accommodation and sufficient financial resources for your <strong>Europe trip</strong>.</li>
-              <li>Mandatory <strong>travel insurance</strong> covering emergency medical expenses within the entire <strong>Schengen Area</strong>.</li>
+              <li>Your valid Indian passport (with at least three months' validity beyond your intended  Schengen travel ).</li>
+              <li>Copies of your previous  Schengen visas  and evidence of their lawful use.</li>
+              <li>A detailed  travel itinerary  and clear explanation of your purpose of visit for your  Schengen application .</li>
+              <li>Proof of your accommodation and sufficient financial resources for your  Europe trip .</li>
+              <li>Mandatory  travel insurance  covering emergency medical expenses within the entire  Schengen Area .</li>
             </ul>
           </li>
-          <li><strong>Submit Your Schengen Visa Application</strong>: Apply at the embassy or consulate of the Schengen country that is your primary destination or first point of entry for your <strong>EU visa</strong>.</li>
-          <li><strong>Attend Your Schengen Visa Appointment</strong>: Provide your biometric data and attend an interview if required for your <strong>Schengen visa for Indian citizens</strong>.</li>
-          <li><strong>Await the Schengen Visa Decision</strong>: Processing times can vary, so plan your <strong>travel to Europe</strong> accordingly.</li>
+          <li> Submit Your Schengen Visa Application : Apply at the embassy or consulate of the Schengen country that is your primary destination or first point of entry for your  EU visa .</li>
+          <li> Attend Your Schengen Visa Appointment : Provide your biometric data and attend an interview if required for your  Schengen visa for Indian citizens .</li>
+          <li> Await the Schengen Visa Decision : Processing times can vary, so plan your  travel to Europe  accordingly.</li>
         </ol>
-        <p><strong>Feeling overwhelmed by the documentation requirements? Global Visa Internationals in Bangalore can provide expert guidance on preparing a complete and accurate application.</strong></p>
+        <p> Feeling overwhelmed by the documentation requirements? Global Visa Internationals in Bangalore can provide expert guidance on preparing a complete and accurate application. </p>
 
-        <h2 className={Styles.subtitle}>🔗 <strong>Useful Resources for Further Schengen Visa Information</strong></h2>
+        <h2 className={Styles.subtitle}>🔗  Useful Resources for Further Schengen Visa Information </h2>
         <ul>
           <li><a href="https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/applying-schengen-visa_en" target="_blank" rel="noopener noreferrer">European Commission – Applying for a Schengen Visa</a></li>
           <li><a href="https://eeas.europa.eu/delegations/india/more-favourable-schengen-visa-rules-now-apply-indian-nationals_en" target="_blank" rel="noopener noreferrer">EU Delegation to India – More Favourable Schengen Visa Rules</a></li>
         </ul>
 
-        <h2 className={Styles.subtitle}>🤝 Seeking Expert <strong>Schengen Visa Assistance in Bangalore</strong> for Long-Term Travel? Contact <strong>Global Visa Internationals</strong></h2>
-        <p>Navigating the intricacies of the <strong>Schengen visa application process</strong>, especially under the new cascade regime for <strong>long-term multiple-entry visas</strong>, can be complex. <strong>Global Visa Internationals</strong>, based right here in Bangalore, brings over 13 years of specialized experience in <strong>visa consultancy services</strong>, with a proven track record of successfully processing over 55,000 visas for <strong>travel to Europe</strong> for Indian nationals.</p>
+        <h2 className={Styles.subtitle}>🤝 Seeking Expert  Schengen Visa Assistance in Bangalore  for Long-Term Travel? Contact  Global Visa Internationals </h2>
+        <p>Navigating the intricacies of the  Schengen visa application process , especially under the new cascade regime for  long-term multiple-entry visas , can be complex.  Global Visa Internationals , based right here in Bangalore, brings over 13 years of specialized experience in  visa consultancy services , with a proven track record of successfully processing over 55,000 visas for  travel to Europe  for Indian nationals.</p>
 
-        <h3 className={Styles.subtitle}><strong>Why Partner with Global Visa Internationals for Your Long-Term Schengen Visa?</strong></h3>
+        <h3 className={Styles.subtitle}> Why Partner with Global Visa Internationals for Your Long-Term Schengen Visa? </h3>
         <ul>
-          <li><strong>Comprehensive Visa Expertise</strong>: We handle various <strong>visa categories</strong>, ensuring we understand the nuances relevant to your long-term travel needs.</li>
-          <li><strong>Personalized Cascade Guidance</strong>: We provide tailored advice to maximize your chances of obtaining a longer validity visa under the <strong>Schengen cascade</strong>.</li>
-          <li><strong>Transparent and Ethical Practices</strong>: Trust is paramount. We are committed to honesty in all our <strong>visa dealings</strong>.</li>
-          <li><strong>End-to-End Support</strong>: From meticulous document preparation to interview guidance and post-approval advice for your <strong>Europe travel</strong>, we're with you every step of the way.</li>
+          <li> Comprehensive Visa Expertise : We handle various  visa categories , ensuring we understand the nuances relevant to your long-term travel needs.</li>
+          <li> Personalized Cascade Guidance : We provide tailored advice to maximize your chances of obtaining a longer validity visa under the  Schengen cascade .</li>
+          <li> Transparent and Ethical Practices : Trust is paramount. We are committed to honesty in all our  visa dealings .</li>
+          <li> End-to-End Support : From meticulous document preparation to interview guidance and post-approval advice for your  Europe travel , we're with you every step of the way.</li>
         </ul>
 
-        <h3 className={Styles.subtitle}><strong>Your Direct Contact for Long-Term Schengen Visa Help:</strong></h3>
+        <h3 className={Styles.subtitle}> Your Direct Contact for Long-Term Schengen Visa Help: </h3>
         <ul>
-          <li><strong>Address:</strong> GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, <strong>Bangalore</strong>, 560025, Karnataka</li>
-          <li><strong>Phone:</strong> +91-7022213466</li>
-          <li><strong>Email:</strong> <a href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a></li>
-          <li><strong>Website:</strong> <a href="https://globalvisainternationals.com" target="_blank" rel="noopener noreferrer">globalvisainternationals.com</a></li>
-          <li>Ready to explore your long-term Schengen visa options? Schedule your personalized <strong>Schengen visa consultation</strong> today through our <a href="https://www.globalvisainternationals.com/contact" target="_blank" rel="noopener noreferrer">contact page</a>.</li>
+          <li> Address:  GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers,  Bangalore , 560025, Karnataka</li>
+          <li> Phone:  +91-7022213466</li>
+          <li> Email:  <a href="mailto:operations@globalvisa-internationals.com">operations@globalvisa-internationals.com</a></li>
+          <li> Website:  <a href="https://globalvisainternationals.com" target="_blank" rel="noopener noreferrer">globalvisainternationals.com</a></li>
+          <li>Ready to explore your long-term Schengen visa options? Schedule your personalized  Schengen visa consultation  today through our <a href="https://www.globalvisainternationals.com/contact" target="_blank" rel="noopener noreferrer">contact page</a>.</li>
         </ul>
 
-        <p>The <strong>Schengen Visa Cascade Regime</strong> offers a promising pathway for frequent <strong>Indian travelers</strong> to secure <strong>long-term multiple-entry visas</strong>, facilitating smoother and more predictable <strong>travel to the Schengen Area</strong>. By understanding the eligibility criteria and application process, you can take advantage of these more favorable rules.</p>
+        <p>The  Schengen Visa Cascade Regime  offers a promising pathway for frequent  Indian travelers  to secure  long-term multiple-entry visas , facilitating smoother and more predictable  travel to the Schengen Area . By understanding the eligibility criteria and application process, you can take advantage of these more favorable rules.</p>
 
-        <p>For expert assistance in navigating the <strong>Schengen Visa Cascade</strong> and securing your <strong>long-term Schengen visa</strong>, don't hesitate to contact the experienced team at <strong>Global Visa Internationals in Bangalore</strong>. We are your dedicated partners in making your extended <strong>Europe travel plans</strong> a reality.</p>
+        <p>For expert assistance in navigating the  Schengen Visa Cascade  and securing your  long-term Schengen visa , don't hesitate to contact the experienced team at  Global Visa Internationals in Bangalore . We are your dedicated partners in making your extended  Europe travel plans  a reality.</p>
       </main>
     </>
   );
