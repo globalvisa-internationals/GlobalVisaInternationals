@@ -23,8 +23,6 @@ export const metadata = {
         "Denmark visa documents required",
         "Denmark visa fees India",
         "Schengen visa for Denmark",
-
-        // Local & High-Intent Keywords
         "Denmark visa consultants in Bangalore",
         "Best Denmark visa agents in Bangalore",
         "Denmark visa agency near me",
