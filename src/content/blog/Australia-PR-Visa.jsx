@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 
 export const metadata = {
-  title: "Australia PR Visa: Process, Eligibility, and Benefits (2025 Guide)",
-  date: "April 21, 2025",
+  title: "Australia PR is changing. Are you ready for 2026?",
+  date: "April 21,  2026",
   category: "Work & PR",
   author: "Global Visa Internationals Team",
   excerpt: "Discover the amazing opportunities for students in Australia.",
@@ -16,7 +16,7 @@ export const metadata = {
     "Australia PR visa",
     "Australian permanent residency",
     "Australia immigration",
-    "Australia visa 2025",
+    "Australia visa  2026",
     "migrate to Australia",
     "study in Australia",
     "work in Australia",
@@ -40,15 +40,15 @@ export default function PostContent() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Australia PR Visa: Process, Eligibility, and Benefits (2025 Guide)</title>
-        <meta name="description" content="Discover the latest Australia PR visa process, eligibility criteria, and top benefits. Updated 2025 guide for students, skilled workers, and families." />
-        <meta name="keywords" content="Australia PR visa, Australian permanent residency, Australia immigration, Australia visa 2025, migrate to Australia, study in Australia, work in Australia, skilled migration Australia, visa process Australia, eligibility for Australia PR, benefits of Australia PR, subclass 189 visa, subclass 190 visa, subclass 491 visa, employer nomination scheme, skills assessment Australia, points test Australia, Australian citizenship, regional Australia visa" />
+        <title>Australia PR is changing. Are you ready for 2026?</title>
+        <meta name="description" content="Discover the latest Australia PR visa process, eligibility criteria, and top benefits. Updated  2026 guide for students, skilled workers, and families." />
+        <meta name="keywords" content="Australia PR visa, Australian permanent residency, Australia immigration, Australia visa  2026, migrate to Australia, study in Australia, work in Australia, skilled migration Australia, visa process Australia, eligibility for Australia PR, benefits of Australia PR, subclass 189 visa, subclass 190 visa, subclass 491 visa, employer nomination scheme, skills assessment Australia, points test Australia, Australian citizenship, regional Australia visa" />
         <meta name="author" content="Global Visa Internationals Team" />
         <link as="image" href="${metadata.image}" />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Australia PR Visa: Process, Eligibility, and Benefits (2025 Guide)" />
+        <meta property="og:title" content="Australia PR is changing. Are you ready for 2026?" />
         <meta property="og:description" content="Explore PR visa options for Australia, including Subclass 189, 190, and 491. Understand points test, eligibility, and how to apply." />
         <meta property="og:image" content={`https://www.globalvisainternationals.com${metadata.image}`} />
         <meta property="og:image:alt" content="Australia PR Visa" />
@@ -62,8 +62,8 @@ export default function PostContent() {
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Australia PR Visa: Process, Eligibility, and Benefits (2025 Guide)" />
-        <meta name="twitter:description" content="Detailed guide on Australia's PR visa process, skilled migration pathways, and benefits in 2025." />
+        <meta name="twitter:title" content="Australia PR is changing. Are you ready for 2026?" />
+        <meta name="twitter:description" content="Detailed guide on Australia's PR visa process, skilled migration pathways, and benefits in  2026." />
         <meta name="twitter:image" content={`https://www.globalvisainternationals.com${metadata.image}`} />
         <meta itemProp="image" content={`https://www.globalvisainternationals.com${metadata.image}`} />
 
@@ -77,7 +77,7 @@ export default function PostContent() {
 
         {/* AI-Enhanced Optimization Tags */}
         <meta name="ai-content-type" content="visa-guide" />
-        <meta name="ai-keywords" content="Australia PR visa, skilled migration, Subclass 189, Subclass 190, visa eligibility, PR benefits 2025" />
+        <meta name="ai-keywords" content="Australia PR visa, skilled migration, Subclass 189, Subclass 190, visa eligibility, PR benefits  2026" />
         <meta name="ai-content-structure" content="informational, how-to, step-by-step, bullet points" />
         <meta name="ai-user-intent" content="learn-about-australia-pr" />
 
