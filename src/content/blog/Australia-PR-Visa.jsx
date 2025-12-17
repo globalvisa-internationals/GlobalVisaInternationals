@@ -2,6 +2,7 @@
 
 import styles from './blog.module.css'; // important!
 import Head from 'next/head';
+import Link from 'next/link';
 
 
 export const metadata = {
@@ -101,153 +102,211 @@ export default function PostContent() {
 
       </Head>
 
-      <div className={styles.container}>
-        <div className={styles.meta}>
-          <span>By {metadata.author}</span>
-          <span>•</span>
-          <span>
-            {new Date(metadata.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </span>
-        </div>
-        <div className={styles.imageCard}>
-          <img
-            src={metadata.image}
-            alt={metadata.title}
-            className={styles.image}
-          />
-        </div>
-        <h1 className={styles.subtitle}>Embark on Your Australian Dream: The Ultimate 2025 Guide to Permanent Residency</h1>
-        <p className={styles.paragraph}>
-          Imagine waking up to the vibrant sounds of a kookaburra, exploring the breathtaking landscapes from the Outback to the Great Barrier Reef, and building a fulfilling career in a thriving economy. For individuals in **Karnataka** and beyond, this dream can become a reality with an{" "}
-          Australian Permanent Residency (PR) visa. This comprehensive guide for 2025 will walk you through the intricate visa process Australia, detailing the eligibility criteria, and the multitude of benefits of Australia PR that await you. Forget endless searching – everything you need to know about **Australia immigration** is right here, whether you are in Bengaluru, Mangaluru, Hubballi-Dharwad, or any other part of **Karnataka**.
-        </p>
-
-        <p className={styles.paragraph}>
-          However, navigating the complexities of the Australian immigration system, especially when planning to migrate to Australia from regions like **Karnataka**, requires expert guidance. Contact Global Visa International today for personalized assistance tailored to your situation, ensuring a smooth and successful application journey for your Australia visa 2025.
-        </p>
-        <h2>What is an Australia PR Visa?</h2>
-        <p>An Australian PR visa grants you the right to live, work in Australia, and study in Australia indefinitely. While the initial visa is typically valid for five years, it can be renewed, paving the way for Australian citizenship should you meet the requirements. It's your golden ticket to becoming part of Australia's diverse and welcoming society if you plan to migrate to Australia from **Karnataka**.</p>
-        <h2 className={styles.subtitle}>📋 Types of Australia PR Visas</h2>
-
-        <h3 className={styles.subtitle}>Skilled Independent Visa (Subclass 189)</h3>
-        <ul>
-          <li>For skilled workers, potentially from Karnataka, not sponsored by an employer or family.</li>
-          <li>Based on the point-test system, a crucial aspect of Australia immigration.</li>
-        </ul>
-
-        <h3 className={styles.subtitle}>Skilled Nominated Visa (Subclass 190)</h3>
-        <ul>
-          <li>Requires nomination by an Australian state or territory, a pathway many from Karnataka might explore.</li>
-          <li>Applicants must meet occupation and point criteria for this Australia PR visa.</li>
-        </ul>
-
-        <h3 className={styles.subtitle}>Skilled Work Regional (Provisional) Visa (Subclass 491)</h3>
-        <ul>
-          <li>For skilled workers from Karnataka willing to live in regional Australia.</li>
-          <li>Sponsored by state/territory or family, offering a route to Australian permanent residency.</li>
-        </ul>
-
-        <h3 className={styles.subtitle}>Employer Nomination Scheme Visa (Subclass 186)</h3>
-        <ul>
-          <li>Requires sponsorship by an Australian employer.</li>
-          <li>Ideal for those with in-demand skills looking to work in Australia.</li>
-        </ul>
-
-        <h3 className={styles.subtitle}>Other Visas (Partner Visa, Parent Visa, Business Innovation Visa)</h3>
-        <ul>
-          <li>Pathways based on family ties or business investment for individuals from Karnataka.</li>
-        </ul>
-
-
-        <h3 className={styles.subtitle}>Why Pursue Australian PR in 2025?</h3>
-        <ul>
-          <li>Thriving Economy and Job Market: Australia boasts a robust economy with numerous job opportunities across various sectors, offering excellent prospects for career growth and financial stability for those looking to work in Australia, including skilled professionals from **Karnataka**.</li>
-          <li>High Quality of Life: Enjoy a high standard of living with access to world-class healthcare, education, infrastructure, and a safe and clean environment, a significant draw for those considering Australia immigration from **Karnataka**.</li>
-          <li>Multicultural Society: Australia embraces diversity, creating a welcoming and inclusive environment for people from all backgrounds, making it easier for individuals from **Karnataka** to settle.</li>
-          <li>Access to World-Class Education: Benefit from Australia's renowned education system, with opportunities for further studies if you plan to study in Australia and professional development, an attractive option for students from **Karnataka**.</li>
-          <li>Social Security Benefits: After a qualifying period, permanent residents can access various social security benefits, a key advantage of obtaining an Australia PR visa.</li>
-          <li>Pathway to Citizenship: After residing in Australia for a specified period as a permanent resident, you can apply for Australian citizenship, gaining the right to vote and hold an Australian passport, the ultimate goal for many seeking Australian permanent residency from **Karnataka**.</li>
-
-        </ul>
-        <h3 className={styles.subtitle}>Step-by-Step Process to Australian PR in 2025</h3>
-        The journey to Australian PR involves several key stages. Here’s a detailed breakdown of the visa process Australia for applicants from **Karnataka**:
-        <h4 className={styles.subtitle}>Step 1: Assess Your Eligibility</h4>
-        The first crucial step is to determine if you meet the basic eligibility for Australia PR. Generally, this involves:
-        <ul>
-          <li>Age: Most skilled visa applicants, including those from **Karnataka**, must be under 45 years of age</li>
-          <li>English Language Proficiency: You need to demonstrate a certain level of English proficiency through recognized tests like IELTS or PTE Academic. The required score varies depending on the visa subclass. For instance, some visas may require a minimum of 6 bands in each IELTS component (Competent English), while others may need 7 or even 8 (Proficient or Superior English), a standard requirement for anyone seeking to migrate to Australia from **Karnataka**.</li>
-          <li>Nominated Occupation: Your occupation must be listed on Australia's Skilled Occupation List (SOL). This list is updated periodically to reflect the country's labor market needs for skilled migration Australia, relevant for professionals across **Karnataka**.</li>
-          <li>Skills Assessment: You need to have your skills assessment Australia done by a relevant Australian assessing authority to ensure they meet Australian standards. This usually involves submitting your qualifications and work experience for verification, a crucial step for those aiming for an Australia PR visa from **Karnataka**.</li>
-          <li>Points Test: For many skilled visas, you'll need to score at least 65 points based on factors like age, English proficiency, work experience, education, and other criteria in the points test Australia. Achieving a higher score significantly increases your chances of receiving an invitation to apply for Australian permanent residency from **Karnataka**.</li>
-          <li>Health and Character: You and your accompanying family members must meet Australia's health and character requirements. This involves undergoing medical examinations and obtaining police clearance certificates from any country where you've lived for a significant period, a standard check for all Australia immigration applicants from **Karnataka**.</li>
-        </ul>
-        <h4 className={styles.subtitle}>Step 2: Choose the Right Visa Subclass</h4>
-        Australia offers various PR visa subclasses, primarily under the skilled migration stream. Some of the most common ones that individuals from **Karnataka** might consider include:
-        <ul>
-          <li>Skilled Independent Visa (Subclass 189): This visa is for skilled workers who are not sponsored by an employer, state, or territory. You need to have an occupation on the relevant SOL and meet the points test requirement for this Australia PR visa.</li>
-          <li>Skilled Nominated Visa (Subclass 190): This visa is for skilled workers nominated by an Australian state or territory government. Nomination provides additional points and increases your chances of receiving an invitation for Australian permanent residency. Your occupation must be on the state/territory's occupation list.</li>
-          <li>Skilled Work Regional (Provisional) Visa (Subclass 491): This is a provisional visa for skilled workers from **Karnataka** willing to live and work in designated regional Australia. It offers a pathway to permanent residency after meeting certain conditions.</li>
-        </ul>
-        <h4 className={styles.subtitle}>Step 3: Obtain a Skills Assessment</h4>
-        Once you've identified a suitable visa subclass and confirmed your occupation is on the relevant list, you need to get your skills assessment Australia done by the designated assessing authority for your occupation. Each authority has its own specific requirements and processes for those seeking to migrate to Australia from **Karnataka**.
-        <h4 className={styles.subtitle}>Step 4: Take an English Language Proficiency Test</h4>
-        You'll need to take a recognized English language test (e.g., IELTS, PTE Academic) and achieve the required score for your chosen visa subclass. Ensure your test results are valid at the time of application for your Australia visa 2025.
-        <h4 className={styles.subtitle}>Step 5: Lodge an Expression of Interest (EOI)</h4>
-        If you meet the eligibility for Australia PR, you can submit an EOI through SkillSelect, an online system managed by the Australian Department of Home Affairs. Your EOI will include details about your skills, qualifications, and work experience relevant to skilled migration Australia, highlighting your suitability as an applicant from **Karnataka**.
-        <h4 className={styles.subtitle}>Step 6: Receive an Invitation to Apply (ITA)</h4>
-        The Department of Home Affairs regularly invites candidates with the highest points scores and suitable occupations to apply for a PR visa. The waiting time for an ITA can vary depending on your occupation, points score, and the demand for that occupation within the Australia immigration system for applicants from **Karnataka**.
-        <h4 className={styles.subtitle}>Step 7: Lodge Your Visa Application</h4>
-        If you receive an ITA, you'll have a specific timeframe (usually 60 days) to lodge your complete visa application online. This involves providing detailed information and supporting documents for your Australia PR visa application from **Karnataka**.
-        <h4 className={styles.subtitle}>Step 8: Provide Supporting Documents</h4>
-        You'll need to gather a comprehensive set of documents to support your application, which may include:
-        <ul>
-          <li>Completed application forms</li>
-          <li>Passport and other identification documents (relevant for applicants from **Karnataka**)</li>
-          <li>Birth certificate</li>
-          <li>Marriage certificate (if applicable)</li>
-          <li>Educational qualifications and skills assessment report (essential for proving eligibility for skilled migration Australia)</li>
-          <li>Work experience evidence (reference letters, payslips, etc.)</li>
-          <li>English language test results</li>
-          <li>Police clearance certificates from all relevant countries (including India for applicants from **Karnataka**)</li>
-          <li>Medical examination reports</li>
-          <li>Proof of funds to support your initial settlement in Australia</li>
-          <li>Nomination or sponsorship documents (if applicable, for visas like subclass 190 or subclass 491)</li>
-          <li>Passport-sized photographs</li>
-        </ul>
-        <h4 className={styles.subtitle}>Step 9: Undergo Health and Character Checks</h4>
-        As part of the application process, you and your accompanying family members will need to undergo medical examinations by panel physicians approved by the Australian government and provide police clearance certificates to meet the character requirements for your Australia PR visa, a standard procedure for all applicants, including those from **Karnataka**.
-        <h4 className={styles.subtitle}>Step 10: Await the Visa Decision</h4>
-        Once you've submitted your application and all supporting documents, the Department of Home Affairs will assess your case for Australian permanent residency. Processing times can vary depending on the visa subclass and the complexity of your application for individuals from **Karnataka**.
-        <h4 className={styles.subtitle}>Step 11: Visa Grant and Entry to Australia</h4>
-        If your visa application is successful, you'll receive a visa grant letter outlining the conditions of your visa and your initial entry date to Australia, marking your successful migration to Australia from **Karnataka**.
-        <h3 className={styles.subtitle}>Benefits of Holding an Australian PR Visa</h3>
-        Becoming a permanent resident of Australia opens a world of opportunities and benefits for individuals from **Karnataka**:
-        <ul>
-          <li>Right to Live and Work Indefinitely: Enjoy the freedom to live, work in Australia in any occupation (except for some government jobs requiring citizenship), and study in Australia anywhere in the country.</li>
-          <li>Access to Medicare: Enrol in Medicare, Australia's public healthcare system, providing access to a wide range of medical services at no or low cost.</li>
-          <li>Social Security Benefits: After a qualifying period (usually two years), you may be eligible for certain social security benefits, a key advantage of obtaining an Australia PR visa.</li>
-          <li>Sponsor Eligible Relatives: You can sponsor eligible family members, such as your spouse, dependent children, and in some cases, parents, for permanent residency, further enhancing the benefits of Australia PR for families from **Karnataka**.</li>
-          <li>Free Education for Children: Your children can attend government primary and secondary schools for free.</li>
-          <li>Access to Higher Education Loans: Permanent residents can access the Higher Education Loan Program (HELP) for eligible tertiary studies, making it easier to study in Australia.</li>
-          <li>Pathway to Australian Citizenship: After meeting the residency requirements (usually four years of lawful residence, including one year as a permanent resident), you can apply for Australian citizenship, the ultimate goal for many seeking Australian permanent residency from **Karnataka**.</li>
-          <li>First Home Owner Grant: You may be eligible for the First Home Owner Grant, a financial assistance to help you purchase your first property in Australia.</li>
-          <li>Travel to and from Australia: You can travel to and from Australia freely for five years from the date your visa is granted. After this, you'll need to apply for a Resident Return Visa (RRV) to maintain your permanent residency status when travelling internationally.</li>
-          <li>Work in New Zealand: As an Australian permanent resident, you generally have the right to live and work in New Zealand under the Trans-Tasman Travel Arrangement.</li>
-        </ul>
-        <h3 className={styles.subtitle}>Important Considerations for 2025</h3>
-        <ul>
-          <li>Changes to Immigration Policies: The Australian immigration policies can change, so it's crucial for those in **Karnataka** to stay updated on the latest announcements and requirements from the Department of Home Affairs regarding your Australia visa 2025.</li>
-          <li>Skilled Occupation Lists: The Skilled Occupation Lists are reviewed and updated regularly. Ensure your occupation remains in demand for skilled migration Australia if you are applying from **Karnataka**.</li>
-          <li>Points Test Adjustments: The points test Australia criteria and the minimum required points can be subject to change, so applicants from **Karnataka** should be aware of this.</li>
-          <li>Processing Times: Visa processing times can vary. Check the latest processing times on the Department of Home Affairs website for your specific Australia PR visa subclass.</li>
-          <li>Income Thresholds: Be aware of any changes to income thresholds for certain sponsored visas, which may be indexed annually.</li>
-        </ul>
-
+      <div className={styles.imageCard}>
+        <img
+          src={metadata.image}
+          alt={metadata.title}
+          className={styles.image}
+          loading="lazy"
+          width="1200"
+          height="630" s
+        />
       </div>
+      <section className={styles.postContent}>
+
+
+        <h2 className={styles.subTitle}>
+          A Strategic Guide to the New Migration Strategy & Skills in Demand Visa
+        </h2>
+
+        <p className={styles.note}>
+          Australia continues to attract Indian professionals with something few
+          countries can match: clean air, high salaries, a genuine work-life
+          balance, world-class infrastructure, and the famous “Fair Go” culture.
+        </p>
+
+        <p>But here’s the urgency you must understand upfront:</p>
+
+        <p>
+          The rules of the game are changing. Australia’s 2026 Migration Strategy
+          is moving away from a first-come-first-served system toward a
+          best-and-brightest selection model.
+        </p>
+
+        <p >
+          If you are planning Australia PR from India in 2025–2026, this is no
+          longer a DIY process. It is a strategy-driven migration decision—and the
+          margin for error is shrinking fast.
+        </p>
+
+        <h2 className={styles.subTitle}>
+          Why Do You Need the Best Australia PR Consultants in Bangalore for the 2026 Transition?
+        </h2>
+
+        <p className={styles.note}>
+          Australia’s migration framework is currently in a transition phase:
+        </p>
+
+        <ul >
+          <li>Existing PR pathways (Subclass 189, 190, 491) are still active</li>
+          <li>The new “Skills in Demand” visa system is being phased in</li>
+          <li>Occupation lists are being replaced by tiered skill prioritisation</li>
+        </ul>
+
+        <p>
+          This overlap has created confusion—and that’s where most rejections
+          happen.
+        </p>
+
+        <h3 className={styles.subTitle}>The Risk of Generic Advice</h3>
+
+        <ul >
+          <li>Outdated occupation lists</li>
+          <li>Free online points calculators</li>
+          <li>Agents who “just file” instead of strategising</li>
+        </ul>
+
+        <p >
+          Under the 2026 framework, incorrect occupation selection, weak role
+          mapping, or a rejected skills assessment can permanently damage your
+          profile.
+        </p>
+
+        <h3 className={styles.subTitle}>
+          Why Global Visa Internationals Is Different
+        </h3>
+
+        <p className={styles.note}>
+          <Link
+            href="https://www.globalvisainternationals.com/"
+            className="text-blue-600 font-semibold hover:underline"
+          >
+            Global Visa Internationals
+          </Link>{" "}
+          acts as a strategic migration partner, not a form-filling agency. We
+          specialise in:
+        </p>
+
+        <ul >
+          <li>Interpreting the shift from TSS to Skills in Demand</li>
+          <li>Aligning Indian experience with Australia’s future workforce planning</li>
+          <li>Advising from Bangalore, Mumbai, and Delhi with sector-specific expertise</li>
+        </ul>
+
+        <h2 className={styles.subTitle}>
+          What Are the New “Skills in Demand” Visa Tiers and How Do They Affect Indians?
+        </h2>
+
+        <p >
+          Australia’s migration system is being rebuilt around a 3-Tier Skills
+          Framework, replacing the old short-term and medium-term lists.
+        </p>
+
+        <h3 className={styles.subTitle}>Tier 1 – Specialist Skills Pathway</h3>
+        <ul >
+          <li>Senior tech leaders, niche specialists, high earners</li>
+          <li>Strong global competition</li>
+          <li>Fast-tracked, but extremely selective</li>
+        </ul>
+
+        <h3 className={styles.subTitle}>Tier 2 – Core Skills Pathway (Most Indian Professionals)</h3>
+        <ul >
+          <li>Engineers, IT professionals, healthcare workers, educators</li>
+          <li>Based on the Core Skills Occupation List (CSOL)</li>
+          <li>Strong PR transition potential</li>
+        </ul>
+
+        <h3 className={styles.subTitle}>Tier 3 – Essential Skills Pathway</h3>
+        <ul >
+          <li>Critical support sectors</li>
+          <li>Tightly regulated</li>
+          <li>Limited PR prospects</li>
+        </ul>
+
+        <p >
+          Key Insight: Most successful PR applicants from India in 2025–2026 will
+          fall under Tier 2—only if their skills assessment and role mapping are
+          flawless.
+        </p>
+
+        <h2 className={styles.subTitle}>
+          Is Your Score Enough? The Reality of the Australia PR Points Calculator 2025–2026
+        </h2>
+
+        <ul >
+          <li>65 points = minimum eligibility</li>
+          <li>85+ points = competitive reality (especially for IT & Engineering)</li>
+        </ul>
+
+        <p>
+          Relying on a basic points calculator without strategy is risky.
+        </p>
+
+        <h3 className={styles.subTitle}>
+          How Smart Applicants Bridge the Points Gap
+        </h3>
+
+        <ul >
+          <li>Subclass 190 (State Nomination): +5 points</li>
+          <li>Subclass 491 (Regional Nomination): +15 points</li>
+          <li>Superior English (PTE / IELTS)</li>
+          <li>Strategic experience documentation—not inflated claims</li>
+        </ul>
+
+        <h2 className={styles.subTitle}>
+          Why Is the “Technical Resume Assessment” Your Most Critical Step?
+        </h2>
+
+        <p >We don’t file first. We audit first.</p>
+
+        <p >
+          Our Australia PR service includes a forensic Technical Resume Assessment:
+        </p>
+
+        <ul >
+          <li>ANZSCO occupation validation</li>
+          <li>Roles & Responsibilities (R&R) mapping</li>
+          <li>ACS, Engineers Australia, and VETASSESS alignment</li>
+          <li>Risk analysis before assessment fees are paid</li>
+        </ul>
+
+        <p >
+          A rejected skills assessment stays on record. There are no fresh starts.
+        </p>
+
+        <h2 className={styles.subTitle}>
+          Your Next Step: Professional Pre-Assessment
+        </h2>
+
+        <p>
+          Australia’s PR system rewards preparation—not assumptions. Take the
+          strategic route with{" "}
+          <Link
+            href="https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa"
+            className="text-blue-600 font-semibold hover:underline"
+          >
+            Global Visa Internationals Australia PR Services
+          </Link>
+          .
+        </p>
+
+        <p >We tell you:</p>
+
+        <ul >
+          <li>Your real points score</li>
+          <li>Your sector eligibility</li>
+          <li>Your best visa pathway (189 / 190 / 491)</li>
+          <li>Your realistic PR roadmap—before you commit</li>
+        </ul>
+
+        <p >
+          Secure your future in Australia with certainty.
+        </p>
+
+        <p>
+          🇦🇺 Global Visa Internationals — Strategy-Led. Future-Focused. Results-Driven.
+        </p>
+      </section>
     </>
   );
 }
