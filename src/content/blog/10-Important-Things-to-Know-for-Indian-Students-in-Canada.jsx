@@ -313,11 +313,18 @@ export default function CanadaStudentVisaGuidence() {
 
                 <p>
                     <strong className={Styles.strong}>
-                        In 2024, Canada rejected close to 40% of Indian study permit applications.
+                        In 2025, Canada rejected close to 60% to 70% of Indian study permit applications.
                     </strong>{" "}
-                    With the new <strong className={Styles.strong}>2025–26 Intake Cap</strong>,{" "}
+                    With the new <strong className={Styles.strong}>2025-26 Intake Cap</strong>,{" "}
                     <strong className={Styles.strong}>Provincial Attestation Letters (PALs)</strong>, and{" "}
                     <strong className={Styles.strong}>PGWP shutdowns</strong>, refusal rates in 2026 are expected to rise even further.
+                    If you are planning to apply for a{" "}
+                    <a
+                        href="https://www.globalvisainternationals.com/Visa/student-visa/canada"
+                        className={Styles.link}
+                    >
+                        Canada Student Visa
+                    </a>, this guide is mandatory reading.
                 </p>
 
                 <p>
@@ -341,7 +348,7 @@ export default function CanadaStudentVisaGuidence() {
                 <ul>
                     <li>The Intake Cap & PAL bottleneck</li>
                     <li>Public vs Private College PGWP landmines</li>
-                    <li>The ₹15–20 lakh GIC shock</li>
+                    <li>The ₹15-20 lakh GIC shock</li>
                     <li>Spousal Open Work Permit shutdown</li>
                     <li>Course relevancy = instant rejection</li>
                     <li>Housing crisis impacting visa credibility</li>
@@ -399,10 +406,18 @@ export default function CanadaStudentVisaGuidence() {
                 </p>
 
                 <p>
-                    Starting 2025–26, many{" "}
-                    <strong className={Styles.strong}>Public–Private Partnership (PPP) colleges</strong> are no longer
+                    Starting 2025-26, many{" "}
+                    <strong className={Styles.strong}>Public-Private Partnership (PPP) colleges</strong> are no longer
                     eligible for a <strong className={Styles.strong}>Post-Graduation Work Permit (PGWP)</strong>.
+                    This has become one of the biggest risks when applying for a{" "}
+                    <a
+                        href="https://www.globalvisainternationals.com/Visa/student-visa/canada"
+                        className={Styles.link}
+                    >
+                        Canada Study Permit
+                    </a>.
                 </p>
+
 
                 <ul>
                     <li>Private colleges with public branding are being black-flagged</li>
@@ -429,9 +444,16 @@ export default function CanadaStudentVisaGuidence() {
                         Canada is no longer a gamble you can afford to lose.
                     </p>
                     <p>
-                        Let <strong className={Styles.strong}>Global Visa Internationals</strong> perform a{" "}
-                        <strong className={Styles.strong}>2026 Profile Risk Audit</strong>:
+                        Let{" "}
+                        <a
+                            href="https://www.globalvisainternationals.com/"
+                            className={Styles.link}
+                        >
+                            Global Visa Internationals
+                        </a>{" "}
+                        perform a <strong className={Styles.strong}>2026 Risk Audit</strong> on your profile.
                     </p>
+
                     <ul>
                         <li>Verify your college’s PGWP eligibility</li>
                         <li>Check Provincial Attestation Letter availability</li>
@@ -448,12 +470,12 @@ export default function CanadaStudentVisaGuidence() {
                 <h3 className={Styles.subTitle}>3. The GIC Shock: Can You Afford the New Financial Reality?</h3>
 
                 <p>
-                    The era of showing ₹6–7 lakh is over.
+                    The era of showing ₹6-7 lakh is over.
                 </p>
 
                 <ul>
                     <li>Expected GIC for 2026: <strong className={Styles.strong}>CAD $20,000+</strong></li>
-                    <li>That equals <strong className={Styles.strong}>₹13–15 lakhs</strong> in liquid funds</li>
+                    <li>That equals <strong className={Styles.strong}>₹13-15 lakhs</strong> in liquid funds</li>
                     <li>Tuition, housing buffer, forex & living costs are extra</li>
                 </ul>
 
@@ -505,8 +527,15 @@ export default function CanadaStudentVisaGuidence() {
 
                 <p>
                     Visa officers are no longer just reading SOPs — they are screening them using
-                    logic and AI tools.
+                    logic and AI tools. This is why professional guidance is critical before submitting a{" "}
+                    <a
+                        href="https://www.globalvisainternationals.com/Visa/student-visa/canada"
+                        className={Styles.link}
+                    >
+                        Canada Student Visa application
+                    </a>.
                 </p>
+
 
                 <ul>
                     <li>Mechanical Engineer → Generic Project Management diploma</li>
@@ -540,7 +569,7 @@ export default function CanadaStudentVisaGuidence() {
 
                 {/* Section 7 */}
                 <h2 className={Styles.subTitle}>7. Part-Time Work Myths (20 vs 24 Hours)</h2>
-                <p>Many students still believe they can freely work 20–24 hours/week off-campus. Reality:</p>
+                <p>Many students still believe they can freely work 20-24 hours/week off-campus. Reality:</p>
                 <ul>
                     <li>IRCC strictly monitors part-time work eligibility.</li>
                     <li>Working beyond permitted hours is now a common reason for compliance warnings or visa refusal.</li>
@@ -600,9 +629,16 @@ export default function CanadaStudentVisaGuidence() {
                     <p>
                         <strong className={Styles.strong}>
                             Your future is too expensive to risk.
-                            Book your frantic-free consultation today.
+                            Book your stress-free consultation{" "}
+                            <a
+                                href="https://www.globalvisainternationals.com/contact"
+                                className={Styles.link}
+                            >
+                                here
+                            </a>.
                         </strong>
                     </p>
+
                 </div>
 
             </article>
