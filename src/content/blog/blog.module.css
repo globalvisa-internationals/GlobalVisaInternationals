@@ -62,13 +62,13 @@
   object-fit: cover;
   /* maintain aspect ratio */
   border-radius: var(--radius);
-  border: 1px solid var(--card-border);
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .strong {
@@ -285,7 +285,7 @@
     max-width: 900px;
     height: auto;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    s
   }
 
   .storyContainer {
