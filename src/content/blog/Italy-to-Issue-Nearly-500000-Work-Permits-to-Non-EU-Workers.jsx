@@ -1,195 +1,289 @@
 import VisaForm from '@/Components/VisaForm';
 import Styles from './blog.module.css';
-import Head from 'next/head';
+
+
+
 
 export const metadata = {
-    title: "Italy to Issue Nearly 500,000 Work Permits to Non-EU Workers by 2028: A Comprehensive Overview",
+
+    title: "Italy to Issue Nearly 500,000 Work Permits to Non-EU Workers by 2028 | Global Visa Internationals",
     date: "2025-07-04",
-    category: "Visa Information",
-    author: "Global Visa Internationals Team",
-    excerpt:
-        "In a significant move aimed at addressing pressing labor shortages and demographic challenges, the Italian government has announced plans to grant nearly 500,000 additional work permits to non-EU foreign workers between 2026 and 2028. This initiative represents one of Italy's most substantial immigration efforts in recent history.",
     image: "/BlogImages/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers.webp",
+    author: "Global Visa Internationals Team",
+    description:
+        "Italy plans to issue nearly 500,000 work permits to non-EU workers between 2026 and 2028 to address labor shortages. Full update for Indian professionals and students.",
+
     keywords: [
-        "Italy visa",
-        "Italy PR Visa",
-        "Italy PR visa assistance",
-        "Visa assistance",
+        "Italy work permit 2026",
+        "Italy work visa for Indians",
+        "Italy immigration news",
+        "Italy non-EU work permits",
         "Italy visa update 2025",
-        "EMPP Italy 2025",
-        "Italy Student Visa",
-        "Italy",
-        "Italy NEWS",
-        "Important Things to Know for Indian Students in Italy"
-    ]
+        "Italy PR visa assistance",
+        "Italy skilled workers visa",
+        "Italy employment visa",
+        "Global Visa Internationals Italy",
+    ],
+
+    authors: [{ name: "Global Visa Internationals Team" }],
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Visa Information",
+    canonical: "https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/",
+    alternates: {
+        canonical:
+            "https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+        },
+    },
+
+    openGraph: {
+        title:
+            "Italy to Issue Nearly 500,000 Work Permits to Non-EU Workers by 2028",
+        description:
+            "Italy announces one of its largest immigration drives, issuing nearly 500,000 work permits to non-EU workers between 2026–2028.",
+        url:
+            "https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/",
+        siteName: "Global Visa Internationals",
+        images: [
+            {
+                url: "/BlogImages/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers.webp",
+                width: 1200,
+                height: 630,
+                alt: "Italy Work Permits for Non-EU Workers",
+            },
+        ],
+        locale: "en_IT",
+        type: "article",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Italy to Issue Nearly 500,000 Work Permits to Non-EU Workers",
+        description:
+            "Italy plans massive non-EU worker intake by 2028. Read full visa and immigration impact.",
+        images: [
+            "/BlogImages/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers.webp",
+        ],
+        creator: "@globalvisas",
+    },
+
+    viewport: {
+        width: "device-width",
+        initialScale: 1,
+    },
+
+    other: {
+        "geo.region": "IT",
+        "geo.placename": "Italy",
+
+        // AI / Semantic Search Signals
+        "ai-content-type": "immigration-news",
+        "ai-primary-topic": "Italy Work Permit",
+        "ai-secondary-topic": "Non-EU Immigration",
+        "ai-user-intent": "Italy work visa eligibility and updates",
+    },
 };
 
-export default function CanadaResidencyBlog() {
-    const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
+
+function StructuredDataItalyWorkPermits() {
+    const baseUrl = "https://www.globalvisainternationals.com";
     const pageUrl =
-        "https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/";
+        `${baseUrl}/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/`;
 
-    const blogStructuredData = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": pageUrl
-        },
-        "headline": metadata.title,
-        "description": metadata.excerpt,
-        "image": fullImageUrl,
-        "author": {
-            "@type": "Organization",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Global Visa Internationals",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.globalvisainternationals.com/gvilogo.png"
-            }
-        },
-        "datePublished": metadata.date,
-        "dateModified": metadata.date,
-        "inLanguage": "en",
-        "articleSection": metadata.category
-    };
-
-    const breadcrumbStructuredData = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.globalvisainternationals.com"
+    const schemas = [
+        // 📰 Article Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline:
+                "Italy to Issue Nearly 500,000 Work Permits to Non-EU Workers by 2028",
+            description:
+                "Italy plans to issue nearly 500,000 work permits to non-EU workers between 2026 and 2028 to address labor shortages and demographic challenges. Full update for Indian professionals.",
+            image: `${baseUrl}/BlogImages/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers.webp`,
+            author: {
+                "@type": "Organization",
+                name: "Global Visa Internationals",
+                url: baseUrl,
             },
-            {
-                "@type": "ListItem",
-                position: 2,
-                name: "Blog",
-                item: "https://www.globalvisainternationals.com/blog"
+            publisher: {
+                "@type": "Organization",
+                name: "Global Visa Internationals",
+                logo: {
+                    "@type": "ImageObject",
+                    url: `${baseUrl}/gvilogo.png`,
+                },
             },
-            {
-                "@type": "ListItem",
-                position: 3,
-                name: metadata.title,
-                item: pageUrl
-            }
-        ]
-    };
+            datePublished: "2025-07-04",
+            dateModified: "2025-07-04",
+            mainEntityOfPage: pageUrl,
+        },
 
+        // 🏢 Organization Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Global Visa Internationals",
+            url: baseUrl,
+            logo: `${baseUrl}/gvilogo.png`,
+            sameAs: [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+            ],
+            contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-7022-213-466",
+                contactType: "Customer Support",
+                availableLanguage: ["English", "Hindi"],
+            },
+        },
 
+        // 📍 Local Business Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Global Visa Internationals",
+            image: `${baseUrl}/gvilogo.png`,
+            url: baseUrl,
+            telephone: "+91-7022-213-466",
+            address: {
+                "@type": "PostalAddress",
+                streetAddress: "GF-9, Business Point, Brigade Road",
+                addressLocality: "Bangalore",
+                postalCode: "560025",
+                addressCountry: "IN",
+            },
+            geo: {
+                "@type": "GeoCoordinates",
+                latitude: 12.9716,
+                longitude: 77.5946,
+            },
+            openingHours: "Mo-Fr 10:00-18:00",
+        },
+
+        // 🧳 Service Schema – Italy Work Visa
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Italy Work Visa Assistance",
+            serviceType: "Italy Work Permit & Employment Visa Consultancy",
+            provider: {
+                "@type": "Organization",
+                name: "Global Visa Internationals",
+                url: baseUrl,
+            },
+            areaServed: {
+                "@type": "Country",
+                name: "India",
+            },
+            availableChannel: {
+                "@type": "ServiceChannel",
+                serviceLocation: {
+                    "@type": "Place",
+                    name: "India",
+                },
+            },
+        },
+
+        // ❓ FAQ Schema – Italy Work Permits
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "How many work permits will Italy issue to non-EU workers?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Italy plans to issue nearly 500,000 work permits to non-EU workers between 2026 and 2028 to meet labor market demands.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "Can Indians apply for Italy work permits?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Yes, Indian nationals are eligible to apply for Italy work permits under employer-sponsored and sector-based quotas.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "Does an Italy work permit lead to permanent residency?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Yes, long-term residence and permanent residency in Italy are possible after meeting legal stay and employment requirements.",
+                    },
+                },
+            ],
+        },
+
+        // 🧭 Breadcrumb Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: baseUrl,
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Blog",
+                    item: `${baseUrl}/blog`,
+                },
+                {
+                    "@type": "ListItem",
+                    position: 3,
+                    name:
+                        "Italy to Issue Nearly 500,000 Work Permits to Non-EU Workers",
+                    item: pageUrl,
+                },
+            ],
+        },
+    ];
 
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.excerpt} />
-                <meta name="keywords" content={metadata.keywords.join(", ")} />
-                <meta name="author" content={metadata.author} />
-                <meta name="robots" content="index, follow" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="preload" as="image" href={fullImageUrl} />
-                <link rel="canonical" href={pageUrl} />
-
-                {/* Open Graph */}
-                <meta property="og:locale" content="en_US" />
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content={metadata.title} />
-                <meta property="og:description" content={metadata.excerpt} />
-                <meta property="og:url" content={pageUrl} />
-                <meta property="og:image" content={fullImageUrl} />
-                <meta property="og:image:alt" content={metadata.title} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta property="og:site_name" content="Global Visa Internationals" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@GLOBALVISA1505" />
-                <meta name="twitter:creator" content="@GLOBALVISA1505" />
-                <meta name="twitter:url" content={pageUrl} />
-                <meta name="twitter:title" content={metadata.title} />
-                <meta name="twitter:description" content={metadata.excerpt} />
-                <meta name="twitter:image" content={fullImageUrl} />
-                <meta name="twitter:image:alt" content={metadata.title} />
-
-                {/* Mobile SEO */}
-                <meta name="format-detection" content="telephone=no" />
-                <meta name="theme-color" content="#ffffff" />
-                <meta name="HandheldFriendly" content="true" />
-                <meta name="mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-                {/* Local SEO */}
-                <meta name="geo.region" content="IN-KA" />
-                <meta name="geo.placename" content="Bengaluru" />
-                <meta name="geo.position" content="12.9716;77.5946" />
-                <meta name="ICBM" content="12.9716,77.5946" />
-
-                {/* Structured Data: Organization */}
+            {schemas.map((schema, index) => (
                 <script
+                    key={index}
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Organization",
-                            "name": "Global Visa Internationals",
-                            "url": "https://www.globalvisainternationals.com",
-                            "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-                            "description":
-                                "Thinking of studying in Canada? For Indian students, it’s more than a big move — it’s a culture shock, a wallet workout, and a battle with -30°C. From GPA confusion to maple syrup manners, here are 10 things you really need to know before Canada turns you polite… and permanently broke.",
-                            "founder": { "@type": "Person", "name": "Anusha" },
-                            "foundingDate": "2016",
-                            "address": {
-                                "@type": "PostalAddress",
-                                "streetAddress": "Brigade Road",
-                                "addressLocality": "Bengaluru",
-                                "addressRegion": "Karnataka",
-                                "postalCode": "560025",
-                                "addressCountry": "IN"
-                            },
-                            "contactPoint": {
-                                "@type": "ContactPoint",
-                                "telephone": "+91-7022213466",
-                                "contactType": "Customer Support",
-                                "areaServed": "IN",
-                                "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
-                            },
-                            "areaServed": ["IN", "US", "CA", "UK", "EU"],
-                            "sameAs": [
-                                "https://www.facebook.com/globalvisainternationals/",
-                                "https://www.instagram.com/globalvisa_internationals/",
-                                "https://www.linkedin.com/company/global-visa-internationals/",
-                                "https://x.com/GLOBALVISA1505",
-                                "https://www.youtube.com/@globalVisaInternationals",
-                                "https://www.google.com/maps/place/Global+Visa+Internationals"
-                            ]
-                        })
+                        __html: JSON.stringify(schema),
                     }}
                 />
-
-                {/* Structured Data: BlogPosting */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
-                />
-
-                {/* Structured Data: BreadcrumbList */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
-                />
-            </Head>
+            ))}
+        </>
+    );
+}
 
 
+export default function ItalyWorkPermits() {
+
+    return (
+        <>
             <main>
+                <StructuredDataAustraliaPR />
                 <div className={Styles.meta}>
                     <span>By {metadata.author}</span>
                     <span>•</span>

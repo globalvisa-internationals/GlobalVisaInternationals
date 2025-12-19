@@ -1,198 +1,278 @@
 // src\content\blog\Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.jsx
 import VisaForm from '@/Components/VisaForm';
 import Styles from './blog.module.css';
-import Head from 'next/head';
+
 
 export const metadata = {
-    title: "Visa Friday – July 18, 2025: Latest Global Visa Updates for Indian Travelers",
-    date: "2025-07-18",
-    category: "Visa Information",
-    author: "Global Visa Internationals Team",
-    excerpt:
-        "Welcome to Visa Friday, your one-stop source for the latest visa news, travel alerts, and policy updates affecting Indian passport holders. Whether you're planning a U.S. trip, European holiday, or pilgrimage abroad, stay informed and prepared with trusted insights from Global Visa Internationals—India’s most reliable visa consultancy.",
-    image: "/BlogImages/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.webp",
+    metadataBase: new URL("https://www.globalvisainternationals.com"),
+
+    title: {
+        default:
+            "Visa Friday – July 18, 2025: Latest Global Visa Updates for Indian Travelers",
+        template: "%s | Global Visa Internationals",
+    },
+
+    description:
+        "Visa Friday – July 18, 2025 edition brings the latest global visa updates, travel alerts, and policy changes affecting Indian passport holders. Stay informed with trusted insights from Global Visa Internationals.",
+
     keywords: [
-        "US Visa news",
-        "Visa news",
-        "Visa appointment news",
-        "US Visa",
-        "USA Visa News",
-        "America Visa News",
-        "Visa Friday",
-        "Student Visa News",
-        "Visa News",
-        "US slots Update",
-        "Important Things to Know for Indian Students"
-    ]
+        "Visa Friday July 18 2025",
+        "latest visa updates for Indians",
+        "global visa news India",
+        "visa policy updates July 2025",
+        "travel alerts for Indian passport holders",
+        "US visa updates India",
+        "Schengen visa news India",
+        "UK visa updates India",
+        "international travel updates India",
+        "Global Visa Internationals blog",
+    ],
+    author: "Global Visa Internationals Team",
+    date: "2025-07-18",
+    image:
+        "/BlogImages/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.webp",
+
+    authors: [{ name: "Global Visa Internationals Team" }],
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Visa Information",
+
+    alternates: {
+        canonical:
+            "https://www.globalvisainternationals.com/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-snippet": -1,
+            "max-image-preview": "large",
+            "max-video-preview": -1,
+        },
+    },
+
+    openGraph: {
+        title:
+            "Visa Friday – July 18, 2025: Latest Global Visa Updates for Indian Travelers",
+        description:
+            "Catch up on the most important global visa updates, travel alerts, and immigration policy changes for Indian travelers in the Visa Friday – July 18, 2025 edition.",
+        url:
+            "https://www.globalvisainternationals.com/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers",
+        siteName: "Global Visa Internationals",
+        images: [
+            {
+                url:
+                    "/BlogImages/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.webp",
+                width: 1200,
+                height: 630,
+                alt:
+                    "Visa Friday – July 18, 2025: Latest Global Visa Updates for Indian Travelers",
+            },
+        ],
+        locale: "en_IN",
+        type: "article",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Visa Friday – July 18, 2025: Latest Global Visa Updates",
+        description:
+            "Latest visa news, travel alerts, and immigration updates for Indian travelers. Stay informed with Visa Friday by Global Visa Internationals.",
+        images: [
+            "/BlogImages/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.webp",
+        ],
+        creator: "@globalvisas",
+    },
+
+    viewport: {
+        width: "device-width",
+        initialScale: 1,
+    },
+
+    other: {
+        "article:published_time": "2025-07-18",
+        "article:author": "Global Visa Internationals Team",
+
+        // AI / Semantic Search Signals
+        "ai-content-type": "visa-news",
+        "ai-primary-topic": "Global Visa Updates",
+        "ai-secondary-topic": "Indian International Travel",
+        "ai-user-intent": "latest visa news for Indian travelers",
+    },
 };
-
-export default function CanadaResidencyBlog() {
-    const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
+function StructuredDataVisaFriday() {
+    const baseUrl = "https://www.globalvisainternationals.com";
     const pageUrl =
-        "https://www.globalvisainternationals.com/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers/";
+        `${baseUrl}/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers`;
 
-    const blogStructuredData = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": pageUrl
-        },
-        "headline": metadata.title,
-        "description": metadata.excerpt,
-        "image": fullImageUrl,
-        "author": {
-            "@type": "Organization",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Global Visa Internationals",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.globalvisainternationals.com/gvilogo.png"
-            }
-        },
-        "datePublished": metadata.date,
-        "dateModified": metadata.date,
-        "inLanguage": "en",
-        "articleSection": metadata.category
-    };
-
-    const breadcrumbStructuredData = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.globalvisainternationals.com"
+    const schemas = [
+        // 📰 Article Schema – Visa Friday Blog
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline:
+                "Visa Friday – July 18, 2025: Latest Global Visa Updates for Indian Travelers",
+            description:
+                "Visa Friday – July 18, 2025 edition brings the latest global visa news, travel alerts, and policy updates affecting Indian passport holders.",
+            image: `${baseUrl}/BlogImages/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers.webp`,
+            author: {
+                "@type": "Organization",
+                name: "Global Visa Internationals",
+                url: baseUrl,
             },
-            {
-                "@type": "ListItem",
-                position: 2,
-                name: "Blog",
-                item: "https://www.globalvisainternationals.com/blog"
+            publisher: {
+                "@type": "Organization",
+                name: "Global Visa Internationals",
+                logo: {
+                    "@type": "ImageObject",
+                    url: `${baseUrl}/gvilogo.png`,
+                },
             },
-            {
-                "@type": "ListItem",
-                position: 3,
-                name: metadata.title,
-                item: pageUrl
-            }
-        ]
-    };
+            datePublished: "2025-07-18",
+            dateModified: "2025-07-18",
+            mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": pageUrl,
+            },
+        },
 
+        // 🏢 Organization Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Global Visa Internationals",
+            url: baseUrl,
+            logo: `${baseUrl}/gvilogo.png`,
+            sameAs: [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+            ],
+            contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-7022-213-466",
+                contactType: "Customer Support",
+                availableLanguage: ["English", "Hindi"],
+            },
+        },
+
+        // 📍 Local Business Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Global Visa Internationals",
+            image: `${baseUrl}/gvilogo.png`,
+            url: baseUrl,
+            telephone: "+91-7022-213-466",
+            address: {
+                "@type": "PostalAddress",
+                streetAddress: "GF-9, Business Point, Brigade Road",
+                addressLocality: "Bangalore",
+                postalCode: "560025",
+                addressCountry: "IN",
+            },
+            geo: {
+                "@type": "GeoCoordinates",
+                latitude: 12.9716,
+                longitude: 77.5946,
+            },
+            openingHours: "Mo-Fr 10:00-18:00",
+        },
+
+        // ❓ FAQ Schema – Visa Friday
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "What is Visa Friday by Global Visa Internationals?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Visa Friday is a weekly update series by Global Visa Internationals that covers the latest visa news, travel alerts, and immigration policy changes affecting Indian travelers.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "Who should read Visa Friday updates?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Visa Friday is useful for Indian passport holders planning international travel, studying abroad, working overseas, or applying for tourist and business visas.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "How often is Visa Friday published?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Visa Friday is published weekly with the most recent global visa updates and travel-related announcements.",
+                    },
+                },
+            ],
+        },
+
+        // 🧭 Breadcrumb Schema
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: baseUrl,
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Blog",
+                    item: `${baseUrl}/blog`,
+                },
+                {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "Visa Friday – July 18, 2025",
+                    item: pageUrl,
+                },
+            ],
+        },
+    ];
+
+    return (
+        <>
+            {schemas.map((schema, index) => (
+                <script
+                    key={index}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(schema),
+                    }}
+                />
+            ))}
+        </>
+    );
+}
+
+
+export default function Visa_Friday_July_18_2025() {
 
 
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.excerpt} />
-                <meta name="keywords" content={metadata.keywords.join(", ")} />
-                <meta name="author" content={metadata.author} />
-                <meta name="robots" content="index, follow" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="preload" as="image" href={fullImageUrl} />
-                <link rel="canonical" href={pageUrl} />
 
-                {/* Open Graph */}
-                <meta property="og:locale" content="en_US" />
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content={metadata.title} />
-                <meta property="og:description" content={metadata.excerpt} />
-                <meta property="og:url" content={pageUrl} />
-                <meta property="og:image" content={fullImageUrl} />
-                <meta property="og:image:alt" content={metadata.title} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta property="og:site_name" content="Global Visa Internationals" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@GLOBALVISA1505" />
-                <meta name="twitter:creator" content="@GLOBALVISA1505" />
-                <meta name="twitter:url" content={pageUrl} />
-                <meta name="twitter:title" content={metadata.title} />
-                <meta name="twitter:description" content={metadata.excerpt} />
-                <meta name="twitter:image" content={fullImageUrl} />
-                <meta name="twitter:image:alt" content={metadata.title} />
-
-                {/* Mobile SEO */}
-                <meta name="format-detection" content="telephone=no" />
-                <meta name="theme-color" content="#ffffff" />
-                <meta name="HandheldFriendly" content="true" />
-                <meta name="mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-                {/* Local SEO */}
-                <meta name="geo.region" content="IN-KA" />
-                <meta name="geo.placename" content="Bengaluru" />
-                <meta name="geo.position" content="12.9716;77.5946" />
-                <meta name="ICBM" content="12.9716,77.5946" />
-
-                {/* Structured Data: Organization */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Organization",
-                            "name": "Global Visa Internationals",
-                            "url": "https://www.globalvisainternationals.com",
-                            "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-                            "description":
-                                "Welcome to Visa Friday, your one-stop source for the latest visa news, travel alerts, and policy updates affecting Indian passport holders. Whether you're planning a U.S. trip, European holiday, or pilgrimage abroad, stay informed and prepared with trusted insights from Global Visa Internationals—India’s most reliable visa consultancy.",
-                            "founder": { "@type": "Person", "name": "Anusha" },
-                            "foundingDate": "2016",
-                            "address": {
-                                "@type": "PostalAddress",
-                                "streetAddress": "Brigade Road",
-                                "addressLocality": "Bengaluru",
-                                "addressRegion": "Karnataka",
-                                "postalCode": "560025",
-                                "addressCountry": "IN"
-                            },
-                            "contactPoint": {
-                                "@type": "ContactPoint",
-                                "telephone": "+91-7022213466",
-                                "contactType": "Customer Support",
-                                "areaServed": "IN",
-                                "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
-                            },
-                            "areaServed": ["IN", "US", "CA", "UK", "EU"],
-                            "sameAs": [
-                                "https://www.facebook.com/globalvisainternationals/",
-                                "https://www.instagram.com/globalvisa_internationals/",
-                                "https://www.linkedin.com/company/global-visa-internationals/",
-                                "https://x.com/GLOBALVISA1505",
-                                "https://www.youtube.com/@globalVisaInternationals",
-                                "https://www.google.com/maps/place/Global+Visa+Internationals"
-                            ]
-                        })
-                    }}
-                />
-
-                {/* Structured Data: BlogPosting */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
-                />
-
-                {/* Structured Data: BreadcrumbList */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
-                />
-            </Head>
-
-
+            <StructuredDataVisaFriday />
 
             <main>
+
                 <div className={Styles.meta}>
                     <span>By {metadata.author}</span>
                     <span>•</span>

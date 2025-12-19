@@ -3,206 +3,303 @@ import Styles from './blog.module.css';
 import Head from 'next/head';
 
 export const metadata = {
-    title: "10 Important Things to Know for Indian Students in Canada",
-    date: "2025-07-02",
-    category: "Immigration News & Updates",
+    metadataBase: new URL("https://www.globalvisainternationals.com"),
+
+    title: "Canada Study Visa 2026 Survival Guide: 10 Harsh Truths Indian Students Must Know | Global Visa Internationals",
+    description: "Canada is no longer an easy option for Indian students. With strict intake caps, Provincial Attestation Letters (PAL), PGWP shutdowns, and rising refusals, this 2026 Survival Guide exposes the real risks, mistakes, and compliance rules you must understand before applying.",
     author: "Global Visa Internationals Team",
-    excerpt:
-        "Moving to Canada as a student from India is not just a long journey — it’s a big change in culture, a challenge for your wallet, and sometimes, a real shock for your weather expectations. You’ll need to understand different grading systems, deal with very cold winters that can drop to -30°C, and discover that saying “sorry” can mean many different things. There are many things that brochures or university information sessions won't tell you. This is not just a simple guide — it’s a friendly talk with a bit of humor, some coffee, and sometimes feeling confused about who you are. Whether you are going to Toronto for a master's degree or to Halifax for a diploma, here are 10 important things every Indian student should know before you become polite… and maybe a bit short on money.",
+    date: "2025-12-18",
     image: "/BlogImages/10-Important-Things-to-Know-for-Indian-Students-in-Canada.webp",
-    keywords: [
-        "Canada visa",
-        "Canada PR Visa",
-        "Canada PR visa assistance",
-        "Visa assistance",
-        "Canada visa update 2025",
-        "Skilled Refugees Canada",
-        "EMPP Canada 2025",
-        "Canada Student Visa",
-        "Canada",
-        "Canada NEWS",
-        "Important Things to Know for Indian Students in Canada"
-    ]
+    keywords: ["Canada study visa rejection reasons 2026", "Canada student visa cap 2026 explained", "Is Canada closing borders for Indian students", "Canada deportation rules international students", "Canada study visa refusal India", "Provincial Attestation Letter PAL Canada", "PGWP eligibility private vs public colleges", "IRCC new rules for international students 2026", "Spousal Open Work Permit Canada new rules", "Masters vs Diploma Canada visa success rate", "GIC amount for Canada 2026", "Cost of living in Canada for students 2026", "Canada housing crisis international students", "Canada part time work rules students 2026", "Fix Canada student visa refusal", "CICC registered Canada consultants India", "Global Visa Internationals Canada study guide"],
+    authors: [{ name: "Global Visa Internationals Team" }],
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Canada Study Visa & Immigration Policy",
+    canonical: "https://www.globalvisainternationals.com/blog/canada-study-visa-2026-survival-guide",
+    alternates: {
+        canonical:
+            "https://www.globalvisainternationals.com/blog/canada-study-visa-2026-survival-guide",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-snippet": -1,
+            "max-image-preview": "large",
+            "max-video-preview": -1,
+        },
+    },
+
+    openGraph: {
+        title:
+            "Canada Study Visa 2026: 10 Warnings Indian Students Can’t Ignore",
+        description:
+            "The old Canada dream is over. With intake caps, PAL shortages, PGWP shutdowns, and rising refusals, Indian students face a harsh new reality in 2026. Read this before risking your parents’ life savings.",
+        url:
+            "https://www.globalvisainternationals.com/blog/canada-study-visa-2026-survival-guide",
+        siteName: "Global Visa Internationals",
+        images: [
+            {
+                url:
+                    "/BlogImages/Canada-Study-Visa-2026-Survival-Guide.webp",
+                width: 1200,
+                height: 630,
+                alt:
+                    "Canada Study Visa 2026 Survival Guide for Indian Students  PAL, PGWP & IRCC Rules",
+            },
+        ],
+        locale: "en_IN",
+        type: "article",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Canada Study Visa 2026 Reality Check for Indian Students",
+        description:
+            "Canada is no longer forgiving. Intake caps, PAL shortages, PGWP traps, and visa refusals are rising in 2026. Read this survival guide before you apply.",
+        images: [
+            "/BlogImages/Canada-Study-Visa-2026-Survival-Guide.webp",
+        ],
+        creator: "@globalvisas",
+    },
+
+    viewport: {
+        width: "device-width",
+        initialScale: 1,
+    },
+
+    other: {
+        "article:published_time": "2025-12-18",
+        "article:author": "Global Visa Internationals Team",
+
+        // AI / Semantic / Answer Engine Optimization (AEO)
+        "ai-content-type": "canada-study-visa-survival-guide",
+        "ai-primary-topic":
+            "Canada Study Visa Rules for Indian Students 2026",
+        "ai-secondary-topic":
+            "IRCC Intake Caps, PAL, PGWP & Compliance Risks",
+        "ai-user-intent":
+            "should I apply for Canada study visa in 2026 or is it too risky",
+    },
 };
 
-export default function CanadaResidencyBlog() {
-    const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
+
+function StructuredDataCanadaStudents2026() {
+    const baseUrl = "https://www.globalvisainternationals.com";
     const pageUrl =
-        "https://www.globalvisainternationals.com/blog/10-Important-Things-to-Know-for-Indian-Students-in-Canada/";
+        `${baseUrl}/blog/canada-study-visa-2026-survival-guide`;
 
-    const blogStructuredData = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": pageUrl
+    const schemas = [
+        /* 📰 Article Schema  Discover & News Eligible */
+        {
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            headline:
+                "Canada Study Visa 2026 Survival Guide: 10 Harsh Truths Indian Students Must Know",
+            description:
+                "Canada is no longer an easy option for Indian students. This 2026 Survival Guide explains intake caps, Provincial Attestation Letters (PAL), PGWP risks, rising costs, refusal trends, and strict IRCC compliance rules.",
+            image: [
+                `${baseUrl}/BlogImages/Canada-Study-Visa-2026-Survival-Guide.webp`,
+            ],
+            author: {
+                "@type": "Organization",
+                name: "Global Visa Internationals",
+                url: baseUrl,
+            },
+            publisher: {
+                "@type": "Organization",
+                name: "Global Visa Internationals",
+                logo: {
+                    "@type": "ImageObject",
+                    url: `${baseUrl}/gvilogo.png`,
+                },
+            },
+            datePublished: "2025-12-18",
+            dateModified: "2025-12-18",
+            mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": pageUrl,
+            },
         },
-        "headline": metadata.title,
-        "description": metadata.excerpt,
-        "image": fullImageUrl,
-        "author": {
-            "@type": "Organization",
-            "name": "Global Visa Internationals",
-            "url": "https://www.globalvisainternationals.com"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Global Visa Internationals",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.globalvisainternationals.com/gvilogo.png"
-            }
-        },
-        "datePublished": metadata.date,
-        "dateModified": metadata.date,
-        "inLanguage": "en",
-        "articleSection": metadata.category
-    };
 
-    const breadcrumbStructuredData = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.globalvisainternationals.com"
+        /* 🧭 Breadcrumb Schema */
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: baseUrl,
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Blog",
+                    item: `${baseUrl}/blog`,
+                },
+                {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "Canada Study Visa 2026 Survival Guide",
+                    item: pageUrl,
+                },
+            ],
+        },
+
+        /* 🏢 Organization Schema */
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Global Visa Internationals",
+            url: baseUrl,
+            logo: `${baseUrl}/gvilogo.png`,
+            sameAs: [
+                "https://www.facebook.com/globalvisainternationals/",
+                "https://www.instagram.com/globalvisa_internationals/",
+                "https://www.linkedin.com/company/global-visa-internationals/",
+                "https://x.com/GLOBALVISA1505",
+                "https://www.youtube.com/@globalVisaInternationals",
+            ],
+        },
+
+        /* 📍 Local Business Schema */
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Global Visa Internationals",
+            image: `${baseUrl}/gvilogo.png`,
+            url: baseUrl,
+            telephone: "+91-7022-213-466",
+            address: {
+                "@type": "PostalAddress",
+                streetAddress: "GF-9, Business Point, Brigade Road",
+                addressLocality: "Bangalore",
+                postalCode: "560025",
+                addressCountry: "IN",
             },
-            {
-                "@type": "ListItem",
-                position: 2,
-                name: "Blog",
-                item: "https://www.globalvisainternationals.com/blog"
-            },
-            {
-                "@type": "ListItem",
-                position: 3,
-                name: metadata.title,
-                item: pageUrl
-            }
-        ]
-    };
+            openingHours: "Mo-Fr 10:00-18:00",
+        },
+
+        /* 🛠️ HowTo Schema  Canada Study Visa 2026 */
+        {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How to Apply for a Canada Study Visa in 2026 (Indian Students)",
+            description:
+                "Step-by-step process Indian students must follow to apply for a Canada Study Permit in 2026 under new IRCC intake caps and compliance rules.",
+            totalTime: "P90D",
+            step: [
+                {
+                    "@type": "HowToStep",
+                    name: "Choose a PGWP-Eligible Institution",
+                    text:
+                        "Select only public universities or PGWP-approved colleges. Many private and PPP colleges no longer qualify for post-study work permits.",
+                },
+                {
+                    "@type": "HowToStep",
+                    name: "Secure a Provincial Attestation Letter (PAL)",
+                    text:
+                        "Confirm that your province has issued a PAL under its intake cap. Without a PAL, many applications are returned without assessment.",
+                },
+                {
+                    "@type": "HowToStep",
+                    name: "Arrange Finances Transparently",
+                    text:
+                        "Prepare increased GIC funds, tuition fees, and living expenses using genuine and verifiable sources to avoid misrepresentation bans.",
+                },
+                {
+                    "@type": "HowToStep",
+                    name: "Prepare a Compliance-Based SOP",
+                    text:
+                        "Your Statement of Purpose must clearly justify course relevance, career outcomes, and intent to comply with IRCC regulations.",
+                },
+                {
+                    "@type": "HowToStep",
+                    name: "Submit Biometrics, Medicals & Track Application",
+                    text:
+                        "Complete biometrics, medical exams, and monitor IRCC updates carefully until a final decision is issued.",
+                },
+            ],
+        },
+
+        /* ❌ Refusal-Focused FAQ Schema (High-Intent) */
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+                {
+                    "@type": "Question",
+                    name: "Why are Canada study visas getting rejected more often in 2026?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Refusals are rising due to intake caps, missing Provincial Attestation Letters (PAL), weak course relevance, insufficient funds, and enrollment in PGWP-ineligible colleges.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "Can choosing the wrong college affect my future in Canada?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Yes. Many colleges no longer offer PGWP eligibility. Without a PGWP, students cannot gain Canadian work experience, which significantly limits PR pathways.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "Does visa approval guarantee work or PR in Canada?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "No. Visa approval only allows entry for study. Work permits, PGWP eligibility, and PR depend on compliance, institution type, and immigration policy at the time.",
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: "What happens if I submit incorrect financial documents?",
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text:
+                            "Providing false or misleading financial information can result in refusal and a ban of up to five years under Canadian immigration law.",
+                    },
+                },
+            ],
+        },
+    ];
+
+    return (
+        <>
+            {schemas.map((schema, index) => (
+                <script
+                    key={index}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(schema),
+                    }}
+                />
+            ))}
+        </>
+    );
+}
+
+
+
+
+
+export default function CanadaStudentVisaGuidence() {
 
 
 
     return (
         <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.excerpt} />
-                <meta name="keywords" content={metadata.keywords.join(", ")} />
-                <meta name="author" content={metadata.author} />
-                <meta name="robots" content="index, follow" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="preload" as="image" href={fullImageUrl} />
-                <link rel="canonical" href={pageUrl} />
-
-                {/* Open Graph */}
-                <meta property="og:locale" content="en_US" />
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content={metadata.title} />
-                <meta property="og:description" content={metadata.excerpt} />
-                <meta property="og:url" content={pageUrl} />
-                <meta property="og:image" content={fullImageUrl} />
-                <meta property="og:image:alt" content={metadata.title} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta property="og:site_name" content="Global Visa Internationals" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@GLOBALVISA1505" />
-                <meta name="twitter:creator" content="@GLOBALVISA1505" />
-                <meta name="twitter:url" content={pageUrl} />
-                <meta name="twitter:title" content={metadata.title} />
-                <meta name="twitter:description" content={metadata.excerpt} />
-                <meta name="twitter:image" content={fullImageUrl} />
-                <meta name="twitter:image:alt" content={metadata.title} />
-
-                {/* Mobile SEO */}
-                <meta name="format-detection" content="telephone=no" />
-                <meta name="theme-color" content="#ffffff" />
-                <meta name="HandheldFriendly" content="true" />
-                <meta name="mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-                {/* Local SEO */}
-                <meta name="geo.region" content="IN-KA" />
-                <meta name="geo.placename" content="Bengaluru" />
-                <meta name="geo.position" content="12.9716;77.5946" />
-                <meta name="ICBM" content="12.9716,77.5946" />
-
-                {/* Structured Data: Organization */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Organization",
-                            "name": "Global Visa Internationals",
-                            "url": "https://www.globalvisainternationals.com",
-                            "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-                            "description":
-                                "Thinking of studying in Canada? For Indian students, it’s more than a big move — it’s a culture shock, a wallet workout, and a battle with -30°C. From GPA confusion to maple syrup manners, here are 10 things you really need to know before Canada turns you polite… and permanently broke.",
-                            "founder": { "@type": "Person", "name": "Anusha" },
-                            "foundingDate": "2016",
-                            "address": {
-                                "@type": "PostalAddress",
-                                "streetAddress": "Brigade Road",
-                                "addressLocality": "Bengaluru",
-                                "addressRegion": "Karnataka",
-                                "postalCode": "560025",
-                                "addressCountry": "IN"
-                            },
-                            "contactPoint": {
-                                "@type": "ContactPoint",
-                                "telephone": "+91-7022213466",
-                                "contactType": "Customer Support",
-                                "areaServed": "IN",
-                                "availableLanguage": ["English", "Hindi", "Kannada", "Tamil"]
-                            },
-                            "areaServed": ["IN", "US", "CA", "UK", "EU"],
-                            "sameAs": [
-                                "https://www.facebook.com/globalvisainternationals/",
-                                "https://www.instagram.com/globalvisa_internationals/",
-                                "https://www.linkedin.com/company/global-visa-internationals/",
-                                "https://x.com/GLOBALVISA1505",
-                                "https://www.youtube.com/@globalVisaInternationals",
-                                "https://www.google.com/maps/place/Global+Visa+Internationals"
-                            ]
-                        })
-                    }}
-                />
-
-                {/* Structured Data: BlogPosting */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(blogStructuredData) }}
-                />
-
-                {/* Structured Data: BreadcrumbList */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
-                />
-            </Head>
-
-
-            <main>
-                <div className={Styles.meta}>
-                    <span>By {metadata.author}</span>
-                    <span>•</span>
-                    <span>
-                        {new Date(metadata.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric"
-                        })}
-                    </span>
-                </div>
-
+            <StructuredDataCanadaStudents2026 />
+            <article className="prose prose-lg max-w-4xl mx-auto px-4 py-10">
                 <div className={Styles.imageCard}>
                     <img
                         src={metadata.image}
@@ -214,45 +311,302 @@ export default function CanadaResidencyBlog() {
                     />
                 </div>
 
-                <div className={Styles.ArticalSec}>
-                    <h1 className={Styles.subtitle}>{metadata.title}</h1>
-                    <p>Moving to Canada as an Indian student is more than just crossing continents — it’s a cultural leap, a financial workout, and often, a climatic betrayal. Between deciphering GPA systems, surviving -30°C winters, and learning that “sorry” can mean anything, there’s a lot that no brochure or university webinar will tell you. This isn’t just a guide — it’s a reality check wrapped in humor, caffeine, and the occasional identity crisis. Whether you’re headed for a master’s in Toronto or a diploma in Halifax, here are 10 things every Indian student should know before Canada makes you polite… and permanently broke.</p>
-                    <ol>
-                        <h3><li>Getting Used to the Culture:</li></h3><p>Canada is home to over 200 different ethnic groups, and you may notice a variety of customs and traditions. Join local cultural groups and meet at least 3-4 other international students to help you feel more at home.</p>
+                <p>
+                    <strong className={Styles.strong}>
+                        In 2024, Canada rejected close to 40% of Indian study permit applications.
+                    </strong>{" "}
+                    With the new <strong className={Styles.strong}>2025–26 Intake Cap</strong>,{" "}
+                    <strong className={Styles.strong}>Provincial Attestation Letters (PALs)</strong>, and{" "}
+                    <strong className={Styles.strong}>PGWP shutdowns</strong>, refusal rates in 2026 are expected to rise even further.
+                </p>
 
-                        <h3><li>Be Ready for the Weather:</li></h3><p>Winters can drop below -30°C in some regions. Investing in 1-2 high-quality winter coats and thermal layers will help keep you warm during the snowy season.</p>
-                        <div className={Styles.VisaForm1}><VisaForm /></div>
+                <p>
+                    If your parents are planning to liquidate savings, mortgage property, or take
+                    education loans based on the “old Canada” dream, stop.
+                </p>
 
-                        <h3><li>Understanding Healthcare:</li></h3><p>Each province has its own health insurance plan, and approximately 3 months is typically needed before you are fully covered. Learn what is included in your provincial plan and consider additional coverage if you need it.</p>
+                <p>
+                    <strong className={Styles.strong}>Canada has changed. Brutally. Quietly. Permanently.</strong>
+                </p>
 
-                        <h3><li>Managing Your Money:</li></h3><p>Opening a local bank account can save you up to 200 CAD in fees each year. Look for student accounts with no monthly fees and a minimum balance requirement.</p>
+                <p>
+                    This is your <strong className={Styles.strong}>2026 Reality Check</strong> — before your family’s life
+                    savings become another refusal file.
+                </p>
 
-                        <h3><li>Getting Around:</li></h3><p>Most major cities have extensive public transportation systems, and nearly 70% of Canadian cities have buses and trains. Familiarize yourself with these options to ease your daily commute.</p>
-                        <div className={Styles.VisaForm1}><VisaForm /></div>
-                        <h3><li>School Rules:</li></h3><p>Almost 90% of Canadian universities emphasize group work and presentations in their curriculum. Be prepared to engage actively in collaborative projects during your studies.</p>
+                <hr />
 
-                        <h3><li>Job Opportunities:</li></h3><p> With a valid study permit, you can work up to 20 hours per week during the school year. Check local job boards and university resources that may post around 1,000 part-time job listings specifically for students.</p>
+                {/* MASTER LIST */}
+                <h3 className={Styles.subTitle}>The 10 Warnings That Decide Approval vs Refusal in 2026</h3>
+                <ul>
+                    <li>The Intake Cap & PAL bottleneck</li>
+                    <li>Public vs Private College PGWP landmines</li>
+                    <li>The ₹15–20 lakh GIC shock</li>
+                    <li>Spousal Open Work Permit shutdown</li>
+                    <li>Course relevancy = instant rejection</li>
+                    <li>Housing crisis impacting visa credibility</li>
+                    <li>Part-time work myths (20 vs 24 hours)</li>
+                    <li>Master’s vs Diploma approval gap</li>
+                    <li>AI-driven SOP screening</li>
+                    <li>Misrepresentation leading to 5-year bans</li>
+                </ul>
 
-                        <h3><li>Making Connections:</li></h3><p>Joining at least 2-3 clubs or organizations at your university can help you meet new people and expand your network, which can significantly improve your job prospects in Canada.</p>
-                        <div className={Styles.VisaForm1}><VisaForm /></div>
-                        <h3><li>Help and Support:</li></h3><p>Universities report that approximately 70% of international students utilize support services at least once. Don’t hesitate to reach out for academic advising, counseling, or career help if needed.</p>
+                <p>
+                    Ignore even <strong className={Styles.strong}>one</strong>, and IRCC can legally refuse your application.
+                </p>
 
-                        <h3><li>Stay Updated:</li></h3><p>Immigration rules change frequently, so it's essential to check for updates on your study permit and work permits at least once a month. Staying informed will help you avoid any potential issues.</p>
-                    </ol>
+                <hr />
 
-                    <p>Contact Global Visa Internationals or click here to get expert visa assistance and guidance on navigating these evolving immigration rules. Our experienced team can provide you with the latest information, support you in understanding the specific requirements for your visa category, and help you prepare for the necessary English language tests.</p>
+                {/* SECTION 1 */}
+                <h3 className={Styles.subTitle}>
+                    1. The ‘Hard Cap’ Is Here: What Is the Provincial Attestation Letter (PAL) and
+                    Why Do You Need It?
+                </h3>
 
-                    <p>By staying informed and seeking professional guidance, individuals and families can effectively navigate the UK’s new immigration landscape and achieve their goals of studying, working, or settling in the country.</p>
+                <p>
+                    An offer letter is no longer enough.
+                </p>
 
+                <p>
+                    From 2025 onward, most international students must submit a{" "}
+                    <strong className={Styles.strong}>Provincial Attestation Letter (PAL)</strong> issued by the province
+                    (Ontario, British Columbia, Alberta, etc.).
+                </p>
 
+                <ul>
+                    <li>PAL quotas are limited by province</li>
+                    <li>Diploma and undergraduate seats are rationed</li>
+                    <li>Master’s and PhD programs are prioritized</li>
+                    <li>
+                        If your college cannot secure a PAL,{" "}
+                        <strong className={Styles.strong}>your file may be returned without review</strong>
+                    </li>
+                </ul>
+
+                <p>
+                    <strong className={Styles.strong}>No PAL = automatic death of your application.</strong>
+                </p>
+
+                <hr />
+
+                {/* SECTION 2 */}
+                <h3 className={Styles.subTitle}>
+                    2. Public vs Private Colleges: Are You Walking Into a PGWP Trap?
+                </h3>
+
+                <p>
+                    This is the <strong className={Styles.strong}>most dangerous mistake of 2026</strong>.
+                </p>
+
+                <p>
+                    Starting 2025–26, many{" "}
+                    <strong className={Styles.strong}>Public–Private Partnership (PPP) colleges</strong> are no longer
+                    eligible for a <strong className={Styles.strong}>Post-Graduation Work Permit (PGWP)</strong>.
+                </p>
+
+                <ul>
+                    <li>Private colleges with public branding are being black-flagged</li>
+                    <li>IRCC does not warn you before approving the visa</li>
+                    <li>Students discover the truth only after graduation</li>
+                </ul>
+
+                <p>
+                    <strong className={Styles.strong}>
+                        No PGWP = No Canadian work experience
+                        <br />
+                        No work experience = No PR
+                        <br />
+                        No PR = Forced exit or deportation risk
+                    </strong>
+                </p>
+
+                {/* CTA MID */}
+                <div className="border border-red-300 bg-red-50 p-6 rounded-lg my-10">
+                    <h3 className="text-red-700">
+                        Stop Here — Do Not Proceed Blindly
+                    </h3>
                     <p>
-                        📞 <a href="tel:+917022213466">+91-7022213466</a> <br />
-                        📧 <a href="mailto:operations@globalvisa-internationalscom">operations@globalvisa-internationals.com</a><br />
-                        💬 <a href="https://www.globalvisainternationals.com/contact">Schedule a Consultation</a>
+                        Canada is no longer a gamble you can afford to lose.
+                    </p>
+                    <p>
+                        Let <strong className={Styles.strong}>Global Visa Internationals</strong> perform a{" "}
+                        <strong className={Styles.strong}>2026 Profile Risk Audit</strong>:
+                    </p>
+                    <ul>
+                        <li>Verify your college’s PGWP eligibility</li>
+                        <li>Check Provincial Attestation Letter availability</li>
+                        <li>Identify hidden refusal risks before you apply</li>
+                    </ul>
+                    <p>
+                        <strong className={Styles.strong}>Your future is too expensive to risk.</strong>
                     </p>
                 </div>
-                <div className={Styles.VisaForm}><VisaForm /></div>
-            </main>
+
+                <hr />
+
+                {/* SECTION 3 */}
+                <h3 className={Styles.subTitle}>3. The GIC Shock: Can You Afford the New Financial Reality?</h3>
+
+                <p>
+                    The era of showing ₹6–7 lakh is over.
+                </p>
+
+                <ul>
+                    <li>Expected GIC for 2026: <strong className={Styles.strong}>CAD $20,000+</strong></li>
+                    <li>That equals <strong className={Styles.strong}>₹13–15 lakhs</strong> in liquid funds</li>
+                    <li>Tuition, housing buffer, forex & living costs are extra</li>
+                </ul>
+
+                <p>
+                    IRCC is aggressively flagging:
+                </p>
+
+                <ul>
+                    <li>Fake education loans</li>
+                    <li>Temporary fund parking</li>
+                    <li>Circular bank transfers</li>
+                </ul>
+
+                <p>
+                    <strong className={Styles.strong}>
+                        Misrepresentation can lead to a 5-year ban — no appeal, no forgiveness.
+                    </strong>
+                </p>
+
+                <hr />
+
+                {/* SECTION 4 */}
+                <h3 className={Styles.subTitle}>4. Spousal Open Work Permits: Is Your Partner Still Welcome?</h3>
+
+                <p>
+                    This rule change has shattered thousands of family plans.
+                </p>
+
+                <ul>
+                    <li>
+                        Spouses of diploma and undergraduate students are{" "}
+                        <strong className={Styles.strong}>mostly ineligible</strong>
+                    </li>
+                    <li>
+                        Open Work Permits are now primarily for{" "}
+                        <strong className={Styles.strong}>Master’s and PhD students</strong>
+                    </li>
+                </ul>
+
+                <p>
+                    If your financial plan depends on your spouse working in Canada,
+                    <strong className={Styles.strong}> your plan is already broken.</strong>
+                </p>
+
+                <hr />
+
+                {/* SECTION 5 */}
+                <h3 className={Styles.subTitle}>5. The ‘Course Relevancy’ Rejection: Why SOPs Fail in 2026</h3>
+
+                <p>
+                    Visa officers are no longer just reading SOPs — they are screening them using
+                    logic and AI tools.
+                </p>
+
+                <ul>
+                    <li>Mechanical Engineer → Generic Project Management diploma</li>
+                    <li>B.Com → Random Supply Chain course</li>
+                    <li>8+ years experience → Entry-level diploma</li>
+                </ul>
+
+                <p>
+                    IRCC conclusion:
+                    <br />
+                    <strong className={Styles.strong}>“Non-genuine student. Economic migrant in disguise.”</strong>
+                </p>
+
+                <p>
+                    Refusal code <strong className={Styles.strong}>A11(1)</strong> stays on your record permanently.
+                </p>
+
+                <hr />
+                {/* Section 6 */}
+                <h2 className={Styles.subTitle}>6. Housing Crisis Now Impacts Visa Credibility</h2>
+                <p>Canada is facing an unprecedented student housing shortage.</p>
+                <p>Visa officers are now considering accommodation proof more critically:</p>
+                <ul>
+                    <li>Students applying without confirmed housing may face delays or refusal.</li>
+                    <li>Overcrowded or temporary addresses raise red flags for “genuine student” assessment.</li>
+                    <li>Provinces like Ontario and BC prioritize applicants with proper housing.</li>
+                </ul>
+                <p><strong className={Styles.strong}>Tip:</strong> Ensure you have verified lease agreements or student residence confirmations before filing. Missing this can make IRCC question your preparedness and intention to study.</p>
+
+                <hr />
+
+                {/* Section 7 */}
+                <h2 className={Styles.subTitle}>7. Part-Time Work Myths (20 vs 24 Hours)</h2>
+                <p>Many students still believe they can freely work 20–24 hours/week off-campus. Reality:</p>
+                <ul>
+                    <li>IRCC strictly monitors part-time work eligibility.</li>
+                    <li>Working beyond permitted hours is now a common reason for compliance warnings or visa refusal.</li>
+                    <li>Some diploma programs may not allow off-campus work at all, despite past exceptions.</li>
+                </ul>
+                <p><strong className={Styles.strong}>Rule of thumb:</strong> Don’t assume old policies apply. Always verify work limits with IRCC and your college before committing to financial plans.</p>
+
+                <hr />
+
+                {/* Section 8 */}
+                <h2 className={Styles.subTitle}>8. Masters vs Diploma Approval Gap</h2>
+                <p>Visa approvals now strongly favor higher-level programs:</p>
+                <ul>
+                    <li>Master’s and PhD applicants are prioritized for both visas and PGWP eligibility.</li>
+                    <li>Diploma applicants face higher scrutiny for course relevancy and future plans.</li>
+                    <li>Choosing a diploma over a Master’s can reduce approval chances, especially in high-demand provinces.</li>
+                </ul>
+                <p><strong className={Styles.strong}>Insight:</strong> Your program level directly impacts both visa success and future PR pathways.</p>
+
+                <hr />
+
+                {/* Section 9 */}
+                <h2 className={Styles.subTitle}>9. AI-Driven SOP Screening</h2>
+                <p>Your Statement of Purpose is no longer just a formal letter—it’s evaluated by AI and logic checks:</p>
+                <ul>
+                    <li>Generic SOPs are flagged automatically.</li>
+                    <li>Non-linear career paths or irrelevant course choices can trigger refusal.</li>
+                    <li>AI checks include cross-verifying previous education, work experience, and proposed course relevance.</li>
+                </ul>
+                <p><strong className={Styles.strong}>Warning:</strong> Recycled or copied SOPs are now one of the top causes of permanent refusal codes (A11(1)).</p>
+
+                <hr />
+
+                {/* Section 10 */}
+                <h2 className={Styles.subTitle}>10. Misrepresentation = 5-Year Ban</h2>
+                <p>IRCC is cracking down on misrepresentation like never before:</p>
+                <ul>
+                    <li>Any false document, fake fund proof, or exaggerated claim can lead to a 5-year ban.</li>
+                    <li>Circular fund transfers or “temporary” loans are considered misrepresentation.</li>
+                    <li>Appeal options are extremely limited—this is permanent in most cases.</li>
+                </ul>
+                <p><strong className={Styles.strong}>Rule:</strong> Transparency and accuracy are non-negotiable. One misstep can cost your Canadian dream for years.</p>
+
+
+                {/* FINAL CTA */}
+                <div className="border border-gray-300 bg-gray-100 p-6 rounded-lg mt-12">
+                    <h3 className={Styles.subTitle}>Your Safety Net: The 2026 Risk Audit</h3>
+                    <p>
+                        One mistake — wrong college, missing PAL, or weak SOP — can trigger refusal,
+                        financial loss, or a 5-year ban.
+                    </p>
+                    <p>
+                        <strong className={Styles.strong}>Stop guessing.</strong> Let{" "}
+                        <strong className={Styles.strong}>Global Visa Internationals</strong> perform a{" "}
+                        <strong className={Styles.strong}>2026 Risk Audit</strong> on your profile.
+                    </p>
+                    <p>
+                        <strong className={Styles.strong}>
+                            Your future is too expensive to risk.
+                            Book your frantic-free consultation today.
+                        </strong>
+                    </p>
+                </div>
+
+            </article>
+
         </>
     );
 }

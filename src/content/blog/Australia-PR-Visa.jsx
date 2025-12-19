@@ -6,101 +6,312 @@ import Link from 'next/link';
 
 
 export const metadata = {
-  title: "Australia PR is changing. Are you ready for 2026?",
-  date: "April 21,  2026",
-  category: "Work & PR",
-  author: "Global Visa Internationals Team",
-  excerpt: "Discover the amazing opportunities for students in Australia.",
-  image: "/images/Australia-PR-Visa.webp",
+  metadataBase: new URL("https://www.globalvisainternationals.com"),
+
+  title: {
+    default: "Australia PR Visa 2026 | Eligibility, Points Test & Migration Strategy",
+    template: "Global Visa Internationals",
+  },
+
+  description:
+    "Complete 2026 guide to Australia PR visa for Indians. Learn about the new Migration Strategy, Skills in Demand visa, points test reality, Subclass 189, 190, and 491 pathways.",
+
   keywords: [
-    "Australia PR visa",
+    // Core PR Keywords
+    "Australia PR visa 2026",
     "Australian permanent residency",
-    "Australia immigration",
-    "Australia visa  2026",
-    "migrate to Australia",
-    "study in Australia",
-    "work in Australia",
-    "skilled migration Australia",
-    "visa process Australia",
-    "eligibility for Australia PR",
-    "benefits of Australia PR",
-    "subclass 189 visa",
-    "subclass 190 visa",
-    "subclass 491 visa",
-    "employer nomination scheme",
+    "Australia migration strategy 2026",
+    "Australia PR for Indians",
+    "migrate to Australia from India",
+
+    // Visa Types
+    "Subclass 189 visa",
+    "Subclass 190 visa",
+    "Subclass 491 visa",
+    "Australia skilled migration visa",
+
+    // New Framework
+    "Skills in Demand visa Australia",
+    "Core Skills Occupation List Australia",
+    "Tier 1 Specialist Skills Pathway",
+    "Tier 2 Core Skills Pathway",
+
+    // Process & Points
+    "Australia PR points test 2026",
+    "Australia PR points calculator",
     "skills assessment Australia",
-    "points test Australia",
-    "Australian citizenship",
-    "regional Australia visa",
+    "ACS skills assessment",
+    "Engineers Australia assessment",
+
+    // Location & Trust
+    "Australia PR consultants in Bangalore",
+    "Australia PR process from India",
+    "Global Visa Internationals Australia PR",
   ],
+  author: "Global Visa Internationals Team",
+  date: "2025-04-21",
+  image: "/images/Australia-PR-Visa.webp",
+  authors: [{ name: "Global Visa Internationals Team" }],
+  creator: "Global Visa Internationals",
+  publisher: "Global Visa Internationals",
+  category: "Australia Immigration & PR",
+  canonical: "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa",
+  alternates: {
+    canonical:
+      "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+
+  openGraph: {
+    title:
+      "Australia PR Visa 2025–2026 | New Migration Strategy & Skills in Demand",
+    description:
+      "Understand Australia PR visa rules for 2025–2026. Explore the new Skills in Demand framework, points test reality, and PR pathways for Indian professionals.",
+    url:
+      "https://www.globalvisainternationals.com/Visa/permanent-residency-visa/australia-pr-visa",
+    siteName: "Global Visa Internationals",
+    images: [
+      {
+        url: "/images/Australia-PR-Visa.webp",
+        width: 1200,
+        height: 630,
+        alt: "Australia PR Visa Guide 2025–2026",
+      },
+    ],
+    locale: "en_AU",
+    type: "article",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Australia PR Visa 2025–2026 | Migration Strategy Explained",
+    description:
+      "Strategic guide to Australia PR for Indians. Points test, Skills in Demand visa, and PR pathways explained.",
+    images: ["/images/Australia-PR-Visa.webp"],
+    creator: "@globalvisas",
+  },
+
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
+
+
+
+  other: {
+    "geo.region": "AU",
+    "geo.placename": "Australia",
+    "geo.position": "-25.2744;133.7751",
+    ICBM: "-25.2744, 133.7751",
+
+    // AI / Semantic Search Signals
+    "ai-content-type": "immigration-guide",
+    "ai-primary-topic": "Australia Permanent Residency",
+    "ai-secondary-topic": "Migration Strategy 2026",
+    "ai-user-intent": "Australia PR eligibility and process",
+  },
 };
+
+
+
+function StructuredDataAustraliaPR() {
+  const baseUrl = "https://www.globalvisainternationals.com";
+  const pageUrl =
+    `${baseUrl}/Visa/permanent-residency-visa/australia-pr-visa`;
+
+  const schemas = [
+    // 📰 Article Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline:
+        "Australia PR Visa 2025–2026: Eligibility, Points Test & Skills in Demand Strategy",
+      description:
+        "Strategic guide to Australia Permanent Residency for Indians in 2025–2026. Understand Skills in Demand visa, points test reality, and Subclass 189, 190, and 491 pathways.",
+      image: `${baseUrl}/images/Australia-PR-Visa.webp`,
+      author: {
+        "@type": "Organization",
+        name: "Global Visa Internationals",
+        url: baseUrl,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Global Visa Internationals",
+        logo: {
+          "@type": "ImageObject",
+          url: `${baseUrl}/gvilogo.png`,
+        },
+      },
+      datePublished: "2025-04-21",
+      dateModified: "2025-04-21",
+      mainEntityOfPage: pageUrl,
+    },
+
+    // 🏢 Organization Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Global Visa Internationals",
+      url: baseUrl,
+      logo: `${baseUrl}/gvilogo.png`,
+      sameAs: [
+        "https://www.facebook.com/globalvisainternationals/",
+        "https://www.instagram.com/globalvisa_internationals/",
+        "https://www.linkedin.com/company/global-visa-internationals/",
+        "https://x.com/GLOBALVISA1505",
+        "https://www.youtube.com/@globalVisaInternationals",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+91-7022-213-466",
+        contactType: "Customer Support",
+        availableLanguage: ["English", "Hindi"],
+      },
+    },
+
+    // 📍 Local Business Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Global Visa Internationals",
+      image: `${baseUrl}/gvilogo.png`,
+      url: baseUrl,
+      telephone: "+91-7022-213-466",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "GF-9, Business Point, Brigade Road",
+        addressLocality: "Bangalore",
+        postalCode: "560025",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 12.9716,
+        longitude: 77.5946,
+      },
+      openingHours: "Mo-Fr 10:00-18:00",
+    },
+
+    // 🧳 Service Schema – Australia PR
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Australia PR Visa Assistance",
+      serviceType: "Permanent Residency Visa Consultancy",
+      provider: {
+        "@type": "Organization",
+        name: "Global Visa Internationals",
+        url: baseUrl,
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "India",
+      },
+      availableChannel: {
+        "@type": "ServiceChannel",
+        serviceLocation: {
+          "@type": "Place",
+          name: "India",
+        },
+      },
+    },
+
+    // ❓ FAQ Schema – Australia PR
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is the Australia PR points requirement in 2025–2026?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "The minimum eligibility is 65 points, but competitive invitations typically require 85+ points, especially for IT and engineering professionals.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the Skills in Demand visa framework?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Australia’s new Skills in Demand framework replaces traditional occupation lists and prioritizes applicants based on economic value, sector demand, and skill tiers.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Which Australia PR visa is best for Indians?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Most Indian professionals succeed through Subclass 190 (State Nomination) or Subclass 491 (Regional Visa) due to higher invitation probability.",
+          },
+        },
+      ],
+    },
+
+    // 🧭 Breadcrumb Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: baseUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Permanent Residency Visas",
+          item: `${baseUrl}/Visa/permanent-residency-visa`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Australia PR Visa",
+          item: pageUrl,
+        },
+      ],
+    },
+  ];
+
+  return (
+    <>
+      {schemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema),
+          }}
+        />
+      ))}
+    </>
+  );
+}
+
+
+
 
 export default function PostContent() {
   return (
     <>
-      <Head>
-        {/* Primary Meta Tags */}
-        <title>Australia PR is changing. Are you ready for 2026?</title>
-        <meta name="description" content="Discover the latest Australia PR visa process, eligibility criteria, and top benefits. Updated  2026 guide for students, skilled workers, and families." />
-        <meta name="keywords" content="Australia PR visa, Australian permanent residency, Australia immigration, Australia visa  2026, migrate to Australia, study in Australia, work in Australia, skilled migration Australia, visa process Australia, eligibility for Australia PR, benefits of Australia PR, subclass 189 visa, subclass 190 visa, subclass 491 visa, employer nomination scheme, skills assessment Australia, points test Australia, Australian citizenship, regional Australia visa" />
-        <meta name="author" content="Global Visa Internationals Team" />
-        <link as="image" href="${metadata.image}" />
-        <meta name="robots" content="index, follow" />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Australia PR is changing. Are you ready for 2026?" />
-        <meta property="og:description" content="Explore PR visa options for Australia, including Subclass 189, 190, and 491. Understand points test, eligibility, and how to apply." />
-        <meta property="og:image" content={`https://www.globalvisainternationals.com${metadata.image}`} />
-        <meta property="og:image:alt" content="Australia PR Visa" />
-        <meta property="og:image:width" content="1200" />
-        <link as="image" href="${metadata.image}" />
-
-        <meta property="og:url" content="https://www.globalvisainternationals.com/blog/study-in-australia" />
-        <meta property="og:type" content="article" />
-        <meta property="og:locale" content="en_AU" />
-        <meta property="og:site_name" content="Global Visa Internationals" />
-
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Australia PR is changing. Are you ready for 2026?" />
-        <meta name="twitter:description" content="Detailed guide on Australia's PR visa process, skilled migration pathways, and benefits in  2026." />
-        <meta name="twitter:image" content={`https://www.globalvisainternationals.com${metadata.image}`} />
-        <meta itemProp="image" content={`https://www.globalvisainternationals.com${metadata.image}`} />
-
-        <meta name="twitter:creator" content="@globalvisas" />
-
-        {/* GEO Meta Tags */}
-        <meta name="geo.region" content="AU" />
-        <meta name="geo.placename" content="Australia" />
-        <meta name="geo.position" content="-25.2744;133.7751" />
-        <meta name="ICBM" content="-25.2744, 133.7751" />
-
-        {/* AI-Enhanced Optimization Tags */}
-        <meta name="ai-content-type" content="visa-guide" />
-        <meta name="ai-keywords" content="Australia PR visa, skilled migration, Subclass 189, Subclass 190, visa eligibility, PR benefits  2026" />
-        <meta name="ai-content-structure" content="informational, how-to, step-by-step, bullet points" />
-        <meta name="ai-user-intent" content="learn-about-australia-pr" />
-
-        {/* SEO Meta Tags */}
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="yandexbot" content="index, follow" />
-        <meta name="bingbot" content="index, follow" />
-        <meta name="slurp" content="index, follow" />
-        <meta name="pinterest" content="index, follow" />
-        <meta name="facebook" content="index, follow" />
-        <meta name="twitter" content="index, follow" />
-        <meta name="linkedin" content="index, follow" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-config" content="/images/browserconfig.xml" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no" />
-
-      </Head>
+      <StructuredDataAustraliaPR />
 
       <div className={styles.imageCard}>
         <img
