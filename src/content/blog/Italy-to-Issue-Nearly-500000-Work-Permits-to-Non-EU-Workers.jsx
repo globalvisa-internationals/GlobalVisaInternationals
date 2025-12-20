@@ -10,8 +10,7 @@ export const metadata = {
     date: "2025-07-04",
     image: "/BlogImages/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers.webp",
     author: "Global Visa Internationals Team",
-    description:
-        "Italy plans to issue nearly 500,000 work permits to non-EU workers between 2026 and 2028 to address labor shortages. Full update for Indian professionals and students.",
+    description: "Italy plans to issue nearly 500,000 work permits to non-EU workers between 2026 and 2028 to address labor shortages. Full update for Indian professionals and students.",
 
     keywords: [
         "Italy work permit 2026",
@@ -283,7 +282,7 @@ export default function ItalyWorkPermits() {
     return (
         <>
             <main>
-                <StructuredDataAustraliaPR />
+                <StructuredDataItalyWorkPermits />
                 <div className={Styles.meta}>
                     <span>By {metadata.author}</span>
                     <span>•</span>

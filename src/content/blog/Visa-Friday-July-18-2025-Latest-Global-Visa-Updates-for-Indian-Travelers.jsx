@@ -6,12 +6,7 @@ import Styles from './blog.module.css';
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-    title: {
-        default:
-            "Visa Friday – July 18, 2025: Latest Global Visa Updates for Indian Travelers",
-        template: "%s | Global Visa Internationals",
-    },
-
+    title: "Visa Friday – July 18, 2025: Latest Global Visa Updates for Indian Travelers | Global Visa Internationals",
     description:
         "Visa Friday – July 18, 2025 edition brings the latest global visa updates, travel alerts, and policy changes affecting Indian passport holders. Stay informed with trusted insights from Global Visa Internationals.",
 

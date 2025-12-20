@@ -8,13 +8,8 @@ import Link from 'next/link';
 export const metadata = {
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-  title: {
-    default: "Australia PR Visa 2026 | Eligibility, Points Test & Migration Strategy",
-    template: "Global Visa Internationals",
-  },
-
-  description:
-    "Complete 2026 guide to Australia PR visa for Indians. Learn about the new Migration Strategy, Skills in Demand visa, points test reality, Subclass 189, 190, and 491 pathways.",
+  title: "Australia PR Visa 2026 | Eligibility, Points Test & Migration Strategy | Global Visa Internationals",
+  description: "Complete 2026 guide to Australia PR visa for Indians. Learn about the new Migration Strategy, Skills in Demand visa, points test reality, Subclass 189, 190, and 491 pathways.",
 
   keywords: [
     // Core PR Keywords
@@ -49,7 +44,7 @@ export const metadata = {
     "Global Visa Internationals Australia PR",
   ],
   author: "Global Visa Internationals Team",
-  date: "2025-04-21",
+  date: "2025-12-20",
   image: "/images/Australia-PR-Visa.webp",
   authors: [{ name: "Global Visa Internationals Team" }],
   creator: "Global Visa Internationals",
@@ -154,8 +149,8 @@ function StructuredDataAustraliaPR() {
           url: `${baseUrl}/gvilogo.png`,
         },
       },
-      datePublished: "2025-04-21",
-      dateModified: "2025-04-21",
+      datePublished: "2025-12-20",
+      dateModified: "2025-12-20",
       mainEntityOfPage: pageUrl,
     },
 
