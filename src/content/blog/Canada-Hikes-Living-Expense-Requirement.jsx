@@ -23,12 +23,14 @@ export const metadata = {
     "Canada education expenses",
     "Canada visa rules 2025",
   ],
+  canonical: "https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers",
+
 };
 
 export default function CanadaResidencyBlog() {
   const fullImageUrl = `https://www.globalvisainternationals.com${metadata.image}`;
   const pageUrl =
-    "https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers/";
+    "https://www.globalvisainternationals.com/blog/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers";
 
   const blogStructuredData = {
     "@context": "https://schema.org",

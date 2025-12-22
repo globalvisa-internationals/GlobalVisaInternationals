@@ -6,7 +6,7 @@ import Styles from './blog.module.css';
 
 export const metadata = {
 
-    title: "Italy to Issue Nearly 500,000 Work Permits to Non-EU Workers by 2028 | Global Visa Internationals",
+    title: "Italy to Issue Nearly 500,000 Work Permits to Non-EU Workers by 2028",
     date: "2025-07-04",
     image: "/BlogImages/Italy-to-Issue-Nearly-500000-Work-Permits-to-Non-EU-Workers.webp",
     author: "Global Visa Internationals Team",
@@ -283,17 +283,7 @@ export default function ItalyWorkPermits() {
         <>
             <main>
                 <StructuredDataItalyWorkPermits />
-                <div className={Styles.meta}>
-                    <span>By {metadata.author}</span>
-                    <span>•</span>
-                    <span>
-                        {new Date(metadata.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric"
-                        })}
-                    </span>
-                </div>
+
 
                 <div className={Styles.imageCard}>
                     <img
@@ -306,8 +296,9 @@ export default function ItalyWorkPermits() {
                     />
                 </div>
 
+
                 <div className={Styles.ArticalSec}>
-                    <h1 className={Styles.subtitle}>{metadata.title}</h1>
+
                     <p>In a significant move aimed at addressing pressing labor shortages and demographic challenges, the Italian government has announced plans to grant nearly 500,000 additional work permits to non-EU foreign workers between 2026 and 2028. This initiative represents one of Italy's most substantial immigration efforts in recent history.</p>
                     <ul>
                         <h3 className={Styles.subtitle}><li>Key Highlights</li></h3>
@@ -329,10 +320,6 @@ export default function ItalyWorkPermits() {
                         construction, tourism, and healthcare.
 
                         <p>In 2024, Italy noted a concerning statistic of 281,000 more deaths than births, resulting in a population decline to 58.93 million. To support its economy, healthcare system, and pension framework, the country recognizes the need for a younger, more dynamic workforce.</p>
-
-
-                        <div className={Styles.VisaForm1}><VisaForm /></div>
-
                         <h3 className={Styles.subtitle}><li>Implications for Foreign Workers</li></h3><p>The new work permit policy provides legal pathways for non-EU workers to live and work in Italy. The general application process involves the following steps:</p>
 
                         <ol>
@@ -382,7 +369,7 @@ export default function ItalyWorkPermits() {
 
                     <p className={Styles.links}>
                         📞 <a className={Styles.a} href="tel:+917022213466"><b><i>+91-7022213466</i></b></a> <br />
-                        📧 <a className={Styles.a} href="mailto:operations@globalvisa-internationalscom"><b><i>operations@globalvisa-internationals.com</i></b></a><br />
+                        📧 <a className={Styles.a} href="mailto:operations@globalvisainternationalscom"><b><i>operations@globalvisainternationals.com</i></b></a><br />
                         💬 <a className={Styles.a} href="https://www.globalvisainternationals.com/contact"><b><i>Schedule a Consultation</i></b></a>
                     </p>
                 </div>
