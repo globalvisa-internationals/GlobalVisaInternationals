@@ -6,8 +6,8 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-    title: "Estonia Schengen Visa 2025-2026: The Definitive Guide for Indian Travelers",
-    description: "Apply for your estonia Tourist Visa from India with Global Visa Internationals (GVI). Expert assistance for documentation, appointment booking, and Schengen visa processing to travel smoothly to estonia.",
+    title: "Estonia Schengen Visa from India (2025–26) — Checklist & Fees",
+    description: "Complete 2025–26 guide to apply for an Estonia Schengen visa from India — documents, VFS appointment tips, fees, timelines & free checklist.",
 
     keywords: [
         "estonia tourist visa from India",
