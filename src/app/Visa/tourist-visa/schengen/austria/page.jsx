@@ -6,9 +6,8 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Apply for Austria Tourist Visa from India | Austria Schengen Visa Experts",
-    description:
-        "Apply for your Austria Tourist Visa from India with Global Visa Internationals (GVI). Get expert guidance for documentation, appointment booking, and interview preparation to travel smoothly across Austria and the Schengen area.",
+    title: "Austria Tourist Visa from India (Schengen) — Apply · Documents & Fees",
+    description: "Apply for Austria tourist (Schengen) visa from India — documents, fees (€90), processing time, VFS steps & expert help from GVI. Free eligibility check.",
     keywords: [
         "Austria tourist visa from India",
         "Austria Schengen visa",
@@ -246,6 +245,22 @@ export default function Austria_Tourist_Visa_Assistance() {
                         text: "Yes, Global Visa Internationals offers full support for Austria business visa applications — including document review, invitation letter verification, and appointment scheduling.",
                     },
                 },
+                {
+                    "@type": "Question",
+                    "name": "How long does an Austria tourist visa take for Indian passport holders?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Average processing time is 15–20 working days; times vary by city and season."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What documents are required?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Passport (6+ months), completed form, photos, travel insurance (€30,000), bank statements, itinerary, cover letter."
+                    }
+                }
             ],
         },
     ];
