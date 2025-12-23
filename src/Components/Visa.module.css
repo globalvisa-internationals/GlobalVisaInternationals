@@ -69,7 +69,7 @@
 
 .strong {
     color: var(--accent);
-    font-weight: 600;
+
 }
 
 .note {
@@ -322,9 +322,7 @@
         font-size: 1.4rem;
     }
 
-    .subTitle {
-        font-size: 1.3rem;
-    }
+
 
     .formSection {
         flex-direction: column;
@@ -343,9 +341,7 @@
         font-size: 1.6rem;
     }
 
-    .subTitle {
-        font-size: 1.4rem;
-    }
+
 
     .VisaSec {
         justify-content: center;
