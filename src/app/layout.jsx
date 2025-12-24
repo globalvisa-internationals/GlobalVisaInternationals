@@ -21,9 +21,35 @@ export default function RootLayout({ children }) {
       document.cookie = `gclid=${gclid}; path=/; max-age=${90 * 24 * 60 * 60}`;
     }
   }, []);
+
+  const swgProductId = process.env.NEXT_PUBLIC_SWG_PRODUCT_ID;
   return (
     <html lang="en">
       <head>
+
+
+        {/* NewsArticle */}
+        <Script
+          src="https://news.google.com/swg/js/v1/swg-basic.js"
+          strategy="afterInteractive"
+        />
+
+        <Script id="swg-basic-init" strategy="afterInteractive">
+          {`
+            (self.SWG_BASIC = self.SWG_BASIC || []).push(basicSubscriptions => {
+              basicSubscriptions.init({
+                type: "NewsArticle",
+                isPartOfType: ["Product"],
+                isPartOfProductId: "${swgProductId}",
+                clientOptions: {
+                  theme: "light",
+                  lang: "en-GB"
+                },
+              });
+            });
+          `}
+        </Script>
+
         {/* Google Site Verification */}
         {siteVerificationCode && (
           <meta
