@@ -15,10 +15,10 @@ export const metadata = {
     creator: "Global Visa Internationals",
     publisher: "Global Visa Internationals",
     category: "Canada Study Visa & Immigration Policy",
-    canonical: "https://www.globalvisainternationals.com/blog/canada-study-visa-2026-survival-guide",
+    canonical: "https://www.globalvisainternationals.com/blog/10-Important-Things-to-Know-for-Indian-Students-in-Canada",
     alternates: {
         canonical:
-            "https://www.globalvisainternationals.com/blog/canada-study-visa-2026-survival-guide",
+            "https://www.globalvisainternationals.com/blog/10-Important-Things-to-Know-for-Indian-Students-in-Canada",
     },
 
     robots: {
@@ -39,7 +39,7 @@ export const metadata = {
         description:
             "The old Canada dream is over. With intake caps, PAL shortages, PGWP shutdowns, and rising refusals, Indian students face a harsh new reality in 2026. Read this before risking your parents’ life savings.",
         url:
-            "https://www.globalvisainternationals.com/blog/canada-study-visa-2026-survival-guide",
+            "https://www.globalvisainternationals.com/blog/10-Important-Things-to-Know-for-Indian-Students-in-Canada",
         siteName: "Global Visa Internationals",
         images: [
             {

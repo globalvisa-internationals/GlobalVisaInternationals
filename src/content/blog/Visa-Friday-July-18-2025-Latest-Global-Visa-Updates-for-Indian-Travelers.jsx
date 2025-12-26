@@ -31,6 +31,7 @@ export const metadata = {
     creator: "Global Visa Internationals",
     publisher: "Global Visa Internationals",
     category: "Visa Information",
+    canonical: "https://www.globalvisainternationals.com/blog/Visa-Friday-July-18-2025-Latest-Global-Visa-Updates-for-Indian-Travelers",
 
     alternates: {
         canonical:

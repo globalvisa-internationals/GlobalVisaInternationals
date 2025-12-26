@@ -17,7 +17,8 @@ export const metadata = {
     "Canada visa update 2025",
     "Skilled Refugees Canada",
     "EMPP Canada 2025"
-  ]
+  ],
+  canonical: "https://www.globalvisainternationals.com/blog/Canada-Plans-to-Introduce-New-Permanent-Residency-Program-in-2025"
 };
 
 export default function CanadaResidencyBlog() {
