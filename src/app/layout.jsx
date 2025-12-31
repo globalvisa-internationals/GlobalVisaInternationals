@@ -7,6 +7,8 @@ import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/next';
 import { useEffect } from "react";
+import "./globals.css";
+
 
 import "./globals.css";
 
