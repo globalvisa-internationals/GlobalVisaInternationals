@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/next';
 import { useEffect } from "react";
 import "./globals.css";
-import CookieProvider from "@/components/CookieProvider";
+import CookieProvider from "@/Components/CookieProvider";
 
 
 import "./globals.css";
