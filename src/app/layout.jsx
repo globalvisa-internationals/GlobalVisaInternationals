@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/next';
 import { useEffect } from "react";
 import "./globals.css";
+import CookieProvider from "@/components/CookieProvider";
 
 
 import "./globals.css";
@@ -95,17 +96,18 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="body">
-        <GoogleReCaptchaProvider
-          reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-          scriptProps={{ async: true, defer: true, appendTo: "head" }}
-        >
-          <NavBar />
-          {children}
-          <Analytics />
-          <Footer />
-          <SpeedInsights />
-        </GoogleReCaptchaProvider>
-
+        <CookieProvider>
+          <GoogleReCaptchaProvider
+            reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            scriptProps={{ async: true, defer: true, appendTo: "head" }}
+          >
+            <NavBar />
+            {children}
+            <Analytics />
+            <Footer />
+            <SpeedInsights />
+          </GoogleReCaptchaProvider>
+        </CookieProvider>
       </body>
     </html>
   );
