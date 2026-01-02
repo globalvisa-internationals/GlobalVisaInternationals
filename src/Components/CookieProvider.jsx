@@ -2,25 +2,52 @@
 
 import { useEffect } from "react";
 import { initAnalytics } from "@/lib/analytics";
+import { setCookie, getCookie } from "@/lib/cookies";
 
 /**
  * CookieProvider
- * Runs once on client load.
- * Automatically initializes allowed cookies.
  *
- * ⚠️ Production-only:
- * Assumes legal consent is already handled.
+ * - Client-only execution
+ * - Production-only cookie initialization
+ * - Central place for ALL non-essential cookies
  */
 export default function CookieProvider({ children }) {
   useEffect(() => {
-    // Analytics cookies
+    // 🚫 Never run cookies in dev or staging
+    if (process.env.NODE_ENV !== "production") return;
+
+    /**
+     * =========================
+     * Analytics Cookies
+     * =========================
+     */
     initAnalytics();
 
-    // Functional cookies (example)
-    // setCookie("gvi_lang", "en", 365);
+    /**
+     * =========================
+     * Functional Cookies
+     * (User preferences)
+     * =========================
+     */
+    if (!getCookie("gvi_lang")) {
+      setCookie("gvi_lang", "en", 365, {
+        sameSite: "Lax",
+      });
+    }
 
-    // Marketing cookies (example)
-    // setCookie("gvi_marketing_id", crypto.randomUUID(), 180);
+    /**
+     * =========================
+     * Marketing Cookies
+     * (Attribution / campaigns)
+     * =========================
+     */
+    if (!getCookie("gvi_marketing_id")) {
+      setCookie("gvi_marketing_id", crypto.randomUUID(), 180, {
+        sameSite: "Lax",
+        secure: true,
+      });
+    }
+
   }, []);
 
   return children;
