@@ -77,11 +77,11 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h4>Quick Assistance</h4>
                         <ul>
-                            <li><a href="./contact">Free Consultation</a></li>
-                            <li><a href="./blog">Blog</a></li>
-                            <li><a href="./career">Careers</a></li>
-                            <li><a href="./privacy-policy">Privacy Policy</a></li>
-                            <li><a href="./terms-and-conditions">Terms & Conditions</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/contact">Free Consultation</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/blog">Blog</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/career">Careers</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="https://www.globalvisainternationals.com/terms-and-conditions">Terms & Conditions</a></li>
                         </ul>
                     </div>
 

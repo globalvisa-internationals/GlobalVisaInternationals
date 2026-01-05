@@ -10,7 +10,7 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-  title: "USA B1/B2 Visa Consultants in India | GVI",
+  title: "TopUSA B1/B2 Visa Consultants in India | GVI",
   description:
     "Apply for a USA B1/B2 Visa from India with Global Visa Internationals. Expert help for tourist and business visa documents, fees, appointments, and interview prep.",
 
@@ -311,28 +311,140 @@ export default function USATouristVisa() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "How long does a USA Tourist Visa take?",
-        acceptedAnswer: {
+        "name": "How do I get a USA visa?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Processing time varies based on consulate appointments. Generally, it ranges from a few weeks to a few months.",
-        },
+          "text": "To get a USA visa, determine your visa type (e.g., Tourist or Student), complete the DS-160 form, pay the fee, and schedule an interview. For expert help, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
       },
       {
         "@type": "Question",
-        name: "What documents are required for a USA B2 visa?",
-        acceptedAnswer: {
+        "name": "How do I apply for a USA visa from the UK?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Passport, DS-160 confirmation, bank statements, employment proof, travel itinerary, and supporting financial documents.",
-        },
+          "text": "UK residents must fill out the DS-160 online and attend an interview at the US Embassy in London or Belfast. For assistance, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
       },
       {
         "@type": "Question",
-        name: "Can Global Visa Internationals help with USA visa interview preparation?",
-        acceptedAnswer: {
+        "name": "How is the USA visa situation in Nigeria?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Yes. We provide complete guidance, practice Q&A sessions, and personalized interview training.",
-        },
+          "text": "Visa demand in Nigeria is high with long wait times in Abuja and Lagos. Early planning is crucial. For slot monitoring, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
       },
+      {
+        "@type": "Question",
+        "name": "How do I check my USA visa status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check status on the CEAC website using your DS-160 barcode. For tracking assistance, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which USA visa is the easiest to get?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The B1/B2 Tourist Visa is the most common, but approval requires proof of strong ties to your home country. For guidance, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is the USA visa number?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The visa number is the red 8-digit number printed on the bottom right of the visa sticker in your passport. If unsure, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can USA visa holders travel to Saudi Arabia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, holders of a valid, used US visa can often get a Saudi E-Visa or Visa on Arrival. For travel planning, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can USA visa holders work in Saudi Arabia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, a US tourist visa does not permit working in Saudi Arabia. You need a Saudi Work Visa. For assistance, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I apply for a USA tourist visa from India online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To apply online, complete the DS-160 form on the CEAC website, pay the fee, and schedule appointments for biometrics and the interview. For a hassle-free experience, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which companies offer the fastest USA tourist visa processing services in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While the Embassy determines processing times, experienced agencies can speed up documentation and slot booking. To expedite your filing process, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the fees for a USA tourist visa application through official channels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The official US tourist visa (B1/B2) fee is $185 USD (payable in INR). This is non-refundable. For fee guidance and payment assistance, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I book a USA tourist visa appointment through a mobile app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no official government mobile app, though the website is mobile-friendly. To have an expert manage the booking portal for you, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What travel agencies provide end-to-end USA tourist visa assistance in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Specialized visa firms offer better support than general agents. For complete end-to-end support including DS-160 filing and mock interviews, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which courier services are recommended for sending USA tourist visa documents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The US Embassy officially partners with Blue Dart for passport logistics in India. For detailed logistics and document handling guidance, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documents do I need to submit for a USA tourist visa interview in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mandatory documents include a valid passport, DS-160 confirmation, and appointment letter, along with financial and employment proofs. Get a personalized document checklist by Contacting Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there any premium services to expedite my USA tourist visa interview scheduling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The US Consulate does not sell premium slots for tourists; early slots rely on cancellations. To have experts monitor slots daily for you, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I find authorized visa application centers for USA tourist visas near me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Visa Application Centers (VAC) and Consulates are located in New Delhi, Mumbai, Chennai, Hyderabad, and Kolkata. For assistance in choosing the right center, Contact Global Visa Internationals at https://wa.me/917022213466 or call +91 70222 13466."
+        }
+      }
     ],
   };
 
@@ -393,247 +505,281 @@ export default function USATouristVisa() {
 
 
         <div className={styles.VisaData}>
-          <h1 className={styles.Title}>USA B1/B2 Visa Assistance & Top US Visa Consultant in India</h1>
 
-          <p>Planning to travel to the United States? The process of applying for a USA tourist visa or USA visitor visa can feel overwhelming—especially when you're unsure about the right category, documents, or interview preparation. That’s where Global Visa Internationals, a leading USA visa agent in Bangalore, makes the difference.</p>
+          {/* H1: Primary Keyword Targeting for Location + Year + Service */}
+          <h1 className={styles.Title}>
+            Top USA Visa Consultant in Bangalore (2026) | Expert B1/B2 Visa Assistance & Slot Booking
+          </h1>
 
-          <p>Understanding the US B1 visa (Business), US B2 visa (Tourism/Visit), and the combined US B1/B2 visa assistance process is essential before you begin your USA visa application online. Our expert team simplifies the entire journey, acting as your dedicated US visa consultants in India, guiding you through every step with clarity, accuracy, and professional support.</p>
+          {/* Intro: Immediate hook targeting the 2026 travel rush and rejection anxiety */}
+          <p>
+            Planning your 2026 travel to the United States? Whether for business, tourism, or family visits,
+            securing a US visa is tougher than ever. <strong className={styles.strong}>Global Visa Internationals (GVI)</strong> is the
+            <em>most trusted USA visa agent in Bangalore</em>, specializing in navigating strict Embassy protocols.
+            From <strong className={styles.strong}>error-free DS-160 filing</strong> to securing <strong className={styles.strong}>fast-track US visa appointments</strong>,
+            we turn complex paperwork into guaranteed approvals.
+          </p>
 
+          {/* H2: Addressing the critical pain point: Wait Times */}
+          <h2 className={styles.subTitle}>
+            Fast-Track US Visa Appointments & Emergency Slot Booking
+          </h2>
 
+          <p>
+            Don't let 300+ day wait times cancel your plans. As specialized <strong className={styles.strong}>US visa slot booking agents</strong>,
+            we use 24/7 monitoring systems to snatch up cancellations and secure <strong className={styles.strong}>early interview slots</strong> for our clients.
+            We handle the stress of the US travel docs portal so you can focus on your trip.
+          </p>
 
-          <h2 className={styles.subTitle}>Exclusive GVI Advantage — Get Your US Visa Appointment in as Fast as 7 Days!</h2>
-          <p>As a specialized USA visa slot booking agent, we solve the biggest hurdle Indian travelers face: the wait time.</p>
           <ul>
-            <li>Emergency US visa appointment assistance — Get slots in just 7 Days!</li>
-            <li>While others wait 13-15 months, we unlock early US visa slot availability within 7 to 30 days.</li>
-            <li>Even high-risk nationalities secure approvals with our expert US visa rejected cases preparation.</li>
-            <li>From DS-160 form filling services to interview coaching, GVI handles everything end-to-end.</li>
-            <li>Don’t waste a year waiting — utilize our US visa fast track services today!</li>
+            <li><strong className={styles.strong}>Priority Slot Booking:</strong> Proven strategy for securing early B1/B2 interview dates in 2026.</li>
+            <li><strong className={styles.strong}>Risk-Free Application:</strong> Detailed audit of your profile to prevent common Section 214(b) rejections.</li>
+            <li><strong className={styles.strong}>Mock Interviews:</strong> 1-on-1 coaching to help you answer tough questions with confidence.</li>
+            <li><strong className={styles.strong}>Refusal Management:</strong> Expert strategy for re-applying after a previous US visa rejection.</li>
           </ul>
 
-          <address className={styles.address}>
-            Global Visa Internationals - Best US Visa Consultancy
-            <li>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore - 560025, Karnataka</li>
-            <a href="tel:+917022213466" className={styles.callButton}> 📞 Get Free Eligibility Check</a>
-            <li>Email: <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></li>
-          </address>
+          {/* Promo Box: Highlighting USP, Speed, and 2026 Readiness */}
+          <div className={styles.promoBox}>
+            <h2 className={styles.heading}>
+              🚀 Get Your USA Tourist / Business (B1/B2) Visa in Just 6 Weeks*
+            </h2>
 
-          <p>From identifying the exact USA tourist visa requirements to assembling your USA visitor visa documents, we ensure your application is strong, complete, and well-prepared. Our documentation checks and US visa application help reduce errors and save you time.</p>
+            <ul className={styles.features}>
+              <li><strong className={styles.strong}>Express 2026 Processing:</strong> Optimized workflows to aim for a 6-week turnaround (subject to Embassy availability).</li>
+              <li><strong className={styles.strong}>Service Guarantee:</strong> We offer a service charge refund if we miss our committed processing timeline.</li>
+              <li><strong className={styles.strong}>10+ Years Experience:</strong> Handled by senior consultants who understand the latest 2026 immigration trends.</li>
+              <li><strong className={styles.strong}>Complete Hand-holding:</strong> From document collection to final passport stamping.</li>
+            </ul>
 
+            <p>
+              Avoid delays and approach your visa interview with total confidence.
+            </p>
 
-
-          <p>The USA visa appointment and USA visa interview are crucial stages. Many applicants feel unsure about commonly asked US visa interview questions, interview strategy, and required documents. Our personalized US visa interview mock sessions and one-on-one coaching help you attend with confidence. We also guide you on USA visa processing time 2025, USA tourist visa fees, and next steps after your appointment.</p>
-
-          <p>Whether you're applying for the first time or seeking guidance after a previous refusal, we help you understand USA tourist visa eligibility and provide strategies to avoid common US visa rejection reasons. Our proven USA visa approval tips ensure your profile is presented in the best possible way.</p>
-
-          <h2 className={styles.subTitle}>How Global Visa Internationals Helps You</h2>
-
-          <p>Global Visa Internationals (GVI) takes the stress out of your process by serving as your reliable USA visa consultant near me. Whether you're applying for a B1, B2, or B1/B2 visa, our expert team manages everything with precision.</p>
-
-          <h2 className={styles.subTitle}>Complete, End-to-End USA Visa Assistance</h2>
-
-          <h4 className={styles.subTitle}>A-to-Z Documentation Handling</h4>
-          <ul>
-            <li>We collect, prepare, and thoroughly verify all your required USA visa document checklist items.</li>
-            <li>Your documents are organized exactly as per US Embassy standards by our USA visa experts.</li>
-          </ul>
-
-          <h4 className={styles.subTitle}>Accurate DS-160 Form Filling</h4>
-          <ul>
-            <li>Our experts complete your DS-160 form with precision, ensuring all information is accurate and consistent.</li>
-            <li>This minimizes errors that could lead to delays or rejections for your US visitor visa application.</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>Tailored Case File Based on Your Profile</h3>
-          <p>Every traveler is unique — your case file should be too. We act as your personal USA visa agency to build a plan based on:</p>
-          <ul>
-            <li>Travel history and USA visa renewal India status</li>
-            <li>Personal background and financial profile</li>
-            <li>Purpose of travel (Business/Tourism)</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>Professional Drafting Support</h3>
-          We prepare all essential drafts including:
-          <ul>
-            <li>Expert cover letter for the US Embassy</li>
-            <li>NOC / Leave approval letter samples</li>
-            <li>B2 visa invitation letter formats</li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Global Visa Internationals: Expert Support for All USA Visa Categories</h2>
-
-          <h4 className={styles.subTitle}>B1 Visa — Business Purpose</h4>
-          For clients needing USA business visa agents for meetings, conferences, and training travel.
-          <h4 className={styles.subTitle}>B2 Visa — Tourism & Family Visits</h4>
-          Holiday trips, tourism, and visiting friends and family.
-          <h4 className={styles.subTitle}>B1/B2 Visa — Combined Travel</h4>
-          For travelers who need both tourism + business flexibility.
-
-          <h2 className={styles.subTitle}>Interview & Biometrics Preparation</h2>
-          <ul>
-            <li>Mock interview sessions to help you answer confidently</li>
-            <li>Guidance on US visa appointment booking and rescheduling</li>
-            <li>Step-by-step support for US visa biometric appointment procedures at VAC</li>
-          </ul>
-
-
-
-          <h2 className={styles.subTitle}>Avoid USA Visa Rejection</h2>
-          <p>Our specialists review your case deeply to:</p>
-          <ul>
-            <li>Identify potential red flags causing US visa refusal</li>
-            <li>Strengthen weak areas in your USA tourist visa for Indians application</li>
-            <li>Strategize your approval approach</li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Global Visa Internationals will make a Simple and Hassle-Free Process for You</h2>
-          <ol>
-            <li>Share your basic documents with your US visa agent</li>
-            <li>GVI prepares and finalizes your entire case</li>
-            <li>You visit VAC for biometrics & attend the interview</li>
-            <li>We handle tracking, updates, and final guidance</li>
-          </ol>
-
-          <div className={styles.ctaBox}>
-            <h3 className={styles.subTitle}>Begin Your American Journey Today!</h3>
-            <p>Let Global Visa Internationals handle the complex visa process while you focus on planning your trip. Trust the best US visa consultancy for personalized guidance.</p>
-            <a href="tel:+917022213466" className={styles.callButton}> 📞 Get Free Eligibility Check</a>
+            <a
+              href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026"
+              className={styles.callButton}
+            >
+              📞 Check My Visa Eligibility for 2026 (Free)
+            </a>
           </div>
 
-          <h2 className={styles.subTitle}>Top Tourist Attractions in the USA</h2>
-          <p>With a properly issued Tourist Visa, experience the perfect blend of natural beauty and modern marvels. Don't miss these destinations:</p>
+          <h2 className={styles.subTitle}>
+            Comprehensive USA B1/B2 Visa Services in India
+          </h2>
+
+          <h3 className={styles.subTitle}>1. Flawless Documentation & DS-160 Filing</h3>
           <ul>
-            <li>Statue of Liberty National Monument, New York</li>
-            <li>Grand Canyon National Park, Arizona</li>
-            <li>Golden Gate Bridge, San Francisco</li>
-            <li>Walt Disney World Resort, Orlando</li>
-            <li>Las Vegas Strip, Nevada</li>
-            <li>Yellowstone & Yosemite National Parks</li>
-            <li>Niagara Falls State Park</li>
+            <li><strong className={styles.strong}>Financial Review:</strong> We analyze your ITRs, liquid assets, and property docs to prove financial stability.</li>
+            <li><strong className={styles.strong}>DS-160 Mastery:</strong> We file your application with 100% accuracy. A single error here is the #1 cause of rejection in 2026.</li>
+            <li><strong className={styles.strong}>Sponsor Support:</strong> Guidance on Affidavit of Support (Form I-134) for those visiting family.</li>
           </ul>
 
-          <h2 className={styles.subTitle}>Compelling Reasons to Apply for a USA Tourist Visa</h2>
-          <ol>
-            <li><strong className={styles.strong}>Comprehensive Visa Guidance:</strong> Our specialized USA Tourist Visa consultants provide detailed support.</li>
-            <li><strong className={styles.strong}>Diverse Attractions:</strong> From national parks to modern architectural marvels.</li>
-            <li><strong className={styles.strong}>Unforgettable Culinary Experiences:</strong> Taste authentic regional specialties.</li>
-            <li><strong className={styles.strong}>World-Class Entertainment:</strong> Broadway, festivals, and sporting events.</li>
-          </ol>
-
-          <p>Require professional assistance? Our dedicated team at Global Visa Internationals offers complete USA Tourist Visa assistance — encompassing everything from document collection to US visa interview preparation.</p>
-
-          <div className={styles.ctaBox}>
-            <h3 className={styles.subTitle}>Your American Dream Starts Here</h3>
-            <p>Don't let visa complexities deter you. Our experienced US visa consultants have helped thousands of travelers successfully obtain their visas.</p>
-            Start Your Visa Application Today
-          </div>
-
-          <p>Get in touch today with a trusted <span style={{ color: '#c00' }}>USA Tourist Visa consultant</span> from Global Visa Internationals!</p>
-
-          <h2 className={styles.Title}>USA Tourist Visa - Simplified Application Process & Expert Assistance from India</h2>
-          <p>Our professional US visa consultants at Global Visa Internationals provide comprehensive end-to-end USA Tourist Visa assistance specifically designed to make the entire process straightforward for Indian applicants.</p>
-
-          <div className={styles.highlightSection}>
-            <h3 className={styles.subTitle}>Types of USA Tourist Visas Available for Indian Citizens</h3>
-            <div className={styles.highlightGrid}>
-              <div className={styles.highlightItem}>
-                <span className={styles.countryName}>B2 Tourist Visa (Standard)</span>
-                <p className={styles.countryInfo}>10 Years (typically)</p>
-                <p className={styles.countryInfo}>Up to 6 months per entry</p>
-              </div>
-              <div className={styles.highlightItem}>
-                <span className={styles.countryName}>B1 Business Visa (Standard)</span>
-                <p className={styles.countryInfo}>10 Years (typically)</p>
-                <p className={styles.countryInfo}>Ideal for business conferences</p>
-              </div>
-            </div>
-          </div>
-
-          <h2 className={styles.subTitle}>U.S. Tourist Visa (B1/B2) Documents Checklist for Indian Applicants</h2>
-          <p>The USA visa document checklist is critical. Unlike Schengen, the U.S. process is interview-based. You must convince the officer you have no intention of immigrating.</p>
-
-
-
-          <h3 className={styles.subTitle}>1. Mandatory Documents for the Interview</h3>
+          <h3 className={styles.subTitle}>2. Elite Interview Preparation</h3>
           <ul>
-            <li><b className={styles.strong}>Valid Passport</b>: Valid for at least 6 months beyond intended stay.</li>
-            <li><b className={styles.strong}>USA Visa Application Confirmation</b>: The DS-160 confirmation page.</li>
-            <li><b className={styles.strong}>Visa Application Fee Receipt</b>: Proof of payment for the MRV Fee.</li>
-            <li><b className={styles.strong}>Visa Interview Appointment Letter</b>: Essential for entry into the embassy.</li>
+            <li><strong className={styles.strong}>Realistic Mocks:</strong> We simulate the exact environment of the US Consulate.</li>
+            <li><strong className={styles.strong}>2026 Question Bank:</strong> Access to the latest questions being asked by Visa Officers right now.</li>
+            <li><strong className={styles.strong}>Ties to Home:</strong> We teach you how to effectively prove you will return to India (the key to approval).</li>
           </ul>
 
-          <h3 className={styles.subTitle}>2. Supporting Financial & Professional Documents</h3>
-          <ul>
-            <li><b className={styles.strong}>Proof of Funds</b>: Bank statements (last 6 months), ITRs (last 3 years), and liquid assets.</li>
-            <li><b className={styles.strong}>Employment Proof</b>: Letter from employer or business registration for self-employed applicants.</li>
-            <li><b className={styles.strong}>Proof of Strong Ties</b>: Property ownership, family ties, or stable job evidence to prevent US visa rejection.</li>
-          </ul>
+          <h2 className={styles.subTitle}>
+            USA Visa Categories We Handle
+          </h2>
 
-          <h2 className={styles.subTitle}>U.S. Tourist Visa Fees (India 2025)</h2>
+          <h4 className={styles.subTitle}>B1 Visa (Business)</h4>
+          <p>For attending conferences, client meetings, or short-term training in the US.</p>
+
+          <h4 className={styles.subTitle}>B2 Visa (Tourism & Medical)</h4>
+          <p>For vacations, visiting relatives, or seeking specialized medical treatment.</p>
+
+          <h2 className={styles.subTitle}>
+            USA Visa Fees for Indian Applicants (Updated 2026)
+          </h2>
+
+          <p><em>Note: Fees are mandated by the US Dept of State and depend on the current consular exchange rate.</em></p>
+
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Fee Type</th>
-                <th>Current Cost (INR)</th>
+                <th>Fee Component</th>
+                <th>Amount (INR)*</th>
                 <th>USD Equivalent</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>MRV Application Fee (Standard)</td>
-                <td>₹15,200</td>
+                <td><strong className={styles.strong}>MRV Fee (Application Fee)</strong></td>
+                <td>₹17,000 (Approx)</td>
                 <td>$185</td>
               </tr>
               <tr>
-                <td>VFS Service Charge</td>
-                <td>₹1,320</td>
-                <td>$16</td>
+                <td><strong className={styles.strong}>Biometrics Service</strong></td>
+                <td>Included</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong className={styles.strong}>Consultant Service Fee</strong></td>
+                <td><a href="https://wa.me/917022213466">Ask for Quote</a></td>
+                <td>-</td>
               </tr>
             </tbody>
           </table>
-          <p className={styles.note}>Note: USA visa fees are subject to change based on exchange rates.</p>
 
-          <h2 className={styles.subTitle}>Common Reasons for U.S. Visa Rejection & How to Address Them</h2>
-          <p>Most US visa refused cases fall under Section 214(b). Here is how our USA visa agents help you avoid this:</p>
+          <p className={styles.note}>
+            *Exchange rates fluctuate daily. The MRV fee is non-refundable and paid directly to the US portal.
+          </p>
+
+          <h2 className={styles.subTitle}>
+            Why Choose Global Visa Internationals?
+          </h2>
+
           <ul>
-            <li><b className={styles.strong}>Insufficient Proof of Funds:</b> We structure your financial documents to show stability.</li>
-            <li><b className={styles.strong}>Inconsistent Information:</b> We ensure your DS-160 matches your interview answers.</li>
-            <li><b className={styles.strong}>Lack of Interview Preparation:</b> Our US visa interview mock sessions prepare you for tough questions.</li>
+            <li><strong className={styles.strong}>Bangalore's Best:</strong> Centrally located on Brigade Road, serving all of Karnataka.</li>
+            <li><strong className={styles.strong}>Transparency First:</strong> No hidden costs. Clear roadmap from Day 1.</li>
+            <li><strong className={styles.strong}>Proven Success:</strong> High approval rates for complex cases, senior citizens, and solo female travelers.</li>
+            <li><strong className={styles.strong}>Personal Case Manager:</strong> Dedicated support via WhatsApp and phone throughout the process.</li>
           </ul>
 
-          <div className={styles.ctaBox}>
-            <h3 className={styles.subTitle}>Confused About Visa Requirements?</h3>
-            <p>Our experts provide clear, personalized guidance on all documentation needed for your specific situation.</p>
-            Get Personalized Document Checklist
-          </div>
+          {/* FAQ Section for Rich Snippets / Google 'People Also Ask' */}
+          <h2 className={styles.subTitle}>
+            Frequently Asked Questions (2026 Guide)
+          </h2>
 
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
-          <ul>
-            <li>Expert USA visa agent in Bangalore with global reach.</li>
-            <li>Completely transparent pricing with no hidden charges.</li>
-            <li>Thorough US visa interview preparation.</li>
-            <li>High success rate with extensive experience in US visa assistance.</li>
-          </ul>
+          <h4 className={styles.subTitle}>What is the current US Visa appointment wait time in Bangalore?</h4>
+          <p>As of early 2026, wait times can still exceed 6-8 months. However, GVI specializes in securing earlier slots through our dedicated monitoring team.</p>
 
-          <h3 className={styles.subTitle}>Let Global Visa Internationals Be Your Trusted US Visa Consultant</h3>
-          <p>Dreaming of exploring America? At Global Visa Internationals, we specialize in providing exceptional USA Tourist Visa assistance with an impressive success rate.</p>
+          <h4 className={styles.subTitle}>Can you help if my US visa was rejected recently?</h4>
+          <p>Yes. We specialize in refusal cases. We analyze your previous DS-160 and interview transcript to fix gaps before re-applying.</p>
 
-          <b className={styles.subTitle}>Our Comprehensive US Visa Services Include:</b>
-          <ul>
-            <li>One-on-one guidance from a USA visa expert.</li>
-            <li>Expert USA visa document checklist creation.</li>
-            <li>Professional DS-160 form filling services.</li>
-            <li>Continuous support for US visa slot booking.</li>
-          </ul>
+          <address className={styles.address}>
+            <strong className={styles.strong}>Global Visa Internationals (GVI)</strong><br />
+            GF-9, Business Point, 137 Brigade Road,<br />
+            Bangalore – 560025, Karnataka<br />
+            <br />
+            <strong className={styles.strong}>Start Your American Journey Today:</strong><br />
+            <a href="https://wa.me/917022213466" className={styles.callButton}>
+              📞 Click to Chat on WhatsApp
+            </a><br />
+            Email: <a href="mailto:operations@globalvisainternationals.com">
+              operations@globalvisainternationals.com
+            </a>
+          </address>
 
-          <p className={styles.note}>Avoid last-minute stress. Contact Global Visa Internationals today and let us expertly handle your USA Tourist Visa process from beginning to end.</p>
+          <div class="faq-container">
 
-          <div className={styles.ctaBox}>
-            <h3 className={styles.subTitle}>Limited Availability for Personalized Consultation</h3>
-            <p>Our visa experts have limited capacity. Reserve your spot today for comprehensive US visa guidance.</p>
-            Reserve Your Consultation Now
+            <h3 className={styles.subTitle}>How do I get a USA visa?</h3>
+            <p>To obtain a USA visa, you must first identify the correct visa type (e.g., Tourist B1/B2 or Student F1). You then need to complete the DS-160 form online, pay the application fee, and schedule an interview at the nearest US Embassy or Consulate.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> We make the process simple and error-free. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>How do I apply for a USA visa from the UK?</h3>
+            <p>Residents in the UK must complete the DS-160 form, pay the fee via the official appointment service, and attend an in-person interview at the US Embassy in London or the Consulate General in Belfast.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Applying from the UK? We can guide you. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>What does a USA visa look like?</h3>
+            <p>A USA visa is a foil sticker placed inside your passport. It features your photograph on the left, your biographical data, the visa class (e.g., B1/B2), and a red visa number printed on the bottom right.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Ensure your visa details are correct. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>How is the USA visa situation in Nigeria?</h3>
+            <p>Demand for US visas in Nigeria is currently very high. Appointment wait times for visitor visas in Abuja and Lagos can be lengthy. It is highly recommended to apply well in advance of your travel date.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> We monitor appointment slots daily. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>How do I check my USA visa status?</h3>
+            <p>You can check your status on the CEAC (Consular Electronic Application Center) website using the "Check My Visa Application Status" tool. You will need your DS-160 barcode number and interview location.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Let us track your application for you. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Where do I get a USA visa?</h3>
+            <p>You must apply and attend an interview at the US Embassy or Consulate located in your country of residence. You cannot get a visa upon arrival at a US airport.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Find the right application center with Global Visa Internationals. Contact us at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Which USA visa is the easiest to get?</h3>
+            <p>The B1/B2 Tourist Visa is the most common visa type. However, "ease" of approval depends entirely on your ability to prove strong financial and social ties to your home country.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Maximize your approval chances with our guidance. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Which USA visa do I need?</h3>
+            <p>The type of visa depends on your purpose of travel:</p>
+            <ul>
+              <li><strong className={styles.strong}>Tourism/Medical:</strong> B2 Visa</li>
+              <li><strong className={styles.strong}>Business Meetings:</strong> B1 Visa</li>
+              <li><strong className={styles.strong}>Study:</strong> F1 or M1 Visa</li>
+              <li><strong className={styles.strong}>Work:</strong> H1B or L1 Visa (Requires employer sponsorship)</li>
+            </ul>
+            <p><strong className={styles.strong}>Expert Help:</strong> Unsure which category fits you? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>When is US visa stamping in USA available?</h3>
+            <p>Domestic visa renewal (stamping inside the USA) was a pilot program that ended in early 2024. Currently, most non-immigrants must leave the USA and visit a US Consulate abroad to get a new visa stamp in their passport.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> For the latest renewal updates, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Where is the USA visa number?</h3>
+            <p>The visa number is the Red Number (usually 8 characters) printed on the bottom right-hand side of the visa foil in your passport.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Questions about your documents? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Can USA visa holders work in Saudi Arabia?</h3>
+            <p>No. A USA visitor visa does not grant you the right to work in Saudi Arabia. You must obtain a Saudi Work Visa sponsored by a local employer.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Need a work visa? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Can USA visa holders travel to Saudi Arabia (E-Visa)?</h3>
+            <p>Yes. Holders of a valid USA tourist or business visa can often obtain a Saudi E-Visa or Visa on Arrival, provided the US visa is still valid and has been used at least once to enter the USA.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Plan your multi-country itinerary with Global Visa Internationals. Contact us at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>How do I apply for a USA tourist visa from India online?</h3>
+            <p>To apply online, you must follow these steps:</p>
+            <ol>
+              <li>Complete the DS-160 form on the CEAC website.</li>
+              <li>Create a profile on the CGI Federal/US Travel Docs system.</li>
+              <li>Pay the visa application fee.</li>
+              <li>Schedule two appointments: one for biometrics (VAC) and one for the interview.</li>
+            </ol>
+            <p><strong className={styles.strong}>Expert Help:</strong> Avoid errors and delays. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Which companies offer the fastest USA tourist visa processing services in India?</h3>
+            <p>Processing times are set by the Embassy, but experienced consultancies can speed up your application preparation and monitor slots for cancellations to get you an earlier interview.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> For the fastest professional assistance, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>What are the fees for a USA tourist visa application through official channels?</h3>
+            <p>The application fee for a USA Visitor Visa (B1/B2) is $185 USD (payable in INR at the consular exchange rate). This fee is non-refundable.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> For fee payment guidance, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Can I book a USA tourist visa appointment through a mobile app?</h3>
+            <p>There is no official government mobile app for booking. However, the official website is mobile-responsive.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> Let us manage the booking portal for you. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>What travel agencies provide end-to-end USA tourist visa assistance in India?</h3>
+            <p>For comprehensive support—including form filling, document verification, and mock interviews—specialized visa firms are recommended over general travel agents.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> For end-to-end premium support, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Which courier services are recommended for sending USA tourist visa documents?</h3>
+            <p>The US Embassy in India officially partners with Blue Dart for document submission (Dropbox) and passport delivery.</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> For logistics support, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>What documents do I need to submit for a USA tourist visa interview in India?</h3>
+            <p>You generally need the following documents:</p>
+            <ul>
+              <li>Original Passport (Current and Old)</li>
+              <li>DS-160 Confirmation Page</li>
+              <li>Appointment Confirmation Letter</li>
+              <li>Financial Proofs (Bank statements, Tax returns/ITR)</li>
+              <li>Employment Proof and Leave Letter</li>
+            </ul>
+            <p><strong className={styles.strong}>Expert Help:</strong> Get a checklist tailored to your profile. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Are there any premium services to expedite my USA tourist visa interview scheduling?</h3>
+            <p>The US Consulate does not sell "Premium" or "VIP" slots. Earlier slots only become available through cancellations or emergency requests (medical/humanitarian only).</p>
+            <p><strong className={styles.strong}>Expert Help:</strong> We monitor the system daily for earlier slots. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
+            <h3 className={styles.subTitle}>Where can I find authorized visa application centers for USA tourist visas near me?</h3>
+            <p>In India, the Visa Application Centers (VAC) and Consulates are located in:</p>
+            <ul>
+              <li>New Delhi</li>
+              <li>Mumbai</li>
+              <li>Chennai</li>
+              <li>Hyderabad</li>
+              <li>Kolkata</li>
+            </ul>
+            <p><strong className={styles.strong}>Expert Help:</strong> Need help choosing a center? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
+
           </div>
         </div>
+
+
         <div className={styles.formSection}>
 
           <VisaForm />
