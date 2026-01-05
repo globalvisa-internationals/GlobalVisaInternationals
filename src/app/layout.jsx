@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
           src="https://news.google.com/swg/js/v1/swg-basic.js"
           strategy="afterInteractive"
         />
-
+        <meta name="google-site-verification" content="cA7e-9rRrXoM1WAbLBAdjD1zjqDGM9OHghU_z2bflGY" />
         <Script id="swg-basic-init" strategy="afterInteractive">
           {`
             (self.SWG_BASIC = self.SWG_BASIC || []).push(basicSubscriptions => {
