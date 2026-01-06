@@ -547,7 +547,7 @@ export default function Home() {
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
-      "@id": "https://www.globalvisainternationals.com/#breadcrumb"
+      "@id": "https://www.globalvisainternationals.com/"
     },
     inLanguage: "en-IN",
     datePublished: "2010-01-01",
