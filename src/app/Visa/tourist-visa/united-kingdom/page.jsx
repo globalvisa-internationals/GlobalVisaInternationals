@@ -282,6 +282,7 @@ export default function UKTouristVisa() {
       },
 
       {
+        "@context": "https://schema.org",
         "@type": "FAQPage",
         "@id": "https://www.globalvisainternationals.com/#faqpage",
         "mainEntity": [
@@ -290,7 +291,7 @@ export default function UKTouristVisa() {
             "name": "How long does a UK tourist visa take in India?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Standard UK visa processing takes 15 working days. Priority options available."
+              "text": "Standard UK visa processing in India takes approximately 15 working days (3 weeks) from the date of your biometric appointment. Priority services (5 working days) and Super Priority services (next working day) are available for an additional fee."
             }
           },
           {
@@ -298,8 +299,223 @@ export default function UKTouristVisa() {
             "name": "What documents are required for a UK tourist visa?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text":
-                "Passport, bank statements, employment proof, travel itinerary, financial documents."
+              "text": "You typically need a valid passport, proof of earnings (payslips/employment letter), bank statements (last 6 months), travel itinerary, and proof of accommodation. You must also prove you will leave the UK at the end of your visit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how to apply uk tourist visa from india",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To apply from India, fill out the application online at GOV.UK, pay the visa fee, and book a biometric appointment at a VFS Global centre in your city (e.g., Delhi, Mumbai, Bangalore). You will submit your passport and fingerprints during this appointment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how much uk tourist visa cost",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As of the latest fee update, a Standard Visitor Visa (up to 6 months) costs £127. Long-term visas (2, 5, or 10 years) cost significantly more, ranging from £475 to over £1,000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how long uk tourist visa is valid",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard UK tourist visa is valid for 6 months. You can stay in the UK for up to 6 months per visit. Long-term visas are valid for 2, 5, or 10 years, but the maximum stay per visit remains 6 months."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how to uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The process involves checking your eligibility, completing the online form on the UK Government website, paying the fee, and attending a biometric appointment at a visa application centre to provide your fingerprints and photo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how apply uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You must apply online via the official GOV.UK website. Select 'Standard Visitor visa', complete the form, pay the fee, and then schedule an appointment to submit your biometrics and passport."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how to get uk tourist visa from india",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Indian citizens must apply online, pay the fee in INR (approx. ₹16,000 depending on exchange rates), and visit a VFS Global centre for biometrics. Successful applicants will receive their passport with the visa vignette via courier or collection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how long does uk tourist visa take",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The standard processing time is 3 weeks (15 working days). However, during peak travel seasons, it may take longer. Priority services can speed this up to 5 days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how much is uk tourist visa fee in nigeria",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The standard fee is £127. Applicants in Nigeria pay the equivalent in USD or local currency at the application centre, subject to current exchange rates set by the Home Office."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how to apply uk tourist visa from canada",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Residents in Canada must apply online through GOV.UK and attend a biometric appointment at a VFS Global centre (available in cities like Toronto, Vancouver, Ottawa, and Edmonton). You may need to mail your passport to the processing hub after your appointment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how much uk tourist visa cost in india",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Standard Visitor Visa fee is £127. In Indian Rupees, this is approximately ₹16,024 (subject to consular exchange rate fluctuations). You must pay this online during the application."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how long uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Standard Visitor visa allows a stay of up to 6 months. It is usually a multi-entry visa, meaning you can leave and re-enter within that valid period."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how get uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To get the visa, you must prove you are a genuine visitor. Submit a complete online application, pay the fee, and provide documents showing strong ties to your home country (job, family, assets) to ensure approval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how to apply uk tourist visa from australia",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apply online at GOV.UK. Afterward, you must attend a biometric appointment at a VFS Global centre in Australia (e.g., Sydney, Melbourne, Perth, Brisbane) to submit your fingerprints and passport."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "what documents do you need for uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Essential documents include a valid passport, proof of sufficient funds (bank statements), details of where you will stay, and proof of ties to your home country (employment letter or business registration)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "what is uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The UK Tourist Visa (officially the Standard Visitor Visa) is an official document that allows foreign nationals to visit the UK for tourism, business meetings, medical treatment, or short-term study for up to 6 months."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "what is uk tourist visa fee",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The fee for a Standard Visitor visa is £127 for a short-term stay (up to 6 months). Fees are higher for long-term visas valid for 2, 5, or 10 years."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "what does a uk tourist visa cost",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard 6-month tourist visa costs £127. You may also incur extra costs for biometric appointments, document scanning services, or priority processing if you choose them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "can uk tourist visa be extended",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Generally, no. You cannot extend a Standard Visitor visa beyond 6 months unless you are receiving private medical treatment or are an academic meeting specific eligibility criteria."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "can uk tourist visa travel to ireland",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, in many cases. Under the British-Irish Visa Scheme (BIVS) (for Indian and Chinese nationals) or the Short Stay Visa Waiver Programme, you can travel to Ireland using a valid UK tourist visa, provided you enter the UK first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "can uk tourist visa convert to work permit",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You cannot switch from a Standard Visitor visa to a Skilled Worker visa or any other work permit while inside the UK. You must leave the UK and apply for a work visa from your home country."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "can uk tourist visa enter ireland",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Holders of a UK tourist visa can often enter Ireland without a separate Irish visa if they have first cleared immigration in the UK, thanks to the Short Stay Visa Waiver Programme."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "can uk tourist visa work",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You are strictly prohibited from doing paid or unpaid work for a UK company or as a self-employed person while on a tourist visa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "how long are uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The standard visa is issued for 6 months. Long-term visas can be issued for 2, 5, or 10 years, allowing multiple visits of up to 6 months each."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "when to apply uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can apply for a visa up to 3 months before your intended travel date. It is recommended to apply at least 6 weeks in advance to account for processing times."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "where to apply uk tourist visa",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You must fill out the application online at the UK Government website (GOV.UK). After submitting the form, you will attend a physical appointment at a visa application centre (VAC) in your country."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "uk tourist visa where can i travel",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A UK tourist visa grants entry to England, Scotland, Wales, and Northern Ireland. It also allows travel to Ireland (Republic of Ireland) under specific waiver programs if you enter the UK first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "uk tourist visa where can you go",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can visit anywhere within the United Kingdom. Additionally, you may visit the Republic of Ireland if eligible under the BIVS or Visa Waiver Programme. It does not grant access to the Schengen Area (Europe)."
             }
           }
         ]
@@ -555,25 +771,7 @@ export default function UKTouristVisa() {
 
           <h2 className={styles.subTitle}>Transparent Pricing</h2>
           <p>Choose the right UK visa assistance plan for your needs:</p>
-          {/* <div className={styles.pricingContainer}>
-            <div className={styles.pricingCard}>
-              <h3 className={styles.planTitle}>Basic</h3>
-              <p className={styles.planPrice}>₹4,999</p>
-              <ul className={styles.planFeatures}>
-                <li>Checklist according applicant Eligiblity</li>
-                <li>Document review before subliting.</li>
-              </ul>
-            </div>
-            <div className={`${styles.pricingCard} ${styles.highlighted}`}>
-              <h3 className={styles.planTitle}>Standard</h3>
-              <p className={styles.planPrice}>₹8,999</p>
-              <ul className={styles.planFeatures}>
-                <li>End-to-end application assistance</li>
-                <li>Filing Application</li>
-                <li>Appointment booking</li>
-              </ul>
-            </div>
-          </div> */}
+
           <address className={styles.address}>
             <li>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore – 560025, Karnataka</li>
             <a href="tel:+917022213466" className={styles.callButton}>  📞 Get Free Eligibility Check</a>
@@ -597,6 +795,170 @@ export default function UKTouristVisa() {
             👉 <b className={styles.strong}>Start your UK visa application today</b> with Global Visa Internationals and travel to Europe with confidence.
             <br />
             <a href="/contact" className={styles.ctaButton}>Get a free consultation today!</a></p>
+
+          <h3 className={styles.subTitle}>How long does a UK tourist visa take in India?</h3>
+          <p>Standard UK visa processing in India takes approximately 15 working days (3 weeks) from the date of your biometric appointment. Priority services are available for faster processing:</p>
+          <ul>
+            <li><strong className={styles.strong}>Standard:</strong> 15 working days</li>
+            <li><strong className={styles.strong}>Priority:</strong> 5 working days</li>
+            <li><strong className={styles.strong}>Super Priority:</strong> Next working day</li>
+          </ul>
+
+          <h3 className={styles.subTitle}>What documents are required for a UK tourist visa?</h3>
+          <p>To successfully apply, you typically need to provide the following documents:</p>
+          <ul>
+            <li>Valid passport with at least one blank page.</li>
+            <li>Proof of earnings (e.g., payslips, employment letter).</li>
+            <li>Bank statements (usually the last 6 months) showing sufficient funds.</li>
+            <li>Travel itinerary and accommodation details.</li>
+            <li>Proof that you will leave the UK (e.g., return ticket, ties to home country).</li>
+          </ul>
+
+          <h3 className={styles.subTitle}>how to apply uk tourist visa from india</h3>
+          <p>To apply for a UK tourist visa from India, follow these steps:</p>
+          <ol>
+            <li>Complete the online application form on the GOV.UK website.</li>
+            <li>Pay the visa fee online.</li>
+            <li>Book a biometric appointment at a VFS Global centre (located in major cities like Delhi, Mumbai, Bangalore).</li>
+            <li>Attend the appointment to submit your passport and fingerprints.</li>
+          </ol>
+
+          <h3 className={styles.subTitle}>how much uk tourist visa cost</h3>
+          <p>As of the latest fee update, the costs are:</p>
+          <ul>
+            <li><strong className={styles.strong} >Standard Visitor Visa (up to 6 months):</strong> £127</li>
+            <li><strong className={styles.strong} >Long-term Visitor Visa (2 years):</strong> £475</li>
+            <li><strong className={styles.strong} >Long-term Visitor Visa (5 years):</strong> £854</li>
+            <li><strong className={styles.strong} >Long-term Visitor Visa (10 years):</strong> £1,070</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >how long uk tourist visa is valid</h3>
+          <p>A standard UK tourist visa is valid for 6 months. While long-term visas are valid for 2, 5, or 10 years, the maximum stay allowed per visit is strictly 6 months.</p>
+
+          <h3 className={styles.subTitle} >how to uk tourist visa</h3>
+          <p>The general process to obtain a UK tourist visa is:</p>
+          <ol>
+            <li>Check your eligibility online.</li>
+            <li>Fill out the "Standard Visitor" application on GOV.UK.</li>
+            <li>Pay the application fee.</li>
+            <li>Schedule and attend a biometric appointment at a visa application centre.</li>
+          </ol>
+
+          <h3 className={styles.subTitle} >how apply uk tourist visa</h3>
+          <p>You must apply online via the official UK Government website. Select 'Standard Visitor visa', complete the form, pay the required fee, and then schedule an appointment to submit your biometrics and passport.</p>
+
+          <h3 className={styles.subTitle} >how to get uk tourist visa from india</h3>
+          <p>Indian citizens must apply online and pay the fee in INR (approximately ₹16,000, depending on exchange rates). After applying, you must visit a VFS Global centre to provide your biometrics. Your passport will be returned to you with the visa vignette via courier or collection once approved.</p>
+
+          <h3 className={styles.subTitle} >how long does uk tourist visa take</h3>
+          <p>The standard processing time is 3 weeks (15 working days). However, times can vary:</p>
+          <ul>
+            <li><strong className={styles.strong} >Peak Season:</strong> May take longer than 3 weeks.</li>
+            <li><strong className={styles.strong} >Priority Service:</strong> Approx. 5 working days.</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >how much is uk tourist visa fee in nigeria</h3>
+          <p>The standard fee is £127. Applicants in Nigeria must pay the equivalent in USD or local currency at the application centre, subject to the current exchange rates set by the Home Office.</p>
+
+          <h3 className={styles.subTitle} >how to apply uk tourist visa from canada</h3>
+          <p>Residents in Canada must:</p>
+          <ol>
+            <li>Apply online through GOV.UK.</li>
+            <li>Pay the fee.</li>
+            <li>Attend a biometric appointment at a VFS Global centre (available in Toronto, Vancouver, Ottawa, Edmonton, etc.).</li>
+            <li>Mail your passport to the processing hub if required after your appointment.</li>
+          </ol>
+
+          <h3 className={styles.subTitle} >how much uk tourist visa cost in india</h3>
+          <p>The Standard Visitor Visa fee is £127. In Indian Rupees, this is approximately ₹16,024 (subject to consular exchange rate fluctuations). This fee must be paid online during the application process.</p>
+
+          <h3 className={styles.subTitle} >how long uk tourist visa</h3>
+          <p>The Standard Visitor visa allows a stay of up to 6 months per visit. It is usually a multi-entry visa, meaning you can leave and re-enter the UK within that valid period.</p>
+
+          <h3 className={styles.subTitle} >how get uk tourist visa</h3>
+          <p>To get the visa, you must prove you are a genuine visitor. You should submit:</p>
+          <ul>
+            <li>A complete online application.</li>
+            <li>Payment of the visa fee.</li>
+            <li>Evidence of strong ties to your home country (job, family, assets).</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >how to apply uk tourist visa from australia</h3>
+          <p>Residents in Australia should apply online at GOV.UK. Afterward, you must attend a biometric appointment at a VFS Global centre in Australia (e.g., Sydney, Melbourne, Perth, Brisbane) to submit your fingerprints and passport.</p>
+
+          <h3 className={styles.subTitle} >what documents do you need for uk tourist visa</h3>
+          <p>Essential documents include:</p>
+          <ul>
+            <li>A valid passport.</li>
+            <li>Proof of sufficient funds (bank statements).</li>
+            <li>Details of accommodation/where you will stay.</li>
+            <li>Proof of ties to your home country (employment letter or business registration).</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >what is uk tourist visa</h3>
+          <p>The UK Tourist Visa (officially the Standard Visitor Visa) is an official document that allows foreign nationals to visit the UK for:</p>
+          <ul>
+            <li>Tourism and holidays.</li>
+            <li>Visiting family or friends.</li>
+            <li>Business meetings.</li>
+            <li>Short-term study (up to 6 months).</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >what is uk tourist visa fee</h3>
+          <p>The fee for a Standard Visitor visa is £127 for a short-term stay (up to 6 months). Fees are higher for long-term visas valid for 2, 5, or 10 years.</p>
+
+          <h3 className={styles.subTitle} >what does a uk tourist visa cost</h3>
+          <p>A standard 6-month tourist visa costs £127. You may also incur extra costs for:</p>
+          <ul>
+            <li>Biometric appointments (at some locations).</li>
+            <li>Document scanning services.</li>
+            <li>Priority processing services.</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >can uk tourist visa be extended</h3>
+          <p>Generally, no. You cannot extend a Standard Visitor visa beyond 6 months unless you are receiving private medical treatment or are an academic meeting specific eligibility criteria.</p>
+
+          <h3 className={styles.subTitle} >can uk tourist visa travel to ireland</h3>
+          <p>Yes, in many cases. You can travel to Ireland using a valid UK tourist visa if you are eligible under:</p>
+          <ul>
+            <li>The British-Irish Visa Scheme (BIVS) (for Indian and Chinese nationals).</li>
+            <li>The Short Stay Visa Waiver Programme (provided you enter the UK first).</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >can uk tourist visa convert to work permit</h3>
+          <p>No. You cannot switch from a Standard Visitor visa to a Skilled Worker visa or any other work permit while inside the UK. You must leave the UK and apply for a work visa from your home country.</p>
+
+          <h3 className={styles.subTitle} >can uk tourist visa enter ireland</h3>
+          <p>Holders of a UK tourist visa can often enter Ireland without a separate Irish visa if they have first cleared immigration in the UK, thanks to the Short Stay Visa Waiver Programme.</p>
+
+          <h3 className={styles.subTitle} >can uk tourist visa work</h3>
+          <p>No. You are strictly prohibited from doing paid or unpaid work for a UK company or as a self-employed person while on a tourist visa.</p>
+
+          <h3 className={styles.subTitle} >how long are uk tourist visa</h3>
+          <p>The standard visa is issued for 6 months. Long-term visas can be issued for longer durations, allowing multiple visits:</p>
+          <ul>
+            <li>2 Years</li>
+            <li>5 Years</li>
+            <li>10 Years</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >when to apply uk tourist visa</h3>
+          <p>You can apply for a visa up to 3 months before your intended travel date. It is recommended to apply at least 6 weeks in advance to account for standard processing times.</p>
+
+          <h3 className={styles.subTitle} >where to apply uk tourist visa</h3>
+          <p>You must start the process online at the UK Government website (GOV.UK). After submitting the form, you will attend a physical appointment at a visa application centre (VAC) in your country of residence.</p>
+
+          <h3 className={styles.subTitle} >uk tourist visa where can i travel</h3>
+          <p>A UK tourist visa grants entry to:</p>
+          <ul>
+            <li>England</li>
+            <li>Scotland</li>
+            <li>Wales</li>
+            <li>Northern Ireland</li>
+          </ul>
+
+          <h3 className={styles.subTitle} >uk tourist visa where can you go</h3>
+          <p>You can visit anywhere within the United Kingdom. Additionally, you may visit the Republic of Ireland if eligible under the BIVS or Visa Waiver Programme. Note that it does <strong className={styles.strong} >not</strong> grant access to the Schengen Area (mainland Europe).</p>
         </div>
 
 

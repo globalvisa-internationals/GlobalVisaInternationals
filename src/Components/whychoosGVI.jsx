@@ -42,7 +42,6 @@ const WhychoosGVI = () => {
                 </div>
             </div>
 
-            <p>Whether you're planning to <strong>work in Australia</strong>, <strong>study in Canada</strong>, or <strong>travel to Europe</strong>, our consultancy provides step-by-step guidance tailored to your goals.</p>
 
             <div className={styles.whyGrid}>
                 <div className={styles.whyCard}>
@@ -64,7 +63,7 @@ const WhychoosGVI = () => {
                         loading="lazy"
                     />
                     <strong>15+</strong>
-                    <p>Countries offered for study, work & PR immigration services</p>
+                    <p>Countries offered for Study, Tourist, Visitor & PR immigration services</p>
                 </div>
 
                 <div className={styles.whyCard}>

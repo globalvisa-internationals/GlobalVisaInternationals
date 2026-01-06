@@ -21,15 +21,39 @@ const agbalumo = Agbalumo({
   subsets: ["latin"],
   weight: "400", // Only one weight available
 });
+
 export const metadata = {
-  title: "Top Visa Consultants in Bangalore | USA, Canada, UK,Australia, Europe Visa assistance Experts",
-  description: "we are your trusted visa consultant and immigration consultant, providing professional visa services and immigration services customized to suit your travel and settlement needs. Whether you're applying for a work permit, seeking visa assistance, or starting your visa application, our experienced team ensures you meet all necessary visa requirements with ease and confidence",
-  keywords: ["visa consultant", "immigration consultant", "visa services", "immigration services", "visa application", "visa requirements", "visa assistance", "work permit", "work visa consultant", "student visa consultant ", "Canada study visa consultant", "UK study visa consultant", "USA study visa consultant", "visa documentation checklist", "visa interview preparation", "Canada tourist visa", "Australia tourist visa", "immigration agent qualifications", "visa processing time", "visa processing agents"],
-  alternates: { canonical: "https://www.globalvisainternationals.com/" },
+  title: "Top Visa Consultants in Bangalore | USA, Canada, UK, Australia, Europe Visa Assistance Experts",
+  description: "We are your trusted visa consultant and immigration consultant, providing professional visa services and immigration services customized to suit your travel and settlement needs. Whether you're applying for a Tourist visa, seeking visa assistance, or starting your visa application, our experienced team ensures you meet all necessary visa requirements with ease and confidence.",
+  keywords: [
+    "visa consultant",
+    "immigration consultant",
+    "visa services",
+    "immigration services",
+    "visa application",
+    "visa requirements",
+    "visa assistance",
+    "work visa consultant",
+    "student visa consultant",
+    "Canada study visa consultant",
+    "UK study visa consultant",
+    "USA study visa consultant",
+    "visa documentation checklist",
+    "visa interview preparation",
+    "Canada tourist visa",
+    "Australia tourist visa",
+    "immigration agent qualifications",
+    "visa processing time",
+    "visa processing agents"
+  ],
+  canonical: "https://www.globalvisainternationals.com/",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.globalvisainternationals.com/"
+  },
   openGraph: {
     title: "Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
-    description:
-      "Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more. Genuine, fast and transparent support.",
+    description: "Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more. Genuine, fast and transparent support.",
     url: "https://www.globalvisainternationals.com",
     siteName: "Global Visa Internationals",
     type: "website",
@@ -45,14 +69,27 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Global Visa Internationals - Trusted Immigration Consultants in Bangalore",
-    description:
-      "Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more.",
+    description: "Over 75,000 happy clients. Expert PR, Work, Study & Visit visa services for Canada, Australia, USA, UK and more.",
     site: "@GLOBALVISA1505",
     creator: "@GLOBALVISA1505",
     images: ["https://www.globalvisainternationals.com/banner.webp"],
   },
+  other: {
+    "geo.region": "IN-KA",
+    "geo.placename": "Bengaluru",
+    "ICBM": "12.9716,77.5946",
+    "viewport": "width=device-width, initial-scale=1",
+    "theme-color": "#ffffff",
+    "format-detection": "telephone=no",
+    "p:domain_verify": "eb589ecd94088c14d3f8566f395cf4b7",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 }
-
 
 const slides = [
   "/gallery/1.jpg",
@@ -110,29 +147,55 @@ const faqs = [
 ];
 
 export default function Home() {
-  const pageUrl = metadata.alternates.canonical;
 
+  const pageUrl = "https://www.globalvisainternationals.com/";
+
+  // 1. Breadcrumb Schema
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: pageUrl, // https://www.globalvisainternationals.com
+        item: pageUrl,
       }
     ]
   };
-  const travelAgencyJsonLd = {
+
+  // 2. Organization Schema
+  const organizationJsonLd = {
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
+    "@type": "Organization",
     "@id": "https://www.globalvisainternationals.com/#organization",
     name: "Global Visa Internationals",
     url: "https://www.globalvisainternationals.com",
     logo: "https://www.globalvisainternationals.com/gvilogo.png",
     description: "Global Visa Internationals is a leading visa and immigration consultancy in Bangalore, offering expert assistance for Tourist, PR, Student, Work, and Business Visas to countries like Canada, Australia, UK, USA, Europe, and more.",
+    email: "operations@globalvisainternationals.com",
     telephone: "+91-7022213466",
+    foundingDate: "2010",
+    numberOfEmployees: {
+      "@type": "QuantitativeValue",
+      minValue: 25,
+      maxValue: 50
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+91-7022213466",
+        contactType: "Customer Service",
+        areaServed: ["IN"],
+        availableLanguage: ["English", "Kannada", "Hindi", "Telugu", "Tamil"],
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "10:00",
+          closes: "18:00"
+        }
+      }
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: "GF-9, Business Point, MG Road",
@@ -146,21 +209,6 @@ export default function Home() {
       latitude: 12.9716,
       longitude: 77.5946
     },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        opens: "10:00",
-        closes: "18:00"
-      }
-    ],
     sameAs: [
       "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
@@ -169,60 +217,483 @@ export default function Home() {
       "https://www.youtube.com/@globalVisaInternationals",
       "https://www.google.com/maps/place/Global+Visa+Internationals"
     ],
-    potentialAction: {
-      "@type": "ReserveAction",
-      target: "https://www.globalvisainternationals.com/contact",
-      result: {
-        "@type": "Thing",
-        name: "Book a Free Visa Consultation"
+    foundingLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        addressCountry: "IN"
       }
     }
   };
+
+  // 3. LocalBusiness Schema
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.globalvisainternationals.com/#localbusiness",
+    name: "Global Visa Internationals",
+    description: "Leading visa and immigration consultants in Bangalore providing expert assistance for Tourist, PR, Student, Work, and Business Visas to countries like Canada, Australia, UK, USA, Europe, and more. Over 75,000 successful visa applications processed.",
+    url: "https://www.globalvisainternationals.com",
+    telephone: "+91-7022213466",
+    email: "operations@globalvisainternationals.com",
+    image: "https://www.globalvisainternationals.com/GVI_Banner.webp",
+    logo: "https://www.globalvisainternationals.com/gvilogo.png",
+    priceRange: "₹₹₹",
+    currenciesAccepted: "INR",
+    paymentAccepted: "Cash, Credit Card, Debit Card, UPI",
+    openingHours: "Mo-Sa 10:00-18:00",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "10:00",
+        closes: "18:00"
+      }
+    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "GF-9, Business Point, MG Road",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560025",
+      addressCountry: "IN"
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 12.9716,
+      longitude: 77.5946
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 12.9716,
+        longitude: 77.5946
+      },
+      geoRadius: "50000"
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Visa and Immigration Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Canada Immigration Services",
+            description: "PR, Work Permit, Student Visa for Canada"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Australia Immigration Services",
+            description: "PR, Work Visa, Student Visa for Australia"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "USA Visa Services",
+            description: "Visitor Visa, Work Visa, Student Visa for USA"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "UK Immigration Services",
+            description: "Work Visa, Student Visa, Visitor Visa for UK"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Schengen Visa Services",
+            description: "Tourist, Business, and Visitor Visas for Europe"
+          }
+        }
+      ]
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "314",
+      bestRating: "5",
+      worstRating: "1"
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Rajesh Kumar"
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5"
+        },
+        reviewBody: "Excellent service! Got my Canada PR visa in 6 months. Highly recommended!",
+        datePublished: "2024-01-15"
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Priya Sharma"
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5"
+        },
+        reviewBody: "Professional team helped me secure Australia student visa smoothly.",
+        datePublished: "2024-02-10"
+      }
+    ],
+    knowsAbout: [
+      "Visa Documentation",
+      "Immigration Laws",
+      "Visa Interview Preparation",
+      "IELTS/PTE Coaching",
+      "PR Application Process",
+      "Visa Rejection Appeals"
+    ],
+    employee: {
+      "@type": "Person",
+      name: "Expert Visa Consultants",
+      jobTitle: "Certified Immigration Consultants",
+      description: "Team of MARA, ICCRC, and CICC certified consultants"
+    }
+  };
+
+  // 4. Service Schema
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Visa and Immigration Consultation",
+    provider: {
+      "@type": "Organization",
+      "@id": "https://www.globalvisainternationals.com/#organization"
+    },
+    name: "Comprehensive Visa and Immigration Services",
+    description: "End-to-end visa and immigration consultation services for countries including Canada, Australia, USA, UK, and European nations. We handle documentation, application submission, interview preparation, and follow-up.",
+    areaServed: {
+      "@type": "Country",
+      name: "India"
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Visa Services Portfolio",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Permanent Residency Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Canada Express Entry PR"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Australia PR via Skilled Migration"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Study Visa Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Canada Study Permit"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "USA F1 Visa"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Australia Student Visa"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "UK Tier 4 Visa"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Work Visa Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "USA H1B Visa"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Canada Work Permit"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Australia Work Visa"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Visitor Visa Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Schengen Tourist Visa"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "USA B1/B2 Visa"
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Canada Visitor Visa"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    serviceOutput: {
+      "@type": "Thing",
+      name: "Approved Visa",
+      description: "Successfully processed visa applications"
+    },
+    termsOfService: "https://www.globalvisainternationals.com/terms",
+    providerMobility: "static"
+  };
+
+  // 5. WebPage Schema
+  const webpageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.globalvisainternationals.com/#webpage",
+    url: "https://www.globalvisainternationals.com",
+    name: "Global Visa Internationals - Top Visa Consultants in Bangalore",
+    description: "Homepage of Global Visa Internationals - Leading visa and immigration consultants in Bangalore providing expert services for Canada, Australia, USA, UK, and European countries.",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": "https://www.globalvisainternationals.com/#website",
+      url: "https://www.globalvisainternationals.com",
+      name: "Global Visa Internationals",
+      description: "Official website of Global Visa Internationals - Visa and Immigration Consultants",
+      publisher: {
+        "@type": "Organization",
+        "@id": "https://www.globalvisainternationals.com/#organization"
+      }
+    },
+    about: {
+      "@type": "Organization",
+      "@id": "https://www.globalvisainternationals.com/#organization"
+    },
+    mainEntity: {
+      "@type": "Organization",
+      "@id": "https://www.globalvisainternationals.com/#organization"
+    },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: "https://www.globalvisainternationals.com/GVI_Banner.webp",
+      width: 1200,
+      height: 630,
+      caption: "Global Visa Internationals - Visa and Immigration Services"
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.globalvisainternationals.com/#breadcrumb"
+    },
+    inLanguage: "en-IN",
+    datePublished: "2010-01-01",
+    dateModified: "2024-12-01",
+    potentialAction: [
+      {
+        "@type": "ReadAction",
+        target: ["https://www.globalvisainternationals.com/services"]
+      },
+      {
+        "@type": "SearchAction",
+        target: "https://www.globalvisainternationals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    ]
+  };
+
+  // 6. FAQPage Schema
+  const faqPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What services does Global Visa Internationals offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We offer comprehensive visa and immigration services including Permanent Residency (PR), Student Visas, Work Permits, Tourist Visas, Business Visas, and Immigration Consultancy for countries like Canada, Australia, USA, UK, and European nations. We also provide IELTS/PTE coaching and document verification services."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Which countries do you provide visa assistance for?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We specialize in visa assistance for: Canada, Australia, United States, United Kingdom, Germany, France, Italy, Spain, Netherlands, Switzerland, Sweden, Denmark, Norway, Finland, New Zealand, Singapore, and other European countries."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Are your immigration consultants certified?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, our team includes MARA (Australia), ICCRC (Canada), and CICC (Canada) certified consultants with over 10+ years of experience in immigration law and visa processing."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What is your success rate?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We maintain a 95%+ success rate with over 75,000 successful visa applications processed since our establishment in 2010."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "How long does the visa process take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Processing times vary by country: Canada PR (6-12 months), Australia PR (8-12 months), USA Work Visa (3-6 months), UK Student Visa (3-4 weeks), Schengen Tourist Visa (15-20 days)."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer free consultation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we offer free initial consultation either in-person at our Bangalore office or via online video call to assess your eligibility and provide personalized guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What documents are required for visa application?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Basic documents include passport, photographs, educational certificates, work experience letters, bank statements, language test scores, and medical certificates. Specific requirements vary by country and visa type."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Can you help with visa refusal cases?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we specialize in visa refusal appeals and reapplications. Our experts analyze refusal reasons, strengthen your application, and improve chances of approval in subsequent applications."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What are your office timings?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We are open Monday to Saturday from 10:00 AM to 6:00 PM IST. Appointments can be scheduled via phone or our website contact form."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide post-landing services?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we offer comprehensive post-landing services including airport pickup, accommodation assistance, SIN/SSN application help, bank account setup, and settlement guidance in the destination country."
+        }
+      }
+    ]
+  };
+
+  // Additional: Website Schema for better search visibility
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.globalvisainternationals.com/#website",
+    url: "https://www.globalvisainternationals.com",
+    name: "Global Visa Internationals",
+    description: "Official website of Global Visa Internationals - Top Visa Consultants in Bangalore for USA, Canada, UK, Australia, and Europe visa assistance.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.globalvisainternationals.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://www.globalvisainternationals.com/#organization"
+    }
+  };
+
+  const jsonLdSchemas = [
+    breadcrumbJsonLd,
+    organizationJsonLd,
+    localBusinessJsonLd,
+    serviceJsonLd,
+    webpageJsonLd,
+    faqPageJsonLd,
+    websiteJsonLd
+  ];
 
 
 
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
+      {jsonLdSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
 
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content="Visa and Immigration Services - Global Visa Internationals" />
-
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="p:domain_verify" content="eb589ecd94088c14d3f8566f395cf4b7" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencyJsonLd) }} />
-
-      </Head>
 
       <main className={styles.HomeSec}>
         {/* Background Image with Correct Styling */}
