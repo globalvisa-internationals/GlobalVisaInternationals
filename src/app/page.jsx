@@ -545,10 +545,7 @@ export default function Home() {
       height: 630,
       caption: "Global Visa Internationals - Visa and Immigration Services"
     },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.globalvisainternationals.com/"
-    },
+
     inLanguage: "en-IN",
     datePublished: "2010-01-01",
     dateModified: "2024-12-01",
