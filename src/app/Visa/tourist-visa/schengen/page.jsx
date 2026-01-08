@@ -11,13 +11,10 @@ export const metadata = {
 
   // OPTIMIZED: Added "(2026)" to signal up-to-date visa rules. 
   // Kept "Bangalore" for local SEO.
-  title: "Schengen Visa Agents Bangalore (2026 Rules) | Tourist & Business | GVI",
+  title: "Schengen Visa Agents Bangalore (2026 Rules) | GVI",
 
-  // OPTIMIZED: Replaced generic "Fast & Reliable" with specific "99% Success Rate".
-  // Added "Biometrics support" as that is a specific pain point users search for.
   description:
-    "Expert Schengen Visa Consultants in Bangalore. 99% Success Rate for Tourist & Business visas. We handle 2026 documentation & biometrics. Chat with experts now!",
-
+    "99% Success Rate for Schengen Tourist & Business visas. Expert help with 2026 biometrics & documentation in Bangalore. Chat now!",
   // OPTIMIZED: Added "creator" and "publisher" for Brand Authority (E-E-A-T)
   creator: "Global Visa Internationals",
   publisher: "Global Visa Internationals",
@@ -76,33 +73,40 @@ export const metadata = {
   },
 
   openGraph: {
-    // Punchy, benefit-driven title for social
-    title: "Schengen Visa Approval Experts | 99% Success Rate | GVI Bangalore",
-    description:
-      "Planning a Europe trip in 2026? We handle your entire Schengen visa process. Documentation, appointments & biometrics support in Bangalore. Apply confidently.",
+    title: "Schengen Visa Approval Experts | 99% Success Rate",
+    description: "Planning a Europe trip in 2026? Get expert visa assistance in Bangalore. We handle documentation & biometrics.",
     url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen",
     siteName: "Global Visa Internationals",
     locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg",
+        // TRICK: Add a version number (?v=2) to force WhatsApp to re-fetch the image
+        url: "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg?v=2",
         width: 1200,
         height: 630,
-        alt: "Schengen Tourist Visa Assistance by Global Visa Internationals",
+        alt: "Schengen Tourist Visa Assistance 2026",
+        type: "image/jpeg", // CRITICAL: WhatsApp looks for this
+      },
+      // ADDITION: A square fallback image often works better for WhatsApp thumbnails
+      {
+        url: "https://www.globalvisainternationals.com/tourist-visa/Schengen-Square-Thumb.jpg",
+        width: 400,
+        height: 400,
+        alt: "GVI Schengen Visa Agents",
+        type: "image/jpeg",
       },
     ],
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
     site: "@GLOBALVISA1505",
-    creator: "@GLOBALVISA1505", // Added creator handle if available
-    title: "Schengen Visa Experts (2026) | Tourist & Business | GVI",
-    description:
-      "Don't let visa rejection ruin your Europe trip. Expert Schengen visa assistance for Indians. 99% Success Rate. Contact GVI Bangalore.",
+    creator: "@GLOBALVISA1505",
+    title: "Schengen Visa Experts (2026) | GVI Bangalore",
+    description: "Don't risk rejection. Expert Schengen visa assistance for Indians. 99% Success Rate.",
     images: [
-      "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg",
+      "https://www.globalvisainternationals.com/tourist-visa/Schengen-Tourist-Visa-Assistance-GVI.jpg?v=2",
     ],
   },
 
