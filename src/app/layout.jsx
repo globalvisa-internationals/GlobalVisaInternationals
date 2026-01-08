@@ -6,8 +6,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'; // Official Helper
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
 import ClientProviders from "@/Components/ClientProviders"; // The file we created in Step 1
-import TrackingScripts from '@/components/TrackingScripts'; // Your Meta/Clarity script
-import GoogleAds from '@/components/GoogleAds'; // The file we created in Step 2
+import TrackingScripts from '@/Components/TrackingScripts'; // Your Meta/Clarity script
+import GoogleAds from '@/Components/GoogleAds'; // The file we created in Step 2
 
 import "./globals.css";
 
