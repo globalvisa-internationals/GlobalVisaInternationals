@@ -6,57 +6,129 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Apply for Bulgaria Tourist Visa from India | Bulgaria Schengen Visa Experts",
+
+    // OPTIMIZED: Punchy title. "(2026 Rules)" signals relevance.
+    // "99% Success" builds trust immediately.
+    title: "Bulgaria Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Addresses the #1 destination (Sofia) and clears confusion about Schengen status.
+    // Action-oriented ("Chat now").
     description:
-        "Apply for your Bulgaria Tourist Visa from India with Global Visa Internationals (GVI). Get expert guidance for documentation, appointment booking, and interview preparation to travel smoothly across Bulgaria and the Schengen area.",
+        "Bulgaria is now Schengen! We secure your visa appointment & handle 2026 documentation. 99% Success Rate. Expert agents in Bangalore. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
     keywords: [
+        // High Value / High Intent
         "Bulgaria tourist visa from India",
-        "Bulgaria Schengen visa",
-        "apply Bulgaria visa India",
-        "Bulgaria visitor visa",
-        "Bulgaria business visa",
+        "Bulgaria Schengen visa requirements 2026",
+        "Bulgaria visa appointment VFS Bangalore",
+        "Sofia tourist visa",
+        "Varna beach holiday visa", // Niche tourism
+        "Bulgaria business visa India",
         "Bulgaria visa consultants Bangalore",
-        "Bulgaria visa application process",
-        "Bulgaria visa documents required",
-        "Bulgaria visa fees India",
-        "Schengen visa for Bulgaria"
+        "apply Bulgaria visa online",
+        "Bulgaria visa fees 2026",
+
+        // Niche / Long Tail
+        "Schengen visa for Bulgaria",
+        "Best Bulgaria visa agents in Bangalore",
+        "Bulgaria visa application center Bangalore",
+        "Top Bulgaria visa consultants in India",
+        "Visa agents for Bulgaria in Indiranagar",
+        "Bulgaria visa processing time India",
+        "Bulgaria visa rejection assistance",
+        "VFS Bulgaria visa appointment help",
+        "Bulgaria travel insurance requirements",
+        "Global Visa Internationals Bulgaria"
     ],
-    robots: "index, follow",
+
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+
     canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/bulgaria",
+
     alternates: {
         canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/bulgaria",
     },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Bulgaria",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title: "Bulgaria Tourist Visa from India | Expert Bulgaria Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Bulgaria Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals helps Indian travellers apply for Bulgaria tourist, visitor, and business visas. Get expert help with requirements, documentation, and appointments for your Bulgaria visa.",
+            "Visiting Sofia or Varna in 2026? We handle the entire Schengen visa process—from VFS appointments to accommodation proof. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/bulgaria",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/Bulgaria-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/Bulgaria-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Bulgaria Tourist Visa Assistance by Global Visa Internationals"
+                alt: "Bulgaria Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
+            },
+            // Fallback square image
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/Bulgaria-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Bulgaria Visa Agents",
+                type: "image/jpeg",
             }
         ],
-        type: "website"
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title: "Bulgaria Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Bulgaria Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to Bulgaria? Get professional visa guidance from Global Visa Internationals — experts in Bulgaria tourist and Schengen visa processing for Indian travellers.",
+            "Don't let rejection ruin your Bulgarian holiday. Expert Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/Bulgaria-Tourist-Visa-Assistance-GVI.jpg"
-        ]
+            "https://www.globalvisainternationals.com/tourist-visa/Bulgaria-Tourist-Visa-Assistance-GVI.jpg?v=2",
+        ],
     },
+
     other: {
+        "article:published_time": "2026-01-08",
+        "article:author": "Global Visa Internationals Team",
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
-        ICBM: "12.9716,77.5946"
-    }
+        "ICBM": "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "bulgaria-schengen-visa-guide",
+        "ai-primary-topic": "Bulgaria Schengen Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Sofia & Varna Travel",
+        "ai-user-intent": "how to apply for bulgaria tourist visa from india without rejection",
+    },
 };
 
 export default function Bulgaria_Tourist_Visa_Assistance() {

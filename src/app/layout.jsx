@@ -26,7 +26,7 @@ export const viewport = {
   maximumScale: 5, // Accessibility: Don't block zooming
 };
 
-// 3. ROBUST METADATA (SEO & Social)
+
 // 3. ROBUST METADATA (SEO & Social)
 export const metadata = {
   // 1. BASE URL: Resolves all relative links (like images) automatically

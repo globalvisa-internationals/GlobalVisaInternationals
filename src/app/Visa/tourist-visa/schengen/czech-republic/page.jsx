@@ -6,58 +6,36 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-    // OPTIMIZED: Added "Bangalore" for Local SEO and removed repetitive words.
-    // Kept under 60 characters where possible for full visibility.
-    title: "Czech Republic Visa from India | Top Consultants in Bangalore | GVI",
+    // OPTIMIZED: Punchy title. "(2026 Rules)" signals relevance.
+    // "99% Success" builds trust immediately.
+    title: "Czech Republic Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
 
-    // OPTIMIZED: Shortened to <160 characters to prevent truncation in Google results.
-    // Focuses on the benefit (Hassle-free) and the service (Appointments & Docs).
+    // OPTIMIZED: Addresses the #1 destination (Prague) and the #1 pain point (Appointments).
+    // Action-oriented ("Chat now").
     description:
-        "Get your Czech Republic Tourist Visa with Global Visa Internationals. Expert guidance on documentation, appointments & biometrics. 99% Success Rate. Apply Now!",
+        "Planning a trip to Prague? We secure your Czech Republic visa appointment & handle 2026 documentation. 99% Success Rate. Expert agents in Bangalore. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
 
     keywords: [
         "Czech Republic tourist visa from India",
-        "Czech Republic Schengen visa",
-        "apply Czech Republic visa India",
-        "Czech Republic visitor visa",
-        "Czech Republic business visa",
-        "Czech Republic visa consultants Bangalore",
-        "Czech Republic visa application process",
-        "Czech Republic visa documents required",
-        "Czech Republic visa fees India",
-        "Schengen visa for Czech Republic",
-        "Czech Republic visa consultants in Bangalore",
-        "Best Czech Republic visa agents in Bangalore",
-        "Czech Republic visa agency near me",
-        "Czech Republic visa application center Bangalore",
-        "Top Czech Republic visa consultants in India",
-        "Czech Republic visa assistance near me",
-        "Visa agents for Czech Republic in Indiranagar",
-        "Czech Republic visa service provider Bangalore",
-        "Czech Republic tourist visa assistance",
-        "Czech Republic Schengen visa consultants",
-        "Top rated Czech Republic visa agents",
-        "Best Czech Republic visa consultants for Indian citizens",
-        "Trusted Czech Republic visa agency",
-        "Professional Czech Republic visa assistance",
-        "Reliable Czech Republic visa consultants",
-        "Low cost Czech Republic visa agents",
-        "How to apply for Czech Republic visa from Bangalore",
-        "Czech Republic tourist visa requirements for Indian citizens",
-        "Czech Republic visa processing time India",
-        "Documents required for Czech Republic tourist visa",
-        "Czech Republic visa rejection assistance",
-        "Czech Republic visa fees and service charges",
-        "VFS Czech Republic visa appointment help",
-        "Czech Republic visa cover letter assistance",
-        "Schengen visa for Czech Republic from India",
-        "Czech Republic business visa agents",
-        "Czech Republic visiting visa services",
-        "Czech Republic visa appointment booking",
-        "Express Czech Republic visa services",
-        "Czech Republic travel visa consultancy"
+        "Czech Republic Schengen visa requirements 2026",
+        "Czech visa appointment VFS Bangalore", // High intent
+        "Prague tourist visa", // Destination specific (High Volume)
+        "Czech Republic business visa India",
+        "Czech visa consultants Bangalore",
+        "apply Czech visa online",
+        "Czech Republic visa fees 2026",
+        "Schengen visa agents Indiranagar",
+        "Czech visa rejection reasons",
+        "travel insurance for Czech visa",
+        "Global Visa Internationals Czech Republic"
     ],
 
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
     robots: {
         index: true,
         follow: true,
@@ -76,44 +54,65 @@ export const metadata = {
         canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/czech-republic",
     },
 
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Czech",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        // OPTIMIZED: Slightly punchier OG title for social media sharing
-        title: "Apply for Czech Republic Tourist Visa | Expert Agents in Bangalore",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Czech Republic Visa Approved | 99% Success Rate | GVI",
         description:
-            "Planning a trip to Prague? Global Visa Internationals provides end-to-end Czech Republic Schengen visa assistance. Documentation, appointments & interview prep.",
+            "Visiting Prague in 2026? We handle the entire Schengen visa process—from VFS appointments to strict accommodation checks. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/czech-republic",
         siteName: "Global Visa Internationals",
-        locale: "en_IN", // ADDED: Specifies Indian English locale
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/czech-republic-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/czech-republic-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Czech Republic Tourist Visa Assistance by Global Visa Internationals",
+                alt: "Czech Republic Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
             },
+            // Fallback square image
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/czech-republic-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Czech Visa Agents",
+                type: "image/jpeg",
+            }
         ],
-        type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title: "Czech Republic Tourist Visa Experts | GVI Bangalore",
+        creator: "@GLOBALVISA1505",
+        title: "Czech Republic Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Get your Czech Republic Schengen visa approved easily. Contact Global Visa Internationals for expert assistance in India.",
+            "Don't let rejection ruin your Prague trip. Expert Czech Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/czech-republic-Tourist-Visa-Assistance-GVI.jpg",
+            "https://www.globalvisainternationals.com/tourist-visa/czech-republic-Tourist-Visa-Assistance-GVI.jpg?v=2",
         ],
     },
 
-    // Kept your strong Local SEO tags
     other: {
+        "article:published_time": "2026-01-08",
+        "article:author": "Global Visa Internationals Team",
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
-        ICBM: "12.9716,77.5946",
+        "ICBM": "12.9716,77.5946",
     },
 };
-
 
 export default function Bulgaria_Tourist_Visa_Assistance() {
     const pageUrl =

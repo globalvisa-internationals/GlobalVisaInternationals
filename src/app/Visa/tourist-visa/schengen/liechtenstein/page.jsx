@@ -90,6 +90,12 @@ export const metadata = {
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
         "ICBM": "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "liechtenstein-schengen-visa-guide",
+        "ai-primary-topic": "Liechtenstein Schengen Visa Rules 2026",
+        "ai-secondary-topic": "Swiss Embassy Protocols, Vaduz Travel, Alpine Tourism",
+        "ai-user-intent": "how to apply for liechtenstein tourist visa from india via switzerland",
     },
 };
 

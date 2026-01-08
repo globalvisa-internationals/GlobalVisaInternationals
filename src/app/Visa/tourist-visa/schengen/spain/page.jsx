@@ -6,72 +6,129 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Apply for Spain Tourist Visa from India | Spain Schengen Visa Experts",
+
+    // OPTIMIZED: Punchy title. "(2026 Rules)" signals relevance.
+    // "99% Success" builds trust immediately.
+    title: "Spain Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Addresses the #1 pain point: BLS APPOINTMENTS (Spain uses BLS, not VFS).
+    // Action-oriented ("Chat now").
     description:
-        "Apply for your Spain Tourist Visa from India with Global Visa Internationals (GVI). Get professional assistance for documentation, appointment booking, and interview preparation to travel across Spain and the Schengen zone with ease.",
+        "Struggling with BLS Spain appointments? We secure your slot & handle 2026 documentation. 99% Success Rate. Expert agents in Bangalore. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
     keywords: [
+        // High Value / High Intent
         "Spain tourist visa from India",
-        "Spain Schengen visa",
-        "apply Spain visa India",
-        "Spain visitor visa",
-        "Spain business visa",
+        "Spain Schengen visa requirements 2026",
+        "BLS Spain visa appointment India", // Critical Keyword: BLS not VFS
+        "Barcelona tourist visa",
+        "Madrid business visa",
         "Spain visa consultants Bangalore",
-        "Spain visa application process",
-        "Spain visa documents required",
-        "Spain visa fees India",
+        "apply Spain visa online",
+        "Spain visa fees 2026",
+
+        // Niche / Long Tail
         "Schengen visa for Spain",
-        "Spain travel visa from India",
-        "Spain embassy visa India",
-        "Spain short stay visa",
-        "Spain tourist visa requirements",
-        "Spain Schengen visa appointment India",
-        "Spain tourist visa assistance India",
-        "Spain visa processing time",
-        "Spain consulate visa application",
-        "Spain visa support Bangalore",
-        "Spain Schengen visa consultants India",
+        "Best Spain visa agents in Bangalore",
+        "Spain visa application center Bangalore",
+        "Top Spain visa consultants in India",
+        "Visa agents for Spain in Indiranagar",
+        "Spain visa processing time India",
+        "Spain visa rejection assistance",
+        "BLS International Spain contact",
+        "Spain travel insurance requirements",
+        "Global Visa Internationals Spain"
     ],
-    robots: "index, follow",
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/spain",
-    alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/spain",
+
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/spain",
+
+    alternates: {
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/spain",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Spain",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title:
-            "Spain Tourist Visa from India | Expert Spain Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Spain Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals (GVI) helps Indian travellers apply for Spain tourist, visitor, and business visas. Get expert help with requirements, documentation, and appointments for your Spain visa.",
+            "Visiting Barcelona or Madrid in 2026? We handle the entire Schengen visa process—including the tricky BLS appointment booking. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/spain",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/Spain-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/Spain-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Spain Tourist Visa Assistance by Global Visa Internationals",
+                alt: "Spain Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
             },
+            // Fallback square image
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/Spain-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Spain Visa Agents",
+                type: "image/jpeg",
+            }
         ],
-        type: "website",
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title:
-            "Spain Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Spain Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to Spain? Get professional visa guidance from Global Visa Internationals — experts in Spain tourist and Schengen visa processing for Indian travellers.",
+            "Don't let BLS appointment delays ruin your Spanish holiday. Expert Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/Spain-Tourist-Visa-Assistance-GVI.jpg",
+            "https://www.globalvisainternationals.com/tourist-visa/Spain-Tourist-Visa-Assistance-GVI.jpg?v=2",
         ],
     },
+
     other: {
+        "article:published_time": "2026-01-08",
+        "article:author": "Global Visa Internationals Team",
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
-        ICBM: "12.9716,77.5946",
+        "ICBM": "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "spain-schengen-visa-guide",
+        "ai-primary-topic": "Spain Schengen Visa Rules 2026",
+        "ai-secondary-topic": "BLS International Appointments, Madrid & Barcelona Travel",
+        "ai-user-intent": "how to apply for spain tourist visa from india without rejection",
     },
 };
-
 export default function Spain_Tourist_Visa_Assistance() {
     const pageUrl =
         "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/spain";

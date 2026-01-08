@@ -6,100 +6,118 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-    title:
-        "Apply for Denmark Tourist Visa from India | Denmark Schengen Visa Experts",
+    // OPTIMIZED: Denmark is strict. "99% Success" is the strongest selling point here.
+    // "(2026 Rules)" signals you know the latest Schengen updates.
+    title: "Denmark Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
 
+    // OPTIMIZED: Addresses the specific pain point: Denmark rejects vague itineraries.
+    // Action-oriented ("Chat now").
     description:
-        "Apply for your Denmark Tourist Visa from India with Global Visa Internationals (GVI). Expert assistance for documentation, appointment booking, and Schengen visa processing to travel smoothly to Denmark.",
+        "Denmark is strict! We ensure your 2026 visa application meets all requirements. Expert help with VFS appointments, itinerary planning & biometrics. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
 
     keywords: [
         "Denmark tourist visa from India",
-        "Denmark Schengen visa",
-        "apply Denmark visa India",
-        "Denmark visitor visa",
-        "Denmark business visa",
-        "Denmark visa consultants Bangalore",
-        "Denmark visa application process",
-        "Denmark visa documents required",
-        "Denmark visa fees India",
-        "Schengen visa for Denmark",
-        "Denmark visa consultants in Bangalore",
-        "Best Denmark visa agents in Bangalore",
-        "Denmark visa agency near me",
-        "Denmark visa application center Bangalore",
-        "Top Denmark visa consultants in India",
-        "Denmark visa assistance near me",
-        "Visa agents for Denmark in Indiranagar",
-        "Denmark visa service provider Bangalore",
-        "Denmark tourist visa assistance",
-        "Denmark Schengen visa consultants",
-        "Top rated Denmark visa agents",
-        "Best Denmark visa consultants for Indian citizens",
-        "Trusted Denmark visa agency",
-        "Professional Denmark visa assistance",
-        "Reliable Denmark visa consultants",
-        "Low cost Denmark visa agents",
-        "How to apply for Denmark visa from Bangalore",
-        "Denmark tourist visa requirements for Indian citizens",
-        "Denmark visa processing time India",
-        "Documents required for Denmark tourist visa",
-        "Denmark visa rejection assistance",
-        "Denmark visa fees and service charges",
-        "VFS Denmark visa appointment help",
-        "Denmark visa cover letter assistance",
-        "Schengen visa for Denmark from India",
+        "Denmark Schengen visa requirements 2026",
+        "Denmark visa appointment VFS Bangalore",
+        "Copenhagen tourist visa",
+        "Greenland visa from India", // High value niche (handled via Denmark)
+        "Faroe Islands visa assistance", // High value niche
         "Denmark business visa agents",
-        "Denmark visiting visa services",
-        "Denmark visa appointment booking",
-        "Express Denmark visa services",
-        "Denmark travel visa consultancy"
+        "Denmark visa strictness India",
+        "Denmark visa fees 2026",
+        "Schengen visa agents Indiranagar",
+        "Denmark visa rejection reasons",
+        "Global Visa Internationals Denmark"
     ],
 
-    robots: "index, follow",
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/denmark",
 
     alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/denmark"
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/denmark",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Denmark",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
     },
 
     openGraph: {
-        title:
-            "Denmark Tourist Visa from India | Expert Denmark Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Denmark Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals provides complete Denmark Tourist & Schengen visa assistance for Indian travellers, including documentation, appointments, and expert guidance.",
-        url:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/denmark",
+            "Planning a trip to Copenhagen in 2026? We handle the entire Schengen visa process—from VFS appointments to strict itinerary checks. Apply with confidence.",
+        url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/denmark",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url:
-                    "https://www.globalvisainternationals.com/tourist-visa/denmark-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/denmark-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt:
-                    "Denmark Tourist Visa Assistance from India by Global Visa Internationals"
+                alt: "Denmark Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
+            },
+            // Fallback square image
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/denmark-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Denmark Visa Agents",
+                type: "image/jpeg",
             }
         ],
-        type: "website"
     },
 
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title:
-            "Denmark Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Denmark Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to Denmark? Get professional Denmark Schengen tourist and business visa assistance from Global Visa Internationals.",
+            "Don't let rejection ruin your Scandinavian trip. Expert Denmark Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/denmark-Tourist-Visa-Assistance-GVI.jpg"
-        ]
+            "https://www.globalvisainternationals.com/tourist-visa/denmark-Tourist-Visa-Assistance-GVI.jpg?v=2",
+        ],
     },
 
     other: {
+        "article:published_time": "2026-01-08",
+        "article:author": "Global Visa Internationals Team",
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
-        ICBM: "12.9716,77.5946"
-    }
+        "ICBM": "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "denmark-schengen-visa-guide",
+        "ai-primary-topic": "Denmark & Greenland Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Strict Itinerary Checks & Documentation",
+        "ai-user-intent": "how to apply for denmark tourist visa from india without rejection",
+    },
 };
 
 

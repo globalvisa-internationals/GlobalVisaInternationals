@@ -6,104 +6,119 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-    title: "Estonia Schengen Visa from India (2025–26) — Checklist & Fees",
-    description: "Complete 2025–26 guide to apply for an Estonia Schengen visa from India — documents, VFS appointment tips, fees, timelines & free checklist.",
+    // OPTIMIZED: Punchy title. "(2026 Rules)" signals relevance.
+    // "99% Success" is a strong trust signal.
+    title: "Estonia Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Addresses 2026 pain points (Biometrics & Appointments).
+    // Action-oriented ("Chat now").
+    description:
+        "Planning a trip to Tallinn? We secure your Estonia Schengen visa appointment & handle 2026 documentation. 99% Success Rate. Expert agents in Bangalore. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
 
     keywords: [
-        "estonia tourist visa from India",
-        "estonia Schengen visa",
-        "apply estonia visa India",
-        "estonia visitor visa",
-        "estonia business visa",
-        "estonia visa consultants Bangalore",
-        "estonia visa application process",
-        "estonia visa documents required",
-        "estonia visa fees India",
-        "Schengen visa for estonia",
-        "estonia visa consultants in Bangalore",
-        "Best estonia visa agents in Bangalore",
-        "estonia visa agency near me",
-        "estonia visa application center Bangalore",
-        "Top estonia visa consultants in India",
-        "estonia visa assistance near me",
-        "Visa agents for estonia in Indiranagar",
-        "estonia visa service provider Bangalore",
-        "estonia tourist visa assistance",
-        "estonia Schengen visa consultants",
-        "Top rated estonia visa agents",
-        "Best estonia visa consultants for Indian citizens",
-        "Trusted estonia visa agency",
-        "Professional estonia visa assistance",
-        "Reliable estonia visa consultants",
-        "Low cost estonia visa agents",
-        "How to apply for estonia visa from Bangalore",
-        "estonia tourist visa requirements for Indian citizens",
-        "estonia visa processing time India",
-        "Documents required for estonia tourist visa",
-        "estonia visa rejection assistance",
-        "estonia visa fees and service charges",
-        "VFS estonia visa appointment help",
-        "estonia visa cover letter assistance",
-        "Schengen visa for estonia from India",
-        "estonia business visa agents",
-        "estonia visiting visa services",
-        "estonia visa appointment booking",
-        "Express estonia visa services",
-        "estonia travel visa consultancy"
+        "Estonia tourist visa from India",
+        "Estonia Schengen visa requirements 2026",
+        "Estonia visa appointment VFS India",
+        "Estonia digital nomad visa assistance", // High value niche for Estonia
+        "Tallinn tourist visa",
+        "Estonia business visa India",
+        "Estonia visa consultants Bangalore",
+        "apply Estonia visa online",
+        "Estonia visa fees 2026",
+        "Schengen visa agents Indiranagar",
+        "Estonia visa rejection reasons",
+        "Estonia travel insurance for visa",
+        "Global Visa Internationals Estonia"
     ],
 
-    robots: "index, follow",
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+
     canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/estonia",
+
     alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/estonia"
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/estonia",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Estonia",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
     },
 
     openGraph: {
-        title:
-            "estonia Tourist Visa from India | Expert estonia Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Estonia Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals provides complete estonia Tourist & Schengen visa assistance for Indian travellers, including documentation, appointments, and expert guidance.",
-        url:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/estonia",
+            "Visiting Estonia in 2026? We handle the entire Schengen visa process—from VFS appointments to cover letters. Apply with confidence.",
+        url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/estonia",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url:
-                    "https://www.globalvisainternationals.com/tourist-visa/estonia-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/estonia-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt:
-                    "estonia Tourist Visa Assistance from India by Global Visa Internationals"
+                alt: "Estonia Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
+            },
+            // Fallback square image
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/estonia-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Estonia Visa Agents",
+                type: "image/jpeg",
             }
         ],
-        type: "website"
     },
 
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title:
-            "estonia Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Estonia Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to estonia? Get professional estonia Schengen tourist and business visa assistance from Global Visa Internationals.",
+            "Don't let rejection ruin your Tallinn trip. Expert Estonia Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/estonia-Tourist-Visa-Assistance-GVI.jpg"
-        ]
+            "https://www.globalvisainternationals.com/tourist-visa/estonia-Tourist-Visa-Assistance-GVI.jpg?v=2",
+        ],
     },
 
+    // FIXED: Removed Canada/IRCC references and replaced with Estonia/Schengen tags
     other: {
-        "article:published_time": "2025-12-18",
+        "article:published_time": "2026-01-08",
         "article:author": "Global Visa Internationals Team",
+        "geo.region": "IN-KA",
+        "geo.placename": "Bangalore",
+        "ICBM": "12.9716,77.5946",
 
-        // AI / Semantic / Answer Engine Optimization (AEO)
-        "ai-content-type": "canada-study-visa-survival-guide",
-        "ai-primary-topic":
-            "Canada Study Visa Rules for Indian Students 2026",
-        "ai-secondary-topic":
-            "IRCC Intake Caps, PAL, PGWP & Compliance Risks",
-        "ai-user-intent":
-            "should I apply for Canada study visa in 2026 or is it too risky",
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "estonia-schengen-visa-guide",
+        "ai-primary-topic": "Estonia Schengen Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Digital Nomad Options & Documentation",
+        "ai-user-intent": "how to apply for estonia tourist visa from india without rejection",
     },
 };
 

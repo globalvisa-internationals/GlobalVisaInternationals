@@ -5,65 +5,119 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Apply for Italy Tourist Visa from India | Italy Schengen Visa Experts",
+
+    // OPTIMIZED: Punchy title for higher CTR. 
+    // "99% Success" builds trust immediately. "(2026 Rules)" signals relevance.
+    title: "Italy Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Addresses the #1 struggle for Italy: APPOINTMENTS.
+    // Action-oriented language ("Chat now").
     description:
-        "Apply for your Italy Tourist Visa from India with Global Visa Internationals (GVI). Get expert assistance for documentation, appointment booking, and visa interview preparation for a hassle-free Italy and Schengen travel experience.",
+        "Struggling with Italy Visa appointments? GVI Bangalore secures your slot & handles 2026 documentation. 99% Success Rate for Tourist & Schengen visas. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
     keywords: [
         "Italy tourist visa from India",
-        "Italy Schengen visa for Indian citizens",
-        "apply Italy visa India",
-        "Italy visitor visa",
-        "Italy tourist visa assistance India",
+        "Italy Schengen visa requirements 2026",
+        "Italy visa appointment Bangalore", // High intent
+        "VFS Italy appointment availability",
         "Italy visa consultants Bangalore",
-        "Italy visa application process",
-        "Italy tourist visa documents required",
-        "Italy tourist visa fees India 2026",
-        "Schengen visa for Italy",
-        "Italy tourist visa agency India",
-        "Italy visa consultancy India",
-        "Italy tourist visa cost from India",
-        "Italy tourist visa eligibility India",
-        "Italy tourist visa processing time India",
+        "apply Italy visa India",
+        "Italy tourist visa fees 2026",
+        "Rome tourist visa", // City specific
+        "Milan business visa",
+        "Italy visa processing time India",
+        "Italy visa rejection reasons",
+        "Schengen visa agents in Bangalore",
+        "Italy visa documentation checklist",
+        "Global Visa Internationals Italy",
+        "Italy sponsorship visa India"
     ],
-    robots: "index, follow",
-    canonical:
-        "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/italy",
-    alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/italy",
+
+    // OPTIMIZED ROBOTS (Object format is preferred in Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/italy",
+
+    alternates: {
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/italy",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Italy",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title:
-            "Italy Tourist Visa from India | Expert Italy Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Italy Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals helps Indian travellers apply for Italy tourist and Schengen visas. Get expert assistance for requirements, documentation, appointment booking, and visa interview preparation.",
+            "Planning a trip to Rome or Milan in 2026? We handle the entire Italy Schengen visa process—from VFS appointments to documentation. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/italy",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/Italy-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/Italy-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Italy Tourist Visa Assistance by Global Visa Internationals",
+                alt: "Italy Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
             },
+            // Fallback square image (optional but recommended for chat apps)
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/Italy-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Italy Visa Agents",
+                type: "image/jpeg",
+            }
         ],
-        type: "website",
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title:
-            "Italy Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Italy Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning to visit Italy? Get end-to-end visa guidance from Global Visa Internationals — India’s most trusted consultants for Italy tourist and Schengen visa applications.",
+            "Don't let appointment delays ruin your Italy trip. Expert Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/Italy-Tourist-Visa-Assistance-GVI.jpg",
+            "https://www.globalvisainternationals.com/tourist-visa/Italy-Tourist-Visa-Assistance-GVI.jpg?v=2",
         ],
     },
+
     other: {
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
         ICBM: "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "italy-schengen-visa-guide",
+        "ai-primary-topic": "Italy Schengen Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Rome & Milan Travel, Sponsorship",
+        "ai-user-intent": "how to apply for italy tourist visa from india without rejection",
     },
 };
 

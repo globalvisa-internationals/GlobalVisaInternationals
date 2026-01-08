@@ -3,62 +3,119 @@ import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 
-
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Apply for France Tourist Visa from India | France Schengen Visa Experts",
+
+    // OPTIMIZED: High-impact title. 
+    // "99% Success" builds trust. "(2026 Rules)" signals you know the latest Schengen updates.
+    title: "France Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Directly addresses the #1 pain point: Appointments.
+    // Uses action-oriented language to drive clicks.
     description:
-        "Apply for your France Tourist Visa from India with Global Visa Internationals (GVI). Get expert guidance for documentation, appointment booking, and interview preparation to travel smoothly across France and the Schengen area.",
+        "France Visa appointments are hard to get. We secure your VFS slot & handle 2026 biometrics. 99% Success Rate for Tourist & Schengen visas. Chat with experts!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
     keywords: [
         "France tourist visa from India",
-        "France Schengen visa",
-        "apply France visa India",
-        "France visitor visa",
-        "France business visa",
+        "France Schengen visa requirements 2026",
+        "France visa appointment availability India", // High intent
         "France visa consultants Bangalore",
-        "France visa application process",
-        "France visa documents required",
-        "France visa fees India",
-        "Schengen visa for France",
+        "apply France visa India",
+        "Paris tourist visa",
+        "France business visa requirements",
+        "France visa fees 2026",
+        "Schengen biometrics France",
+        "France visa processing time India",
+        "France visa rejection reasons",
+        "Schengen visa agents in Bangalore",
+        "Global Visa Internationals France"
     ],
-    robots: "index, follow",
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france",
-    alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france",
+
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france",
+
+    alternates: {
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI France",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title:
-            "France Tourist Visa from India | Expert France Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your France Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals helps Indian travellers apply for France tourist, visitor, and business visas. Get expert help with requirements, documentation, and appointments for your France visa.",
+            "Planning a trip to Paris in 2026? We handle the entire France Schengen visa process—from VFS appointments to documentation. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/france",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "France Tourist Visa Assistance by Global Visa Internationals",
+                alt: "France Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
             },
+            // Fallback square image (optional but recommended for chat apps)
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI France Visa Agents",
+                type: "image/jpeg",
+            }
         ],
-        type: "website",
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title:
-            "France Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "France Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to France? Get professional visa guidance from Global Visa Internationals — experts in France tourist and Schengen visa processing for Indian travellers.",
+            "Don't let appointment delays ruin your Paris trip. Expert Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg",
+            "https://www.globalvisainternationals.com/tourist-visa/France-Tourist-Visa-Assistance-GVI.jpg?v=2",
         ],
     },
+
     other: {
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
         ICBM: "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "france-schengen-visa-guide",
+        "ai-primary-topic": "France Schengen Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Paris & Nice Travel, Biometrics",
+        "ai-user-intent": "how to apply for france tourist visa from india without rejection",
     },
 };
 

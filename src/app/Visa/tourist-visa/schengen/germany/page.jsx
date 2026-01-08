@@ -5,64 +5,119 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title:
-        "Apply for Germany Tourist Visa from India | Schengen Visa Experts",
+
+    // OPTIMIZED: Punchy title that fits in the small WhatsApp preview line.
+    // "(2026 Rules)" signals you are up-to-date with the new "No-Remonstration" policy.
+    title: "Germany Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Creates urgency. Germany abolished free appeals (remonstration) in mid-2025.
+    // This description highlights why users *need* an expert now more than ever.
     description:
-        "Apply for a Germany Tourist Visa from India with Global Visa Internationals. Get expert assistance for Germany tourist visa documentation, appointment booking, and interview preparation. Travel confidently across Germany and Schengen countries.",
+        "Germany has stopped free visa appeals. Don't risk rejection! GVI ensures first-time approval for Germany Tourist & Business visas. We handle Videx forms & VFS appointments. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
     keywords: [
-        "Germany tourist visa",
-        "apply Germany visa India",
-        "Germany Schengen visa",
-        "Germany visitor visa",
-        "Germany business visa",
-        "Germany visa requirements",
-        "Germany visa consultants",
-        "Germany visa documents",
-        "Germany visa fees",
-        "Germany visa application",
-        "Germany visa Bangalore",
+        "Germany tourist visa from India",
+        "Germany Schengen visa requirements 2026",
+        "Germany visa appointment wait time India", // High intent pain point
+        "Videx form filling assistance", // Specific technical keyword
+        "Germany visa fees 2026",
+        "Schengen visa agents Bangalore",
+        "Munich business visa India",
+        "Germany visa rejection reasons 2026", // High search volume
+        "Berlin visitor visa",
+        "Germany trade fair visa",
+        "VFS Germany appointment Bangalore",
+        "Track Germany visa application",
+        "Global Visa Internationals Germany"
     ],
-    robots: "index, follow",
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/germany",
-    alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/germany",
+
+    // OPTIMIZED ROBOTS
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/germany",
+
+    alternates: {
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/germany",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Germany",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title:
-            "Germany Tourist Visa Assistance from India | Global Visa Internationals",
+        // Social Title: Focuses on the "Approval" benefit
+        title: "Get Your Germany Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals helps Indian travelers apply for Germany tourist, visitor, and business visas. Get expert guidance on requirements, documentation, and appointment booking for your Germany visa.",
+            "Rejections are now costly. We ensure your Germany Schengen visa is approved the first time. Expert help with Videx forms, appointments & insurance in Bangalore.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/germany",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/Germany-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape & 'type' ensures compatibility
+                url: "https://www.globalvisainternationals.com/tourist-visa/Germany-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Germany Tourist Visa Assistance Banner",
+                alt: "Germany Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
             },
+            // Fallback square image (optional but recommended for chat apps)
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/Germany-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Germany Visa Agents",
+                type: "image/jpeg",
+            }
         ],
-        type: "website",
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title:
-            "Germany Tourist Visa Assistance from India | Global Visa Internationals",
+        creator: "@GLOBALVISA1505",
+        title: "Germany Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to Germany? Apply for your Germany tourist or business visa with Global Visa Internationals. End-to-end support for documentation, form filling, and interview preparation.",
+            "Avoid visa rejection. Expert Germany Schengen visa assistance in Bangalore. We handle Videx forms & appointments.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/Germany-Tourist-Visa-Assistance-GVI.jpg",
+            "https://www.globalvisainternationals.com/tourist-visa/Germany-Tourist-Visa-Assistance-GVI.jpg?v=2",
         ],
     },
+
     other: {
         "geo.region": "IN-KA",
-        "geo.placename": "Bengaluru",
+        "geo.placename": "Bangalore",
         ICBM: "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "germany-schengen-visa-guide",
+        "ai-primary-topic": "Germany Schengen Visa Rules 2026",
+        "ai-secondary-topic": "Videx Forms, VFS Appointments, Berlin & Munich Travel",
+        "ai-user-intent": "how to apply for germany tourist visa from india without rejection",
     },
 };
-
 export default function Germany_Tourist_Visa_Assistance() {
     const pageUrl =
         "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/germany";

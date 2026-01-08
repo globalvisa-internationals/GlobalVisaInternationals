@@ -6,59 +6,127 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Apply for Belgium Tourist Visa from India | Belgium Schengen Visa Experts",
+
+    // OPTIMIZED: Punchy title. "(2026 Rules)" signals relevance.
+    // "99% Success" builds trust immediately.
+    title: "Belgium Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Addresses the #1 destination (Brussels) and the #1 pain point (Appointments).
+    // Action-oriented ("Chat now").
     description:
-        "Apply for your Belgium Tourist Visa from India with Global Visa Internationals (GVI). Get expert guidance for documentation, appointment booking, and interview preparation to travel smoothly across Belgium and the Schengen area.",
+        "Visiting Brussels? We secure your Belgium Schengen visa appointment & handle 2026 documentation. 99% Success Rate. Expert agents in Bangalore. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
     keywords: [
+        // High Value / High Intent
         "Belgium tourist visa from India",
-        "Belgium Schengen visa",
-        "apply Belgium visa India",
-        "Belgium visitor visa",
-        "Belgium business visa",
+        "Belgium Schengen visa requirements 2026",
+        "Belgium visa appointment VFS Bangalore",
+        "Brussels tourist visa",
+        "Antwerp business visa", // High value business travel
         "Belgium visa consultants Bangalore",
-        "Belgium visa application process",
-        "Belgium visa documents required",
-        "Belgium visa fees India",
+        "apply Belgium visa online",
+        "Belgium visa fees 2026",
+
+        // Niche / Long Tail
         "Schengen visa for Belgium",
+        "Best Belgium visa agents in Bangalore",
+        "Belgium visa application center Bangalore",
+        "Top Belgium visa consultants in India",
+        "Visa agents for Belgium in Indiranagar",
+        "Belgium visa processing time India",
+        "Belgium visa rejection assistance",
+        "VFS Belgium visa appointment help",
+        "Belgium travel insurance requirements",
+        "Global Visa Internationals Belgium"
     ],
-    robots: "index, follow",
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/belgium",
-    alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/belgium",
+
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/belgium",
+
+    alternates: {
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/belgium",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Belgium",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title:
-            "Belgium Tourist Visa from India | Expert Belgium Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Belgium Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals helps Indian travellers apply for Belgium tourist, visitor, and business visas. Get expert help with requirements, documentation, and appointments for your Belgium visa.",
+            "Visiting Brussels or Bruges in 2026? We handle the entire Schengen visa process—from VFS appointments to accommodation proof. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/belgium",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/Belgium-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/Belgium-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Belgium Tourist Visa Assistance by Global Visa Internationals",
+                alt: "Belgium Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
             },
+            // Fallback square image
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/Belgium-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Belgium Visa Agents",
+                type: "image/jpeg",
+            }
         ],
-        type: "website",
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title:
-            "Belgium Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Belgium Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to Belgium? Get professional visa guidance from Global Visa Internationals — experts in Belgium tourist and Schengen visa processing for Indian travellers.",
+            "Don't let rejection ruin your Belgian holiday. Expert Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/Belgium-Tourist-Visa-Assistance-GVI.jpg",
+            "https://www.globalvisainternationals.com/tourist-visa/Belgium-Tourist-Visa-Assistance-GVI.jpg?v=2",
         ],
     },
+
     other: {
+        "article:published_time": "2026-01-08",
+        "article:author": "Global Visa Internationals Team",
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
-        ICBM: "12.9716,77.5946",
+        "ICBM": "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "belgium-schengen-visa-guide",
+        "ai-primary-topic": "Belgium Schengen Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Brussels & Bruges Travel",
+        "ai-user-intent": "how to apply for belgium tourist visa from india without rejection",
     },
 };
 

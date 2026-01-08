@@ -5,92 +5,132 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Apply for Croatia Tourist Visa from India | Croatia Schengen Visa Experts",
-    description:
-        "Apply for your Croatia Tourist Visa from India with Global Visa Internationals (GVI). Get expert guidance for documentation, appointment booking, and interview preparation to travel smoothly across Croatia and the Schengen area.",
-    keywords: [
-        "Croatia tourist visa from India",
-        "Croatia Schengen visa",
-        "apply Croatia visa India",
-        "Croatia visitor visa",
-        "Croatia business visa",
-        "Croatia visa consultants Bangalore",
-        "Croatia visa application process",
-        "Croatia visa documents required",
-        "Croatia visa fees India",
-        "Schengen visa for Croatia",
 
-        // Added Keywords from your list
-        "Croatia visa consultants in Bangalore",
+    // OPTIMIZED: Punchy title. "(2026 Rules)" signals relevance.
+    // "99% Success" builds trust immediately.
+    title: "Croatia Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Addresses the #1 destination (Dubrovnik) and the #1 pain point (Appointments).
+    // Action-oriented ("Chat now").
+    description:
+        "Visiting Dubrovnik? We secure Croatia Schengen visa appointments & handle 2026 documentation. 99% Success Rate. Expert agents in Bangalore. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
+    keywords: [
+        // High Value / High Intent
+        "Croatia tourist visa from India",
+        "Croatia Schengen visa requirements 2026",
+        "Croatia visa appointment VFS Bangalore",
+        "Dubrovnik tourist visa",
+        "Zagreb business visa",
+        "Croatia visa consultants Bangalore",
+        "apply Croatia visa online",
+        "Croatia visa fees 2026",
+
+        // Niche / Long Tail
+        "Schengen visa for Croatia",
         "Best Croatia visa agents in Bangalore",
-        "Croatia visa agency near me",
         "Croatia visa application center Bangalore",
         "Top Croatia visa consultants in India",
-        "Croatia visa assistance near me",
         "Visa agents for Croatia in Indiranagar",
-        "Croatia visa service provider Bangalore",
-        "Croatia tourist visa assistance",
-        "Croatia Schengen visa consultants",
-        "Top rated Croatia visa agents",
-        "Best Croatia visa consultants for Indian citizens",
-        "Trusted Croatia visa agency",
-        "Professional Croatia visa assistance",
-        "Reliable Croatia visa consultants",
-        "Low cost Croatia visa agents",
-        "How to apply for Croatia visa from Bangalore",
-        "Croatia tourist visa requirements for Indian citizens",
         "Croatia visa processing time India",
-        "Documents required for Croatia tourist visa",
         "Croatia visa rejection assistance",
-        "Croatia visa fees and service charges",
         "VFS Croatia visa appointment help",
-        "Croatia visa cover letter assistance",
-        "Schengen visa for Croatia from India",
-        "Croatia business visa agents",
-        "Croatia visiting visa services",
-        "Croatia visa appointment booking",
-        "Express Croatia visa services",
-        "Croatia travel visa consultancy"
+        "Croatia travel insurance requirements",
+        "Global Visa Internationals Croatia"
     ],
-    robots: "index, follow",
+
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/croatia",
+
     alternates: {
         canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/croatia",
     },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Croatia",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title: "Croatia Tourist Visa from India | Expert Croatia Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Croatia Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals helps Indian travellers apply for Croatia tourist, visitor, and business visas. Get expert help with requirements, documentation, and appointments for your Croatia visa.",
+            "Planning a trip to Split or Dubrovnik in 2026? We handle the entire Schengen visa process—from VFS appointments to accommodation proof. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/croatia",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/Croatia-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/Croatia-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Croatia Tourist Visa Assistance by Global Visa Internationals"
+                alt: "Croatia Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
+            },
+            // Fallback square image
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/Croatia-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Croatia Visa Agents",
+                type: "image/jpeg",
             }
         ],
-        type: "website"
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title: "Croatia Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Croatia Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to Croatia? Get professional visa guidance from Global Visa Internationals — experts in Croatia tourist and Schengen visa processing for Indian travellers.",
+            "Don't let rejection ruin your Croatian holiday. Expert Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/Croatia-Tourist-Visa-Assistance-GVI.jpg"
-        ]
+            "https://www.globalvisainternationals.com/tourist-visa/Croatia-Tourist-Visa-Assistance-GVI.jpg?v=2",
+        ],
     },
+
     other: {
+        "article:published_time": "2026-01-08",
+        "article:author": "Global Visa Internationals Team",
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
-        ICBM: "12.9716,77.5946"
-    }
+        "ICBM": "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "croatia-schengen-visa-guide",
+        "ai-primary-topic": "Croatia Schengen Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Split & Dubrovnik Travel",
+        "ai-user-intent": "how to apply for croatia tourist visa from india without rejection",
+    },
 };
 
 
-export default function Bulgaria_Tourist_Visa_Assistance() {
+export default function Croatia_Tourist_Visa_Assistance() {
     const pageUrl =
         "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/croatia";
 

@@ -90,6 +90,12 @@ export const metadata = {
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
         ICBM: "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "latvia-schengen-visa-guide",
+        "ai-primary-topic": "Latvia Schengen Visa Rules 2026",
+        "ai-secondary-topic": "Hello Verify, VFS Appointments, Riga Travel",
+        "ai-user-intent": "how to apply for latvia tourist visa from india without rejection",
     },
 };
 

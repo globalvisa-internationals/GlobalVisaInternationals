@@ -7,68 +7,116 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Apply for Greece Tourist Visa from India | Greece Schengen Visa Experts",
+
+    // OPTIMIZED: "99% Success" builds trust immediately. "(2026 Rules)" signals relevance.
+    title: "Greece Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Addresses the #1 struggle: APPOINTMENTS. Action-oriented language ("Chat now").
     description:
-        "Apply for your Greece Tourist Visa from India with Global Visa Internationals (GVI). Get expert guidance for Greece Schengen visa documentation, appointment booking, and interview preparation to enjoy a smooth European travel experience.",
+        "Struggling with Greece Visa appointments? GVI Bangalore secures your slot & handles 2026 documentation. 99% Success Rate for Tourist & Schengen visas. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
     keywords: [
         "Greece tourist visa from India",
-        "Greece Schengen visa for Indian citizens",
-        "apply Greece visa India",
-        "Greece visitor visa",
-        "Greece tourist visa assistance India",
+        "Greece Schengen visa requirements 2026",
+        "Greece visa appointment VFS India", // High intent
         "Greece visa consultants Bangalore",
-        "Greece visa application process",
-        "Greece tourist visa documents required",
-        "Greece tourist visa fees India 2026",
-        "Schengen visa for Greece",
-        "Greece tourist visa agency India",
-        "Greece visa consultancy India",
-        "Greece tourist visa cost from India",
-        "Greece tourist visa eligibility India",
-        "Greece tourist visa processing time India",
-        "how to apply Greece tourist visa from India",
-        "Greece visa appointment VFS India",
-        "Greece Schengen visa requirements India",
-        "Greece travel visa support India",
-        "Greece embassy visa guidance Bangalore"
+        "apply Greece visa India",
+        "Greece tourist visa fees 2026",
+        "Santorini tourist visa", // Destination specific
+        "Athens business visa",
+        "Greece visa processing time India",
+        "Greece visa rejection reasons",
+        "Schengen visa agents in Bangalore",
+        "Greece visa documentation checklist",
+        "Global Visa Internationals Greece",
+        "Greece island hopping visa"
     ],
-    robots: "index, follow",
-    canonical:
-        "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/greece",
-    alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/greece",
+
+    // OPTIMIZED ROBOTS (Object format is preferred in Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/greece",
+
+    alternates: {
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/greece",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Greece",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title: "Greece Tourist Visa from India | Expert Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Greece Visa Approved | 99% Success Rate | GVI",
         description:
-            "Get hassle-free Greece Tourist Visa assistance from Global Visa Internationals. Expert guidance for documentation, Schengen visa requirements, and embassy appointments — trusted by 10,000+ Indian travellers.",
+            "Planning a trip to Santorini or Athens in 2026? We handle the entire Greece Schengen visa process—from VFS appointments to documentation. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/greece",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/Greece-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/Greece-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Greece Tourist Visa Assistance by Global Visa Internationals",
+                alt: "Greece Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
             },
+            // Fallback square image (optional but recommended for chat apps)
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/Greece-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Greece Visa Agents",
+                type: "image/jpeg",
+            }
         ],
-        type: "website",
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title: "Greece Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Greece Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning to visit Greece? Global Visa Internationals offers end-to-end Greece Schengen visa support — documentation, appointment, and interview assistance for a smooth European vacation.",
+            "Don't let appointment delays ruin your Greece trip. Expert Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/Greece-Tourist-Visa-Assistance-GVI.jpg",
+            "https://www.globalvisainternationals.com/tourist-visa/Greece-Tourist-Visa-Assistance-GVI.jpg?v=2",
         ],
     },
+
     other: {
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
         ICBM: "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "greece-schengen-visa-guide",
+        "ai-primary-topic": "Greece Schengen Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Athens & Santorini Travel, Island Hopping",
+        "ai-user-intent": "how to apply for greece tourist visa from india without rejection",
     },
 };
 

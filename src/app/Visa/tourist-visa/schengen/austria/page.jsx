@@ -6,58 +6,128 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 
 export const metadata = {
     metadataBase: new URL("https://www.globalvisainternationals.com"),
-    title: "Austria Tourist Visa from India (Schengen) — Apply · Documents & Fees",
-    description: "Apply for Austria tourist (Schengen) visa from India — documents, fees (€90), processing time, VFS steps & expert help from GVI. Free eligibility check.",
+
+    // OPTIMIZED: Punchy title. "(2026 Rules)" signals relevance.
+    // "99% Success" builds trust immediately.
+    title: "Austria Visa Agents Bangalore (2026 Rules) | 99% Success | GVI",
+
+    // OPTIMIZED: Addresses the #1 destination (Vienna) and the #1 pain point (Appointments).
+    // Action-oriented ("Chat now").
+    description:
+        "Visiting Vienna? We secure your Austria Schengen visa appointment & handle 2026 documentation. 99% Success Rate. Expert agents in Bangalore. Chat now!",
+
+    // BRAND AUTHORITY (E-E-A-T)
+    creator: "Global Visa Internationals",
+    publisher: "Global Visa Internationals",
+    category: "Travel & Visa Services",
+
     keywords: [
+        // High Value / High Intent
         "Austria tourist visa from India",
-        "Austria Schengen visa",
-        "apply Austria visa India",
-        "Austria visitor visa",
-        "Austria business visa",
+        "Austria Schengen visa requirements 2026",
+        "Austria visa appointment VFS Bangalore",
+        "Vienna tourist visa",
+        "Salzburg holiday visa", // Popular destination
+        "Austria business visa India",
         "Austria visa consultants Bangalore",
-        "Austria visa application process",
-        "Austria visa documents required",
-        "Austria visa fees India",
+        "apply Austria visa online",
+        "Austria visa fees 2026",
+
+        // Niche / Long Tail
         "Schengen visa for Austria",
+        "Best Austria visa agents in Bangalore",
+        "Austria visa application center Bangalore",
+        "Top Austria visa consultants in India",
+        "Visa agents for Austria in Indiranagar",
+        "Austria visa processing time India",
+        "Austria visa rejection assistance",
+        "VFS Austria visa appointment help",
+        "Austria travel insurance requirements",
+        "Global Visa Internationals Austria"
     ],
-    robots: "index, follow",
-    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/austria",
-    alternates: {
-        canonical:
-            "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/austria",
+
+    // OPTIMIZED ROBOTS (Object format preferred for Next.js 14+)
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
+
+    canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/austria",
+
+    alternates: {
+        canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/austria",
+    },
+
+    // MOBILE OPTIMIZATION
+    appleWebApp: {
+        title: "GVI Austria",
+        statusBarStyle: "default",
+        capable: true,
+    },
+    formatDetection: {
+        telephone: false, // Prevents iOS from blue-linking phone numbers
+    },
+
     openGraph: {
-        title:
-            "Austria Tourist Visa from India | Expert Austria Schengen Visa Assistance",
+        // Social Title: Focuses on the solution (Approval)
+        title: "Get Your Austria Visa Approved | 99% Success Rate | GVI",
         description:
-            "Global Visa Internationals helps Indian travellers apply for Austria tourist, visitor, and business visas. Get expert help with requirements, documentation, and appointments for your Austria visa.",
+            "Visiting Vienna or Salzburg in 2026? We handle the entire Schengen visa process—from VFS appointments to accommodation proof. Apply with confidence.",
         url: "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen/austria",
         siteName: "Global Visa Internationals",
+        locale: "en_IN",
+        type: "website",
         images: [
             {
-                url: "https://www.globalvisainternationals.com/tourist-visa/Austria-Tourist-Visa-Assistance-GVI.jpg",
+                // WHATSAPP FIX: Version query (?v=2) forces a fresh scrape
+                url: "https://www.globalvisainternationals.com/tourist-visa/Austria-Tourist-Visa-Assistance-GVI.jpg?v=2",
                 width: 1200,
                 height: 630,
-                alt: "Austria Tourist Visa Assistance by Global Visa Internationals",
+                alt: "Austria Tourist Visa Assistance 2026",
+                type: "image/jpeg", // CRITICAL for WhatsApp
             },
+            // Fallback square image
+            {
+                url: "https://www.globalvisainternationals.com/tourist-visa/Austria-Tourist-Visa-Assistance-GVI.jpg?v=2&thumb=1",
+                width: 400,
+                height: 400,
+                alt: "GVI Austria Visa Agents",
+                type: "image/jpeg",
+            }
         ],
-        type: "website",
     },
+
     twitter: {
         card: "summary_large_image",
         site: "@GLOBALVISA1505",
-        title:
-            "Austria Tourist Visa from India | Global Visa Internationals (GVI)",
+        creator: "@GLOBALVISA1505",
+        title: "Austria Visa Experts (2026) | Tourist & Business | GVI",
         description:
-            "Planning a trip to Austria? Get professional visa guidance from Global Visa Internationals — experts in Austria tourist and Schengen visa processing for Indian travellers.",
+            "Don't let rejection ruin your Austrian holiday. Expert Schengen visa assistance in Bangalore. 99% Success Rate.",
         images: [
-            "https://www.globalvisainternationals.com/tourist-visa/Austria-Tourist-Visa-Assistance-GVI.jpg",
+            "https://www.globalvisainternationals.com/tourist-visa/Austria-Tourist-Visa-Assistance-GVI.jpg?v=2",
         ],
     },
+
     other: {
+        "article:published_time": "2026-01-08",
+        "article:author": "Global Visa Internationals Team",
         "geo.region": "IN-KA",
         "geo.placename": "Bangalore",
-        ICBM: "12.9716,77.5946",
+        "ICBM": "12.9716,77.5946",
+
+        // AI / Semantic Optimization (AEO)
+        "ai-content-type": "austria-schengen-visa-guide",
+        "ai-primary-topic": "Austria Schengen Visa Rules 2026",
+        "ai-secondary-topic": "VFS Appointments, Vienna & Salzburg Travel",
+        "ai-user-intent": "how to apply for austria tourist visa from india without rejection",
     },
 };
 
