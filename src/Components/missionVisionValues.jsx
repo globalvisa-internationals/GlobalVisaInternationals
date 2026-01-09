@@ -19,47 +19,56 @@ const MissionVisionValues = () => {
 
     return (
         <>
-            <Head>
-                <title>Our Mission, Vision & Core Values | Global Visa Internationals</title>
-                <meta name="description" content="Discover Global Visa Internationals' mission, vision, and values — transparency, empathy, and client-first guidance for your global immigration journey." />
 
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
-            </Head>
 
             <section className={styles.missionVisionValues}>
                 <div className={styles.missionCard}>
                     <img
                         className={styles.custImg}
                         src="/gviVMV/mission-icon.png"
-                        alt="Global Visa Internationals Mission Icon"
+                        alt="Mission of Global Visa Internationals"
                         loading="lazy"
                     />
                     <h3>Our Mission</h3>
-                    <p>    We aim to simplify international visa and immigration processes with expert    guidance, ethical support, and end-to-end assistance, empowering students,    professionals, and families to achieve their global aspirations with confidence.</p>
+                    <p>
+                        Our mission is to provide clear and ethical visa and immigration guidance by
+                        assisting applicants with documentation, eligibility assessment, and
+                        application support. We focus on helping students, professionals, and
+                        families navigate international visa processes with accuracy and clarity.
+                    </p>
                 </div>
 
                 <div className={styles.visionCard}>
                     <img
                         className={styles.custImg}
                         src="/gviVMV/vision-icon.png"
-                        alt="Global Visa Internationals Vision Icon"
+                        alt="Vision of Global Visa Internationals"
                         loading="lazy"
                     />
                     <h3>Our Vision</h3>
-                    <p>    To be the most trusted and innovative visa consultancy, helping people overcome    borders and create opportunities worldwide through reliable, transparent, and    client-focused solutions.</p>
+                    <p>
+                        Our vision is to be a reliable visa consultancy recognized for transparent
+                        processes, compliance with immigration regulations, and consistent client
+                        support across multiple countries and visa categories.
+                    </p>
                 </div>
 
                 <div className={styles.valuesCard}>
                     <img
                         className={styles.custImg}
                         src="/gviVMV/values-icon.png"
-                        alt="Global Visa Internationals Core Values Icon"
+                        alt="Core values of Global Visa Internationals"
                         loading="lazy"
                     />
-                    <h3>Core Values</h3>
-                    <p>    Transparency, Client-First, Empathy, Accountability, and a Global Perspective guide    everything we do to support your international journey.</p>
+                    <h3>Our Core Values</h3>
+                    <p>
+                        Transparency, accountability, empathy, and a client-first approach guide our
+                        work. We prioritize accuracy, ethical advisory practices, and respect for
+                        the regulations set by immigration authorities.
+                    </p>
                 </div>
             </section>
+
         </>
     );
 };
