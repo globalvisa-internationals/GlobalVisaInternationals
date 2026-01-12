@@ -39,15 +39,15 @@ const WhychoosGVI = () => {
                 <div className={styles.serviceCard}>
                     <h3>Global Destination Expertise</h3>
                     <ul>
-                        <li><strong>Canada</strong> – Study, Work, Visitor & Express Entry</li>
-                        <li><strong>Australia</strong> – Skilled Migration & PR Pathways</li>
-                        <li><strong>United Kingdom</strong> – Student & Business Visas</li>
-                        <li><strong>United States</strong> – Visitor & Academic Visas</li>
-                        <li><strong>Europe</strong> – Schengen Area Visa Assistance</li>
-                        <li><strong>Japan</strong> – Tourist & Cultural Exchange Visas</li>
-                        <li><strong>China</strong> – Business & Educational Visas</li>
-                        <li><strong>Singapore</strong> – Professional Visit Passes</li>
-                        <li><strong>Global Network</strong> – 45+ Destination Coverage</li>
+                        <li><strong>Canada</strong> - Study, Work, Visitor & Express Entry</li>
+                        <li><strong>Australia</strong> - Skilled Migration & PR Pathways</li>
+                        <li><strong>United Kingdom</strong> - Student & Business Visas</li>
+                        <li><strong>United States</strong> - Visitor & Academic Visas</li>
+                        <li><strong>Europe</strong> - Schengen Area Visa Assistance</li>
+                        <li><strong>Japan</strong> - Tourist & Cultural Exchange Visas</li>
+                        <li><strong>China</strong> - Business & Educational Visas</li>
+                        <li><strong>Singapore</strong> - Professional Visit Passes</li>
+                        <li><strong>Global Network</strong> - 45+ Destination Coverage</li>
                     </ul>
                 </div>
             </div>
