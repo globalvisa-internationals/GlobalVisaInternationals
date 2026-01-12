@@ -1,62 +1,130 @@
-/* ========== WHY CHOOSE SECTION ========== */
-.whyChooseContainer {
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 0;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+/* ========== WHY CHOOSE SECTION - CORPORATE REDESIGN ========== */
+.whyChooseSection {
+    padding: 10px 15px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.whyChooseSection::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-primary);
+    opacity: 0.03;
+    border-radius: 50%;
+    transform: translate(-30%, 30%);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sectionHeader h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--corporate-dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.sectionHeader p {
+    font-size: 1.2rem;
+    color: var(--corporate-gray);
     line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-.whyChooseContainer h2 {
-    text-align: justify;
-    color: var(--primary);
-    font-size: 1.75rem;
-    font-weight: 600;
+.disclaimerBox {
+    background: linear-gradient(135deg, rgba(255, 245, 245, 0.8) 0%, rgba(254, 242, 242, 0.8) 100%);
+    border: 1px solid rgba(254, 202, 202, 0.3);
+    border-left: 4px solid #f87171;
+    padding: 20px;
+    border-radius: var(--border-radius-md);
+    margin-top: 30px;
+    font-size: 0.95rem;
+    color: #7f1d1d;
 }
 
-.whyChooseContainer p {
-    text-align: justify;
-}
-
-/* ========== SERVICE CARDS ========== */
+/* ========== SERVICE CARDS - ENHANCED ========== */
 .serviceCards {
     display: grid;
-    gap: 24px;
-    margin: 32px 0;
-    max-width: 100%;
+    gap: 30px;
+    margin: 60px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .serviceCard {
-    background: #ffffff;
-    border: 1px solid #e0f7fa;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.serviceCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--gradient-primary);
 }
 
 .serviceCard:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-elevated);
+    border-color: rgba(45, 107, 195, 0.2);
 }
 
 .serviceCard h3 {
-    color: #057A7E;
-    font-size: 1.25rem;
-    margin-bottom: 16px;
-    text-align: center;
+    color: var(--corporate-blue);
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.serviceCard h3::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--corporate-accent);
+    border-radius: 50%;
 }
 
 .serviceCard ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    gap: 12px;
 }
 
 .serviceCard ul li {
-    padding: 8px 0 8px 24px;
+    padding: 12px 0 12px 40px;
     position: relative;
-    border-bottom: 1px solid #f0f0f0;
+    color: var(--corporate-gray);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    transition: color 0.3s ease;
 }
 
 .serviceCard ul li:last-child {
@@ -64,212 +132,200 @@
 }
 
 .serviceCard ul li::before {
-    content: "✓";
+    content: '';
     position: absolute;
     left: 0;
-    color: var(--accent);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
     font-weight: bold;
 }
 
-/* ========== STATS GRID ========== */
+.serviceCard ul li::after {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
 
+.serviceCard ul li:hover {
+    color: var(--corporate-blue);
+}
+
+/* ========== STATS GRID - ENHANCED ========== */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+}
+
+.statCard {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.statCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.statCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-elevated);
+}
+
+.statCard:hover::before {
+    opacity: 1;
+}
+
+.statIcon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(45, 107, 195, 0.1) 0%, rgba(26, 54, 93, 0.1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.statCard:hover .statIcon {
+    background: var(--gradient-primary);
+    transform: scale(1.1);
+}
+
+.statCard img {
+    width: 32px;
+    height: 32px;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.statCard:hover img {
+    filter: grayscale(0) brightness(1);
+}
+
+.statValue {
+    font-size: 0.9 rem;
+    font-weight: 700;
+    color: var(--corporate-blue);
+    margin: 10px 0;
+    line-height: 1;
+}
+
+.statDescription {
+    font-size: 1rem;
+    color: var(--corporate-gray);
+    line-height: 1.5;
+    margin-top: 10px;
+}
 
 /* ========== TABLET (≥768px) ========== */
 @media (min-width: 768px) {
-    .whyChooseContainer {
-        margin: 10px auto;
-        padding: 0 32px;
+    .whyChooseSection {
+        padding: 100px 40px;
     }
 
-    .whyChooseContainer h2 {
-        font-size: 1.5rem;
-        margin-bottom: 32px;
+    .sectionHeader h2 {
+        font-size: 3rem;
     }
 
-    .serviceCards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
-        margin: 10px 0;
-    }
-
-    .serviceCard {
-        padding: 20px;
-    }
-
-    .serviceCard h3 {
-        font-size: 1.5rem;
-    }
-
-}
-
-/* ========== DESKTOP (≥1024px) ========== */
-@media (min-width: 1024px) {
-    .whyChooseContainer {
-        margin: 0 auto;
-    }
-
-    .whyChooseContainer h2 {
-        font-size: 2rem;
+    .sectionHeader p {
+        font-size: 1.3rem;
     }
 
     .serviceCards {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
-        margin: 10px 0;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .statCard {
+        padding: 20px 15px;
+    }
+
+    .statValue {
+        font-size: 1 rem;
+    }
+}
+
+/* ========== DESKTOP (≥1024px) ========== */
+@media (min-width: 1024px) {
+    .whyChooseSection {
+        padding: 120px 60px;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .serviceCard {
-        padding: 32px;
+        padding: 50px 40px;
     }
-
-
 }
 
 /* ========== LARGE DESKTOP (≥1200px) ========== */
 @media (min-width: 1200px) {
-    .whyChooseContainer {
-        max-width: 95%px;
-    }
-
     .serviceCards {
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        gap: 50px;
     }
 
-}
-
-
-/* ===== CARD GRID ===== */
-.whyGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* centers rows */
-    gap: 16px;
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 10px 0;
-}
-
-/* ===== INDIVIDUAL CARD ===== */
-.whyCard {
-    background: var(--background);
-    border: 1px solid #e0e0e0;
-    color: var(--text);
-    padding: 10px;
-    width: 160px;
-    flex: 0 1 160px;
-    /* prevents stretching */
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whyCard:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-}
-
-/* ===== CARD IMAGE ===== */
-.whyImg {
-    height: 40px;
-    width: 40px;
-    margin-bottom: 12px;
-    object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-.whyCard:hover .whyImg {
-    filter: grayscale(0);
-}
-
-/* ===== CARD TEXT ===== */
-.whyCard strong {
-    font-size: 1rem;
-    color: var(--accent);
-    margin-bottom: 6px;
-}
-
-.whyCard p {
-    font-size: 0.85rem;
-    line-height: 1.4;
-    color: var(--text);
-}
-
-/* ===== MEDIA QUERIES ===== */
-@media (min-width: 768px) {
-    .whyGrid {
-        gap: 15px;
-        max-width: 90%;
-    }
-
-    .whyCard {
-        width: 90%px;
-        flex: 0 1 200px;
-        padding: 20px;
-    }
-
-    .whyImg {
-        height: 48px;
-        width: 48px;
-        margin-bottom: 14px;
-    }
-
-    .whyCard strong {
-        font-size: 1.3rem;
-    }
-
-    .whyCard p {
-        font-size: 0.9rem;
+    .statsGrid {
+        gap: 35px;
     }
 }
 
-@media (min-width: 1024px) {
-    .whyGrid {
-        gap: 15px;
-        max-width: 1200px;
+/* ========== ANIMATION FOR STATS ========== */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
 
-    .whyCard {
-        max-width: 230px;
-        flex: 0 1 230px;
-        padding: 24px;
-    }
-
-    .whyImg {
-        height: 52px;
-        width: 52px;
-        margin-bottom: 16px;
-    }
-
-    .whyCard strong {
-        font-size: 1.4rem;
-    }
-
-    .whyCard p {
-        font-size: 0.95rem;
-        line-height: 1.5;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-
-
-.subtitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    margin: 0 auto;
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
-    color: #057A7E;
-    font-weight: 600;
-    font-size: 2rem;
-    letter-spacing: 0.5px;
+.statCard {
+    animation: countUp 0.6s ease forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+    opacity: 0;
 }

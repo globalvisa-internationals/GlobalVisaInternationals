@@ -738,45 +738,44 @@ export default function Home() {
         </h1>
 
 
-        {/* About Us Section */}
-        <section id="aboutUs">
+        {/* About Us Section - Modern Corporate Design */}
+        <section className={styles.aboutSection} id="aboutUs">
+          <div className={styles.sectionTitle}>
+            <h2>Our Story</h2>
+            <div className={styles.titleUnderline}></div>
+          </div>
 
-          <h2 className={styles.subtitle}>Our Story</h2>
           <section className={styles.storyContainer}>
-
             {/* Left Image */}
-
             <div className={styles.imageWrapper}>
-              <img className={styles.responsiveImage} src="https://www.globalvisainternationals.com/images/story.webp" alt="Best visa agents in Bangalore" />
+              <img
+                className={styles.responsiveImage}
+                src="https://www.globalvisainternationals.com/images/story.webp"
+                alt="Global Visa Internationals team - professional visa consultants"
+              />
             </div>
-            {/* Right Text */}
+
+            {/* Right Text Content */}
             <div className={styles.textContent}>
+              <h3>Global Visa Internationals: Your Trusted Immigration Partner</h3>
+
               <p>
-                Global Visa Internationals is a professional visa and immigration consultancy
-                based in India, assisting applicants with study, work, tourist, and business
-                visas. We help individuals and families navigate the visa application process
-                with clear guidance, accurate documentation, and structured support at every
-                stage.
+                At Global Visa Internationals, we transform complex immigration processes into
+                seamless, well-structured journeys. As a premier visa consultancy headquartered
+                in India, we specialize in comprehensive immigration solutions for individuals,
+                families, and professionals pursuing global opportunities.
               </p>
 
               <p>
-                For students planning to study abroad, we provide step-by-step assistance for
-                student visa applications, including documentation preparation and visa
-                interview guidance. Our services cover major destinations such as Canada, the
-                United Kingdom, the United States, and Australia. We also assist travelers
-                applying for tourist visas, including Canada visitor visas, Australia tourist
-                visas, and Schengen visas for Europe.
+                Our expertise encompasses <strong>study visas</strong> for academic pursuits,
+                <strong> work visas</strong> for career advancement, <strong>tourist visas</strong>
+                for global exploration, and <strong>business visas</strong> for international
+                enterprise. Each application receives meticulous attention, combining regulatory
+                precision with personalized strategy.
               </p>
 
-              <p>
-                Our team consists of experienced visa consultants and immigration specialists
-                who focus on accuracy, transparency, and compliance with embassy requirements.
-                While visa decisions are made solely by the respective authorities, we aim to
-                reduce errors, improve application quality, and provide reliable end-to-end
-                visa assistance tailored to each applicant’s profile.
-              </p>
+
             </div>
-
           </section>
         </section>
 

@@ -54,6 +54,21 @@ body {
   --radius: 10px;
   --transition: 0.25s ease;
   --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /*  */
+  --corporate-blue: #1a365d;
+  --corporate-accent: #2d6bc3;
+  --corporate-light: #f8fafc;
+  --corporate-gray: #64748b;
+  --corporate-dark: #0f172a;
+  --gradient-primary: linear-gradient(135deg, #1a365d 0%, #2d6bc3 100%);
+  --gradient-subtle: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-elevated: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 5px 10px -5px rgba(0, 0, 0, 0.02);
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
