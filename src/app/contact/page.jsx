@@ -1,10 +1,6 @@
-import styles from './page.module.css';
-import Image from 'next/image';
+
 import React from 'react';
-import VisaForm from '@/Components/VisaForm';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
-import { IoIosCheckmarkCircle } from 'react-icons/io';
-import ContactPage from '@/components/ContactPage';
+import ContactPage from '@/Components/ContactPage';
 
 
 export const metadata = {
