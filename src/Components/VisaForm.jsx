@@ -4,9 +4,8 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import styles from './VisaForm.module.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-// Get stored GCLID from cookie
+import { FaTimes, FaCheck, FaCheckCircle } from 'react-icons/fa';
 import { getCookie } from "@/lib/getCookie";
-
 
 export default function VisaForm() {
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -20,20 +19,16 @@ export default function VisaForm() {
     name: '',
     country: '',
     immigration_type: '',
-    applicants: '',
-    age: '',
-    education: '',
     email: '',
   });
 
   // Show popup after 10 seconds
   useEffect(() => {
     const submittedDate = localStorage.getItem("popupSubmittedDate");
-
-    const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+    const today = new Date().toISOString().split("T")[0];
 
     if (submittedDate !== today) {
-      const timer = setTimeout(() => setShowPopup(true), 1000);
+      const timer = setTimeout(() => setShowPopup(true), 10000); // 10 seconds
       return () => clearTimeout(timer);
     }
   }, []);
@@ -46,6 +41,16 @@ export default function VisaForm() {
   const validateForm = () => {
     if (phone.replace(/\D/g, '').length < 10) {
       alert('❌ Please enter a valid phone number.');
+      return false;
+    }
+
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
+      alert('❌ Please enter a valid email address.');
+      return false;
+    }
+
+    if (!formData.name || formData.name.trim().length < 2) {
+      alert('❌ Please enter your name.');
       return false;
     }
 
@@ -84,9 +89,7 @@ export default function VisaForm() {
       const data = await response.json();
 
       if (data.success) {
-
         // Google Ads Conversion Tracking
-        // Get stored GCLID from cookie
         const gclid = getCookie("gclid");
 
         // Prevent double conversions
@@ -114,14 +117,10 @@ export default function VisaForm() {
         }
 
         // Reset form
-
         setFormData({
           name: '',
           country: '',
           immigration_type: '',
-          applicants: '',
-          age: '',
-          education: '',
           email: '',
         });
         setPhone('');
@@ -130,8 +129,12 @@ export default function VisaForm() {
         const today = new Date().toISOString().split("T")[0];
         localStorage.setItem("popupSubmittedDate", today);
 
-        setSuccessPopup(true);
         setShowPopup(false);
+
+        // Auto-close success popup after 3 seconds
+        setTimeout(() => {
+          setSuccessPopup(false);
+        }, 3000);
       } else {
         alert('❌ Submission failed. Please try again.');
       }
@@ -143,144 +146,89 @@ export default function VisaForm() {
     }
   };
 
-  // Form fields configuration for cleaner JSX
-  const formFields = [
-    {
-      type: 'text',
-      name: 'name',
-      placeholder: 'Enter your name',
-      required: true
-    },
-    {
-      type: 'custom',
-      name: 'phone',
-      component: (
-        <PhoneInput
-          country={'in'}
-          value={phone}
-          onChange={setPhone}
-          inputClass={styles.input}
-          enableSearch={true}
-          placeholder="Enter phone number"
-          inputProps={{ name: 'phone', required: true }}
-        />
-      )
-    },
-    {
-      type: 'row',
-      fields: [
-        {
-          type: 'select',
-          name: 'country',
-          options: ['', 'USA', 'UK', 'Canada', 'Europe', 'Schengen', 'Australia', 'New Zealand', 'Singapore', 'Japan', 'Dubai', 'Other'],
-          placeholder: 'Select Country'
-        },
-        {
-          type: 'select',
-          name: 'immigration_type',
-          options: ['', 'Visitor/Tourist Visa', 'Business Visa', 'Student Visa', 'Dependent Visa', 'Permanent Residency Visa', 'Work Visa', 'Other'],
-          placeholder: 'Select Visa/Immigration Type'
-        }
-      ]
-    },
-    {
-      type: 'row',
-      fields: [
-        {
-          type: 'number',
-          name: 'applicants',
-          placeholder: 'Number of applicants',
-          min: 1,
-          required: true
-        },
-        {
-          type: 'select',
-          name: 'age',
-          options: ['', '1-45', '45+'],
-          placeholder: 'Select Age'
-        }
-      ]
-    },
-    {
-      type: 'row',
-      fields: [
-        {
-          type: 'select',
-          name: 'education',
-          options: ['', "Diploma", "Bachelor's", "Master's", 'Doctorate', 'Doctor', 'Other'],
-          placeholder: 'Select Qualification'
-        },
-        {
-          type: 'email',
-          name: 'email',
-          placeholder: 'Enter your email',
-          required: true
-        }
-      ]
-    }
-  ];
-
-  // Render field based on type
-  const renderField = (field) => {
-    switch (field.type) {
-      case 'text':
-      case 'email':
-      case 'number':
-        return (
-          <input
-            className={styles.input}
-            type={field.type}
-            name={field.name}
-            value={formData[field.name]}
-            onChange={handleChange}
-            placeholder={field.placeholder}
-            required={field.required}
-            min={field.min}
-          />
-        );
-      case 'select':
-        return (
-          <select
-            className={styles.select}
-            name={field.name}
-            value={formData[field.name]}
-            onChange={handleChange}
-            required={field.required}
-          >
-            <option value="">{field.placeholder}</option>
-            {field.options.slice(1).map(option => (
-              <option key={option} value={option}>{option}</option>
-            ))}
-          </select>
-        );
-      case 'custom':
-        return field.component;
-      default:
-        return null;
-    }
-  };
-
   return (
     <>
-      {/* Normal Form */}
+      {/* Normal Form - Compact Layout */}
       <div className={styles.normalForm}>
-        <h2 className={styles.formtitle}>Book a Free Visa Assessment</h2>
-        <form onSubmit={handleSubmit}>
-          {formFields.map((field, index) => (
-            <div key={index} className={field.type === 'row' ? styles.row : styles.row1}>
-              {field.type === 'row' ? (
-                field.fields.map((subField, subIndex) => (
-                  <React.Fragment key={subIndex}>
-                    {renderField(subField)}
-                  </React.Fragment>
-                ))
-              ) : (
-                renderField(field)
-              )}
-            </div>
-          ))}
+        {/* Form Header */}
+        <div className={styles.formHeader}>
+          <h2 className={styles.formTitle}>Free Visa Assessment</h2>
+          <p className={styles.formSubtitle}>
+            Get a personalized consultation within 24 hours
+          </p>
+        </div>
 
-          <div className={styles.termsContainer}>
+        <form onSubmit={handleSubmit} className={styles.modalForm}>
+          <div className={styles.formGrid}>
+            {/* Row 1: Name and Email */}
+            <div className={`${styles.modalField} ${styles.halfWidth}`}>
+              <input
+                className={styles.modalInput}
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div className={`${styles.modalField} ${styles.halfWidth}`}>
+              <input
+                className={styles.modalInput}
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            {/* Row 2: Phone Number (full width) */}
+            <div className={`${styles.modalField} ${styles.fullWidth}`}>
+              <PhoneInput
+                country={'in'}
+                value={phone}
+                onChange={setPhone}
+                inputClass={styles.modalInput}
+                enableSearch={true}
+                placeholder="Phone Number"
+                inputProps={{ name: 'phone', required: true }}
+              />
+            </div>
+
+            {/* Row 3: Country and Visa Type */}
+            <div className={`${styles.modalField} ${styles.halfWidth}`}>
+              <select
+                className={styles.modalSelect}
+                name="country"
+                value={formData.country}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Destination Country</option>
+                {['USA', 'UK', 'Canada', 'Europe', 'Schengen', 'Australia', 'New Zealand', 'Singapore', 'Japan', 'Dubai', 'Other'].map(option => (
+                  <option key={option} value={option}>{option}</option>
+                ))}
+              </select>
+            </div>
+            <div className={`${styles.modalField} ${styles.halfWidth}`}>
+              <select
+                className={styles.modalSelect}
+                name="immigration_type"
+                value={formData.immigration_type}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Visa Type</option>
+                {['Visitor/Tourist Visa', 'Business Visa', 'Student Visa', 'Dependent Visa', 'Permanent Residency Visa', 'Work Visa', 'Other'].map(option => (
+                  <option key={option} value={option}>{option}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div className={styles.modalTerms}>
             <input
               type="checkbox"
               id="terms"
@@ -300,41 +248,121 @@ export default function VisaForm() {
             </label>
           </div>
 
-          <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-            {isSubmitting ? '⏳ Sending...' : 'Submit'}
+          <button className={styles.modalSubmitBtn} type="submit" disabled={isSubmitting}>
+            {isSubmitting ? '⏳ Submitting...' : 'Get Free Assessment'}
           </button>
         </form>
+
+        {/* Form Assurance Section */}
+        <div className={styles.formAssurance}>
+          <div className={styles.assuranceItem}>
+            <FaCheckCircle />
+            <span>100% Confidential</span>
+          </div>
+          <div className={styles.assuranceItem}>
+            <FaCheckCircle />
+            <span>No Obligation</span>
+          </div>
+          <div className={styles.assuranceItem}>
+            <FaCheckCircle />
+            <span>Expert Advice</span>
+          </div>
+        </div>
       </div>
 
-      {/* Popup form */}
+      {/* Modal Popup */}
       {showPopup && (
-        <div className={styles.popupOverlay} onClick={() => setShowPopup(false)}>
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <h2 className={styles.formtitle}>Book a Free Visa Assessment</h2>
-            <form onSubmit={handleSubmit}>
-              {formFields.map((field, index) => (
-                <div key={index} className={field.type === 'row' ? styles.row : styles.row1}>
-                  {field.type === 'row' ? (
-                    field.fields.map((subField, subIndex) => (
-                      <React.Fragment key={subIndex}>
-                        {renderField(subField)}
-                      </React.Fragment>
-                    ))
-                  ) : (
-                    renderField(field)
-                  )}
-                </div>
-              ))}
+        <div className={styles.modalOverlay}>
+          <div className={styles.modalContainer}>
+            <div className={styles.modalHeader}>
+              <div>
+                <h2 className={styles.modalTitle}>Free Visa Assessment</h2>
+                <p className={styles.modalSubtitle}>Get expert advice for your visa journey</p>
+              </div>
+              <button className={styles.modalCloseBtn} onClick={() => setShowPopup(false)}>
+                <FaTimes />
+              </button>
+            </div>
 
-              <div className={styles.termsContainer}>
+            <form onSubmit={handleSubmit} className={styles.modalForm}>
+              <div className={styles.formGrid}>
+                {/* Row 1: Name and Email */}
+                <div className={`${styles.modalField} ${styles.halfWidth}`}>
+                  <input
+                    className={styles.modalInput}
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div className={`${styles.modalField} ${styles.halfWidth}`}>
+                  <input
+                    className={styles.modalInput}
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email Address"
+                    required
+                  />
+                </div>
+
+                {/* Row 2: Phone Number (full width) */}
+                <div className={`${styles.modalField} ${styles.fullWidth}`}>
+                  <PhoneInput
+                    country={'in'}
+                    value={phone}
+                    onChange={setPhone}
+                    inputClass={styles.modalInput}
+                    enableSearch={true}
+                    placeholder="Phone Number"
+                    inputProps={{ name: 'phone', required: true }}
+                  />
+                </div>
+
+                {/* Row 3: Country and Visa Type */}
+                <div className={`${styles.modalField} ${styles.halfWidth}`}>
+                  <select
+                    className={styles.modalSelect}
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="">Destination Country</option>
+                    {['USA', 'UK', 'Canada', 'Europe', 'Schengen', 'Australia', 'New Zealand', 'Singapore', 'Japan', 'Dubai', 'Other'].map(option => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className={`${styles.modalField} ${styles.halfWidth}`}>
+                  <select
+                    className={styles.modalSelect}
+                    name="immigration_type"
+                    value={formData.immigration_type}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="">Visa Type</option>
+                    {['Visitor/Tourist Visa', 'Business Visa', 'Student Visa', 'Dependent Visa', 'Permanent Residency Visa', 'Work Visa', 'Other'].map(option => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className={styles.modalTerms}>
                 <input
                   type="checkbox"
-                  id="terms"
+                  id="modalTerms"
                   checked={agreedToTerms}
                   onChange={() => setAgreedToTerms(!agreedToTerms)}
                   required
                 />
-                <label htmlFor="terms">
+                <label htmlFor="modalTerms">
                   I agree to the{' '}
                   <a
                     href="https://www.globalvisainternationals.com/terms-and-conditions"
@@ -345,23 +373,43 @@ export default function VisaForm() {
                   </a>
                 </label>
               </div>
-              <button className={styles.submittingBtn} type="submit" disabled={isSubmitting}>
-                {isSubmitting ? '⏳ Sending...' : 'Submit'}
-              </button>
-              <button type="button" onClick={() => setShowPopup(false)} style={{ marginTop: '10px' }}>
-                ❌ Close
+
+              <button className={styles.modalSubmitBtn} type="submit" disabled={isSubmitting}>
+                {isSubmitting ? '⏳ Submitting...' : 'Get Free Assessment'}
               </button>
             </form>
+
+            {/* Modal Assurance Section */}
+            <div className={styles.formAssurance}>
+              <div className={styles.assuranceItem}>
+                <FaCheckCircle />
+                <span>100% Confidential</span>
+              </div>
+              <div className={styles.assuranceItem}>
+                <FaCheckCircle />
+                <span>No Obligation</span>
+              </div>
+              <div className={styles.assuranceItem}>
+                <FaCheckCircle />
+                <span>Expert Advice</span>
+              </div>
+            </div>
           </div>
         </div>
       )}
 
-      {/* Success popup */}
+      {/* Success Modal */}
       {successPopup && (
-        <div className={styles.popupOverlay} onClick={() => setSuccessPopup(false)}>
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <p>✅ Your inquiry has been submitted successfully!</p>
-            <button type="button" onClick={() => setSuccessPopup(false)}>
+        <div className={styles.modalOverlay}>
+          <div className={styles.successModal}>
+            <div className={styles.successIcon}>
+              <FaCheck />
+            </div>
+            <h3 className={styles.successTitle}>Thank You!</h3>
+            <p className={styles.successMessage}>
+              Your inquiry has been submitted successfully. Our visa expert will contact you within 24 hours.
+            </p>
+            <button className={styles.successCloseBtn} onClick={() => setSuccessPopup(false)}>
               Close
             </button>
           </div>

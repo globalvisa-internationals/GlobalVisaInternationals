@@ -1,189 +1,310 @@
-/* ============================
-   Base Form Styles (Mobile First)
-============================ */
+/* VisaForm.module.css */
 
-/* --- Form Container --- */
-.formSection,
+/* ============================
+   Base Normal Form Styles
+============================ */
 .normalForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 95%;
-  margin: 20px auto;
-  padding: 16px;
+  background: white;
   border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  z-index: 1000;
-}
-
-.formSection {
-  background-color: #e9f5b5;
-}
-
-.formSection:hover,
-.normalForm:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-
-/* --- Titles --- */
-.formtitle {
-  font-weight: 700;
-  color: #002b5b;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.normalForm .formtitle {
-  font-size: 20px;
-}
-
-.formSection .formtitle {
-  font-size: 20px;
-}
-
-/* --- Form Layout --- */
-.form,
-.normalForm form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.row1,
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.row {
-  justify-content: space-between;
-}
-
-.row .input,
-.row .select {
-  flex: 1;
-}
-
-/* --- Inputs & Selects --- */
-.input,
-.select,
-.normalForm .input,
-.normalForm .select {
-  width: 100%;
-  padding: 8px;
-  margin: 4px 0;
-  font-size: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #002b5b;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.input:focus,
-.select:focus,
-.normalForm .input:focus,
-.normalForm .select:focus {
-  border-color: #005241;
-  box-shadow: 0 0 0 3px rgba(0, 82, 65, 0.15);
-  outline: none;
-}
-
-/* --- Terms --- */
-.termsContainer {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  margin-top: 10px;
-  gap: 6px;
-}
-
-.termsContainer a {
-  color: #005241;
-  text-decoration: underline;
-}
-
-.termsContainer a:hover {
-  color: #007b6d;
-}
-
-/* --- Submit Button --- */
-.submittingBtn,
-.normalForm .submittingBtn,
-.popupContent button {
-  display: block;
-  width: 100%;
-  max-width: 250px;
-  margin: 15px auto 0;
-  padding: 10px 12px;
-  font-size: 15px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  background-color: #005241;
-  color: #ffffff;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.submittingBtn:hover,
-.normalForm .submittingBtn:hover,
-.popupContent button:hover {
-  background-color: #007b6d;
-  transform: translateY(-2px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
 }
 
 /* ============================
-   Popup Styles
+   Form Header
 ============================ */
-.popupOverlay {
+.formHeader {
+  background: linear-gradient(135deg, #002B5B 0%, #057A7E 100%);
+  padding: 24px 20px;
+  color: white;
+  text-align: center;
+}
+
+.formTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.formSubtitle {
+  opacity: 0.9;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ============================
+   Form Assurance
+============================ */
+.formAssurance {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 16px;
+  background: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.assuranceItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #319795;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.assuranceItem svg {
+  font-size: 16px;
+}
+
+/* ============================
+   Modal Styles
+============================ */
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1999999999999999999;
+  padding: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalContainer {
+  background: white;
+  border-radius: 16px;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 20px 16px;
+  background: linear-gradient(135deg, #002B5B 0%, #057A7E 100%);
+  color: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.modalSubtitle {
+  font-size: 13px;
+  opacity: 0.9;
+  margin: 6px 0 0 0;
+}
+
+.modalCloseBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
 }
 
-.popupContent {
-  background: #ffffff;
-  border-top: 6px solid #005241;
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
-  animation: fadeIn 0.3s ease-in-out;
+.modalCloseBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.popupContent p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+/* ============================
+   Form Grid Layout
+============================ */
+.formGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.modalField {
+  margin-bottom: 0;
+}
+
+.halfWidth {
+  flex: 1 1 calc(50% - 6px);
+  min-width: 120px;
+}
+
+.fullWidth {
+  flex: 1 1 100%;
+}
+
+/* ============================
+   Form Elements
+============================ */
+.modalForm {
+  padding: 20px;
+}
+
+.modalInput,
+.modalSelect {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.modalInput:focus,
+.modalSelect:focus {
+  outline: none;
+  border-color: #057A7E;
+  box-shadow: 0 0 0 2px rgba(5, 122, 126, 0.1);
+}
+
+.modalSelect {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Phone Input Styling */
+.modalInput .form-control {
+  width: 100% !important;
+  padding-left: 48px !important;
+}
+
+/* ============================
+   Terms and Submit Button
+============================ */
+.modalTerms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.modalTerms input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.modalTerms a {
+  color: #057A7E;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.modalTerms a:hover {
+  text-decoration: underline;
+}
+
+.modalSubmitBtn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #002B5B 0%, #057A7E 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
   font-weight: 600;
-  color: #002b5b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modalSubmitBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(5, 122, 126, 0.25);
+}
+
+.modalSubmitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ============================
+   Success Modal
+============================ */
+.successModal {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  max-width: 360px;
+  animation: slideUp 0.3s ease;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  margin: 0 auto 20px;
+  font-size: 28px;
 }
 
-/* --- Close Button --- */
-.popupContent button.closeBtn {
-  margin-top: 10px;
+.successTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #002B5B;
+  margin-bottom: 10px;
+}
+
+.successMessage {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.successCloseBtn {
+  padding: 12px 28px;
+  background: #002B5B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.successCloseBtn:hover {
+  background: #057A7E;
+  transform: translateY(-1px);
 }
 
 /* ============================
@@ -192,7 +313,17 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
   to {
@@ -202,108 +333,151 @@
 }
 
 /* ============================
-   Responsive Breakpoints
+   Responsive Styles
 ============================ */
-
-/* Extra Small Devices ≤400px */
-@media (max-width: 400px) {
-
-  .formSection,
-  .normalForm {
-    padding: 12px;
-    margin: 10px auto;
-    border-radius: 10px;
+@media (max-width: 768px) {
+  .modalContainer {
+    max-width: 90%;
   }
 
-  .formtitle {
+  .modalHeader {
+    padding: 18px 18px 14px;
+  }
+
+  .modalTitle {
     font-size: 18px;
-    margin-bottom: 12px;
   }
 
-  .input,
-  .select,
-  .normalForm .input,
-  .normalForm .select {
-    font-size: 14px;
-    padding: 6px;
+  .modalSubtitle {
+    font-size: 12px;
   }
 
-  .submittingBtn,
-  .normalForm .submittingBtn {
+  .formHeader {
+    padding: 20px 16px;
+  }
+
+  .formTitle {
+    font-size: 18px;
+  }
+
+  .formSubtitle {
+    font-size: 13px;
+  }
+
+  .modalForm {
+    padding: 18px;
+  }
+
+  .formGrid {
+    gap: 10px;
+  }
+
+  .modalInput,
+  .modalSelect {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .modalSubmitBtn {
+    padding: 13px;
     font-size: 14px;
-    padding: 10px;
+  }
+
+  .formAssurance {
+    padding: 16px 12px;
+  }
+
+  .assuranceItem {
+    font-size: 11px;
+  }
+
+  .assuranceItem svg {
+    font-size: 14px;
+  }
+
+  .modalTerms {
+    font-size: 12px;
   }
 }
 
-/* Tablet ≥768px */
-@media (min-width: 768px) {
-  .formSection {
-    max-width: 400px;
-    padding: 20px;
+@media (max-width: 480px) {
+  .modalContainer {
+    max-width: 95%;
   }
 
-  .formtitle {
-    font-size: 22px;
+  .modalHeader {
+    padding: 16px 16px 12px;
   }
 
-  .input,
-  .select {
-    font-size: 16px;
-    padding: 10px;
+  .modalTitle {
+    font-size: 17px;
   }
 
-  .submittingBtn {
-    max-width: 250px;
-    font-size: 16px;
+  .modalForm {
+    padding: 16px;
   }
 
-  .normalForm {
-    max-width: 600px;
-    padding: 24px;
+  .formHeader {
+    padding: 18px 14px;
   }
 
-  .normalForm .formtitle {
+  .formTitle {
+    font-size: 17px;
+  }
+
+  .halfWidth {
+    flex: 1 1 100%;
+  }
+
+  .formAssurance {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .assuranceItem {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .successModal {
+    padding: 24px 18px;
+  }
+
+  .successIcon {
+    width: 56px;
+    height: 56px;
     font-size: 24px;
   }
 
-  .normalForm .input,
-  .normalForm .select {
-    font-size: 16px;
-  }
-
-  .normalForm .submittingBtn {
-    font-size: 16px;
-    max-width: 260px;
+  .successTitle {
+    font-size: 20px;
   }
 }
 
-/* Desktop ≥1024px */
-@media (min-width: 1024px) {
-  .formSection {
-    max-width: 420px;
-    padding: 24px;
+/* For very small screens */
+@media (max-width: 360px) {
+
+  .modalInput,
+  .modalSelect {
+    padding: 10px;
+    font-size: 12px;
   }
 
-  .formtitle {
-    font-size: 24px;
+  .modalSubmitBtn {
+    padding: 12px;
   }
 
-  .normalForm {
-    max-width: 700px;
-    padding: 32px 40px;
+  .formHeader {
+    padding: 16px 12px;
   }
 
-  .normalForm .formtitle {
-    font-size: 28px;
+  .formTitle {
+    font-size: 16px;
   }
 
-  .normalForm .input,
-  .normalForm .select {
-    font-size: 17px;
-  }
-
-  .normalForm .submittingBtn {
-    font-size: 17px;
-    max-width: 280px;
+  .formSubtitle {
+    font-size: 12px;
   }
 }

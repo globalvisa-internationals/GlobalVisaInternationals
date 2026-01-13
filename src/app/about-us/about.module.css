@@ -1,253 +1,450 @@
+/* === CSS Variables for Corporate Theme === */
+
 /* === Main Container === */
 .visaSection {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 30px;
-    max-width: 100%;
+    align-items: center;
+    padding: 0;
+    max-width: 1400px;
     margin: 0 auto;
-    font-size: 15px;
-    gap: 28px;
-    top: 80px;
-    z-index: 10000;
-    font-family: var(--font-main);
+    font-size: 16px;
+    background: var(--light-bg);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
 }
 
 /* === Hero Banner === */
 .heroBanner {
-    display: flex;
-    justify-content: center;
     width: 100%;
-    padding-top: 60px;
-    margin: 30px 0;
+    padding-top: 80px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroBanner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    z-index: 1;
 }
 
 .heroImage {
     width: 100%;
-    height: auto;
+    max-width: 1200px;
+    height: 420px;
     border-radius: var(--radius);
     object-fit: cover;
-    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    display: block;
+    border: none;
 }
 
 /* === About Section === */
 .aboutSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-    gap: 28px;
-}
-
-.contentSection ul li {
-    padding: 10px;
-}
-
-.contentSection ol li {
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 60px 20px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    margin: -40px auto 0;
+    position: relative;
+    z-index: 3;
+    box-shadow: var(--shadow-md);
 }
 
 .aboutContent {
     display: flex;
     flex-direction: column;
+    gap: 24px;
 }
 
 .aboutText {
-    max-width: 100%;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 17px;
+    line-height: 1.8;
     color: var(--text);
-    padding: 4px 0;
 }
 
-.contentMain h2,
-.contentMain h3,
-.contentMain h4,
-.contentMain h5 {
-    font-weight: 700;
+.aboutText h2 {
+    font-size: 1.8rem;
     color: var(--primary);
+    margin: 32px 0 16px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.aboutText h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, var(--accent), #63b3ed);
+    border-radius: 2px;
 }
 
 .founderImageContainer {
     width: 100%;
-    max-width: 340px;
-    aspect-ratio: 3/4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    max-width: 400px;
+    height: 500px;
     border-radius: var(--radius);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    margin: 0 auto;
+}
+
+.founderImageContainer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(26, 54, 93, 0.1), rgba(45, 90, 160, 0.1));
+    z-index: 1;
 }
 
 .founderImage {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    transition: var(--transition);
+}
+
+.founderImage:hover {
+    transform: scale(1.03);
 }
 
 /* === Content Section === */
 .contentSection {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin: 10px auto;
-    padding: 18px;
-    text-align: justify;
-    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.5;
-    gap: 36px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 20px;
+    margin: 0 auto;
 }
 
 .contentMain {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
 }
 
-/* === Form Section === */
-.formContainer {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-/* === Titles & Typography === */
-.pageTitle {
-    text-align: center;
-    font-size: 1.2rem;
+/* === Typography Enhancements === */
+.contentMain h2,
+.contentMain h3,
+.contentMain h4 {
+    font-weight: 700;
     color: var(--primary);
-    font-weight: 600;
-    margin: 14px 0;
-    font-family: var(--heading-font), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    padding-bottom: 12px;
+    margin-top: 8px;
 }
 
-.sectionTitle {
-    text-align: left;
-    font-size: 1.1rem;
+.contentMain h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.contentMain h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--accent), #63b3ed);
+    border-radius: 2px;
+}
+
+.contentMain h3 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+}
+
+.contentMain h4 {
+    font-size: 1.3rem;
+    color: var(--secondary);
+    margin-top: 32px;
+}
+
+/* === List Styling === */
+.contentSection ul,
+.contentSection ol {
+    margin-left: 20px;
+    margin-bottom: 24px;
+}
+
+.contentSection ul li {
+    padding: 12px 0;
+    position: relative;
+    padding-left: 28px;
+}
+
+.contentSection ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.contentSection ol li {
+    padding: 12px 0;
+    counter-increment: item;
+    position: relative;
+    padding-left: 32px;
+}
+
+.contentSection ol li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
     color: var(--accent);
     font-weight: 600;
-    line-height: 1.4;
-    font-family: var(--heading-font), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;
 }
 
 .highlightText {
     color: var(--accent);
     font-weight: 600;
+    background: linear-gradient(120deg, var(--highlight) 0%, transparent 100%);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
 }
 
-.disclaimer {
-    font-size: 0.9rem;
-    color: var(--muted);
-    padding: 1.2rem;
-    border-left: 3px solid var(--primary);
-    background: #f5f7f8;
+/* === Sales Pitch Section === */
+.salesPitch {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
     border-radius: var(--radius);
-    margin: 24px auto;
-    max-width: 800px;
+    padding: 32px;
+    border-left: 5px solid var(--accent);
+    margin: 40px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.salesPitch .strong {
+    color: var(--primary);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.callButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    color: white;
+    padding: 16px 32px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin: 24px 0;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(45, 90, 160, 0.2);
+    border: none;
+    cursor: pointer;
+    min-width: 280px;
+}
+
+.callButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(45, 90, 160, 0.3);
+    color: white;
+}
+
+/* === Form Container === */
+.formContainer {
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--card-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.formContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, var(--accent), var(--primary));
+}
+
+/* === Disclaimer === */
+.disclaimer {
+    font-size: 0.95rem;
+    color: var(--muted);
+    padding: 24px;
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(to right, #f8fafc, #ffffff);
+    border-radius: var(--radius);
+    margin: 40px 0;
+    font-style: italic;
+    box-shadow: var(--shadow-sm);
+    line-height: 1.6;
+}
+
+/* === Stats & Achievements === */
+.achievementStats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+    padding: 32px;
+    background: var(--light-bg);
+    border-radius: var(--radius);
+}
+
+.statItem {
+    text-align: center;
+    padding: 20px;
+}
+
+.statNumber {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.statLabel {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    font-weight: 500;
 }
 
 /* ========== TABLET & DESKTOP UPGRADE ========== */
 @media (min-width: 768px) {
-    .visaSection {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 50px;
-        max-width: 85%;
-        margin: 0 auto;
-        gap: 50px;
+    .aboutSection {
+        grid-template-columns: 1fr 400px;
+        padding: 60px 40px;
+        margin-top: -60px;
     }
 
-    .heroBanner {
-        width: 100%;
-        padding-top: 60px;
+    .contentSection {
+        grid-template-columns: 1fr 420px;
+        padding: 40px;
+    }
+
+    .contentMain {
+        max-width: 100%;
+    }
+
+    .formContainer {
+        position: sticky;
+        top: 100px;
+        height: fit-content;
     }
 
     .heroImage {
-        max-width: 70%;
-        max-height: 400px;
-        object-fit: fill;
+        height: 480px;
     }
 
-    .aboutSection {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 40px;
-        padding: 14px;
-        max-width: 1200px;
-        width: 100%;
-    }
-
-    .aboutContent {
-        flex: 1;
-    }
-
-    .aboutText {
-        max-width: 700px;
-        font-size: 16px;
-        padding: 0;
-    }
-
-    .founderImageContainer {
-        max-width: 380px;
-        height: 500px;
-        margin-top: 0;
-    }
-
-    .contentSection {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 50px;
-        max-width: 95%;
-        padding: 26px;
-        position: relative;
-    }
-
-    .contentMain {
-        flex: 1;
-        max-width: calc(100% - 460px);
-    }
-
-    .formContainer {
-        width: 420px;
-        position: sticky;
-        top: 100px;
-        align-self: flex-start;
-        margin-top: 0;
-    }
-
-    .pageTitle {
-        font-size: 1.4rem;
-        margin: 18px 0;
-    }
-
-    .sectionTitle {
-        font-size: 1.3rem;
+    .achievementStats {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (min-width: 1200px) {
-    .pageTitle {
-        font-size: 1.6rem;
-        margin: 20px 0;
-    }
-
-    .sectionTitle {
-        font-size: 1.4rem;
+@media (min-width: 1024px) {
+    .visaSection {
+        padding: 0 20px;
     }
 
     .contentSection {
-        max-width: 1200px;
-        padding: 30px;
-        gap: 50px;
+        gap: 80px;
+        padding: 60px 40px;
     }
 
-    .contentMain {
-        max-width: calc(100% - 460px);
+    .heroImage {
+        max-height: 520px;
     }
 
-    .formContainer {
-        width: 420px;
+    .aboutSection {
+        padding: 80px 60px;
+    }
+
+    .aboutText {
+        font-size: 18px;
+    }
+
+    .contentMain h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .visaSection {
+        padding: 0;
+    }
+
+    .contentSection,
+    .aboutSection {
+        max-width: 1300px;
+    }
+}
+
+/* === Animation for HR === */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* === Smooth Scroll Behavior === */
+/* html {
+    scroll-behavior: smooth;
+} */
+
+/* === Focus States for Accessibility === */
+/* :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+} */
+
+/* === Print Styles === */
+@media print {
+    .visaSection {
+        background: white;
+        color: black;
+    }
+
+    .heroBanner,
+    .formContainer,
+    .callButton {
+        display: none;
     }
 }
