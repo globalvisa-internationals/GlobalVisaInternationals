@@ -10,15 +10,16 @@ const ContactPage = () => {
     const [activeSection, setActiveSection] = useState('contact');
 
     const services = [
-        'Canada PR & Migration',
-        'Australia PR & Work Visas',
-        'USA Work & Business Visas',
-        'UK Student & Work Visas',
-        'Europe Schengen Visas',
-        'UAE & Gulf Visas',
-        'Family Sponsorship',
-        'Visa Appeal & Rejection Cases'
+        'Canada PR & Temporary Visas',
+        'Australia PR & Temporary Visas',
+        'USA B1/B2 Visitor Visas',
+        'UK Visitor, Student & Skilled Visas',
+        'Schengen Tourist, Business & Family Visas',
+        'UAE Tourist Visa',
+        'Family Sponsorship & Dependent Visas',
+        'Visa Appeals & Rejection Assistance'
     ];
+
 
     const processSteps = [
         { number: '01', title: 'Initial Consultation', desc: 'Free assessment & personalized plan' },
