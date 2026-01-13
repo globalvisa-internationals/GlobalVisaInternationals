@@ -213,10 +213,16 @@ const ContactPage = () => {
                         </div>
 
                         <div className={styles.mapContainer}>
-                            {/* Add your map embed here */}
                             <div className={styles.mapPlaceholder}>
-                                <p>Google Maps integration available</p>
-                                <small>Location: Brigade Road, Bangalore</small>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0660084564283!2d77.60358267381555!3d12.967627987347338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d5613d9a4b%3A0xea0b2fbdf4f08876!2sGlobal%20Visa%20Internationals!5e0!3m2!1sen!2sin!4v1768288165217!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="350"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    className={styles.mapIframe} />
                             </div>
                         </div>
                     </section>
