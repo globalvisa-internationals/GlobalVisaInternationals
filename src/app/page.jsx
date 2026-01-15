@@ -15,6 +15,7 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 import MissionVisionValues from "@/Components/missionVisionValues";
 import Services from "@/Components/Services";
 import WhychoosGVI from "@/Components/whychoosGVI";
+import AboutSection from "@/Components/AboutSection";
 
 
 const agbalumo = Agbalumo({
@@ -110,10 +111,10 @@ export const metadata = {
 };
 
 const slides = [
-  "/gallery/1.jpg",
-  "/gallery/2.jpg",
-  "/gallery/3.jpg",
-  "/gallery/4.jpg",
+  "/gallery/Travel-Poster.jpg",
+  "/gallery/Germany-tourist-visa.jpg",
+  "/gallery/UK-Travel.jpg",
+  "/gallery/UK-Visa-Banner.jpg",
   "/gallery/5.jpg",
   "/gallery/6.jpg",
   "/gallery/7.jpg",
@@ -739,44 +740,8 @@ export default function Home() {
 
 
         {/* About Us Section - Modern Corporate Design */}
-        <section className={styles.aboutSection} id="aboutUs">
-          <div className={styles.sectionTitle}>
-            <h2>Our Story</h2>
-            <div className={styles.titleUnderline}></div>
-          </div>
-
-          <section className={styles.storyContainer}>
-            {/* Left Image */}
-            <div className={styles.imageWrapper}>
-              <img
-                className={styles.responsiveImage}
-                src="https://www.globalvisainternationals.com/images/story.webp"
-                alt="Global Visa Internationals team - professional visa consultants"
-              />
-            </div>
-
-            {/* Right Text Content */}
-            <div className={styles.textContent}>
-              <h3>Global Visa Internationals: Your Trusted Immigration Partner</h3>
-
-              <p>
-                At Global Visa Internationals, we transform complex immigration processes into
-                seamless, well-structured journeys. As a premier visa consultancy headquartered
-                in India, we specialize in comprehensive immigration solutions for individuals,
-                families, and professionals pursuing global opportunities.
-              </p>
-
-              <p>
-                Our expertise encompasses <strong>study visas</strong> for academic pursuits,
-                <strong> work visas</strong> for career advancement, <strong>tourist visas</strong>
-                for global exploration, and <strong>business visas</strong> for international
-                enterprise. Each application receives meticulous attention, combining regulatory
-                precision with personalized strategy.
-              </p>
-
-
-            </div>
-          </section>
+        <section>
+          <AboutSection />
         </section>
 
         <AnimatedHR direction="left" duration={1.2} />

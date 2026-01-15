@@ -1,0 +1,104 @@
+/* app/styles/colors.module.css */
+
+/* Corporate Color Palette */
+.primaryDark {
+    color: #1a365d;
+}
+
+.primaryBlue {
+    color: #2d6bc3;
+}
+
+.primaryLight {
+    color: #3182ce;
+}
+
+.accent {
+    color: #4299e1;
+}
+
+.accentLight {
+    color: #63b3ed;
+}
+
+.success {
+    color: #38a169;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.lightGray {
+    color: #f8fafc;
+}
+
+.mediumGray {
+    color: #64748b;
+}
+
+.darkGray {
+    color: #334155;
+}
+
+.borderColor {
+    color: #e2e8f0;
+}
+
+/* Background Colors */
+.bgPrimaryDark {
+    background-color: #1a365d;
+}
+
+.bgPrimaryBlue {
+    background-color: #2d6bc3;
+}
+
+.bgPrimaryLight {
+    background-color: #3182ce;
+}
+
+.bgAccent {
+    background-color: #4299e1;
+}
+
+.bgAccentLight {
+    background-color: #63b3ed;
+}
+
+.bgSuccess {
+    background-color: #38a169;
+}
+
+.bgWhite {
+    background-color: #ffffff;
+}
+
+.bgLightGray {
+    background-color: #f8fafc;
+}
+
+.bgMediumGray {
+    background-color: #64748b;
+}
+
+.bgDarkGray {
+    background-color: #334155;
+}
+
+/* Gradient Backgrounds */
+.gradientPrimary {
+    background: linear-gradient(135deg, #1a365d 0%, #2d6bc3 100%);
+}
+
+.gradientAccent {
+    background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%);
+}
+
+.gradientSubtle {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.gradientLight {
+    background: linear-gradient(135deg, #f1f5f9 0%, #f8fafc 100%);
+}

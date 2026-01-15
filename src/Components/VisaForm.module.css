@@ -28,7 +28,7 @@
   line-height: 1.2;
 }
 
-.formSubtitle {
+.modalSubtitleForm {
   opacity: 0.9;
   margin: 0;
   font-size: 14px;
@@ -107,7 +107,7 @@
   line-height: 1.2;
 }
 
-.modalSubtitle {
+.modalSubtitleForm {
   font-size: 13px;
   opacity: 0.9;
   margin: 6px 0 0 0;
@@ -348,7 +348,7 @@
     font-size: 18px;
   }
 
-  .modalSubtitle {
+  .modalSubtitleForm {
     font-size: 12px;
   }
 
@@ -360,7 +360,7 @@
     font-size: 18px;
   }
 
-  .formSubtitle {
+  .modalSubtitleForm {
     font-size: 13px;
   }
 
@@ -384,7 +384,7 @@
   }
 
   .formAssurance {
-    padding: 16px 12px;
+    padding: 14px 8px;
   }
 
   .assuranceItem {
@@ -436,9 +436,9 @@
   }
 
   .assuranceItem {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 4px;
   }
 
   .successModal {
@@ -477,7 +477,7 @@
     font-size: 16px;
   }
 
-  .formSubtitle {
+  .modalSubtitleForm {
     font-size: 12px;
   }
 }

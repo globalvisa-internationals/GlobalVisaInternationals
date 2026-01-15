@@ -5,6 +5,7 @@ import VisaForm from "@/Components/VisaForm";
 import AnimatedHR from "@/Components/AnimatedHR";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 import { ReviewSchema } from "@/Components/ReviewSchema";
+import { CheckCircle, Users, Globe, Award, Shield, Clock } from 'lucide-react';
 
 // ---------------------------
 // ✅ NEXT.JS METADATA API
@@ -242,159 +243,284 @@ export default function About() {
     <>
       {/* Inject All Schema JSON-LD */}
       <StructuredData />
-      <div className={styles.heroBanner}>
-        <img
-          src="https://www.globalvisainternationals.com/GVI_Banner.webp"
-          alt="About Global Visa Internationals"
-          className={styles.heroImage}
-        />
-      </div>
-
-      <div className={styles.visaSection}>
-        <h1 className={styles.sectionTitle}>Global Visa Internationals – Your Trusted Immigration & Visa Experts</h1>
-
-        <section className={styles.aboutSection}>
-          <div className={styles.aboutContent}>
-            <div className={styles.aboutText}>
-              <p>At Global Visa Internationals our mission is to make global travel and immigration feel simple and easy to understand. The company was started by our founder Mrs Anusha Prashanth who has over ten years of real experience in the visa and immigration field. We have supported more than 55000 people to get their visas and guided over 75000 clients who are looking for better global mobility options.</p>
-
-              <p>We run offices in London UK for UK visa services and in Bangalore India for all major India visa support. This gives us both a wide global view and the local knowledge that most people really need. If you want to study in another country or search for work with the right permits or join your family abroad we offer simple visa help that is shaped around what you want for your next step.</p>
-
-              <h2>Meet the Visionary Behind Our Success</h2>
-              <p>Mrs Anusha Prashanth leads a skilled and friendly team who try their best to make the visa process smooth and stress free. Her guidance helps many travellers take confident steps toward their international goals.</p>
+      <section>
+        <section className={styles.heroSection}>
+          <div className={styles.heroOverlay}>
+            <div className={styles.heroContent}>
+              <h1 className={styles.heroTitle}>
+                Your Trusted Partner in
+                <span className={styles.heroHighlight}> Global Immigration</span>
+              </h1>
+              <p className={styles.heroSubtitle}>
+                With over a decade of expertise and 75,000+ successful clients worldwide
+              </p>
+              <div className={styles.heroStats}>
+                <div className={styles.statItem}>
+                  <Users className={styles.statIcon} />
+                  <span className={styles.statNumber}>75K+</span>
+                  <span className={styles.statLabel}>Happy Clients</span>
+                </div>
+                <div className={styles.statItem}>
+                  <Globe className={styles.statIcon} />
+                  <span className={styles.statNumber}>25+</span>
+                  <span className={styles.statLabel}>Countries</span>
+                </div>
+                <div className={styles.statItem}>
+                  <Award className={styles.statIcon} />
+                  <span className={styles.statNumber}>11+</span>
+                  <span className={styles.statLabel}>Years Experience</span>
+                </div>
+              </div>
             </div>
-
-          </div>
-
-          <div className={styles.founderImageContainer}>
-            <img className={styles.founderImage} src="https://www.globalvisainternationals.com/images/founder.jpg" alt="Anusha Prashanth" />
           </div>
         </section>
 
-        <AnimatedHR direction="left" duration={1.2} />
+        <div>
+          {/* Company Introduction */}
+          <section className={styles.section}>
+            <div className={styles.container}>
+              <div className={styles.introGrid}>
+                <div className={styles.introContent}>
+                  <h2 className={styles.sectionTitle}>
+                    Making Global Mobility
+                    <span className={styles.accent}> Simple & Accessible</span>
+                  </h2>
+                  <p className={styles.introText}>
+                    At Global Visa Internationals, we transform complex immigration
+                    processes into straightforward journeys. Founded by Mrs. Anusha Prashanth,
+                    our mission is to make international relocation, education, and career
+                    advancement accessible to everyone.
+                  </p>
 
-        <div className={styles.contentSection}>
-          <div className={styles.contentMain}>
-            <h2 className={styles.sectionTitle}>Why Trust Global Visa Internationals for Your Immigration Needs</h2>
+                  <div className={styles.missionVision}>
+                    <div className={styles.missionCard}>
+                      <h3 className={styles.cardTitle}>Our Mission</h3>
+                      <p>Simplify global mobility through expert guidance, transparent processes, and personalized support.</p>
+                    </div>
+                    <div className={styles.visionCard}>
+                      <h3 className={styles.cardTitle}>Our Vision</h3>
+                      <p>Be the most trusted immigration partner worldwide, connecting dreams with opportunities.</p>
+                    </div>
+                  </div>
+                </div>
 
-            <p>
-              Trust is not just a fancy word at Global Visa Internationals
-              It is the heart of everything we do. After helping people for more than a decade in the immigration field and guiding thousands of happy clients we have slowly built a name that people feel safe with. Our work speaks for itself and many families and professionals from different countries choose us because they see real honesty real support and real results.
-            </p>
+                <div className={styles.founderSection}>
+                  <div className={styles.founderImageWrapper}>
+                    <img
+                      src="./profile/founder.jpg"
+                      alt="Anusha Prashanth - Founder & CEO"
+                      className={styles.founderImage}
+                    />
+                    <div className={styles.founderBadge}>
+                      <div className={styles.badgeContent}>
+                        <span className={styles.badgeName}>Anusha Prashanth</span>
+                        <span className={styles.badgeTitle}>Founder & CEO</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.founderBio}>
+                    <h3 className={styles.founderName}>Leading with Experience</h3>
+                    <p>
+                      With over 11 years of hands-on experience in visa and immigration,
+                      Mrs. Anusha Prashanth leads our team with passion and precision.
+                      Her guidance has helped thousands achieve their international dreams.
+                    </p>
+                    <div className={styles.founderStats}>
+                      <div className={styles.founderStat}>
+                        <Clock className={styles.founderStatIcon} />
+                        <span>11+ Years Experience</span>
+                      </div>
+                      <div className={styles.founderStat}>
+                        <Shield className={styles.founderStatIcon} />
+                        <span>Visa Expert</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <AnimatedHR direction="left" duration={1.2} />
 
-            <ul>
-              <li><strong className={styles.highlightText}>Strong Track Record </strong> We have worked with more than 75000 clients in different visa categories like visitor visas student visas work permits dependent visas and even visa refusal cases. Our steady success rate comes from a clear understanding of visa rules documentation and how immigration systems work in real life.</li>
 
-              <li><strong className={styles.highlightText}>Guidance Step by Step </strong> Our team gives clear and practical guidance that matches your personal goals. Whether you are applying for the first time or you already travelled before we make sure you feel confident at every step of the journey.</li>
+          <section className={styles.mainGrid}>
 
-              <li><strong className={styles.highlightText}>Honest Approach </strong> We keep things simple and truthful. No confusing information no fake promises. Everything we explain is based on real facts and current rules because your trust matters more than anything.</li>
+            <div>
 
-              <li><strong className={styles.highlightText}>Full Support from Start to End </strong> We assist with everything including document checks visa file preparation interview help appointment support and after approval guidance. You can relax while we take care of the tricky parts.</li>
+              {/* Why Choose Us */}
+              <section className={styles.section}>
+                <div className={styles.container}>
+                  <div className={styles.sectionHeader}>
+                    <h2 className={styles.sectionTitle}>Why Choose Global Visa Internationals</h2>
+                    <p className={styles.sectionSubtitle}>Experience the difference with our client-first approach</p>
+                  </div>
 
-              <li><strong className={styles.highlightText}>Global View with Local Experience </strong> Our offices in Bengaluru and London help us understand both local and international expectations. This balance gives our clients a smooth and realistic experience.</li>
-            </ul>
+                  <div className={styles.featuresGrid}>
+                    {[
+                      {
+                        icon: <Shield />,
+                        title: "Trust & Transparency",
+                        description: "No hidden fees, no false promises. We provide honest assessments and clear communication."
+                      },
+                      {
+                        icon: <Award />,
+                        title: "Proven Track Record",
+                        description: "75,000+ successful applications across 25+ countries with consistently high approval rates."
+                      },
+                      {
+                        icon: <Users />,
+                        title: "Personalized Guidance",
+                        description: "Tailored strategies for each client based on their unique profile and aspirations."
+                      },
+                      {
+                        icon: <Globe />,
+                        title: "Global Network",
+                        description: "Offices in London and Bangalore provide both local expertise and global perspective."
+                      },
+                      {
+                        icon: <CheckCircle />,
+                        title: "End-to-End Support",
+                        description: "Comprehensive assistance from documentation to post-approval guidance."
+                      },
+                      {
+                        icon: <Clock />,
+                        title: "Timely Processing",
+                        description: "Efficient handling with regular updates and proactive case management."
+                      }
+                    ].map((feature, index) => (
+                      <div key={index} className={styles.featureCard}>
+                        <div className={styles.featureIcon}>{feature.icon}</div>
+                        <h3 className={styles.featureTitle}>{feature.title}</h3>
+                        <p className={styles.featureDescription}>{feature.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
 
-            <AnimatedHR direction="left" duration={1.2} />
+              {/* Services & Process */}
+              <section className={`${styles.section} ${styles.darkSection}`}>
+                <div className={styles.container}>
+                  <div className={styles.servicesGrid}>
+                    <div className={styles.servicesContent}>
+                      <h2 className={styles.sectionTitle}>Our Comprehensive Services</h2>
 
-            <h3>Our Key Strengths</h3>
+                      <div className={styles.servicesList}>
+                        {[
+                          "Student & Study Visas",
+                          "Work Visas & Permits",
+                          "Family & Spouse Visas",
+                          "Visitor & Tourist Visas",
+                          "Business & Investor Visas",
+                          "Permanent Residency",
+                          "Visa Refusal Appeals",
+                          "Documentation & Notary"
+                        ].map((service, index) => (
+                          <div key={index} className={styles.serviceItem}>
+                            <CheckCircle className={styles.serviceIcon} />
+                            <span>{service}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
-            <ul>
-              <li><strong className={styles.highlightText}>Who We Are </strong><br />
-                Global Visa Internationals is a friendly and dependable visa consultancy that aims to make your travel study and migration plans possible. We do not just fill forms for you. We offer complete support with honesty care and the right method.</li>
+                    <div className={styles.processSection}>
+                      <h3 className={styles.processTitle}>Our 6-Step Process</h3>
+                      <div className={styles.processSteps}>
+                        {[
+                          { number: "01", title: "Free Consultation", desc: "Initial eligibility assessment" },
+                          { number: "02", title: "Profile Analysis", desc: "Personalized strategy development" },
+                          { number: "03", title: "Documentation", desc: "Comprehensive document preparation" },
+                          { number: "04", title: "Application Filing", desc: "Accurate form submission" },
+                          { number: "05", title: "Follow-up", desc: "Regular case tracking" },
+                          { number: "06", title: "Post-Approval", desc: "Settlement guidance" }
+                        ].map((step, index) => (
+                          <div key={index} className={styles.processStep}>
+                            <div className={styles.stepNumber}>{step.number}</div>
+                            <div className={styles.stepContent}>
+                              <h4>{step.title}</h4>
+                              <p>{step.desc}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
-              <li><strong className={styles.highlightText}>11 Plus Years of Experience</strong><br />
-                With more than eleven years in this field we have seen how immigration rules keep changing and we understand what documents are really required and how different embassies work.</li>
+              {/* Global Coverage */}
+              <section className={styles.section}>
+                <div className={styles.container}>
+                  <div className={styles.sectionHeader}>
+                    <h2 className={styles.sectionTitle}>Global Reach, Local Expertise</h2>
+                    <p className={styles.sectionSubtitle}>Serving clients across major international destinations</p>
+                  </div>
 
-              <li><strong className={styles.highlightText}>High Success Rate</strong><br />
-                Our success rate stays strong because we focus on correct planning and neat documentation. Many clients reach success because we always try to improve the chances with the right process.</li>
+                  <div className={styles.countriesGrid}>
+                    {[
+                      { name: "United Kingdom", flag: "🇬🇧" },
+                      { name: "United States", flag: "🇺🇸" },
+                      { name: "Canada", flag: "🇨🇦" },
+                      { name: "Australia", flag: "🇦🇺" },
+                      { name: "Schengen Area", flag: "🇪🇺" },
+                      { name: "New Zealand", flag: "🇳🇿" },
+                      { name: "Japan", flag: "🇯🇵" },
+                      { name: "Singapore", flag: "🇸🇬" },
+                      { name: "UAE", flag: "🇦🇪" },
+                      { name: "20+ More", flag: "🌍" }
+                    ].map((country, index) => (
+                      <div key={index} className={styles.countryCard}>
+                        <span className={styles.countryFlag}>{country.flag}</span>
+                        <span className={styles.countryName}>{country.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
 
-              <li><strong className={styles.highlightText}>Honesty and Clarity</strong><br />
-                From the first day we try to keep everything clear. We do not give false hope or unnecessary talk. Your case is handled using real details and practical guidance.</li>
-
-              <li><strong className={styles.highlightText}>Personalized Support</strong><br />
-                Every client is different so we do not follow a one size method. We study your profile your purpose of travel and your dream country then share the best path that suits you.</li>
-
-              <li><strong className={styles.highlightText}>Strong Global Network</strong><br />
-                With our teams in India and the United Kingdom we have exposure to global practices as well as local requirements. This helps us support clients more effectively.</li>
-
-              <li><strong className={styles.highlightText}>Complete Visa Assistance</strong><br />
-                We help with profile study document list preparation form filing visa submission appointment booking mock interviews and even after visa support. Everything is handled in one place so you do not have to struggle.</li>
-
-              <li><strong className={styles.highlightText}>Clients Come First</strong><br />
-                We always try to respond as fast as we can solve doubts and make your full visa experience smooth and stress free.</li>
-            </ul>
-
-            <h4>Visa Services We Offer</h4>
-
-            <p>We support a wide range of visa categories like</p>
-            <ol>
-              <li>Tourist and Visitor Visas</li>
-              <li>Work Visas and Work Permits</li>
-              <li>Student Visas and Study Abroad Guidance</li>
-              <li>Business and Investor Visas</li>
-              <li>Dependent Family and Spouse Visas</li>
-              <li>Visa Refusal Review and Re application Help</li>
-              <li>Visa Appeal Support</li>
-              <li>Permanent Residency Pathway Advice</li>
-            </ol>
-
-            <h4>Countries We Guide For</h4>
-
-            <ul>
-              <li>United States of America</li>
-              <li>United Kingdom</li>
-              <li>Schengen Europe</li>
-              <li>Canada</li>
-              <li>Australia</li>
-              <li>New Zealand</li>
-              <li>Japan</li>
-              <li>Singapore</li>
-              <li>United Arab Emirates</li>
-              <li>And more than twenty other destinations</li>
-            </ul>
-
-            <div className={styles.salesPitch}>
-              <p>
-                <b className={styles.strong}>Let Global Visa Internationals help you get through your full visa process without stress</b>
-                We work carefully on documentation and filing to make the full journey smooth and simple for you.
-              </p>
-
-              <ul>
-                <li><b className={styles.strong}>Document Support </b> We check and prepare all papers based on embassy standards.</li>
-                <li><b className={styles.strong}>Form Filing </b> Forms are filled with accuracy by our trained team.</li>
-                <li><b className={styles.strong}>Case Planning </b> We share a personalized plan based on your profile.</li>
-                <li><b className={styles.strong}>Professional Drafting </b> Cover letters SOP and supporting letters included.</li>
-                <li><b className={styles.strong}>Notary Help </b> If required we guide with notarization too.</li>
-                <li><b className={styles.strong}>Smooth Flow </b> You only attend biometrics and we manage the rest.</li>
-                <li><b className={styles.strong}>Regular Tracking </b> We keep an eye on your file until the final decision arrives.</li>
-              </ul>
-
-              <p><b className={styles.strong}>With GVI the full visa journey becomes smoother simpler and worry free</b></p>
-
-              <a href="tel:+917022213466" className={styles.callButton}>
-                📞 Free Eligibility Check
-              </a>
+              {/* CTA Section */}
+              <section className={`${styles.section} ${styles.ctaSection}`}>
+                <div className={styles.container}>
+                  <div className={styles.ctaContent}>
+                    <h2 className={styles.ctaTitle}>Begin Your Global Journey Today</h2>
+                    <p className={styles.ctaText}>
+                      Take the first step towards your international aspirations with
+                      confidence and expert guidance.
+                    </p>
+                    <div className={styles.ctaButtons}>
+                      <a href="tel:+917022213466" className={styles.primaryButton}>
+                        📞 Free Eligibility Check
+                      </a>
+                      <a href="/contact" className={styles.secondaryButton}>
+                        Schedule Consultation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
 
-            <p>
-              <strong>Client Focused Care</strong><br />
-              We treat every client with kindness patience and commitment. Our goal is to help you move ahead in your journey with the least stress and the best possible support.
-            </p>
+            {/* Contact Form Sidebar */}
+            <div className={styles.formColumn}>
+              <div className={styles.stickyFormContainer}>
+                <VisaForm />
+              </div>
+            </div>
+          </section>
 
-            <p className={styles.disclaimer}>
-              This service is provided by Global Visa Internationals an independent consultancy. We are not linked to the Australian Government or any embassy.
-            </p>
-          </div>
-
-          <div className={styles.formContainer}>
-            <VisaForm />
-          </div>
         </div>
-      </div>
-      <section>
-        <ReviewSchema />
-        <ReviewCarousel />
+
+        {/* Reviews Section */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <ReviewSchema />
+            <ReviewCarousel />
+          </div>
+        </section>
+
       </section>
+
     </>
   );
 }

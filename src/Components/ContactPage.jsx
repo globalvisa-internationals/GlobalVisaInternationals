@@ -34,14 +34,14 @@ const ContactPage = () => {
             {/* Hero Section */}
             <section className={styles.heroSection}>
                 <div className={styles.heroBackground}>
-                    <Image
+                    {/* <Image
                         src="/contact/visa-contact-hero.webp"
                         alt="Global Visa Consultation"
                         fill
                         quality={100}
                         className={styles.heroImage}
                         priority
-                    />
+                    /> */}
                     <div className={styles.heroOverlay} />
                 </div>
                 <div className={styles.heroContent}>

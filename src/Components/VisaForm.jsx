@@ -153,7 +153,7 @@ export default function VisaForm() {
         {/* Form Header */}
         <div className={styles.formHeader}>
           <h2 className={styles.formTitle}>Free Visa Assessment</h2>
-          <p className={styles.formSubtitle}>
+          <p className={styles.modalSubtitleForm}>
             Get a personalized consultation within 24 hours
           </p>
         </div>
@@ -277,7 +277,7 @@ export default function VisaForm() {
             <div className={styles.modalHeader}>
               <div>
                 <h2 className={styles.modalTitle}>Free Visa Assessment</h2>
-                <p className={styles.modalSubtitle}>Get expert advice for your visa journey</p>
+                <p className={styles.modalSubtitleForm}>Get expert advice for your visa journey</p>
               </div>
               <button className={styles.modalCloseBtn} onClick={() => setShowPopup(false)}>
                 <FaTimes />
