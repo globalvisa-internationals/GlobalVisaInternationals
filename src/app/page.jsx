@@ -28,7 +28,7 @@ export const metadata = {
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 
   // UNIQUE TITLE: Authority + Brand + Major Destinations (60 Characters - Perfect Score)
-  title: "GVI Bangalore: Trusted Visa Experts Since 2016",
+  title: "GVI Bangalore: Trusted Visa Experts Since 2016 | 10,000+ Success Stories",
 
   // ✅ Updated Description: More specific social proof and a clear call to action.
   description: "With 10+ years of expertise & 10,000+ successful visas, our Bangalore consultants provide expert guidance for USA, UK, Canada, Australia & Europe. Get your free assessment.",
