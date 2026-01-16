@@ -48,36 +48,12 @@ export default function AboutSection() {
                                     </div>
                                     <p className={styles.highlightText}>
                                         Our comprehensive expertise spans <strong>study visas</strong> for academic excellence,
-                                        <strong> work visas</strong> for career advancement, <strong>tourist visas</strong> for
+                                        <strong>tourist visas</strong> for
                                         global exploration, and <strong>business visas</strong> for international enterprise expansion.
                                     </p>
                                 </div>
 
-                                <div className={styles.expertiseGrid}>
-                                    <div className={styles.expertiseItem}>
-                                        <div className={styles.expertiseHeader}>
-                                            <div className={`${styles.expertiseIcon} ${colors.bgAccent}`}>
-                                                🎓
-                                            </div>
-                                            <h4 className={styles.expertiseTitle}>Study Visa Experts</h4>
-                                        </div>
-                                        <p className={styles.expertiseDescription}>
-                                            University admissions, scholarship guidance, and student visa processing
-                                        </p>
-                                    </div>
 
-                                    <div className={styles.expertiseItem}>
-                                        <div className={styles.expertiseHeader}>
-                                            <div className={`${styles.expertiseIcon} ${colors.bgPrimaryBlue}`}>
-                                                💼
-                                            </div>
-                                            <h4 className={styles.expertiseTitle}>Work Visa Specialists</h4>
-                                        </div>
-                                        <p className={styles.expertiseDescription}>
-                                            Job placement support, work permit applications, and career migration
-                                        </p>
-                                    </div>
-                                </div>
 
                                 <div className={styles.ctaSection}>
                                     <button className={styles.primaryButton}>
@@ -132,7 +108,32 @@ export default function AboutSection() {
                                         <span className={styles.trustText}>98% Success Rate</span>
                                     </div>
                                 </div>
+                                <div className={styles.expertiseGrid}>
+                                    <div className={styles.expertiseItem}>
+                                        <div className={styles.expertiseHeader}>
+                                            <div className={`${styles.expertiseIcon} ${colors.bgAccent}`}>
+                                                🎓
+                                            </div>
+                                            <h4 className={styles.expertiseTitle}>Study Visa Experts</h4>
+                                        </div>
+                                        <p className={styles.expertiseDescription}>
+                                            University admissions, scholarship guidance, and student visa processing
+                                        </p>
+                                    </div>
 
+                                    <div className={styles.expertiseItem}>
+                                        <div className={styles.expertiseHeader}>
+                                            <div className={`${styles.expertiseIcon} ${colors.bgPrimaryBlue}`}>
+                                                ✈️
+                                            </div>
+                                            <h4 className={styles.expertiseTitle}>Tourist & Visitor Visa Experts</h4>
+                                        </div>
+                                        <p className={styles.expertiseDescription}>
+                                            Tourist and visitor visa assistance for sightseeing, family visits, and short-term travel
+                                        </p>
+                                    </div>
+
+                                </div>
                             </div>
                         </section>
                     </section>

@@ -31,7 +31,7 @@ export const metadata = {
   title: "GVI Bangalore: Trusted Visa Experts Since 2016 | 10,000+ Success Stories",
 
   // ✅ Updated Description: More specific social proof and a clear call to action.
-  description: "With 10+ years of expertise & 10,000+ successful visas, our Bangalore consultants provide expert guidance for USA, UK, Canada, Australia & Europe. Get your free assessment.",
+  description: "Global Visa Internationals is a trusted visa consultancy in Bangalore offering USA, UK, Canada & student visa services. Free assessment.",
 
   // ✅ Refreshed Keywords: Focus on solutions, local SEO, and new programs.
   keywords: [
@@ -75,13 +75,13 @@ export const metadata = {
     // ✅ FIX: Use an array with a full, absolute URL
     images: [
       {
-        url: "https://www.globalvisainternationals.com/GVI_Banner.webp",
+        url: "/GVI_Banner.jpg",
         width: 1200,
         height: 630,
         alt: "Global Visa Internationals - Your Trusted Visa & Immigration Partner",
 
-        secureUrl: "https://www.globalvisainternationals.com/GVI_Banner.webp",
-        type: "image/webp",
+        secureUrl: "/GVI_Banner.jpg",
+        type: "image/jpg",
       },
     ],
   },
@@ -93,7 +93,7 @@ export const metadata = {
     site: "@GLOBALVISA1505",
     creator: "@GLOBALVISA1505",
     // ✅ FIX: Point to the same image as openGraph
-    images: ["https://www.globalvisainternationals.com/GVI_Banner.webp"],
+    images: ["https://www.globalvisainternationals.com/GVI_Banner.jpg"],
   },
 
   // LOCAL SEO & APP ICONS
@@ -261,7 +261,7 @@ export default function Home() {
     url: "https://www.globalvisainternationals.com",
     telephone: "+91-7022213466",
     email: "operations@globalvisainternationals.com",
-    image: "https://www.globalvisainternationals.com/GVI_Banner.webp",
+    image: "https://www.globalvisainternationals.com/GVI_Banner.jpg",
     logo: "https://www.globalvisainternationals.com/gvilogo.png",
     priceRange: "₹₹₹",
     currenciesAccepted: "INR",
@@ -563,7 +563,7 @@ export default function Home() {
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      url: "https://www.globalvisainternationals.com/GVI_Banner.webp",
+      url: "https://www.globalvisainternationals.com/GVI_Banner.jpg",
       width: 1200,
       height: 630,
       caption: "Global Visa Internationals - Visa and Immigration Services"
@@ -738,9 +738,8 @@ export default function Home() {
 
 
 
-        <h1 className={styles.waveText}>
-          The Visa And Immigration Assistance Experts  |  We Deal With All Type Of Visas
-        </h1>
+        <h1 className={styles.waveText}> Trusted Visa Consultancy in Bangalore for USA, Canada, UK & Schengen Visas Since 2016</h1>
+
 
 
         {/* About Us Section - Modern Corporate Design */}

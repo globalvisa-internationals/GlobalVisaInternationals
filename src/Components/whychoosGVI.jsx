@@ -218,7 +218,7 @@ const WhychoosGVI = () => {
                             </div>
                             <div className={styles.statContent}>
                                 <div className={`${styles.statValue} ${colors.primaryBlue}`}>
-                                    Since 2017
+                                    Since 2016
                                 </div>
                                 <p className={styles.statDescription}>
                                     Trusted service excellence across India
