@@ -28,22 +28,22 @@ export const metadata = {
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 
   // UNIQUE TITLE: Authority + Brand + Major Destinations (60 Characters - Perfect Score)
-  title: "GVI Bangalore: Premium Visa Consultants for USA, UK, Canada & Europe",
+  title: "GVI Bangalore: Trusted Visa Experts Since 2016",
 
-  // UNIQUE DESCRIPTION: Problem/Solution format + Social Proof (156 Characters)
-  description: "Don't just apply—get approved. Join 75k+ travelers trusting GVI for seamless visa & immigration services to USA, UK, Canada & Australia. Start today.",
+  // ✅ Updated Description: More specific social proof and a clear call to action.
+  description: "With 10+ years of expertise & 10,000+ successful visas, our Bangalore consultants provide expert guidance for USA, UK, Canada, Australia & Europe. Get your free assessment.",
 
-  // REFRESHED KEYWORDS 2026: Focused on "Strategy" and "Consultancy" rather than just "Agents"
+  // ✅ Refreshed Keywords: Focus on solutions, local SEO, and new programs.
   keywords: [
-    "visa consultants bangalore",
-    "immigration strategy experts",
-    "visa rejection solutions",
-    "canada pr consultants",
-    "usa visa assistance bangalore",
-    "uk study visa experts",
-    "schengen visa consultants",
-    "australia immigration bangalore",
-    "global visa internationals reviews"
+    "10 years visa consultancy bangalore",
+    "visa rejection appeal experts",
+    "canada pr express entry 2026",
+    "usa h1b visa consultants bangalore",
+    "uk skilled worker visa 2026",
+    "australia permanent residency consultants",
+    "schengen visa appointment bangalore",
+    "overseas education consultants",
+    "global visa internationals reviews 2026" // Branded query
   ],
   canonical: "https://www.globalvisainternationals.com/",
   // CANONICAL
@@ -64,7 +64,7 @@ export const metadata = {
     },
   },
 
-  // OPEN GRAPH (The Social Media Card)
+  // ✅ Corrected and Enhanced Open Graph & Twitter Metadata
   openGraph: {
     title: "Unlock the World | Expert Visa Services by Global Visa Internationals",
     description: "Simplifying borders for 75,000+ clients. We provide precision visa assistance for Canada, USA, UK, Australia & Europe. Zero hidden fees.",
@@ -72,24 +72,28 @@ export const metadata = {
     siteName: "Global Visa Internationals",
     locale: "en_IN",
     type: "website",
+    // ✅ FIX: Use an array with a full, absolute URL
     images: [
       {
-        url: "/GVI_Banner.webp", // Next.js will now attach this to metadataBase automatically
+        url: "https://www.globalvisainternationals.com/GVI_Banner.webp",
         width: 1200,
         height: 630,
-        alt: "Global Visa Internationals - Your Gateway to the World",
+        alt: "Global Visa Internationals - Your Trusted Visa & Immigration Partner",
+
+        secureUrl: "https://www.globalvisainternationals.com/GVI_Banner.webp",
+        type: "image/webp",
       },
     ],
   },
 
-  // TWITTER / X
   twitter: {
-    card: "summary_large_image",
-    title: "GVI: Premium Visa & Immigration Consultants",
+    card: "summary_large_image", // ✅ This is correct for large image previews
+    title: "GVI: Premium Visa & Immigration Consultants | Since 2016",
     description: "Expert guidance for USA, UK, Canada & Europe. 99% dedication to your travel dreams.",
     site: "@GLOBALVISA1505",
     creator: "@GLOBALVISA1505",
-    images: "/GVI_Banner.webp",
+    // ✅ FIX: Point to the same image as openGraph
+    images: ["https://www.globalvisainternationals.com/GVI_Banner.webp"],
   },
 
   // LOCAL SEO & APP ICONS
