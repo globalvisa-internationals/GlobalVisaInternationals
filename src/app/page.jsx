@@ -27,7 +27,7 @@ export const metadata = {
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 
   // SEO title (<=60 chars) 
-  title: "Best Visa Consultants in Bangalore | USA, Canada, UK & Schengen",
+  title: "Best Visa Consultants in Bangalore: USA Canada UK & Schengen",
 
   // Shortened, action-oriented description (<=160 chars)
   description:
@@ -485,7 +485,7 @@ export default function Home() {
 
         {
           "@type": "OfferCatalog",
-          "@id": "https://www.globalvisainternationals.com/#visitor-visas",
+          "@id": "https://www.globalvisainternationals.com/Visa/tourist-visa/#visitor-visas",
           name: "Visitor Visa Services",
           itemListElement: [
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Schengen Tourist Visa", "url": "https://www.globalvisainternationals.com/Visa/tourist-visa/schengen" } },
