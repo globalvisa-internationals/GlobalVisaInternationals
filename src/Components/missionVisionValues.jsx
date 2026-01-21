@@ -29,7 +29,7 @@ const MissionVisionValues = () => {
                         alt="Mission of Global Visa Internationals"
                         loading="lazy"
                     />
-                    <h3>Our Mission</h3>
+                    <h3>Our Mission as Visa Consultants</h3>
                     <p>
                         Our mission is to provide clear and ethical visa and immigration guidance by
                         assisting applicants with documentation, eligibility assessment, and
@@ -45,7 +45,7 @@ const MissionVisionValues = () => {
                         alt="Vision of Global Visa Internationals"
                         loading="lazy"
                     />
-                    <h3>Our Vision</h3>
+                    <h3>Our Vision for Global Visa Services</h3>
                     <p>
                         Our vision is to be a reliable visa consultancy recognized for transparent
                         processes, compliance with immigration regulations, and consistent client
@@ -60,7 +60,7 @@ const MissionVisionValues = () => {
                         alt="Core values of Global Visa Internationals"
                         loading="lazy"
                     />
-                    <h3>Our Core Values</h3>
+                    <h3>Our Core Values in Visa Consultancy</h3>
                     <p>
                         Transparency, accountability, empathy, and a client-first approach guide our
                         work. We prioritize accuracy, ethical advisory practices, and respect for

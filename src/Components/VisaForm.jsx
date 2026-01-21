@@ -259,6 +259,7 @@ export default function VisaForm() {
             <FaCheckCircle />
             <span>100% Confidential</span>
           </div>
+
           <div className={styles.assuranceItem}>
             <FaCheckCircle />
             <span>No Obligation</span>

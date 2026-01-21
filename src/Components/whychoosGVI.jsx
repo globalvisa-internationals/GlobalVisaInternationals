@@ -10,24 +10,25 @@ const WhychoosGVI = () => {
                 <div className={styles.sectionHeader}>
 
                     <h2 className={`${styles.sectionTitle} ${colors.primaryDark}`}>
-                        Why Global Visa Internationals Stands Apart
+                        Why We Are One of the Best Visa Consultants in Bangalore
                     </h2>
                     <div className={styles.headerContent}>
                         <p className={styles.leadText}>
-                            With over 11 years of dedicated service, we've refined immigration
-                            consultancy into a precise science. Our Bangalore-based team combines
-                            extensive experience with innovative approaches to navigate complex
-                            visa landscapes.
+                            With over 11+ years of experience as trusted visa consultants in Bangalore,
+                            Global Visa Internationals has helped thousands of Indian applicants successfully
+                            secure visas for top global destinations with a proven, transparent process.
                         </p>
+
                         <p className={styles.subText}>
-                            We serve as strategic partners in your global mobility journey—providing
-                            clarity, reducing complexities, and enhancing success probabilities through
-                            evidence-based methodologies.
+                            From first-time travellers to international students and business visitors,
+                            we provide end-to-end visa guidance, accurate documentation support,
+                            and expert interview preparation to minimise rejection risks.
                         </p>
+
                     </div>
                 </div>
 
-                {/* Service Offerings Grid */}
+                {/* Services Grid */}
                 <div className={styles.servicesGrid}>
                     <div className={styles.serviceCard}>
                         <div className={styles.cardHeader}>
@@ -38,47 +39,40 @@ const WhychoosGVI = () => {
                                 </svg>
                             </div>
                             <h3 className={`${styles.cardTitle} ${colors.primaryBlue}`}>
-                                Comprehensive Visa Solutions
+                                Complete Visa Services Under One Roof
                             </h3>
                         </div>
                         <ul className={styles.serviceList}>
                             <li className={styles.serviceItem}>
                                 <div className={styles.checkmark}></div>
-                                <span>Student Visa Documentation & Study Abroad Strategy</span>
+                                <span>Student Visa Documentation & University Application Support</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.checkmark}></div>
-                                <span>Work Visa Consultation for Career Advancement</span>
+                                <span>Tourist & Visitor Visa Processing for Indians</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.checkmark}></div>
-                                <span>Tourist & Visitor Visa Processing Excellence</span>
+                                <span>Business Visa Assistance for International Travel</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.checkmark}></div>
-                                <span>Business Travel Visa & Corporate Mobility Support</span>
+                                <span>Permanent Residency Guidance (Canada, Australia, UK)</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.checkmark}></div>
-                                <span>Permanent Residency Pathway Guidance</span>
+                                <span>Family & Dependent Visa Applications</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.checkmark}></div>
-                                <span>Skilled Migration & Points-Based Applications</span>
+                                <span>Visa Refusal Review & Reapplication Strategy</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.checkmark}></div>
-                                <span>Family Reunification & Dependent Visa Processing</span>
-                            </li>
-                            <li className={styles.serviceItem}>
-                                <div className={styles.checkmark}></div>
-                                <span>Visa Refusal Analysis & Strategic Reapplication</span>
-                            </li>
-                            <li className={styles.serviceItem}>
-                                <div className={styles.checkmark}></div>
-                                <span>Customized Profile Assessment & Advisory</span>
+                                <span>Profile Evaluation & Country Eligibility Check</span>
                             </li>
                         </ul>
+
                     </div>
 
                     <div className={styles.serviceCard}>
@@ -90,45 +84,43 @@ const WhychoosGVI = () => {
                                 </svg>
                             </div>
                             <h3 className={`${styles.cardTitle} ${colors.primaryBlue}`}>
-                                Global Destination Expertise
+                                Top Visa Destinations We Specialise In
                             </h3>
                         </div>
                         <ul className={styles.serviceList}>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🇨🇦</div>
-                                <span><strong>Canada</strong> - Study, Work, Visitor & Express Entry</span>
-                            </li>
+                                <span><strong>Canada</strong> - Tourist, Student & PR Visa Consultants</span>                            </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🇦🇺</div>
-                                <span><strong>Australia</strong> - Skilled Migration & PR Pathways</span>
-                            </li>
+                                <span><strong>Australia</strong> - Visitor & Permanent Residency Services</span>                            </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🇬🇧</div>
-                                <span><strong>United Kingdom</strong> - Student & Business Visas</span>
+                                <span><strong>United Kingdom</strong> - UK Student & Tourist Visa Experts</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🇺🇸</div>
-                                <span><strong>United States</strong> - Visitor & Academic Visas</span>
+                                <span><strong>United States</strong> - USA B1/B2 Visitor Visa Assistance</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🇪🇺</div>
-                                <span><strong>Europe</strong> - Schengen Area Visa Assistance</span>
+                                <span><strong>Europe</strong> - Schengen Visa for Indian Citizens</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🇯🇵</div>
-                                <span><strong>Japan</strong> - Tourist & Cultural Exchange Visas</span>
+                                <span><strong>Japan</strong> - Tourist & Short-Term Visa Processing</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🇨🇳</div>
-                                <span><strong>China</strong> - Business & Educational Visas</span>
+                                <span><strong>China</strong> - Business & Visitor Visa Services</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🇸🇬</div>
-                                <span><strong>Singapore</strong> - Professional Visit Passes</span>
+                                <span><strong>Singapore</strong> - Short-Term Visit Pass Support</span>
                             </li>
                             <li className={styles.serviceItem}>
                                 <div className={styles.flagIcon}>🌍</div>
-                                <span><strong>Global Network</strong> - 45+ Destination Coverage</span>
+                                <span><strong>Global</strong> - Visa Services for 45+ Countries</span>
                             </li>
                         </ul>
                     </div>
@@ -138,7 +130,7 @@ const WhychoosGVI = () => {
                 <div className={styles.metricsSection}>
                     <div className={styles.metricsHeader}>
                         <h3 className={`${styles.metricsTitle} ${colors.primaryDark}`}>
-                            Our Track Record of Excellence
+                            Proven Results as Leading Visa Consultants in Bangalore
                         </h3>
                         <p className={styles.metricsSubtitle}>
                             Quantifying our commitment to successful immigration outcomes
@@ -202,7 +194,7 @@ const WhychoosGVI = () => {
                             </div>
                             <div className={styles.statContent}>
                                 <div className={`${styles.statValue} ${colors.primaryBlue}`}>
-                                    10,000+
+                                    75,000+
                                 </div>
                                 <p className={styles.statDescription}>
                                     Successful visa applications and consultations
@@ -228,20 +220,7 @@ const WhychoosGVI = () => {
                     </div>
                 </div>
 
-                {/* Trust Badge */}
-                {/* <div className={styles.trustBadge}>
-                    <div className={styles.trustContent}>
-                        <div className={`${styles.trustIcon} ${colors.bgSuccess}`}>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="2" />
-                                <path d="M8 12L11 15L16 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </div>
-                        <div className={styles.trustText}>
-                            <strong>Verified & Registered</strong> with Government Immigration Authorities
-                        </div>
-                    </div>
-                </div> */}
+
             </div>
         </section>
 

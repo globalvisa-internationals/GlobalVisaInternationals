@@ -12,11 +12,13 @@ export default function AboutSection() {
                         <span className={styles.badgeText}>About Us</span>
                     </div>
                     <h2 className={`${styles.sectionTitle} ${colors.primaryDark}`}>
-                        Our Journey to Excellence
+                        Trusted Visa Consultants in Bangalore Since 2016
                     </h2>
+
                     <p className={styles.sectionSubtitle}>
-                        Transforming immigration dreams into global realities
+                        Expert visa consultancy services for USA, Canada, UK, Schengen, Australia & New Zealand
                     </p>
+
                 </div>
 
                 {/* Content */}
@@ -28,16 +30,16 @@ export default function AboutSection() {
                         <div className={styles.contentCard}>
                             <h3 className={`${styles.contentTitle} ${colors.primaryBlue}`}>
                                 Global Visa Internationals:<br />
-                                Your Premier Immigration Partner
+                                Best Visa Consultants in Bangalore
                             </h3>
 
                             <div className={styles.contentBody}>
                                 <p className={styles.leadParagraph}>
-                                    At Global Visa Internationals, we specialize in transforming complex immigration
-                                    processes into streamlined, successful journeys. As a leading consultancy based
-                                    in India, we empower individuals, families, and professionals to achieve their
-                                    global aspirations.
+                                    Global Visa Internationals is a trusted visa consultancy in Bangalore, established in 2016 on Brigade Road.
+                                    We help Indian applicants successfully apply for tourist, student and business visas with expert guidance,
+                                    high success rates, and end-to-end documentation support.
                                 </p>
+
 
                                 <div className={styles.highlightSection}>
                                     <div className={styles.highlightIcon}>
@@ -47,10 +49,11 @@ export default function AboutSection() {
                                         </svg>
                                     </div>
                                     <p className={styles.highlightText}>
-                                        Our comprehensive expertise spans <strong>study visas</strong> for academic excellence,
-                                        <strong>tourist visas</strong> for
-                                        global exploration, and <strong>business visas</strong> for international enterprise expansion.
+                                        Our expertise includes <strong>USA B1/B2 visitor visas</strong>, <strong>Canada tourist visas</strong>,
+                                        <strong>UK student visas</strong>, <strong>Schengen visas for Indians</strong>,
+                                        <strong>Australia & New Zealand visitor visas</strong>.
                                     </p>
+
                                 </div>
 
 
@@ -79,7 +82,7 @@ export default function AboutSection() {
                                 <div className={styles.imageContainer}>
                                     <img
                                         src="https://www.globalvisainternationals.com/images/story.webp"
-                                        alt="Professional visa consultation team at Global Visa Internationals"
+                                        alt="Trusted visa consultants in Bangalore at Global Visa Internationals"
                                         className={styles.mainImage}
                                         loading="lazy"
                                     />

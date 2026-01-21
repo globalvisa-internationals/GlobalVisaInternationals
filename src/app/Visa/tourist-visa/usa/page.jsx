@@ -506,149 +506,471 @@ export default function USATouristVisa() {
 
         <div className={styles.VisaData}>
 
+
           {/* H1: Primary Keyword Targeting for Location + Year + Service */}
-          <h1 className={styles.Title}>
-            Top USA Visa Consultant in Bangalore (2026) | Expert B1/B2 Visa Assistance & Slot Booking
-          </h1>
+          <h1 class="styles.Title">Complete Guide to US Tourist Visa (B1/B2) in 2026 | Global Visa Internationals</h1>
+          <p>A US Tourist Visa, officially known as the B1/B2 visa, is a non-immigrant visa that permits foreign nationals to enter the United States temporarily. This US tourist visa serves multiple purposes including business travel (B1), tourism and leisure (B2), or a combination of both activities.</p>
+          <p>The US tourist visa allows visitors to explore American destinations, attend business meetings, visit family and friends, or seek medical treatment without the intention of permanent residency.</p>
 
-          {/* Intro: Immediate hook targeting the 2026 travel rush and rejection anxiety */}
-          <p>
-            Planning your 2026 travel to the United States? Whether for business, tourism, or family visits,
-            securing a US visa is tougher than ever. <strong className={styles.strong}>Global Visa Internationals (GVI)</strong> is the
-            <em>most trusted USA visa agent in Bangalore</em>, specializing in navigating strict Embassy protocols.
-            From <strong className={styles.strong}>error-free DS-160 filing</strong> to securing <strong className={styles.strong}>fast-track US visa appointments</strong>,
-            we turn complex paperwork into guaranteed approvals.
-          </p>
+          <a href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026" class="styles.callButton">
+            📞 Check My Visa Eligibility for 2026 (Free)
+          </a>
 
-          {/* H2: Addressing the critical pain point: Wait Times */}
-          <h2 className={styles.subTitle}>
-            Fast-Track US Visa Appointments & Emergency Slot Booking
-          </h2>
+          <h2 class={styles.subTitle}>US Tourist Visa Eligibility Criteria: Complete Requirements for 2026</h2>
+          <p>Understanding US tourist visa eligibility criteria is crucial for a successful application. The US Embassy has specific requirements that every applicant must meet:</p>
 
-          <p>
-            Don't let 300+ day wait times cancel your plans. As specialized <strong className={styles.strong}>US visa slot booking agents</strong>,
-            we use 24/7 monitoring systems to snatch up cancellations and secure <strong className={styles.strong}>early interview slots</strong> for our clients.
-            We handle the stress of the US travel docs portal so you can focus on your trip.
-          </p>
+          <h3 class={styles.subTitle}>Core US Tourist Visa Eligibility Requirements</h3>
 
+          <h4 className={styles.subTitle}>1. Valid Purpose of Travel</h4>
           <ul>
-            <li><strong className={styles.strong}>Priority Slot Booking:</strong> Proven strategy for securing early B1/B2 interview dates in 2026.</li>
-            <li><strong className={styles.strong}>Risk-Free Application:</strong> Detailed audit of your profile to prevent common Section 214(b) rejections.</li>
-            <li><strong className={styles.strong}>Mock Interviews:</strong> 1-on-1 coaching to help you answer tough questions with confidence.</li>
-            <li><strong className={styles.strong}>Refusal Management:</strong> Expert strategy for re-applying after a previous US visa rejection.</li>
+            <li><strong className={styles.strong}>Tourism:</strong> Submit complete travel itinerary, confirmed flight tickets, and hotel reservations</li>
+            <li><strong className={styles.strong}>Family/Friend Visits:</strong> Provide formal invitation letter from US-based host with their immigration status proof</li>
+            <li><strong className={styles.strong}>Medical Treatment:</strong> Include medical records, appointment letters from US healthcare facilities, and diagnosis documents</li>
+            <li><strong className={styles.strong}>Business Activities:</strong> Present business invitation letters, conference registration, or meeting schedules</li>
           </ul>
 
-          {/* Promo Box: Highlighting USP, Speed, and 2026 Readiness */}
-          <div className={styles.promoBox}>
-            <h2 className={styles.heading}>
-              🚀 Get Your USA Tourist / Business (B1/B2) Visa in Just 6 Weeks*
-            </h2>
-
-            <ul className={styles.features}>
-              <li><strong className={styles.strong}>Express 2026 Processing:</strong> Optimized workflows to aim for a 6-week turnaround (subject to Embassy availability).</li>
-              <li><strong className={styles.strong}>Service Guarantee:</strong> We offer a service charge refund if we miss our committed processing timeline.</li>
-              <li><strong className={styles.strong}>10+ Years Experience:</strong> Handled by senior consultants who understand the latest 2026 immigration trends.</li>
-              <li><strong className={styles.strong}>Complete Hand-holding:</strong> From document collection to final passport stamping.</li>
-            </ul>
-
-            <p>
-              Avoid delays and approach your visa interview with total confidence.
-            </p>
-
-            <a
-              href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026"
-              className={styles.callButton}
-            >
-              📞 Check My Visa Eligibility for 2026 (Free)
-            </a>
-          </div>
-
-          <h2 className={styles.subTitle}>
-            Comprehensive USA B1/B2 Visa Services in India
-          </h2>
-
-          <h3 className={styles.subTitle}>1. Flawless Documentation & DS-160 Filing</h3>
+          <h4 className={styles.subTitle}>2. Financial Stability for US Tourist Visa</h4>
           <ul>
-            <li><strong className={styles.strong}>Financial Review:</strong> We analyze your ITRs, liquid assets, and property docs to prove financial stability.</li>
-            <li><strong className={styles.strong}>DS-160 Mastery:</strong> We file your application with 100% accuracy. A single error here is the #1 cause of rejection in 2026.</li>
-            <li><strong className={styles.strong}>Sponsor Support:</strong> Guidance on Affidavit of Support (Form I-134) for those visiting family.</li>
+            <li>Demonstrate sufficient funds to cover entire US trip duration</li>
+            <li>Provide bank statements (last 6 months), fixed deposit certificates, property documents</li>
+            <li>Show steady income through salary slips, ITR documents, or business financial statements</li>
           </ul>
 
-          <h3 className={styles.subTitle}>2. Elite Interview Preparation</h3>
+          <h4 className={styles.subTitle}>3. Strong Ties to Home Country</h4>
           <ul>
-            <li><strong className={styles.strong}>Realistic Mocks:</strong> We simulate the exact environment of the US Consulate.</li>
-            <li><strong className={styles.strong}>2026 Question Bank:</strong> Access to the latest questions being asked by Visa Officers right now.</li>
-            <li><strong className={styles.strong}>Ties to Home:</strong> We teach you how to effectively prove you will return to India (the key to approval).</li>
+            <li>Proof of permanent residence in your home country</li>
+            <li>Employment verification letter or business ownership documents</li>
+            <li>Family ties documentation (marriage certificate, children's records)</li>
+            <li>Property ownership papers or rental agreements</li>
           </ul>
 
-          <h2 className={styles.subTitle}>
-            USA Visa Categories We Handle
-          </h2>
+          <h4 className={styles.subTitle}>4. Immigration Compliance</h4>
+          <ul>
+            <li>Clear intent to return after authorized stay period</li>
+            <li>No history of US immigration violations</li>
+            <li>Clean criminal record with police verification certificate</li>
+            <li>Adherence to US tourist visa conditions (no work, study, or paid performances)</li>
+          </ul>
 
-          <h4 className={styles.subTitle}>B1 Visa (Business)</h4>
-          <p>For attending conferences, client meetings, or short-term training in the US.</p>
+          <h3 class={styles.subTitle}>US Tourist Visa Documents Required: Complete Checklist 2026</h3>
+          <p>Proper documentation is critical for US tourist visa approval. Here's the comprehensive US tourist visa documents required list:</p>
 
-          <h4 className={styles.subTitle}>B2 Visa (Tourism & Medical)</h4>
-          <p>For vacations, visiting relatives, or seeking specialized medical treatment.</p>
+          <strong className={styles.strong}>Mandatory US Tourist Visa Documents</strong>
 
-          <h2 className={styles.subTitle}>
-            USA Visa Fees for Indian Applicants (Updated 2026)
-          </h2>
+          <h4 className={styles.subTitle}>Identity & Travel Documents:</h4>
+          <ul>
+            <li>Valid passport (minimum 6 months validity beyond travel dates)</li>
+            <li>All previous passports (if applicable)</li>
+            <li>Recent passport-sized photograph (51mm x 51mm, white background, meeting US visa photo specifications)</li>
+          </ul>
 
-          <p><em>Note: Fees are mandated by the US Dept of State and depend on the current consular exchange rate.</em></p>
+          <h4 className={styles.subTitle}>US Visa Application Forms:</h4>
+          <ul>
+            <li>Completed DS-160 form (Online Nonimmigrant Visa Application)</li>
+            <li>DS-160 confirmation page with barcode</li>
+            <li>VAC stamped DS-160 confirmation page</li>
+            <li>US visa appointment confirmation letter</li>
+          </ul>
 
-          <table className={styles.table}>
+          <h4 className={styles.subTitle}>Financial Documents for US Tourist Visa:</h4>
+          <ul>
+            <li>Last 6 months' bank statements</li>
+            <li>Income Tax Returns (ITR) for past 3 years</li>
+            <li>Salary slips (last 6 months) or business financial statements</li>
+            <li>Fixed deposit receipts, mutual fund statements, property documents</li>
+            <li>Sponsorship documents (Form I-134 Affidavit of Support, if applicable)</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Supporting Documents:</h4>
+          <ul>
+            <li>Employment verification letter on company letterhead</li>
+            <li>Leave approval letter from employer</li>
+            <li>Business registration documents (for self-employed applicants)</li>
+            <li>Travel itinerary and confirmed flight bookings</li>
+            <li>Hotel reservations or host invitation letter</li>
+            <li>Travel insurance (recommended)</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Character & Compliance Documents:</h4>
+          <ul>
+            <li>Police verification certificate (no criminal record proof)</li>
+            <li>Purpose of travel letter explaining visit details</li>
+            <li>Previous US visa copies (if applicable)</li>
+            <li>Previous international travel records</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Payment Receipts:</h4>
+          <ul>
+            <li>MRV fee payment receipt (approx. ₹17,000 or $185 USD)</li>
+            <li>VFS service fee receipt</li>
+          </ul>
+
+          <h2 class={styles.subTitle}>How to Apply for US Tourist Visa: Step-by-Step Process 2026</h2>
+          <p>Follow this detailed US tourist visa application process for successful submission:</p>
+
+          <h3 className={styles.subTitle}>US Tourist Visa Application Steps</h3>
+          <h4 className={styles.subTitle}>Step 1: Prepare Digital Photograph</h4>
+          <ul>
+            <li>Capture recent photograph meeting US visa specifications (51mm x 51mm, white background, no glasses)</li>
+            <li>Upload digital photo during DS-160 form submission</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Step 2: Complete DS-160 Form Online</h4>
+          <ul>
+            <li>Access the Consular Electronic Application Center</li>
+            <li>Fill all sections accurately (personal info, travel plans, background questions)</li>
+            <li>Review carefully before submission</li>
+            <li>Save the 10-digit barcode confirmation number</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Step 3: Pay US Tourist Visa Application Fee</h4>
+          <ul>
+            <li>Current MRV fee: ₹17,000 (approximately $185 USD)</li>
+            <li>Payment through approved banks or online portal</li>
+            <li>Save payment receipt for appointment booking</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Step 4: Schedule US Visa Appointments</h4>
+          <p>You need two separate appointments for US tourist visa processing:</p>
+          <p><strong className={styles.strong}>Appointment 1: Offsite Facilitation Centre (OFC/VAC)</strong></p>
+          <ul>
+            <li>Biometric data collection (fingerprints, photograph)</li>
+            <li>Document verification</li>
+            <li>Book through official VFS website</li>
+          </ul>
+          <p><strong className={styles.strong}>Appointment 2: US Embassy/Consulate Interview</strong></p>
+          <ul>
+            <li>Personal visa interview with Consular Officer</li>
+            <li>Schedule after OFC appointment</li>
+            <li>Available locations: Bangalore, Chennai, Hyderabad, Kolkata, Mumbai, New Delhi</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Step 5: Attend OFC Appointment</h4>
+          <ul>
+            <li>Submit biometrics at Visa Application Centre</li>
+            <li>Provide required documents for verification</li>
+            <li>Receive stamped DS-160 confirmation</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Step 6: Prepare for US Visa Interview</h4>
+          <ul>
+            <li>Review your DS-160 form thoroughly</li>
+            <li>Organize all supporting documents</li>
+            <li>Practice common interview questions</li>
+            <li>Demonstrate strong ties to India and clear return intentions</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Step 7: Attend US Embassy Interview</h4>
+          <ul>
+            <li>Arrive 15 minutes before scheduled time</li>
+            <li>Bring all original documents plus one set of photocopies</li>
+            <li>Answer questions confidently and honestly</li>
+            <li>Provide additional documents if requested</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Step 8: Visa Processing & Passport Return</h4>
+          <ul>
+            <li>If approved, passport will be sent for visa stamping</li>
+            <li>Track passport status online</li>
+            <li>Receive passport with US tourist visa via courier</li>
+            <li>Verify all visa details upon receipt</li>
+          </ul>
+
+          <h2 class={styles.subTitle}>US Tourist Visa Fees & Costs 2026</h2>
+          <p>Understanding the complete US tourist visa cost helps in proper budgeting:</p>
+
+          <h3 className={styles.subTitle}>Official US Tourist Visa Fees</h3>
+          <table>
             <thead>
               <tr>
                 <th>Fee Component</th>
-                <th>Amount (INR)*</th>
+                <th>Amount (INR)</th>
                 <th>USD Equivalent</th>
+                <th>Notes</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong className={styles.strong}>MRV Fee (Application Fee)</strong></td>
-                <td>₹17,000 (Approx)</td>
+                <td>MRV Application Fee</td>
+                <td>₹17,000 (approx)</td>
                 <td>$185</td>
+                <td>Non-refundable, paid to US Government</td>
               </tr>
               <tr>
-                <td><strong className={styles.strong}>Biometrics Service</strong></td>
+                <td>Biometrics Fee</td>
                 <td>Included</td>
                 <td>-</td>
+                <td>Covered in MRV fee</td>
               </tr>
               <tr>
-                <td><strong className={styles.strong}>Consultant Service Fee</strong></td>
-                <td><a href="https://wa.me/917022213466">Ask for Quote</a></td>
+                <td>VFS Service Fee</td>
+                <td>₹1,500-2,500</td>
                 <td>-</td>
+                <td>For document collection & courier</td>
               </tr>
             </tbody>
           </table>
 
-          <p className={styles.note}>
-            *Exchange rates fluctuate daily. The MRV fee is non-refundable and paid directly to the US portal.
-          </p>
-
-          <h2 className={styles.subTitle}>
-            Why Choose Global Visa Internationals?
-          </h2>
-
+          <h4 className={styles.subTitle}>Additional US Visa Related Costs</h4>
           <ul>
-            <li><strong className={styles.strong}>Bangalore's Best:</strong> Centrally located on Brigade Road, serving all of Karnataka.</li>
-            <li><strong className={styles.strong}>Transparency First:</strong> No hidden costs. Clear roadmap from Day 1.</li>
-            <li><strong className={styles.strong}>Proven Success:</strong> High approval rates for complex cases, senior citizens, and solo female travelers.</li>
-            <li><strong className={styles.strong}>Personal Case Manager:</strong> Dedicated support via WhatsApp and phone throughout the process.</li>
+            <li>Visa Issuance Fee: Varies by nationality (Indians are exempt)</li>
+            <li>Medical Examination: ₹3,000-5,000 (if required for specific cases)</li>
+            <li>Police Verification: ₹500-1,000 (varies by state)</li>
+            <li>Document Attestation: ₹500-2,000 (notarization, translations)</li>
+            <li>Consultant Fees: Variable (contact Global Visa Internationals for quote)</li>
+          </ul>
+          <p><strong className={styles.strong}>Important:</strong> The US tourist visa fee ($185/₹17,000) is non-refundable regardless of visa approval or rejection.</p>
+
+          <h2 class={styles.subTitle}>US Tourist Visa Processing Time 2026</h2>
+          <p><strong className={styles.strong}>Standard US tourist visa processing time:</strong> 3-14 business days after interview</p>
+          <p>However, actual processing time depends on several factors:</p>
+
+          <h3 className={styles.subTitle}>Factors Affecting US Visa Processing Time</h3>
+          <ul>
+            <li><strong className={styles.strong}>Embassy Workload:</strong> High application volume can extend processing</li>
+            <li><strong className={styles.strong}>Administrative Processing:</strong> Additional background checks may add 4-12 weeks</li>
+            <li><strong className={styles.strong}>Appointment Availability:</strong> Current wait time in Bangalore: 6-8 months</li>
+            <li><strong className={styles.strong}>Application Complexity:</strong> First-time applicants may face longer review</li>
+            <li><strong className={styles.strong}>Peak Season:</strong> June-August typically sees longer processing times</li>
           </ul>
 
-          {/* FAQ Section for Rich Snippets / Google 'People Also Ask' */}
-          <h2 className={styles.subTitle}>
-            Frequently Asked Questions (2026 Guide)
-          </h2>
+          <h3 className={styles.subTitle}>US Visa Timeline Breakdown</h3>
+          <ol>
+            <li><strong className={styles.strong}>Appointment Scheduling:</strong> 6-8 months wait (as of early 2026)</li>
+            <li><strong className={styles.strong}>Interview Day:</strong> Same day preliminary decision (in most cases)</li>
+            <li><strong className={styles.strong}>Passport Processing:</strong> 3-5 business days for approved visas</li>
+            <li><strong className={styles.strong}>Passport Return:</strong> 2-3 business days via courier</li>
+          </ol>
+          <p><strong className={styles.strong}>Total Timeline:</strong> 8-10 months from fee payment to visa receipt (including appointment wait time)</p>
+          <p><em>Note: Global Visa Internationals specializes in securing earlier US visa appointment slots through dedicated 24/7 monitoring of cancellations and expedited processing options.</em></p>
 
-          <h4 className={styles.subTitle}>What is the current US Visa appointment wait time in Bangalore?</h4>
-          <p>As of early 2026, wait times can still exceed 6-8 months. However, GVI specializes in securing earlier slots through our dedicated monitoring team.</p>
+          <h2 class={styles.subTitle}>Why Choose Global Visa Internationals for US Tourist Visa?</h2>
+          <p>Global Visa Internationals (GVI) is Bangalore's most trusted US visa consultant with proven expertise in B1/B2 visa processing:</p>
 
-          <h4 className={styles.subTitle}>Can you help if my US visa was rejected recently?</h4>
-          <p>Yes. We specialize in refusal cases. We analyze your previous DS-160 and interview transcript to fix gaps before re-applying.</p>
+          <h3 className={styles.subTitle}>Our US Tourist Visa Services</h3>
+          <h4 className={styles.subTitle}>✓ Dedicated Personal Case Manager</h4>
+          <ul>
+            <li>Single point of contact throughout your US visa journey</li>
+            <li>Personal assistance via WhatsApp, phone, and email</li>
+            <li>Regular updates on application status</li>
+            <li>Available for consultation throughout the process</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>✓ 10+ Years of US Visa Expertise</h4>
+          <ul>
+            <li>Experienced senior consultants handling complex visa cases</li>
+            <li>Updated knowledge of 2026 US immigration policies and trends</li>
+            <li>High approval rates for challenging applications</li>
+            <li>Specialized expertise in senior citizens and solo female travelers</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>✓ Complete US Visa Documentation Support</h4>
+          <ul>
+            <li>Financial document review: ITR analysis, liquid assets, property verification</li>
+            <li>DS-160 form filling with 100% accuracy (single error = #1 cause of rejection)</li>
+            <li>Financial document preparation and review</li>
+            <li>Sponsorship letter drafting (Form I-134 Affidavit of Support guidance)</li>
+            <li>Document gap analysis and correction</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>✓ Elite US Visa Interview Preparation</h4>
+          <ul>
+            <li>Realistic mock interview sessions simulating actual embassy environment</li>
+            <li>2026 question bank covering latest Consular Officer queries</li>
+            <li>Personalized coaching to demonstrate strong home country ties</li>
+            <li>Training on how to effectively prove return intentions to India</li>
+            <li>Section 214(b) rejection prevention strategies</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>✓ Fast-Track US Visa Appointment Slot Booking</h4>
+          <ul>
+            <li>Priority booking service for early interview dates</li>
+            <li>24/7 monitoring system to capture cancellation slots</li>
+            <li>Expedited appointment strategies reducing 6-8 month wait times</li>
+            <li>Proven strategy for securing early B1/B2 interview dates in 2026</li>
+            <li>Emergency slot booking for urgent travel needs</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>✓ US Visa Refusal & Reapplication Support</h4>
+          <ul>
+            <li>Analysis of previous rejection reasons and DS-160 review</li>
+            <li>Strategic reapplication planning with improved documentation</li>
+            <li>Addressing Section 214(b) denials (insufficient ties to home country)</li>
+            <li>Document strengthening for second attempts</li>
+            <li>Expert strategy for complex refusal cases</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>✓ Express 2026 Processing & Guarantees</h4>
+          <ul>
+            <li>Optimized workflows aiming for 6-week turnaround (subject to Embassy availability)</li>
+            <li>Service charge refund if committed processing timeline is missed</li>
+            <li>Risk-free application with detailed profile audit</li>
+            <li>Complete hand-holding from document collection to final passport stamping</li>
+          </ul>
+
+          <h3 className={styles.subTitle}>Global Visa Internationals Advantages</h3>
+          <h4 className={styles.subTitle}>Transparency First:</h4>
+          <ul>
+            <li>No hidden costs or surprise charges</li>
+            <li>Clear roadmap provided from Day 1</li>
+            <li>Upfront pricing and timeline expectations</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Prime Bangalore Location:</h4>
+          <ul>
+            <li>Centrally located on Brigade Road</li>
+            <li>Easy access for all Karnataka residents</li>
+            <li>Convenient consultation and document submission</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Proven Success Record:</h4>
+          <ul>
+            <li>High approval rates for complex cases</li>
+            <li>Specialized support for senior citizens</li>
+            <li>Expert handling of solo female traveler applications</li>
+            <li>Success with first-time international travelers</li>
+          </ul>
+
+          <h2 class={styles.subTitle}>Common US Tourist Visa Rejection Reasons & How to Avoid Them</h2>
+          <p>Understanding rejection causes helps strengthen your US tourist visa application:</p>
+
+          <h3 className={styles.subTitle}>Top US Visa Denial Reasons (2026)</h3>
+          <ol>
+            <li><strong className={styles.strong}>Insufficient Ties to Home Country (Section 214(b))</strong>
+              <ul>
+                <li>Most common rejection reason for B1/B2 visas</li>
+                <li>GVI Solution: Comprehensive documentation of employment, property ownership, family ties, and financial stability</li>
+              </ul>
+            </li>
+            <li><strong className={styles.strong}>Inadequate Financial Documentation</strong>
+              <ul>
+                <li>Lack of proof showing ability to fund US trip</li>
+                <li>GVI Solution: Detailed ITR analysis, liquid asset verification, minimum 3-6 months expense coverage demonstration</li>
+              </ul>
+            </li>
+            <li><strong className={styles.strong}>DS-160 Form Errors or Inconsistencies</strong>
+              <ul>
+                <li>Single error in DS-160 can lead to immediate rejection</li>
+                <li>GVI Solution: 100% accurate DS-160 filing with professional review and cross-verification</li>
+              </ul>
+            </li>
+            <li><strong className={styles.strong}>Previous Immigration Violations</strong>
+              <ul>
+                <li>Prior overstays or visa violations</li>
+                <li>GVI Solution: Address any prior issues with documented explanations and evidence of corrected behavior</li>
+              </ul>
+            </li>
+            <li><strong className={styles.strong}>Unconvincing Interview Performance</strong>
+              <ul>
+                <li>Inability to clearly articulate travel purpose and return plans</li>
+                <li>GVI Solution: Elite mock interview practice with realistic embassy environment simulation</li>
+              </ul>
+            </li>
+            <li><strong className={styles.strong}>Incomplete or Inadequate Documentation</strong>
+              <ul>
+                <li>Missing critical supporting documents</li>
+                <li>GVI Solution: Complete document checklist with gap analysis before submission</li>
+              </ul>
+            </li>
+          </ol>
+          <p>Global Visa Internationals specializes in preventing these rejections through thorough application preparation, expert interview coaching, and detailed profile audits.</p>
+
+          <h2 class={styles.subTitle}>US Tourist Visa Categories We Handle</h2>
+          <h3 className={styles.subTitle}>B1 Visa (Business)</h3>
+          <ul>
+            <li>Attending business conferences and seminars</li>
+            <li>Client meetings and negotiations</li>
+            <li>Short-term professional training programs</li>
+            <li>Exploring business opportunities in the US</li>
+            <li>Participating in trade shows and exhibitions</li>
+          </ul>
+
+          <h3 className={styles.subTitle}>B2 Visa (Tourism & Medical)</h3>
+          <ul>
+            <li>Leisure travel and vacation in the United States</li>
+            <li>Visiting family members and friends</li>
+            <li>Specialized medical treatment at US healthcare facilities</li>
+            <li>Participating in social events and recreational activities</li>
+            <li>Tourism and sightseeing across American destinations</li>
+          </ul>
+
+          <h3 className={styles.subTitle}>Combined B1/B2 Visa</h3>
+          <ul>
+            <li>Mixed business and leisure travel purposes</li>
+            <li>Most common visa category issued to Indian applicants</li>
+            <li>Allows flexibility in travel activities</li>
+          </ul>
+
+          <h2 class={styles.subTitle}>US Tourist Visa Frequently Asked Questions (2026)</h2>
+
+          <h4 className={styles.subTitle}>How long is a US tourist visa valid?</h4>
+          <p>US B1/B2 visas are typically issued for 10 years for Indian citizens, allowing multiple entries. Each visit can be up to 6 months (as determined by CBP officer at entry).</p>
+
+          <h4 className={styles.subTitle}>Can I work on a US tourist visa?</h4>
+          <p>No. The B1/B2 visa strictly prohibits employment, paid performances, or enrolling in formal academic study programs.</p>
+
+          <h4 className={styles.subTitle}>What is the US visa appointment wait time in Bangalore?</h4>
+          <p>As of early 2026, standard wait times range from 6-8 months. Global Visa Internationals can help secure earlier slots through our dedicated 24/7 cancellation monitoring system.</p>
+
+          <h4 className={styles.subTitle}>Can Global Visa Internationals help with US visa rejection cases?</h4>
+          <p>Yes. We specialize in analyzing previous refusals, reviewing your previous DS-160 and interview transcript, identifying documentation gaps, and creating stronger reapplication strategies with improved documentation.</p>
+
+          <h4 className={styles.subTitle}>Is travel insurance mandatory for US tourist visa?</h4>
+          <p>While not officially mandatory for visa approval, travel insurance is highly recommended and can strengthen your application by demonstrating travel preparedness and financial responsibility.</p>
+
+          <h4 className={styles.subTitle}>What is the success rate with Global Visa Internationals?</h4>
+          <p>We maintain high approval rates even for complex cases including first-time international travelers, senior citizens, solo female travelers, and previously rejected applications through our comprehensive preparation approach.</p>
+
+          <h4 className={styles.subTitle}>How early should I start my US visa application process?</h4>
+          <p>Given the 6-8 month appointment wait time in Bangalore, we recommend starting your US visa application process at least 10-12 months before your intended travel date.</p>
+
+          <h4 className={styles.subTitle}>Do you provide post-visa services?</h4>
+          <p>Yes. Global Visa Internationals provides complete support including travel planning guidance, pre-departure orientation, and US arrival assistance.</p>
+
+          <hr />
+
+          <h2 class={styles.subTitle}>Start Your US Tourist Visa Journey with Global Visa Internationals</h2>
+          <p>Don't let complex US visa procedures and 300+ day wait times delay your American dream. Global Visa Internationals offers comprehensive support from initial consultation to visa approval, with guaranteed service timelines.</p>
+
+          <h3 className={styles.subTitle}>📞 Contact Global Visa Internationals Today</h3>
+          <p><strong className={styles.strong}>Free Eligibility Check for 2026:</strong></p>
+          <ul>
+            <li>Understand your US visa approval chances</li>
+            <li>Profile evaluation and improvement recommendations</li>
+            <li>Risk assessment and success probability analysis</li>
+          </ul>
+
+          <h4 className={styles.subTitle}>Our Office: Global Visa Internationals (GVI)</h4>
+          <p>GF-9, Business Point, 137 Brigade Road
+
+            <br />
+            Bangalore – 560025, Karnataka</p>
+
+          <h4 className={styles.subTitle}>Get in Touch:</h4>
+          <ul>
+            <li>📞 <a href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026">Click to Chat on WhatsApp</a></li>
+            <li>📧 Email: operations@globalvisainternationals.com</li>
+            <li>🌐 Visit our website for instant consultation</li>
+          </ul>
+
+          <h3 className={styles.subTitle}>Why Thousands Choose Global Visa Internationals</h3>
+          <ul>
+            <li>10+ Years Experience in US visa processing</li>
+            <li>High Approval Rates for complex and refusal cases</li>
+            <li>Fast-Track Appointment Booking with 24/7 monitoring</li>
+            <li>100% Accurate DS-160 Filing - zero tolerance for errors</li>
+            <li>Elite Interview Preparation with realistic mock sessions</li>
+            <li>Transparent Pricing with no hidden costs</li>
+            <li>Service Guarantee with committed timelines</li>
+            <li>Central Bangalore Location on Brigade Road</li>
+          </ul>
+
+          <hr />
+
+          <p class="visually-hidden">
+            Popular Keywords: US tourist visa, US tourist visa eligibility criteria, US tourist visa documents required, US visa application process, US tourist visa fees, US tourist visa processing time, B1/B2 visa, US visa consultant Bangalore, Global Visa Internationals, DS-160 form, US Embassy interview, US visa appointment Bangalore, USA visa agent Bangalore, US visa slot booking, Section 214(b) rejection, US visa refusal cases
+          </p>
+
 
           <address className={styles.address}>
             <strong className={styles.strong}>Global Visa Internationals (GVI)</strong><br />
@@ -777,14 +1099,15 @@ export default function USATouristVisa() {
             <p><strong className={styles.strong}>Expert Help:</strong> Need help choosing a center? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
           </div>
-        </div>
 
+        </div>
 
         <div className={styles.formSection}>
-
           <VisaForm />
         </div>
-      </div >
+      </div>
+
+
       <section>
         <ReviewSchema />
         <ReviewCarousel />

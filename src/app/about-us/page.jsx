@@ -262,7 +262,7 @@ export default function About() {
                 </div>
                 <div className={styles.statItem}>
                   <Globe className={styles.statIcon} />
-                  <span className={styles.statNumber}>25+</span>
+                  <span className={styles.statNumber}>45+</span>
                   <span className={styles.statLabel}>Countries</span>
                 </div>
                 <div className={styles.statItem}>
@@ -321,7 +321,7 @@ export default function About() {
                   <div className={styles.founderBio}>
                     <h3 className={styles.founderName}>Leading with Experience</h3>
                     <p>
-                      With over 11 years of hands-on experience in visa and immigration,
+                      With over 11+ years of hands-on experience in visa and immigration,
                       Mrs. Anusha Prashanth leads our team with passion and precision.
                       Her guidance has helped thousands achieve their international dreams.
                     </p>
@@ -365,7 +365,7 @@ export default function About() {
                       {
                         icon: <Award />,
                         title: "Proven Track Record",
-                        description: "75,000+ successful applications across 25+ countries with consistently high approval rates."
+                        description: "75,000+ successful applications across 45+ countries with consistently high approval rates."
                       },
                       {
                         icon: <Users />,
