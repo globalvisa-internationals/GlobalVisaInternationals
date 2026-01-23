@@ -10,9 +10,8 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-  title: "TopUSA B1/B2 Visa Consultants in India | GVI",
-  description:
-    "Apply for a USA B1/B2 Visa from India with Global Visa Internationals. Expert help for tourist and business visa documents, fees, appointments, and interview prep.",
+  title: "Best US B1/B2 Visa Consultants in Bangarore | GVI",
+  description: "Apply for a USA B1/B2 Visa from India with Global Visa Internationals. Expert help for tourist and business visa documents, fees, appointments, and interview prep.",
 
   applicationName: "Global Visa Internationals",
   category: "USA B1/B2 Visa Services",
@@ -508,11 +507,11 @@ export default function USATouristVisa() {
 
 
           {/* H1: Primary Keyword Targeting for Location + Year + Service */}
-          <h1 class="styles.Title">Complete Guide to US Tourist Visa (B1/B2) in 2026 | Global Visa Internationals</h1>
+          <h1 className={styles.Title}>Complete Guide to US Tourist Visa (B1/B2) in 2026 | Global Visa Internationals</h1>
           <p>A US Tourist Visa, officially known as the B1/B2 visa, is a non-immigrant visa that permits foreign nationals to enter the United States temporarily. This US tourist visa serves multiple purposes including business travel (B1), tourism and leisure (B2), or a combination of both activities.</p>
           <p>The US tourist visa allows visitors to explore American destinations, attend business meetings, visit family and friends, or seek medical treatment without the intention of permanent residency.</p>
 
-          <a href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026" class="styles.callButton">
+          <a href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026" className={styles.callButton}>
             📞 Check My Visa Eligibility for 2026 (Free)
           </a>
 
