@@ -242,8 +242,8 @@ function StructuredData() {
       priceRange: "$$",
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "4.8",
-        reviewCount: "500",
+        ratingValue: "4.6",
+        reviewCount: "231",
       },
     },
 
