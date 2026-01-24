@@ -35,7 +35,7 @@ export default function Footer() {
                             "https://www.youtube.com/@GLOBALVISAINTERNATIONALS",
                             "https://x.com/GLOBALVISA1505",
                             "https://instagram.com/globalvisa_internationals/",
-                            "https://facebook.com/globalvisa.globalvisa"
+                            "https://www.facebook.com/globalvisainternationalss"
                         ]
                     }),
                 }}
@@ -101,7 +101,7 @@ export default function Footer() {
                             <a href="https://www.youtube.com/@GLOBALVISAINTERNATIONALS"><FaYoutube /></a>
                             <a href="https://x.com/GLOBALVISA1505"><FaXTwitter /></a>
                             <a href="https://in.pinterest.com/globalvisainternationals/"><FaPinterest /></a>
-                            <a href="https://www.facebook.com/profile.php?id=61551041483630"><FaFacebook /></a>
+                            <a href="https://www.facebook.com/globalvisainternationalss"><FaFacebook /></a>
                             <a href="https://sharechat.com/profile/globalvisainternationals?referrer=copyLink"><TbTableShare /></a>
                         </div>
                     </div>
