@@ -55,12 +55,12 @@ export default function HeroSection() {
                         {/* Stats Bar */}
                         <div className={styles.statsBar}>
                             <div className={styles.statItem}>
-                                <div className={styles.statNumber}>8+</div>
+                                <div className={styles.statNumber}>11+</div>
                                 <div className={styles.statLabel}>Years Experience</div>
                             </div>
                             <div className={styles.statDivider}></div>
                             <div className={styles.statItem}>
-                                <div className={styles.statNumber}>5K+</div>
+                                <div className={styles.statNumber}>75K+</div>
                                 <div className={styles.statLabel}>Successful Visas</div>
                             </div>
                             <div className={styles.statDivider}></div>
