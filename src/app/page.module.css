@@ -47,20 +47,7 @@
   animation-play-state: paused !important;
 }
 
-.subtitle,
-.mainHeading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  margin: 0 auto;
-  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
-  color: #057A7E;
-  font-weight: 600;
-  font-size: 2rem;
-  letter-spacing: 0.5px;
-}
+
 
 .HomeSec {
   margin: 0 auto;
@@ -69,17 +56,6 @@
   margin-top: 80px;
 }
 
-
-.note {
-  font-size: 0.9rem;
-  color: var(--muted);
-  padding: 1rem;
-  border-left: 3px solid var(--primary);
-  background: #f5f7f8;
-  border-radius: var(--radius);
-  margin: 20px auto;
-  max-width: 800px;
-}
 
 
 
@@ -186,6 +162,31 @@
 
 /* ========== VARIABLES FOR CORPORATE DESIGN ========== */
 
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 1rem;
+  border-left: 3px solid var(--primary);
+  background: #f5f7f8;
+  border-radius: var(--radius);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.subtitle,
+.mainHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
+  color: #057A7E;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
 
 
 /* ===== Main Container ===== */

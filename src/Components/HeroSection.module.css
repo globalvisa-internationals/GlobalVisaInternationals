@@ -1,0 +1,537 @@
+/* HeroSection.module.css */
+
+.heroSection {
+    position: relative;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 90vh;
+    overflow: hidden;
+    padding: 2rem 1rem;
+}
+
+/* Background Elements */
+.backgroundElements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.worldMapAnimation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+}
+
+.worldMap {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floatingIcons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.floatingIcon {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floatingIcon:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.floatingIcon:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.floatingIcon:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.floatingIcon:nth-child(5) {
+    animation-delay: 4s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Main Container */
+.heroContainer {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+    min-height: 70vh;
+}
+
+/* Main Content Styles */
+.mainContent {
+    padding-right: 2rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #1a365d, #2d5aa0);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.badgeIcon {
+    color: #fbbf24;
+}
+
+.headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #3182ce, #63b3ed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.subHeadline {
+    font-size: 1.5rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.countryHighlight {
+    color: #1a365d;
+    font-weight: 700;
+    margin: 0 0.2rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #718096;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+/* Stats Bar */
+.statsBar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.statItem {
+    flex: 1;
+    text-align: center;
+}
+
+.statNumber {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a365d;
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-top: 0.3rem;
+}
+
+.statDivider {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
+}
+
+/* CTA Buttons */
+.ctaButtons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.primaryButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, #38a169, #48bb78);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(56, 161, 105, 0.3);
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(56, 161, 105, 0.4);
+}
+
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: white;
+    color: #3182ce;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #e2e8f0;
+}
+
+.secondaryButton:hover {
+    border-color: #3182ce;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(49, 130, 206, 0.15);
+}
+
+.buttonIcon {
+    transition: transform 0.3s ease;
+}
+
+.primaryButton:hover .buttonIcon {
+    transform: translateX(4px);
+}
+
+.secondaryButton:hover .buttonIcon {
+    transform: scale(1.1);
+}
+
+/* Trust Indicators */
+.trustIndicators {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.checkIcon {
+    color: #38a169;
+    flex-shrink: 0;
+}
+
+/* Logo Card */
+.logoCard {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.logoCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3182ce, #38a169, #1a365d);
+}
+
+.logoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logoWrapper {
+    text-align: center;
+}
+
+.logoImage {
+    width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.locationTag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f7fafc;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: #4a5568;
+    font-size: 0.9rem;
+    border: 1px solid #e2e8f0;
+}
+
+.locationIcon {
+    color: #3182ce;
+}
+
+.featureList {
+    width: 100%;
+}
+
+.featureTitle {
+    font-size: 1.2rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.featureIcon {
+    color: #3182ce;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.awardBadge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #fbbf24;
+}
+
+.awardIcon {
+    font-size: 2rem;
+}
+
+.awardText {
+    color: #92400e;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Countries Banner */
+.countriesBanner {
+    background: linear-gradient(90deg, #1a365d, #2d5aa0);
+    padding: 1rem 0;
+    margin-top: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.bannerContent {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.bannerTitle {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.countryTags {
+    display: flex;
+    gap: 1rem;
+    animation: scroll 30s linear infinite;
+}
+
+.countryTag {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.countryTag:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .mainContent {
+        padding-right: 0;
+    }
+
+    .headline {
+        font-size: 2.8rem;
+    }
+
+    .statsBar {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .statItem {
+        flex: calc(25% - 1.5rem);
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 1rem;
+    }
+
+    .headline {
+        font-size: 2.2rem;
+    }
+
+    .subHeadline {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .statsBar {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .statDivider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logoCard {
+        padding: 2rem 1.5rem;
+    }
+
+    .logoImage {
+        width: 200px;
+    }
+
+    .bannerContent {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .floatingIcon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .headline {
+        font-size: 1.8rem;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .statNumber {
+        font-size: 1.5rem;
+    }
+
+    .logoImage {
+        width: 180px;
+    }
+
+    .awardBadge {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+}

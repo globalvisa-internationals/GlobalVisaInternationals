@@ -1,207 +1,440 @@
-/* ========= FLOATING ACTION ICONS ========= */
-.callIcon,
-.whatsappIcon {
+/* Footer.module.css */
+
+/* ========= FLOATING ACTION BUTTONS ========= */
+.floatingIcons {
   position: fixed;
-  bottom: 90px;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  border-radius: 10%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floatingButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1000;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.callIcon {
-  left: 20px;
+.floatingButton[data-type="call"] {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
 }
 
-.whatsappIcon {
-  right: 20px;
+.floatingButton[data-type="whatsapp"] {
+  background: linear-gradient(135deg, var(--success), #25d366);
 }
 
-.callIcon:hover,
-.whatsappIcon:hover {
-  transform: scale(1.2);
+.floatingButton:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Floating Icons */
-@media (max-width: 400px) {
-
-  .callIcon,
-  .whatsappIcon {
-    width: 38px;
-    height: 38px;
-    bottom: 80px;
-  }
-
-  .callIcon {
-    left: 15px;
-  }
-
-  .whatsappIcon {
-    right: 15px;
-  }
+.floatingButton .tooltip {
+  position: absolute;
+  right: 70px;
+  background: var(--dark-bg);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-@media (min-width: 768px) {
-
-  .callIcon,
-  .whatsappIcon {
-    width: 45px;
-    height: 45px;
-    bottom: 90px;
-  }
+.floatingButton:hover .tooltip {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-@media (min-width: 1024px) {
-
-  .callIcon,
-  .whatsappIcon {
-    width: 50px;
-    height: 50px;
-    bottom: 100px;
-  }
+/* ========= TRUST BADGES ========= */
+.trustBadges {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ========= FOOTER ========= */
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.badge svg {
+  font-size: 2rem;
+  color: var(--accent-light);
+}
+
+.badge h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.badge p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ========= MAIN FOOTER ========= */
 .footer {
-  background: #fff;
-  padding: 2rem 1rem;
-  border-top: 2px solid #0a8510;
+  background: var(--dark-bg);
+  color: var(--light-bg);
   font-family: var(--font-main);
-  color: #1b1b1b;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
 .footerGrid {
   display: grid;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
-/* Each Column */
+/* Column Styles */
 .column {
-  flex: 1;
-  min-width: 220px;
+  display: flex;
+  flex-direction: column;
 }
 
-.column h4 {
-  margin-bottom: 0.8rem;
-  font-size: 1.15rem;
-  color: #000;
+.logoSection {
+  margin-bottom: 1.5rem;
 }
 
-/* Links inside lists */
-.column ul {
-  list-style: none;
-  /* Remove default bullets */
-  padding-left: 0;
-}
-
-.column li {
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 20px;
-  /* space for custom bullet */
-}
-
-/* Custom bullet style */
-.column li::before {
-  content: "✔";
-  /* Change symbol if you like (→, •, ►, ✓) */
-  color: #0a8510;
-  font-size: 0.9rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.column a {
-  display: inline-block;
-  color: #1b1b1b;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.column a:hover {
-  color: #478537;
-}
-
-.column p {
-  line-height: 1.5;
-  margin-bottom: 0.6rem;
-}
-
-/* Logo */
 .logo {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  margin-bottom: 1rem;
+  width: 180px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) invert(1);
 }
 
-/* About Text */
+.tagline {
+  font-size: 0.95rem;
+  color: var(--accent-light);
+  font-weight: 500;
+  margin: 0;
+}
+
 .about {
-  text-align: justify;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
 }
 
-/* Social Icons */
-.socialIcons {
-  margin-top: 1rem;
+.columnTitle {
   display: flex;
-  gap: 14px;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+.titleIcon {
+  font-size: 1.4rem;
+}
+
+/* Lists */
+.servicesList,
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesList li,
+.linksList li {
+  margin-bottom: 0.8rem;
+}
+
+.servicesList a,
+.linksList a {
+  color: var(--text-light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  padding: 0.3rem 0;
+}
+
+.servicesList a:hover,
+.linksList a:hover {
+  color: var(--accent-light);
+  transform: translateX(5px);
+}
+
+.listBullet {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* CTA Button */
+.ctaButton {
+  margin-top: auto;
+}
+
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--accent), var(--primary-light));
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primaryCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(49, 130, 206, 0.3);
+}
+
+/* Contact Info */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contactItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contactIcon {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.contactLabel {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0 0 0.2rem 0;
+}
+
+.contactText {
+  color: white;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.contactLink {
+  color: var(--accent-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: white;
+}
+
+/* Newsletter */
+.newsletter {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.newsletter h5 {
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.newsletter p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.emailInput::placeholder {
+  color: var(--text-light);
+}
+
+.subscribeButton {
+  background: var(--success);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribeButton:hover {
+  background: #2f855a;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.socialSection h5 {
+  color: white;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .socialIcons a {
-  font-size: 1.4rem;
-  color: #1b1b1b;
-  transition: transform 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
 }
 
 .socialIcons a:hover {
-  transform: scale(1.2);
-  color: #478537;
+  background: var(--accent);
+  color: white;
+  transform: translateY(-3px);
 }
 
+/* Copyright */
+.copyright {
+  text-align: right;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
 
-/* ========= RESPONSIVE LAYOUT ========= */
-@media (max-width: 400px) {
-  .footer {
+.copyright p {
+  margin: 0.3rem 0;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ========= RESPONSIVE DESIGN ========= */
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .trustBadges {
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trustBadges {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .copyright {
     text-align: center;
   }
 
-  .footerGrid {
-    grid-template-columns: 1fr;
-    justify-items: center;
+  .floatingIcons {
+    bottom: 20px;
+    right: 20px;
   }
 
-  .column {
-    width: 90%;
-    /* Each section takes 90% of screen */
-    max-width: 90%;
+  .floatingButton {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 2rem 1rem;
+  }
+
+  .subscribeForm {
+    flex-direction: column;
   }
 
   .socialIcons {
     justify-content: center;
   }
-}
 
-@media (min-width: 768px) {
-  .footerGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .footerGrid {
-    grid-template-columns: repeat(4, 1fr);
-    align-items: flex-start;
+  .floatingIcons {
+    bottom: 15px;
+    right: 15px;
   }
 }

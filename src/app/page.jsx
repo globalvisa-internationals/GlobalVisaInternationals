@@ -16,7 +16,8 @@ import MissionVisionValues from "@/Components/missionVisionValues";
 import Services from "@/Components/Services";
 import WhychoosGVI from "@/Components/whychoosGVI";
 import AboutSection from "@/Components/AboutSection";
-
+import { FaCheckCircle, FaStar, FaMapMarkerAlt, FaArrowRight, FaPlayCircle } from "react-icons/fa";
+import Herosec from "@/Components/herosec";
 
 const agbalumo = Agbalumo({
   subsets: ["latin"],
@@ -690,29 +691,9 @@ export default function Home() {
       <main className={styles.HomeSec}>
         {/* Background Image with Correct Styling */}
 
-        <div className={styles.logoCard}>
-          <img
-            src="https://www.globalvisainternationals.com/svg/World-Map.gif"
-            alt="World Map"
-            className={styles.worldMap}
-          />
-          <div className={styles.logoWrapper}>
-            <img
-              src="https://www.globalvisainternationals.com/Global-Visa-Internationals-Logo.svg"
-              alt="Global Visa Internationals Logo"
-              className={styles.logoImage}
-            />
-            <p className={styles.tagline}>
-              Your Passport To The World Starts With Us
-            </p>
-          </div>
-        </div>
-
-
-
-        <h1 className={styles.waveText}> Trusted Visa Consultancy in Bangalore for USA, Canada, UK & Schengen Visas Since 2016</h1>
-
-
+        <section>
+          <Herosec />
+        </section>
 
         {/* About Us Section - Modern Corporate Design */}
         <section>
