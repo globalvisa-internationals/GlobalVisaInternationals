@@ -167,7 +167,7 @@
   color: var(--muted);
   padding: 1rem;
   border-left: 3px solid var(--primary);
-  background: #f5f7f8;
+  /* background: #f5f7f8; */
   border-radius: var(--radius);
   margin: 20px auto;
   max-width: 800px;

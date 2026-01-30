@@ -89,7 +89,7 @@ export default function AboutSection() {
                                     <div className={styles.imageOverlay}>
                                         <div className={styles.overlayContent}>
                                             <div className={styles.statsBadge}>
-                                                <span className={styles.statNumber}>10+</span>
+                                                <span className={styles.statNumber}>11+</span>
                                                 <span className={styles.statLabel}>Years Experience</span>
                                             </div>
                                         </div>

@@ -717,7 +717,7 @@ export default function Home() {
           <MissionVisionValues />
         </section>
         <AnimatedHR direction="left" duration={1.2} />
-        <section>
+        <section id="testimonials">
 
           <ReviewSchema />
           <ReviewCarousel />
@@ -730,7 +730,7 @@ export default function Home() {
 
         {/* === Form + Map Section === */}
         <section className={styles.dataForm}>
-          <div className={styles.formSection}>
+          <div className={styles.formSection} id="consultation">
             <VisaForm />
           </div>
 

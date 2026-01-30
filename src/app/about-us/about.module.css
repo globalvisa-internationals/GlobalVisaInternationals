@@ -33,7 +33,7 @@
 
 .heroOverlay {
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
     width: 100%;
     max-width: 1200px;
     padding: 0 24px;
@@ -567,7 +567,7 @@
     top: 100px;
     right: 24px;
     width: 380px;
-    z-index: 1000;
+    /* z-index: 1000; */
     display: none;
 }
 

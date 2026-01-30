@@ -41,13 +41,17 @@ export default function HeroSection() {
                         <h2 className={styles.subHeadline}>
                             Premier Visa Consultancy in Bangalore for
                             <span className={styles.countryHighlight}> USA</span>,
+                            <span className={styles.countryHighlight}> UK</span>
                             <span className={styles.countryHighlight}> Canada</span>,
-                            <span className={styles.countryHighlight}> UK</span> &
-                            <span className={styles.countryHighlight}> Schengen</span> Visas
+                            <span className={styles.countryHighlight}> Schengen</span>
+                            <span className={styles.countryHighlight}> Australia</span>,
+                            <span className={styles.countryHighlight}> New Zealand</span>,&
+                            <span className={styles.countryHighlight}> Japan</span>,Visas
+
                         </h2>
 
                         <p className={styles.description}>
-                            With 8+ years of expertise, we've successfully guided over 5,000 clients
+                            With 11+ years of expertise, we've successfully guided over 75,000 clients
                             through complex visa processes. Your passport to global opportunities begins
                             with our certified immigration consultants.
                         </p>
@@ -141,13 +145,13 @@ export default function HeroSection() {
                                 </ul>
                             </div>
 
-                            <div className={styles.awardBadge}>
+                            {/* <div className={styles.awardBadge}>
                                 <div className={styles.awardIcon}>🏆</div>
                                 <div className={styles.awardText}>
                                     <div>Certified Immigration</div>
                                     <div>Consultancy Award 2023</div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -158,9 +162,9 @@ export default function HeroSection() {
                 <div className={styles.bannerContent}>
                     <span className={styles.bannerTitle}>We Specialize In:</span>
                     <div className={styles.countryTags}>
-                        {['USA 🇺🇸', 'Canada 🇨🇦', 'UK 🇬🇧', 'Australia 🇦🇺',
-                            'Germany 🇩🇪', 'France 🇫🇷', 'Italy 🇮🇹', 'Spain 🇪🇸',
-                            'Singapore 🇸🇬', 'Dubai 🇦🇪', 'New Zealand 🇳🇿', 'Japan 🇯🇵'].map((country, index) => (
+                        {['USA Visa 🇺🇸', 'Canada Visa 🇨🇦', 'UK Visa 🇬🇧', 'Australia Visa 🇦🇺',
+                            'Germany Visa 🇩🇪', 'France Visa 🇫🇷', 'Italy Visa 🇮🇹', 'Spain Visa 🇪🇸',
+                            'Singapore Visa 🇸🇬', 'Dubai Visa 🇦🇪', 'New Zealand Visa 🇳🇿', 'Japan Visa 🇯🇵'].map((country, index) => (
                                 <span key={index} className={styles.countryTag}>
                                     {country}
                                 </span>

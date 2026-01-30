@@ -192,7 +192,7 @@ export default function VisaForm() {
                 onChange={setPhone}
                 inputClass={styles.modalInput}
                 enableSearch={true}
-                placeholder="Phone Number"
+                placeholder="9876543210"
                 inputProps={{ name: 'phone', required: true }}
               />
             </div>
@@ -207,7 +207,7 @@ export default function VisaForm() {
                 required
               >
                 <option value="">Destination Country</option>
-                {['USA', 'UK', 'Canada', 'Europe', 'Schengen', 'Australia', 'New Zealand', 'Singapore', 'Japan', 'Dubai', 'Other'].map(option => (
+                {['USA', 'UK', 'Canada', 'Schengen', 'Australia', 'New Zealand', 'Singapore', 'Japan', 'Dubai', 'Other'].map(option => (
                   <option key={option} value={option}>{option}</option>
                 ))}
               </select>
@@ -319,7 +319,7 @@ export default function VisaForm() {
                     onChange={setPhone}
                     inputClass={styles.modalInput}
                     enableSearch={true}
-                    placeholder="Phone Number"
+                    placeholder="9876543210"
                     inputProps={{ name: 'phone', required: true }}
                   />
                 </div>

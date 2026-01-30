@@ -235,7 +235,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99;
+    /* z-index: 99; */
     padding: 1rem;
     animation: fadeIn 0.3s ease-in-out;
     overflow-y: auto;
@@ -510,7 +510,7 @@
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 5px rgba(71, 71, 71, 0.2);
     transition: all 0.3s ease;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .galleryNavBtn:hover {

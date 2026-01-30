@@ -492,9 +492,15 @@ export default function About() {
                       <a href="tel:+917022213466" className={styles.primaryButton}>
                         📞 Free Eligibility Check
                       </a>
-                      <a href="/contact" className={styles.secondaryButton}>
+                      <a
+                        href="https://wa.me/917022213466?text=Hi%20I%20would%20like%20to%20schedule%20a%20consultation"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.secondaryButton}
+                      >
                         Schedule Consultation
                       </a>
+
                     </div>
                   </div>
                 </div>
