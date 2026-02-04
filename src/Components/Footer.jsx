@@ -124,7 +124,7 @@ export default function Footer() {
                             </p>
 
                             <div className={styles.ctaButton}>
-                                <a href="https://www.globalvisainternationals.com/contact" className={styles.primaryCta}>
+                                <a href="/contact" className={styles.primaryCta}>
                                     Free Consultation <FaArrowRight />
                                 </a>
                             </div>
