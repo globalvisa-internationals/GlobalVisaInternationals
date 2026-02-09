@@ -3,7 +3,7 @@ import Styles from './blog.module.css';
 import Head from 'next/head';
 
 export const metadata = {
-  metadataBase: new URL("https://www.globalvisainternationals.com"),
+  // metadataBase: new URL("https://www.globalvisainternationals.com"),
 
   // title <60 chars
   title: "Italy: 500,000 New Work Visas for Indians (2026-28)",
@@ -177,6 +177,7 @@ function StructuredData() {
     },
 
     // 🔹 FAQ Schema - Italy Work Visa
+    // 🔹 Updated FAQ Schema - Italy Work Visa & Service Scope
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -203,6 +204,14 @@ function StructuredData() {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Unlike the Germany Opportunity Card, the Italian Decreto Flussi requires an employer to sponsor you and apply for your work authorization (Nulla Osta) first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Global Visa Internationals help me find a job or apply without an offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Global Visa Internationals specializes in the legal documentation and processing of your work permit. To ensure the highest success rate, we provide assistance only once you have secured a valid job offer letter from an Italian employer. We do not offer job placement services, as a confirmed sponsor is required to initiate the official application process."
           }
         }
       ]
@@ -425,6 +434,40 @@ export default function USVisaBulletinJuly2025() {
           </div>
         </div>
       </main>
+      <h2 className={Styles.Title}>Frequently Asked Questions (FAQ)</h2>
+
+      {/* Question 1 */}
+      <div className={Styles.faqItem}>
+        <h3 className={Styles.subTitle}>Can Indians apply for the 500,000 Italy work visas?</h3>
+        <p>
+          Yes, <strong className={Styles.strong}>India is a priority country for Italy.</strong> For 2026, thousands of visas are reserved specifically for Indian citizens under the Decreto Flussi bilateral agreement.
+        </p>
+      </div>
+
+      {/* Question 2 */}
+      <div className={Styles.faqItem}>
+        <h3 className={Styles.subTitle}>What are the Click Day dates for Italy 2026?</h3>
+        <p>
+          Click Days for 2026 are <strong className={Styles.strong}>February 9 (Tourism), February 16 (Construction/Logistics), and February 18 (Domestic Care).</strong> Applications are first-come, first-served.
+        </p>
+      </div>
+
+      {/* Question 3 */}
+      <div className={Styles.faqItem}>
+        <h3 className={Styles.subTitle}>Is a job offer required for the Italy work visa?</h3>
+        <p>
+          Yes. Unlike the Germany Opportunity Card, the Italian Decreto Flussi <strong className={Styles.strong}>requires an employer to sponsor you</strong> and apply for your work authorization (Nulla Osta) first.
+        </p>
+      </div>
+
+      {/* Question 4 - The Polite Disclaimer */}
+      <div className={Styles.faqItem}>
+        <h3 className={Styles.subTitle}>Can Global Visa Internationals help me find a job or apply without an offer?</h3>
+        <p>
+          Global Visa Internationals specializes in the legal documentation and processing of your work permit. To ensure the highest success rate, <strong className={Styles.strong}>we provide assistance only once you have secured a valid job offer letter</strong> from an Italian employer. We do not offer job placement services, as a confirmed sponsor is required to initiate the official application process.
+        </p>
+      </div>
+
       <VisaForm />
     </>
   );

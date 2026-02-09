@@ -17,6 +17,7 @@ export default function BlogList({ posts }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Check screen size on mount and resize
   useEffect(() => {
     const checkIsMobile = () => setIsMobile(window.innerWidth <= 768);
     checkIsMobile();
@@ -76,9 +77,9 @@ export default function BlogList({ posts }) {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   /* Next.js lazy loads by default. 
-                     We use 'priority' for the first 3 images to improve LCP (SEO).
-                     The rest will remain lazy-loaded.
-                  */
+                    We use 'priority' for the first 3 images to improve LCP (SEO).
+                    The rest will remain lazy-loaded.
+                 */
                   priority={index < 3}
                   loading={index < 3 ? undefined : "lazy"}
                   unoptimized // Keep this if you want to bypass Next.js image optimization
@@ -126,7 +127,8 @@ export default function BlogList({ posts }) {
               {categories.map((cat) => (
                 <li
                   key={cat}
-                  className={`${styles.hasTooltip} ${filteredCategory === cat ? styles.activeCategory : ""}`}
+                  className={`${styles.hasTooltip} ${filteredCategory === cat ? styles.activeCategory : ""
+                    }`}
                   onClick={() => handleCategoryFilter(cat)}
                   role="button"
                   tabIndex={0}
