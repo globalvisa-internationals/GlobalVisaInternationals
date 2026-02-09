@@ -3,8 +3,8 @@
 /* ========= FLOATING ACTION BUTTONS ========= */
 .floatingIcons {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 60px;
+  left: 30px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -409,8 +409,8 @@
   }
 
   .floatingIcons {
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    left: 20px;
   }
 
   .floatingButton {
@@ -434,7 +434,7 @@
   }
 
   .floatingIcons {
-    bottom: 15px;
-    right: 15px;
+    bottom: 30px;
+    left: 15px;
   }
 }

@@ -1,3 +1,4 @@
+import VisaForm from '@/Components/VisaForm';
 import Styles from './blog.module.css';
 import Head from 'next/head';
 
@@ -862,6 +863,7 @@ export default function USVisaBulletinJuly2025() {
 
         </div>
       </main>
+      <VisaForm />
     </>
   );
 }
