@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from './Thank-you.module.css';
+import { ReviewSchema } from "@/Components/ReviewSchema";
+import ReviewCarousel from "@/Components/ReviewCarousel";
 
 const ThankYouPage = () => {
     // Contact information using concatenation
@@ -183,8 +185,8 @@ const ThankYouPage = () => {
 
                         <div className={styles.hours}>
                             <h3>Business Hours for Visa Consultation</h3>
-                            <p><time dateTime="09:00">9:00 AM</time> - <time dateTime="18:00">6:00 PM IST</time> (Monday - Friday)</p>
-                            <p><time dateTime="10:00">10:00 AM</time> - <time dateTime="16:00">4:00 PM IST</time> (Saturday)</p>
+                            <p><time dateTime="09:00">9:00 AM</time> - <time dateTime="19:00">7:00 PM IST</time> (Monday - Friday)</p>
+                            <p><time dateTime="10:00">10:00 AM</time> - <time dateTime="15:00">3:00 PM IST</time> (Saturday)</p>
                             <p>Closed Sunday</p>
                             <p className={styles.location}>Serving clients in India and worldwide</p>
                         </div>
@@ -217,6 +219,10 @@ const ThankYouPage = () => {
                     />
                 </div>
             </main>
+            <section>
+                <ReviewSchema />
+                <ReviewCarousel />
+            </section>
         </>
     );
 };
