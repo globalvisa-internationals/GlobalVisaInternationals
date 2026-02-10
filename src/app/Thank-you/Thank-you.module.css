@@ -1,0 +1,466 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
+.content {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4a6fa5, #5d9cec);
+}
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.iconContainer {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4a6fa5, #5d9cec);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+.title {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.subtitle {
+    color: #5d6d7e;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaSection {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 2px solid #e0e0e0;
+}
+
+.ctaTitle {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ctaText {
+    color: #5d6d7e;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.contactOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contactCard {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contactCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #5d9cec;
+}
+
+.contactLink {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: inherit;
+    min-height: 100px;
+}
+
+.contactIcon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #4a6fa5, #5d9cec);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.contactIcon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.contactInfo {
+    flex: 1;
+    text-align: left;
+}
+
+.contactInfo h3 {
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contactInfo p {
+    color: #5d9cec;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.contactInfo strong {
+    color: #4a6fa5;
+}
+
+.contactDetail {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.contactArrow {
+    color: #5d9cec;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.additionalInfo {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.additionalInfo h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.infoList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.infoList li {
+    padding: 12px 0;
+    padding-left: 35px;
+    position: relative;
+    color: #5d6d7e;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.infoList li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4a6fa5;
+    font-weight: bold;
+    font-size: 1.3rem;
+    top: 12px;
+}
+
+.infoList strong {
+    color: #2c3e50;
+}
+
+.hours {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    border-left: 4px solid #5d9cec;
+    text-align: left;
+}
+
+.hours h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.hours p {
+    color: #5d6d7e;
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.hours time {
+    font-weight: 600;
+    color: #4a6fa5;
+}
+
+.location {
+    color: #5d9cec !important;
+    font-style: italic;
+    margin-top: 15px !important;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 30px 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .ctaSection {
+        padding: 20px;
+    }
+
+    .contactLink {
+        padding: 15px;
+    }
+
+    .contactIcon {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+
+    .contactIcon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contactInfo h3 {
+        font-size: 1.1rem;
+    }
+
+    .contactInfo p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactLink {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contactIcon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .contactInfo {
+        text-align: center;
+    }
+
+    .contactArrow {
+        display: none;
+    }
+
+    .infoList {
+        text-align: center;
+    }
+
+    .infoList li {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .infoList li::before {
+        position: static;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Better text wrapping for contact information */
+.contactInfo {
+    flex: 1;
+    text-align: left;
+    min-width: 0;
+    /* Allows text to wrap properly */
+}
+
+.contactEmail {
+    word-break: break-all;
+    /* Break long email addresses */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0 0 5px 0;
+    color: #5d9cec;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.contactNumber {
+    word-break: keep-all;
+    /* Keep phone numbers together */
+    margin: 0 0 5px 0;
+    color: #5d9cec;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.contactCard {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactLink {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    min-height: 100%;
+}
+
+/* Responsive adjustments for email display */
+@media (max-width: 768px) {
+    .contactEmail {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    .contactNumber {
+        font-size: 1rem;
+    }
+
+    .contactLink {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .contactIcon {
+        margin-bottom: 10px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactEmail {
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+
+    .contactNumber {
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+
+    .contactLink {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .contactIcon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .contactInfo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .contactArrow {
+        display: none;
+    }
+}
+
+/* Ensure email doesn't overflow on very small screens */
+@media (max-width: 360px) {
+    .contactEmail {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+}
