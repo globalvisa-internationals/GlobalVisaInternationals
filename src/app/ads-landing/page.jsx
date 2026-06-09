@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -14,10 +14,13 @@ import {
     FaUser, FaChevronDown, FaPlay, FaMedal, FaFileAlt,
 } from "react-icons/fa";
 
+// Import the reusable form component
+import VisaConsultationForm from "@/components/VisaConsultationForm";
+
 const CITIES = {
     Bangalore: {
         label: "Bangalore",
-        phone: "+91 80 4567 8900",
+        phone: "+91 7022213466",
         wa: "918045678900",
         keywords: [
             "USA Visa Consultants in Bangalore",
@@ -131,113 +134,7 @@ const FAQS = [
 ];
 
 // --------------------------------------------------------------
-// MiniForm component – TypeScript annotations removed
-// --------------------------------------------------------------
-function MiniForm({ city, visaType }) {
-    const { executeRecaptcha } = useGoogleReCaptcha();
-    const [phone, setPhone] = useState("");
-    const [agreed, setAgreed] = useState(false);
-    const [submitting, setSubmitting] = useState(false);
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const router = useRouter();
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (!name.trim()) return alert("Please enter your name.");
-        if (!/\S+@\S+\.\S+/.test(email)) return alert("Please enter a valid email.");
-        if (phone.replace(/\D/g, "").length < 10) return alert("Please enter a valid phone number.");
-        if (!agreed) return alert("Please agree to Terms & Conditions.");
-        if (!executeRecaptcha) return alert("reCAPTCHA not ready");
-
-        setSubmitting(true);
-        try {
-            const token = await executeRecaptcha("ads_landing");
-            const gclid = getCookie("gclid");
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, email, phone, country: city, immigration_type: visaType, recaptchaToken: token }),
-            });
-            const data = await res.json();
-            if (data.success && gclid && window.gtag) {
-                window.gtag("event", "conversion", {
-                    send_to: `${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}/${process.env.NEXT_PUBLIC_GOOGLE_CONVERSION_LABEL}`,
-                    value: 1, currency: "INR",
-                });
-            }
-            localStorage.setItem("popupSubmittedDate", new Date().toISOString().split("T")[0]);
-            router.push("./Thank-you");
-        } catch {
-            router.push("./Thank-you");
-        } finally {
-            setSubmitting(false);
-        }
-    };
-
-    const arrow = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")`;
-
-    return (
-        <form onSubmit={handleSubmit} className="font-body space-y-3">
-            <div className="grid grid-cols-2 gap-2.5">
-                <div className="col-span-2 sm:col-span-1 relative">
-                    <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[11px] pointer-events-none" />
-                    <input value={name} onChange={e => setName(e.target.value)}
-                        className="w-full pl-8 pr-3 py-2.5 text-sm bg-white border border-slate-200 rounded-lg text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#0383C9] focus:ring-2 focus:ring-[#0383C9]/10 transition-all"
-                        placeholder="Your full name" required />
-                </div>
-                <div className="col-span-2 sm:col-span-1 relative">
-                    <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[11px] pointer-events-none" />
-                    <input value={email} onChange={e => setEmail(e.target.value)} type="email"
-                        className="w-full pl-8 pr-3 py-2.5 text-sm bg-white border border-slate-200 rounded-lg text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#0383C9] focus:ring-2 focus:ring-[#0383C9]/10 transition-all"
-                        placeholder="Email address" required />
-                </div>
-                <div className="col-span-2 gvi-phone-ads">
-                    <PhoneInput country="in" value={phone} onChange={setPhone} enableSearch
-                        inputProps={{ name: "phone", required: true }}
-                        placeholder="Your phone number" />
-                </div>
-                <div className="col-span-2">
-                    <div className="relative">
-                        <FaGlobe className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[11px] pointer-events-none z-10" />
-                        <select defaultValue={visaType}
-                            className="w-full pl-8 pr-8 py-2.5 text-sm bg-white border border-slate-200 rounded-lg text-slate-700 focus:outline-none focus:border-[#0383C9] focus:ring-2 focus:ring-[#0383C9]/10 appearance-none cursor-pointer transition-all"
-                            style={{ backgroundImage: arrow, backgroundRepeat: "no-repeat", backgroundPosition: "right 10px center", backgroundSize: "12px" }}>
-                            <option value="Tourist/Visitor Visa">Tourist / Visitor Visa</option>
-                            <option value="Business Visa">Business Visa</option>
-                            <option value="Dependent Visa">Dependent / Family Visa</option>
-                            <option value="Other">Other Visa Type</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div className="flex items-start gap-2">
-                <input type="checkbox" id="ads-terms" checked={agreed} onChange={() => setAgreed(!agreed)}
-                    className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 accent-[#0383C9] cursor-pointer" required />
-                <label htmlFor="ads-terms" className="text-[11px] text-slate-500 cursor-pointer leading-relaxed">
-                    I agree to the{" "}
-                    <a href="https://www.globalvisainternationals.com/terms-and-conditions" target="_blank" rel="noopener noreferrer"
-                        className="text-[#0383C9] font-semibold hover:underline">Terms & Conditions</a>
-                </label>
-            </div>
-            <button type="submit" disabled={submitting}
-                className="w-full py-3 bg-[#F5A623] hover:bg-[#E09615] text-[#061A30] font-bold text-sm rounded-lg transition-all duration-200 shadow-lg shadow-[#F5A623]/30 hover:shadow-[#F5A623]/50 hover:-translate-y-px disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none tracking-wide">
-                {submitting ? "⏳ Submitting…" : "Get Free Assessment — No Fees →"}
-            </button>
-            <div className="flex justify-around pt-1 border-t border-slate-100">
-                {[[FaLock, "Confidential"], [FaShieldAlt, "No Obligation"], [FaHeadset, "Expert Advice"]].map(([Icon, text]) => (
-                    <div key={text} className="flex flex-col items-center gap-0.5">
-                        <Icon className="text-[#1A9612] text-xs" />
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">{text}</span>
-                    </div>
-                ))}
-            </div>
-        </form>
-    );
-}
-
-// --------------------------------------------------------------
-// CitySwitcher – no changes needed
+// CitySwitcher
 // --------------------------------------------------------------
 function CitySwitcher({ active, onChange }) {
     return (
@@ -295,7 +192,7 @@ function KeywordBadges({ city }) {
 }
 
 // --------------------------------------------------------------
-// HeroSection
+// HeroSection (updated to use VisaConsultationForm)
 // --------------------------------------------------------------
 function HeroSection({ city, setCity, visaType, setVisaType }) {
     const cityData = CITIES[city];
@@ -417,7 +314,11 @@ function HeroSection({ city, setCity, visaType, setVisaType }) {
                             </div>
                         </div>
                         <div className="px-6 py-5">
-                            <MiniForm city={city} visaType={visaType} />
+                            {/* Replaced MiniForm with VisaConsultationForm */}
+                            <VisaConsultationForm
+                                defaultCountry={city}
+                                defaultVisaType={visaData.label}
+                            />
                         </div>
                     </div>
                     <a href={`https://wa.me/${cityData.wa}?text=Hi%20GVI%2C%20I%20need%20help%20with%20${encodeURIComponent(visaData.label)}%20from%20${city}`}
@@ -659,7 +560,7 @@ function FAQSection() {
 }
 
 // --------------------------------------------------------------
-// BottomCTA
+// BottomCTA (updated to use VisaConsultationForm)
 // --------------------------------------------------------------
 function BottomCTA({ city, visaType }) {
     const cityData = CITIES[city];
@@ -725,7 +626,10 @@ function BottomCTA({ city, visaType }) {
                             <p className="text-white/50 text-xs">Personalised response within 24 hours. No fees to consult.</p>
                         </div>
                         <div className="px-6 py-5">
-                            <MiniForm city={city} visaType={visaData.label} />
+                            <VisaConsultationForm
+                                defaultCountry={city}
+                                defaultVisaType={visaData.label}
+                            />
                         </div>
                     </div>
                 </div>
