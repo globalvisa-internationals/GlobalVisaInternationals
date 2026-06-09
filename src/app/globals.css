@@ -1,9 +1,10 @@
-/* DEBUG: PostCSS is running */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+/* rest of your custom CSS */
 
 body {
   background-color: var(--background);
