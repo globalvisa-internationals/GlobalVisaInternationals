@@ -110,7 +110,6 @@ export default function VisaConsultationForm({ defaultCountry = '', defaultVisaT
                 trackConversion();
                 resetForm();
 
-                // Close any global popup if open (will be handled by parent)
                 const today = new Date().toISOString().split('T')[0];
                 localStorage.setItem('popupSubmittedDate', today);
 
