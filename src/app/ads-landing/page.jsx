@@ -1,11 +1,9 @@
+//src\app\ads-landing\page.jsx
 "use client";
 
 import React, { useState, useEffect } from "react";
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { getCookie } from "@/lib/getCookie";
-import { useRouter } from "next/navigation";
+
 import {
     FaCheckCircle, FaArrowRight, FaPassport, FaGlobe,
     FaClock, FaShieldAlt, FaHandshake, FaChartLine, FaPhone,
