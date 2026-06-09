@@ -1,3 +1,4 @@
+//src\app\layout.jsx
 import { Inter } from 'next/font/google';
 import Script from "next/script";
 import { GoogleAnalytics } from '@next/third-parties/google';

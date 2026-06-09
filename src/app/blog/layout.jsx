@@ -1,3 +1,4 @@
+//src\app\blog\layout.jsx
 "use client";
 
 import Script from "next/script";

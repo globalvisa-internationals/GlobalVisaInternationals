@@ -1,34 +1,9 @@
-/* ----------- Dark Mode ----------- */
-/* @media (prefers-color-scheme: dark) {
-  body{
-    background-color: #333;
-  }
-
-
-} */
-
-
-
-
-/* :root {
-  --nav-bg: #0B1F3A;
-  --nav-hover-bg: #153E75;
-  --nav-hover-accent: #2D82B7;
-  --primary: #0057A0;
-  --accent: #28A0C9;
-  --background: #F5F7FA;
-  --text: #212121;
-  --submenu-bg: #122C52;
-} */
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-
-/* @import "tailwindcss"; */
+/* DEBUG: PostCSS is running */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 body {
   background-color: var(--background);
