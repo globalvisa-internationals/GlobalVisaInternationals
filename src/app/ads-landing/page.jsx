@@ -17,6 +17,7 @@ import {
 // Import the reusable form component
 import VisaConsultationForm from "@/components/VisaConsultationForm";
 
+
 const CITIES = {
     Bangalore: {
         label: "Bangalore",
