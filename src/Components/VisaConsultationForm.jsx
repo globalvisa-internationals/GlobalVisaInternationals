@@ -221,6 +221,8 @@ export default function VisaConsultationForm({ defaultCountry = '', defaultVisaT
                 </button>
             </form>
 
+
+
             <div className="flex justify-around pt-3 border-t border-slate-100 mt-3">
                 <div className="flex flex-col items-center gap-0.5">
                     <FaCheckCircle className="text-[#1A9612] text-xs" />
