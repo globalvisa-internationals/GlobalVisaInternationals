@@ -667,9 +667,9 @@ export default function HomeAbout() {
 
               {/* Contact chips */}
               {[
-                [FaPhone, 'Call', '+91 80 4567 8900', 'tel:+917022213466', '#1A9612'],
+                [FaPhone, 'Call', '+91 7022213466', 'tel:+917022213466', '#1A9612'],
                 [FaWhatsapp, 'WhatsApp', 'Chat Now', 'https://wa.me/9197022213466', '#25D366'],
-                [FaEnvelope, 'Email', 'info@gvi.in', 'mailto:operations@globalvisainternationals.com', '#0383C9'],
+                [FaEnvelope, 'Email', 'operations@globalvisainternationals.com', 'mailto:operations@globalvisainternationals.com', '#0383C9'],
                 [FaMapMarkerAlt, 'Office', 'Brigade Road, BLR', 'https://maps.google.com/?q=Global+Visa+Internationals', '#DC2626'],
               ].map(([Icon, label, value, href, color]) => (
                 <a key={label} href={href}
@@ -691,9 +691,14 @@ export default function HomeAbout() {
             {/* Map */}
             <Reveal delay={100}>
               <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-lg shadow-[#0B1E33]/6 h-[520px]">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248836.22452855774!2d77.32600623281249!3d12.967628000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d5613d9a4b%3A0xea0b2fbdf4f08876!2sGlobal%20Visa%20Internationals!5e0!3m2!1sen!2sin!4v1781089488359!5m2!1sen!2sin"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Global Visa Internationals Office — Brigade Road, Bangalore"
+                />
 
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248836.22452855774!2d77.32600623281249!3d12.967628000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d5613d9a4b%3A0xea0b2fbdf4f08876!2sGlobal%20Visa%20Internationals!5e0!3m2!1sen!2sin!4v1781089488359!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </Reveal>
           </div>
