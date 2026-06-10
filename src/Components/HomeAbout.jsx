@@ -1,901 +1,744 @@
 'use client';
-
 import { useCallback, useEffect, useRef, useState } from 'react';
 import React from 'react';
-import clsx from 'clsx';
 import {
-    FaCheckCircle,
-    FaStar,
-    FaMapMarkerAlt,
-    FaArrowRight,
-    FaPlayCircle,
-    FaChevronLeft,
-    FaChevronRight
+  FaCheckCircle, FaStar, FaArrowRight, FaPlayCircle,
+  FaChevronLeft, FaChevronRight, FaPhone, FaWhatsapp,
+  FaEnvelope, FaMapMarkerAlt, FaPassport, FaGlobe,
+  FaShieldAlt, FaHandshake, FaClock, FaAward,
+  FaQuoteLeft, FaAngleRight, FaTimes,
 } from 'react-icons/fa';
-import ReviewCarousel from "./ReviewCarousel";
+import ReviewCarousel from './ReviewCarousel';
 import VisaForm from './VisaForm';
 
-// ================= ANIMATION ON SCROLL COMPONENT =================
-const AnimatedOnScroll = ({ children, direction = 'up', delay = 0, className = '' }) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.1, triggerOnce: true }
-        );
-
-        if (ref.current) observer.observe(ref.current);
-        return () => observer.disconnect();
-    }, []);
-
-    const directionClasses = {
-        up: 'translate-y-10',
-        down: '-translate-y-10',
-        left: 'translate-x-10',
-        right: '-translate-x-10',
-        none: '',
-    };
-
-    return (
-        <div
-            ref={ref}
-            className={clsx(
-                'transition-all duration-700 ease-out',
-                directionClasses[direction],
-                isVisible ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0',
-                className
-            )}
-            style={{ transitionDelay: `${delay}ms` }}
-        >
-            {children}
-        </div>
-    );
-};
-
-// ================= GALLERY CAROUSEL COMPONENT =================
+// ─── GALLERY CAROUSEL ─────────────────────────────────────────────────────────
 const GalleryCarousel = ({ slides = [], autoSlide = true, interval = 4000 }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const intervalRef = useRef(null);
+  const [cur, setCur] = useState(0);
+  const timerRef = useRef(null);
 
-    const startAutoSlide = useCallback(() => {
-        if (!autoSlide || slides.length === 0) return;
-        clearInterval(intervalRef.current);
-        intervalRef.current = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % slides.length);
-        }, interval);
-    }, [autoSlide, slides.length, interval]);
+  const advance = useCallback((dir) => {
+    clearInterval(timerRef.current);
+    setCur(p => (p + dir + slides.length) % slides.length);
+    if (autoSlide) {
+      timerRef.current = setInterval(() => setCur(p => (p + 1) % slides.length), interval);
+    }
+  }, [slides.length, autoSlide, interval]);
 
-    useEffect(() => {
-        startAutoSlide();
-        return () => clearInterval(intervalRef.current);
-    }, [startAutoSlide]);
+  useEffect(() => {
+    if (!autoSlide || !slides.length) return;
+    timerRef.current = setInterval(() => setCur(p => (p + 1) % slides.length), interval);
+    return () => clearInterval(timerRef.current);
+  }, [autoSlide, slides.length, interval]);
 
-    const moveSlide = (direction) => {
-        clearInterval(intervalRef.current);
-        setCurrentIndex((prev) => (prev + direction + slides.length) % slides.length);
-        startAutoSlide();
-    };
+  if (!slides.length) return null;
 
-    const goToSlide = (index) => {
-        clearInterval(intervalRef.current);
-        setCurrentIndex(index);
-        startAutoSlide();
-    };
+  const prev = (cur - 1 + slides.length) % slides.length;
+  const next = (cur + 1) % slides.length;
 
-    if (slides.length === 0) return null;
-
-    return (
-        <div className="relative w-full overflow-hidden py-8">
-            {/* Carousel Container */}
-            <div className="relative flex justify-center items-center h-64 md:h-[450px]">
-                {slides.map((src, index) => {
-                    let positionClass = '';
-                    let zIndex = '';
-                    let transformClass = '';
-                    let opacityClass = 'opacity-0';
-                    let scaleClass = '';
-
-                    if (index === currentIndex) {
-                        positionClass = 'block';
-                        zIndex = 'z-20';
-                        transformClass = 'translate-x-0';
-                        opacityClass = 'opacity-100';
-                        scaleClass = 'scale-100';
-                    } else if (index === (currentIndex - 1 + slides.length) % slides.length) {
-                        positionClass = 'block';
-                        zIndex = 'z-10';
-                        transformClass = '-translate-x-2/3 md:-translate-x-[60%]';
-                        opacityClass = 'opacity-60';
-                        scaleClass = 'scale-90 md:scale-85';
-                    } else if (index === (currentIndex + 1) % slides.length) {
-                        positionClass = 'block';
-                        zIndex = 'z-10';
-                        transformClass = 'translate-x-2/3 md:translate-x-[60%]';
-                        opacityClass = 'opacity-60';
-                        scaleClass = 'scale-90 md:scale-85';
-                    } else {
-                        positionClass = 'hidden';
-                    }
-
-                    return (
-                        <div
-                            key={index}
-                            className={clsx(
-                                'absolute transition-all duration-500 ease-in-out cursor-pointer',
-                                'w-64 md:w-[450px] lg:w-[550px] h-48 md:h-[350px] lg:h-[400px]',
-                                positionClass,
-                                zIndex,
-                                opacityClass,
-                                transformClass,
-                                scaleClass
-                            )}
-                        >
-                            <img
-                                src={src}
-                                loading="lazy"
-                                alt={`Gallery slide ${index + 1}`}
-                                className="w-full h-full object-cover rounded-2xl shadow-xl border-2 border-white/50"
-                            />
-                        </div>
-                    );
-                })}
-            </div>
-
-            {/* Navigation Buttons */}
-            <button
-                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 z-30 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                onClick={() => moveSlide(-1)}
-                aria-label="Previous slide"
-            >
-                <FaChevronLeft className="text-gray-700 text-lg" />
-            </button>
-            <button
-                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 z-30 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                onClick={() => moveSlide(1)}
-                aria-label="Next slide"
-            >
-                <FaChevronRight className="text-gray-700 text-lg" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center gap-2 mt-6">
-                {slides.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={clsx(
-                            'w-2.5 h-2.5 rounded-full transition-all duration-300',
-                            index === currentIndex ? 'bg-blue-600 w-6' : 'bg-gray-300 hover:bg-gray-400'
-                        )}
-                        aria-label={`Go to slide ${index + 1}`}
-                    />
-                ))}
-            </div>
+  return (
+    <div className="relative select-none">
+      <div className="flex items-center justify-center gap-4 h-[320px] md:h-[420px] overflow-hidden px-4">
+        {/* Prev */}
+        <div className="hidden md:block flex-shrink-0 w-[260px] h-[200px] opacity-40 scale-90 origin-right transition-all duration-500 rounded-xl overflow-hidden cursor-pointer"
+          onClick={() => advance(-1)}>
+          <img src={slides[prev]} alt="" className="w-full h-full object-cover" />
         </div>
-    );
+        {/* Active */}
+        <div className="flex-shrink-0 w-full max-w-[480px] md:max-w-[580px] h-[280px] md:h-[380px] transition-all duration-500 rounded-2xl overflow-hidden shadow-2xl shadow-navy/20 ring-1 ring-white/20">
+          <img src={slides[cur]} alt={`Gallery ${cur + 1}`} className="w-full h-full object-cover" loading="lazy" />
+        </div>
+        {/* Next */}
+        <div className="hidden md:block flex-shrink-0 w-[260px] h-[200px] opacity-40 scale-90 origin-left transition-all duration-500 rounded-xl overflow-hidden cursor-pointer"
+          onClick={() => advance(1)}>
+          <img src={slides[next]} alt="" className="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      {/* Controls */}
+      <div className="flex items-center justify-center gap-6 mt-6">
+        <button onClick={() => advance(-1)} aria-label="Previous"
+          className="w-9 h-9 rounded-full border border-slate-200 hover:border-[#0383C9] text-slate-400 hover:text-[#0383C9] flex items-center justify-center transition-colors">
+          <FaChevronLeft className="text-sm" />
+        </button>
+        <div className="flex gap-2">
+          {slides.map((_, i) => (
+            <button key={i} onClick={() => { clearInterval(timerRef.current); setCur(i); }}
+              className={`rounded-full transition-all duration-300 ${i === cur ? 'w-6 h-2 bg-[#0383C9]' : 'w-2 h-2 bg-slate-200 hover:bg-slate-300'}`}
+              aria-label={`Slide ${i + 1}`} />
+          ))}
+        </div>
+        <button onClick={() => advance(1)} aria-label="Next"
+          className="w-9 h-9 rounded-full border border-slate-200 hover:border-[#0383C9] text-slate-400 hover:text-[#0383C9] flex items-center justify-center transition-colors">
+          <FaChevronRight className="text-sm" />
+        </button>
+      </div>
+    </div>
+  );
 };
 
-// ================= MAIN HOME ABOUT COMPONENT =================
+// ─── INLINE FAQ ───────────────────────────────────────────────────────────────
+const InlineFAQ = ({ faqs = [] }) => {
+  const [open, setOpen] = useState(0);
+  return (
+    <div className="space-y-2">
+      {faqs.map(({ question, answer }, i) => (
+        <div key={i} className="border border-slate-100 rounded-xl overflow-hidden">
+          <button onClick={() => setOpen(open === i ? -1 : i)}
+            className={`w-full text-left px-5 py-4 flex items-center justify-between gap-4 transition-colors text-sm font-semibold font-body
+              ${open === i ? 'bg-[#0383C9]/5 text-[#0383C9]' : 'bg-white text-[#0B1E33] hover:bg-slate-50'}`}>
+            <span>{question}</span>
+            <FaChevronRight className={`text-xs flex-shrink-0 transition-transform duration-200 ${open === i ? 'rotate-90' : ''}`} />
+          </button>
+          {open === i && (
+            <div className="px-5 py-4 bg-white border-t border-slate-100">
+              <p className="text-slate-600 text-sm leading-relaxed font-body">{answer}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+// ─── SCROLL REVEAL ────────────────────────────────────────────────────────────
+const Reveal = ({ children, delay = 0, className = '' }) => {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold: 0.08 });
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, []);
+  return (
+    <div ref={ref} className={`transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'} ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}>
+      {children}
+    </div>
+  );
+};
+
+// ─── SERVICE CARD DATA ────────────────────────────────────────────────────────
+const VISA_SERVICES = [
+  { name: 'Tourist Visa', img: '/svg/Tourist-Visa.webp', desc: 'Seamless tourist & visitor visa assistance worldwide.', links: [['Canada', '/Visa/tourist-visa/canada'], ['Australia', '/Visa/tourist-visa/australia'], ['USA', '/Visa/tourist-visa/usa'], ['UK', '/Visa/tourist-visa/united-kingdom'], ['Europe', '/Visa/tourist-visa/europe'], ['Japan', '/Visa/tourist-visa/japan'], ['Dubai', '/Visa/tourist-visa/dubai'], ['Singapore', '/Visa/tourist-visa/singapore']] },
+  { name: 'Business Visa', img: '/svg/business-visa.webp', desc: 'Professional support for global business travel.', links: [['Canada', '/Visa/business-visa/canada'], ['Australia', '/Visa/business-visa/australia'], ['UK', '/Visa/business-visa/uk'], ['Europe', '/Visa/business-visa/europe'], ['New Zealand', '/Visa/business-visa/new-zealand']] },
+  { name: 'PR Visa', img: '/svg/PR-Visa.webp', desc: 'Expert permanent residency pathways for Canada & Australia.', links: [['Canada', '/Visa/permanent-residency-visa/canada-pr-visa'], ['Australia', '/Visa/permanent-residency-visa/australia-pr-visa']] },
+  { name: 'Student Visa', img: '/svg/student-visa.webp', desc: 'Study abroad made simple — from application to approval.', links: [['Canada', '/Visa/student-visa/canada'], ['Australia', '/Visa/student-visa/australia'], ['USA', '/Visa/student-visa/usa'], ['UK', '/Visa/student-visa/uk'], ['Europe', '/Visa/student-visa/europe'], ['New Zealand', '/Visa/student-visa/new-zealand']] },
+  { name: 'Dependent Visa', img: '/svg/Dependent Visa.webp', desc: 'Reunite your family across international borders.', links: [['Canada', '/Visa/Dependent/canada'], ['Australia', '/Visa/Dependent/australia'], ['UK', '/Visa/Dependent/uk'], ['Europe', '/Visa/Dependent/europe'], ['New Zealand', '/Visa/Dependent/new-zealand']] },
+  { name: 'Refusal Visa', img: '/svg/refusal visa.webp', desc: 'Overcome past refusals with our reapplication strategy.', links: [['Canada', '/Visa/refusal-visa/canada'], ['Australia', '/Visa/refusal-visa/australia'], ['USA', '/Visa/refusal-visa/usa'], ['UK', '/Visa/refusal-visa/uk'], ['Europe', '/Visa/refusal-visa/europe'], ['Japan', '/Visa/refusal-visa/japan'], ['Dubai', '/Visa/refusal-visa/dubai'], ['Singapore', '/Visa/refusal-visa/singapore']] },
+];
+const ServiceCard = ({ s }) => {
+  const [flipped, setFlipped] = useState(false);
+  return (
+    <div className="w-full max-w-[280px] mx-auto h-[400px] cursor-pointer" style={{ perspective: '1000px' }}
+      onMouseEnter={() => setFlipped(true)} onMouseLeave={() => setFlipped(false)}>
+      <div className="relative w-full h-full transition-transform duration-500"
+        style={{ transformStyle: 'preserve-3d', transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
+        {/* Front */}
+        <div className="absolute inset-0 bg-white rounded-2xl border border-slate-100 shadow-md flex flex-col items-center justify-center p-6 text-center"
+          style={{ backfaceVisibility: 'hidden' }}>
+          <div className="w-24 h-24 rounded-2xl bg-[#0383C9]/8 flex items-center justify-center mb-5">
+            <img src={s.img} alt={s.name} className="w-14 h-14 object-contain" />
+          </div>
+          <h3 className="font-display text-[#0B1E33] text-xl font-semibold mb-3">{s.name}</h3>
+          <p className="text-slate-500 text-sm leading-relaxed font-body px-2">{s.desc}</p>
+          <div className="mt-5 text-[11px] font-bold uppercase tracking-widest text-[#0383C9] font-body">Hover to explore</div>
+        </div>
+        {/* Back (unchanged) */}
+        <div className="absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-5 overflow-y-auto"
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)', background: 'linear-gradient(135deg,#0B1E33,#0383C9)' }}>
+          <h3 className="font-display text-white text-base font-semibold mb-4">{s.name}</h3>
+          <div className="w-full space-y-1.5">
+            {s.links.map(([label, href]) => (
+              <a key={label} href={href}
+                className="flex items-center justify-between bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-colors font-body">
+                {label} <FaAngleRight className="text-[10px]" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ─── PAGE DATA ────────────────────────────────────────────────────────────────
+const MVV_CARDS = [
+  { title: 'Our Mission', img: '/gviVMV/mission-icon.png', accent: '#0383C9', text: 'To provide clear, ethical visa and immigration guidance — helping students, professionals and families navigate international processes with accuracy and confidence.' },
+  { title: 'Our Vision', img: '/gviVMV/vision-icon.png', accent: '#1A9612', text: 'To be a globally recognised consultancy known for transparent processes, regulatory compliance, and consistent client support across every visa category.' },
+  { title: 'Our Values', img: '/gviVMV/values-icon.png', accent: '#0261A1', text: 'Transparency, accountability, empathy and a client-first culture guide every interaction — grounded in ethical advisory and deep respect for immigration regulations.' },
+];
+
+const FAQS = [
+  { question: 'My visa was refused. Can I reapply?', answer: 'Yes — address the specific refusal reasons with corrected documentation and a stronger application. Our specialists review your case at no cost.' },
+  { question: 'How do I qualify for the Canada PR Visa?', answer: 'You need an eligible occupation under NOC 0, A or B. We assess your CRS score, Express Entry profile, and provincial nominee options to find the best pathway.' },
+  { question: 'Can my spouse work on a dependent visa?', answer: 'It varies by country. Many nations grant open work rights automatically; others require a separate permit. We advise based on your specific destination.' },
+  { question: 'Can I work on a student visa?', answer: 'In most countries, yes — up to 20 hours per week during term and full-time during official semester breaks.' },
+  { question: 'How long is the Portugal Job Seeker Visa valid?', answer: 'Initially valid for 120 days, extendable by an additional 60 days if you have not yet secured employment.' },
+  { question: 'Who is eligible for an Austrian job seeker visa?', answer: 'Non-EU citizens with a recognised higher education degree from Austria or an accredited foreign institution, plus sufficient financial means.' },
+];
+
+const GALLERY_SLIDES = [
+  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop',
+  'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=500&fit=crop',
+  'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop',
+  '/gallery/1.jpg', '/gallery/2.jpg', '/gallery/3.jpg', './gallery/4.jpg',
+  '/gallery/5.jpg', '/gallery/6.jpg', '/gallery/7.jpg',
+];
+
+// ═════════════════════════════════════════════════════════════════════════════
+// MAIN COMPONENT
+// ═════════════════════════════════════════════════════════════════════════════
 export default function HomeAbout() {
-    // Gallery images - Replace with your actual image URLs
-    const gallerySlides = [
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop",
-        // "https://images.unsplash.com/photo-1557425955-df376b88d5cb?w=800&h=500&fit=crop",
-        // "https://images.unsplash.com/photo-1589578228447-e1a4e481c6b2?w=800&h=500&fit=crop",
-        "/gallery/Travel-Poster.jpg",
-        "/gallery/Germany-tourist-visa.jpg",
-        "/gallery/UK-Travel.jpg",
-        "/gallery/UK-Visa-Banner.jpg",
-        "/gallery/5.jpg",
-        "/gallery/6.jpg",
-        "/gallery/7.jpg",
-        "/gallery/8.jpg",
-        "/gallery/9.jpg",
-    ];
+  const ticker = ['USA Visa 🇺🇸', 'Canada Visa 🇨🇦', 'UK Visa 🇬🇧', 'Australia Visa 🇦🇺', 'Germany Visa 🇩🇪', 'France Visa 🇫🇷', 'Italy Visa 🇮🇹', 'Spain Visa 🇪🇸', 'Singapore Visa 🇸🇬', 'Dubai Visa 🇦🇪', 'New Zealand Visa 🇳🇿', 'Japan Visa 🇯🇵'];
 
-
-    // Inside your HomeAbout component, before the return statement
-    const cards = [
-        {
-            title: 'Our Mission as Visa Consultants',
-            description: 'Our mission is to provide clear and ethical visa and immigration guidance by assisting applicants with documentation, eligibility assessment, and application support. We focus on helping students, professionals, and families navigate international visa processes with accuracy and clarity.',
-            iconSrc: '/gviVMV/mission-icon.png',
-            iconAlt: 'Mission of Global Visa Internationals',
-        },
-        {
-            title: 'Our Vision for Global Visa Services',
-            description: 'Our vision is to be a reliable visa consultancy recognized for transparent processes, compliance with immigration regulations, and consistent client support across multiple countries and visa categories.',
-            iconSrc: '/gviVMV/vision-icon.png',
-            iconAlt: 'Vision of Global Visa Internationals',
-        },
-        {
-            title: 'Our Core Values in Visa Consultancy',
-            description: 'Transparency, accountability, empathy, and a client-first approach guide our work. We prioritize accuracy, ethical advisory practices, and respect for the regulations set by immigration authorities.',
-            iconSrc: '/gviVMV/values-icon.png',
-            iconAlt: 'Core values of Global Visa Internationals',
-        },
-    ];
-
-
-    const faqs = [
-        {
-            question: "My visa was refused. Can I reapply?",
-            answer: "Yes—just address the reasons for the refusal and reapply with the necessary documentation.",
-        },
-        {
-            question: "How can I qualify for the Canada PR Visa Program?",
-            answer: "Firstly, the candidate should have an eligible occupation under the NOC 0, A, and B for Canada PR Visa...",
-        },
-        {
-            question: "Can my spouse work on a dependent visa?",
-            answer: "It varies by country; some grant work rights automatically, while others require a separate permit.",
-        },
-        {
-            question: "Can I work on a student visa?",
-            answer: "Yes, often up to 20 hours per week during term time (and sometimes full-time during breaks).",
-        },
-        {
-            question: "How long is the Portugal Job Seeker Visa valid for?",
-            answer: "The visa is initially valid for 120 days. If you do not find a job within this period, it can be extended for an additional 60 days.",
-        },
-        {
-            question: "Who is eligible for an Austrian job seeker visa?",
-            answer: "To apply for an Austrian job seeker visa, you must be a Non-EU citizen, have a recognized higher education degree...",
-        },
-    ];
-
-    const FAQAccordion = ({ faqs = [] }) => {
-        const [activeIndex, setActiveIndex] = useState(null);
-
-        useEffect(() => {
-            if (faqs.length > 0) {
-                const randomIndex = Math.floor(Math.random() * faqs.length);
-                setActiveIndex(randomIndex);
-            }
-        }, [faqs]);
-
-        const handleToggle = (index) => {
-            if (activeIndex === index) return;
-            setActiveIndex(index);
-        };
-    }
-    return (
-        <>
-            {/* ================= CUSTOM STYLES FOR ANIMATIONS ================= */}
-            <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        .animation-delay-1000 {
-          animation-delay: 1s;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-3000 {
-          animation-delay: 3s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-        .animate-scroll {
-          animation: scroll 25s linear infinite;
-        }
+  return (
+    <>
+      {/* ── GLOBAL CSS ─────────────────────────────────────────────────────── */}
+      <style jsx global>{`
+        @keyframes gviFloat  { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-14px)} }
+        @keyframes gviTicker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+        .gvi-float-a { animation: gviFloat 5s ease-in-out infinite; }
+        .gvi-float-b { animation: gviFloat 6.5s ease-in-out 0.8s infinite; }
+        .gvi-float-c { animation: gviFloat 5.8s ease-in-out 1.6s infinite; }
+        .gvi-float-d { animation: gviFloat 7s   ease-in-out 0.4s infinite; }
+        .gvi-float-e { animation: gviFloat 6s   ease-in-out 2s   infinite; }
+        .gvi-ticker  { animation: gviTicker 32s linear infinite; }
+        .font-display { font-family: 'Cormorant Garamond', serif; }
+        .font-body    { font-family: 'DM Sans', sans-serif; }
+        .gvi-section-pad { padding-top: 5rem; padding-bottom: 5rem; }
+        @media (min-width:768px) { .gvi-section-pad { padding-top: 7rem; padding-bottom: 7rem; } }
       `}</style>
 
-            {/* ================= HERO SECTION ================= */}
-            <section className="relative bg-gradient-to-br from-slate-50 to-gray-100 min-h-[90vh] overflow-hidden py-8 px-4 md:px-8">
-                {/* Background elements */}
-                <div className="absolute inset-0 pointer-events-none opacity-15">
-                    <img
-                        src="https://www.globalvisainternationals.com/svg/World-Map.gif"
-                        alt="World Map"
-                        className="w-full h-full object-cover"
-                    />
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 1  HERO — ink navy, form right, editorial headline left
+      ════════════════════════════════════════════════════════════════════ */}
+      <section className="relative bg-[#0B1E33] overflow-hidden font-body" style={{ minHeight: '100vh' }}>
+
+        {/* Fine grid overlay */}
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ backgroundImage: 'linear-gradient(rgba(3,131,201,0.055) 1px,transparent 1px),linear-gradient(90deg,rgba(3,131,201,0.055) 1px,transparent 1px)', backgroundSize: '64px 64px' }} />
+
+        {/* Glow blooms */}
+        <div className="absolute top-[-15%] right-[-8%] w-[640px] h-[640px] rounded-full pointer-events-none opacity-60"
+          style={{ background: 'radial-gradient(circle,rgba(3,131,201,0.14),transparent 65%)' }} />
+        <div className="absolute bottom-0 left-[-5%] w-[480px] h-[480px] rounded-full pointer-events-none"
+          style={{ background: 'radial-gradient(circle,rgba(26,150,18,0.07),transparent 65%)' }} />
+
+        {/* Vertical rule */}
+        <div className="absolute top-0 bottom-0 right-[33%] w-px pointer-events-none hidden lg:block"
+          style={{ background: 'linear-gradient(to bottom,transparent,rgba(3,131,201,0.18) 20%,rgba(3,131,201,0.18) 80%,transparent)' }} />
+
+        {/* Floating flags */}
+        {[['🇺🇸', 'gvi-float-a', 'top-[18%]', 'left-[5%]'], ['🇨🇦', 'gvi-float-b', 'top-[24%]', 'right-[5%]'], ['🇬🇧', 'gvi-float-c', 'top-[65%]', 'left-[4%]'], ['🇦🇺', 'gvi-float-d', 'top-[58%]', 'right-[4%]'], ['🇪🇺', 'gvi-float-e', 'top-[78%]', 'right-[15%]']].map(([flag, cls, top, side]) => (
+          <div key={flag} className={`absolute text-3xl pointer-events-none select-none ${cls} ${top} ${side}`}
+            style={{ filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.4))' }}>{flag}</div>
+        ))}
+
+        {/* Topbar */}
+        <div className="relative z-10 flex items-center justify-between px-6 lg:px-16 pt-5 pb-4 border-b border-white/6">
+          <img src="https://www.globalvisainternationals.com/Global-Visa-Internationals-Logo.svg"
+            alt="Global Visa Internationals" className="h-9 brightness-200" />
+          <div className="hidden md:flex items-center gap-2 bg-[#1A9612]/15 border border-[#1A9612]/25 rounded-full px-3 py-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1A9612] animate-pulse" />
+            <span className="text-[#4ADE80] text-[10px] font-bold tracking-widest uppercase">Consultations Open</span>
+          </div>
+          <a href="tel:+919876543210"
+            className="flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">
+            <FaPhone className="text-[10px]" /> Call Now
+          </a>
+        </div>
+
+        {/* Hero grid */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-14 lg:py-20 grid lg:grid-cols-[1fr_420px] gap-12 xl:gap-20 items-start">
+
+          {/* Left */}
+          <div>
+            <div className="inline-flex items-center gap-2 border border-[#0383C9]/35 bg-[#0383C9]/10 rounded-full px-4 py-1.5 mb-7">
+              <FaStar className="text-amber-400 text-[10px]" />
+              <span className="text-[#3AABDF] text-[10px] font-bold tracking-widest uppercase">Trusted Visa Experts Since 2016 · Bangalore</span>
+            </div>
+
+            <h1 className="font-display text-white leading-[1.1] mb-5">
+              <span className="block text-4xl md:text-5xl xl:text-[3.4rem] font-semibold">Your Global Journey</span>
+              <span className="block text-4xl md:text-5xl xl:text-[3.4rem] font-semibold italic"
+                style={{ WebkitTextStroke: '1.5px rgba(3,131,201,0.75)', color: 'transparent' }}>
+                Starts Here.
+              </span>
+            </h1>
+
+            <h2 className="text-white/60 text-base md:text-lg font-light leading-relaxed max-w-lg mb-3 font-body">
+              Premier visa consultancy in Bangalore for{' '}
+              {['USA', 'UK', 'Canada', 'Schengen', 'Australia', 'New Zealand', 'Japan'].map((c, i, a) => (
+                <span key={c}><span className="text-white font-semibold">{c}</span>{i < a.length - 1 ? (i === a.length - 2 ? ' & ' : ', ') : ''}</span>
+              ))} visas.
+            </h2>
+            <p className="text-white/50 text-sm font-light leading-relaxed max-w-md mb-9 font-body">
+              11+ years of expertise. 75,000+ clients successfully guided through complex immigration processes by MARA & ICCRC certified consultants.
+            </p>
+
+            {/* Stats strip */}
+            <div className="flex gap-px bg-white/6 border border-white/8 rounded-2xl overflow-hidden w-fit mb-9">
+              {[['11+', 'Years'], ['75K+', 'Visas'], ['98%', 'Success'], ['45+', 'Countries']].map(([val, lbl], i) => (
+                <div key={lbl} className={`px-6 py-4 text-center ${i > 0 ? 'border-l border-white/8' : ''}`}>
+                  <div className="font-display text-white text-2xl font-semibold leading-none">{val}</div>
+                  <div className="text-white/40 text-[10px] mt-1 tracking-wide font-body uppercase">{lbl}</div>
                 </div>
-                <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute top-[20%] left-[10%] text-3xl md:text-4xl animate-float">🇺🇸</div>
-                    <div className="absolute top-[30%] right-[15%] text-3xl md:text-4xl animate-float animation-delay-1000">🇨🇦</div>
-                    <div className="absolute top-[60%] left-[15%] text-3xl md:text-4xl animate-float animation-delay-2000">🇬🇧</div>
-                    <div className="absolute top-[40%] right-[8%] text-3xl md:text-4xl animate-float animation-delay-3000">🇦🇺</div>
-                    <div className="absolute top-[70%] right-[20%] text-3xl md:text-4xl animate-float animation-delay-4000">🇪🇺</div>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              <a href="#consultation"
+                className="inline-flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white font-semibold text-sm px-7 py-3.5 rounded-xl transition-all shadow-xl shadow-[#0383C9]/30 hover:-translate-y-px font-body">
+                Free Consultation <FaArrowRight className="text-xs" />
+              </a>
+              <a href="#testimonials"
+                className="inline-flex items-center gap-2.5 bg-white/8 border border-white/18 hover:bg-white/14 text-white font-medium text-sm px-7 py-3.5 rounded-xl transition-colors font-body">
+                <div className="w-6 h-6 bg-white/15 rounded-full flex items-center justify-center">
+                  <FaPlayCircle className="text-[10px]" />
                 </div>
+                Success Stories
+              </a>
+            </div>
 
-                <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16 min-h-[70vh]">
-                    {/* Left content */}
-                    <div className="flex-1 text-center lg:text-left">
-                        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-900 to-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                            <FaStar className="text-yellow-400" />
-                            <span>Trusted Visa Experts Since 2016</span>
-                        </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
-                            Your Global Journey
-                            <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"> Starts Here</span>
-                        </h1>
-                        <h2 className="text-xl md:text-2xl text-gray-700 mt-4 font-semibold">
-                            Premier Visa Consultancy in Bangalore for
-                            <span className="text-blue-900 font-bold mx-1">USA</span>,
-                            <span className="text-blue-900 font-bold mx-1">UK</span>,
-                            <span className="text-blue-900 font-bold mx-1">Canada</span>,
-                            <span className="text-blue-900 font-bold mx-1">Schengen</span>,
-                            <span className="text-blue-900 font-bold mx-1">Australia</span>,
-                            <span className="text-blue-900 font-bold mx-1">New Zealand</span> &
-                            <span className="text-blue-900 font-bold mx-1">Japan</span> Visas
-                        </h2>
-                        <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto lg:mx-0">
-                            With 11+ years of expertise, we've successfully guided over 75,000 clients through complex visa processes.
-                            Your passport to global opportunities begins with our certified immigration consultants.
-                        </p>
+            {/* Trust chips */}
+            <div className="flex flex-wrap gap-4 text-xs text-white/45 font-body">
+              {['MARA & ICCRC Licensed', 'Transparent Pricing', 'Personalised Case Handling', 'Interview Coaching', '24/7 Support'].map(t => (
+                <span key={t} className="flex items-center gap-1.5">
+                  <FaCheckCircle className="text-[#1A9612] text-[10px]" /> {t}
+                </span>
+              ))}
+            </div>
+          </div>
 
-                        {/* Stats bar */}
-                        <div className="flex flex-wrap justify-center lg:justify-start gap-6 bg-white p-5 rounded-xl shadow-md mt-8">
-                            <div className="text-center">
-                                <div className="text-3xl font-bold text-blue-900">11+</div>
-                                <div className="text-sm text-gray-500">Years Experience</div>
-                            </div>
-                            <div className="hidden sm:block w-px h-12 bg-gray-200"></div>
-                            <div className="text-center">
-                                <div className="text-3xl font-bold text-blue-900">75K+</div>
-                                <div className="text-sm text-gray-500">Successful Visas</div>
-                            </div>
-                            <div className="hidden sm:block w-px h-12 bg-gray-200"></div>
-                            <div className="text-center">
-                                <div className="text-3xl font-bold text-blue-900">98%</div>
-                                <div className="text-sm text-gray-500">Success Rate</div>
-                            </div>
-                            <div className="hidden sm:block w-px h-12 bg-gray-200"></div>
-                            <div className="text-center">
-                                <div className="text-3xl font-bold text-blue-900">24/7</div>
-                                <div className="text-sm text-gray-500">Support</div>
-                            </div>
-                        </div>
-
-                        {/* CTA buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
-                            <a href="#consultation" className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-all duration-200">
-                                Get Free Consultation <FaArrowRight className="text-sm" />
-                            </a>
-                            <a href="#testimonials" className="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 text-blue-600 font-semibold px-6 py-3 rounded-lg hover:border-blue-500 hover:shadow-md transition-all duration-200">
-                                <FaPlayCircle /> Watch Success Stories
-                            </a>
-                        </div>
-
-                        {/* Trust indicators */}
-                        <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
-                            <div className="flex items-center gap-2 text-gray-700 text-sm">
-                                <FaCheckCircle className="text-green-600" /> Licensed Consultants
-                            </div>
-                            <div className="flex items-center gap-2 text-gray-700 text-sm">
-                                <FaCheckCircle className="text-green-600" /> Transparent Pricing
-                            </div>
-                            <div className="flex items-center gap-2 text-gray-700 text-sm">
-                                <FaCheckCircle className="text-green-600" /> Personalized Support
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right logo card */}
-                    <VisaForm />
+          {/* Right — form */}
+          <div className="w-full lg:sticky lg:top-6">
+            <div className="bg-white rounded-2xl shadow-2xl shadow-black/35 overflow-hidden">
+              <div className="bg-gradient-to-br from-[#0B1E33] via-[#0D2E52] to-[#0383C9] px-7 py-6 relative">
+                <div className="absolute inset-0 opacity-10"
+                  style={{ backgroundImage: 'radial-gradient(circle at 80% 40%,white,transparent 60%)' }} />
+                <img src="https://www.globalvisainternationals.com/Global-Visa-Internationals-Logo.svg"
+                  alt="GVI" className="h-8 mb-4 brightness-200 relative" />
+                {/* <h2 className="font-display text-white text-xl font-semibold mb-1 relative">Free Visa Assessment</h2> */}
+                <p className="text-white/65 text-xs font-body relative">Personalised consultation within 24 hours</p>
+                <div className="inline-flex items-center gap-1.5 mt-3 bg-amber-400/15 border border-amber-400/25 rounded-full px-3 py-1 relative">
+                  <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse" />
+                  <span className="text-amber-300 text-[9px] font-bold tracking-wide uppercase font-body">Limited slots available</span>
                 </div>
+              </div>
+              <div className="px-7 py-6">
+                <VisaForm />
+              </div>
+            </div>
 
-                {/* Scrolling countries banner */}
-                <div className="relative mt-12 bg-gradient-to-r from-blue-900 to-blue-700 py-3 overflow-hidden">
-                    <div className="flex items-center gap-8 whitespace-nowrap animate-scroll">
-                        <span className="text-white font-semibold">We Specialize In:</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">USA Visa 🇺🇸</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Canada Visa 🇨🇦</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">UK Visa 🇬🇧</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Australia Visa 🇦🇺</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Germany Visa 🇩🇪</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">France Visa 🇫🇷</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Italy Visa 🇮🇹</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Spain Visa 🇪🇸</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Singapore Visa 🇸🇬</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Dubai Visa 🇦🇪</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">New Zealand Visa 🇳🇿</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Japan Visa 🇯🇵</span>
-                        {/* Duplicate for seamless loop */}
-                        <span className="text-white font-semibold ml-8">We Specialize In:</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">USA Visa 🇺🇸</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Canada Visa 🇨🇦</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">UK Visa 🇬🇧</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Australia Visa 🇦🇺</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Germany Visa 🇩🇪</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">France Visa 🇫🇷</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Italy Visa 🇮🇹</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Spain Visa 🇪🇸</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Singapore Visa 🇸🇬</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Dubai Visa 🇦🇪</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">New Zealand Visa 🇳🇿</span>
-                        <span className="text-white bg-white/10 px-3 py-1 rounded-full">Japan Visa 🇯🇵</span>
-                    </div>
-                </div>
-            </section>
+            {/* WhatsApp */}
+            <a href="https://wa.me/919876543210?text=Hi%20GVI%2C%20I%20need%20visa%20assistance"
+              target="_blank" rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 mt-3 w-full py-3 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold text-sm rounded-xl transition-colors shadow-lg shadow-[#25D366]/20 font-body">
+              <FaWhatsapp className="text-base" /> WhatsApp Us Instantly
+            </a>
+          </div>
+        </div>
 
-            {/* ================= ABOUT SECTION ================= */}
-            <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-sm font-semibold mb-4">
-                            About Us
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                            Trusted Visa Consultants in Bangalore Since 2016
-                        </h2>
-                        <p className="text-gray-600 text-lg mt-3 max-w-2xl mx-auto">
-                            Expert visa consultancy services for USA, Canada, UK, Schengen, Australia & New Zealand
-                        </p>
-                    </div>
+        {/* Ticker */}
+        <div className="relative z-10 bg-[#061424] border-t border-white/8 py-3 overflow-hidden">
+          <div className="gvi-ticker flex gap-10 whitespace-nowrap">
+            {[...ticker, ...ticker].map((c, i) => (
+              <span key={i} className="inline-flex items-center gap-2.5 text-white/45 text-xs font-semibold font-body">
+                <span className="w-1 h-1 bg-[#0383C9] rounded-full" />{c}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                    <div className="grid md:grid-cols-2 gap-12 items-start">
-                        <div className="space-y-6">
-                            <div className="relative rounded-2xl overflow-hidden shadow-xl group">
-                                <img
-                                    src="https://www.globalvisainternationals.com/images/story.webp"
-                                    alt="Global Visa Internationals team"
-                                    className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/80 to-transparent p-4">
-                                    <div className="flex justify-between items-end text-white">
-                                        <div>
-                                            <div className="text-3xl font-bold">11+</div>
-                                            <div className="text-sm">Years Experience</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
-                                    <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold">✓</div>
-                                    <span className="text-sm font-medium text-gray-700">Verified Consultants</span>
-                                </div>
-                                <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
-                                    <div className="w-8 h-8 rounded-lg bg-green-100 text-green-700 flex items-center justify-center">★</div>
-                                    <span className="text-sm font-medium text-gray-700">98% Success Rate</span>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="bg-blue-50 p-4 rounded-xl">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-2xl">🎓</span>
-                                        <h4 className="font-semibold text-gray-800">Study Visa Experts</h4>
-                                    </div>
-                                    <p className="text-sm text-gray-600">University admissions, scholarship guidance, and student visa processing</p>
-                                </div>
-                                <div className="bg-blue-50 p-4 rounded-xl">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-2xl">✈️</span>
-                                        <h4 className="font-semibold text-gray-800">Tourist & Visitor Visa Experts</h4>
-                                    </div>
-                                    <p className="text-sm text-gray-600">Tourist and visitor visa assistance for sightseeing, family visits, and short-term travel</p>
-                                </div>
-                            </div>
-                        </div>
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 2  TRUST BAR
+      ════════════════════════════════════════════════════════════════════ */}
+      <section className="bg-[#F4F7FB] border-b border-slate-200 font-body">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          {[
+            [FaShieldAlt, 'MARA & ICCRC Certified'],
+            [FaAward, '98% Visa Approval Rate'],
+            [FaClock, 'Fast-Track Processing'],
+            [FaHandshake, 'Zero Hidden Fees'],
+            [FaGlobe, '45+ Countries Covered'],
+            [FaPassport, 'Refusal Recovery Experts'],
+          ].map(([Icon, text]) => (
+            <div key={text} className="flex items-center gap-2 text-[#0B1E33] text-[11px] font-semibold">
+              <Icon className="text-[#0383C9] text-sm" /> {text}
+            </div>
+          ))}
+        </div>
+      </section>
 
-                        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
-                            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                                Global Visa Internationals:<br />
-                                Best Visa Consultants in Bangalore
-                            </h3>
-                            <p className="text-gray-700 leading-relaxed mb-6">
-                                Global Visa Internationals is a trusted visa consultancy in Bangalore, established in 2016 on Brigade Road.
-                                We help Indian applicants successfully apply for tourist, student and business visas with expert guidance,
-                                high success rates, and end-to-end documentation support.
-                            </p>
-                            <div className="flex gap-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-l-4 border-blue-600 mb-6">
-                                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-blue-600 shadow-sm flex-shrink-0">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
-                                        <path d="M8 12L11 15L16 9" strokeLinecap="round" />
-                                    </svg>
-                                </div>
-                                <p className="text-gray-700">
-                                    Our expertise includes <strong>USA B1/B2 visitor visas</strong>, <strong>Canada tourist visas</strong>,
-                                    <strong> UK student visas</strong>, <strong>Schengen visas for Indians</strong>,
-                                    <strong> Australia & New Zealand visitor visas</strong>.
-                                </p>
-                            </div>
-                            <div className="flex flex-wrap gap-4">
-                                <a href="#consultation" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-800 to-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-                                    Book Free Consultation <FaArrowRight />
-                                </a>
-                                <a href="#testimonials" className="inline-flex items-center gap-2 border border-blue-600 text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-all duration-200">
-                                    View Success Stories
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 3  ABOUT — editorial two-column with timeline signature
+      ════════════════════════════════════════════════════════════════════ */}
+      <section id="about" className="gvi-section-pad bg-white font-body">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-            {/* ================= WHY WE ARE THE BEST SECTION ================= */}
-            <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-                <div className="absolute top-[-100px] right-[-100px] w-80 h-80 bg-gradient-to-br from-blue-900/5 to-blue-600/5 rounded-full pointer-events-none" />
-                <div className="absolute bottom-[-150px] left-[-150px] w-[400px] h-[400px] bg-gradient-to-br from-blue-500/5 to-blue-300/5 rounded-full pointer-events-none" />
-
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            Why We Are One of the Best Visa Consultants in Bangalore
-                        </h2>
-                        <div className="space-y-4">
-                            <p className="text-lg text-gray-700 leading-relaxed">
-                                With over 11+ years of experience as trusted visa consultants in Bangalore,
-                                Global Visa Internationals has helped thousands of Indian applicants successfully
-                                secure visas for top global destinations with a proven, transparent process.
-                            </p>
-                            <p className="text-gray-600 leading-relaxed">
-                                From first-time travellers to international students and business visitors,
-                                we provide end-to-end visa guidance, accurate documentation support,
-                                and expert interview preparation to minimise rejection risks.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8 mb-20">
-                        <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-4 pb-5 border-b border-gray-100 mb-5">
-                                <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                                        <path d="M9 12L11 14L15 10" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-2xl font-bold text-gray-800">Complete Visa Services Under One Roof</h3>
-                            </div>
-                            <ul className="space-y-3">
-                                {[
-                                    "Student Visa Documentation & University Application Support",
-                                    "Tourist & Visitor Visa Processing for Indians",
-                                    "Business Visa Assistance for International Travel",
-                                    "Permanent Residency Guidance (Canada, Australia, UK)",
-                                    "Family & Dependent Visa Applications",
-                                    "Visa Refusal Review & Reapplication Strategy",
-                                    "Profile Evaluation & Country Eligibility Check"
-                                ].map((text, i) => (
-                                    <li key={i} className="flex items-start gap-3">
-                                        <div className="w-5 h-5 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                            <span className="text-white text-xs">✓</span>
-                                        </div>
-                                        <span className="text-gray-700">{text}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            <div className="flex items-center gap-4 pb-5 border-b border-gray-100 mb-5">
-                                <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                                        <path d="M12 2C15.31 2 18 4.69 18 8C18 12.5 12 21 12 21C12 21 6 12.5 6 8C6 4.69 8.69 2 12 2Z" />
-                                        <path d="M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-2xl font-bold text-gray-800">Top Visa Destinations We Specialise In</h3>
-                            </div>
-                            <ul className="space-y-2">
-                                {[
-                                    { flag: "🇨🇦", text: "<strong>Canada</strong> - Tourist, Student & PR Visa Consultants" },
-                                    { flag: "🇦🇺", text: "<strong>Australia</strong> - Visitor & Permanent Residency Services" },
-                                    { flag: "🇬🇧", text: "<strong>United Kingdom</strong> - UK Student & Tourist Visa Experts" },
-                                    { flag: "🇺🇸", text: "<strong>United States</strong> - USA B1/B2 Visitor Visa Assistance" },
-                                    { flag: "🇪🇺", text: "<strong>Europe</strong> - Schengen Visa for Indian Citizens" },
-                                    { flag: "🇯🇵", text: "<strong>Japan</strong> - Tourist & Short-Term Visa Processing" },
-                                    { flag: "🇨🇳", text: "<strong>China</strong> - Business & Visitor Visa Services" },
-                                    { flag: "🇸🇬", text: "<strong>Singapore</strong> - Short-Term Visit Pass Support" },
-                                    { flag: "🌍", text: "<strong>Global</strong> - Visa Services for 45+ Countries" }
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 py-1">
-                                        <span className="text-xl flex-shrink-0">{item.flag}</span>
-                                        <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: item.text }} />
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="text-center mb-12">
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                            Proven Results as Leading Visa Consultants in Bangalore
-                        </h3>
-                        <p className="text-gray-600">Quantifying our commitment to successful immigration outcomes</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-                        {[
-                            { icon: "👥", value: "30+ Years", desc: "Combined professional expertise in immigration consultancy" },
-                            { icon: "🌎", value: "45+ Countries", desc: "Visa assistance across major global destinations" },
-                            { icon: "📋", value: "20+ Categories", desc: "Specialized visa type expertise and processing" },
-                            { icon: "✈️", value: "75,000+", desc: "Successful visa applications and consultations" },
-                            { icon: "📅", value: "Since 2016", desc: "Trusted service excellence across India" }
-                        ].map((stat, idx) => (
-                            <div key={idx} className="bg-white rounded-xl p-5 text-center shadow-md border border-gray-100 hover:shadow-lg transition-all hover:-translate-y-1">
-                                <div className="w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center text-3xl">
-                                    {stat.icon}
-                                </div>
-                                <div className="text-xl font-bold text-blue-800 mb-1">{stat.value}</div>
-                                <p className="text-sm text-gray-600">{stat.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="max-w-3xl mx-auto mt-16 p-6 bg-gray-50 rounded-xl border border-gray-200 text-center">
-                        <div className="flex flex-wrap items-center justify-center gap-4">
-                            <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center flex-shrink-0">
-                                <span className="text-white text-xl">🏆</span>
-                            </div>
-                            <p className="text-gray-700">
-                                <strong>Certified Immigration Consultancy</strong> – Awarded for Excellence in Visa Processing
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ================= GALLERY SECTION ================= */}
-            <AnimatedOnScroll direction="up" delay={100}>
-                <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                                Our Success Gallery
-                            </h2>
-                            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                                Real moments from our visa success stories and client celebrations
-                            </p>
-                        </div>
-                        <GalleryCarousel
-                            slides={gallerySlides}
-                            autoSlide={true}
-                            interval={4000}
-                        />
-                    </div>
-                </section>
-            </AnimatedOnScroll>
-
-
-
-            {/* ================= MISSION, VISION & VALUES SECTION ================= */}
-            <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-sm font-semibold mb-4">
-                            Our Guiding Principles
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                            Mission, Vision & Core Values
-                        </h2>
-                        <p className="text-gray-600 text-lg mt-3 max-w-2xl mx-auto">
-                            The driving force behind our commitment to excellence in visa consultancy
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 md:gap-8">
-                        {cards.map((card, idx) => (
-                            <div
-                                key={idx}
-                                className="group flex-1 bg-white rounded-2xl p-6 md:p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
-                            >
-                                <div className="w-20 h-20 mx-auto mb-5 relative">
-                                    <img
-                                        src={card.iconSrc}
-                                        alt={card.iconAlt}
-                                        className="w-full h-full object-contain"
-                                    />
-                                </div>
-                                <h3 className="text-xl md:text-2xl font-bold text-teal-700 mb-4">
-                                    {card.title}
-                                </h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {card.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-            <section id="testimonials" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <ReviewCarousel />
-            </section>
-
-            {/* ================= VISA SERVICES FLIP CARDS ================= */}
-            <section className="py-16 md:py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Our Visa Services
-                        </h2>
-                        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                            End-to-end visa assistance for every travel purpose
-                        </p>
-                    </div>
-
-                    <div className="flex flex-wrap justify-center gap-6">
-                        {/* Tourist Visa */}
-                        <div className="group w-[250px] h-[350px] perspective-1000 hover:-translate-y-1 transition-transform duration-300">
-                            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-                                {/* Front */}
-                                <div className="absolute w-full h-full [backface-visibility:hidden] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col justify-center items-center">
-                                    <div className="flex flex-col items-center text-center gap-3">
-                                        <img src="/svg/Tourist-Visa.webp" alt="Tourist Visa" className="w-[110px] h-[110px] object-contain" />
-                                        <h3 className="text-xl font-semibold text-teal-700">Tourist Visa</h3>
-                                        <p className="text-sm text-gray-600">Quick & hassle-free tourist visa assistance.</p>
-                                    </div>
-                                </div>
-                                {/* Back */}
-                                <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateX(180deg)] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col items-center justify-center text-center">
-                                    <h3 className="text-xl font-semibold text-teal-700 mb-3">Tourist Visa</h3>
-                                    <ul className="w-full max-w-[200px] space-y-2">
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/tourist-visa/canada" className="text-teal-700 hover:text-white">CANADA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/tourist-visa/australia" className="text-teal-700 hover:text-white">AUSTRALIA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/tourist-visa/usa" className="text-teal-700 hover:text-white">USA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/tourist-visa/united-kingdom" className="text-teal-700 hover:text-white">UK</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/tourist-visa/europe" className="text-teal-700 hover:text-white">EUROPE</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/tourist-visa/japan" className="text-teal-700 hover:text-white">JAPAN</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/tourist-visa/dubai" className="text-teal-700 hover:text-white">DUBAI</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/tourist-visa/singapore" className="text-teal-700 hover:text-white">SINGAPORE</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Business Visa */}
-                        <div className="group w-[250px] h-[350px] perspective-1000 hover:-translate-y-1 transition-transform duration-300">
-                            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-                                <div className="absolute w-full h-full [backface-visibility:hidden] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col justify-center items-center">
-                                    <div className="flex flex-col items-center text-center gap-3">
-                                        <img src="/svg/business-visa.webp" alt="Business Visa" className="w-[110px] h-[110px] object-contain" />
-                                        <h3 className="text-xl font-semibold text-teal-700">Business Visa</h3>
-                                        <p className="text-sm text-gray-600">Professional support for business visas.</p>
-                                    </div>
-                                </div>
-                                <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateX(180deg)] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col items-center justify-center text-center">
-                                    <h3 className="text-xl font-semibold text-teal-700 mb-3">Business Visa</h3>
-                                    <ul className="w-full max-w-[200px] space-y-2">
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/business-visa/canada" className="text-teal-700 hover:text-white">CANADA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/business-visa/australia" className="text-teal-700 hover:text-white">AUSTRALIA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/business-visa/uk" className="text-teal-700 hover:text-white">UK</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/business-visa/europe" className="text-teal-700 hover:text-white">EUROPE</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/business-visa/new-zealand" className="text-teal-700 hover:text-white">NEW ZEALAND</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* PR Visa */}
-                        <div className="group w-[250px] h-[350px] perspective-1000 hover:-translate-y-1 transition-transform duration-300">
-                            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-                                <div className="absolute w-full h-full [backface-visibility:hidden] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col justify-center items-center">
-                                    <div className="flex flex-col items-center text-center gap-3">
-                                        <img src="/svg/PR-Visa.webp" alt="PR Visa" className="w-[110px] h-[110px] object-contain" />
-                                        <h3 className="text-xl font-semibold text-teal-700">PR Visa</h3>
-                                        <p className="text-sm text-gray-600">Guidance for permanent residency visas.</p>
-                                    </div>
-                                </div>
-                                <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateX(180deg)] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col items-center justify-center text-center">
-                                    <h3 className="text-xl font-semibold text-teal-700 mb-3">PR Visa</h3>
-                                    <ul className="w-full max-w-[200px] space-y-2">
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/permanent-residency-visa/canada-pr-visa" className="text-teal-700 hover:text-white">CANADA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/permanent-residency-visa/australia-pr-visa" className="text-teal-700 hover:text-white">AUSTRALIA</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Student Visa */}
-                        <div className="group w-[250px] h-[350px] perspective-1000 hover:-translate-y-1 transition-transform duration-300">
-                            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-                                <div className="absolute w-full h-full [backface-visibility:hidden] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col justify-center items-center">
-                                    <div className="flex flex-col items-center text-center gap-3">
-                                        <img src="/svg/student-visa.webp" alt="Student Visa" className="w-[110px] h-[110px] object-contain" />
-                                        <h3 className="text-xl font-semibold text-teal-700">Student Visa</h3>
-                                        <p className="text-sm text-gray-600">Study abroad made simple and fast.</p>
-                                    </div>
-                                </div>
-                                <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateX(180deg)] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col items-center justify-center text-center">
-                                    <h3 className="text-xl font-semibold text-teal-700 mb-3">Student Visa</h3>
-                                    <ul className="w-full max-w-[200px] space-y-2">
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/student-visa/canada" className="text-teal-700 hover:text-white">CANADA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/student-visa/australia" className="text-teal-700 hover:text-white">AUSTRALIA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/student-visa/usa" className="text-teal-700 hover:text-white">USA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/student-visa/uk" className="text-teal-700 hover:text-white">UK</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/student-visa/europe" className="text-teal-700 hover:text-white">EUROPE</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/student-visa/new-zealand" className="text-teal-700 hover:text-white">NEW ZEALAND</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Dependent Visa */}
-                        <div className="group w-[250px] h-[350px] perspective-1000 hover:-translate-y-1 transition-transform duration-300">
-                            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-                                <div className="absolute w-full h-full [backface-visibility:hidden] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col justify-center items-center">
-                                    <div className="flex flex-col items-center text-center gap-3">
-                                        <img src="/svg/Dependent Visa.webp" alt="Dependent Visa" className="w-[110px] h-[110px] object-contain" />
-                                        <h3 className="text-xl font-semibold text-teal-700">Dependent Visa</h3>
-                                        <p className="text-sm text-gray-600">Bring your family to live with you abroad.</p>
-                                    </div>
-                                </div>
-                                <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateX(180deg)] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col items-center justify-center text-center">
-                                    <h3 className="text-xl font-semibold text-teal-700 mb-3">Dependent Visa</h3>
-                                    <ul className="w-full max-w-[200px] space-y-2">
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/Dependent/canada" className="text-teal-700 hover:text-white">CANADA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/Dependent/australia" className="text-teal-700 hover:text-white">AUSTRALIA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/Dependent/uk" className="text-teal-700 hover:text-white">UK</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/Dependent/europe" className="text-teal-700 hover:text-white">EUROPE</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/Dependent/new-zealand" className="text-teal-700 hover:text-white">NEW ZEALAND</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Refusal Visa */}
-                        <div className="group w-[250px] h-[350px] perspective-1000 hover:-translate-y-1 transition-transform duration-300">
-                            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-                                <div className="absolute w-full h-full [backface-visibility:hidden] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col justify-center items-center">
-                                    <div className="flex flex-col items-center text-center gap-3">
-                                        <img src="/svg/refusal visa.webp" alt="Refusal Visa" className="w-[110px] h-[110px] object-contain" />
-                                        <h3 className="text-xl font-semibold text-teal-700">Refusal Visa</h3>
-                                        <p className="text-sm text-gray-600">Get expert help to overcome visa refusals.</p>
-                                    </div>
-                                </div>
-                                <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateX(180deg)] rounded-xl border-2 border-teal-600 bg-white p-4 flex flex-col items-center justify-center text-center">
-                                    <h3 className="text-xl font-semibold text-teal-700 mb-3">Refusal Visa</h3>
-                                    <ul className="w-full max-w-[200px] space-y-2">
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/refusal-visa/canada" className="text-teal-700 hover:text-white">CANADA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/refusal-visa/australia" className="text-teal-700 hover:text-white">AUSTRALIA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/refusal-visa/usa" className="text-teal-700 hover:text-white">USA</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/refusal-visa/uk" className="text-teal-700 hover:text-white">UK</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/refusal-visa/europe" className="text-teal-700 hover:text-white">EUROPE</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/refusal-visa/japan" className="text-teal-700 hover:text-white">JAPAN</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/refusal-visa/dubai" className="text-teal-700 hover:text-white">DUBAI</a></li>
-                                        <li className="border-b border-dotted border-gray-400 py-1 hover:bg-teal-600 hover:rounded transition"><a href="/Visa/refusal-visa/singapore" className="text-teal-700 hover:text-white">SINGAPORE</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ + Map Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-8 items-start">
-                {/* Left: FAQ Accordion */}
-                <div className="bg-white rounded-2xl shadow-lg">
-                    <FAQAccordion faqs={faqs} />
+            {/* Left — image + floating cards */}
+            <Reveal>
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden aspect-[4/5] shadow-xl shadow-[#0B1E33]/10">
+                  <img src="https://www.globalvisainternationals.com/images/story.webp"
+                    alt="GVI team" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E33]/55 to-transparent" />
                 </div>
 
-                {/* Right: Google Map */}
-                <div className="rounded-2xl overflow-hidden shadow-lg h-full min-h-[500px]">
-                    <iframe
-                        className="w-full h-full min-h-[500px]"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486.00853848403034!2d77.60577367689068!3d12.967480835531479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d5613d9a4b%3A0xea0b2fbdf4f08876!2sGlobal%20Visa%20Internationals!5e0!3m2!1sen!2sin!4v1741000774951!5m2!1sen!2sin"
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Global Visa Internationals Office Map"
-                    ></iframe>
+                {/* Floating stat cards */}
+                <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl shadow-xl p-5 border border-slate-100">
+                  <div className="font-display text-[#0B1E33] text-2xl font-bold">75,000+</div>
+                  <div className="text-xs text-slate-500 mt-0.5 font-body">Visas Approved</div>
+                  <div className="flex mt-2 gap-0.5">
+                    {[...Array(5)].map((_, i) => <FaStar key={i} className="text-amber-400 text-[10px]" />)}
+                  </div>
                 </div>
-            </section>
 
-        </>
-    );
+                <div className="absolute -top-4 -left-4 bg-[#0B1E33] rounded-xl shadow-lg px-4 py-3">
+                  <div className="font-display text-white text-xl font-bold">98%</div>
+                  <div className="text-[10px] text-white/60 font-body">Success Rate</div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Right — copy + timeline */}
+            <Reveal delay={120}>
+              <div>
+                <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">
+                  About Us
+                </span>
+                <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold leading-tight mb-5">
+                  Bangalore's Trusted<br />Visa Consultancy<br />
+                  <em className="not-italic text-[#0383C9]">Since 2016</em>
+                </h2>
+                <div className="w-10 h-0.5 bg-[#0383C9] rounded mb-6" />
+                <p className="text-slate-600 text-base leading-relaxed mb-4 font-body">
+                  Global Visa Internationals was founded on Brigade Road, Bangalore, with a single purpose: making international visa applications straightforward, transparent, and successful for every client.
+                </p>
+                <p className="text-slate-600 text-sm leading-relaxed mb-8 font-body">
+                  From first-time travellers to international students and senior executives, our MARA & ICCRC certified consultants deliver end-to-end support — document review, embassy filing, interview coaching, and post-visa guidance — with complete pricing transparency.
+                </p>
+
+                {/* Archival timeline — signature element */}
+                <div className="relative pl-8 space-y-6 mb-8">
+                  {/* Continuous left border */}
+                  <div className="absolute left-[11px] top-2 bottom-2 w-px bg-gradient-to-b from-[#0383C9] via-[#0383C9]/50 to-transparent" />
+                  {[
+                    ['2016', 'Founded on Brigade Road, Bangalore'],
+                    ['2018', 'Reached 10,000 successful visa approvals'],
+                    ['2021', 'Expanded to 20+ specialist visa categories'],
+                    ['2024', '75,000+ visa success stories and counting'],
+                  ].map(([yr, txt]) => (
+                    <div key={yr} className="flex items-start gap-4 relative">
+                      <div className="absolute -left-8 top-0.5 w-[22px] h-[22px] rounded-full border-2 border-[#0383C9] bg-white flex items-center justify-center">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#0383C9]" />
+                      </div>
+                      <div>
+                        <div className="text-[10px] font-black text-[#0383C9] uppercase tracking-widest font-body mb-0.5">{yr}</div>
+                        <div className="text-sm text-slate-600 font-body">{txt}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  <a href="#consultation"
+                    className="inline-flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all shadow-lg shadow-[#0383C9]/25 hover:-translate-y-px font-body">
+                    Book Free Consultation <FaArrowRight className="text-xs" />
+                  </a>
+                  <a href="#testimonials"
+                    className="inline-flex items-center gap-2 border border-[#0383C9]/30 text-[#0383C9] hover:bg-[#0383C9]/5 font-semibold text-sm px-6 py-3 rounded-xl transition-colors font-body">
+                    View Success Stories
+                  </a>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 4  STATS DARK BAND
+      ════════════════════════════════════════════════════════════════════ */}
+      <section className="bg-[#0B1E33] py-16 overflow-hidden relative font-body">
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ backgroundImage: 'linear-gradient(rgba(3,131,201,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(3,131,201,0.05) 1px,transparent 1px)', backgroundSize: '48px 48px' }} />
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-4">
+          {[
+            ['👥', '30+ Yrs', 'Combined professional expertise'],
+            ['🌎', '45+', 'Countries served'],
+            ['📋', '20+', 'Visa categories covered'],
+            ['✈️', '75,000+', 'Successful approvals'],
+            ['📅', 'Since 2016', 'Trusted across India'],
+          ].map(([icon, val, desc]) => (
+            <div key={val} className="text-center bg-white/5 border border-white/8 rounded-2xl py-6 px-4 hover:bg-white/8 transition-colors">
+              <div className="text-3xl mb-3">{icon}</div>
+              <div className="font-display text-white text-xl font-bold mb-1">{val}</div>
+              <div className="text-white/45 text-[10px] leading-snug font-body">{desc}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 5  WHY GVI
+      ════════════════════════════════════════════════════════════════════ */}
+      <section className="gvi-section-pad bg-[#F4F7FB] font-body">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-14">
+            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">
+              Why Choose Us
+            </span>
+            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold mb-3">
+              Why 75,000+ Indians Choose GVI
+            </h2>
+            <div className="w-10 h-0.5 bg-[#0383C9] mx-auto rounded mb-5" />
+            <p className="text-slate-500 text-base max-w-xl mx-auto font-body">
+              Local Bangalore expertise combined with global immigration intelligence — for students, professionals and families.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Complete services card */}
+            <Reveal>
+              <div className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-lg hover:shadow-[#0383C9]/6 transition-all h-full">
+                <div className="flex items-center gap-3 mb-6 pb-5 border-b border-slate-100">
+                  <div className="w-11 h-11 rounded-xl bg-[#0383C9] flex items-center justify-center flex-shrink-0">
+                    <FaPassport className="text-white text-base" />
+                  </div>
+                  <h3 className="font-display text-[#0B1E33] text-xl font-semibold">Complete Visa Services Under One Roof</h3>
+                </div>
+                <ul className="space-y-3">
+                  {['Student Visa Documentation & University Application Support', 'Tourist & Visitor Visa Processing for Indians', 'Business Visa Assistance for International Travel', 'Permanent Residency Guidance — Canada, Australia, UK', 'Family & Dependent Visa Applications', 'Visa Refusal Review & Reapplication Strategy', 'Profile Evaluation & Country Eligibility Check'].map((txt) => (
+                    <li key={txt} className="flex items-start gap-3">
+                      <div className="w-4 h-4 rounded-full bg-[#1A9612]/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <FaCheckCircle className="text-[#1A9612] text-[9px]" />
+                      </div>
+                      <span className="text-slate-600 text-sm font-body">{txt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+
+            {/* Destinations card */}
+            <Reveal delay={100}>
+              <div className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-lg hover:shadow-[#0383C9]/6 transition-all h-full">
+                <div className="flex items-center gap-3 mb-6 pb-5 border-b border-slate-100">
+                  <div className="w-11 h-11 rounded-xl bg-amber-500 flex items-center justify-center flex-shrink-0">
+                    <FaGlobe className="text-white text-base" />
+                  </div>
+                  <h3 className="font-display text-[#0B1E33] text-xl font-semibold">Top Visa Destinations We Specialise In</h3>
+                </div>
+                <div className="grid grid-cols-2 gap-2.5">
+                  {[['🇨🇦', 'Canada', 'Tourist, Student, PR'], ['🇦🇺', 'Australia', 'Visitor, PR, Work'], ['🇬🇧', 'United Kingdom', 'Student, Tourist'], ['🇺🇸', 'USA', 'B1/B2 Visitor'], ['🇪🇺', 'Europe', 'Schengen Visa'], ['🇯🇵', 'Japan', 'Tourist, Short-Term'], ['🇨🇳', 'China', 'Business, Visitor'], ['🇸🇬', 'Singapore', 'Short-Term Pass']].map(([flag, name, svc]) => (
+                    <div key={name} className="flex items-center gap-2.5 p-2.5 bg-[#F4F7FB] rounded-xl border border-slate-100">
+                      <span className="text-xl">{flag}</span>
+                      <div>
+                        <div className="text-[#0B1E33] font-bold text-xs font-body">{name}</div>
+                        <div className="text-slate-400 text-[10px] font-body">{svc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 text-xs text-slate-500 font-body flex items-center gap-2">
+                  <FaGlobe className="text-[#0383C9] text-xs" />
+                  Global visa assistance for 45+ countries worldwide
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Certification badge */}
+          <div className="mt-8 flex items-center justify-center gap-4 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+            <div className="w-12 h-12 rounded-xl bg-[#0383C9] flex items-center justify-center flex-shrink-0">
+              <span className="text-white text-xl">🏆</span>
+            </div>
+            <p className="text-slate-700 text-sm font-body">
+              <strong className="font-semibold text-[#0B1E33]">Certified Immigration Consultancy</strong> — Awarded for Excellence in Visa Processing
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 6  SERVICES — horizontal scroll cards
+      ════════════════════════════════════════════════════════════════════ */}
+      <section className="gvi-section-pad bg-white font-body">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">Our Services</span>
+            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold mb-3">
+              Visa Solutions for Every Journey
+            </h2>
+            <div className="w-10 h-0.5 bg-[#0383C9] mx-auto rounded mb-5" />
+            <p className="text-slate-500 text-base max-w-xl mx-auto font-body">
+              Hover any card to explore destination options. Certified support for every visa category.
+            </p>
+          </div>
+
+          {/* Grid: 1 column on mobile → 2 columns on small tablets → 3 columns on desktop (2 rows for 6 cards) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+            {VISA_SERVICES.map(s => <ServiceCard key={s.name} s={s} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 7  GALLERY
+      ════════════════════════════════════════════════════════════════════ */}
+      <section className="gvi-section-pad bg-[#F4F7FB] font-body">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">Gallery</span>
+            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold">
+              Our Success Gallery
+            </h2>
+          </div>
+          <GalleryCarousel slides={GALLERY_SLIDES} autoSlide={true} interval={4000} />
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 8  MISSION / VISION / VALUES
+      ════════════════════════════════════════════════════════════════════ */}
+      <section className="gvi-section-pad bg-white font-body">
+        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-14">
+            <span className="inline-block text-[#0B1E33]/60 text-[10px] font-black uppercase tracking-[.18em] bg-[#0B1E33]/6 px-4 py-1.5 rounded-full mb-5 font-body">Our Foundation</span>
+            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold">
+              Mission, Vision & Values
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-7">
+            {MVV_CARDS.map(({ title, img, accent, text }, i) => (
+              <Reveal key={title} delay={i * 80}>
+                <div className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-[#0B1E33]/6 transition-all duration-300 text-center group h-full"
+                  style={{ borderTop: `3px solid ${accent}` }}>
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5"
+                    style={{ background: `${accent}12` }}>
+                    <img src={img} alt={title} className="w-9 h-9 object-contain" />
+                  </div>
+                  <h3 className="font-display text-base font-semibold mb-3" style={{ color: accent }}>{title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed font-body">{text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 9  TESTIMONIALS
+      ════════════════════════════════════════════════════════════════════ */}
+      <section id="testimonials" className="gvi-section-pad bg-[#F4F7FB] font-body">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">Testimonials</span>
+            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold mb-3">
+              What Our Clients Say
+            </h2>
+            <div className="w-10 h-0.5 bg-[#0383C9] mx-auto rounded" />
+          </div>
+          <ReviewCarousel />
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 10  FAQ + MAP
+      ════════════════════════════════════════════════════════════════════ */}
+      <section id="consultation" className="gvi-section-pad bg-white font-body">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-14">
+            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">Find Us</span>
+            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold mb-3">
+              Frequently Asked Questions
+            </h2>
+            <div className="w-10 h-0.5 bg-[#0383C9] mx-auto rounded" />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
+            {/* FAQ */}
+            <Reveal>
+              <InlineFAQ faqs={FAQS} />
+
+              {/* Contact chips */}
+              {[
+                [FaPhone, 'Call', '+91 80 4567 8900', 'tel:+917022213466', '#1A9612'],
+                [FaWhatsapp, 'WhatsApp', 'Chat Now', 'https://wa.me/9197022213466', '#25D366'],
+                [FaEnvelope, 'Email', 'info@gvi.in', 'mailto:operations@globalvisainternationals.com', '#0383C9'],
+                [FaMapMarkerAlt, 'Office', 'Brigade Road, BLR', 'https://maps.google.com/?q=Global+Visa+Internationals', '#DC2626'],
+              ].map(([Icon, label, value, href, color]) => (
+                <a key={label} href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2.5 bg-[#F4F7FB] hover:bg-white border border-slate-100 hover:border-[#0383C9]/25 hover:shadow-sm rounded-xl p-3 transition-all group">
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ background: `${color}15` }}>
+                    <Icon style={{ color: color, fontSize: 13 }} />
+                  </div>
+                  <div>
+                    <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400 font-body">{label}</div>
+                    <div className="text-xs font-semibold text-[#0B1E33] font-body">{value}</div>
+                  </div>
+                </a>
+              ))}
+            </Reveal>
+
+            {/* Map */}
+            <Reveal delay={100}>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-lg shadow-[#0B1E33]/6 h-[520px]">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.066008456418!2d77.6035826748413!3d12.967627987347377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d5613d9a4b%3A0xea0b2fbdf4f08876!2sGlobal%20Visa%20Internationals!5e0!3m2!1sen!2sin!4v1781082218073!5m2!1sen!2sin"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Global Visa Internationals Office — Brigade Road, Bangalore"
+                />
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          § 11  FINAL CTA BAND
+      ════════════════════════════════════════════════════════════════════ */}
+      <section className="relative bg-[#0B1E33] py-20 overflow-hidden font-body">
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse at 50% 100%,rgba(245,166,35,0.06),transparent 65%)' }} />
+        <div className="relative max-w-2xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 rounded-full px-4 py-1.5 mb-6">
+            <span className="w-1.5 h-1.5 bg-[#1A9612] rounded-full animate-pulse" />
+            <span className="text-white/55 text-[10px] font-bold tracking-widest uppercase">Join 75,000+ successful applicants</span>
+          </div>
+          <h2 className="font-display text-white text-3xl md:text-4xl font-semibold leading-tight mb-4">
+            Ready to Open Doors<br />
+            <em className="not-italic text-[#3AABDF]">Across the World?</em>
+          </h2>
+          <p className="text-white/50 text-sm mb-9 leading-relaxed font-body max-w-md mx-auto">
+            Book your free consultation today and let Global Visa Internationals handle the complexity — you focus on the journey ahead.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="#consultation"
+              className="inline-flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition-all shadow-xl shadow-[#0383C9]/30 hover:-translate-y-px font-body">
+              Book Free Consultation <FaArrowRight className="text-xs" />
+            </a>
+            <a href="tel:+919876543210"
+              className="inline-flex items-center gap-2 bg-white/8 border border-white/18 hover:bg-white/14 text-white font-medium text-sm px-8 py-3.5 rounded-xl transition-colors font-body">
+              <FaPhone className="text-xs" /> Call Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <style jsx global>{`
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
+    </>
+  );
 }

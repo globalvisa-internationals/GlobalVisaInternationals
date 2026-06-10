@@ -1,34 +1,15 @@
 // src/app/page.jsx
-import Image from "next/image";
 import React from "react";
 import { Agbalumo } from "next/font/google";
-
-// Components
-import VisaForm from "@/Components/VisaForm";
-import AnimatedSection from "@/Components/AnimatedSection";
 import AnimatedHR from "@/Components/AnimatedHR";
-import GalleryCarousel from "@/Components/GalleryCarousel";
-import ClientVideoCarousel from "@/Components/ClientVideoCarousel";
-import FAQAccordion from "@/Components/FAQAccordion";
-// import ReviewCarousel from "@/Components/ReviewCarousel";
-import MissionVisionValues from "@/Components/missionVisionValues";
-import Services from "@/Components/Services";
-import WhychoosGVI from "@/Components/whychoosGVI";
 import HomeAbout from "@/Components/HomeAbout";
-
-// Icons
-import { FaCheckCircle, FaStar, FaMapMarkerAlt, FaArrowRight, FaPlayCircle } from "react-icons/fa";
-
-// Font
 const agbalumo = Agbalumo({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-agbalumo",
 });
 
-// --------------------------------------------------------------
-// 1. VIEWPORT (required in Next.js 15 for themeColor, etc.)
-// --------------------------------------------------------------
+
 export const viewport = {
   themeColor: "#ffffff",
   width: "device-width",
@@ -302,7 +283,7 @@ export default function Home() {
           <WhychoosGVI />
         </section> */}
 
-        <AnimatedHR direction="left" duration={1.2} />
+        {/* <AnimatedHR direction="left" duration={1.2} /> */}
 
         {/* Gallery */}
         {/* <section id="gallery" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -312,7 +293,7 @@ export default function Home() {
           <GalleryCarousel slides={slides} />
         </section> */}
 
-        <AnimatedHR direction="left" duration={1.2} />
+        {/* <AnimatedHR direction="left" duration={1.2} /> */}
 
         {/* Mission, Vision & Values */}
         {/* <section id="our-values" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -320,7 +301,7 @@ export default function Home() {
           <MissionVisionValues />
         </section> */}
 
-        <AnimatedHR direction="left" duration={1.2} />
+        {/* <AnimatedHR direction="left" duration={1.2} /> */}
 
         {/* Testimonials */}
         {/* <section id="testimonials" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -335,7 +316,7 @@ export default function Home() {
           <Services />
         </section> */}
 
-        <AnimatedHR direction="left" duration={1.2} />
+        {/* <AnimatedHR direction="left" duration={1.2} /> */}
 
         {/* Form + Map Section */}
         {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-8">
