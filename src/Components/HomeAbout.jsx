@@ -693,7 +693,7 @@ export default function HomeAbout() {
               <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-lg shadow-[#0B1E33]/6 h-[520px]">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.066008456418!2d77.6035826748413!3d12.967627987347377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d5613d9a4b%3A0xea0b2fbdf4f08876!2sGlobal%20Visa%20Internationals!5e0!3m2!1sen!2sin!4v1781082218073!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/place/Global+Visa+Internationals/@12.967628,77.6035827,17z/data=!3m2!4b1!5s0x3bae15d560e44cf1:0x424b9edd4fd37af5!4m6!3m5!1s0x3bae15d5613d9a4b:0xea0b2fbdf4f08876!8m2!3d12.967628!4d77.6061576!16s%2Fg%2F11c0vm9rhs?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Global Visa Internationals Office — Brigade Road, Bangalore"
