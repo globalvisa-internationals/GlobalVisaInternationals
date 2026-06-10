@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 
 // Import the reusable form component
-import VisaConsultationForm from "@/components/VisaConsultationForm";
+import VisaConsultationForm from "@/Components/VisaConsultationForm";
 
 
 const CITIES = {
