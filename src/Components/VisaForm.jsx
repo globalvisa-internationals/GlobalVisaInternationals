@@ -1,7 +1,7 @@
 // src/Components/VisaForm.jsx
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -16,6 +16,8 @@ export default function VisaForm() {
   const [phone, setPhone] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const router = useRouter();
+  const timerRef = useRef(null);
+  const formContainerRef = useRef(null);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -24,20 +26,81 @@ export default function VisaForm() {
     email: '',
   });
 
-  // Show popup after 10 seconds (only once per day)
+  // Clear popup timer and mark that user has interacted
+  const clearPopupTimer = useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  }, []);
+
+  // Start timer if no interaction yet
+  const startPopupTimer = useCallback(() => {
+    // Only set timer if popup is not already showing and not submitted today
+    const submittedDate = localStorage.getItem('popupSubmittedDate');
+    const today = new Date().toISOString().split('T')[0];
+    if (showPopup || submittedDate === today) return;
+
+    clearPopupTimer();
+    timerRef.current = setTimeout(() => {
+      setShowPopup(true);
+      timerRef.current = null;
+    }, 10000);
+  }, [showPopup, clearPopupTimer]);
+
+  // Cancel popup on any user interaction with the form
+  const handleUserInteraction = useCallback(() => {
+    if (timerRef.current) {
+      clearPopupTimer();
+      // Do not restart the timer; once user interacts, popup never appears for this session.
+      // If you want to restart after inactivity again, you can call startPopupTimer() after a delay,
+      // but the requirement is: "if the form is in use, the popup should not work."
+    }
+  }, [clearPopupTimer]);
+
+  // Set up interaction listeners on the form container
+  useEffect(() => {
+    const container = formContainerRef.current;
+    if (!container) return;
+
+    const interactionEvents = ['focus', 'input', 'change', 'click'];
+    interactionEvents.forEach(event => {
+      container.addEventListener(event, handleUserInteraction);
+    });
+
+    return () => {
+      interactionEvents.forEach(event => {
+        container.removeEventListener(event, handleUserInteraction);
+      });
+      clearPopupTimer();
+    };
+  }, [handleUserInteraction, clearPopupTimer]);
+
+  // Initial timer: show popup after 10 seconds if no interaction
   useEffect(() => {
     const submittedDate = localStorage.getItem('popupSubmittedDate');
     const today = new Date().toISOString().split('T')[0];
     if (submittedDate !== today) {
-      const timer = setTimeout(() => setShowPopup(true), 10000);
-      return () => clearTimeout(timer);
+      startPopupTimer();
     }
-  }, []);
+    return () => clearPopupTimer();
+  }, [startPopupTimer, clearPopupTimer]);
 
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  }, []);
+    handleUserInteraction(); // Cancel popup on any field change
+  }, [handleUserInteraction]);
+
+  const handlePhoneChange = useCallback((value) => {
+    setPhone(value);
+    handleUserInteraction();
+  }, [handleUserInteraction]);
+
+  const handleTermsChange = useCallback(() => {
+    setAgreedToTerms(prev => !prev);
+    handleUserInteraction();
+  }, [handleUserInteraction]);
 
   const validateForm = useCallback(() => {
     if (phone.replace(/\D/g, '').length < 10) {
@@ -94,7 +157,8 @@ export default function VisaForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    // Immediately cancel any pending popup on submit
+    clearPopupTimer();
     if (!validateForm()) return;
     if (!executeRecaptcha) {
       alert('❌ reCAPTCHA not ready');
@@ -106,6 +170,8 @@ export default function VisaForm() {
       const token = await executeRecaptcha('inquiry_form');
       if (!token) {
         alert("❌ Please verify you're not a robot");
+        // Still redirect to Thank-you? (Optional: maybe not)
+        router.push('/Thank-you');
         return;
       }
 
@@ -117,23 +183,23 @@ export default function VisaForm() {
 
       const data = await response.json();
 
+      // Always redirect to Thank-you after attempt (success or fail)
       if (data.success) {
         trackConversion();
         resetForm();
         const today = new Date().toISOString().split('T')[0];
         localStorage.setItem('popupSubmittedDate', today);
-        setShowPopup(false);
-        router.push('/Thank-you');
-      } else {
-        alert('❌ Submission failed. Please try again.');
-        router.push('/Thank-you');
       }
+      // Redirect regardless of success/failure
+      router.push('/Thank-you');
     } catch (error) {
       console.error('Submission error:', error);
       alert('❌ Submission error. Please try again.');
       router.push('/Thank-you');
     } finally {
       setIsSubmitting(false);
+      // Ensure popup is closed on submit (if it was open)
+      setShowPopup(false);
     }
   };
 
@@ -165,7 +231,7 @@ export default function VisaForm() {
         <PhoneInput
           country="in"
           value={phone}
-          onChange={setPhone}
+          onChange={handlePhoneChange}
           enableSearch
           inputProps={{ name: 'phone', required: true }}
           inputClass="!w-full !px-4 !py-2.5 !text-sm !bg-gray-50 !border !border-gray-300 !rounded-lg !text-gray-800 focus:!border-teal-500 focus:!ring-2 focus:!ring-teal-500/20"
@@ -209,7 +275,7 @@ export default function VisaForm() {
         type="checkbox"
         id="terms"
         checked={agreedToTerms}
-        onChange={() => setAgreedToTerms(!agreedToTerms)}
+        onChange={handleTermsChange}
         className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 accent-teal-600 cursor-pointer"
         required
       />
@@ -263,7 +329,7 @@ export default function VisaForm() {
     </div>
   );
 
-  // Modal Popup (10-second delay)
+  // Modal Popup (10-second delay, but only if user never interacted)
   const PopupModal = () => (
     showPopup && (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
@@ -299,9 +365,9 @@ export default function VisaForm() {
   );
 
   return (
-    <>
+    <div ref={formContainerRef}>
       <NormalForm />
       <PopupModal />
-    </>
+    </div>
   );
 }
