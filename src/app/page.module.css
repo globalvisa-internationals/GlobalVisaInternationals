@@ -1,276 +1,324 @@
-.HomeSec {
-  width: 95%;
-  margin: 0 auto;
-  color: #333;
-  font-family: var(--font-main);
-  margin-top: 80px;
-}
+        @keyframes float {
 
-.HomeSec p {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 15px;
-}
+          0%,
+          100% {
+            transform: translateY(0) rotate(0deg);
+          }
 
-@media (min-width: 769px) {
-  .HomeSec {
-    width: 95%;
-    margin: 0 auto;
-    color: #333;
-    font-family: var(--font-main);
-    margin-top: 80px;
-  }
+          50% {
+            transform: translateY(-20px) rotate(5deg);
+          }
+        }
 
-}
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
 
-@media (min-width: 401px) and (max-width: 768px) {
-  .HomeSec {
-    width: 95%;
-    margin: 0 auto;
-    color: #333;
-    font-family: var(--font-main);
-    margin-top: 80px;
-  }
-}
+        .animation-delay-1000 {
+          animation-delay: 1s;
+        }
 
-@media (max-width: 400px) {
-  .HomeSec {
-    width: 95%;
-    margin: 0 auto;
-    color: #333;
-    font-family: var(--font-main);
-    margin-top: 80px;
-  }
-}
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
 
-.videoContainer:hover .carouselTrack {
-  animation-play-state: paused !important;
-}
+        .animation-delay-3000 {
+          animation-delay: 3s;
+        }
 
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
 
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
 
-.HomeSec {
-  margin: 0 auto;
-  color: #333;
-  font-family: var(--font-main);
-  margin-top: 80px;
-}
+          100% {
+            transform: translateX(-50%);
+          }
+        }
 
+        .animate-scroll {
+          animation: scroll 30s linear infinite;
+          display: inline-flex;
+          gap: 2rem;
+        }
 
+        .HomeSec {
+          width: 95%;
+          margin: 0 auto;
+          color: #333;
+          font-family: var(--font-main);
+          margin-top: 80px;
+        }
 
+        .HomeSec p {
+          background-color: #fff;
+          padding: 15px;
+          border-radius: 15px;
+        }
 
-.logoCard {
-  position: relative;
-  width: 98%;
-  height: 320px;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 22px #00000014;
-  display: flex;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
+        @media (min-width: 769px) {
+          .HomeSec {
+            width: 95%;
+            margin: 0 auto;
+            color: #333;
+            font-family: var(--font-main);
+            margin-top: 80px;
+          }
 
+        }
 
-.logoWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  max-width: 50%;
-  z-index: 2;
-}
+        @media (min-width: 401px) and (max-width: 768px) {
+          .HomeSec {
+            width: 95%;
+            margin: 0 auto;
+            color: #333;
+            font-family: var(--font-main);
+            margin-top: 80px;
+          }
+        }
 
-.logoImage {
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
+        @media (max-width: 400px) {
+          .HomeSec {
+            width: 95%;
+            margin: 0 auto;
+            color: #333;
+            font-family: var(--font-main);
+            margin-top: 80px;
+          }
+        }
 
-.tagline {
-  font-size: 25px !important;
-  padding: 0 !important;
-  text-align: center;
-  color: #057A7E;
-  font-weight: 600;
-  font-family: 'Agbalumo', cursive;
-  letter-spacing: 1px;
-}
-
-
-.worldMap {
-  max-width: 50%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0.9;
-}
-
-
-@media (max-width: 768px) {
-  .logoCard {
-    flex-wrap: nowrap;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%;
-    height: auto;
-    padding: 5px;
-
-    margin: 0 auto;
-    margin-top: 20px;
-  }
-
-  .logoWrapper {
-    max-width: 50%;
-    z-index: 2;
-    height: auto;
-  }
-
-  .logoImage {
-    width: 120px;
-  }
-
-  .worldMap {
-    max-width: 50%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.9;
-  }
-
-  .tagline {
-    font-size: 0.5rem !important;
-  }
+        .videoContainer:hover .carouselTrack {
+          animation-play-state: paused !important;
+        }
 
 
 
-}
-
-.waveText {
-  font-family: 'Agbalumo', cursive;
-  font-size: 1.5rem;
-  color: #057A7E;
-  text-align: center;
-  font-weight: 700;
-}
-
-/* ========== VARIABLES FOR CORPORATE DESIGN ========== */
-
-.note {
-  font-size: 0.9rem;
-  color: var(--muted);
-  padding: 1rem;
-  border-left: 3px solid var(--primary);
-  /* background: #f5f7f8; */
-  border-radius: var(--radius);
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-.subtitle,
-.mainHeading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  margin: 0 auto;
-  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
-  color: #057A7E;
-  font-weight: 600;
-  font-size: 2rem;
-  letter-spacing: 0.5px;
-}
+        .HomeSec {
+          margin: 0 auto;
+          color: #333;
+          font-family: var(--font-main);
+          margin-top: 80px;
+        }
 
 
-/* ===== Main Container ===== */
-.dataForm {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  max-width: 95%;
-  margin: 0 auto;
-  gap: 30px;
-  box-sizing: border-box;
-  height: auto;
-  flex-wrap: nowrap;
-}
 
-/* ===== Form Section ===== */
-.formSection {
-  flex: 1 1 35%;
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
-  padding: 20px;
-  box-sizing: border-box;
-}
 
-/* ===== Map Section ===== */
-.mapSection {
-  flex: 1 1 55%;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  border-radius: 12px;
-  overflow: hidden;
-  box-sizing: border-box;
-  padding-top: 45px;
-  padding-bottom: 45px;
-}
+        .logoCard {
+          position: relative;
+          width: 98%;
+          height: 320px;
+          margin: 0 auto;
+          background: #fff;
+          border-radius: 14px;
+          overflow: hidden;
+          box-shadow: 0 8px 22px #00000014;
+          display: flex;
+          margin-top: 20px;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+        }
 
-/* ===== Iframe Styling ===== */
-.iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 450px;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-}
 
-/* ===== Tablet (Medium Screens) ===== */
-@media (max-width: 1024px) {
-  .dataForm {
-    gap: 20px;
-  }
+        .logoWrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 auto;
+          align-items: center;
+          text-align: center;
+          height: 100%;
+          max-width: 50%;
+          z-index: 2;
+        }
 
-  .iframe {
-    min-height: 450px;
-    padding: 20px;
-  }
-}
+        .logoImage {
+          width: 300px;
+          max-width: 100%;
+          height: auto;
+          margin: 0 auto;
+        }
 
-/* ===== Mobile (Small Screens) ===== */
-@media (max-width: 768px) {
-  .dataForm {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
+        .tagline {
+          font-size: 25px !important;
+          padding: 0 !important;
+          text-align: center;
+          color: #057A7E;
+          font-weight: 600;
+          font-family: 'Agbalumo', cursive;
+          letter-spacing: 1px;
+        }
 
-  .formSection,
-  .mapSection {
-    width: 100%;
-    flex: 1 1 100%;
-  }
 
-  .iframe {
-    width: 100%;
-    min-height: 400px;
-  }
-}
+        .worldMap {
+          max-width: 50%;
+          height: 100%;
+          object-fit: contain;
+          opacity: 0.9;
+        }
 
-/* ===== Extra Small Screens ===== */
-@media (max-width: 480px) {
-  .iframe {
-    min-height: 320px;
-  }
-}
+
+        @media (max-width: 768px) {
+          .logoCard {
+            flex-wrap: nowrap;
+            justify-content: center;
+            text-align: center;
+            max-width: 100%;
+            height: auto;
+            padding: 5px;
+
+            margin: 0 auto;
+            margin-top: 20px;
+          }
+
+          .logoWrapper {
+            max-width: 50%;
+            z-index: 2;
+            height: auto;
+          }
+
+          .logoImage {
+            width: 120px;
+          }
+
+          .worldMap {
+            max-width: 50%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.9;
+          }
+
+          .tagline {
+            font-size: 0.5rem !important;
+          }
+
+
+
+        }
+
+        .waveText {
+          font-family: 'Agbalumo', cursive;
+          font-size: 1.5rem;
+          color: #057A7E;
+          text-align: center;
+          font-weight: 700;
+        }
+
+        /* ========== VARIABLES FOR CORPORATE DESIGN ========== */
+
+        .note {
+          font-size: 0.9rem;
+          color: var(--muted);
+          padding: 1rem;
+          border-left: 3px solid var(--primary);
+          /* background: #f5f7f8; */
+          border-radius: var(--radius);
+          margin: 20px auto;
+          max-width: 800px;
+        }
+
+        .subtitle,
+        .mainHeading {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          position: relative;
+          margin: 0 auto;
+          text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
+          color: #057A7E;
+          font-weight: 600;
+          font-size: 2rem;
+          letter-spacing: 0.5px;
+        }
+
+
+        /* ===== Main Container ===== */
+        .dataForm {
+          display: flex;
+          justify-content: space-between;
+          align-items: stretch;
+          max-width: 95%;
+          margin: 0 auto;
+          gap: 30px;
+          box-sizing: border-box;
+          height: auto;
+          flex-wrap: nowrap;
+        }
+
+        /* ===== Form Section ===== */
+        .formSection {
+          flex: 1 1 35%;
+          display: flex;
+          align-items: stretch;
+          justify-content: flex-start;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        /* ===== Map Section ===== */
+        .mapSection {
+          flex: 1 1 55%;
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+          border-radius: 12px;
+          overflow: hidden;
+          box-sizing: border-box;
+          padding-top: 45px;
+          padding-bottom: 45px;
+        }
+
+        /* ===== Iframe Styling ===== */
+        .iframe {
+          width: 100%;
+          height: 100%;
+          min-height: 450px;
+          border: none;
+          border-radius: 12px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          object-fit: cover;
+        }
+
+        /* ===== Tablet (Medium Screens) ===== */
+        @media (max-width: 1024px) {
+          .dataForm {
+            gap: 20px;
+          }
+
+          .iframe {
+            min-height: 450px;
+            padding: 20px;
+          }
+        }
+
+        /* ===== Mobile (Small Screens) ===== */
+        @media (max-width: 768px) {
+          .dataForm {
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+          }
+
+          .formSection,
+          .mapSection {
+            width: 100%;
+            flex: 1 1 100%;
+          }
+
+          .iframe {
+            width: 100%;
+            min-height: 400px;
+          }
+        }
+
+        /* ===== Extra Small Screens ===== */
+        @media (max-width: 480px) {
+          .iframe {
+            min-height: 320px;
+          }
+        }

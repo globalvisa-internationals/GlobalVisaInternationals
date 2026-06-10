@@ -10,12 +10,11 @@ import AnimatedHR from "@/Components/AnimatedHR";
 import GalleryCarousel from "@/Components/GalleryCarousel";
 import ClientVideoCarousel from "@/Components/ClientVideoCarousel";
 import FAQAccordion from "@/Components/FAQAccordion";
-import ReviewCarousel from "@/Components/ReviewCarousel";
+// import ReviewCarousel from "@/Components/ReviewCarousel";
 import MissionVisionValues from "@/Components/missionVisionValues";
 import Services from "@/Components/Services";
 import WhychoosGVI from "@/Components/whychoosGVI";
-import AboutSection from "@/Components/AboutSection";
-import Herosec from "@/Components/herosec";
+import HomeAbout from "@/Components/HomeAbout";
 
 // Icons
 import { FaCheckCircle, FaStar, FaMapMarkerAlt, FaArrowRight, FaPlayCircle } from "react-icons/fa";
@@ -277,6 +276,7 @@ const jsonLdSchemas = [
 // 5. MAIN COMPONENT
 // --------------------------------------------------------------
 export default function Home() {
+
   return (
     <>
       {/* Inject JSON-LD scripts */}
@@ -289,63 +289,56 @@ export default function Home() {
       ))}
 
       <main className="bg-white text-gray-800 overflow-hidden">
-        {/* Hero Section */}
+
         <section>
-          <Herosec />
+          <HomeAbout />
+
         </section>
 
-        {/* About Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <AboutSection />
-        </section>
 
-        {/* Animated Horizontal Rule */}
-        <AnimatedHR direction="left" duration={1.2} />
 
         {/* Why Choose GVI */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <WhychoosGVI />
-        </section>
+        </section> */}
 
         <AnimatedHR direction="left" duration={1.2} />
 
         {/* Gallery */}
-        <section id="gallery" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* <section id="gallery" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
             Gallery
           </h2>
           <GalleryCarousel slides={slides} />
-        </section>
+        </section> */}
 
         <AnimatedHR direction="left" duration={1.2} />
 
         {/* Mission, Vision & Values */}
-        <section id="our-values" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            Our Values
-          </h2>
+        {/* <section id="our-values" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+         
           <MissionVisionValues />
-        </section>
+        </section> */}
 
         <AnimatedHR direction="left" duration={1.2} />
 
         {/* Testimonials */}
-        <section id="testimonials" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* <section id="testimonials" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <ReviewCarousel />
-        </section>
+        </section> */}
 
         {/* Services */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
             Services
           </h2>
           <Services />
-        </section>
+        </section> */}
 
         <AnimatedHR direction="left" duration={1.2} />
 
         {/* Form + Map Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-8">
+        {/* <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-8">
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <VisaForm />
           </div>
@@ -358,12 +351,12 @@ export default function Home() {
               title="Global Visa Internationals Office Map"
             ></iframe>
           </div>
-        </section>
+        </section> */}
 
         {/* FAQ Section */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+        {/* <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
           <FAQAccordion faqs={faqs} />
-        </section>
+        </section> */}
 
         {/* Disclaimer */}
         <p className="text-xs text-center text-gray-500 border-t border-gray-200 py-6 max-w-7xl mx-auto">

@@ -159,6 +159,8 @@ export default function VisaForm() {
     e.preventDefault();
     // Immediately cancel any pending popup on submit
     clearPopupTimer();
+
+    // Validate form (alerts inside)
     if (!validateForm()) return;
     if (!executeRecaptcha) {
       alert('❌ reCAPTCHA not ready');
@@ -170,8 +172,8 @@ export default function VisaForm() {
       const token = await executeRecaptcha('inquiry_form');
       if (!token) {
         alert("❌ Please verify you're not a robot");
-        // Still redirect to Thank-you? (Optional: maybe not)
-        router.push('/Thank-you');
+        // ❌ NO redirect – stay on page
+        setIsSubmitting(false);
         return;
       }
 
@@ -183,23 +185,25 @@ export default function VisaForm() {
 
       const data = await response.json();
 
-      // Always redirect to Thank-you after attempt (success or fail)
       if (data.success) {
+        // ✅ Success: track conversion, reset form, store date, close popup, redirect to Thank-you
         trackConversion();
         resetForm();
         const today = new Date().toISOString().split('T')[0];
         localStorage.setItem('popupSubmittedDate', today);
+        setShowPopup(false);
+        router.push('/Thank-you');
+      } else {
+        // ❌ API returned success: false – show error, stay on page
+        alert('❌ Submission failed. Please try again.');
+        // No redirect
       }
-      // Redirect regardless of success/failure
-      router.push('/Thank-you');
     } catch (error) {
       console.error('Submission error:', error);
       alert('❌ Submission error. Please try again.');
-      router.push('/Thank-you');
+      // ❌ No redirect – stay on page
     } finally {
       setIsSubmitting(false);
-      // Ensure popup is closed on submit (if it was open)
-      setShowPopup(false);
     }
   };
 
