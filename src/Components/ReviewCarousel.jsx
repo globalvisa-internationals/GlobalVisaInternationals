@@ -1,10 +1,6 @@
 import reviews from "@/data/reviews.json";
-import ReviewCarouselClient from "@/Components/ReviewCard";
+import ReviewCarouselClient from "./ReviewCarouselClient";
+
 export default function ReviewCarousel() {
-    return (
-        <>
-            {/* ✅ Interactive carousel for UX */}
-            <ReviewCarouselClient reviews={reviews} />
-        </>
-    );
+    return <ReviewCarouselClient reviews={reviews} />;
 }

@@ -1,11 +1,12 @@
+// src/Components/VisaForm.jsx
 'use client';
+
 import React, { useState, useEffect, useCallback } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import styles from './VisaForm.module.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { FaTimes, FaCheckCircle } from 'react-icons/fa';
-import { getCookie } from "@/lib/getCookie";
+import { getCookie } from '@/lib/getCookie';
 import { useRouter } from 'next/navigation';
 
 export default function VisaForm() {
@@ -23,11 +24,10 @@ export default function VisaForm() {
     email: '',
   });
 
-  // Show popup after 10 seconds
+  // Show popup after 10 seconds (only once per day)
   useEffect(() => {
-    const submittedDate = localStorage.getItem("popupSubmittedDate");
-    const today = new Date().toISOString().split("T")[0];
-
+    const submittedDate = localStorage.getItem('popupSubmittedDate');
+    const today = new Date().toISOString().split('T')[0];
     if (submittedDate !== today) {
       const timer = setTimeout(() => setShowPopup(true), 10000);
       return () => clearTimeout(timer);
@@ -44,50 +44,41 @@ export default function VisaForm() {
       alert('❌ Please enter a valid phone number.');
       return false;
     }
-
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
       alert('❌ Please enter a valid email address.');
       return false;
     }
-
     if (!formData.name || formData.name.trim().length < 2) {
       alert('❌ Please enter your name.');
       return false;
     }
-
     if (!agreedToTerms) {
       alert('❌ Please agree to the Terms & Conditions.');
       return false;
     }
-
     return true;
   }, [phone, formData.email, formData.name, agreedToTerms]);
 
   const trackConversion = useCallback(() => {
-    // Prevent double conversions
-    if (localStorage.getItem("alreadyConverted")) return;
+    if (localStorage.getItem('alreadyConverted')) return;
+    const gclid = getCookie('gclid');
 
-    const gclid = getCookie("gclid");
-
-    // Fire Google Ads conversion ONLY if GCLID exists
-    if (gclid && typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "conversion", {
+    if (gclid && typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
         send_to: `${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}/${process.env.NEXT_PUBLIC_GOOGLE_CONVERSION_LABEL}`,
         value: 1,
-        currency: "INR"
+        currency: 'INR',
       });
     }
 
-    // Always fire GA4 event
-    if (typeof window.gtag === "function") {
-      window.gtag("event", "form_submission", {
-        event_category: "Lead",
-        event_label: gclid ? "Paid Lead" : "Organic Lead"
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'form_submission', {
+        event_category: 'Lead',
+        event_label: gclid ? 'Paid Lead' : 'Organic Lead',
       });
     }
 
-    // Mark conversion fired
-    localStorage.setItem("alreadyConverted", "yes");
+    localStorage.setItem('alreadyConverted', 'yes');
   }, []);
 
   const resetForm = useCallback(() => {
@@ -111,7 +102,6 @@ export default function VisaForm() {
     }
 
     setIsSubmitting(true);
-
     try {
       const token = await executeRecaptcha('inquiry_form');
       if (!token) {
@@ -128,205 +118,190 @@ export default function VisaForm() {
       const data = await response.json();
 
       if (data.success) {
-        // Track conversion
         trackConversion();
-
-        // Reset form
         resetForm();
-
-        // Store submission date and close popup
-        const today = new Date().toISOString().split("T")[0];
-        localStorage.setItem("popupSubmittedDate", today);
+        const today = new Date().toISOString().split('T')[0];
+        localStorage.setItem('popupSubmittedDate', today);
         setShowPopup(false);
-
-        // Redirect immediately to Thank You page
-        router.push('./Thank-you');
+        router.push('/Thank-you');
       } else {
         alert('❌ Submission failed. Please try again.');
-        // Still redirect to thank you page on failure
-        router.push('./Thank-you');
+        router.push('/Thank-you');
       }
     } catch (error) {
       console.error('Submission error:', error);
       alert('❌ Submission error. Please try again.');
-      // Still redirect to thank you page on error
-      router.push('./Thank-you');
+      router.push('/Thank-you');
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const formFields = (
-    <div className={styles.formGrid}>
-      {/* Row 1: Name and Email */}
-      <div className={`${styles.modalField} ${styles.halfWidth}`}>
+  // Reusable form fields (shared between normal form and popup)
+  const renderFormFields = () => (
+    <div className="space-y-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <input
-          className={styles.modalInput}
           type="text"
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="Your Name"
+          placeholder="Your full name"
+          className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-300 rounded-lg text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
           required
         />
-      </div>
-      <div className={`${styles.modalField} ${styles.halfWidth}`}>
         <input
-          className={styles.modalInput}
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Email Address"
+          placeholder="Email address"
+          className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-300 rounded-lg text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
           required
         />
       </div>
 
-      {/* Row 2: Phone Number (full width) */}
-      <div className={`${styles.modalField} ${styles.fullWidth}`}>
+      <div>
         <PhoneInput
-          country={'in'}
+          country="in"
           value={phone}
           onChange={setPhone}
-          inputClass={styles.modalInput}
-          enableSearch={true}
-          placeholder="9876543210"
+          enableSearch
           inputProps={{ name: 'phone', required: true }}
+          inputClass="!w-full !px-4 !py-2.5 !text-sm !bg-gray-50 !border !border-gray-300 !rounded-lg !text-gray-800 focus:!border-teal-500 focus:!ring-2 focus:!ring-teal-500/20"
+          containerClass="w-full"
         />
       </div>
 
-      {/* Row 3: Country and Visa Type */}
-      <div className={`${styles.modalField} ${styles.halfWidth}`}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <select
-          className={styles.modalSelect}
           name="country"
           value={formData.country}
           onChange={handleChange}
+          className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 cursor-pointer"
           required
         >
           <option value="">Destination Country</option>
-          {['USA', 'UK', 'Canada', 'Schengen', 'Australia', 'New Zealand', 'Singapore', 'Japan', 'Dubai', 'Other'].map(option => (
-            <option key={option} value={option}>{option}</option>
+          {['USA', 'UK', 'Canada', 'Schengen', 'Australia', 'New Zealand', 'Singapore', 'Japan', 'Dubai', 'Other'].map(opt => (
+            <option key={opt} value={opt}>{opt}</option>
           ))}
         </select>
-      </div>
-      <div className={`${styles.modalField} ${styles.halfWidth}`}>
+
         <select
-          className={styles.modalSelect}
           name="immigration_type"
           value={formData.immigration_type}
           onChange={handleChange}
+          className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 cursor-pointer"
           required
         >
           <option value="">Visa Type</option>
-          {['Visitor/Tourist Visa', 'Business Visa', 'Student Visa', 'Dependent Visa', 'Permanent Residency Visa', 'Work Visa', 'Other'].map(option => (
-            <option key={option} value={option}>{option}</option>
+          {['Visitor/Tourist Visa', 'Business Visa', 'Student Visa', 'Dependent Visa', 'Permanent Residency Visa', 'Work Visa', 'Other'].map(opt => (
+            <option key={opt} value={opt}>{opt}</option>
           ))}
         </select>
       </div>
     </div>
   );
 
-  const termsCheckbox = (
-    <div className={styles.modalTerms}>
+  const renderTerms = () => (
+    <div className="flex items-start gap-2 mt-3">
       <input
         type="checkbox"
         id="terms"
         checked={agreedToTerms}
         onChange={() => setAgreedToTerms(!agreedToTerms)}
+        className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 accent-teal-600 cursor-pointer"
         required
       />
-      <label htmlFor="terms">
+      <label htmlFor="terms" className="text-[11px] text-gray-500 cursor-pointer leading-relaxed">
         I agree to the{' '}
-        <a
-          href="https://www.globalvisainternationals.com/terms-and-conditions"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://www.globalvisainternationals.com/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="text-teal-600 font-semibold hover:underline">
           Terms & Conditions
         </a>
       </label>
     </div>
   );
 
-  const assuranceSection = (
-    <div className={styles.formAssurance}>
-      <div className={styles.assuranceItem}>
-        <FaCheckCircle />
-        <span>100% Confidential</span>
+  const renderAssurance = () => (
+    <div className="flex justify-around pt-3 border-t border-gray-200 mt-3">
+      <div className="flex flex-col items-center gap-0.5">
+        <FaCheckCircle className="text-green-600 text-xs" />
+        <span className="text-[9px] font-bold uppercase tracking-wider text-gray-500">Confidential</span>
       </div>
-      <div className={styles.assuranceItem}>
-        <FaCheckCircle />
-        <span>No Obligation</span>
+      <div className="flex flex-col items-center gap-0.5">
+        <FaCheckCircle className="text-green-600 text-xs" />
+        <span className="text-[9px] font-bold uppercase tracking-wider text-gray-500">No Obligation</span>
       </div>
-      <div className={styles.assuranceItem}>
-        <FaCheckCircle />
-        <span>Expert Advice</span>
+      <div className="flex flex-col items-center gap-0.5">
+        <FaCheckCircle className="text-green-600 text-xs" />
+        <span className="text-[9px] font-bold uppercase tracking-wider text-gray-500">Expert Advice</span>
       </div>
     </div>
   );
 
-  return (
-    <>
-      {/* Normal Form - Compact Layout */}
-      <div className={styles.normalForm}>
-        {/* Form Header */}
-        <div className={styles.formHeader}>
-          <h2 className={styles.formTitle}>Free Visa Assessment</h2>
-          <p className={styles.modalSubtitleForm}>
-            Get a personalized consultation within 24 hours
-          </p>
-        </div>
-
-        <form onSubmit={handleSubmit} className={styles.modalForm}>
-          {formFields}
-          {termsCheckbox}
+  // Normal compact form (used on the homepage)
+  const NormalForm = () => (
+    <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div className="bg-gradient-to-r from-teal-700 to-teal-800 px-6 py-5 text-white">
+        <h2 className="text-2xl font-bold">Free Visa Assessment</h2>
+        <p className="text-teal-100 text-sm mt-1">Get a personalized consultation within 24 hours</p>
+      </div>
+      <div className="p-6">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {renderFormFields()}
+          {renderTerms()}
           <button
-            className={styles.modalSubmitBtn}
             type="submit"
             disabled={isSubmitting}
-            aria-busy={isSubmitting}
+            className="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm rounded-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isSubmitting ? '⏳ Submitting...' : 'Get Free Assessment'}
+            {isSubmitting ? '⏳ Submitting...' : 'Get Free Assessment →'}
           </button>
         </form>
-        {assuranceSection}
+        {renderAssurance()}
       </div>
+    </div>
+  );
 
-      {/* Modal Popup */}
-      {showPopup && (
-        <div className={styles.modalOverlay}>
-          <div className={styles.modalContainer}>
-            <div className={styles.modalHeader}>
-              <div>
-                <h2 className={styles.modalTitle}>Free Visa Assessment</h2>
-                <p className={styles.modalSubtitleForm}>Get expert advice for your visa journey</p>
-              </div>
+  // Modal Popup (10-second delay)
+  const PopupModal = () => (
+    showPopup && (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div className="relative bg-white rounded-2xl max-w-md w-full shadow-2xl">
+          <button
+            onClick={() => setShowPopup(false)}
+            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
+            aria-label="Close"
+          >
+            <FaTimes />
+          </button>
+          <div className="bg-gradient-to-r from-teal-700 to-teal-800 px-6 py-5 rounded-t-2xl">
+            <h2 className="text-xl font-bold text-white">Free Visa Assessment</h2>
+            <p className="text-teal-100 text-sm">Get expert advice for your visa journey</p>
+          </div>
+          <div className="p-6">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {renderFormFields()}
+              {renderTerms()}
               <button
-                className={styles.modalCloseBtn}
-                onClick={() => setShowPopup(false)}
-                aria-label="Close modal"
-              >
-                <FaTimes />
-              </button>
-            </div>
-
-            <form onSubmit={handleSubmit} className={styles.modalForm}>
-              {formFields}
-              {termsCheckbox}
-              <button
-                className={styles.modalSubmitBtn}
                 type="submit"
                 disabled={isSubmitting}
-                aria-busy={isSubmitting}
+                className="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm rounded-lg transition-all disabled:opacity-50"
               >
-                {isSubmitting ? '⏳ Submitting...' : 'Get Free Assessment'}
+                {isSubmitting ? '⏳ Submitting...' : 'Get Free Assessment →'}
               </button>
             </form>
-            {assuranceSection}
+            {renderAssurance()}
           </div>
         </div>
-      )}
+      </div>
+    )
+  );
+
+  return (
+    <>
+      <NormalForm />
+      <PopupModal />
     </>
   );
 }

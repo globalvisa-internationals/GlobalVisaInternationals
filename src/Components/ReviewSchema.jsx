@@ -1,3 +1,4 @@
+//src\Components\ReviewSchema.jsx
 import reviews from "@/data/reviews.json";
 
 function parseRelativeTime(relative) {
