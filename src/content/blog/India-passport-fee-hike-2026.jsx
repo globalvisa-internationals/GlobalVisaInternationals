@@ -68,37 +68,7 @@ export default function IndiaPassportFeeHike2026() {
     return (
         <div className="bg-stone-50 min-h-screen font-sans">
 
-            {/* ── MASTHEAD ── */}
-            <header className="bg-[#0A2240] text-white px-6 py-10 text-center">
-                <p className="text-xs uppercase tracking-[0.25em] text-amber-400 mb-3 font-semibold">
-                    Breaking · Immigration & Travel · India
-                </p>
-                <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight max-w-4xl mx-auto">
-                    India Just Raised Passport Fees for the First Time in&nbsp;
-                    <span className="text-amber-400">14 Years</span>
-                </h1>
-                <p className="mt-4 text-stone-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-                    The clock is ticking. Effective <strong className="text-white">July 1, 2026</strong>, every
-                    Indian passport applicant — fresh, renewal, or Tatkal — pays more. Here is the full story,
-                    the exact numbers, and what you need to do right now.
-                </p>
-                <div className="mt-6 flex flex-wrap justify-center gap-3 text-xs text-stone-400">
-                    <span>By Global Visa Internationals Team</span>
-                    <span className="hidden sm:inline">·</span>
-                    <span>June 26, 2026</span>
-                    <span className="hidden sm:inline">·</span>
-                    <span>5-minute read</span>
-                </div>
-            </header>
 
-            {/* ── BREAKING TICKER ── */}
-            <div className="bg-amber-500 text-[#0A2240] px-6 py-2 flex items-center gap-3 overflow-hidden">
-                <span className="font-black uppercase text-xs tracking-widest shrink-0">Breaking</span>
-                <span className="text-xs sm:text-sm font-medium">
-                    MEA confirms Passports (Amendment) Rules, 2026 · Fees jump up to 75% · First revision since
-                    2012 · Effective July 1, 2026
-                </span>
-            </div>
 
             <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 space-y-14">
 
@@ -526,8 +496,6 @@ export default function IndiaPassportFeeHike2026() {
                         </p>
                     </div>
                 </section>
-
-                {/* ── FOOTER TAGS ── */}
 
             </main>
         </div>
