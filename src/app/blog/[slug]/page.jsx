@@ -192,14 +192,13 @@ export default async function BlogPostPage({ params }) {
             <time dateTime={date}>{new Date(date).toLocaleDateString()}</time>
           </div>
         </header>
-
         {image && (
           <div className="my-6 rounded-xl overflow-hidden shadow-md relative w-full h-96">
             <Image
               src={imagePath}
               alt={title}
               fill
-              className="object-cover"
+              className="object-contain"  // ✅ changed from object-cover
               priority
             />
           </div>
