@@ -33,7 +33,7 @@ export default function Canada() {
         <link
           rel="preload"
           as="image"
-          href="https://www.globalvisainternationals.com/images/uk-visa-refusal-banner.jpg"
+          href="https://www.globalvisainternationals.com/images/uk-visa-refusal-banner.png"
         />
         <link rel="stylesheet" href="./Visa/refusal-visa/uk.module.css" />
         <meta
@@ -68,7 +68,7 @@ export default function Canada() {
         />
         <meta
           name="twitter:image"
-          content="https://www.globalvisainternationals.com/images/uk-visa-refusal-banner.jpg"
+          content="https://www.globalvisainternationals.com/images/uk-visa-refusal-banner.png"
         />
         <meta
           name="twitter:url"
@@ -281,7 +281,7 @@ export default function Canada() {
 
 
       <div className={styles.imageContainer}>
-        <img src="/images/uk-travel.jpeg" alt="Canada Image" className={styles.CanadaImage} />
+        <img src="/images/uk-visa-refusal-banner.png" alt="UK visa refusal banner" className={styles.CanadaImage} />
       </div>
 
       <div className={styles.CanadaSec}>
