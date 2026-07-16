@@ -51,7 +51,7 @@ export default function Canada() {
         />
         <meta
           property="og:image"
-          content="https://www.globalvisainternationals.com/images/uk-visa-refusal-banner.jpg"
+          content="https://www.globalvisainternationals.com/images/uk-visa-refusal-banner.png"
         />
         <meta property="og:site_name" content="Global Visa Internationals" />
         <meta property="og:locale" content="en_IN" />
