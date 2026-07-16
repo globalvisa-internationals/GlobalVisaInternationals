@@ -194,83 +194,14 @@ export default function USB1B2VisaGuideForIndians2026() {
                 </div>
             </section>
 
-            <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8">
-                    <h3 className="text-2xl font-bold text-gray-900">Documents you should carry</h3>
-                    <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                        <div className="rounded-2xl bg-gray-50 p-4">
-                            <h4 className="font-semibold text-gray-900">Mandatory documents</h4>
-                            <ul className="mt-3 space-y-2 text-gray-700 text-sm">
-                                <li>• Original passport</li>
-                                <li>• Old passports</li>
-                                <li>• DS-160 confirmation page</li>
-                                <li>• Appointment confirmation</li>
-                                <li>• Visa fee receipt</li>
-                            </ul>
-                        </div>
-                        <div className="rounded-2xl bg-gray-50 p-4">
-                            <h4 className="font-semibold text-gray-900">Financial documents</h4>
-                            <ul className="mt-3 space-y-2 text-gray-700 text-sm">
-                                <li>• Bank statements</li>
-                                <li>• ITRs</li>
-                                <li>• Salary slips</li>
-                                <li>• Fixed deposits or investments</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="mt-4 overflow-hidden rounded-2xl border border-gray-200">
-                        <img
-                            src="/BlogImages/US Image 3.jpg"
-                            alt="DS-160 form application process"
-                            className="w-full h-56 object-cover"
-                        />
-                    </div>
-                </div>
-
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8">
-                    <h3 className="text-2xl font-bold text-gray-900">How to show strong ties to India</h3>
-                    <p className="mt-4 leading-relaxed text-gray-700">
-                        Applicants should demonstrate that they will return after their temporary trip. Strong evidence can include stable employment, family responsibilities, property ownership, business commitments, education, and financial obligations.
-                    </p>
-                    <div className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-900">
-                        <p className="font-semibold">Tip:</p>
-                        <p className="mt-1 leading-relaxed">The interview is not only about your documents; it is also about your intent, consistency, and credibility.</p>
-                    </div>
-                    <div className="mt-5 overflow-hidden rounded-2xl border border-gray-200">
-                        <img
-                            src="/BlogImages/US Image 4.jpg"
-                            alt="US visa interview preparation"
-                            className="w-full h-56 object-cover"
-                        />
-                    </div>
-                </div>
-            </section>
+           
 
             <section className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8">
                 <h3 className="text-2xl font-bold text-gray-900">Interview questions and preparation tips</h3>
                 <p className="mt-4 leading-relaxed text-gray-700">
                     Common questions include your purpose of visit, sponsor details, trip duration, accommodation, work profile, income, and reasons for returning to India. Answer confidently, keep responses brief, and be truthful.
                 </p>
-                <div className="mt-6 grid gap-4 md:grid-cols-2">
-                    <div className="rounded-2xl border border-gray-200 p-4">
-                        <h4 className="font-semibold text-gray-900">Questions often asked</h4>
-                        <ul className="mt-3 space-y-2 text-gray-700 text-sm">
-                            <li>• Why are you visiting the USA?</li>
-                            <li>• Who is sponsoring your trip?</li>
-                            <li>• Where will you stay?</li>
-                            <li>• How long will you stay?</li>
-                        </ul>
-                    </div>
-                    <div className="rounded-2xl border border-gray-200 p-4">
-                        <h4 className="font-semibold text-gray-900">Best practices</h4>
-                        <ul className="mt-3 space-y-2 text-gray-700 text-sm">
-                            <li>• Maintain good eye contact</li>
-                            <li>• Carry supporting documents</li>
-                            <li>• Keep answers concise</li>
-                            <li>• Be consistent with your application</li>
-                        </ul>
-                    </div>
-                </div>
+                
             </section>
 
             <section className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8">
