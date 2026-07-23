@@ -2,8 +2,8 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-// Initialize Resend with your API key
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only when an API key is available.
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 // Email configuration from environment variables
 const FROM_EMAIL = process.env.FROM_EMAIL || 'noreply@globalvisainternationals.com';
@@ -33,6 +33,11 @@ async function verifyRecaptcha(token) {
  */
 async function sendLeadEmail(leadData) {
     const { name, email, phone, country, immigration_type } = leadData;
+
+    if (!resend) {
+        console.warn('RESEND_API_KEY not configured, skipping email delivery');
+        return { skipped: true };
+    }
 
     const htmlContent = `
     <!DOCTYPE html>

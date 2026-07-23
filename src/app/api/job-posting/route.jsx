@@ -2,7 +2,7 @@
 import { Resend } from "resend";
 import { Readable } from "stream";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 // Convert Web ReadableStream to Node Readable stream
 function toNodeReadable(webReadable) {
@@ -61,6 +61,11 @@ export async function POST(request) {
       <p><strong>Education:</strong> ${fields.education || "Not provided"}</p>
       <p><strong>Applying For:</strong> ${fields.jobTitle || "Not provided"}</p>
     `;
+
+    if (!resend) {
+      console.warn("RESEND_API_KEY not configured, skipping job application email delivery");
+      return Response.json({ success: true, skipped: true });
+    }
 
     // Send email via Resend
     await resend.emails.send({
