@@ -90,7 +90,7 @@ const steps = [
 
 export default function CompleteGuideToStudyingAbroadIn2026ForIndianStudents() {
     return (
-        <div className="space-y-8 text-gray-800">
+        <div className="w-full min-w-0 space-y-8 text-gray-800">
             <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">Study Abroad Guide 2026</p>
                 <h2 className="mt-3 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
@@ -158,8 +158,8 @@ export default function CompleteGuideToStudyingAbroadIn2026ForIndianStudents() {
 
             <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
                 <h3 className="text-2xl font-bold text-gray-900">Comparison of Popular Study Destinations</h3>
-                <div className="mt-5 overflow-x-auto">
-                    <table className="min-w-full border border-gray-200 text-sm">
+                <div className="mt-5 overflow-x-auto min-w-0 w-full">
+                    <table className="w-full min-w-full border border-gray-200 text-sm">
                         <thead className="bg-gray-100 text-gray-800">
                             <tr>
                                 <th className="px-4 py-3 text-left">Country</th>
@@ -235,7 +235,7 @@ export default function CompleteGuideToStudyingAbroadIn2026ForIndianStudents() {
                 </div>
             </section>
 
-            
+
 
             <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
                 <h3 className="text-2xl font-bold text-gray-900">Cost of Studying Abroad</h3>
@@ -294,7 +294,7 @@ export default function CompleteGuideToStudyingAbroadIn2026ForIndianStudents() {
             <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
                 <h3 className="text-2xl font-bold text-gray-900">Why Choose Global Visa Internationals?</h3>
                 <p className="mt-4 leading-relaxed text-gray-700">
-                At Global Visa Internationals, we specialize in student visa assistance and related immigration services. Our team provides expert guidance on visa documentation, application preparation, SOP and supporting document review, financial documentation, visa filing, interview guidance (where applicable), and pre-departure visa compliance. With a transparent process and personalized support, we help students complete their visa applications accurately and confidently.
+                    At Global Visa Internationals, we specialize in student visa assistance and related immigration services. Our team provides expert guidance on visa documentation, application preparation, SOP and supporting document review, financial documentation, visa filing, interview guidance (where applicable), and pre-departure visa compliance. With a transparent process and personalized support, we help students complete their visa applications accurately and confidently.
                 </p>
             </section>
 

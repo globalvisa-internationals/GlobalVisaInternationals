@@ -180,7 +180,7 @@ export default async function BlogPostPage({ params }) {
       <Script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }} />
       {faqSchema && <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 font-sans text-gray-800 mt-16">
+      <article className="w-full max-w-3xl min-w-0 mx-auto px-4 py-8 sm:px-6 sm:py-12 font-sans text-gray-800 mt-16">
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{title}</h1>
           <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 border-b pb-4">
@@ -193,18 +193,18 @@ export default async function BlogPostPage({ params }) {
           </div>
         </header>
         {image && (
-          <div className="my-6 rounded-xl overflow-hidden shadow-md relative w-full h-96">
+          <div className="my-6 rounded-xl overflow-hidden shadow-md relative w-full h-[220px] sm:h-96">
             <Image
               src={imagePath}
               alt={title}
               fill
-              className="object-contain"  // ✅ changed from object-cover
+              className="object-contain"
               priority
             />
           </div>
         )}
 
-        <div className="prose prose-lg prose-teal max-w-none">
+        <div className="prose prose-sm sm:prose-base lg:prose-lg prose-teal max-w-none">
           <post.Content />
         </div>
 
