@@ -559,7 +559,7 @@ export default function Liechtenstein_Tourist_Visa_Assistance() {
                             </p>
                             <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
                                 <a href="/contact-us" className={styles.primaryButton} style={{ padding: '15px 30px', fontSize: '1.1rem' }}>Book Free Consultation</a>
-                                <a href="tel:+919876543210" className={styles.secondaryButton} style={{ padding: '15px 30px', fontSize: '1.1rem', background: '#fff', border: '2px solid #007bff', color: '#007bff', borderRadius: '5px', textDecoration: 'none' }}>Call Our Experts</a>
+                                <a href="tel:+917022213466" className={styles.secondaryButton} style={{ padding: '15px 30px', fontSize: '1.1rem', background: '#fff', border: '2px solid #007bff', color: '#007bff', borderRadius: '5px', textDecoration: 'none' }}>Call Our Experts</a>
                             </div>
                         </div>
                     </div>

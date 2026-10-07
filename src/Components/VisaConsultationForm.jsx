@@ -23,6 +23,11 @@ export default function VisaConsultationForm({ defaultCountry = '', defaultVisaT
         email: '',
     });
 
+//     useEffect(() => {
+//   console.log("FORM MOUNTED");
+//   return () => console.log("FORM UNMOUNTED");
+// }, []);
+
     const handleChange = useCallback((e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
@@ -116,7 +121,7 @@ export default function VisaConsultationForm({ defaultCountry = '', defaultVisaT
                 router.push('/Thank-you');
             } else {
                 alert('❌ Submission failed. Please try again.');
-                router.push('/Thank-you');
+                // router.push('/Thank-you');
             }
         } catch (error) {
             console.error('Submission error:', error);

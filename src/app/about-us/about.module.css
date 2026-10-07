@@ -268,7 +268,7 @@
 /* ===== Features Grid ===== */
 .sectionHeader {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
 }
 
 .sectionSubtitle {
@@ -370,14 +370,14 @@
 .servicesList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 4px;
     margin-top: 32px;
 }
 
 .serviceItem {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
     padding: 16px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
@@ -447,7 +447,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 800px;
-    margin: 0 auto;
+    margin:  2 auto; 
 }
 
 @media (min-width: 768px) {
@@ -458,7 +458,7 @@
 
 .countryCard {
     padding: 20px;
-    background: #f7fafc;
+    background: #cbcdcf;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -469,7 +469,7 @@
 }
 
 .countryCard:hover {
-    background: #ffffff;
+    background: #9ae9f2;
     transform: translateY(-4px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

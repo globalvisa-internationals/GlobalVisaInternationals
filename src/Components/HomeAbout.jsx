@@ -242,7 +242,7 @@ export default function HomeAbout() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#1A9612] animate-pulse" />
             <span className="text-[#4ADE80] text-[10px] font-bold tracking-widest uppercase">Consultations Open</span>
           </div>
-          <a href="tel:+919876543210"
+          <a href="tel:+917022213466"
             className="flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">
             <FaPhone className="text-[10px]" /> Call Now
           </a>
@@ -332,7 +332,7 @@ export default function HomeAbout() {
             </div>
 
             {/* WhatsApp */}
-            <a href="https://wa.me/919876543210?text=Hi%20GVI%2C%20I%20need%20visa%20assistance"
+            <a href="https://wa.me/917022213466?text=Hi%20GVI%2C%20I%20need%20visa%20assistance"
               target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 mt-3 w-full py-3 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold text-sm rounded-xl transition-colors shadow-lg shadow-[#25D366]/20 font-body">
               <FaWhatsapp className="text-base" /> WhatsApp Us Instantly
@@ -728,7 +728,7 @@ export default function HomeAbout() {
               className="inline-flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition-all shadow-xl shadow-[#0383C9]/30 hover:-translate-y-px font-body">
               Book Free Consultation <FaArrowRight className="text-xs" />
             </a>
-            <a href="tel:+919876543210"
+            <a href="tel:+917022213466"
               className="inline-flex items-center gap-2 bg-white/8 border border-white/18 hover:bg-white/14 text-white font-medium text-sm px-8 py-3.5 rounded-xl transition-colors font-body">
               <FaPhone className="text-xs" /> Call Now
             </a>

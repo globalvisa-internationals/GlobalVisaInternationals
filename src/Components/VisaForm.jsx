@@ -45,7 +45,7 @@ export default function VisaForm() {
     timerRef.current = setTimeout(() => {
       setShowPopup(true);
       timerRef.current = null;
-    }, 10000);
+    }, 60000);
   }, [showPopup, clearPopupTimer]);
 
   // Cancel popup on any user interaction with the form
@@ -217,7 +217,8 @@ export default function VisaForm() {
           value={formData.name}
           onChange={handleChange}
           placeholder="Your full name"
-          className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-300 rounded-lg text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
+          className="w-full px-4 py-2.5 text-sm bg-gray-50 border border-gray-300 rounded-lg text-gray-800 
+          placeholder:text-gray-400 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
           required
         />
         <input
