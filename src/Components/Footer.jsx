@@ -274,7 +274,7 @@ export default function Footer() {
                                 <a href="https://instagram.com/globalvisa_internationals/" aria-label="Instagram">
                                     <FaInstagram />
                                 </a>
-                                <a href="http://linkedin.com/company/globalvisainternationals" aria-label="LinkedIn">
+                                <a href="https://linkedin.com/company/globalvisainternationals" aria-label="LinkedIn">
                                     <FaLinkedin />
                                 </a>
                                 <a href="https://www.youtube.com/@GLOBALVISAINTERNATIONALS" aria-label="YouTube">

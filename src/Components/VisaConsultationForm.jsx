@@ -1,7 +1,7 @@
 // src/components/VisaConsultationForm.jsx
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -23,10 +23,10 @@ export default function VisaConsultationForm({ defaultCountry = '', defaultVisaT
         email: '',
     });
 
-//     useEffect(() => {
-//   console.log("FORM MOUNTED");
-//   return () => console.log("FORM UNMOUNTED");
-// }, []);
+    useEffect(() => {
+  console.log("FORM MOUNTED");
+  return () => console.log("FORM UNMOUNTED");
+}, []);
 
     const handleChange = useCallback((e) => {
         const { name, value } = e.target;
@@ -126,7 +126,7 @@ export default function VisaConsultationForm({ defaultCountry = '', defaultVisaT
         } catch (error) {
             console.error('Submission error:', error);
             alert('❌ Submission error. Please try again.');
-            router.push('/Thank-you');
+            // router.push('/Thank-you');
         } finally {
             setIsSubmitting(false);
         }

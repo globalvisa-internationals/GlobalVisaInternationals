@@ -311,7 +311,7 @@ export default function VisaForm() {
   );
 
   // Normal compact form (used on the homepage)
-  const NormalForm = () => (
+  const renderNormalForm  = () => (
     <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
       <div className="bg-gradient-to-r from-teal-700 to-teal-800 px-6 py-5 text-white">
         <h2 className="text-2xl font-bold">Free Visa Assessment</h2>
@@ -335,7 +335,7 @@ export default function VisaForm() {
   );
 
   // Modal Popup (10-second delay, but only if user never interacted)
-  const PopupModal = () => (
+  const renderPopupModal  = () => (
     showPopup && (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
         <div className="relative bg-white rounded-2xl max-w-md w-full shadow-2xl">
@@ -371,8 +371,8 @@ export default function VisaForm() {
 
   return (
     <div ref={formContainerRef}>
-      <NormalForm />
-      <PopupModal />
-    </div>
+    {renderNormalForm()}
+    {renderPopupModal()}
+  </div>
   );
 }
