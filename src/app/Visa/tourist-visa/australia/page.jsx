@@ -1,48 +1,40 @@
-
-import styles from '@/Components/Visa.module.css';
-import React from 'react';
-import Head from 'next/head';
-import VisaForm from '@/Components/VisaForm';
+import styles from "@/Components/Visa.module.css";
+import Head from "next/head";
+import VisaForm from "@/Components/VisaForm";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 import Script from "next/script";
 
-
-
-
 export const metadata = {
-  title: "Australia Tourist Visa Consultants: Requirements, Application & Costs | Global Visa Internationals",
+  title: "Australia Tourist Visa from India: Subclass 600 Guide 2026 | GVI",
   description:
-    "Apply for your Australia Tourist Visa with expert help from Global Visa Internationals. Learn visa requirements, estimated costs, and top Australian attractions.",
+    "Apply for an Australia tourist visa (subclass 600) from India with GVI. Get the document checklist, fees, processing time and expert ImmiAccount help.",
   keywords:
-    "Australia tourist visa, apply Australia visitor visa, Australia visa consultant, Australia travel guide, visa for Australia from India, Australia immigration, best tourist places in Australia",
+    "Australia tourist visa from India, subclass 600 visa, Australia visitor visa requirements for Indians, Australia visa application online, Australia visa fees from India, Australia visa documents, Australia visa agent India, Australia visa processing time",
   robots: "index, follow",
   canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
   alternates: {
     canonical: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
   },
+
   openGraph: {
-    title: "Australia Tourist Visa: Application, Requirements & Top Travel Tips",
+    title: "Australia Tourist Visa from India: Subclass 600 Guide 2026 | GVI",
     description:
-      "Get expert help from Global Visa Internationals on applying for an Australia tourist visa. Learn about visa process, travel costs, and iconic Australian destinations.",
-    url: "https://www.globalvisainternationals.com/visa/tourist-visa/australia",
+      "Expert guidance on your Australia tourist visa from India: ImmiAccount application, required documents, fees, processing time and tips from Global Visa Internationals.",
+    url: "https://www.globalvisainternationals.com/Visa/tourist-visa/australia",
     siteName: "Global Visa Internationals",
     locale: "en_IN",
-    determiner: "the",
     type: "website",
-    updated_time: "2025-11-07T00:00:00+05:30",
+    determiner: "the",
+    countryName: "India",
+    updated_time: "2026-10-10T00:00:00+05:30",
     images: [
       {
         url: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
         width: 1200,
         height: 630,
-        alt: "Australia Tourist Visa Banner",
-      },
-      {
-        url: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI-small.jpg",
-        width: 600,
-        height: 315,
-        alt: "Australia Tourist Visa Thumbnail",
+        alt: "Australia Tourist Visa Assistance Banner - Global Visa Internationals",
+        type: "image/jpeg",
       },
     ],
   },
@@ -51,39 +43,299 @@ export const metadata = {
     card: "summary_large_image",
     site: "@GLOBALVISA1505",
     creator: "@GLOBALVISA1505",
-    title: "Australia Tourist Visa: Application, Requirements & Top Places",
+    title: "Australia Tourist Visa from India: Subclass 600 Guide 2026 | GVI",
     description:
-      "Plan your dream trip to Australia. Discover visa requirements, estimated expenses, and top attractions. Trusted consultants since 2017.",
-    image: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
+      "Apply for an Australia tourist visa from India with Global Visa Internationals. Expert help with documents, ImmiAccount and biometrics. Trusted since 2017.",
     images: [
       {
         url: "https://www.globalvisainternationals.com/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg",
-        alt: "Australia Tourist Visa Assistance - Global Visa Internationals"
-      }
-    ]
+        alt: "Australia Tourist Visa Assistance - Global Visa Internationals",
+      },
+    ],
   },
-
-  other: {
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Global Visa Internationals",
-      url: "https://www.globalvisainternationals.com",
-      logo: "https://www.globalvisainternationals.com/logo.png",
-      sameAs: [
-        "https://www.facebook.com/globalvisainternationals",
-        "https://www.instagram.com/globalvisainternationals"
-      ],
-    },
-  }
 };
 
+/* ------------------------------------------------------------------
+   Visual enhancement layer (look & feel only), scoped to .gvi-visa
+------------------------------------------------------------------- */
+const enhancedCss = `
+.gvi-visa {
+  --gvi-primary: #0b5ed7;
+  --gvi-primary-dark: #08408f;
+  --gvi-accent: #f0b429;
+  --gvi-ink: #1f2933;
+  --gvi-muted: #52606d;
+  --gvi-soft: #eef4ff;
+  --gvi-line: #e4e7eb;
+  --gvi-radius: 14px;
+  color: var(--gvi-ink);
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
 
+/* Headings */
+.gvi-visa h1 {
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 4px solid var(--gvi-primary);
+  background: linear-gradient(90deg, #1f2933 0%, var(--gvi-primary-dark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gvi-visa h2 {
+  position: relative;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 3rem 0 1rem;
+  padding: 0.35rem 0 0.35rem 1rem;
+  border-left: 5px solid var(--gvi-primary);
+  color: var(--gvi-ink);
+  scroll-margin-top: 90px;
+}
+.gvi-visa h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.7rem;
+  padding: 0.55rem 1rem;
+  background: var(--gvi-soft);
+  border-radius: 10px;
+  color: var(--gvi-primary-dark);
+}
+
+/* Text */
+.gvi-visa p { margin: 0 0 1.1rem; color: var(--gvi-muted); }
+.gvi-visa strong { color: var(--gvi-ink); font-weight: 700; }
+
+/* Lists */
+.gvi-visa ul { list-style: none; padding: 0; margin: 0 0 1.4rem; }
+.gvi-visa ul li {
+  position: relative;
+  padding: 0.7rem 1rem 0.7rem 2.6rem;
+  margin-bottom: 0.55rem;
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  color: var(--gvi-muted);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.gvi-visa ul li:hover {
+  transform: translateY(-1px);
+  border-color: rgba(11, 94, 215, 0.35);
+  box-shadow: 0 6px 16px rgba(16, 24, 40, 0.08);
+}
+.gvi-visa ul li::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 1.15rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gvi-primary);
+  box-shadow: 0 0 0 4px rgba(11, 94, 215, 0.12);
+}
+
+/* Numbered steps */
+.gvi-visa ol.gvi-steps { list-style: none; counter-reset: gvi-step; padding: 0; margin: 0 0 1.6rem; }
+.gvi-visa ol.gvi-steps li {
+  counter-increment: gvi-step;
+  position: relative;
+  padding: 0.9rem 1rem 0.9rem 3.6rem;
+  margin-bottom: 0.7rem;
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-radius: 12px;
+  color: var(--gvi-muted);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+.gvi-visa ol.gvi-steps li::before {
+  content: counter(gvi-step);
+  position: absolute;
+  left: 0.9rem;
+  top: 0.85rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gvi-primary), var(--gvi-primary-dark));
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tables */
+.gvi-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.4rem;
+  border: 1px solid var(--gvi-line);
+  border-radius: var(--gvi-radius);
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.05);
+}
+.gvi-visa table { width: 100%; border-collapse: collapse; background: #fff; min-width: 420px; }
+.gvi-visa th {
+  background: linear-gradient(135deg, var(--gvi-primary), var(--gvi-primary-dark));
+  color: #fff;
+  text-align: left;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+}
+.gvi-visa td { padding: 0.8rem 1rem; border-top: 1px solid var(--gvi-line); color: var(--gvi-muted); }
+.gvi-visa tbody tr:nth-child(even) td { background: #f8fafc; }
+.gvi-visa td:first-child { font-weight: 600; color: var(--gvi-ink); }
+
+/* Note / callout */
+.gvi-visa [class*="note"] {
+  background: #fff8e6;
+  border: 1px solid #f5d98a;
+  border-left: 5px solid var(--gvi-accent);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  color: #5c4a12;
+}
+
+/* Table of contents */
+.gvi-toc {
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-left: 5px solid var(--gvi-primary);
+  border-radius: var(--gvi-radius);
+  padding: 1rem 1.3rem;
+  margin: 0 0 1.8rem;
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.05);
+}
+.gvi-toc ol { margin: 0.6rem 0 0; padding-left: 1.3rem; columns: 2 260px; column-gap: 2rem; }
+.gvi-toc li { margin: 0.25rem 0; color: var(--gvi-muted); }
+.gvi-toc a { color: var(--gvi-primary-dark); text-decoration: none; font-weight: 600; }
+.gvi-toc a:hover { text-decoration: underline; }
+
+/* Quick facts strip */
+.gvi-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+  margin: 1.4rem 0 2rem;
+}
+.gvi-fact {
+  background: linear-gradient(145deg, #fff 0%, var(--gvi-soft) 100%);
+  border: 1px solid #cfe0fb;
+  border-radius: var(--gvi-radius);
+  padding: 1rem 1.1rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(11, 94, 215, 0.08);
+}
+.gvi-fact b { display: block; font-size: 1.3rem; font-weight: 800; color: var(--gvi-primary); line-height: 1.2; }
+.gvi-fact span { display: block; margin-top: 0.25rem; font-size: 0.85rem; color: var(--gvi-muted); }
+
+/* In-page call-to-action band */
+.gvi-cta-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--gvi-soft);
+  border: 1px solid #cfe0fb;
+  border-radius: var(--gvi-radius);
+  padding: 1.1rem 1.4rem;
+  margin: 1.6rem 0;
+}
+.gvi-cta-band p { margin: 0; color: var(--gvi-ink); font-weight: 600; flex: 1 1 260px; }
+.gvi-visa .gvi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--gvi-primary) 0%, var(--gvi-primary-dark) 100%);
+  box-shadow: 0 8px 18px rgba(11, 94, 215, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gvi-visa .gvi-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(11, 94, 215, 0.36); }
+
+/* Disclaimer */
+.gvi-disclaimer {
+  margin-top: 2rem;
+  padding: 1rem 1.2rem;
+  font-size: 0.88rem;
+  color: var(--gvi-muted);
+  background: #f8fafc;
+  border: 1px dashed #b8c2cc;
+  border-radius: 12px;
+}
+
+/* Contact card */
+.gvi-visa [class*="contactInfo"] {
+  background: linear-gradient(135deg, #0b5ed7 0%, #062f6b 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 1.6rem 1.8rem;
+  margin: 1.6rem 0 2rem;
+  box-shadow: 0 14px 30px rgba(8, 64, 143, 0.28);
+}
+.gvi-visa [class*="contactInfo"] h3 { background: transparent; color: #fff; padding: 0; margin-top: 0; }
+.gvi-visa [class*="contactInfo"] p { color: rgba(255, 255, 255, 0.92); margin-bottom: 0.45rem; }
+.gvi-visa a.gvi-cta-link,
+.gvi-visa a.gvi-cta-link:link,
+.gvi-visa a.gvi-cta-link:visited {
+  display: inline-block;
+  color: #1875e8 !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  background-color: rgba(239, 170, 170, 0.16) !important;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.2rem 0.9rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.gvi-visa a.gvi-cta-link:hover,
+.gvi-visa a.gvi-cta-link:focus-visible {
+  color: #e61717 !important;
+  background: rgba(255, 255, 255, 0.32) !important;
+  background-color: rgba(201, 246, 247, 0.32) !important;
+  transform: translateY(-1px);
+}
+#apply-form { scroll-margin-top: 90px; }
+
+/* WhatsApp button */
+.gvi-visa [class*="callButton"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 10px 22px rgba(18, 140, 126, 0.32);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gvi-visa [class*="callButton"]:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(18, 140, 126, 0.4); }
+
+@media (max-width: 640px) {
+  .gvi-visa { font-size: 0.98rem; }
+  .gvi-visa h2 { margin-top: 2.2rem; }
+  .gvi-visa ul li { padding-left: 2.3rem; }
+}
+`;
 
 export default function Australia() {
   const canonicalUrl =
     "https://www.globalvisainternationals.com/Visa/tourist-visa/australia";
-
 
   const schemas = [
     // 1️⃣ Organization
@@ -105,7 +357,7 @@ export default function Australia() {
         telephone: "+91-7022213466",
         contactType: "customer service",
         areaServed: "IN",
-        availableLanguage: "English",
+        availableLanguage: ["English", "Hindi"],
       },
     },
 
@@ -114,20 +366,15 @@ export default function Australia() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Global Visa Internationals",
-      image:
-        "https://www.globalvisainternationals.com/gvilogo.png",
+      image: "https://www.globalvisainternationals.com/gvilogo.png",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "MG Road",
+        streetAddress:
+          "No. 61, 2nd Floor, Above Axis Bank, Jyothi Nivas College Road, Koramangala 5th Block",
         addressLocality: "Bengaluru",
         addressRegion: "Karnataka",
-        postalCode: "560025",
+        postalCode: "560095",
         addressCountry: "IN",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 12.9716,
-        longitude: 77.5946,
       },
       url: "https://www.globalvisainternationals.com",
       telephone: "+91-7022213466",
@@ -159,22 +406,16 @@ export default function Australia() {
       "@type": "WebSite",
       name: "Global Visa Internationals",
       url: "https://www.globalvisainternationals.com",
-      potentialAction: {
-        "@type": "SearchAction",
-        target:
-          "https://www.globalvisainternationals.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string",
-      },
     },
 
     // 4️⃣ WebPage
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      name: "Australia Tourist Visa Consultants",
+      name: "Australia Tourist Visa Assistance from India",
       url: canonicalUrl,
       description:
-        "Apply for your Australia Tourist Visa with expert help from Global Visa Internationals.",
+        "Apply for an Australia tourist visa (subclass 600) from India with expert guidance from Global Visa Internationals. Complete help with documents, ImmiAccount and biometrics.",
       inLanguage: "en-IN",
       isPartOf: {
         "@type": "WebSite",
@@ -182,7 +423,7 @@ export default function Australia() {
       },
     },
 
-    // 5️⃣ Service (Visa Assistance)
+    // 5️⃣ Service
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -193,14 +434,10 @@ export default function Australia() {
       },
       areaServed: {
         "@type": "Country",
-        name: "Australia",
+        name: "India",
       },
-      offers: {
-        "@type": "Offer",
-        priceCurrency: "INR",
-        price: "5000",
-        description: "Comprehensive Australia tourist visa application support",
-      },
+      description:
+        "Professional Australia tourist visa (subclass 600) consultation, documentation and ImmiAccount application support for Indian applicants.",
     },
 
     // 6️⃣ BreadcrumbList
@@ -223,33 +460,57 @@ export default function Australia() {
       ],
     },
 
-    // 7️⃣ FAQPage
+    // 7️⃣ FAQPage (matches the visible FAQ section)
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: [
         {
           "@type": "Question",
-          name: "How long does it take to get an Australia Tourist Visa?",
+          name: "Which visa do Indians need for a holiday in Australia?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Processing times vary from 15 to 25 working days depending on the applicant’s profile and season.",
+            text: "Most Indian tourists apply for the Visitor visa (subclass 600), Tourist stream, online through ImmiAccount.",
           },
         },
         {
           "@type": "Question",
-          name: "What documents are required for an Australia Tourist Visa?",
+          name: "How much does an Australia tourist visa cost from India?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Valid passport, financial proof, employment letter, travel itinerary, and visa application form.",
+            text: "The base application charge for the Tourist stream is approximately 190 AUD, roughly Rs 10,500 to Rs 11,000, plus a VFS Global service charge of about Rs 1,620 if biometrics are requested. Fees change with exchange rates and policy updates, so confirm the current charge before paying.",
           },
         },
         {
           "@type": "Question",
-          name: "Do I need an interview for an Australia Visitor Visa?",
+          name: "How long does Australia tourist visa processing take?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Interviews are not mandatory for all applicants, but may be required in certain cases.",
+            text: "Processing varies from around 2 to 4 weeks to several months depending on your profile, the documents submitted and current workload.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What documents are required for an Australia tourist visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You need a passport valid for at least six months, a recent photograph, financial documents (bank statements, ITR, payslips), an employment letter with leave approval, a detailed travel itinerary, proof of strong ties to India and, ideally, travel insurance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long can I stay in Australia on a tourist visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The maximum stay per entry is usually 3 months, but it can be 6 or 12 months depending on your case. Visa validity and permitted stay are different, so check the conditions on your visa grant.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need to give biometrics for an Australia visitor visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Only if you are asked to. If biometrics are requested, you attend a VFS Global centre to provide them.",
           },
         },
       ],
@@ -260,306 +521,283 @@ export default function Australia() {
     <>
       {/* ✅ All JSON-LD Schemas */}
       {schemas.map((schema, index) => (
-        <Script key={index} id={`schema-${index}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <Script
+          key={index}
+          id={`schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
       ))}
 
+      {/* ✨ Scoped visual enhancements */}
+      <style dangerouslySetInnerHTML={{ __html: enhancedCss }} />
 
       <div className={styles.imageContainer}>
-        <img src="/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg" alt="Australia Visa assistence Bannar Global Visa Internationals" className={styles.VisaImage} />
+        <img
+          src="/tourist-visa/Australia-Tourist-Visa-Assistance-GVI.jpg"
+          alt="Australia tourist visa assistance from India - Global Visa Internationals"
+          className={styles.VisaImage}
+        />
       </div>
 
       <div className={styles.VisaSec}>
+        <div className={`${styles.VisaData} gvi-visa`}>
 
+          <h1 className={styles.subTitle}>Australia Tourist Visa from India: Subclass 600 Application, Documents, Fees & Processing Time</h1>
 
-        <div className={styles.VisaData}>
-          <h1 className={styles.Title}>Australia Tourist Visa Assistance from India</h1>
-          <p>Planning your dream trip to the stunning landscapes of Australia? Navigating the  Australia tourist visa process from India can be complex, but with expert assistance from  <strong className={styles.strong}>Global Visa Internationals,</strong> it becomes remarkably straightforward. Whether you need a  subclass 600 visa Australia from India, guidance on  Australia visitor visa requirements for Indian citizens, or help with the  Australia visa application online, our dedicated team ensures a seamless process from documentation to approval.</p>
-          <p>  Get started today with a free consultation from <strong className={styles.strong}>Global Visa Internationals </strong> – your trusted partner for  Australia visa assistance from India!</p>
-
-          <h2 className={styles.subTitle}>Understanding the Australia Visa Process for Indians</h2>
-          <p>Successfully navigating the  Australia visa process from India requires meticulous preparation and understanding of specific requirements. At <strong className={styles.strong}>Global Visa Internationals,</strong> we provide comprehensive  ImmiAccount application assistance, personalized guidance, and clear explanations of all  Australia visa fees from India. Many applicants wonder about the exact  Australia tourist visa cost for Indians or the current Australia visa application charge in rupees – we offer completely transparent pricing with no hidden charges.</p>
-          <p>Our experts guide you through all available options and explain typical  Australia visa agent charges India so you know exactly what you're paying for with no surprises.</p>
-          <p> Ready to begin your Australian journey? Contact <strong className={styles.strong}>Global Visa Internationals </strong> now and let us simplify your entire Australia visa process!</p>
-
-          <h2 className={styles.subTitle}>How to Apply for Australia Visa Online from India</h2>
-          <p>Want a streamlined, stress-free visa application experience? You can now  apply for Australia visa online from India with confidence through <strong className={styles.strong}>Global Visa Internationals.</strong> Whether you're applying through the official  VFS Global Australia channel or directly via the  ImmiAccount portal, we help you compare and select the optimal application route for your specific situation.</p>
-          <p>Our services extend beyond the initial application – we assist you in learning how to  check Australia visa status India updates and provide a comprehensive  Australia tourist visa document checklist for Indians. We also share valuable insights from previous  Australia visa success stories India applicants to help you make informed decisions and strengthen your application.</p>
-          <p>  Apply online with confidence today with <strong className={styles.strong}>Global Visa Internationals </strong> and receive expert guidance at every step!</p>
-
-          <h2 className={styles.subTitle}>Essential Australia Visa Documents for Indian Applicants</h2>
-          <p>Submitting complete and accurate documentation is arguably the most crucial aspect of your  Australia visa application process. Our team provides meticulous assistance in preparing your complete  Australia visa documents for Indians package, including proper preparation of  Australia visa financial documents, understanding the  bank balance required for Australia tourist visa, and correctly submitting your  ITR for Australia visa India applicants.</p>
-          <p>We ensure you have the appropriate  bank statements for Australia visa applications, verify your  passport validity for Australia visa requirements, and help craft a convincing  travel itinerary for Australia visa. For those needing sponsor support, we provide expert guidance on preparing proper  sponsor documents for Australia visa. With our comprehensive document support, you'll meet all requirements with complete confidence.</p>
-          <p> Avoid rejection and unnecessary delays — Request your personalized document checklist from <strong className={styles.strong}>Global Visa Internationals </strong> experts today!</p>
-
-          <h2 className={styles.subTitle}>Australia Visa Processing Time from India</h2>
-          <p>Understanding realistic timelines is essential for planning your Australian adventure. Our team provides clear explanations of typical  Australia tourist visa processing time India, offers specialized support for  urgent Australia visa India requests, and diligently tracks progress throughout your application journey. While standard  Australia visitor visa processing times can vary, we can explore options if you need expedited service.</p>
-          <p>We help you understand the  Australia tourist visa validity nuances, typically granting stays of up to 3, 6, or 12 months, and clarify the important difference between  visa validity vs stay duration Australia regulations.</p>
-          <p> Facing time constraints? Inquire about Global Visa International's priority fast-track visa service!</p>
-
-          <h2 className={styles.subTitle}>Finding a Trusted Australia Visa Agent in India</h2>
-          <p>When searching for a genuinely  trusted Australia visa agent India or identifying the truly  best visa consultancy for Australia India, thousands of Indian travelers consistently choose <strong className={styles.strong}>Global Visa Internationals.</strong> We protect you from potential pitfalls by helping you  avoid Australia visa scams India operators through completely transparent guidance and ethical practices.</p>
-          <p>Want authentic, unbiased feedback? We encourage exploring genuine  Indian forum Australia visa recommendations and provide current information on actual  Australia visa approval rates India statistics. Stay thoroughly informed about  new Australia visa rules India 2024 implementations and understand the real facts behind common  Australia visa rejection reasons India scenarios.</p>
-          <p>  Don't gamble with your travel plans. Choose <strong className={styles.strong}>Global Visa Internationals </strong> – consistently reliable, thoroughly experienced, and trusted by Indian travelers nationwide!</p>
-
-          <h2 className={styles.subTitle}>Community Insights: Reddit Indian Australia Visa Help</h2>
-          <p>Many applicants value community perspectives when preparing their applications. Numerous travelers share authentic tips through  Reddit Indian Australia visa help threads, offering genuine firsthand  Indian travellers Australia visa experience accounts. While these resources can be helpful, nothing replaces professional guidance.</p>
-          <p>Still feeling uncertain? Our experts provide clear explanations of common  Australia visa rejection reasons India applicants face and answer the frequently asked question of "  how much bank balance for Australia visa Indians" need to demonstrate to significantly boost your approval chances. Need comprehensive paperwork assistance? We provide thorough  Australia visa interview questions preparation support and help complete your entire  Australia tourist visa application process completely stress-free.</p>
-          <p>  Connect with genuine experts who've successfully helped thousands of Indians travel to Australia – exclusively at Global Visa International!</p>
-
-          <div className={styles.ctaBox}>
-            <h3 className={styles.subTitle}>Begin Your Australian Journey Today!</h3>
-            <p>Let <strong className={styles.strong}>Global Visa Internationals </strong> handle the complex visa process while you focus on planning your unforgettable trip to Australia. Our team of experts provides personalized guidance tailored to your specific circumstances.</p>
-            {/* <button className={styles.ctaButton}>Schedule Your Free Consultation Now</button> */}
-          </div>
-          <p>Planning your inaugural trip to Australia? Securing the proper  Australia Tourist Visa (subclass 600) is your essential gateway to exploring one of the world's most diverse and captivating destinations. From iconic landmarks like the Sydney Opera House and the Great Barrier Reef to breathtaking natural wonders and rich cultural experiences, Australia offers something extraordinary for every type of traveler. Our expert  Australia Tourist Visa assistance ensures a smooth, efficient, and hassle-free process allowing you to focus entirely on planning your dream holiday itinerary.</p>
-
-          <h2 className={styles.subTitle}>Top Tourist Attractions in Australia</h2>
-          <p>With a properly issued  Tourist Visa for Australia, you can experience the perfect blend of spectacular natural beauty and impressive modern marvels. While planning your itinerary, ensure you don't miss these absolute must-see destinations:</p>
-          <ul>
-            <li>  <strong className={styles.strong}>Sydney Opera House:</strong> World-heritage listed architectural masterpiece and performing arts centre.</li>
-            <li>  <strong className={styles.strong}>Great Barrier Reef:</strong> The world's largest coral reef system, renowned for its stunning marine biodiversity.</li>
-            <li>  <strong className={styles.strong}>Uluru (Ayers Rock):</strong> Iconic sacred sandstone monolith in the heart of the Northern Territory's Red Centre.</li>
-            <li>  <strong className={styles.strong}>Great Ocean Road:</strong> Breathtaking coastal drive in Victoria featuring the Twelve Apostles.</li>
-            <li>  <strong className={styles.strong}>Bondi Beach:</strong> World-famous Sydney beach and hotspot for surfing and coastal walks.</li>
-            <li>  <strong className={styles.strong}>Bondi Beach:</strong> Vast biodiverse nature reserve with ancient Aboriginal rock art.</li>
-            <li>  <strong className={styles.strong}>Melbourne's Laneways:</strong> Explore hidden cafes, street art, and boutique shops in the city's cultural capital.</li>
-            <li>  <strong className={styles.strong}>Fraser Island:</strong> The world's largest sand island, with rainforests and freshwater lakes.</li>
-            <li>  <strong className={styles.strong}>Tasmanian Wilderness:</strong> Pristine World Heritage area with rugged mountains and unique wildlife.</li>
-            <li>  <strong className={styles.strong}>The Whitsunday Islands:</strong> Tropical paradise with pristine white-sand beaches like Whitehaven Beach.</li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Compelling Reasons to Apply for an Australia Tourist Visa</h2>
-          <p>Whether you're planning a brief two-week getaway or an extended vacation, here's why Australia should be at the top of your travel list:</p>
-          <ol>
-            <li>  <strong className={styles.strong}>Comprehensive Visa Guidance:</strong> Our specialized  Australia Tourist Visa consultants provide detailed, personalized support throughout your application journey.</li>
-            <li>  <strong className={styles.strong}>Exceptionally Diverse Attractions:</strong> Experience everything from pristine beaches and rainforests to vibrant cities and the rugged outback.</li>
-            <li>  <strong className={styles.strong}>Unforgettable Culinary Experiences:</strong> Taste world-class wines, fresh seafood, and multicultural cuisine.</li>
-            <li>  <strong className={styles.strong}>World-Class Wildlife Encounters:</strong> See unique animals like kangaroos, koalas, and wombats in their natural habitat.</li>
-            <li>  <strong className={styles.strong}>Safe & Welcoming Environment:</strong> Benefit from well-developed tourism infrastructure and friendly locals.</li>
-            <li>  <strong className={styles.strong}>Adventure & Relaxation:</strong> Opportunities for diving, hiking, surfing, or simply relaxing on stunning beaches.</li>
-          </ol>
-          <p>Require professional assistance? Our dedicated team at <strong className={styles.strong}>Global Visa Internationals </strong> offers complete  Australia Tourist Visa assistance — encompassing everything from document collection and verification to potential interview preparation. We streamline the visa processing experience making it simple, transparent, and completely stress-free.</p>
-
-          <div className={styles.ctaBox}>
-            <h3>Your Australian Dream Starts Here</h3>
-            <p>Don't let visa complexities deter you from experiencing Australia. Our experienced consultants have helped thousands of travelers successfully obtain their Australian tourist visas.</p>
-            {/* <button className={styles.ctaButton}>Start Your Visa Application Today</button> */}
-          </div>
-          <p>  Get in touch today with a trusted <span style={{ color: '#c00' }}>Australia Tourist Visa consultant</span> from <strong className={styles.strong}>Global Visa Internationals </strong> and begin your journey Down Under!</p>
-
-          <h1 className={styles.Title}>Australia Tourist Visa – Simplified Application Process & Expert Assistance from India</h1>
-          <p>Planning your dream trip to Australia? Whether you're drawn to its iconic landmarks, breathtaking natural wonders, or vibrant cosmopolitan cities, successfully securing your  Australia Tourist Visa (subclass 600) represents the essential first step. Our professional  Australia visa consultants at <strong className={styles.strong}>Global Visa Internationals </strong> provide comprehensive end-to-end  Australia Tourist Visa assistance specifically designed to make the entire process straightforward and stress-free for Indian applicants.</p>
-
-          <h2 className={styles.subTitle}>Why Choose Australia for Your Next Holiday Destination?</h2>
-          <ul>
-            <li>  <strong className={styles.strong}>Incredibly Diverse experiences:</strong> From the Great Barrier Reef and the Outback to cosmopolitan cities and wine regions.</li>
-            <li>  <strong className={styles.strong}>World-famous attractions:</strong> Visit iconic sites recognized globally for their natural and cultural significance.</li>
-            <li>  <strong className={styles.strong}>Remarkable Cultural diversity:</strong> Experience a vibrant multicultural society.</li>
-            <li>  <strong className={styles.strong}>Advanced tourism infrastructure:</strong> Benefit from well-developed transportation, accommodation, and tourist facilities.</li>
-            <li>  <strong className={styles.strong}>Year-round destinations:</strong> Different regions offer ideal visiting conditions during various seasons.</li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Details of the Australia Tourist Visa (Subclass 600) for Indian Citizens</h2>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Visa Feature</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Visa Type</td>
-                <td>Visitor Visa (Subclass 600) - Tourist Stream</td>
-              </tr>
-              <tr>
-                <td>Typical Validity</td>
-                <td>1 year to 18 months, up to 5 years (case dependent)</td>
-              </tr>
-              <tr>
-                <td>Maximum Stay Per Entry</td>
-                <td>Usually 3 months, but can be up to 6 or 12 months</td>
-              </tr>
-              <tr>
-                <td>Estimated Processing Time</td>
-                <td>Varies from 2-4 weeks to several months</td>
-              </tr>
-              <tr>
-                <td>Application Method</td>
-                <td>Online via ImmiAccount</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2 className={styles.subTitle}>Essential Documents Required for Australia Tourist Visa Application</h2>
-          <ul>
-            <li>Original passport (valid for at least six months)</li>
-            <li>Completed and signed Form 1419 (if required) or ImmiAccount application</li>
-            <li>Recent passport-sized photograph meeting specifications</li>
-            <li>Comprehensive financial documents (bank statements, ITR, payslips) demonstrating sufficient funds</li>
-            <li>Employment verification letter and leave approval (if employed)</li>
-            <li>Detailed travel itinerary including flight and accommodation plans</li>
-            <li>Evidence of strong ties to India (property deeds, family commitments, business assets)</li>
-            <li>Travel insurance documentation (highly recommended)</li>
-          </ul>
-
-          <h2 className={styles.subTitle}>Australia Tourist Visa Fee Structure from India (Approximate)</h2>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Fee Type</th>
-                <th>Current Cost (AUD)</th>
-                <th>INR Equivalent (Approx.)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Base Application Charge (Tourist Stream)</td>
-                <td>$190 AUD</td>
-                <td>₹10,500 - ₹11,000</td>
-              </tr>
-              <tr>
-                <td>VFS Global Service Charge (Biometrics)</td>
-                <td>N/A</td>
-                <td>₹1,620 (if applicable)</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p className={styles.note}>Note: All prices are approximate and may vary based on current exchange rates and policy updates. The visa fee is typically paid in AUD.</p>
-
-          <div className={styles.ctaBox}>
-            <h3>Confused About Visa Requirements?</h3>
-            <p>Our experts provide clear, personalized guidance on all documentation needed for your specific situation.</p>
-            <button className={styles.ctaButton}>Get Personalized Document Checklist</button>
+          <div className="gvi-facts">
+            <div className="gvi-fact"><b>~AUD 190</b><span>Base application charge</span></div>
+            <div className="gvi-fact"><b>2–4 weeks+</b><span>Typical processing</span></div>
+            <div className="gvi-fact"><b>3, 6 or 12 months</b><span>Stay per entry</span></div>
+            <div className="gvi-fact"><b>ImmiAccount</b><span>Online application</span></div>
           </div>
 
-          <h2 className={styles.subTitle}>Why Choose <strong className={styles.strong}>Global Visa Internationals </strong> for Australia Tourist Visa Assistance?</h2>
-          <ul>
-            <li>Expert guidance through the complex ImmiAccount application process</li>
-            <li>Completely transparent pricing with no hidden charges</li>
-            <li>Thorough preparation for potential phone interviews</li>
-            <li>24x7 customer support via WhatsApp, email, and phone</li>
-            <li>Document review and verification service</li>
-            <li>Personalized application strategy based on your profile</li>
-            <li>High success rate with extensive experience</li>
-          </ul>
+          <nav aria-label="Table of contents" className="gvi-toc">
+            <strong>On this page</strong>
+            <ol>
+              <li><a href="#visa-details">Subclass 600 visa details</a></li>
+              <li><a href="#how-to-apply">How to apply from India</a></li>
+              <li><a href="#documents">Documents required</a></li>
+              <li><a href="#fees">Visa fees from India</a></li>
+              <li><a href="#processing-time">Processing time & validity</a></li>
+              <li><a href="#why-gvi">Choosing a trusted visa agent</a></li>
+              <li><a href="#attractions">Top attractions in Australia</a></li>
+              <li><a href="#faq">Frequently asked questions</a></li>
+            </ol>
+          </nav>
 
-          <p>  Get started now! Submit your details and our team at <strong className={styles.strong}>Global Visa Internationals </strong> will help you confidently apply for your Australia Tourist Visa!</p>
+          <p>
+            Planning your dream trip to Australia? The Australia tourist visa process from India can feel complex, but with expert help from Global Visa Internationals (GVI) it becomes straightforward. Whether you need a subclass 600 visa, guidance on Australia visitor visa requirements for Indian citizens, or help with the Australia visa application online, our team supports you from documentation to approval.
+          </p>
 
-          <h2 className={styles.subTitle}>Navigating the Australia Tourist Visa Application Process</h2>
-          <p>Applying for an  Australia Tourist Visa from India involves several critical steps that require careful attention. With stringent requirements, it's essential to understand and thoroughly prepare for each stage. Here's how the process works:</p>
+          <p>
+            Securing the Australia Tourist Visa (subclass 600) is the first step towards iconic landmarks like the Sydney Opera House and the Great Barrier Reef, as well as natural wonders and rich cultural experiences. Our end-to-end Australia tourist visa assistance lets you focus on planning your holiday while we handle the paperwork. Get started with a free consultation from GVI.
+          </p>
 
-          <ol>
-            <li>  <strong className={styles.strong}>Create an ImmiAccount:</strong> Set up your account on the Australian Government's immigration portal.</li>
-            <li>  <strong className={styles.strong}>Complete the Online Application:</strong> Accurately fill out the detailed application form with consistent information.</li>
-            <li>  <strong className={styles.strong}>Pay the Visa Application Charge (VAC):</strong> Pay the mandatory fee online through ImmiAccount.</li>
-            <li>  <strong className={styles.strong}>Prepare & Upload Supporting Documents:</strong> Gather and digitally upload all required supporting documents according to guidelines.</li>
-            <li>  <strong className={styles.strong}>Biometrics Collection (if requested):</strong> Attend a VFS Global center if asked to provide biometrics.</li>
-            <li>  <strong className={styles.strong}>Receive Visa Decision:</strong> Once approved, you will receive a visa grant letter electronically.</li>
+          <div className="gvi-cta-band">
+            <p>Not sure what you need? Get a personalized document checklist for your profile.</p>
+            <a href="#apply-form" className="gvi-btn">Get Personalized Document Checklist</a>
+          </div>
+
+          <h2 id="visa-details" className={styles.subTitle}>Australia Tourist Visa (Subclass 600) Details for Indian Citizens</h2>
+
+          <div className="gvi-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Visa Feature</th><th>Details</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Visa Type</td><td>Visitor Visa (Subclass 600) - Tourist Stream</td></tr>
+                <tr><td>Typical Validity</td><td>1 year to 18 months, up to 5 years (case dependent)</td></tr>
+                <tr><td>Maximum Stay Per Entry</td><td>Usually 3 months, but can be up to 6 or 12 months</td></tr>
+                <tr><td>Estimated Processing Time</td><td>Varies from 2–4 weeks to several months</td></tr>
+                <tr><td>Application Method</td><td>Online via ImmiAccount</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="how-to-apply" className={styles.subTitle}>How to Apply for an Australia Visa Online from India</h2>
+
+          <p>
+            You can apply for an Australia visa online from India through the official ImmiAccount portal, and VFS Global Australia supports biometrics collection when it is requested. GVI helps you choose the best route for your situation and keeps you informed on how to check your Australia visa status. Here is how the process works:
+          </p>
+
+          <ol className="gvi-steps">
+            <li><strong>Create an ImmiAccount:</strong> Set up your account on the Australian Government's immigration portal.</li>
+            <li><strong>Complete the online application:</strong> Accurately fill out the detailed application form with consistent information.</li>
+            <li><strong>Pay the Visa Application Charge (VAC):</strong> Pay the mandatory fee online through ImmiAccount.</li>
+            <li><strong>Prepare and upload supporting documents:</strong> Gather and digitally upload all required documents according to guidelines.</li>
+            <li><strong>Biometrics collection (if requested):</strong> Attend a VFS Global centre if asked to provide biometrics.</li>
+            <li><strong>Receive the visa decision:</strong> Once approved, you receive a visa grant letter electronically.</li>
           </ol>
 
-          <p>Feeling overwhelmed by this process? Let <strong className={styles.strong}>Global Visa Internationals </strong> transform your  Australia visa application experience into a smooth, well-managed, and stress-free journey.</p>
+          <p>
+            Feeling overwhelmed? Let GVI turn your Australia visa application into a smooth, well-managed journey.
+          </p>
 
-          <h3 className={styles.subTitle}>Let <strong className={styles.strong}>Global Visa Internationals </strong> Be Your Trusted Australia Visa Consultant</h3>
-          <p>Dreaming of exploring Australia's spectacular landscapes, vibrant cities, and unique wildlife? We'll help transform that dream into reality. At <strong className={styles.strong}>Global Visa Internationals,</strong> we specialize in providing exceptional  Australia Tourist Visa assistance with an impressive success rate and truly personalized support tailored to your specific circumstances.</p>
+          <h2 id="documents" className={styles.subTitle}>Documents Required for an Australia Tourist Visa from India</h2>
 
-          <b className={styles.subTitle}>Our Comprehensive Australia Visa Services Include:</b>
+          <p>
+            Complete and accurate documentation is the most important part of your Australia visa application. Use this checklist, and request a personalized version from our experts to avoid rejection and delays.
+          </p>
+
           <ul>
-            <li>One-on-one guidance understanding all  Australia visa requirements specific to your profile.</li>
-            <li>Expert document checklist creation and thorough review service.</li>
-            <li>Professional ImmiAccount form filling assistance ensuring accuracy.</li>
-            <li>Comprehensive preparation for any potential official follow-up.</li>
-            <li>Continuous WhatsApp and email support throughout your visa journey.</li>
-            <li>Application tracking and follow-up.</li>
+            <li><strong>Passport:</strong> Original passport valid for at least six months.</li>
+            <li><strong>Application:</strong> Completed and signed Form 1419 (if required) or the ImmiAccount application.</li>
+            <li><strong>Photograph:</strong> Recent passport-sized photograph meeting specifications.</li>
+            <li><strong>Financial documents:</strong> Bank statements, ITR and payslips demonstrating sufficient funds for your trip.</li>
+            <li><strong>Employment proof:</strong> Employment verification letter and leave approval (if employed).</li>
+            <li><strong>Travel itinerary:</strong> Detailed plan including flight and accommodation details.</li>
+            <li><strong>Ties to India:</strong> Property deeds, family commitments or business assets showing you will return.</li>
+            <li><strong>Travel insurance:</strong> Documentation is highly recommended.</li>
+            <li><strong>Sponsor documents:</strong> If someone is supporting your trip, we guide you on preparing proper sponsor documents.</li>
           </ul>
 
-          <p className={styles.note}>Avoid last-minute stress, unnecessary delays, or potential rejection. Contact <strong className={styles.strong}>Global Visa Internationals </strong> today and let us expertly handle your  Australia Tourist Visa process from beginning to end.</p>
+          <p className={styles.note}>
+            <strong className={styles.strong}>Note:</strong> There is no single official bank balance that guarantees approval. Your funds should be clearly sufficient for the length and cost of your trip, and consistent with your income and ITR.
+          </p>
 
-          <div className={styles.ctaBox}>
-            <h3>Limited Availability for Personalized Consultation</h3>
-            <p>Our visa experts have limited capacity for one-on-one consultations. Reserve your spot today for comprehensive visa guidance.</p>
-            <button className={styles.ctaButton}>Reserve Your Consultation Now</button>
+          <h2 id="fees" className={styles.subTitle}>Australia Tourist Visa Fee from India (Approximate)</h2>
+
+          <div className="gvi-table-wrap">
+            <table>
+              <thead>
+                <tr><th>Fee Type</th><th>Current Cost (AUD)</th><th>INR Equivalent (Approx.)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Base Application Charge (Tourist Stream)</td><td>$250 AUD</td><td>₹20000 – ₹23751</td></tr>
+                <tr><td>VFS Global Service Charge (Biometrics)</td><td>N/A</td><td>₹1,620 (if applicable)</td></tr>
+              </tbody>
+            </table>
           </div>
 
-          <h3 className={styles.subTitle}>  Need Professional Help with Your Australia Tourist Visa or Urgent Processing?</h3>
+          <p className={styles.note}>
+            <strong className={styles.strong}>Note:</strong> All prices are approximate and may vary based on current exchange rates and policy updates. The visa fee is typically paid in AUD. GVI shares transparent pricing with no hidden charges, and explains any agent fees upfront.
+          </p>
 
-          <p>  Dreaming of a family holiday in Sydney, visiting loved ones, or exploring  Australia’s breathtaking natural wonders? At  <strong className={styles.strong}> Global Visa Internationals (GVI)</strong>,  we make your travel plans a reality. With a proven record of getting visas  granted in as little as <b className={styles.strong}>24 hours</b>, our expert consultants ensure your  Australia visa application is smooth, accurate, and stress-free.</p>
+          <h2 id="processing-time" className={styles.subTitle}>Australia Tourist Visa Processing Time, Validity & Stay Duration</h2>
 
-          <b className={styles.subTitle}>  Here’s how we make your Australia visa journey simple and successful:</b>
+          <p>
+            Processing times vary from around 2–4 weeks to several months depending on your profile, your documents and current workload. We track your application throughout, and if you are short of time, you can ask us about urgent processing options.
+          </p>
 
-          <ol>
-            <h3 className={styles.subTitle}>
-              <li>Comprehensive Visa Guidance</li>
-            </h3>
-            <p>  We simplify the complex Australia visa process with precise documentation  checks and strategic application planning — increasing your chances of fast  approval.</p>
+          <h3>Visa validity vs. length of stay</h3>
+          <p>
+            Validity and stay are different. Validity is the period during which you can enter Australia, while the maximum stay per entry is usually 3 months, and in some cases 6 or 12 months. Always check the conditions stated on your visa grant.
+          </p>
 
-            <h3 className={styles.subTitle}>
-              <li>Tailored Document Support</li>
-            </h3>
-            <p>Get step-by-step assistance for every requirement, including:</p>
-            <ul>
-              <li>Valid passport & latest photographs</li>
-              <li>  Financial proofs that meet Australia visa bank balance requirements</li>
-              <li>Employment verification & leave approval letters</li>
-              <li>Detailed travel itinerary & hotel bookings</li>
-              <li>Proof of strong ties to India (family, work, property)</li>
-            </ul>
-
-            <h3 className={styles.subTitle}>
-              <li>Real-Time Support from Visa Experts</li>
-            </h3>
-            <p>  Stay connected with your dedicated visa consultant through WhatsApp and  email for quick answers and expert guidance — whenever you need it.</p>
-
-            <h3 className={styles.subTitle}>
-              <li>End-to-End Assistance Until Visa Grant</li>
-            </h3>
-            <p>  From setting up your ImmiAccount to receiving your final visa grant, we  handle the process completely. You plan your trip — we secure your visa.</p>
-          </ol>
-
-          <h3 className={styles.subTitle}> Why Choose GVI for Your Australia Visa?</h3>
-          <ul>
-            <li>   <b className={styles.strong}>24-Hour Visa Grant Record</b> – Fast-track approvals when time is  critical.  </li>
-            <li>   <b className={styles.strong}>Trusted Expertise</b> – Years of proven success with Indian  applicants.  </li>
-            <li>   <b className={styles.strong}>Stress-Free Process</b> – Full guidance from start to finish.  </li>
-          </ul>
-
-          <p>  With <strong className={styles.strong}>GVI</strong> by your side, you can  focus on your Australian adventure while we take care of your visa success.</p>
-
-
-          <h2 className={styles.subTitle}>Why Thousands Choose <strong className={styles.strong}>Global Visa Internationals </strong> for Australia Tourist Visa Assistance?</h2>
-          <p>At <strong className={styles.strong}>Global Visa Internationals,</strong> we take immense pride in offering professional, transparent, and timely  Australia visa consultancy services that deliver results. Here's why thousands of Indian travelers trust us with their Australian dreams:</p>
-
-          <ul>
-            <li>  <strong className={styles.strong}>Expert Guidance:</strong> We provide detailed, personalized visa solutions based on your specific profile and travel purpose.</li>
-            <li>  <strong className={styles.strong}>Accuracy First Approach:</strong> All your forms and supporting documents undergo multiple reviews to ensure perfection.</li>
-            <li>  <strong className={styles.strong}>Complete End-to-End Support:</strong> Comprehensive assistance from initial form filling to final grant.</li>
-            <li>  <strong className={styles.strong}>Proven Success Record:</strong> With extensive experience in Australian visas, we possess the expertise to maximize your approval chances.</li>
-            <li>  <strong className={styles.strong}>Professional Preparation:</strong> Thorough guidance for any potential official communication.</li>
-            <li>  <strong className={styles.strong}>Transparent Communication:</strong> Regular updates and clear explanations at every process stage.</li>
-          </ul>
-
-          <p>We're not just visa agents — we're your dedicated travel partners. With years of specialized visa expertise and thousands of successful consultations delivered, we at <strong className={styles.strong}>Global Visa Internationals </strong> proudly serve as India's leading  Australia Tourist Visa consultants.</p>
-          <p>Let <strong className={styles.strong}>Global Visa Internationals </strong> help you plan your unforgettable Australian vacation — with complete peace of mind and professional visa assistance every step of the way.</p>
-
-          <div className={styles.ctaBox}>
-            <h3>Your Australian Adventure Awaits</h3>
-            <p>Don't let visa uncertainties delay your travel plans. Our team is ready to guide you through the entire process efficiently.</p>
-            <button className={styles.ctaButton}>Begin Your Visa Process Today</button>
+          <div className="gvi-cta-band">
+            <p>Facing time constraints? Ask about our priority fast-track visa service.</p>
+            <a href="https://wa.me/917022213466?text=Hi,%20I%20need%20urgent%20help%20with%20an%20Australia%20Tourist%20Visa" className="gvi-btn">Ask About Fast-Track</a>
           </div>
-          <p className={styles.note}>This service is provided by <strong className={styles.strong}>Global Visa Internationals,</strong> an independent visa consultancy. We are not affiliated with the Australian government or high commission but provide expert guidance based on extensive experience and current regulations.</p>
+
+          <h2 id="why-gvi" className={styles.subTitle}>Choosing a Trusted Australia Visa Agent in India</h2>
+
+          <p>
+            When looking for a trusted Australia visa agent or the best visa consultancy for Australia in India, transparency matters. GVI follows ethical practices and clear guidance so you can steer clear of unreliable operators and visa scams. Community forums and Reddit threads can offer helpful first-hand experiences from other Indian travellers, but nothing replaces professional guidance for your own profile.
+          </p>
+
+          <p>
+            We also keep you updated on current Australia visa rules for Indian applicants and explain common rejection reasons, such as insufficient funds, weak ties to India or inconsistent information, so you can strengthen your application.
+          </p>
+
+          <h3>Our Australia visa services include</h3>
+          <ul>
+            <li>One-on-one guidance on all Australia visa requirements specific to your profile.</li>
+            <li>Document checklist creation and thorough review.</li>
+            <li>Professional ImmiAccount form-filling assistance to ensure accuracy.</li>
+            <li>Preparation for any potential official follow-up or phone interview.</li>
+            <li>24x7 support via WhatsApp, email and phone.</li>
+            <li>Application tracking and follow-up until visa grant.</li>
+          </ul>
+
+          <h3>Why travellers choose Global Visa Internationals</h3>
+          <ul>
+            <li><strong>Expert guidance:</strong> Personalized solutions based on your profile and travel purpose.</li>
+            <li><strong>Accuracy first:</strong> Forms and documents are reviewed multiple times.</li>
+            <li><strong>End-to-end support:</strong> From form filling to final grant.</li>
+            <li><strong>Transparent communication:</strong> Regular updates and clear explanations at every stage.</li>
+            <li><strong>Fast-track experience:</strong> Urgent cases handled with priority when time is critical.</li>
+          </ul>
+
+          <div className="gvi-cta-band">
+            <p>Our consultants have limited capacity for one-on-one sessions. Reserve your spot today.</p>
+            <a href="#apply-form" className="gvi-btn">Reserve Your Consultation Now</a>
+          </div>
+
+          <h2 id="attractions" className={styles.subTitle}>Top Tourist Attractions in Australia</h2>
+
+          <p>
+            With a valid Australia tourist visa, you can enjoy a mix of spectacular natural beauty and modern marvels. Don't miss these must-see destinations:
+          </p>
+
+          <ul>
+            <li><strong>Sydney Opera House:</strong> World Heritage-listed architectural masterpiece and performing arts centre.</li>
+            <li><strong>Great Barrier Reef:</strong> The world's largest coral reef system, renowned for its marine biodiversity.</li>
+            <li><strong>Uluru (Ayers Rock):</strong> Iconic sacred sandstone monolith in the Northern Territory's Red Centre.</li>
+            <li><strong>Great Ocean Road:</strong> Breathtaking coastal drive in Victoria featuring the Twelve Apostles.</li>
+            <li><strong>Bondi Beach:</strong> World-famous Sydney beach and a hotspot for surfing and coastal walks.</li>
+            <li><strong>Kakadu National Park:</strong> Vast, biodiverse nature reserve with ancient Aboriginal rock art.</li>
+            <li><strong>Melbourne's Laneways:</strong> Hidden cafes, street art and boutique shops in the city's cultural capital.</li>
+            <li><strong>Fraser Island (K'gari):</strong> The world's largest sand island, with rainforests and freshwater lakes.</li>
+            <li><strong>Tasmanian Wilderness:</strong> Pristine World Heritage area with rugged mountains and unique wildlife.</li>
+            <li><strong>Whitsunday Islands:</strong> Tropical paradise with white-sand beaches like Whitehaven Beach.</li>
+          </ul>
+
+          <h3>Why visit Australia?</h3>
+          <ul>
+            <li><strong>Diverse attractions:</strong> Pristine beaches, rainforests, vibrant cities and the rugged outback.</li>
+            <li><strong>Culinary experiences:</strong> World-class wines, fresh seafood and multicultural cuisine.</li>
+            <li><strong>Wildlife encounters:</strong> See kangaroos, koalas and wombats in their natural habitat.</li>
+            <li><strong>Safe and welcoming:</strong> Well-developed tourism infrastructure and friendly locals.</li>
+            <li><strong>Adventure and relaxation:</strong> Diving, hiking, surfing, or simply relaxing on a beach.</li>
+            <li><strong>Year-round destinations:</strong> Different regions offer ideal conditions in different seasons.</li>
+          </ul>
+
+          <h2 id="faq" className={styles.subTitle}>Australia Tourist Visa from India: Frequently Asked Questions</h2>
+
+          <h3>Which visa do Indians need for a holiday in Australia?</h3>
+          <p>
+            Most Indian tourists apply for the Visitor visa (subclass 600), Tourist stream, online through ImmiAccount.
+          </p>
+
+          <h3>How much does an Australia tourist visa cost from India?</h3>
+          <p>
+            The base application charge for the Tourist stream is approximately 190 AUD, roughly ₹10,500 to ₹11,000, plus a VFS Global service charge of about ₹1,620 if biometrics are requested. Fees change with exchange rates and policy updates, so confirm the current charge before paying.
+          </p>
+
+          <h3>How long does Australia tourist visa processing take?</h3>
+          <p>
+            Processing varies from around 2 to 4 weeks to several months depending on your profile, the documents submitted and current workload.
+          </p>
+
+          <h3>What documents are required for an Australia tourist visa?</h3>
+          <p>
+            You need a passport valid for at least six months, a recent photograph, financial documents (bank statements, ITR, payslips), an employment letter with leave approval, a detailed travel itinerary, proof of strong ties to India and, ideally, travel insurance.
+          </p>
+
+          <h3>How long can I stay in Australia on a tourist visa?</h3>
+          <p>
+            The maximum stay per entry is usually 3 months, but it can be 6 or 12 months depending on your case. Visa validity and permitted stay are different, so check the conditions on your visa grant.
+          </p>
+
+          <h3>Do I need to give biometrics for an Australia visitor visa?</h3>
+          <p>
+            Only if you are asked to. If biometrics are requested, you attend a VFS Global centre to provide them.
+          </p>
+
+          <h2 id="contact" className={styles.subTitle}>Begin Your Australian Journey Today</h2>
+
+          <p>
+            Don't let visa uncertainty delay your travel plans. Our experienced consultants will guide you through the entire process efficiently, so you can focus on planning an unforgettable trip Down Under.
+          </p>
+
+          <div className={styles.contactInfo}>
+            <h3 className={styles.subTitle}>📞 Global Visa Internationals (GVI)</h3>
+            <p>Call: +91-7022213466 (Mon–Sat, 10:00–18:00 IST)</p>
+            <p>Email: operations@globalvisainternationals.com</p>
+            <p>Online Application: <a href="#apply-form" className="gvi-cta-link">Begin Your Visa Process Today</a></p>
+            <p>✅ <a href="https://wa.me/917022213466?text=Hi,%20I%20would%20like%20a%20free%20eligibility%20check%20for%20an%20Australia%20Tourist%20Visa" className="gvi-cta-link">Get Your Free Eligibility Check</a></p>
+          </div>
+
+          <a href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20Australia%20Visa%20assistance" className={styles.callButton}>
+            Contact on WhatsApp
+          </a>
+
+          <p className="gvi-disclaimer">
+            This service is provided by Global Visa Internationals, an independent visa consultancy. We are not affiliated with the Australian government or high commission but provide expert guidance based on extensive experience and current regulations.
+          </p>
         </div>
 
-        <div className={styles.formSection}>
+        <div id="apply-form" className={styles.formSection}>
           <VisaForm />
         </div>
-
       </div>
-      <section>
 
+      <section>
         <ReviewSchema />
         <ReviewCarousel />
       </section>
     </>
-  )
+  );
 }

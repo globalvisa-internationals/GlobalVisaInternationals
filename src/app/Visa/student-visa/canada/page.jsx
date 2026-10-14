@@ -1,29 +1,26 @@
-import VisaForm from '@/Components/VisaForm';
-import styles from '@/Components/Visa.module.css';
+import React from "react";
+import VisaForm from "@/Components/VisaForm";
+import styles from "./CanadaStudentVisa.module.css";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
-import React from 'react';
-import Head from 'next/head';
+
+const pageUrl =
+  "https://www.globalvisainternationals.com/visa/student-visa/canada";
+const imageUrl =
+  "https://www.globalvisainternationals.com/student-visa/Canada-student-Visa-ASSISTANCE.webp";
 
 export async function generateMetadata() {
-  const url = "https://www.globalvisainternationals.com/visa/student-visa/canada";
-  const imageUrl = "https://www.globalvisainternationals.com/student-visa/Canada-student-Visa-ASSISTANCE.webp";
-
   return {
-    title: "Canada Student Visa Consultants | Global Visa Internationals",
+    title: "Canada Student Visa Consultants in India | Global Visa Internationals",
     description:
-      "Apply for your Canada Student Visa with Global Visa Internationals. Expert guidance on the study permit Canada process, SDS applications, costs, and top universities for Indian students.",
-    keywords:
-      "Canada student visa, Canada study visa, study permit Canada, Canada student visa for Indian students, SDS Canada visa, apply for Canada study permit, Canada study visa requirements, study in Canada from India",
-    robots: "index, follow",
-    alternates: {
-      canonical: url,
-    },
+      "Planning to study in Canada from India? Get guidance on study permit requirements, documents, proof of funds, biometrics and your application from Global Visa Internationals.",
+    alternates: { canonical: pageUrl },
+    robots: { index: true, follow: true },
     openGraph: {
-      title: "Canada Student Visa: Application, Requirements & Study Tips",
+      title: "Canada Student Visa Guidance for Indian Students",
       description:
-        "Plan your education in Canada with Global Visa Internationals. Learn about the study permit process, SDS requirements, tuition fees, and top universities for Indian students.",
-      url,
+        "Understand the Canadian study permit process and get personalised application guidance from Global Visa Internationals.",
+      url: pageUrl,
       siteName: "Global Visa Internationals",
       type: "website",
       locale: "en_IN",
@@ -32,27 +29,20 @@ export async function generateMetadata() {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: "Canada Student Visa Assistance for Indian Students",
+          alt: "Canada study permit guidance for students from India",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      site: "@GLOBALVISA1505",
-      title: "Canada Student Visa: Apply, Requirements & Top Universities",
+      title: "Canada Student Visa Guidance | Global Visa Internationals",
       description:
-        "Study in Canada with a valid study permit. Get expert help from Global Visa Internationals on SDS process, tuition fees, and top universities for Indian students.",
+        "Explore study permit requirements, documents and application steps for studying in Canada.",
       images: [imageUrl],
-    },
-    other: {
-      "geo.region": "IN-KA",
-      "geo.placename": "Bengaluru",
-      "ICBM": "12.9716,77.5946",
     },
   };
 }
 
-// ✅ 2. Modern Viewport Export
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -60,403 +50,368 @@ export const viewport = {
   colorScheme: "light",
 };
 
-// ✅ 3. Structured Data (injected as <script> tags)
-export default function Canada() {
-  const pageUrl = "https://www.globalvisainternationals.com/visa/student-visa/canada";
-
+export default function CanadaStudentVisaPage() {
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.globalvisainternationals.com" },
-      { "@type": "ListItem", "position": 2, "name": "Canada Student Visa", "item": pageUrl }
-    ]
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.globalvisainternationals.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Student Visa",
+        item: "https://www.globalvisainternationals.com/visa/student-visa",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Canada Student Visa",
+        item: pageUrl,
+      },
+    ],
   };
 
-  const educationConsultancyJsonLd = {
+  const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Global Visa Internationals provides Canada Student Visa assistance for Indian students — expert help with study permit, SDS applications, proof of funds, SOPs, and university admissions.",
-    "telephone": "+91-7022213466",
-    "address": {
+    name: "Global Visa Internationals",
+    url: "https://www.globalvisainternationals.com",
+    logo: "https://www.globalvisainternationals.com/gvilogo.png",
+    description:
+      "Independent education and visa consultancy offering guidance to students planning to study abroad.",
+    telephone: "+91-7022213466",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
+      streetAddress: "MG Road",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560025",
+      addressCountry: "IN",
     },
-    "geo": { "@type": "GeoCoordinates", "latitude": 12.9716, "longitude": 77.5946 },
-    "sameAs": [
+    sameAs: [
       "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
       "https://www.linkedin.com/company/global-visa-internationals/",
       "https://x.com/GLOBALVISA1505",
       "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
     ],
-    "serviceType": [
-      "Canada Student Visa Assistance",
-      "Study Permit Canada Consultation",
-      "SDS Canada Application Support"
-    ]
   };
 
-  const universitiesJsonLd = {
+  const faqJsonLd = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Top Universities in Canada for International Students",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "item": { "@type": "CollegeOrUniversity", "name": "University of Toronto", "url": "https://www.utoronto.ca/" } },
-      { "@type": "ListItem", "position": 2, "item": { "@type": "CollegeOrUniversity", "name": "University of British Columbia", "url": "https://www.ubc.ca/" } },
-      { "@type": "ListItem", "position": 3, "item": { "@type": "CollegeOrUniversity", "name": "McGill University", "url": "https://www.mcgill.ca/" } }
-    ]
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Do I need a study permit to study in Canada?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most foreign nationals need a study permit to study in Canada. Requirements and exceptions depend on the student's circumstances and course. Check the official Government of Canada guidance before applying.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What documents may be needed for a Canadian study permit?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Depending on your situation, documents may include a letter of acceptance from a designated learning institution, proof of identity, proof of financial support, a provincial or territorial attestation letter where required, and other supporting documents requested by IRCC.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much money do I need to show for a Canada study permit?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The amount depends on tuition, living expenses, family members accompanying you, and current IRCC requirements. Check the Government of Canada website for the current proof-of-funds amount before submitting your application.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can a consultant guarantee study permit approval?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No consultant can guarantee a study permit decision. Immigration authorities assess each application based on the applicable rules and the information submitted.",
+        },
+      },
+    ],
   };
 
   return (
     <>
-      {/* ✅ Structured Data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(universitiesJsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
-
-      <div className={styles.imageContainer}>
-        <img
-          src="/student-visa/Canada-student-Visa-ASSISTANCE.webp"
-          alt="Study in Canada with Global Visa Internationals"
-          className={styles.VisaImage}
-          loading="lazy"
-        />
-      </div>
-
-      <div className={styles.VisaSec}>
-
-
-        <div className={styles.VisaData}>
-
-
-          <h1 className={styles.Title}>Canada Student Visa assistance  | Global Visa internationals</h1>
-
-          <p className={styles.card}>If you’re planning to study in Canada from India, obtaining a Canada student visa or Canada study visa is your gateway to world-class education. Whether you’re applying for a study permit Canada, searching for apply to study in Canada guidance, or figuring out how to get Canada student visa from India, Global Visa International offers full-service support. We handle everything — from Canada student visa for Indian students and Canada study permit for Indians to ensuring you meet Canada student visa requirements for Indians. Our team walks you through Canada student visa eligibility for Indian students, reviews documents required for Canada student visa from India, and helps you ace Canada student visa interview questions India.</p>
-          <p className={styles.card}>If you’ve been searching for Canada student visa consultants in India, want advice on Canada study visa without IELTS for Indians, or need details about Canada student visa fees in India, we can help. We also guide you in selecting the best colleges in Canada for Indian students, applying to top universities in Canada for Indian students, and using the student direct stream Canada India (SDS) for faster results. We explain the Canada study visa GIC requirement India and much more. Call our experts today to take the first step toward your Canadian education.</p>
-          <h3 className={styles.strong}>Canada Student Visa Requirements for Indians</h3>
-          <p className={styles.card}>Applying for a student visa means understanding how much funds required for Canada student visa from India and whether can I sponsor family on Canada student visa from India fits your case. We assist in resolving Canada study permit refusal reasons India, filing Canada student visa appeal process India, booking Canada study permit biometrics India, and completing your medical exam for Canada student visa India. We also help you secure your police clearance certificate for Canada student visa India, prepare your Canada study visa sample cover letter for Indians, and ensure your Canada study visa bank statement format India meets IRCC standards. Proof of finances like proof of funds for Canada student visa India is a critical step we handle carefully.</p>
-          <p className={styles.card}>From apply for student visa to Canada from Delhi/Mumbai/Bangalore to tracking Canada student visa processing time India and Canada student visa processing time 2024 2025 India, we help you meet deadlines. Whether you need Canada study permit extension from India, advice on how to apply for Canada study permit from India step by step, or calculating student visa to Canada cost in rupees, we ensure your Canada study permit checklist for Indian students 2025 is ready. Contact Global Visa International today to start your application right.</p>
-
-          <h3 className={styles.strong}>Canada Study Visa GIC Requirement India</h3>
-          <p className={styles.card}>Students aiming for post graduation work permit (PGWP) Canada 2025 Indian students or checking PGWP eligibility after study in Canada for Indians often ask if can Indian students get permanent residency after studying in Canada. We guide you through express entry after study in Canada for Indians, choosing colleges in Canada that accept Indian students without IELTS, applying for scholarships for Indian students to study in Canada, and finding the cheapest cities to study in Canada for Indian students. We also help you learn how to get study permit faster Canada India, book Canada study visa appointment India, and find your Canada student visa processing centre India VAC locations.</p>
-          <p className={styles.card}>Our process reduces Canada student visa refusal reasons and solutions India through clear documentation and preparation. We coach you on how to write statement of purpose for Canada student visa India, provide SOPs for Canada study permit Indian students examples, and explain Canada study permit document translation requirements India. From choosing the best courses to study in Canada for Indian students to comparing diploma vs degree in Canada for Indians job prospects, we make sure you’re ready. Start your journey now with our expert team.</p>
-
-          <h3 className={styles.strong}>Canada Study Visa Appointment India</h3>
-          <p className={styles.card}>Whether you wish to study in Ontario from India how to apply student visa, study in British Columbia from India student visa guide, study in Quebec from India student visa requirements, or study in Alberta from India student visa process, we’ve got you covered. We guide you on GIC Canada for Indian students how to buy, securing Canada study visa proof of tuition payment India, and how to show ties to India for Canada student visa to satisfy IRCC officers. We also monitor Canada study permit processing delays 2024 2025 India and prepare a Canada study visa checklist for parents funding education from India.</p>
-          <p className={styles.card}>If you’re applying for student visa to Canada for MBBS/engineering from India, exploring part time work while studying in Canada rules for Indians, or looking into a co-op work permit Canada for Indian students, we can assist. We help with Canada study visa medical insurance requirement India, how to convert marksheets for Canada study permit Indian students, and understanding Canada student visa IELTS score requirement for Indians along with alternatives to IELTS for Canada student visa from India. Book your consultation now and get expert guidance every step of the way.</p>
-          <h3 className={styles.strong}>Student Visa to Canada for Masters from India</h3>
-          <p className={styles.card}>From student visa to Canada for masters from India to apply for Canada student visa after refusal India reapply tips, we manage even complex cases. We explain Canada study permit visa fees refund policy India, update you on Canada study visa success rate for Indian students 2024, and connect you with the best immigration consultants for Canada student visa in India. Our team also handles visa interview appointment reschedule Canada India, creates a Canada study permit arrival checklist for Indian students, and guides on how to get invitation letter for Canada study permit from college.</p>
-          <p className={styles.card}>We advise on Canada study permit open work permit spouse rules India, plan your Canada student visa timeline from application to approval India, and answer Canada study visa FAQs for Indian students. We even share Indian student experiences in Canada study visa stories reddit/quora, track Canada study visa attrition rates and cap 2024 2025, and explain how to prepare bank guarantee for Canada student visa India. Call us today to make your application stronger.</p>
-
-          <h3 className={styles.strong}>Canada Student Visa Checklist for Self-Funded Students India</h3>
-          <p className={styles.card}>If you face unusual scenarios like Canada study visa not asking for passport India what to do or need to Canada student visa extend stay after study Indian students, we help. We offer scholarship application tips Indian students Canada universities, recommend best programs in Canada for Indian students with job prospects, and explain the difference between study permit and student visa Canada explained India. We discuss Canada student visa consultation fees India — is it worth it, explore part time jobs in Canada for international students Indian students guide, and provide a Canada student visa checklist for self-funded students India.</p>
-          <p className={styles.card}>We even handle niche queries like Canada student visa for 50 year olds from India, give guidance on Canada study visa processing centre how to contact VAC India, and prepare a Canada student visa checklist for government scholarship students India. We track university admission deadlines in Canada for Indian students 2024 2025, review Canada study visa travel insurance requirements India, and show how to track Canada study permit application from India. Enquire now to avoid missing key steps.</p>
-          <h3 className={styles.strong}>Canada Study Visa Appointment Biometric Booking India</h3>
-          <p className={styles.card}>From booking your Canada study visa appointment biometric booking India to advising what to do if Canada student visa delayed India, our services cover every detail. We support Canada student visa, Canada study visa, and study permit Canada applications, connect you to myvisajobs com Canada, help you apply to study in Canada, and guide on Canada visit visa from UK for international students. We help you apply for student visa Canada, Canada schooling visa, SX1 visa Canada, calculate student visa Canada cost, and secure your Canada education visa.</p>
-          <p className={styles.card}>We assist with Canada visa without IELTS, match you with the best consultant for Canada study visa, and prepare you to apply study visa for Canada or apply for study permit Canada. We explain each Canada student visa requirement, discuss schooling visa Canada, minor study visa Canada, student permit Canada, and even Canada without IELTS study visa 2022. Talk to our experts now and get one step closer to Canada.</p>
-
-
-          <p className={styles.card}>Are you dreaming of experiencing world-class education in a vibrant and multicultural environment? Canada has emerged as a top destination for international students, offering unparalleled academic opportunities and a high quality of life. At Global Visa Internationals, we understand that navigating the Canadian student visa application process can feel overwhelming. That's why we're here to guide you every step of the way, turning your aspirations of studying in Canada into a reality. Avoide pit falles and contact Global Visa Internationals for Student Visa assistance for Canada </p>
-          <h2 className={styles.strong}>Embark on a Journey to Academic Excellence in Canada</h2>
-          <p className={styles.card}>Canada's renowned educational institutions offer a wide range of programs across diverse fields, from cutting-edge technology and innovative research to humanities and arts. Imagine yourself studying in state-of-the-art facilities, learning from leading academics, and collaborating with students from around the globe. A Canadian education is not just a degree; it's an investment in your future, opening doors to global career opportunities and personal growth.</p>
-          <h3 className={styles.strong}>Navigating the Path to Your Canadian Student Visa</h3>
-          <p className={styles.card}>The process of obtaining a Canadian student visa involves several key stages. From understanding the eligibility criteria and gathering the necessary documentation to submitting a complete and accurate application, each step requires careful attention to detail. While the specifics can vary based on your country of origin and chosen program, some common elements include:
-
-          </p>
-
-          <ul className={styles.card}>
-            <li>Acceptance letter from a Designated Learning Institution (DLI)</li>
-            <li>Proof of sufficient funds to cover tuition fees and living expenses</li>
-            <li>Medical examination and police clearance certificate</li>
-            <li>Language proficiency test results (e.g., IELTS, TOEFL)</li>
-            <li>Statement of purpose outlining your study plans and career goals</li>
-            <li>Biometrics appointment and interview (if required)</li>
-            <li>Visa application fee payment</li>
-          </ul>
-
-          <p className={styles.note}> Is there a Frear for rejection of Student visa Contact Global Visa internationals fopr Shooth and stress fir Visa process and Guidence we have 100% sucess of getting Canada Student Visa  </p>
-
-
-
-          <h3 className={styles.strong}>Why Choose Canada for Your Education?</h3>
-          <p className={styles.card}>Canada is not just a country; it's a melting pot of cultures, languages, and experiences. With its stunning landscapes, friendly communities, and high standard of living, Canada offers an enriching environment for international students. You'll have the chance to explore breathtaking natural wonders, engage in vibrant city life, and build lifelong friendships with people from diverse backgrounds.</p>
-          <h3 className={styles.strong}>Why Choose Global Visa Internationals for Your Canada Student Visa?</h3>
-          <p className={styles.card}>At Global Visa Internationals, we are more than just visa consultants; we are your partners in achieving your Canadian education dream. We offer:</p>
-          <ul>
-            <li className={styles.card} ><strong className={styles.strong}>Expert Guidance:</strong> Our experienced consultants possess in-depth knowledge of Canadian immigration policies and procedures, ensuring you receive accurate and up-to-date information.</li>
-            <li className={styles.card} ><strong className={styles.strong}>Personalized Support:</strong> We understand that every student's situation is unique. We provide tailored guidance and support to address your specific needs and concerns.</li>
-            <li className={styles.card} ><strong className={styles.strong}>Streamlined Process:</strong> We help you navigate the complexities of the application process, ensuring all documentation is correctly prepared and submitted on time</li>
-            <li className={styles.card} ><strong className={styles.strong}>Reduced Stress:</strong> Let us handle the intricate details, allowing you to focus on preparing for your academic journey.</li>
-            <li className={styles.card} ><strong className={styles.strong}>Increased Chances of Success:</strong> Our expertise and meticulous approach significantly enhance your chances of a successful visa application.</li>
-          </ul>
-          <h3 className={styles.strong}>Ready to Take the Next Step?</h3>
-          <p className={styles.card}>Don't let the complexities of the visa process deter you from pursuing your academic ambitions in Canada. Contact Global Visa Internationals today for a comprehensive consultation. Our friendly and knowledgeable team is eager to discuss your study plans, assess your eligibility, and provide you with a clear roadmap to obtaining your Canadian student visa</p>
-          <b>Unlock your potential. Experience Canada. Partner with Global Visa Internationals.</b>
-
-
-
-
-
-
-          <h3 className={styles.strong}></h3>
-          <strong className={styles.strong}>Dreaming of a Canadian Education? Here's your guide to making that dream a reality.</strong>
-          <section id="top-courses" className={styles.Section}>
-            <h3 className={styles.strong}>Top Courses to Study in Canada</h3>
-            <p className={styles.card}>Canada offers a diverse range of programs. Some of the most popular choices among international students include:</p>
-            <ul>
-              <li className={styles.card} ><strong className={styles.strong}>Engineering:</strong> Civil, Mechanical, Electrical, Computer (Keywords: engineering programs Canada, study engineering in Canada)</li>
-              <li className={styles.card} ><strong className={styles.strong}>Computer Science & IT:</strong> Software Development, Data Science, Cybersecurity (Keywords: computer science Canada, IT programs Canada)</li>
-              <li className={styles.card} ><strong className={styles.strong}>Business & Management:</strong> Finance, Marketing, International Business (Keywords: business schools Canada, MBA Canada)</li>
-              <li className={styles.card} ><strong className={styles.strong}>Healthcare:</strong> Nursing, Medicine, Pharmacy (Keywords: healthcare programs Canada)</li>
-              <li className={styles.card} ><strong className={styles.strong}>Humanities & Social Sciences:</strong> Psychology, Sociology, History (Keywords: humanities programs Canada)</li>
-            </ul>
-          </section>
-
-
-
-          <section id="Best Scholarships">
-            <h3 className={styles.strong}>Best Scholarships in Canada</h3>
-            <p className={styles.card}>Funding your education can be a challenge. Explore these scholarship opportunities:</p>
-            <ul>
-              <li className={styles.card}><strong className={styles.strong}>Vanier Canada Graduate Scholarships:</strong> For doctoral studies.</li>
-              <li className={styles.card}><strong className={styles.strong}>Banting Postdoctoral Fellowships:</strong> For postdoctoral research.</li>
-              <li className={styles.card}><strong className={styles.strong}>Ontario Graduate Scholarship (OGS): </strong>For master's and doctoral students in Ontario.</li>
-              <li className={styles.card}><strong className={styles.strong}>ester B. Pearson International Scholarship:</strong> For undergraduate studies at the University of Toronto.</li>
-              <li className={styles.card}><strong className={styles.strong}>UBC International Leader of Tomorrow Award:</strong> For undergraduate studies at the University of British Columbia.</li>
-
-            </ul>
-          </section>
-
-
-
-
-          <p className={styles.note}>Felling harder to to do Canada Visa process Dont wory we are hear, Let Global Visa Internationals take away your stress we are the experts in doing Canada Student Visa process Contact us now with in just one click we will make your visa process stress free , we will take care all of your visa process and guide you Contact now  </p>
-          <h3 className={styles.strong}>Types of Student Visas</h3>
-          <ul className={styles.card}>
-            <li><strong className={styles.strong}>Study Permit: </strong>The primary visa for international students.</li>
-            <li><strong className={styles.strong}>Work Permit (Optional):</strong> Allows part-time work during studies and post-graduation work experience.</li>
-          </ul>
-          <h3 className={styles.strong}>Education Model</h3>
-          <ul className={styles.card}>
-            <li><strong className={styles.strong}>Focus on Practical Skills:</strong> Canadian education emphasizes hands-on learning, research, and industry collaborations.</li>
-            <li><strong className={styles.strong}>High-Quality Standards:</strong> Canadian universities and colleges are globally recognized for their academic excellenc</li>
-            <li><strong className={styles.strong}>Multicultural Environment:</strong> Experience a diverse and inclusive learning environment.</li>
-          </ul>
-
-
-          <h3 className={styles.strong}>Top Universities in Canada</h3>
-          <p className={styles.card}>Canada is home to some of the world's leading universities:</p>
-          <ol>
-            <li className={styles.card}><strong className={styles.strong}>University of Toronto:</strong> Known for its research and diverse programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>McGill University:</strong> Renowned for its medical and engineering programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of British Columbia (UBC):</strong> Offers a wide range of undergraduate and graduate programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Alberta:</strong> Known for its engineering and business programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>McMaster University:</strong> Recognized for its health sciences and engineering programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Montreal:</strong> Offers programs in French and English.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Calgary:</strong> Known for its research and engineering programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>Western University:</strong> Offers a strong business program.</li>
-            <li className={styles.card}><strong className={styles.strong}>Queen's University:</strong> Known for its business and law programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>Dalhousie University:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Ottawa:</strong> Known for its bilingual programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>Simon Fraser University:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>York University:</strong> Known for its business and law programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Victoria:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>Carleton University:</strong> Known for its journalism and public affairs programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Saskatchewan:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Manitoba:</strong> Known for its business and engineering programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Guelph:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of New Brunswick:</strong> Known for its engineering and business programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Regina:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Windsor:</strong> Known for its law and business programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Lethbridge:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>Lakehead University:</strong> Known for its engineering and business programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Northern British Columbia:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>Trent University:</strong> Known for its environmental studies and humanities programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>Wilfrid Laurier University:</strong> Offers a range of programs in various fields.</li>
-            <li className={styles.card}><strong className={styles.strong}>University of Ontario Institute of Technology:</strong> Known for its engineering and technology programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>Thompson Rivers University:</strong> Offers a range of programs in various fields.</li>
-
-          </ol>
-
-
-
-
-          <p className={styles.card}>Got confuse which type of visa suits you?  Dont wory! We are hear Contact Global Visa  Internationals For Clarity and do your visa process stress free, Just fill the form and our experts will contact you and guide you  </p>
-          <h3 className={styles.strong}>Career Opportunities in Canada</h3>
-          <p className={styles.card}>Canada's strong economy and demand for skilled workers create numerous career opportunities for international graduates. Some in-demand fields include:</p>
-          <ul>
-            <li className={styles.card}><strong className={styles.strong}>Information Technology:</strong> Software development, data analysis, cybersecurity.</li>
-            <li className={styles.card}><strong className={styles.strong}>Technology:</strong> Software development, AI, cybersecurity.</li>
-            <li className={styles.card}><strong className={styles.strong}>Healthcare:</strong> Nursing, pharmacy, medical research.</li>
-            <li className={styles.card}><strong className={styles.strong}>Engineering:</strong> Civil, mechanical, electrical.</li>
-            <li className={styles.card}><strong className={styles.strong}>Finance:</strong> Accounting, investment banking, financial analysis.</li>
-            <li className={styles.card}><strong className={styles.strong}>Education:</strong> Teaching, research, administration.</li>
-            <li className={styles.card}><strong className={styles.strong}>Hospitality and Tourism:</strong> Hotel management, event planning, travel services.</li>
-            <li className={styles.card}><strong className={styles.strong}>Marketing and Sales:</strong> Digital marketing, sales management, market research.</li>
-            <li className={styles.card}><strong className={styles.strong}>Construction:</strong> Project management, architecture, skilled trades.</li>
-            <li className={styles.card}><strong className={styles.strong}>Environmental Science:</strong> Conservation, sustainability, research.</li>
-            <li className={styles.card}><strong className={styles.strong}>Business and Management:</strong> Human resources, operations management, entrepreneurship.</li>
-            <li className={styles.card}><strong className={styles.strong}>Legal Services:</strong> Law, paralegal, legal research.</li>
-            <li className={styles.card}><strong className={styles.strong}>Arts and Culture:</strong> Graphic design, film production, music.</li>
-            <li className={styles.card}><strong className={styles.strong}>Transportation and Logistics:</strong> Supply chain management, logistics, transportation planning.</li>
-            <li className={styles.card}><strong className={styles.strong}>Telecommunications:</strong> Network engineering, telecommunications management.</li>
-            <li className={styles.card}><strong className={styles.strong}>Pharmaceuticals:</strong> Research and development, quality control.</li>
-            <li className={styles.card}><strong className={styles.strong}>Retail:</strong> Store management, merchandising, customer service.</li>
-            <li className={styles.card}><strong className={styles.strong}>Real Estate:</strong> Property management, real estate sales.</li>
-            <li className={styles.card}><strong className={styles.strong}>Insurance:</strong> Underwriting, claims management, risk assessment.</li>
-            <li className={styles.card}><strong className={styles.strong}>Media and Communications:</strong> Journalism, public relations, content creation.</li>
-            <li className={styles.card}><strong className={styles.strong}>Non-Profit and Community Services:</strong> Social work, community development, advocacy.</li>
-            <li className={styles.card}><strong className={styles.strong}>Research and Development:</strong> Scientific research, product development.</li>
-            <li className={styles.card}><strong className={styles.strong}>Public Administration:</strong> Government services, policy analysis, public affairs.</li>
-            <li className={styles.card}><strong className={styles.strong}>Sports and Recreation:</strong> Sports management, coaching, fitness training.</li>
-            <li className={styles.card}><strong className={styles.strong}>Fashion and Design:</strong> Fashion design, interior design, product design.</li>
-            <li className={styles.card}><strong className={styles.strong}>Veterinary Services:</strong> Veterinary medicine, animal care.</li>
-            <li className={styles.card}><strong className={styles.strong}>Construction and Trades:</strong> Carpentry, plumbing, electrical work.</li>
-            <li className={styles.card}><strong className={styles.strong}>Security Services:</strong> Security management, loss prevention.</li>
-            <li className={styles.card}><strong className={styles.strong}>Human Resources:</strong> Recruitment, employee relations, training and development.</li>
-            <li className={styles.card}><strong className={styles.strong}>Public Relations:</strong> Media relations, crisis management, event planning.</li>
-            <li className={styles.card}><strong className={styles.strong}>Advertising:</strong> Creative direction, copywriting, media planning.</li>
-            <li className={styles.card}><strong className={styles.strong}>Graphic Design:</strong> Visual communication, branding, web design.</li>
-          </ul>
-
-
-
-          <h3 className={styles.strong}>Best States for International Students</h3>
-          <p className={styles.card}>Some of the best provinces for international students in Canada include:</p>
-          <ol>
-            <li className={styles.card}><strong className={styles.strong}>Ontario:</strong> Home to Toronto, the largest city in Canada, and many top universities.</li>
-            <li className={styles.card}><strong className={styles.strong}>British Columbia:</strong> Known for its stunning landscapes and universities like UBC.</li>
-            <li className={styles.card}><strong className={styles.strong}>Quebec:</strong> Offers a unique cultural experience and French-language programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>Alberta:</strong> Known for its strong economy and universities like the University of Alberta.</li>
-            <li className={styles.card}><strong className={styles.strong}>Nova Scotia:</strong> Offers a friendly atmosphere and institutions like Dalhousie University.</li>
-            <li className={styles.card}><strong className={styles.strong}>Manitoba:</strong> Known for its affordable living and universities like the University of Manitoba.</li>
-            <li className={styles.card}><strong className={styles.strong}>Saskatchewan:</strong> Offers a strong agricultural and engineering focus.</li>
-            <li className={styles.card}><strong className={styles.strong}>New Brunswick:</strong> Known for its friendly communities and affordable living.</li>
-            <li className={styles.card}><strong className={styles.strong}>Prince Edward Island:</strong> Offers a unique cultural experience and smaller class sizes.</li>
-            <li className={styles.card}><strong className={styles.strong}>Newfoundland and Labrador:</strong> Known for its stunning landscapes and friendly communities.</li>
-            <li className={styles.card}><strong className={styles.strong}>Yukon:</strong> Offers a unique experience in the northern part of Canada.</li>
-            <li className={styles.card}><strong className={styles.strong}>Northwest Territories:</strong> Known for its stunning landscapes and unique culture.</li>
-            <li className={styles.card}><strong className={styles.strong}>Nunavut:</strong> Offers a unique experience in the northern part of Canada.</li>
-            <li className={styles.card}><strong className={styles.strong}>Ontario:</strong> Home to Toronto, the largest city in Canada, and many top universities.</li>
-            <li className={styles.card}><strong className={styles.strong}>British Columbia:</strong> Known for its stunning landscapes and universities like UBC.</li>
-            <li className={styles.card}><strong className={styles.strong}>Quebec:</strong> Offers a unique cultural experience and French-language programs.</li>
-            <li className={styles.card}><strong className={styles.strong}>Alberta:</strong> Known for its strong economy and universities like the University of Alberta.</li>
-            <li className={styles.card}><strong className={styles.strong}>Nova Scotia:</strong> Offers a friendly atmosphere and institutions like Dalhousie University.</li>
-          </ol>
-
-
-          <div className="table-responsive">
-
-            <div className={styles.container}>
-              <h1 className={styles.heading}>
-                Cost of Education and Living in Canada for International Students
-              </h1>
-              <p className={styles.intro}>
-                Planning your education in Canada involves understanding both tuition and living expenses. Below is an overview of the estimated costs for international students:
-              </p>
-
-              <table className={styles.table}>
-                <thead>
-                  <tr>
-                    <th>Expense Category</th>
-                    <th>Estimated Cost (CAD)</th>
-                    <th>Estimated Cost (INR)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Tuition Fees (Undergraduate Programs)</td>
-                    <td>CAD 20,000 – 30,000/year</td>
-                    <td>₹12,00,000 – ₹18,00,000/year</td>
-                  </tr>
-                  <tr>
-                    <td>Tuition Fees (Postgraduate Programs)</td>
-                    <td>CAD 15,000 – 20,000/year</td>
-                    <td>₹9,00,000 – ₹12,00,000/year</td>
-                  </tr>
-                  <tr>
-                    <td>Accommodation (On-Campus Housing)</td>
-                    <td>CAD 8,000 – 10,000/year</td>
-                    <td>₹4,80,000 – ₹6,00,000/year</td>
-                  </tr>
-                  <tr>
-                    <td>Accommodation (Off-Campus Renting)</td>
-                    <td>CAD 700 – 2,500/month</td>
-                    <td>₹42,000 – ₹1,50,000/month</td>
-                  </tr>
-                  <tr>
-                    <td>Food & Groceries</td>
-                    <td>CAD 200 – 500/month</td>
-                    <td>₹12,000 – ₹30,000/month</td>
-                  </tr>
-                  <tr>
-                    <td>Transportation</td>
-                    <td>CAD 90 – 150/month</td>
-                    <td>₹5,400 – ₹9,000/month</td>
-                  </tr>
-                  <tr>
-                    <td>Health Insurance</td>
-                    <td>CAD 600 – 1,000/year</td>
-                    <td>₹36,000 – ₹60,000/year</td>
-                  </tr>
-                  <tr>
-                    <td>Miscellaneous Expenses</td>
-                    <td>CAD 500 – 1,000/month</td>
-                    <td>₹30,000 – ₹60,000/month</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <p className={styles.note}>
-                <strong className={styles.strong}>Note:</strong> Costs are approximate and can vary based on the institution, city, and personal lifestyle. Major cities like Toronto and Vancouver typically have higher living costs compared to cities like Montreal or Winnipeg. Health insurance requirements and costs may differ by province. Exchange rates fluctuate; the above INR estimates are based on an approximate rate of 1 CAD = ₹60. For the most accurate and up-to-date information, refer to the official websites of your chosen educational institutions and Canadian immigration authorities.
-              </p>
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <p className={styles.eyebrow}>YOUR STUDY ABROAD JOURNEY STARTS HERE</p>
+            <h1>Canada Student Visa Guidance for Indian Students</h1>
+            <p className={styles.heroText}>
+              Planning to study in Canada? Get clear, personalised guidance on
+              study permit requirements, supporting documents, proof of funds
+              and the application process from Global Visa Internationals.
+            </p>
+            <div className={styles.heroActions}>
+              <a className={styles.primaryButton} href="#enquiry">
+                Book a Consultation <span aria-hidden="true">→</span>
+              </a>
+              <a className={styles.secondaryButton} href="#application-process">
+                Explore the Process
+              </a>
             </div>
-
+            <p className={styles.heroNote}>
+              Practical application support. Clear next steps. No guarantee of approval.
+            </p>
           </div>
+          <div className={styles.heroImageWrap}>
+            <img
+              src="/student-visa/Canada-student-Visa-ASSISTANCE.webp"
+              alt="Students preparing for higher education in Canada"
+              className={styles.heroImage}
+              fetchPriority="high"
+              width="720"
+              height="620"
+            />
+            <div className={styles.imageBadge}>
+              <span className={styles.badgeIcon} aria-hidden="true">✦</span>
+              <span><strong>Personalised guidance</strong><small>From planning to application</small></span>
+            </div>
+          </div>
+        </section>
 
+        <nav className={styles.quickNav} aria-label="On this page">
+          <a href="#requirements">Requirements</a>
+          <a href="#documents">Documents</a>
+          <a href="#application-process">Application steps</a>
+          <a href="#costs">Costs</a>
+          <a href="#universities">Universities</a>
+          <a href="#faqs">FAQs</a>
+        </nav>
 
+        <section className={styles.introSection}>
+          <div className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>STUDY IN CANADA</p>
+            <h2>Make your study permit application easier to understand</h2>
+          </div>
+          <p className={styles.lead}>
+            Canada offers a wide range of college and university programmes for
+            international students. Before applying, it is important to choose
+            a suitable programme, understand the current study permit rules and
+            prepare documents that accurately reflect your plans and finances.
+          </p>
+          <p>
+            Global Visa Internationals provides consultancy support to students
+            from India who are exploring Canadian education. We can help you
+            organise your application, review your supporting documents and
+            understand the steps you may need to complete. The final decision
+            rests with Canadian immigration authorities.
+          </p>
+        </section>
 
+        <section className={styles.featureGrid} aria-label="Our guidance services">
+          <article className={styles.featureCard}>
+            <span className={styles.featureIcon} aria-hidden="true">01</span>
+            <h3>Study plan guidance</h3>
+            <p>Discuss your education goals and explore programme options that fit your background.</p>
+          </article>
+          <article className={styles.featureCard}>
+            <span className={styles.featureIcon} aria-hidden="true">02</span>
+            <h3>Document preparation</h3>
+            <p>Organise your checklist and review documents for completeness and consistency.</p>
+          </article>
+          <article className={styles.featureCard}>
+            <span className={styles.featureIcon} aria-hidden="true">03</span>
+            <h3>Application guidance</h3>
+            <p>Understand application stages, biometrics and where to find official instructions.</p>
+          </article>
+          <article className={styles.featureCard}>
+            <span className={styles.featureIcon} aria-hidden="true">04</span>
+            <h3>Personalised consultation</h3>
+            <p>Discuss your circumstances and identify questions to resolve before you apply.</p>
+          </article>
+        </section>
 
-          <p className={styles.card}>Do you fell Harder By seeing soo many details !. Dont wory We are hear Contact Global visa internationals And make your Visa Process Stress free</p>
+        <section id="requirements" className={styles.contentSection}>
+          <div className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>BEFORE YOU APPLY</p>
+            <h2>Canada student visa requirements for Indian students</h2>
+          </div>
+          <p>
+            Most international students need a Canadian study permit to study
+            in Canada. The exact requirements depend on your course, institution
+            and personal circumstances. Common items to check include:
+          </p>
+          <div className={styles.checkGrid}>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Letter of acceptance</h3><p>An acceptance letter from a designated learning institution (DLI).</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Proof of financial support</h3><p>Evidence that you can cover tuition, living expenses and applicable travel costs.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Attestation letter, if required</h3><p>Check whether a provincial or territorial attestation letter (PAL/TAL) applies to you.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Identity and supporting documents</h3><p>Prepare a valid passport and any additional forms or evidence requested for your case.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Biometrics or medical exam, if required</h3><p>Follow the instructions issued for your application and individual circumstances.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Study plan and supporting explanation</h3><p>Ensure the information you provide is accurate, consistent and supported by evidence.</p></div></div>
+          </div>
+          <p className={styles.notice}>
+            Requirements can change. Confirm your personal document checklist and
+            current rules with the official Government of Canada website before applying.
+          </p>
+        </section>
 
-          <h3 className={styles.strong}>Visa Application Process</h3>
-          <p className={styles.card}>The visa application process involves several steps:</p>
-          <ul>
-            <li className={styles.card}><strong className={styles.strong}>Gather Required Documents:</strong> Acceptance letter, proof of funds, medical exam, etc.</li>
-            <li className={styles.card}><strong className={styles.strong}>Complete Application Form:</strong> Fill out the study permit application form.</li>
-            <li className={styles.card}><strong className={styles.strong}>Pay Application Fee:</strong> Submit the required fee for processing.</li>
-            <li className={styles.card}><strong className={styles.strong}>Submit Biometrics:</strong> Provide fingerprints and photo if required.</li>
-            <li className={styles.card}><strong className={styles.strong}>Attend Interview (if necessary):</strong> Some applicants may be called for an interview.</li>
+        <section id="documents" className={`${styles.contentSection} ${styles.softSection}`}>
+          <div className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>GET ORGANISED</p>
+            <h2>Documents to prepare for a study permit application</h2>
+          </div>
+          <p>
+            Your checklist may include the following documents. Not every item
+            applies to every applicant, and immigration authorities may request
+            additional information.
+          </p>
+          <ul className={styles.documentList}>
+            <li>Valid passport or travel document</li>
+            <li>Letter of acceptance from your Canadian institution</li>
+            <li>Proof of funds and supporting financial records</li>
+            <li>Provincial or territorial attestation letter, if applicable</li>
+            <li>Academic transcripts, certificates and relevant test results</li>
+            <li>Study plan and other supporting explanations, where appropriate</li>
+            <li>Biometrics, medical or police documents, if requested or required</li>
+            <li>Application forms and fee-payment confirmation</li>
           </ul>
+        </section>
 
+        <section id="application-process" className={styles.contentSection}>
+          <div className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>STEP BY STEP</p>
+            <h2>How to apply for a Canada study permit</h2>
+            <p className={styles.lead}>Use this overview to plan your next steps. Always follow the current instructions for your own application.</p>
+          </div>
+          <ol className={styles.steps}>
+            <li><span>1</span><div><h3>Choose your course and institution</h3><p>Research programmes, admission criteria, tuition fees and whether the institution is a designated learning institution.</p></div></li>
+            <li><span>2</span><div><h3>Receive your letter of acceptance</h3><p>Complete the institution’s admission process and keep your official acceptance documents.</p></div></li>
+            <li><span>3</span><div><h3>Check current permit requirements</h3><p>Review the official rules for proof of funds, PAL/TAL exemptions and any requirements specific to your circumstances.</p></div></li>
+            <li><span>4</span><div><h3>Prepare and submit your application</h3><p>Complete the required forms, provide truthful supporting documents and pay the applicable fees.</p></div></li>
+            <li><span>5</span><div><h3>Complete biometrics or other requested steps</h3><p>Follow any instructions or deadlines sent by Immigration, Refugees and Citizenship Canada (IRCC).</p></div></li>
+            <li><span>6</span><div><h3>Monitor your application</h3><p>Use the official account or service specified for your application to check updates and respond to requests.</p></div></li>
+          </ol>
+        </section>
 
+        <section className={styles.ctaBand}>
+          <div>
+            <p className={styles.eyebrow}>NEED HELP PLANNING?</p>
+            <h2>Talk through your Canada study plans with our team</h2>
+            <p>Share your study goals and questions. We’ll help you understand the consultancy support available for your next steps.</p>
+          </div>
+          <a className={styles.lightButton} href="#enquiry">Request a Consultation <span aria-hidden="true">→</span></a>
+        </section>
 
-          <h3 className={styles.strong}>Processing Time</h3>
-          <p className={styles.card}>Processing times vary based on the applicant's country and the volume of applications. On average, it can take 4-12 weeks.</p>
-          <p className={styles.card}>After completing your studies, you may be eligible for a Post-Graduation Work Permit (PGWP), allowing you to work in Canada for up to three years. This valuable experience can enhance your employability and provide a pathway to permanent residency.</p>
-          <h3 className={styles.strong}>Conclusion</h3>
-          <p className={styles.card}>Studying in Canada is an incredible opportunity to gain a world-class education while immersing yourself in a multicultural society. At Global Visa Internationals, we are committed to helping you navigate the complexities of the student visa process, ensuring you have the best chance of success. Contact us today to start your journey toward a brighter future in Canada!</p>
-          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
-        </div>
+        <section id="costs" className={styles.contentSection}>
+          <div className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>PLAN YOUR BUDGET</p>
+            <h2>Understanding the cost of studying in Canada</h2>
+          </div>
+          <p>
+            Your total budget depends on your institution, programme, city and
+            personal needs. Before making financial commitments, calculate the
+            full cost using current figures from your chosen institution and
+            official Canadian immigration guidance.
+          </p>
+          <div className={styles.costGrid}>
+            <article><span aria-hidden="true">▤</span><h3>Tuition and fees</h3><p>Check the current tuition schedule and any programme-specific charges with your institution.</p></article>
+            <article><span aria-hidden="true">⌂</span><h3>Living expenses</h3><p>Budget for housing, food, local transport, phone service and everyday needs.</p></article>
+            <article><span aria-hidden="true">＋</span><h3>Other expenses</h3><p>Allow for insurance where applicable, travel, study materials and application-related fees.</p></article>
+          </div>
+          <p className={styles.notice}>
+            Proof-of-funds thresholds and fees can change. Avoid relying on old
+            INR conversions or outdated processing-time estimates; check official
+            sources for the latest requirements.
+          </p>
+        </section>
 
-        <div className={styles.formSection}>
-          <VisaForm />
-        </div>
-      </div>
-      <section>
-        <ReviewSchema />
-        <ReviewCarousel />
-      </section>
+        <section id="universities" className={`${styles.contentSection} ${styles.softSection}`}>
+          <div className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>EXPLORE YOUR OPTIONS</p>
+            <h2>Popular universities to research in Canada</h2>
+          </div>
+          <p>
+            Start by comparing course content, admission requirements, tuition,
+            location and student support. These well-known institutions are
+            examples to research—not a ranking or a guarantee of admission.
+          </p>
+          <div className={styles.universityGrid}>
+            <a href="https://www.utoronto.ca/" target="_blank" rel="noreferrer"><strong>University of Toronto</strong><span>Toronto, Ontario ↗</span></a>
+            <a href="https://www.ubc.ca/" target="_blank" rel="noreferrer"><strong>University of British Columbia</strong><span>British Columbia ↗</span></a>
+            <a href="https://www.mcgill.ca/" target="_blank" rel="noreferrer"><strong>McGill University</strong><span>Montreal, Quebec ↗</span></a>
+            <a href="https://www.ualberta.ca/" target="_blank" rel="noreferrer"><strong>University of Alberta</strong><span>Alberta ↗</span></a>
+            <a href="https://www.mcmaster.ca/" target="_blank" rel="noreferrer"><strong>McMaster University</strong><span>Hamilton, Ontario ↗</span></a>
+            <a href="https://www.ucalgary.ca/" target="_blank" rel="noreferrer"><strong>University of Calgary</strong><span>Calgary, Alberta ↗</span></a>
+          </div>
+        </section>
+
+        <section className={styles.contentSection}>
+          <div className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>WHY GLOBAL VISA INTERNATIONALS?</p>
+            <h2>Guidance tailored to your study plans</h2>
+          </div>
+          <div className={styles.benefitGrid}>
+            <article><h3>Clear explanations</h3><p>Understand the main application stages and the documents you may need to prepare.</p></article>
+            <article><h3>Organised preparation</h3><p>Work through a checklist and identify missing or inconsistent information before submission.</p></article>
+            <article><h3>Personal attention</h3><p>Discuss your academic background, goals and questions with our consultancy team.</p></article>
+          </div>
+          <p className={styles.disclaimer}>
+            Global Visa Internationals is an independent consultancy and is not
+            part of the Government of Canada or IRCC. Consultancy support does
+            not guarantee admission, a study permit or any immigration outcome.
+            Use official Government of Canada sources for final requirements and decisions.
+          </p>
+        </section>
+
+        <section id="faqs" className={`${styles.contentSection} ${styles.faqSection}`}>
+          <div className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>COMMON QUESTIONS</p>
+            <h2>Canada student visa FAQs</h2>
+          </div>
+          <details><summary>Do I need a study permit to study in Canada?</summary><p>Most foreign nationals need a study permit, although exceptions can apply. Check the official Government of Canada rules for your course and circumstances.</p></details>
+          <details><summary>What documents may be required?</summary><p>Common documents may include an acceptance letter, proof of identity, proof of financial support and a PAL/TAL where required. Your personal checklist may include additional items.</p></details>
+          <details><summary>How much money must I show?</summary><p>The required amount depends on current IRCC rules, tuition, living expenses and family members accompanying you. Verify the current amount on the official website before applying.</p></details>
+          <details><summary>Is the Student Direct Stream (SDS) still available?</summary><p>No. Canada ended the Student Direct Stream on November 8, 2024. Study permit applications are handled through the regular process, subject to current rules.</p></details>
+          <details><summary>Can a consultant guarantee approval?</summary><p>No. Only the relevant Canadian authorities decide study permit applications. A consultant cannot guarantee approval or a particular processing time.</p></details>
+          <details><summary>Where can I check official study permit information?</summary><p>Visit the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html" target="_blank" rel="noreferrer">Government of Canada study permit page</a> for current eligibility, documents and application instructions.</p></details>
+        </section>
+
+        <section id="enquiry" className={styles.enquirySection}>
+          <div className={styles.enquiryIntro}>
+            <p className={styles.eyebrow}>LET’S PLAN YOUR NEXT STEP</p>
+            <h2>Enquire about Canada student visa guidance</h2>
+            <p>Complete the form and the Global Visa Internationals team can follow up about your study plans.</p>
+            <a className={styles.phoneLink} href="tel:+917022213466">Call us: +91 70222 13466</a>
+          </div>
+          <div className={styles.formCard}>
+            <VisaForm />
+          </div>
+        </section>
+
+        <footer className={styles.footer}>
+          <p>Information on this page is general and may change. Always verify current requirements with IRCC and your chosen institution before submitting an application.</p>
+        </footer>
+
+        <section className={styles.reviews} aria-label="Client reviews">
+          <ReviewSchema />
+          <ReviewCarousel />
+        </section>
+      </main>
     </>
   );
 }

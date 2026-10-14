@@ -1,4 +1,3 @@
-
 import React from "react";
 import Head from "next/head";
 import VisaForm from "@/Components/VisaForm";
@@ -14,7 +13,7 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-  title: "Best UK Visa Consultants   | UK Tourist Visa from India | Global Visa Internationals",
+  title: "UK Tourist Visa from India: Fees, Documents & Process 2026 | GVI",
   description:
     "Apply for your UK tourist visa from India with expert UK visa consultants. Get help for documents, online application, fees, processing time & appointments.",
   keywords:
@@ -94,6 +93,67 @@ export const metadata = {
 
 
 
+
+// Single source of truth for the visible FAQ section AND the FAQPage schema,
+// so the two always match.
+const faqs = [
+  {
+    q: "How long does a UK tourist visa take in India?",
+    a: "Standard UK visa processing in India takes approximately 15 working days (3 weeks) from the date of your biometric appointment. Priority services (5 working days) and Super Priority services (next working day) are available for an additional fee. During peak travel seasons, processing may take longer.",
+  },
+  {
+    q: "What documents are required for a UK tourist visa?",
+    a: "You typically need a valid passport, proof of earnings , bank statements, a travel itinerary, and proof of accommodation. You must also prove you will leave the UK at the end of your visit, for example with a return ticket and evidence of ties to your home country .",
+  },
+  {
+    q: "How do I apply for a UK tourist visa from India?",
+    a: "Fill out the application online at GOV.UK by selecting 'Standard Visitor visa', pay the visa fee, and book a biometric appointment at a VFS Global centre in your city (e.g., Delhi, Mumbai, Bangalore). You submit your passport and fingerprints at this appointment. Indian applicants pay the fee in INR, and approved applicants receive their passport with the visa vignette via courier or collection.",
+  },
+  {
+    q: "How much does a UK tourist visa cost in India?",
+    a: "The Standard Visitor Visa (up to 6 months) costs £127, which is approximately ₹16,000 depending on the exchange rate, and is paid online during the application. Long-term visas (2, 5 or 10 years) cost significantly more, ranging from £475 to over £1,000. VFS Global service charges, document scanning and priority processing are extra if you choose them.",
+  },
+  {
+    q: "How long is a UK tourist visa valid?",
+    a: "A standard UK tourist visa is valid for 6 months, and you can stay in the UK for up to 6 months per visit. Long-term visas are valid for 2, 5, or 10 years, but the maximum stay per visit remains 6 months. It is usually a multi-entry visa, so you can leave and re-enter within the valid period.",
+  },
+  {
+    q: "Can a UK tourist visa be extended?",
+    a: "Generally, no. You cannot extend a Standard Visitor visa beyond 6 months unless you are receiving private medical treatment or are an academic meeting specific eligibility criteria.",
+  },
+  {
+    q: "Can I travel to Ireland with a UK tourist visa?",
+    a: "Yes, in many cases. Under the British-Irish Visa Scheme (BIVS) (for Indian and Chinese nationals) or the Short Stay Visa Waiver Programme, you can travel to Ireland using a valid UK tourist visa, provided you enter the UK first.",
+  },
+  {
+    q: "Can I work on a UK tourist visa?",
+    a: "No. You are strictly prohibited from doing paid or unpaid work for a UK company or as a self-employed person while on a tourist visa.",
+  },
+  {
+    q: "Can a UK tourist visa be converted into a work permit?",
+    a: "No. You cannot switch from a Standard Visitor visa to a Skilled Worker visa or any other work permit while inside the UK. You must leave the UK and apply for a work visa from your home country.",
+  },
+  {
+    q: "When should I apply for a UK tourist visa?",
+    a: "You can apply up to 3 months before your intended travel date. It is recommended to apply at least 6 weeks in advance to account for processing times.",
+  },
+  {
+    q: "Where do I apply for a UK tourist visa?",
+    a: "You fill out the application online at the UK Government website (GOV.UK). After submitting the form, you attend a physical appointment at a visa application centre (VAC) in your country to provide your biometrics.",
+  },
+  {
+    q: "Where can I travel with a UK tourist visa?",
+    a: "A UK tourist visa lets you visit England, Scotland, Wales and Northern Ireland. You may also visit the Republic of Ireland under the BIVS or Short Stay Visa Waiver Programme if you enter the UK first. It does not grant access to the Schengen Area (mainland Europe).",
+  },
+  {
+    q: "What is a UK tourist visa?",
+    a: "The UK Tourist Visa (officially the Standard Visitor Visa) is an official document that allows foreign nationals to visit the UK for tourism, visiting family or friends, business meetings, medical treatment, or short-term study for up to 6 months.",
+  },
+  {
+    q: "How can I improve my chances of getting a UK tourist visa?",
+    a: "You must prove you are a genuine visitor. Submit a complete online application, pay the fee, and provide documents showing strong ties to your home country (job, family, assets), along with a clear cover letter and itinerary.",
+  },
+];
 
 export default function UKTouristVisa() {
   const pageUrl = metadata.alternates.canonical;
@@ -285,240 +345,11 @@ export default function UKTouristVisa() {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "@id": "https://www.globalvisainternationals.com/#faqpage",
-        "mainEntity": [
-          {
+        "mainEntity": faqs.map((f) => ({
             "@type": "Question",
-            "name": "How long does a UK tourist visa take in India?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Standard UK visa processing in India takes approximately 15 working days (3 weeks) from the date of your biometric appointment. Priority services (5 working days) and Super Priority services (next working day) are available for an additional fee."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What documents are required for a UK tourist visa?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You typically need a valid passport, proof of earnings (payslips/employment letter), bank statements (last 6 months), travel itinerary, and proof of accommodation. You must also prove you will leave the UK at the end of your visit."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how to apply uk tourist visa from india",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "To apply from India, fill out the application online at GOV.UK, pay the visa fee, and book a biometric appointment at a VFS Global centre in your city (e.g., Delhi, Mumbai, Bangalore). You will submit your passport and fingerprints during this appointment."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how much uk tourist visa cost",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "As of the latest fee update, a Standard Visitor Visa (up to 6 months) costs £127. Long-term visas (2, 5, or 10 years) cost significantly more, ranging from £475 to over £1,000."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how long uk tourist visa is valid",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A standard UK tourist visa is valid for 6 months. You can stay in the UK for up to 6 months per visit. Long-term visas are valid for 2, 5, or 10 years, but the maximum stay per visit remains 6 months."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how to uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The process involves checking your eligibility, completing the online form on the UK Government website, paying the fee, and attending a biometric appointment at a visa application centre to provide your fingerprints and photo."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how apply uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You must apply online via the official GOV.UK website. Select 'Standard Visitor visa', complete the form, pay the fee, and then schedule an appointment to submit your biometrics and passport."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how to get uk tourist visa from india",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Indian citizens must apply online, pay the fee in INR (approx. ₹16,000 depending on exchange rates), and visit a VFS Global centre for biometrics. Successful applicants will receive their passport with the visa vignette via courier or collection."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how long does uk tourist visa take",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The standard processing time is 3 weeks (15 working days). However, during peak travel seasons, it may take longer. Priority services can speed this up to 5 days."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how much is uk tourist visa fee in nigeria",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The standard fee is £127. Applicants in Nigeria pay the equivalent in USD or local currency at the application centre, subject to current exchange rates set by the Home Office."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how to apply uk tourist visa from canada",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Residents in Canada must apply online through GOV.UK and attend a biometric appointment at a VFS Global centre (available in cities like Toronto, Vancouver, Ottawa, and Edmonton). You may need to mail your passport to the processing hub after your appointment."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how much uk tourist visa cost in india",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The Standard Visitor Visa fee is £127. In Indian Rupees, this is approximately ₹16,024 (subject to consular exchange rate fluctuations). You must pay this online during the application."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how long uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The Standard Visitor visa allows a stay of up to 6 months. It is usually a multi-entry visa, meaning you can leave and re-enter within that valid period."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how get uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "To get the visa, you must prove you are a genuine visitor. Submit a complete online application, pay the fee, and provide documents showing strong ties to your home country (job, family, assets) to ensure approval."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how to apply uk tourist visa from australia",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Apply online at GOV.UK. Afterward, you must attend a biometric appointment at a VFS Global centre in Australia (e.g., Sydney, Melbourne, Perth, Brisbane) to submit your fingerprints and passport."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "what documents do you need for uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Essential documents include a valid passport, proof of sufficient funds (bank statements), details of where you will stay, and proof of ties to your home country (employment letter or business registration)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "what is uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The UK Tourist Visa (officially the Standard Visitor Visa) is an official document that allows foreign nationals to visit the UK for tourism, business meetings, medical treatment, or short-term study for up to 6 months."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "what is uk tourist visa fee",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The fee for a Standard Visitor visa is £127 for a short-term stay (up to 6 months). Fees are higher for long-term visas valid for 2, 5, or 10 years."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "what does a uk tourist visa cost",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A standard 6-month tourist visa costs £127. You may also incur extra costs for biometric appointments, document scanning services, or priority processing if you choose them."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "can uk tourist visa be extended",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Generally, no. You cannot extend a Standard Visitor visa beyond 6 months unless you are receiving private medical treatment or are an academic meeting specific eligibility criteria."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "can uk tourist visa travel to ireland",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, in many cases. Under the British-Irish Visa Scheme (BIVS) (for Indian and Chinese nationals) or the Short Stay Visa Waiver Programme, you can travel to Ireland using a valid UK tourist visa, provided you enter the UK first."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "can uk tourist visa convert to work permit",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. You cannot switch from a Standard Visitor visa to a Skilled Worker visa or any other work permit while inside the UK. You must leave the UK and apply for a work visa from your home country."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "can uk tourist visa enter ireland",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Holders of a UK tourist visa can often enter Ireland without a separate Irish visa if they have first cleared immigration in the UK, thanks to the Short Stay Visa Waiver Programme."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "can uk tourist visa work",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. You are strictly prohibited from doing paid or unpaid work for a UK company or as a self-employed person while on a tourist visa."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "how long are uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The standard visa is issued for 6 months. Long-term visas can be issued for 2, 5, or 10 years, allowing multiple visits of up to 6 months each."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "when to apply uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can apply for a visa up to 3 months before your intended travel date. It is recommended to apply at least 6 weeks in advance to account for processing times."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "where to apply uk tourist visa",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You must fill out the application online at the UK Government website (GOV.UK). After submitting the form, you will attend a physical appointment at a visa application centre (VAC) in your country."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "uk tourist visa where can i travel",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A UK tourist visa grants entry to England, Scotland, Wales, and Northern Ireland. It also allows travel to Ireland (Republic of Ireland) under specific waiver programs if you enter the UK first."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "uk tourist visa where can you go",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can visit anywhere within the United Kingdom. Additionally, you may visit the Republic of Ireland if eligible under the BIVS or Visa Waiver Programme. It does not grant access to the Schengen Area (Europe)."
-            }
-          }
-        ]
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a }
+          }))
       },
 
       {
@@ -560,109 +391,338 @@ export default function UKTouristVisa() {
     ]
   };
 
+  /* ------------------------------------------------------------------
+     Visual enhancement layer (look & feel only), scoped to .gvi-uk
+  ------------------------------------------------------------------- */
+  const enhancedCss = `
+.gvi-uk {
+  --gvi-primary: #0f5b6b;
+  --gvi-primary-dark: #0a3f4b;
+  --gvi-accent: #c8102e;
+  --gvi-ink: #1f2933;
+  --gvi-muted: #52606d;
+  --gvi-soft: #eaf4f6;
+  --gvi-line: #e4e7eb;
+  --gvi-radius: 14px;
+  color: var(--gvi-ink);
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+/* Headings */
+.gvi-uk h1 {
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 4px solid var(--gvi-accent);
+  background: linear-gradient(90deg, #1f2933 0%, var(--gvi-primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gvi-uk h2 {
+  position: relative;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 3rem 0 1rem;
+  padding: 0.35rem 0 0.35rem 1rem;
+  border-left: 5px solid var(--gvi-accent);
+  color: var(--gvi-ink);
+  scroll-margin-top: 90px;
+}
+.gvi-uk h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.7rem;
+  padding: 0.55rem 1rem;
+  background: var(--gvi-soft);
+  border-radius: 10px;
+  color: var(--gvi-primary-dark);
+}
+
+/* Text */
+.gvi-uk p { margin: 0 0 1.1rem; color: var(--gvi-muted); }
+.gvi-uk strong, .gvi-uk b { color: var(--gvi-ink); font-weight: 700; }
+.gvi-uk a:not([class]) { color: var(--gvi-primary); font-weight: 600; }
+
+/* Lists: one compact card per list, light dividers between rows */
+.gvi-uk ul {
+  list-style: none;
+  padding: 0.3rem 1.1rem;
+  margin: 0 0 1.4rem;
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+}
+.gvi-uk ul li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.5rem;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #eef0f3;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--gvi-muted);
+}
+.gvi-uk ul li:last-child { border-bottom: 0; }
+.gvi-uk ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gvi-primary);
+}
+.gvi-uk ul ul { margin: 0.5rem 0 0.2rem; padding: 0; border: 0; box-shadow: none; background: transparent; }
+.gvi-uk ul ul li { padding: 0.3rem 0 0.3rem 1.3rem; border-bottom: 0; }
+.gvi-uk ul ul li::before { top: 0.8rem; width: 5px; height: 5px; background: var(--gvi-muted); }
+
+/* Numbered steps */
+.gvi-uk ol.gvi-steps { list-style: none; counter-reset: gvi-step; padding: 0; margin: 0 0 1.6rem; }
+.gvi-uk ol.gvi-steps > li {
+  counter-increment: gvi-step;
+  position: relative;
+  padding: 0.9rem 1rem 0.9rem 3.6rem;
+  margin-bottom: 0.7rem;
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-radius: 12px;
+  color: var(--gvi-muted);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+.gvi-uk ol.gvi-steps > li::before {
+  content: counter(gvi-step);
+  position: absolute;
+  left: 0.9rem;
+  top: 0.85rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gvi-primary), var(--gvi-primary-dark));
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gvi-uk ol.gvi-steps > li > p { margin: 0.4rem 0 0.6rem; }
+
+/* Table of contents */
+.gvi-toc {
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-left: 5px solid var(--gvi-primary);
+  border-radius: var(--gvi-radius);
+  padding: 1rem 1.3rem;
+  margin: 0 0 1.8rem;
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.05);
+}
+.gvi-toc ol { margin: 0.6rem 0 0; padding-left: 1.3rem; columns: 2 260px; column-gap: 2rem; }
+.gvi-toc li { margin: 0.25rem 0; color: var(--gvi-muted); }
+.gvi-toc a { color: var(--gvi-primary-dark); text-decoration: none; font-weight: 600; }
+.gvi-toc a:hover { text-decoration: underline; }
+
+/* Quick facts strip */
+.gvi-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+  margin: 1.4rem 0 2rem;
+}
+.gvi-fact {
+  background: linear-gradient(145deg, #fff 0%, var(--gvi-soft) 100%);
+  border: 1px solid #cfe3e8;
+  border-radius: var(--gvi-radius);
+  padding: 1rem 1.1rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(15, 91, 107, 0.08);
+}
+.gvi-fact b { display: block; font-size: 1.3rem; font-weight: 800; color: var(--gvi-primary); line-height: 1.2; }
+.gvi-fact span { display: block; margin-top: 0.25rem; font-size: 0.85rem; color: var(--gvi-muted); }
+
+/* In-page call-to-action band */
+.gvi-cta-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--gvi-soft);
+  border: 1px solid #cfe3e8;
+  border-radius: var(--gvi-radius);
+  padding: 1.1rem 1.4rem;
+  margin: 1.6rem 0;
+}
+.gvi-cta-band p { margin: 0; color: var(--gvi-ink); font-weight: 600; flex: 1 1 260px; }
+.gvi-uk a.gvi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--gvi-primary) 0%, var(--gvi-primary-dark) 100%);
+  box-shadow: 0 8px 18px rgba(15, 91, 107, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gvi-uk a.gvi-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(15, 91, 107, 0.36); }
+
+/* Address / contact cards */
+.gvi-uk address {
+  font-style: normal;
+  background: linear-gradient(135deg, #0f5b6b 0%, #0a3f4b 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 1.4rem 1.6rem;
+  margin: 1.6rem 0 2rem;
+  box-shadow: 0 14px 30px rgba(10, 63, 75, 0.28);
+}
+.gvi-uk address p { color: rgba(255, 255, 255, 0.95); margin: 0 0 0.7rem; }
+.gvi-uk address a:not([class]) { color: #fff; text-decoration: underline; }
+
+/* Buttons */
+.gvi-uk [class*="callButton"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.4rem 0 0.9rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 10px 22px rgba(18, 140, 126, 0.32);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gvi-uk [class*="callButton"]:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(18, 140, 126, 0.4); }
+.gvi-uk [class*="ctaButton"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.8rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--gvi-accent) 0%, #8f0b21 100%);
+  box-shadow: 0 10px 22px rgba(200, 16, 46, 0.3);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gvi-uk [class*="ctaButton"]:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(200, 16, 46, 0.4); }
+#apply-form { scroll-margin-top: 90px; }
+
+@media (max-width: 640px) {
+  .gvi-uk { font-size: 0.98rem; }
+  .gvi-uk h2 { margin-top: 2.2rem; }
+}
+`;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
+
+      {/* ✨ Scoped visual enhancements */}
+      <style dangerouslySetInnerHTML={{ __html: enhancedCss }} />
+
       <div className={styles.imageContainer}>
         <img
           src="/tourist-visa/UK-Tourist-Visa-Assistance-GVI.jpg"
-          alt="UK Tourist Visa Assistance GVI"
+          alt="UK tourist visa assistance from India - Global Visa Internationals"
           className={styles.VisaImage}
         />
       </div>
       <div className={styles.VisaSec}>
 
-        <div className={styles.VisaData}>
-          <h1 className={styles.Title}>UK Tourist Visa from India 2025 – Eligibility, Requirements & Fees | Global Visa Internationals</h1>
+        <div className={`${styles.VisaData} gvi-uk`}>
+          <h1 className={styles.Title}>UK Tourist Visa from India: Eligibility, Documents, Fees & Processing Time (2026 Guide)</h1>
 
-          <h2 className={styles.subTitle}>✈ Travel to the UK with a Standard Tourist Visa</h2>
+          {/* Quick facts (values taken from the sections below) */}
+          <div className="gvi-facts">
+            <div className="gvi-fact"><b>£127</b><span>6-month Standard Visitor visa</span></div>
+            <div className="gvi-fact"><b>15 working days</b><span>Standard processing</span></div>
+            <div className="gvi-fact"><b>Up to 6 months</b><span>Stay per visit</span></div>
+            <div className="gvi-fact"><b>Up to 3 months</b><span>Apply before travel</span></div>
+          </div>
+
+          <nav aria-label="Table of contents" className="gvi-toc">
+            <strong>On this page</strong>
+            <ol>
+              <li><a href="#services">How GVI helps with your UK visa</a></li>
+              <li><a href="#duration">Visa duration rule</a></li>
+              <li><a href="#eligibility">Eligibility & documents required</a></li>
+              <li><a href="#fees">UK tourist visa fees</a></li>
+              <li><a href="#rejection-reasons">Rejection reasons & how to avoid them</a></li>
+              <li><a href="#processing-time">Processing time & VFS process</a></li>
+              <li><a href="#why-gvi">Why choose GVI</a></li>
+              <li><a href="#faq">Frequently asked questions</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="services" className={styles.subTitle}>✈ Travel to the UK with a Standard Tourist Visa</h2>
           <p>Planning a trip to the United Kingdom? A <b className={styles.strong}>UK Standard Tourist</b> visa allows Indian travelers to visit for tourism, business, study (up to 6 months), and to see family and friends. At Global Visa Internationals (GVI), we simplify the process with expert guidance, transparent support, and end-to-end visa file handling.</p>
 
-          <p>Global Visa Internationals makes applying for a UK tourist visa or UK visitor visa easier, faster, and completely stress-free for every traveler. Whether you’re applying for a UK visit visa, a UK standard visitor visa, or planning your trip from India, our experts guide you from the first consultation to final approval. We help you understand the full process for a UK tourist visa from India or UK visitor visa from India, ensuring you meet every requirement with confidence.</p>
-          <p>Our team specializes in handling your entire UK visa application with precision—explaining UK visa requirements, preparing paperwork, and offering reliable guidance on UK tourist visa fees, UK visa processing time, and all documentation needed for a successful submission. With GVI’s end-to-end documentation support, you never have to worry about missing details, errors, or compliance issues.</p>
-          <p><b>We provide complete, structured assistance for every applicant, including:</b></p>
+          <p>Whether you are applying for a UK tourist visa, a UK visit visa, or a London visitor visa from India, our experts guide you from the first consultation to final approval. We explain the UK visa requirements, prepare your paperwork, and advise on fees, processing time and documentation, so nothing is missed and your file meets UKVI standards.</p>
+
+          <div className="gvi-cta-band">
+            <p>Not sure if you qualify? Get a free eligibility check for your profile.</p>
+            <a href="#apply-form" className="gvi-btn">Get Free Eligibility Check</a>
+          </div>
+
           <h3 className={styles.subTitle}>Documentation & File Preparation</h3>
           <ul>
-            <li>UK tourist visa documents required</li>
-            <li>Personalized document checklist</li>
+            <li>Personalized UK tourist visa document checklist</li>
             <li>Verified paperwork aligned with embassy standards</li>
-            <li><b className={styles.strong}>Professional drafting:</b>
-              <ul>
-                <li>Cover letters</li>
-                <li>NOC / Leave approval</li>
-                <li>Travel explanations</li>
-              </ul>
-            </li>
+            <li><b className={styles.strong}>Professional drafting</b> of cover letters, NOC / leave approval letters and travel explanations</li>
           </ul>
-          <h3 className={styles.subTitle}>Application Accuracy</h3>
+
+          <h3 className={styles.subTitle}>Application, Form Filling & Appointment Booking</h3>
           <ul>
-            <li>Accurate form filling by experienced experts</li>
-            <li>UK visitor visa appointment booking</li>
-            <li>UK tourist visa online application support</li>
-            <li>Guidance on UK tourist visa eligibility</li>
+            <li>Accurate online form filling by experienced experts</li>
+            <li>UK visitor visa appointment booking and VFS coordination</li>
+            <li>Document collection through to final submission</li>
           </ul>
+
           <h3 className={styles.subTitle}>Interview & Biometrics</h3>
           <ul>
-            <li>UK visitor visa biometric preparation</li>
-            <li>UK tourist visa interview guidance</li>
+            <li>Biometric appointment preparation</li>
+            <li>UK tourist visa interview guidance and common questions</li>
             <li>Rejection-proofing and addressing UK tourist visa rejection reasons</li>
           </ul>
-          <h3 className={styles.subTitle}>Specialized Visa Categories</h3>
-          <ul>
-            <li>UK visitor visa for family visit</li>
-            <li>London tourist visa & London visitor visa</li>
-            <li>UK short-term visitor visa</li>
-          </ul>
-          <p>GVI further enhances your experience with complete guidance throughout your journey—from building your UK tourist visa checklist to choosing the right UK visitor visa insurance, monitoring UK visitor visa processing, and offering ongoing UK visit visa support to keep your travel plans on track.</p>
-          <h3 className={styles.subTitle}>Step-by-Step Assistance</h3>
-          <ul>
-            <li>UK tourist visa application India guidance</li>
-            <li>Improving UK visitor visa success rate</li>
-            <li>UK tourist visa interview questions</li>
-            <li>UK visitor visa travel itinerary planning</li>
-            <li>Apply London tourist visa from India</li>
-            <li>London visitor visa requirements</li>
-          </ul>
-          <h3 className={styles.subTitle}>Full Visa Category Support</h3>
-          We help you choose the most suitable visa based on your travel purpose:
-          <ul>
-            <li>UK travel visa</li>
-            <li>UK holiday visa</li>
-            <li>UK short stay visa</li>
-            <li>UK trip visa</li>
-            <li>UK vacation visa</li>
-            <li>UK entry visa</li>
-          </ul>
-          <h3 className={styles.subTitle}>Complete Form & Submission Support</h3>
-          <ul>
-            <li>UK visa form preparation</li>
-            <li>UK visa online submission</li>
-            <li>UK visa form filling service India</li>
-            <li>Document collection to final submission</li>
-          </ul>
 
+          <h3 className={styles.subTitle}>Visa Categories We Support</h3>
+          <p>We help you choose the most suitable visa based on your travel purpose: holiday and tourist visits, family visits, short business trips, short-term study (up to 6 months), London trips, and long-term multiple-entry visitor visas. From building your UK tourist visa checklist and planning your itinerary to choosing visitor visa insurance and tracking your application, we support you at every step to improve your chances of success.</p>
 
+          <p>Recognized as one of the Best UK visa agencies in India, Global Visa Internationals is trusted by travelers nationwide. From UK VFS appointment coordination to full documentation support and multiple-entry visitor visa applications, we provide complete A-to-Z case handling until your passport and final result are safely back in your hands.</p>
 
-          <p>Recognized as one of the Best UK visa agencies in India, Global Visa Internationals is trusted by travelers nationwide. From UK VFS appointment India coordination to full UK visa documentation support and even UK multiple entry tourist visa applications, we provide complete A-to-Z case handling until your passport and final result are safely back in your hands.</p>
           <address className={styles.address}>
-            <li>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore – 560025, Karnataka</li>
+            <p>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore – 560025, Karnataka</p>
             <a href="tel:+917022213466" className={styles.callButton}>  📞 Get Free Eligibility Check</a>
-            <li>Email: <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></li>
+            <p>Email: <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></p>
           </address>
           {/* Call-to-Action Button */}
 
-
-
-          <h2 className={styles.subTitle}>UK Visa Duration Rule</h2>
+          <h2 id="duration" className={styles.subTitle}>UK Visa Duration Rule</h2>
           <p>A Standard Visitor visa typically allows you to stay in the UK for up to 6 months per visit. You can apply for a long-term visa (2, 5, or 10 years) if you visit the UK regularly, but you can still only stay for a maximum of 6 months on each visit. Overstaying this limit may lead to fines, entry bans, or refusal of future visa applications. With GVI, you’ll never miscalculate your stay — we ensure full compliance with UK visa rules.</p>
 
           <p>The UK does not have a "cascade" system like the Schengen zone, but a history of lawful travel and adherence to visa rules can strengthen your application for a longer-term visa.</p>
 
-
-          <h2 className={styles.subTitle}>Visa Processing Overview</h2>
+          <h2 id="process" className={styles.subTitle}>Visa Processing Overview</h2>
           <p>Global Visa Internationals (GVI) will manage the entire documentation process to ensure that your visa application meets the expectations of UK Visas and Immigration (UKVI) and that your travel purpose is clearly and professionally represented.</p>
           <h3 className={styles.subTitle}>Our Services Include:</h3>
           <ul>
@@ -671,26 +731,26 @@ export default function UKTouristVisa() {
             <li>Personalized checklist and guidance</li>
             <li>Providing accepted samples for the required documents</li>
             <li>Verification of documentation</li>
-            <li>Complete walk-through of the process</li>          </ul>
+            <li>Complete walk-through of the process</li>
+          </ul>
 
           <h3 className={styles.subTitle}>Timeline:</h3>
           <p>Processing will begin once we receive 100% of the documents as per our checklist. The document finalization will take approximately 3 to 5 working days.</p>
 
+          <h2 id="eligibility" className={styles.subTitle}>UK Tourist Visa Eligibility & Documents Required</h2>
+          <p>Before applying, ensure you meet the UK visa eligibility requirements for the tourist, business or visitor visa. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
 
-          <h2 className={styles.subTitle}>The Eligiblity to Get the UK Tourist Visa / Business Visa / Visitor Visa</h2>
-          <p>Before applying, ensure you meet the UK visa eligibility requirements. If these criteria are met, Global Visa Internationals (GVI) will accept your case, manage the entire documentation process, and book your appointment. You only need to visit the VFS center once to submit your biometrics and documents.</p>
-
-          <ol>
+          <ol className="gvi-steps">
             <li> <b className={styles.strong}>Valid Passport & Travel History</b>
               <ul>
-                <li><b className={styles.strong}>Valid Passport:</b> Must be valid for for 6 months from the day of entry to stay in the UK, with at least two blank page for the visa. All old passports are also required to show your travel history.</li>
+                <li><b className={styles.strong}>Valid Passport:</b> Must be valid for 6 months from the day of entry to stay in the UK, with at least two blank pages for the visa. All old passports are also required to show your travel history.</li>
                 <li><b className={styles.strong}>Travel History:</b> Previous international travel, including visas and entry/exit stamps, is crucial. GVI helps you highlight these to strengthen your application.</li>
               </ul>
             </li>
             <li><b className={styles.strong}>Financial Proof:</b> Bank Statements & Funds
               <p>One of the most critical aspects of your application is proving you have sufficient funds. You must demonstrate that you can support yourself and your dependents for the duration of your trip.</p>
               <ul>
-                <li><b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank. with the clossing ammount 4 to 5 lacks</li>
+                <li><b className={styles.strong}>Bank Statements:</b> Submit original bank statements for the last 6 months, stamped by the bank, with a closing balance of around ₹4 to 5 lakhs.</li>
                 <li><b className={styles.strong}>Income Tax Returns (ITR):</b> Provide ITRs for the last 3 years to prove a stable income source.</li>
               </ul>
             </li>
@@ -699,7 +759,6 @@ export default function UKTouristVisa() {
                 <li><b className={styles.strong}>Employees:</b> You must provide a Leave Approval Letter (NOC) from your employer on company letterhead, specifying your position, joining date, and approved leave dates.</li>
                 <li><b className={styles.strong}>Business Owners/Self-Employed:</b> Submit your business registration license (GST certificate/partnership deed) and last 3 years’ ITRs.</li>
                 <li><b className={styles.strong}>Students:</b> Provide an enrolment letter and NOC from your school/university.</li>
-
               </ul>
             </li>
             <li><b className={styles.strong}>Travel & Accommodation Proof</b>
@@ -711,13 +770,11 @@ export default function UKTouristVisa() {
             <li> <b className={styles.strong}>Visa Cover Letter & Itinerary</b>
               <p>A well-written UK visa cover letter is your opportunity to introduce yourself and the purpose of your trip to the visa officer. It should include your travel itinerary, the purpose of your visit, and proof of your strong ties to India (e.g., family, job). Our experts draft a professional cover letter and a detailed itinerary for every client to maximize their chances of success.</p>
             </li>
-            <li>Remaining Documents which are required will send you after signup with Global Visa internationals according to your eligiblity and application type </li>
+            <li>Any remaining required documents will be shared with you after you sign up with Global Visa Internationals, based on your eligibility and application type.</li>
           </ol>
 
-
-
           <div className={styles.highlightSection}>
-            <h3 className={styles.subTitle}>UK Tourist Visa Fees (India 2025)</h3>
+            <h2 id="fees" className={styles.subTitle}>UK Tourist Visa Fees (India 2026)</h2>
             <div className={styles.highlightGrid}>
               <div className={styles.highlightItem}>
                 <span className={styles.countryName}>6-Month Standard Visitor Visa</span>
@@ -742,7 +799,7 @@ export default function UKTouristVisa() {
             </div>
           </div>
 
-          <h2 className={styles.subTitle}>Common Reasons for UK Visa Rejection & How We Solve Them</h2>
+          <h2 id="rejection-reasons" className={styles.subTitle}>Common Reasons for UK Visa Rejection & How We Solve Them</h2>
 
           <p>Visa rejections are often a result of simple mistakes. Our structured process is designed to eliminate these common issues.</p>
           <ul>
@@ -752,33 +809,34 @@ export default function UKTouristVisa() {
             <li><b className={styles.strong}>Lack of Strong Ties to India:</b> We guide you on how to best prove your ties, such as property ownership, family commitments, and employment stability.</li>
           </ul>
 
-          <h2 className={styles.subTitle}>UK Tourist Visa Processing Time from India</h2>
+          <h2 id="processing-time" className={styles.subTitle}>UK Tourist Visa Processing Time from India</h2>
           <p>The processing time for a UK visa can vary depending on the time of year and the completeness of your application. Here are some general timelines:</p>
 
           <ul>
             <li><b className={styles.strong}>Standard Processing Time: </b>3 weeks (15 working days).</li>
             <li><b className={styles.strong}>Priority Service:</b> A decision is typically made within 5 working days for an extra fee.</li>
-            <li><b className={styles.strong}>Super Priority Service:</b> A decision is typically made by the end of the next working day for an extra fee.</li>            <li>Our Service: Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to UKVI in a timely manner.</li>          </ul>
+            <li><b className={styles.strong}>Super Priority Service:</b> A decision is typically made by the end of the next working day for an extra fee.</li>
+            <li>Our Service: Once we receive your documents, GVI finalizes your file within 3–5 working days, ensuring it is submitted to UKVI in a timely manner.</li>
+          </ul>
 
           <h3 className={styles.subTitle}>The VFS Global Application Process: A Step-by-Step Guide</h3>
           <p>Navigating the VFS Global appointment system can be confusing. With GVI's end-to-end service, we manage this process for you. Here’s a quick overview of what to expect:</p>
-          <ol>
+          <ol className="gvi-steps">
             <li><b className={styles.strong}>Online Application & Appointment Booking:</b> We fill out the online form and book your VFS appointment for you.</li>
             <li><b className={styles.strong}>Document Submission & Biometrics:</b> You visit the VFS center in person to submit the verified documents and provide your fingerprints and a photo.</li>
             <li><b className={styles.strong}>Application Tracking:</b> Once submitted, we help you track your application status until your passport is ready for collection.</li>
           </ol>
 
-
-          <h2 className={styles.subTitle}>Transparent Pricing</h2>
-          <p>Choose the right UK visa assistance plan for your needs:</p>
+          <h2 id="pricing" className={styles.subTitle}>Transparent Pricing</h2>
+          <p>Our service fees depend on your profile and application type. Contact us for a clear, upfront quote.</p>
 
           <address className={styles.address}>
-            <li>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore – 560025, Karnataka</li>
+            <p>GF-9, Business Point, 137 Brigade Road, Next to Brigade Towers, Bangalore – 560025, Karnataka</p>
             <a href="tel:+917022213466" className={styles.callButton}>  📞 Get Free Eligibility Check</a>
-            <li>Email: <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></li>
+            <p>Email: <a href="mailto:operations@globalvisainternationals.com">operations@globalvisainternationals.com</a></p>
           </address>
 
-          <h2 className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
+          <h2 id="why-gvi" className={styles.subTitle}>Why Choose Global Visa Internationals?</h2>
           <p>At GVI, we are committed to making your visa process stress-free and successful. Our expertise and dedication have led to:</p>
           <ul>
             <li><b className={styles.strong}>1,800+ UK visas processed since 2017</b></li>
@@ -790,179 +848,23 @@ export default function UKTouristVisa() {
           <h2 className={styles.subTitle}>Meet Our Experts</h2>
           <p>Our team of visa consultants has decades of combined experience in handling complex visa cases. We stay updated with the latest embassy rules and requirements to provide you with the most accurate and reliable guidance.</p>
 
-          <h2 className={styles.subTitle}>Ready to Apply?</h2>
+          <h2 id="faq" className={styles.subTitle}>UK Tourist Visa from India: Frequently Asked Questions</h2>
+          {faqs.map((f) => (
+            <div key={f.q}>
+              <h3 className={styles.subTitle}>{f.q}</h3>
+              <p>{f.a}</p>
+            </div>
+          ))}
+
+          <h2 id="contact" className={styles.subTitle}>Ready to Apply?</h2>
           <p>With GVI, you don’t need to worry about rejections or missing documents.
-            👉 <b className={styles.strong}>Start your UK visa application today</b> with Global Visa Internationals and travel to Europe with confidence.
+            👉 <b className={styles.strong}>Start your UK visa application today</b> with Global Visa Internationals and travel to the UK with confidence.
             <br />
             <a href="/contact" className={styles.ctaButton}>Get a free consultation today!</a></p>
-
-          <h3 className={styles.subTitle}>How long does a UK tourist visa take in India?</h3>
-          <p>Standard UK visa processing in India takes approximately 15 working days (3 weeks) from the date of your biometric appointment. Priority services are available for faster processing:</p>
-          <ul>
-            <li><strong className={styles.strong}>Standard:</strong> 15 working days</li>
-            <li><strong className={styles.strong}>Priority:</strong> 5 working days</li>
-            <li><strong className={styles.strong}>Super Priority:</strong> Next working day</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>What documents are required for a UK tourist visa?</h3>
-          <p>To successfully apply, you typically need to provide the following documents:</p>
-          <ul>
-            <li>Valid passport with at least one blank page.</li>
-            <li>Proof of earnings (e.g., payslips, employment letter).</li>
-            <li>Bank statements (usually the last 6 months) showing sufficient funds.</li>
-            <li>Travel itinerary and accommodation details.</li>
-            <li>Proof that you will leave the UK (e.g., return ticket, ties to home country).</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>how to apply uk tourist visa from india</h3>
-          <p>To apply for a UK tourist visa from India, follow these steps:</p>
-          <ol>
-            <li>Complete the online application form on the GOV.UK website.</li>
-            <li>Pay the visa fee online.</li>
-            <li>Book a biometric appointment at a VFS Global centre (located in major cities like Delhi, Mumbai, Bangalore).</li>
-            <li>Attend the appointment to submit your passport and fingerprints.</li>
-          </ol>
-
-          <h3 className={styles.subTitle}>how much uk tourist visa cost</h3>
-          <p>As of the latest fee update, the costs are:</p>
-          <ul>
-            <li><strong className={styles.strong} >Standard Visitor Visa (up to 6 months):</strong> £127</li>
-            <li><strong className={styles.strong} >Long-term Visitor Visa (2 years):</strong> £475</li>
-            <li><strong className={styles.strong} >Long-term Visitor Visa (5 years):</strong> £854</li>
-            <li><strong className={styles.strong} >Long-term Visitor Visa (10 years):</strong> £1,070</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >how long uk tourist visa is valid</h3>
-          <p>A standard UK tourist visa is valid for 6 months. While long-term visas are valid for 2, 5, or 10 years, the maximum stay allowed per visit is strictly 6 months.</p>
-
-          <h3 className={styles.subTitle} >how to uk tourist visa</h3>
-          <p>The general process to obtain a UK tourist visa is:</p>
-          <ol>
-            <li>Check your eligibility online.</li>
-            <li>Fill out the "Standard Visitor" application on GOV.UK.</li>
-            <li>Pay the application fee.</li>
-            <li>Schedule and attend a biometric appointment at a visa application centre.</li>
-          </ol>
-
-          <h3 className={styles.subTitle} >how apply uk tourist visa</h3>
-          <p>You must apply online via the official UK Government website. Select 'Standard Visitor visa', complete the form, pay the required fee, and then schedule an appointment to submit your biometrics and passport.</p>
-
-          <h3 className={styles.subTitle} >how to get uk tourist visa from india</h3>
-          <p>Indian citizens must apply online and pay the fee in INR (approximately ₹16,000, depending on exchange rates). After applying, you must visit a VFS Global centre to provide your biometrics. Your passport will be returned to you with the visa vignette via courier or collection once approved.</p>
-
-          <h3 className={styles.subTitle} >how long does uk tourist visa take</h3>
-          <p>The standard processing time is 3 weeks (15 working days). However, times can vary:</p>
-          <ul>
-            <li><strong className={styles.strong} >Peak Season:</strong> May take longer than 3 weeks.</li>
-            <li><strong className={styles.strong} >Priority Service:</strong> Approx. 5 working days.</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >how much is uk tourist visa fee in nigeria</h3>
-          <p>The standard fee is £127. Applicants in Nigeria must pay the equivalent in USD or local currency at the application centre, subject to the current exchange rates set by the Home Office.</p>
-
-          <h3 className={styles.subTitle} >how to apply uk tourist visa from canada</h3>
-          <p>Residents in Canada must:</p>
-          <ol>
-            <li>Apply online through GOV.UK.</li>
-            <li>Pay the fee.</li>
-            <li>Attend a biometric appointment at a VFS Global centre (available in Toronto, Vancouver, Ottawa, Edmonton, etc.).</li>
-            <li>Mail your passport to the processing hub if required after your appointment.</li>
-          </ol>
-
-          <h3 className={styles.subTitle} >how much uk tourist visa cost in india</h3>
-          <p>The Standard Visitor Visa fee is £127. In Indian Rupees, this is approximately ₹16,024 (subject to consular exchange rate fluctuations). This fee must be paid online during the application process.</p>
-
-          <h3 className={styles.subTitle} >how long uk tourist visa</h3>
-          <p>The Standard Visitor visa allows a stay of up to 6 months per visit. It is usually a multi-entry visa, meaning you can leave and re-enter the UK within that valid period.</p>
-
-          <h3 className={styles.subTitle} >how get uk tourist visa</h3>
-          <p>To get the visa, you must prove you are a genuine visitor. You should submit:</p>
-          <ul>
-            <li>A complete online application.</li>
-            <li>Payment of the visa fee.</li>
-            <li>Evidence of strong ties to your home country (job, family, assets).</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >how to apply uk tourist visa from australia</h3>
-          <p>Residents in Australia should apply online at GOV.UK. Afterward, you must attend a biometric appointment at a VFS Global centre in Australia (e.g., Sydney, Melbourne, Perth, Brisbane) to submit your fingerprints and passport.</p>
-
-          <h3 className={styles.subTitle} >what documents do you need for uk tourist visa</h3>
-          <p>Essential documents include:</p>
-          <ul>
-            <li>A valid passport.</li>
-            <li>Proof of sufficient funds (bank statements).</li>
-            <li>Details of accommodation/where you will stay.</li>
-            <li>Proof of ties to your home country (employment letter or business registration).</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >what is uk tourist visa</h3>
-          <p>The UK Tourist Visa (officially the Standard Visitor Visa) is an official document that allows foreign nationals to visit the UK for:</p>
-          <ul>
-            <li>Tourism and holidays.</li>
-            <li>Visiting family or friends.</li>
-            <li>Business meetings.</li>
-            <li>Short-term study (up to 6 months).</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >what is uk tourist visa fee</h3>
-          <p>The fee for a Standard Visitor visa is £127 for a short-term stay (up to 6 months). Fees are higher for long-term visas valid for 2, 5, or 10 years.</p>
-
-          <h3 className={styles.subTitle} >what does a uk tourist visa cost</h3>
-          <p>A standard 6-month tourist visa costs £127. You may also incur extra costs for:</p>
-          <ul>
-            <li>Biometric appointments (at some locations).</li>
-            <li>Document scanning services.</li>
-            <li>Priority processing services.</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >can uk tourist visa be extended</h3>
-          <p>Generally, no. You cannot extend a Standard Visitor visa beyond 6 months unless you are receiving private medical treatment or are an academic meeting specific eligibility criteria.</p>
-
-          <h3 className={styles.subTitle} >can uk tourist visa travel to ireland</h3>
-          <p>Yes, in many cases. You can travel to Ireland using a valid UK tourist visa if you are eligible under:</p>
-          <ul>
-            <li>The British-Irish Visa Scheme (BIVS) (for Indian and Chinese nationals).</li>
-            <li>The Short Stay Visa Waiver Programme (provided you enter the UK first).</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >can uk tourist visa convert to work permit</h3>
-          <p>No. You cannot switch from a Standard Visitor visa to a Skilled Worker visa or any other work permit while inside the UK. You must leave the UK and apply for a work visa from your home country.</p>
-
-          <h3 className={styles.subTitle} >can uk tourist visa enter ireland</h3>
-          <p>Holders of a UK tourist visa can often enter Ireland without a separate Irish visa if they have first cleared immigration in the UK, thanks to the Short Stay Visa Waiver Programme.</p>
-
-          <h3 className={styles.subTitle} >can uk tourist visa work</h3>
-          <p>No. You are strictly prohibited from doing paid or unpaid work for a UK company or as a self-employed person while on a tourist visa.</p>
-
-          <h3 className={styles.subTitle} >how long are uk tourist visa</h3>
-          <p>The standard visa is issued for 6 months. Long-term visas can be issued for longer durations, allowing multiple visits:</p>
-          <ul>
-            <li>2 Years</li>
-            <li>5 Years</li>
-            <li>10 Years</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >when to apply uk tourist visa</h3>
-          <p>You can apply for a visa up to 3 months before your intended travel date. It is recommended to apply at least 6 weeks in advance to account for standard processing times.</p>
-
-          <h3 className={styles.subTitle} >where to apply uk tourist visa</h3>
-          <p>You must start the process online at the UK Government website (GOV.UK). After submitting the form, you will attend a physical appointment at a visa application centre (VAC) in your country of residence.</p>
-
-          <h3 className={styles.subTitle} >uk tourist visa where can i travel</h3>
-          <p>A UK tourist visa grants entry to:</p>
-          <ul>
-            <li>England</li>
-            <li>Scotland</li>
-            <li>Wales</li>
-            <li>Northern Ireland</li>
-          </ul>
-
-          <h3 className={styles.subTitle} >uk tourist visa where can you go</h3>
-          <p>You can visit anywhere within the United Kingdom. Additionally, you may visit the Republic of Ireland if eligible under the BIVS or Visa Waiver Programme. Note that it does <strong className={styles.strong} >not</strong> grant access to the Schengen Area (mainland Europe).</p>
         </div>
 
 
-        <div className={styles.formSection}>
+        <div id="apply-form" className={styles.formSection}>
           <VisaForm />
         </div>
       </div >

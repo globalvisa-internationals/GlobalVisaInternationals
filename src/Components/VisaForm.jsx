@@ -45,7 +45,9 @@ export default function VisaForm() {
     timerRef.current = setTimeout(() => {
       setShowPopup(true);
       timerRef.current = null;
-    }, 60000);
+      // Timer of 3 minutes. 
+    }, 180000); 
+    
   }, [showPopup, clearPopupTimer]);
 
   // Cancel popup on any user interaction with the form

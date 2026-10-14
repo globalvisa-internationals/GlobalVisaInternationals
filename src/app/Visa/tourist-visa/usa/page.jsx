@@ -1,4 +1,3 @@
-
 import VisaForm from '@/Components/VisaForm';
 import styles from '@/Components/Visa.module.css';
 import React from 'react';
@@ -10,8 +9,8 @@ import ReviewCarousel from "@/Components/ReviewCarousel";
 export const metadata = {
   metadataBase: new URL("https://www.globalvisainternationals.com"),
 
-  title: "Best US B1/B2 Visa Consultants in Bangarore | GVI",
-  description: "Apply for a US B1/B2 Visa from India with Global Visa Internationals. Expert help for tourist and business visa documents, fees, appointments, and interview prep.",
+  title: "Best US B1/B2 Visa Consultants in Bangalore | GVI",
+  description: "Apply for a US B1/B2 visa from India with GVI. Expert help with tourist and business visa documents, fees, appointments and interview prep.",
 
   applicationName: "Global Visa Internationals",
   category: "USA B1/B2 Visa Services",
@@ -447,6 +446,458 @@ export default function USATouristVisa() {
     ],
   };
 
+  /* ------------------------------------------------------------------
+     Visual enhancement layer (look & feel only), scoped to .gvi-usa
+  ------------------------------------------------------------------- */
+  const enhancedCss = `
+.gvi-usa {
+  --gvi-primary: #1f3a8a;
+  --gvi-primary-dark: #14275f;
+  --gvi-accent: #c8102e;
+  --gvi-ink: #1f2933;
+  --gvi-muted: #52606d;
+  --gvi-soft: #eef2fb;
+  --gvi-line: #e4e7eb;
+  --gvi-radius: 14px;
+  color: var(--gvi-ink);
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+/* Headings */
+.gvi-usa h1 {
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 4px solid var(--gvi-accent);
+  background: linear-gradient(90deg, #1f2933 0%, var(--gvi-primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gvi-usa h2 {
+  position: relative;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 3rem 0 1rem;
+  padding: 0.35rem 0 0.35rem 1rem;
+  border-left: 5px solid var(--gvi-accent);
+  color: var(--gvi-ink);
+  scroll-margin-top: 90px;
+}
+.gvi-usa h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.7rem;
+  padding: 0.55rem 1rem;
+  background: var(--gvi-soft);
+  border-radius: 10px;
+  color: var(--gvi-primary-dark);
+}
+.gvi-usa h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 1.6rem 0 0.5rem;
+  color: var(--gvi-primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.gvi-usa h4::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gvi-accent);
+  flex: none;
+}
+
+/* Text */
+.gvi-usa p { margin: 0 0 1.1rem; color: var(--gvi-muted); }
+.gvi-usa strong { color: var(--gvi-ink); font-weight: 700; }
+.gvi-usa a:not([class]) { color: var(--gvi-primary); font-weight: 600; }
+.gvi-usa hr { border: 0; border-top: 1px solid var(--gvi-line); margin: 2.2rem 0; }
+
+/* Lists: one compact card per list, light dividers between rows */
+.gvi-usa ul {
+  list-style: none;
+  padding: 0.3rem 1.1rem;
+  margin: 0 0 1.4rem;
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+}
+.gvi-usa ul li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.5rem;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #eef0f3;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  color: var(--gvi-muted);
+}
+.gvi-usa ul li:last-child { border-bottom: 0; }
+.gvi-usa ul li:hover { transform: none; box-shadow: none; border-color: #eef0f3; }
+.gvi-usa ul li:last-child:hover { border-bottom: 0; }
+.gvi-usa ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gvi-primary);
+  box-shadow: none;
+}
+.gvi-usa ul ul { margin: 0.5rem 0 0.2rem; padding: 0; border: 0; box-shadow: none; background: transparent; }
+.gvi-usa ul ul li { padding: 0.3rem 0 0.3rem 1.3rem; border-bottom: 0; background: transparent; }
+.gvi-usa ul ul li::before { top: 0.8rem; width: 5px; height: 5px; background: var(--gvi-muted); }
+
+/* Numbered steps */
+.gvi-usa ol.gvi-steps { list-style: none; counter-reset: gvi-step; padding: 0; margin: 0 0 1.6rem; }
+.gvi-usa ol.gvi-steps > li {
+  counter-increment: gvi-step;
+  position: relative;
+  padding: 0.9rem 1rem 0.9rem 3.6rem;
+  margin-bottom: 0.7rem;
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-radius: 12px;
+  color: var(--gvi-muted);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+.gvi-usa ol.gvi-steps > li::before {
+  content: counter(gvi-step);
+  position: absolute;
+  left: 0.9rem;
+  top: 0.85rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gvi-primary), var(--gvi-primary-dark));
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gvi-usa .faq-container ol { padding-left: 1.4rem; margin: 0 0 1.2rem; color: var(--gvi-muted); }
+.gvi-usa .faq-container ol li { margin-bottom: 0.35rem; }
+
+/* Tables */
+.gvi-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.4rem;
+  border: 1px solid var(--gvi-line);
+  border-radius: var(--gvi-radius);
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.05);
+}
+.gvi-usa table { width: 100%; border-collapse: collapse; background: #fff; min-width: 560px; }
+.gvi-usa th {
+  background: linear-gradient(135deg, var(--gvi-primary), var(--gvi-primary-dark));
+  color: #fff;
+  text-align: left;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+}
+.gvi-usa td { padding: 0.8rem 1rem; border-top: 1px solid var(--gvi-line); color: var(--gvi-muted); }
+.gvi-usa tbody tr:nth-child(even) td { background: #f8fafc; }
+.gvi-usa td:first-child { font-weight: 600; color: var(--gvi-ink); }
+
+/* Note / callout */
+.gvi-usa .gvi-note {
+  background: #fff8e6;
+  border: 1px solid #f5d98a;
+  border-left: 5px solid #f0b429;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  color: #5c4a12;
+}
+
+/* FAQ blocks: lighter question bars so long FAQ lists stay scannable */
+.gvi-usa .faq-container h3 { font-size: 1.05rem; margin: 1.4rem 0 0.5rem; border-left: 4px solid var(--gvi-accent); border-radius: 0 10px 10px 0; }
+
+/* Table of contents */
+.gvi-toc {
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-left: 5px solid var(--gvi-primary);
+  border-radius: var(--gvi-radius);
+  padding: 1rem 1.3rem;
+  margin: 0 0 1.8rem;
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.05);
+}
+.gvi-toc ol { margin: 0.6rem 0 0; padding-left: 1.3rem; columns: 2 260px; column-gap: 2rem; }
+.gvi-toc li { margin: 0.25rem 0; color: var(--gvi-muted); }
+.gvi-toc a { color: var(--gvi-primary-dark); text-decoration: none; font-weight: 600; }
+.gvi-toc a:hover { text-decoration: underline; }
+
+/* Quick facts strip */
+.gvi-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+  margin: 1.4rem 0 2rem;
+}
+.gvi-fact {
+  background: linear-gradient(145deg, #fff 0%, var(--gvi-soft) 100%);
+  border: 1px solid #d4def5;
+  border-radius: var(--gvi-radius);
+  padding: 1rem 1.1rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(31, 58, 138, 0.08);
+}
+.gvi-fact b { display: block; font-size: 1.3rem; font-weight: 800; color: var(--gvi-primary); line-height: 1.2; }
+.gvi-fact span { display: block; margin-top: 0.25rem; font-size: 0.85rem; color: var(--gvi-muted); }
+
+/* In-page call-to-action band */
+.gvi-cta-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--gvi-soft);
+  border: 1px solid #d4def5;
+  border-radius: var(--gvi-radius);
+  padding: 1.1rem 1.4rem;
+  margin: 1.6rem 0;
+}
+.gvi-cta-band p { margin: 0; color: var(--gvi-ink); font-weight: 600; flex: 1 1 260px; }
+.gvi-usa a.gvi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--gvi-primary) 0%, var(--gvi-primary-dark) 100%);
+  box-shadow: 0 8px 18px rgba(31, 58, 138, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gvi-usa a.gvi-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(31, 58, 138, 0.36); }
+
+/* Contact card */
+.gvi-usa [class*="contactInfo"] {
+  background: linear-gradient(135deg, #1f3a8a 0%, #0f1f55 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 1.6rem 1.8rem;
+  margin: 1.6rem 0 2rem;
+  box-shadow: 0 14px 30px rgba(20, 39, 95, 0.3);
+}
+.gvi-usa [class*="contactInfo"] h4 { color: #fff !important; margin-top: 0.4rem; }
+.gvi-usa [class*="contactInfo"] h4::before { background: #fff; }
+.gvi-usa [class*="contactInfo"] p { color: rgba(255, 255, 255, 0.92); margin-bottom: 0.7rem; }
+.gvi-usa [class*="contactInfo"] ul {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+.gvi-usa [class*="contactInfo"] ul li {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #fff;
+  padding: 0.4rem 0 0.4rem 1.6rem;
+  margin: 0;
+  transform: none;
+}
+.gvi-usa [class*="contactInfo"] ul li::before { left: 0; top: 0.95rem; background: #fff; box-shadow: none; }
+.gvi-usa a.gvi-cta-link,
+.gvi-usa a.gvi-cta-link:link,
+.gvi-usa a.gvi-cta-link:visited {
+  display: inline-block;
+  color: #2b40e0 !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.2rem 0.9rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.gvi-usa a.gvi-cta-link:hover,
+.gvi-usa a.gvi-cta-link:focus-visible {
+  color: #e34b4b !important;
+  background: rgba(255, 255, 255, 0.32) !important;
+  background-color: rgba(255, 255, 255, 0.32) !important;
+  transform: translateY(-1px);
+}
+#apply-form { scroll-margin-top: 90px; }
+
+/* WhatsApp buttons */
+.gvi-usa [class*="callButton"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.6rem 0 1rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 10px 22px rgba(18, 140, 126, 0.32);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gvi-usa [class*="callButton"]:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(18, 140, 126, 0.4); }
+
+/* Address block */
+.gvi-usa address {
+  font-style: normal;
+  background: #f8fafc;
+  border: 1px solid var(--gvi-line);
+  border-radius: var(--gvi-radius);
+  padding: 1.2rem 1.4rem;
+  margin: 1.6rem 0;
+  line-height: 1.8;
+}
+
+
+/* FAQ dropdowns */
+.gvi-usa details.gvi-faq-item {
+  background: #fff;
+  border: 1px solid var(--gvi-line);
+  border-radius: 12px;
+  margin: 0 0 0.6rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.gvi-usa details.gvi-faq-item:hover { border-color: rgba(31, 58, 138, 0.35); box-shadow: 0 6px 16px rgba(16, 24, 40, 0.08); }
+.gvi-usa details.gvi-faq-item[open] { border-color: var(--gvi-primary); box-shadow: 0 8px 20px rgba(31, 58, 138, 0.12); }
+.gvi-usa details.gvi-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+}
+.gvi-usa details.gvi-faq-item summary::-webkit-details-marker { display: none; }
+.gvi-usa details.gvi-faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gvi-primary);
+  background: var(--gvi-soft);
+}
+.gvi-usa details.gvi-faq-item[open] summary::after { content: "–"; color: #fff; background: var(--gvi-primary); }
+.gvi-usa details.gvi-faq-item summary h3,
+.gvi-usa .faq-container details.gvi-faq-item summary h3 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: 1.02rem;
+  line-height: 1.45;
+  color: var(--gvi-ink);
+}
+.gvi-usa details.gvi-faq-item[open] summary { border-bottom: 1px solid #eef0f3; }
+.gvi-usa details.gvi-faq-item > p { margin: 0; padding: 0.8rem 1rem 0.2rem; }
+.gvi-usa details.gvi-faq-item > p:last-child { padding-bottom: 0.9rem; }
+.gvi-usa details.gvi-faq-item > ul,
+.gvi-usa details.gvi-faq-item > ol { margin: 0.4rem 1rem 0.6rem; }
+.gvi-usa details.gvi-faq-item > ol { padding-left: 1.4rem; }
+
+/* Contact section highlight */
+.gvi-usa .gvi-contact-section {
+  background: linear-gradient(160deg, #eef2fb 0%, #ffffff 60%);
+  border: 1px solid #d4def5;
+  border-top: 5px solid var(--gvi-accent);
+  border-radius: 20px;
+  padding: 1.4rem 1.6rem 1.2rem;
+  margin: 2.4rem 0;
+  box-shadow: 0 14px 34px rgba(31, 58, 138, 0.12);
+}
+.gvi-usa .gvi-contact-section > h2 { margin-top: 0; }
+.gvi-usa .gvi-contact-section hr { display: none; }
+.gvi-usa .gvi-contact-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+  margin: 0.4rem 0 1.6rem;
+}
+.gvi-usa a.gvi-tile,
+.gvi-usa a.gvi-tile:link,
+.gvi-usa a.gvi-tile:visited {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1.1rem;
+  border-radius: 16px;
+  color: #fff !important;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.gvi-usa a.gvi-tile:hover { transform: translateY(-3px); }
+.gvi-usa a.gvi-tile .gvi-tile-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 1.35rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+.gvi-usa a.gvi-tile b { display: block; font-size: 1.05rem; line-height: 1.2; color: #fff; }
+.gvi-usa a.gvi-tile small { display: block; font-size: 0.82rem; color: rgba(255, 255, 255, 0.9); word-break: break-word; }
+.gvi-usa a.gvi-tile-wa { background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); box-shadow: 0 10px 22px rgba(18, 140, 126, 0.32); }
+.gvi-usa a.gvi-tile-call { background: linear-gradient(135deg, #1f3a8a 0%, #14275f 100%); box-shadow: 0 10px 22px rgba(31, 58, 138, 0.32); }
+.gvi-usa a.gvi-tile-mail { background: linear-gradient(135deg, #d6193a 0%, #9b0f27 100%); box-shadow: 0 10px 22px rgba(200, 16, 46, 0.3); }
+.gvi-usa ul.gvi-cols { columns: 2 260px; column-gap: 1.6rem; }
+.gvi-usa ul.gvi-cols li { break-inside: avoid; }
+.gvi-usa [class*="contactInfo"] ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.6rem;
+}
+.gvi-usa [class*="contactInfo"] ul li {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 12px;
+  padding: 0.7rem 1rem 0.7rem 2.1rem;
+}
+.gvi-usa [class*="contactInfo"] ul li::before { left: 1rem; top: 1.25rem; }
+.gvi-usa .gvi-contact-section address {
+  background: #fff;
+  border-left: 5px solid var(--gvi-accent);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 640px) {
+  .gvi-usa { font-size: 0.98rem; }
+  .gvi-usa h2 { margin-top: 2.2rem; }
+  .gvi-usa ul li { padding-left: 1.4rem; }
+}
+`;
+
   // ---------- RENDER BELOW ---------- //
   return (
     <>
@@ -495,19 +946,46 @@ export default function USATouristVisa() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
+      {/* ✨ Scoped visual enhancements */}
+      <style dangerouslySetInnerHTML={{ __html: enhancedCss }} />
 
       <div className={styles.imageContainer}>
-        <img src="/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg" alt="USA Tourist Visa assistance banner" className={styles.VisaImage} />
+        <img src="/tourist-visa/USA-(B2)Tourist-Visa-Assistance-GVI.jpg" alt="US tourist visa (B1/B2) assistance from India - Global Visa Internationals" className={styles.VisaImage} />
       </div>
 
       <div className={styles.VisaSec}>
 
 
-        <div className={styles.VisaData}>
+        <div className={`${styles.VisaData} gvi-usa`}>
 
 
           {/* H1: Primary Keyword Targeting for Location + Year + Service */}
-          <h1 className={styles.Title}>Complete Guide to US Tourist Visa (B1/B2) in 2026 | Global Visa Internationals</h1>
+          <h1 className={styles.Title}>US Tourist Visa (B1/B2) from India: Complete Guide to Eligibility, Documents, Fees & Process for 2026</h1>
+
+          {/* Quick facts (values taken from the sections below) */}
+          <div className="gvi-facts">
+            <div className="gvi-fact"><b>$185</b><span>Official MRV fee</span></div>
+            <div className="gvi-fact"><b>Up to 10 years</b><span>Typical validity</span></div>
+            <div className="gvi-fact"><b>Up to 6 months</b><span>Stay per visit</span></div>
+            <div className="gvi-fact"><b>3–14 days</b><span>Business days after interview</span></div>
+          </div>
+
+          <nav aria-label="Table of contents" className="gvi-toc">
+            <strong>On this page</strong>
+            <ol>
+              <li><a href="#eligibility">Eligibility criteria</a></li>
+              <li><a href="#documents">Documents required</a></li>
+              <li><a href="#how-to-apply">How to apply (step-by-step)</a></li>
+              <li><a href="#fees">Fees & costs</a></li>
+              <li><a href="#processing-time">Processing time</a></li>
+              <li><a href="#why-gvi">Why choose GVI</a></li>
+              <li><a href="#rejection-reasons">Rejection reasons & how to avoid them</a></li>
+              <li><a href="#categories">B1, B2 and B1/B2 categories</a></li>
+              <li><a href="#faq">Frequently asked questions</a></li>
+              <li><a href="#contact">Contact us</a></li>
+            </ol>
+          </nav>
+
           <p>A US Tourist Visa, officially known as the B1/B2 visa, is a non-immigrant visa that permits foreign nationals to enter the United States temporarily. This US tourist visa serves multiple purposes including business travel (B1), tourism and leisure (B2), or a combination of both activities.</p>
           <p>The US tourist visa allows visitors to explore American destinations, attend business meetings, visit family and friends, or seek medical treatment without the intention of permanent residency.</p>
 
@@ -515,10 +993,10 @@ export default function USATouristVisa() {
             📞 Check My Visa Eligibility for 2026 (Free)
           </a>
 
-          <h2 class={styles.subTitle}>US Tourist Visa Eligibility Criteria: Complete Requirements for 2026</h2>
+          <h2 id="eligibility" className={styles.subTitle}>US Tourist Visa Eligibility Criteria: Complete Requirements for 2026</h2>
           <p>Understanding US tourist visa eligibility criteria is crucial for a successful application. The US Embassy has specific requirements that every applicant must meet:</p>
 
-          <h3 class={styles.subTitle}>Core US Tourist Visa Eligibility Requirements</h3>
+          <h3 className={styles.subTitle}>Core US Tourist Visa Eligibility Requirements</h3>
 
           <h4 className={styles.subTitle}>1. Valid Purpose of Travel</h4>
           <ul>
@@ -537,10 +1015,10 @@ export default function USATouristVisa() {
 
           <h4 className={styles.subTitle}>3. Strong Ties to Home Country</h4>
           <ul>
-            <li>Proof of permanent residence in your home country</li>
-            <li>Employment verification letter or business ownership documents</li>
+            <li>Supporting documents to demonstrates you will return to your home country.</li>
+            {/* <li>Employment verification letter or business ownership documents</li>
             <li>Family ties documentation (marriage certificate, children's records)</li>
-            <li>Property ownership papers or rental agreements</li>
+            <li>Property ownership papers or rental agreements</li> */}
           </ul>
 
           <h4 className={styles.subTitle}>4. Immigration Compliance</h4>
@@ -551,10 +1029,10 @@ export default function USATouristVisa() {
             <li>Adherence to US tourist visa conditions (no work, study, or paid performances)</li>
           </ul>
 
-          <h3 class={styles.subTitle}>US Tourist Visa Documents Required: Complete Checklist 2026</h3>
+          <h2 id="documents" className={styles.subTitle}>US Tourist Visa Documents Required: Complete Checklist 2026</h2>
           <p>Proper documentation is critical for US tourist visa approval. Here's the comprehensive US tourist visa documents required list:</p>
 
-          <strong className={styles.strong}>Mandatory US Tourist Visa Documents</strong>
+          <h3 className={styles.subTitle}>Mandatory US Tourist Visa Documents</h3>
 
           <h4 className={styles.subTitle}>Identity & Travel Documents:</h4>
           <ul>
@@ -573,21 +1051,22 @@ export default function USATouristVisa() {
 
           <h4 className={styles.subTitle}>Financial Documents for US Tourist Visa:</h4>
           <ul>
-            <li>Last 6 months' bank statements</li>
-            <li>Income Tax Returns (ITR) for past 3 years</li>
+            <li>Bank statements, ITR and payslips demonstrating sufficient funds for your trip.</li>
+            {/* <li>Income Tax Returns (ITR) for past 3 years</li>
             <li>Salary slips (last 6 months) or business financial statements</li>
             <li>Fixed deposit receipts, mutual fund statements, property documents</li>
-            <li>Sponsorship documents (Form I-134 Affidavit of Support, if applicable)</li>
+            <li>Sponsorship documents (Form I-134 Affidavit of Support, if applicable)</li> */}
           </ul>
 
           <h4 className={styles.subTitle}>Supporting Documents:</h4>
           <ul>
-            <li>Employment verification letter on company letterhead</li>
+            <li> Additionals documents to support the Case </li>
+            {/* <li>Employment verification letter on company letterhead</li>
             <li>Leave approval letter from employer</li>
             <li>Business registration documents (for self-employed applicants)</li>
             <li>Travel itinerary and confirmed flight bookings</li>
             <li>Hotel reservations or host invitation letter</li>
-            <li>Travel insurance (recommended)</li>
+            <li>Travel insurance (recommended)</li> */}
           </ul>
 
           <h4 className={styles.subTitle}>Character & Compliance Documents:</h4>
@@ -604,13 +1083,13 @@ export default function USATouristVisa() {
             <li>VFS service fee receipt</li>
           </ul>
 
-          <h2 class={styles.subTitle}>How to Apply for US Tourist Visa: Step-by-Step Process 2026</h2>
+          <h2 id="how-to-apply" className={styles.subTitle}>How to Apply for US Tourist Visa: Step-by-Step Process 2026</h2>
           <p>Follow this detailed US tourist visa application process for successful submission:</p>
 
           <h3 className={styles.subTitle}>US Tourist Visa Application Steps</h3>
           <h4 className={styles.subTitle}>Step 1: Prepare Digital Photograph</h4>
           <ul>
-            <li>Capture recent photograph meeting US visa specifications (51mm x 51mm, white background, no glasses)</li>
+            <li>Capture recent photograph meeting US visa specifications</li>
             <li>Upload digital photo during DS-160 form submission</li>
           </ul>
 
@@ -675,40 +1154,42 @@ export default function USATouristVisa() {
             <li>Verify all visa details upon receipt</li>
           </ul>
 
-          <h2 class={styles.subTitle}>US Tourist Visa Fees & Costs 2026</h2>
+          <h2 id="fees" className={styles.subTitle}>US Tourist Visa Fees & Costs 2026</h2>
           <p>Understanding the complete US tourist visa cost helps in proper budgeting:</p>
 
           <h3 className={styles.subTitle}>Official US Tourist Visa Fees</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Fee Component</th>
-                <th>Amount (INR)</th>
-                <th>USD Equivalent</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>MRV Application Fee</td>
-                <td>₹17,000 (approx)</td>
-                <td>$185</td>
-                <td>Non-refundable, paid to US Government</td>
-              </tr>
-              <tr>
-                <td>Biometrics Fee</td>
-                <td>Included</td>
-                <td>-</td>
-                <td>Covered in MRV fee</td>
-              </tr>
-              <tr>
-                <td>VFS Service Fee</td>
-                <td>₹1,500-2,500</td>
-                <td>-</td>
-                <td>For document collection & courier</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="gvi-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fee Component</th>
+                  <th>Amount (INR)</th>
+                  <th>USD Equivalent</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MRV Application Fee</td>
+                  <td>₹17,000 (approx)</td>
+                  <td>$185</td>
+                  <td>Non-refundable, paid to US Government</td>
+                </tr>
+                <tr>
+                  <td>Biometrics Fee</td>
+                  <td>Included</td>
+                  <td>-</td>
+                  <td>Covered in MRV fee</td>
+                </tr>
+                <tr>
+                  <td>VFS Service Fee</td>
+                  <td>₹1,500-2,500</td>
+                  <td>-</td>
+                  <td>For document collection & courier</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h4 className={styles.subTitle}>Additional US Visa Related Costs</h4>
           <ul>
@@ -718,9 +1199,9 @@ export default function USATouristVisa() {
             <li>Document Attestation: ₹500-2,000 (notarization, translations)</li>
             <li>Consultant Fees: Variable (contact Global Visa Internationals for quote)</li>
           </ul>
-          <p><strong className={styles.strong}>Important:</strong> The US tourist visa fee ($185/₹17,000) is non-refundable regardless of visa approval or rejection.</p>
+          <p className="gvi-note"><strong className={styles.strong}>Important:</strong> The US tourist visa fee ($185/₹17,000) is non-refundable regardless of visa approval or rejection.</p>
 
-          <h2 class={styles.subTitle}>US Tourist Visa Processing Time 2026</h2>
+          <h2 id="processing-time" className={styles.subTitle}>US Tourist Visa Processing Time 2026</h2>
           <p><strong className={styles.strong}>Standard US tourist visa processing time:</strong> 3-14 business days after interview</p>
           <p>However, actual processing time depends on several factors:</p>
 
@@ -734,16 +1215,21 @@ export default function USATouristVisa() {
           </ul>
 
           <h3 className={styles.subTitle}>US Visa Timeline Breakdown</h3>
-          <ol>
+          <ol className="gvi-steps">
             <li><strong className={styles.strong}>Appointment Scheduling:</strong> 6-8 months wait (as of early 2026)</li>
             <li><strong className={styles.strong}>Interview Day:</strong> Same day preliminary decision (in most cases)</li>
             <li><strong className={styles.strong}>Passport Processing:</strong> 3-5 business days for approved visas</li>
             <li><strong className={styles.strong}>Passport Return:</strong> 2-3 business days via courier</li>
           </ol>
           <p><strong className={styles.strong}>Total Timeline:</strong> 8-10 months from fee payment to visa receipt (including appointment wait time)</p>
-          <p><em>Note: Global Visa Internationals specializes in securing earlier US visa appointment slots through dedicated 24/7 monitoring of cancellations and expedited processing options.</em></p>
+          <p className="gvi-note"><em>Note: Global Visa Internationals specializes in securing earlier US visa appointment slots through dedicated 24/7 monitoring of cancellations and expedited processing options.</em></p>
 
-          <h2 class={styles.subTitle}>Why Choose Global Visa Internationals for US Tourist Visa?</h2>
+          <div className="gvi-cta-band">
+            <p>Facing long appointment wait times? Ask about our fast-track slot monitoring.</p>
+            <a href="#apply-form" className="gvi-btn">Get Started Now</a>
+          </div>
+
+          <h2 id="why-gvi" className={styles.subTitle}>Why Choose Global Visa Internationals for US Tourist Visa?</h2>
           <p>Global Visa Internationals (GVI) is Bangalore's most trusted US visa consultant with proven expertise in B1/B2 visa processing:</p>
 
           <h3 className={styles.subTitle}>Our US Tourist Visa Services</h3>
@@ -830,11 +1316,11 @@ export default function USATouristVisa() {
             <li>Success with first-time international travelers</li>
           </ul>
 
-          <h2 class={styles.subTitle}>Common US Tourist Visa Rejection Reasons & How to Avoid Them</h2>
+          <h2 id="rejection-reasons" className={styles.subTitle}>Common US Tourist Visa Rejection Reasons & How to Avoid Them</h2>
           <p>Understanding rejection causes helps strengthen your US tourist visa application:</p>
 
           <h3 className={styles.subTitle}>Top US Visa Denial Reasons (2026)</h3>
-          <ol>
+          <ol className="gvi-steps">
             <li><strong className={styles.strong}>Insufficient Ties to Home Country (Section 214(b))</strong>
               <ul>
                 <li>Most common rejection reason for B1/B2 visas</li>
@@ -874,7 +1360,7 @@ export default function USATouristVisa() {
           </ol>
           <p>Global Visa Internationals specializes in preventing these rejections through thorough application preparation, expert interview coaching, and detailed profile audits.</p>
 
-          <h2 class={styles.subTitle}>US Tourist Visa Categories We Handle</h2>
+          <h2 id="categories" className={styles.subTitle}>US Tourist Visa Categories We Handle</h2>
           <h3 className={styles.subTitle}>B1 Visa (Business)</h3>
           <ul>
             <li>Attending business conferences and seminars</li>
@@ -900,60 +1386,102 @@ export default function USATouristVisa() {
             <li>Allows flexibility in travel activities</li>
           </ul>
 
-          <h2 class={styles.subTitle}>US Tourist Visa Frequently Asked Questions (2026)</h2>
+          <h2 id="faq" className={styles.subTitle}>US Tourist Visa Frequently Asked Questions (2026)</h2>
 
-          <h4 className={styles.subTitle}>How long is a US tourist visa valid?</h4>
+          <details className="gvi-faq-item">
+            <summary><h3>How long is a US tourist visa valid?</h3></summary>
           <p>US B1/B2 visas are typically issued for 10 years for Indian citizens, allowing multiple entries. Each visit can be up to 6 months (as determined by CBP officer at entry).</p>
 
-          <h4 className={styles.subTitle}>Can I work on a US tourist visa?</h4>
+          </details>
+
+          <details className="gvi-faq-item">
+            <summary><h3>Can I work on a US tourist visa?</h3></summary>
           <p>No. The B1/B2 visa strictly prohibits employment, paid performances, or enrolling in formal academic study programs.</p>
 
-          <h4 className={styles.subTitle}>What is the US visa appointment wait time in Bangalore?</h4>
+          </details>
+
+          <details className="gvi-faq-item">
+            <summary><h3>What is the US visa appointment wait time in Bangalore?</h3></summary>
           <p>As of early 2026, standard wait times range from 6-8 months. Global Visa Internationals can help secure earlier slots through our dedicated 24/7 cancellation monitoring system.</p>
 
-          <h4 className={styles.subTitle}>Can Global Visa Internationals help with US visa rejection cases?</h4>
+          </details>
+
+          <details className="gvi-faq-item">
+            <summary><h3>Can Global Visa Internationals help with US visa rejection cases?</h3></summary>
           <p>Yes. We specialize in analyzing previous refusals, reviewing your previous DS-160 and interview transcript, identifying documentation gaps, and creating stronger reapplication strategies with improved documentation.</p>
 
-          <h4 className={styles.subTitle}>Is travel insurance mandatory for US tourist visa?</h4>
+          </details>
+
+          <details className="gvi-faq-item">
+            <summary><h3>Is travel insurance mandatory for US tourist visa?</h3></summary>
           <p>While not officially mandatory for visa approval, travel insurance is highly recommended and can strengthen your application by demonstrating travel preparedness and financial responsibility.</p>
 
-          <h4 className={styles.subTitle}>What is the success rate with Global Visa Internationals?</h4>
+          </details>
+
+          <details className="gvi-faq-item">
+            <summary><h3>What is the success rate with Global Visa Internationals?</h3></summary>
           <p>We maintain high approval rates even for complex cases including first-time international travelers, senior citizens, solo female travelers, and previously rejected applications through our comprehensive preparation approach.</p>
 
-          <h4 className={styles.subTitle}>How early should I start my US visa application process?</h4>
+          </details>
+
+          <details className="gvi-faq-item">
+            <summary><h3>How early should I start my US visa application process?</h3></summary>
           <p>Given the 6-8 month appointment wait time in Bangalore, we recommend starting your US visa application process at least 10-12 months before your intended travel date.</p>
 
-          <h4 className={styles.subTitle}>Do you provide post-visa services?</h4>
-          <p>Yes. Global Visa Internationals provides complete support including travel planning guidance, pre-departure orientation, and US arrival assistance.</p>
+          </details>
 
+          <details className="gvi-faq-item">
+            <summary><h3>Do you provide post-visa services?</h3></summary>
+          <p>Yes. Global Visa Internationals provides complete support including travel planning guidance, pre-departure orientation, and US arrival assistance.</p>
+          </details>
           <hr />
 
-          <h2 class={styles.subTitle}>Start Your US Tourist Visa Journey with Global Visa Internationals</h2>
+          <section className="gvi-contact-section" aria-labelledby="contact">
+          <h2 id="contact" className={styles.subTitle}>Start Your US Tourist Visa Journey with Global Visa Internationals</h2>
           <p>Don't let complex US visa procedures and 300+ day wait times delay your American dream. Global Visa Internationals offers comprehensive support from initial consultation to visa approval, with guaranteed service timelines.</p>
+
+          <div className="gvi-contact-strip">
+            <a href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026" className="gvi-tile gvi-tile-wa">
+              <span className="gvi-tile-icon">💬</span>
+              <span><b>WhatsApp</b><small>Chat with a visa expert</small></span>
+            </a>
+            <a href="tel:+917022213466" className="gvi-tile gvi-tile-call">
+              <span className="gvi-tile-icon">📞</span>
+              <span><b>Call us</b><small>+91-7022213466</small></span>
+            </a>
+            <a href="mailto:operations@globalvisainternationals.com" className="gvi-tile gvi-tile-mail">
+              <span className="gvi-tile-icon">✉️</span>
+              <span><b>Email us</b><small>operations@globalvisainternationals.com</small></span>
+            </a>
+          </div>
 
           <h3 className={styles.subTitle}>📞 Contact Global Visa Internationals Today</h3>
           <p><strong className={styles.strong}>Free Eligibility Check for 2026:</strong></p>
-          <ul>
+          <ul className="gvi-cols">
             <li>Understand your US visa approval chances</li>
             <li>Profile evaluation and improvement recommendations</li>
             <li>Risk assessment and success probability analysis</li>
           </ul>
 
-          <h4 className={styles.subTitle}>Our Office: Global Visa Internationals (GVI)</h4>
-          <p>GF-9, Business Point, 137 Brigade Road
+          <div className={styles.contactInfo}>
+            <h4 className={styles.subTitle}>Our Office: Global Visa Internationals (GVI)</h4>
+            <p>GF-9, Business Point, 137 Brigade Road
 
-            <br />
-            Bangalore – 560025, Karnataka</p>
+              <br />
+              Bangalore – 560025, Karnataka</p>
 
-          <h4 className={styles.subTitle}>Get in Touch:</h4>
-          <ul>
-            <li>📞 <a href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026">Click to Chat on WhatsApp</a></li>
-            <li>📧 Email: operations@globalvisainternationals.com</li>
-            <li>🌐 Visit our website for instant consultation</li>
-          </ul>
+            <h4 className={styles.subTitle}>Get in Touch:</h4>
+            <ul>
+              <li>📞 <a href="https://wa.me/917022213466?text=Hi,%20I%20am%20looking%20for%20USA%20Visa%20assistance%20for%202026" className="gvi-cta-link">Click to Chat on WhatsApp</a></li>
+              <li>📧 Email: operations@globalvisainternationals.com</li>
+              <li>🌐 Visit our website for instant consultation</li>
+              <li>📝 <a href="#apply-form" className="gvi-cta-link">Apply Now</a></li>
+              <li>✅ <a href="https://wa.me/917022213466?text=Hi,%20I%20would%20like%20a%20free%20eligibility%20check%20for%20a%20US%20B1/B2%20Visa" className="gvi-cta-link">Get Your Free Eligibility Check</a></li>
+            </ul>
+          </div>
 
           <h3 className={styles.subTitle}>Why Thousands Choose Global Visa Internationals</h3>
-          <ul>
+          <ul className="gvi-cols">
             <li>10+ Years Experience in US visa processing</li>
             <li>High Approval Rates for complex and refusal cases</li>
             <li>Fast-Track Appointment Booking with 24/7 monitoring</li>
@@ -966,12 +1494,7 @@ export default function USATouristVisa() {
 
           <hr />
 
-          <p class="visually-hidden">
-            Popular Keywords: US tourist visa, US tourist visa eligibility criteria, US tourist visa documents required, US visa application process, US tourist visa fees, US tourist visa processing time, B1/B2 visa, US visa consultant Bangalore, Global Visa Internationals, DS-160 form, US Embassy interview, US visa appointment Bangalore, US visa agent Bangalore, US visa slot booking, Section 214(b) rejection, US visa refusal cases
-          </p>
-
-
-          <address className={styles.address}>
+          {/* <address className={styles.address}>
             <strong className={styles.strong}>Global Visa Internationals (GVI)</strong><br />
             GF-9, Business Point, 137 Brigade Road,<br />
             Bangalore – 560025, Karnataka<br />
@@ -983,39 +1506,64 @@ export default function USATouristVisa() {
             Email: <a href="mailto:operations@globalvisainternationals.com">
               operations@globalvisainternationals.com
             </a>
-          </address>
+          </address> */}
+          </section>
 
-          <div class="faq-container">
+          <h2 id="faq-more" className={styles.subTitle}>More US Visa Questions Answered</h2>
 
-            <h3 className={styles.subTitle}>How do I get a US visa?</h3>
+          <div className="faq-container">
+
+            <details className="gvi-faq-item">
+              <summary><h3>How do I get a US visa?</h3></summary>
             <p>To obtain a US visa, you must first identify the correct visa type (e.g., Tourist B1/B2 or Student F1). You then need to complete the DS-160 form online, pay the application fee, and schedule an interview at the nearest US Embassy or Consulate.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> We make the process simple and error-free. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>How do I apply for a US visa from the UK?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>How do I apply for a US visa from the UK?</h3></summary>
             <p>Residents in the UK must complete the DS-160 form, pay the fee via the official appointment service, and attend an in-person interview at the US Embassy in London or the Consulate General in Belfast.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Applying from the UK? We can guide you. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>What does a US visa look like?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>What does a US visa look like?</h3></summary>
             <p>A US visa is a foil sticker placed inside your passport. It features your photograph on the left, your biographical data, the visa class (e.g., B1/B2), and a red visa number printed on the bottom right.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Ensure your visa details are correct. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>How is the US visa situation in Nigeria?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>How is the US visa situation in Nigeria?</h3></summary>
             <p>Demand for US visas in Nigeria is currently very high. Appointment wait times for visitor visas in Abuja and Lagos can be lengthy. It is highly recommended to apply well in advance of your travel date.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> We monitor appointment slots daily. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>How do I check my US visa status?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>How do I check my US visa status?</h3></summary>
             <p>You can check your status on the CEAC (Consular Electronic Application Center) website using the "Check My Visa Application Status" tool. You will need your DS-160 barcode number and interview location.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Let us track your application for you. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Where do I get a US visa?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Where do I get a US visa?</h3></summary>
             <p>You must apply and attend an interview at the US Embassy or Consulate located in your country of residence. You cannot get a visa upon arrival at a US airport.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Find the right application center with Global Visa Internationals. Contact us at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Which US visa is the easiest to get?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Which US visa is the easiest to get?</h3></summary>
             <p>The B1/B2 Tourist Visa is the most common visa type. However, "ease" of approval depends entirely on your ability to prove strong financial and social ties to your home country.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Maximize your approval chances with our guidance. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Which US visa do I need?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Which US visa do I need?</h3></summary>
             <p>The type of visa depends on your purpose of travel:</p>
             <ul>
               <li><strong className={styles.strong}>Tourism/Medical:</strong> B2 Visa</li>
@@ -1025,23 +1573,38 @@ export default function USATouristVisa() {
             </ul>
             <p><strong className={styles.strong}>Expert Help:</strong> Unsure which category fits you? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>When is US visa stamping in US available?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>When is US visa stamping in US available?</h3></summary>
             <p>Domestic visa renewal (stamping inside the USA) was a pilot program that ended in early 2024. Currently, most non-immigrants must leave the US and visit a US Consulate abroad to get a new visa stamp in their passport.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> For the latest renewal updates, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Where is the US visa number?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Where is the US visa number?</h3></summary>
             <p>The visa number is the Red Number (usually 8 characters) printed on the bottom right-hand side of the visa foil in your passport.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Questions about your documents? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Can US visa holders work in Saudi Arabia?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Can US visa holders work in Saudi Arabia?</h3></summary>
             <p>No. A US visitor visa does not grant you the right to work in Saudi Arabia. You must obtain a Saudi Work Visa sponsored by a local employer.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Need a work visa? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Can US visa holders travel to Saudi Arabia (E-Visa)?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Can US visa holders travel to Saudi Arabia (E-Visa)?</h3></summary>
             <p>Yes. Holders of a valid US tourist or business visa can often obtain a Saudi E-Visa or Visa on Arrival, provided the US visa is still valid and has been used at least once to enter the USA.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Plan your multi-country itinerary with Global Visa Internationals. Contact us at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>How do I apply for a US tourist visa from India online?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>How do I apply for a US tourist visa from India online?</h3></summary>
             <p>To apply online, you must follow these steps:</p>
             <ol>
               <li>Complete the DS-160 form on the CEAC website.</li>
@@ -1051,27 +1614,45 @@ export default function USATouristVisa() {
             </ol>
             <p><strong className={styles.strong}>Expert Help:</strong> Avoid errors and delays. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Which companies offer the fastest US tourist visa processing services in India?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Which companies offer the fastest US tourist visa processing services in India?</h3></summary>
             <p>Processing times are set by the Embassy, but experienced consultancies can speed up your application preparation and monitor slots for cancellations to get you an earlier interview.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> For the fastest professional assistance, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>What are the fees for a US tourist visa application through official channels?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>What are the fees for a US tourist visa application through official channels?</h3></summary>
             <p>The application fee for a US Visitor Visa (B1/B2) is $185 USD (payable in INR at the consular exchange rate). This fee is non-refundable.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> For fee payment guidance, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Can I book a US tourist visa appointment through a mobile app?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Can I book a US tourist visa appointment through a mobile app?</h3></summary>
             <p>There is no official government mobile app for booking. However, the official website is mobile-responsive.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> Let us manage the booking portal for you. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>What travel agencies provide end-to-end US tourist visa assistance in India?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>What travel agencies provide end-to-end US tourist visa assistance in India?</h3></summary>
             <p>For comprehensive support—including form filling, document verification, and mock interviews—specialized visa firms are recommended over general travel agents.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> For end-to-end premium support, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Which courier services are recommended for sending US tourist visa documents?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Which courier services are recommended for sending US tourist visa documents?</h3></summary>
             <p>The US Embassy in India officially partners with Blue Dart for document submission (Dropbox) and passport delivery.</p>
             <p><strong className={styles.strong}>Expert Help:</strong> For logistics support, Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>What documents do I need to submit for a US tourist visa interview in India?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>What documents do I need to submit for a US tourist visa interview in India?</h3></summary>
             <p>You generally need the following documents:</p>
             <ul>
               <li>Original Passport (Current and Old)</li>
@@ -1082,11 +1663,17 @@ export default function USATouristVisa() {
             </ul>
             <p><strong className={styles.strong}>Expert Help:</strong> Get a checklist tailored to your profile. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Are there any premium services to expedite my US tourist visa interview scheduling?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Are there any premium services to expedite my US tourist visa interview scheduling?</h3></summary>
             <p>The US Consulate does not sell "Premium" or "VIP" slots. Earlier slots only become available through cancellations or emergency requests (medical/humanitarian only).</p>
             <p><strong className={styles.strong}>Expert Help:</strong> We monitor the system daily for earlier slots. Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
 
-            <h3 className={styles.subTitle}>Where can I find authorized visa application centers for US tourist visas near me?</h3>
+            </details>
+
+            <details className="gvi-faq-item">
+              <summary><h3>Where can I find authorized visa application centers for US tourist visas near me?</h3></summary>
             <p>In India, the Visa Application Centers (VAC) and Consulates are located in:</p>
             <ul>
               <li>New Delhi</li>
@@ -1096,12 +1683,12 @@ export default function USATouristVisa() {
               <li>Kolkata</li>
             </ul>
             <p><strong className={styles.strong}>Expert Help:</strong> Need help choosing a center? Contact Global Visa Internationals at <a href="https://wa.me/917022213466">+91 70222 13466</a>.</p>
-
+            </details>
           </div>
 
         </div>
 
-        <div className={styles.formSection}>
+        <div id="apply-form" className={styles.formSection}>
           <VisaForm />
         </div>
       </div>

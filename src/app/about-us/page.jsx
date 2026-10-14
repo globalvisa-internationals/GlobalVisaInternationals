@@ -11,7 +11,7 @@ import { CheckCircle, Users, Globe, Award, Shield, Clock } from 'lucide-react';
 // ✅ NEXT.JS METADATA API
 // ---------------------------
 export const metadata = {
-  title: "About Us | Global Visa Internationals – Leading Visa & Immigration Consultants in Bangalore",
+  title: "About Us | GVI – Leading Visa & Immigration Consultants in Bangalore",
   description:
     "Learn more about Global Visa Internationals, a trusted visa and immigration consultancy in Bangalore. We assist with Student, Tourist, Work, PR & Business visas with 75,000+ happy clients.",
   keywords: [

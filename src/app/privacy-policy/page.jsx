@@ -177,7 +177,9 @@ export default function privacyPolicy() {
 
                                 <p>
                                     <b>Global Visa Internationals</b><br />
-                                    MG Road, Bangalore, 560025<br />
+                                    GF-9, Business Point, 137 Brigade Road,
+                                    Next to Brigade Towers,
+                                    Bangalore – 560025, Karnataka<br />
                                     Email: <b>operations@globalvisa-internationals.com</b>
                                 </p>
                             </li>
