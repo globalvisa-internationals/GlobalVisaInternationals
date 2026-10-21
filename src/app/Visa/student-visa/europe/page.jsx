@@ -1,307 +1,223 @@
+import React from "react";
+import VisaForm from "@/Components/VisaForm";
+import styles from "./EuropeStudentVisa.module.css";
+import { SectionHeading, DocumentChecklist } from "../StudentVisaCommon";
 
-import styles from './Europe.module.css';
-import React from 'react';
-import Head from 'next/head';
-import VisaForm from '@/Components/VisaForm';
-export default function EuropeStudentVisa() {
+const pageUrl = "https://www.globalvisainternationals.com/visa/student-visa/europe";
+const imageUrl = "https://www.globalvisainternationals.com/images/Europe1.png";
 
+export async function generateMetadata() {
+  return {
+    title: "Study in Europe: Student Visa Guidance, Documents and Costs | Global Visa Internationals",
+    description: "Planning to study in Europe from India? Understand country-specific student visa routes, common documents, study costs and application steps with guidance from Global Visa Internationals.",
+    alternates: { canonical: pageUrl },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: "Study in Europe: Student Visa Guidance for Indian Students",
+      description: "Explore student visa preparation, documents and study planning for European destinations with Global Visa Internationals.",
+      url: pageUrl,
+      siteName: "Global Visa Internationals",
+      type: "website",
+      locale: "en_IN",
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: "Study in Europe and student visa guidance" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Study in Europe: Student Visa Guidance",
+      description: "Explore country-specific visa requirements, documents and study costs for Europe.",
+      images: [imageUrl],
+    },
+  };
+}
 
+export const viewport = { width: "device-width", initialScale: 1, themeColor: "#ffffff", colorScheme: "light" };
+
+const commonDocuments = [
+  "Valid passport and identity documents",
+  "Admission or acceptance letter from a recognised institution",
+  "Completed national student visa or residence-permit application",
+  "Recent passport-sized photographs that meet the destination country's rules",
+  "Proof of funds for tuition, living expenses and travel, as required",
+  "Academic transcripts, certificates and other education records",
+  "Health or travel medical insurance, where required",
+  "Proof of accommodation, if required by the destination country",
+  "Visa fee payment confirmation and appointment documents, where applicable",
+  "Police clearance, medical examination or TB test, if specifically required",
+];
+
+const steps = [
+  ["Choose your destination and course", "Compare countries, course options, entry requirements, tuition, living costs and language requirements."],
+  ["Apply to a recognised institution", "Follow the institution's admission process and keep your offer or acceptance letter."],
+  ["Check the correct visa route", "Long-term study usually requires a national student visa or residence permit. Rules differ by country and course duration."],
+  ["Prepare your country-specific evidence", "Use the official embassy, consulate or immigration website to confirm financial, insurance, accommodation and document requirements."],
+  ["Submit your application", "Complete the required form, pay the applicable fee and book an appointment or provide biometrics if instructed."],
+  ["Track the decision and prepare to travel", "Respond to requests by the deadline and check the conditions, validity dates and entry rules on your visa or permit."],
+];
+
+const countryCosts = [
+  ["Germany", "Varies by institution and programme; some public programmes have low or no tuition", "€850–€1,200"],
+  ["France", "Varies by institution, programme and student status", "€800–€1,200"],
+  ["Finland", "Often €6,000–€20,000 yearly for non-EU/EEA students in English-taught programmes", "€700–€1,100"],
+  ["Netherlands", "Varies by programme and student status", "€800–€1,200"],
+  ["Italy", "Varies by institution, programme and income-based fee rules", "€700–€1,000"],
+  ["Ireland", "Tuition varies widely by course and institution", "€1,000–€1,500"],
+];
+
+export default function EuropeStudentVisaPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.globalvisainternationals.com" },
+      { "@type": "ListItem", position: 2, name: "Student Visa", item: "https://www.globalvisainternationals.com/visa/student-visa" },
+      { "@type": "ListItem", position: 3, name: "Europe Student Visa", item: pageUrl },
+    ],
+  };
+  const faqJsonLd = {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Is there one student visa for all of Europe?", acceptedAnswer: { "@type": "Answer", text: "No. Student visa and residence-permit requirements are set by the destination country. The correct route depends on the country, course duration and applicant circumstances." } },
+      { "@type": "Question", name: "Do I need a Schengen visa to study in Europe?", acceptedAnswer: { "@type": "Answer", text: "A short-stay Schengen visa is not a substitute for the national long-stay visa or residence permit usually required for longer academic programmes. Check the official rules for your destination." } },
+      { "@type": "Question", name: "What documents are commonly needed?", acceptedAnswer: { "@type": "Answer", text: "Common documents can include a passport, admission letter, application form, financial evidence, photographs and insurance. Exact requirements vary by country and personal circumstances." } },
+      { "@type": "Question", name: "How much does it cost to study in Europe?", acceptedAnswer: { "@type": "Answer", text: "Tuition and living expenses vary significantly by country, institution, city and course. Confirm current costs directly with the institution and official sources." } },
+      { "@type": "Question", name: "Can a consultant guarantee a student visa?", acceptedAnswer: { "@type": "Answer", text: "No. Visa decisions are made by the relevant government authority. Consultancy support cannot guarantee approval or a particular processing time." } },
+    ],
+  };
 
   return (
     <>
-      <Head>
-        <title>Study in Europe: Visa Guide, Top Universities & Costs | Global Visa Internationals</title>
-        <meta
-          name="description"
-          content="Your comprehensive guide to studying in Europe. Learn about student visas (Schengen & Non-Schengen), top universities, course costs, and application processes with Global Visa Internationals."
-        />
-        <meta
-          name="keywords"
-          content="study in Europe, European student visa, Schengen visa, non-Schengen visa, study abroad Europe, top universities Europe, cost of studying Europe, student visa Germany, student visa France, student visa Netherlands, student visa UK, student visa Ireland, Global Visa Internationals"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.globalvisainternationals.com/Visa/student-visa/europe" /> {/* Replace with your actual URL */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <p className={styles.eyebrow}>YOUR EUROPE STUDY JOURNEY STARTS HERE</p>
+            <h1>Europe Student Visa Guidance for Indian Students</h1>
+            <p className={styles.heroText}>Explore study opportunities across Europe with clear guidance on country-specific student visa routes, documents, costs and application steps from Global Visa Internationals.</p>
+            <div className={styles.heroActions}>
+              <a className={styles.primaryButton} href="#enquiry">Book a Consultation <span aria-hidden="true">→</span></a>
+              <a className={styles.secondaryButton} href="#application-process">Explore the Process</a>
+            </div>
+            <p className={styles.heroNote}>Country-specific preparation support. Always verify current rules with official authorities.</p>
+          </div>
+          <div className={styles.heroImageWrap}>
+            <img src="/images/Europe1.png" alt="Study in Europe and student visa guidance" className={styles.heroImage} fetchPriority="high" width="1200" height="630" />
+            <div className={styles.imageBadge}><span className={styles.badgeIcon} aria-hidden="true">✦</span><span><strong>Personalised guidance</strong><small>From planning to application</small></span></div>
+          </div>
+        </section>
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Study in Europe: Visa Guide, Top Universities & Costs | Global Visa Internationals" />
-        <meta
-          property="og:description"
-          content="Your comprehensive guide to studying in Europe. Learn about student visas (Schengen & Non-Schengen), top universities, course costs, and application processes with Global Visa Internationals."
-        />
-        <meta property="og:url" content="https://www.globalvisainternationals.com/Visa/student-visa/europe" /> {/* Replace with your actual Facebook URL */}
-        <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content="URL_TO_YOUR_EUROPE_IMAGE" /> */} {/* Add your Europe image URL */}
+        <nav className={styles.quickNav} aria-label="On this page">
+          <a href="#destinations">Destinations</a><a href="#requirements">Requirements</a><a href="#documents">Documents</a><a href="#application-process">Application steps</a><a href="#costs">Costs</a><a href="#faqs">FAQs</a>
+        </nav>
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Study in Europe: Visa Guide, Top Universities & Costs | Global Visa Internationals" />
-        <meta
-          name="twitter:description"
-          content="Your comprehensive guide to studying in Europe. Learn about student visas (Schengen & Non-Schengen), top universities, course costs, and application processes with Global Visa Internationals."
-        />
-        <meta property="twitter:url" content="https://www.globalvisainternationals.com/Visa/student-visa/europe" /> {/* Replace with your actual Twitter URL */}
-        {/* <meta name="twitter:image" content="URL_TO_YOUR_EUROPE_IMAGE" /> */} {/* Add your Europe image URL */}
+        <section className={styles.introSection}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>STUDY IN EUROPE</p>
+            <h2>Plan your European education with a clear visa checklist</h2>
+          </SectionHeading>
+          <p className={styles.lead}>Europe offers a wide range of universities, specialist institutions, research opportunities and culturally diverse student experiences. The right destination depends on your course, budget, language preferences and long-term goals.</p>
+          <p>There is no single “European student visa” that covers every country. For longer programmes, students generally need to follow the destination country's national student visa or residence-permit process. Requirements can vary by nationality, course length and individual circumstances.</p>
+        </section>
 
-        {/* Geo-related meta tags */}
-        <meta name="geo.region" content="EU" />
-        <meta name="geo.placename" content="Europe" />
-        {/* Assuming your target audience might be in Bengaluru */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="latitude, longitude" /> {/* Replace with actual latitude and longitude of your business location if relevant */}
+        <section className={styles.featureGrid} aria-label="Study planning support">
+          <article className={styles.featureCard}><span className={styles.featureIcon}>01</span><h3>Destination planning</h3><p>Compare countries, teaching languages, course options, entry criteria and locations.</p></article>
+          <article className={styles.featureCard}><span className={styles.featureIcon}>02</span><h3>Document checklist</h3><p>Organise common evidence and identify country-specific requirements before applying.</p></article>
+          <article className={styles.featureCard}><span className={styles.featureIcon}>03</span><h3>Budget preparation</h3><p>Review tuition, accommodation, daily living expenses, insurance and application charges.</p></article>
+          <article className={styles.featureCard}><span className={styles.featureIcon}>04</span><h3>Application guidance</h3><p>Understand typical stages and where to confirm official instructions for your destination.</p></article>
+        </section>
 
-        {/* Structured Data - EducationalOrganization Schema */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
-              "name": "Global Visa Internationals",
-              "url": "https://www.globalvisainternationals.com",
-              "description": "Helping international students obtain European student visas and navigate the application process for various European countries.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Bengaluru",
-                "addressRegion": "Karnataka",
-                "addressCountry": "IN"
-              },
-              "sameAs": [
-                "YOUR_FACEBOOK_PAGE_URL",
-                "YOUR_INSTAGRAM_PAGE_URL"
-                // Add other social media links
-              ]
-            }
-          `}
-        </script>
-      </Head>
-      <div className={styles.imageContainer}>
-        <img src="/images/Europe1.png" alt="Europe Image" className={styles.EuropeImage} />
-      </div>
+        <section id="destinations" className={styles.contentSection}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>EXPLORE YOUR OPTIONS</p>
+            <h2>Popular European study destinations</h2>
+            <p className={styles.lead}>Research each country's official student visa and residence-permit rules before deciding where to apply.</p>
+          </SectionHeading>
+          <div className={styles.universityGrid}>
+            <a href="https://www.study-in-germany.de/" target="_blank" rel="noreferrer"><strong>Germany</strong><span>Research, engineering and technical programmes ↗</span></a>
+            <a href="https://www.campusfrance.org/en" target="_blank" rel="noreferrer"><strong>France</strong><span>Business, arts, fashion and research ↗</span></a>
+            <a href="https://www.studyinnl.org/" target="_blank" rel="noreferrer"><strong>Netherlands</strong><span>International and English-taught programmes ↗</span></a>
+            <a href="https://www.studyinitaly.esteri.it/" target="_blank" rel="noreferrer"><strong>Italy</strong><span>Design, architecture, arts and business ↗</span></a>
+            <a href="https://www.studyinfinland.fi/" target="_blank" rel="noreferrer"><strong>Finland</strong><span>Technology, innovation and research ↗</span></a>
+            <a href="https://www.educationinireland.com/" target="_blank" rel="noreferrer"><strong>Ireland</strong><span>Technology, business and life sciences ↗</span></a>
+          </div>
+          <p className={styles.notice}>The United Kingdom is outside the Schengen Area and has its own Student visa system. Ireland also has its own immigration rules. Always check the official process for the country where you plan to study.</p>
+        </section>
 
-      <div className={styles.EuropeSec}>
+        <section id="requirements" className={styles.contentSection}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>BEFORE YOU APPLY</p>
+            <h2>Understanding Schengen and non-Schengen student visa routes</h2>
+          </SectionHeading>
+          <p>Schengen membership concerns short-stay travel and border arrangements; it does not create one common long-term student visa for all member countries. Students enrolling in longer programmes usually need a national long-stay visa and/or residence permit from the country where they will study.</p>
+          <div className={styles.checkGrid}>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Admission to a recognised institution</h3><p>Confirm your offer, enrolment status and any tuition deposit requirements.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Financial evidence</h3><p>Check the minimum funds, accepted evidence and any tuition-payment requirements for your country.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Health insurance</h3><p>Understand whether public, private or travel medical insurance is required and when cover must begin.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Accommodation and identity</h3><p>Prepare passport details and accommodation evidence if requested by the relevant authority.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Language and academic documents</h3><p>Provide transcripts, qualifications and language test results where required for admission or visa processing.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Country-specific checks</h3><p>Some applicants may need biometrics, a medical exam, police clearance or an interview.</p></div></div>
+          </div>
+          <p className={styles.notice}>Requirements and appointment availability can change. Use the official immigration or embassy website for your destination as the final checklist; general lists are not a substitute for country-specific instructions.</p>
+        </section>
 
-        <div className={styles.EuropeData}>
-          <h1 className={styles.Title}>Dreaming of Studying in Europe? Your Visa Journey Starts Here at Global Visa Internationals</h1>
-          <p>Europe is not just home to prestigious universities—it's a vibrant hub for cultural exchange and personal development. Studying in Europe immerses you in a diverse environment that enhances your global networking skills and offers life-changing experiences. From the historical charm of cities like Rome and Prague to the innovative energy of Berlin and Amsterdam, each location presents a unique fusion of tradition and modernity.</p>
-          <p>Whether you're delving into engineering in Germany, exploring fashion in Italy, or engaging with literature in France, a European education equips you for an impressive global career. It's clear why thousands of international students choose Europe each year.</p>
-          <p>Keep in mind that there isn't a standardized “European Union student visa.” Your visa type will depend on your destination, and you may need to navigate either the Schengen visa regulations or the national rules if you’re headed to non-Schengen countries like the UK or Ireland.</p>
+        <section id="documents" className={`${styles.contentSection} ${styles.softSection}`}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>GET ORGANISED</p>
+            <h2>Documents to prepare for a European student visa</h2>
+            <p className={styles.lead}>The documents required vary by applicant and destination. Start with the common items below, then follow the exact checklist published by the relevant embassy, consulate or immigration authority.</p>
+          </SectionHeading>
+          <DocumentChecklist title="Common documents to check" documents={commonDocuments} />
+          <p className={styles.notice}>Do not assume every item applies to every country. Translation, legalisation, proof-of-funds formats and document validity periods can differ. Check the instructions for your exact application route.</p>
+        </section>
 
-          <h3 className={styles.subTitle}>Why choose Europe for your academic pursuits?</h3>
-          <p>Beyond the prestigious universities and cutting-edge research opportunities, Europe offers a unique cultural experience. From bustling metropolitan cities to charming historical towns, each country boasts its own distinct character and heritage. Studying in Europe provides an unparalleled chance for personal growth, cross-cultural understanding, and the development of a global network.</p>
-          <p>It's important to understand that there isn't a single "European Union student visa." Each member country within the Schengen Area and beyond has its own specific regulations and application procedures for international students. Factors such as your nationality, the duration of your studies, and the specific country you plan to study in will significantly influence the visa requirements you need to fulfill.</p>
-          <p>While general categories and common documents often exist, the precise details regarding financial requirements, accepted proof of enrollment, and specific application forms can vary considerably. To gain a clear understanding of the exact requirements applicable to your unique situation and chosen European destination, we encourage you to reach out to our experienced team at Global Visa Internationals.</p>
-          <h2 className={styles.subTitle}>Understanding Visa Differences: Schengen vs. Non-Schengen</h2>
-          <p>There’s no single “European Union student visa.” Depending on your destination, you may fall under the Schengen visa regulations or the national rules of non-Schengen countries like the UK or Ireland.</p>
-          <h3 className={styles.subTitle}> Schengen Student Visas</h3>
-          <p>The Schengen Area includes 29 European countries that have abolished internal border checks. While a short-stay Schengen visa (up to 90 days) might suit students attending short courses or conferences, longer academic programs require a national long-stay visa issued by the specific Schengen country.</p>
-          <h4 className={styles.subTitle}>General Requirements:</h4>
-          <ul>
-            <li>Valid passport</li>
-            <li>Visa application form</li>
-            <li>Passport-sized photos</li>
-            <li>Acceptance letter from a recognized institution</li>
-            <li>Proof of sufficient financial means</li>
-            <li>Travel medical insurance</li>
-            <li>Proof of accommodation</li>
-          </ul>
-          <p className={styles.note}>
-            <strong> Important:</strong> While there are shared rules for Schengen entry, each country has unique requirements. For country-specific advice tailored to your study destination, reach out to our expert team at Global Visa Internationals.</p>
+        <section id="application-process" className={styles.contentSection}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>STEP BY STEP</p>
+            <h2>How to prepare for a European student visa</h2>
+            <p className={styles.lead}>Use this overview to organise your planning, then follow the destination country's official application procedure.</p>
+          </SectionHeading>
+          <ol className={styles.steps}>{steps.map(([title, description], index) => <li key={title}><span>{index + 1}</span><div><h3>{title}</h3><p>{description}</p></div></li>)}</ol>
+        </section>
 
-          <h3 className={styles.subTitle}>Non-Schengen Student Visas</h3>
-          <p>Countries like the United Kingdom, Ireland, Croatia, and others are not part of the Schengen Area, and they issue their own national student visas.</p>
-          <strong>Examples:</strong>
-          <ul>
-            <li>United Kingdom: Requires a Student visa with a Confirmation of Acceptance for Studies (CAS).</li><br />
-            <li>Ireland: Needs a visa supported by an acceptance letter and financial proof.</li><br />
-            <li>Croatia, Cyprus, and Romania: Each has its own documentation and application system.</li>
-          </ul>
-          <h3 className={styles.subTitle}>Common Requirements:</h3>
-          <ul>
-            <li>Valid passport</li>
-            <li>National visa application form</li>
-            <li>Passport-sized photos</li>
-            <li>Acceptance letter</li>
-            <li>Proof of financial means</li>
-            <li>Health insurance</li>
-            <li>Police clearance or TB test (depends on the country)</li>
-          </ul>
-          <p className={styles.note}>
-            <strong> Note:</strong>
-            Non-Schengen countries often have distinct timelines, interview processes, and documentation requirements. To ensure accuracy, speak with a Global Visa Internationals advisor.
-          </p>
+        <section className={styles.ctaBand}><div><p className={styles.eyebrow}>NEED HELP PLANNING?</p><h2>Make your European study plans with more confidence</h2><p>Discuss your intended country, course and questions with the Global Visa Internationals team.</p></div><a className={styles.lightButton} href="#enquiry">Request a Consultation <span aria-hidden="true">→</span></a></section>
 
+        <section id="costs" className={styles.contentSection}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>PLAN YOUR BUDGET</p>
+            <h2>Estimated tuition and living costs in selected European countries</h2>
+            <p className={styles.lead}>Use these broad estimates only as an initial planning guide. Actual fees and expenses depend on the programme, institution, city and student status.</p>
+          </SectionHeading>
+          <div className={styles.costGrid}>{countryCosts.map(([country, tuition, living]) => <article key={country}><span aria-hidden="true">€</span><h3>{country}</h3><p><strong>Tuition:</strong> {tuition}</p><p><strong>Living costs:</strong> {living} per month (approx.)</p></article>)}</div>
+          <p className={styles.notice}>Figures are indicative, not official visa financial thresholds, and may become outdated. Confirm tuition directly with your institution and check the current proof-of-funds amount published by the relevant country's authorities. Exchange rates fluctuate.</p>
+        </section>
 
-          <h1 className={styles.subTitle}>
-            Cost of Education and Living in Europe for International Students
-          </h1>
-          <p className={styles.intro}>
-            Understanding the financial aspects of studying in Europe is crucial. Below is an overview of estimated tuition fees and living expenses for international students in selected European countries:
-          </p>
+        <section className={`${styles.contentSection} ${styles.softSection}`}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>WHY GLOBAL VISA INTERNATIONALS?</p>
+            <h2>Guidance tailored to your study plans</h2>
+          </SectionHeading>
+          <div className={styles.benefitGrid}><article><h3>Clear explanations</h3><p>Understand the typical application stages and the questions to resolve before you apply.</p></article><article><h3>Organised preparation</h3><p>Work through a document checklist and flag missing or inconsistent information.</p></article><article><h3>Personal attention</h3><p>Discuss your academic background, study goals and destination options with our team.</p></article></div>
+          <p className={styles.disclaimer}>Global Visa Internationals is an independent consultancy and is not a government or immigration authority. Consultancy support does not guarantee admission, visa approval or a particular processing time.</p>
+        </section>
 
+        <section id="faqs" className={`${styles.contentSection} ${styles.faqSection}`}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>COMMON QUESTIONS</p>
+            <h2>Europe student visa FAQs</h2>
+          </SectionHeading>
+          <details><summary>Is there one student visa for all of Europe?</summary><p>No. Each destination has its own requirements for long-term study. Your visa or residence permit depends on the country, course and circumstances.</p></details>
+          <details><summary>Is a Schengen short-stay visa enough for a full degree?</summary><p>Usually not. Longer academic programmes generally require the destination country's national long-stay student visa and/or residence permit. Confirm with the official authority.</p></details>
+          <details><summary>What documents are commonly required?</summary><p>Common items may include a valid passport, admission letter, application form, financial evidence, photographs and insurance. Requirements vary by destination and applicant.</p></details>
+          <details><summary>How much money do I need to show?</summary><p>Financial thresholds and acceptable evidence differ by country and may change. Use the current official guidance for the destination where you will study.</p></details>
+          <details><summary>How early should I apply?</summary><p>Start researching several months before your course begins. Appointment availability and processing times vary, so follow the official timing advice for your destination.</p></details>
+          <details><summary>Can a consultant guarantee my visa approval?</summary><p>No. The relevant government authority makes the decision. No consultant can guarantee approval or a particular processing time.</p></details>
+        </section>
 
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Country</th>
-                <th>Tuition Fees (EUR/year)</th>
-                <th>Tuition Fees (INR/year)</th>
-                <th>Living Expenses (EUR/month)</th>
-                <th>Living Expenses (INR/month)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Germany</td>
-                <td>Free (public universities)</td>
-                <td>—</td>
-                <td>€850 – €1,200</td>
-                <td>₹76,500 – ₹1,08,000</td>
-              </tr>
-              <tr>
-                <td>France</td>
-                <td>€170 – €650</td>
-                <td>₹15,300 – ₹58,500</td>
-                <td>€800 – €1,200</td>
-                <td>₹72,000 – ₹1,08,000</td>
-              </tr>
-              <tr>
-                <td>Norway</td>
-                <td>Free (public universities)</td>
-                <td>—</td>
-                <td>€1,200 – €2,000</td>
-                <td>₹1,08,000 – ₹1,80,000</td>
-              </tr>
-              <tr>
-                <td>Finland</td>
-                <td>€6,000 – €20,000</td>
-                <td>₹5,40,000 – ₹18,00,000</td>
-                <td>€700 – €1,100</td>
-                <td>₹63,000 – ₹99,000</td>
-              </tr>
-              <tr>
-                <td>Sweden</td>
-                <td>SEK 80,000 – 190,000</td>
-                <td>₹6,00,000 – ₹14,25,000</td>
-                <td>SEK 8,000 – 12,000</td>
-                <td>₹60,000 – ₹90,000</td>
-              </tr>
-              <tr>
-                <td>Netherlands</td>
-                <td>€6,000 – €15,000</td>
-                <td>₹5,40,000 – ₹13,50,000</td>
-                <td>€800 – €1,200</td>
-                <td>₹72,000 – ₹1,08,000</td>
-              </tr>
-              <tr>
-                <td>Italy</td>
-                <td>€500 – €4,000</td>
-                <td>₹45,000 – ₹3,60,000</td>
-                <td>€700 – €1,000</td>
-                <td>₹63,000 – ₹90,000</td>
-              </tr>
-              <tr>
-                <td>Spain</td>
-                <td>€750 – €2,500</td>
-                <td>₹67,500 – ₹2,25,000</td>
-                <td>€900 – €1,200</td>
-                <td>₹81,000 – ₹1,08,000</td>
-              </tr>
-              <tr>
-                <td>Denmark</td>
-                <td>€6,000 – €16,000</td>
-                <td>₹5,40,000 – ₹14,40,000</td>
-                <td>€1,200 – €1,800</td>
-                <td>₹1,08,000 – ₹1,62,000</td>
-              </tr>
-              <tr>
-                <td>Austria</td>
-                <td>€726.72/semester</td>
-                <td>₹65,404.80/semester</td>
-                <td>€950 – €1,500</td>
-                <td>₹85,500 – ₹1,35,000</td>
-              </tr>
-              <tr>
-                <td>Belgium</td>
-                <td>€906 – €4,175</td>
-                <td>₹81,540 – ₹3,75,750</td>
-                <td>€850 – €1,200</td>
-                <td>₹76,500 – ₹1,08,000</td>
-              </tr>
-              <tr>
-                <td>Ireland</td>
-                <td>€9,750+</td>
-                <td>₹8,77,500+</td>
-                <td>€1,000 – €1,500</td>
-                <td>₹90,000 – ₹1,35,000</td>
-              </tr>
-              <tr>
-                <td>Lithuania</td>
-                <td>€1,500 – €3,000</td>
-                <td>₹1,35,000 – ₹2,70,000</td>
-                <td>€400 – €600</td>
-                <td>₹36,000 – ₹54,000</td>
-              </tr>
-              <tr>
-                <td>Greece</td>
-                <td>€1,500</td>
-                <td>₹1,35,000</td>
-                <td>€700 – €1,000</td>
-                <td>₹63,000 – ₹90,000</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p className={styles.note}>
-            <strong>Note:</strong> Tuition fees and living expenses are approximate and can vary based on the institution, city, and personal lifestyle. Major cities typically have higher living costs compared to smaller towns. Exchange rates fluctuate; the above INR estimates are based on an approximate rate of 1 EUR = ₹90. For the most accurate and up-to-date information, refer to the official websites of your chosen educational institutions and local resources.
-          </p>
-
-          <h3 className={styles.subTitle}> Essential Steps in the European Student Visa Application Process</h3>
-          <p>Regardless of whether you are applying for a visa to a Schengen or a non-Schengen country, some general steps are commonly involved in the European student visa application process:</p>
-          <ol>
-            <li><strong>Acceptance from an Educational Institution:</strong> The first crucial step is to secure admission to a recognized university, college, or other educational institution in your chosen European country. You will receive an official acceptance letter, which is a primary document for your visa application.</li>
-            <li><strong>Gathering Required Documents:</strong> You will need to collect a set of documents to support your visa application. The specific documents will vary based on the country and your individual circumstances.</li><br />
-            <li><strong>Completing the Visa Application Form:</strong> You will need to fill out the official visa application form of the specific country you are applying to. This form is usually available on the embassy or consulate's website.</li><br />
-            <li><strong>Scheduling an Appointment:</strong> In most cases, you will need to schedule an appointment at the embassy or consulate of the European country in your home country to submit your application and potentially attend an interview.</li><br />
-            <li><strong>Submitting Your Application: </strong>Attend your scheduled appointment and submit all the required documents. Ensure you have original documents and their copies as requested.</li><br />
-            <li><strong>Paying the Visa Fee:</strong> You will be required to pay a non-refundable visa application fee. The amount varies depending on the country.</li><br />
-            <li><strong>Attending an Interview (If Required): </strong>Some countries may require you to attend an interview with a consular officer to discuss your study plans and intentions.</li><br />
-            <li><strong>Waiting for the Visa Decision:</strong> The processing time for student visas can vary. It's essential to apply well in advance of your intended travel date.</li><br />
-            <li><strong>Receiving Your Visa: </strong>If your application is successful, your visa will be affixed to your passport.</li>
-          </ol>
-          <p className={styles.note}><strong>🕒 Timely Tip:</strong> Some embassies have long wait times or require additional documents. Contact us at Global Visa Internationals to avoid delays and submit a complete, compelling application.</p>
-          <h3 className={styles.subTitle}>Why You Should Start Early</h3>
-          <p>Student visa applications can take weeks or even months. Applying early:</p>
-          <ul>
-            <li>Helps you handle unexpected delays</li>
-            <li>Gives time for document corrections</li>
-            <li>Aligns better with academic intake deadlines</li>
-          </ul>
-          <p>We recommend starting your visa application process at least 3-6 months before your intended travel date. This allows ample time for document preparation, application submission, and any potential follow-up requirements.</p>
-          <h3 className={styles.subTitle}>Conclusion</h3>
-          <p>Studying in Europe is a transformative experience that opens doors to academic excellence and cultural enrichment. However, navigating the student visa process can be complex and time-consuming. Understanding the differences between Schengen and non-Schengen visas, as well as the specific requirements for your chosen country, is crucial for a successful application.</p>
-          <p>At Global Visa Internationals, we are committed to providing you with the most accurate and up-to-date information regarding student visas for Europe. Our team of experts is here to guide you through every step of the process, ensuring that your application is complete and compelling.</p>
-          <p>Embarking on your academic journey in Europe is an exciting prospect. By understanding the general framework of the student visa process for both Schengen and non-Schengen countries and seeking expert assistance when needed, you can navigate the requirements with confidence. <strong>Let Global Visa Internationals be your trusted partner in making your European study abroad aspirations a reality. Contact us today for a personalized consultation!</strong></p>
-          <p className={styles.note}>Don’t risk missing out on your dream course due to visa delays. Get in touch with Global Visa Internationals today for a stress-free start to your academic journey.</p>
-          <h2 className={styles.subTitle}>Why Contact Global Visa Internationals?</h2>
-          <p>We specialize in helping international students like you successfully obtain European student visas. With expert insight into both Schengen and non-Schengen requirements, we ensure your application is accurate, timely, and strong.</p>
-          <ul className={styles.list}>
-            <li> Personalized guidance</li>
-            <li> Up-to-date regulations</li>
-            <li> Country-specific documentation support</li>
-            <li> End-to-end visa assistance</li>
-          </ul>
-          <p className={styles.note}>📞 Contact us today for a free consultation and unlock your path to European education with confidence.</p>
-        </div>
-
-        <div className={styles.formSection}>
-          <VisaForm />
-        </div>
-
-      </div>
-      <section id='Client Reviews'>
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-f560162c-1e98-4995-97af-3da789ac6ec5" data-elfsight-app-lazy></div>
-      </section>
+        <section id="enquiry" className={styles.enquirySection}>
+          <div className={styles.enquiryIntro}><p className={styles.eyebrow}>LET’S PLAN YOUR NEXT STEP</p><h2>Enquire about studying in Europe</h2><p>Share your preferred destination and study goals so our team can follow up about available consultancy support.</p><a className={styles.phoneLink} href="tel:+917022213466">Call us: +91 70222 13466</a></div>
+          <div className={styles.formCard}><VisaForm /></div>
+        </section>
+        <footer className={styles.footer}><p>This page provides general information, not immigration or legal advice. Requirements, costs and procedures change; verify current details with the official authority and your chosen institution before applying.</p></footer>
+      </main>
     </>
   );
 }

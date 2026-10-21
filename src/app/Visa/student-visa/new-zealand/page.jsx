@@ -1,515 +1,261 @@
+import React from "react";
+import VisaForm from "@/Components/VisaForm";
+import styles from "./NewZealandStudentVisa.module.css";
+import { SectionHeading } from "../StudentVisaCommon";
 
-import styles from '@/Components/Visa.module.css';
-import React from 'react';
-import Head from 'next/head';
-import VisaForm from '@/Components/VisaForm';
+const pageUrl = "https://www.globalvisainternationals.com/Visa/student-visa/new-zealand";
+const heroImage = "/student-visa/New-Zealand-student-Visa-ASSISTANCE.webp";
+const heroImageAbsolute = `https://www.globalvisainternationals.com${heroImage}`;
 
-export const metadata = {
-  title: "New Zealand Student Visa Consultants | Global Visa Internationals",
-  description:
-    "Apply for your **New Zealand Fee Paying Student Visa** with Global Visa Internationals. Expert guidance on study permit process, financial requirements, costs, and top universities for Indian students. Get help with the Offer of Place, visa application, and post-study work options.",
-  keywords:
-    "New Zealand student visa, Fee Paying Student Visa New Zealand, New Zealand study visa, study in New Zealand for Indian students, apply for New Zealand student visa, financial requirements New Zealand student visa, New Zealand student visa requirements, New Zealand study permit from India, New Zealand study visa consultant, study in New Zealand without ielts, student visa New Zealand cost, Post Study Work Visa New Zealand, apply for New Zealand study visa",
-  robots: "index, follow",
-  images: "https://www.globalvisainternationals.com/student-visa/New-Zealand-student-Visa-ASSISTANCE.webp", // Updated image name
-
-  alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/student-visa/new-zealand", // Updated canonical URL
-  },
-  openGraph: {
-    title: "New Zealand Student Visa: Application, Requirements & Study Tips",
-    description:
-      "Plan your education in New Zealand with expert visa support. Learn about the Fee Paying Student Visa process, financial requirements, tuition fees, and best universities for Indian students.",
-    url: "https://www.globalvisainternationals.com/Visa/student-visa/new-zealand", // Updated OpenGraph URL
-    siteName: "Global Visa Internationals",
-    images: [
-      {
-        url: "https://www.globalvisainternationals.com/student-visa/New-Zealand-student-Visa-ASSISTANCE.webp", // Updated image name
-        width: 1200,
-        height: 630,
-        alt: "New Zealand Student Visa Banner",
-      },
+export async function generateMetadata() {
+  return {
+    title: "New Zealand Student Visa Consultants in Bangalore | Global Visa Internationals",
+    description: "Planning to study in New Zealand from India? Get guidance on the Fee Paying Student Visa, Offer of Place, financial evidence, documents, application steps and study planning from Global Visa Internationals.",
+    keywords: [
+      "New Zealand student visa consultants in Bangalore",
+      "New Zealand student visa for Indian students",
+      "Fee Paying Student Visa New Zealand",
+      "New Zealand student visa requirements",
+      "New Zealand student visa documents",
+      "study in New Zealand from India",
+      "New Zealand student visa application process",
+      "New Zealand university admission guidance",
     ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@GLOBALVISA1505",
-    title: "New Zealand Student Visa: Apply, Requirements & Top Universities",
-    description:
-      "Study in New Zealand with a valid student visa. Get expert help from Global Visa Internationals on financial proof, tuition fees, and top universities for Indian students.",
-    images: [
-      "https://www.globalvisainternationals.com/student-visa/New-Zealand-student-Visa-ASSISTANCE.webp", // Updated image name
-    ],
-  },
-};
-
-export default function NewZealand() { // Changed function name
-  const pageUrl = metadata.alternates.canonical;
-
-  const TopUniversitiesList = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Top Universities in New Zealand for International Students", // Updated name
-    "description": "Popular New Zealand universities frequently chosen by Indian students applying for a Fee Paying Student Visa. Helpful when planning admissions, financial preparation, and post-study work opportunities.", // Updated description
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Auckland",
-          "description": "New Zealand's largest and highest-ranked university, known for world-class research and located in the country's main city.",
-          "url": "https://www.auckland.ac.nz/",
-          "image": "https://www.auckland.ac.nz/content/auckland/en/about/the-university/our-campuses-and-locations/city-campus/_jcr_content/image.coreimg.jpeg/1684364028308/city-campus-header-4.jpeg" // Placeholder for Uni of Auckland image
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Otago",
-          "description": "New Zealand's oldest university, located in Dunedin, with a strong reputation in health sciences, law, and humanities.",
-          "url": "https://www.otago.ac.nz/",
-          "image": "https://www.otago.ac.nz/news/files/img/campus-aerial.jpg" // Placeholder for Uni of Otago image
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "Victoria University of Wellington",
-          "description": "A leading university in the capital city, renowned for law, politics, and international relations programs.",
-          "url": "https://www.wgtn.ac.nz/",
-          "image": "https://www.wgtn.ac.nz/international/get-ready-to-study/student-visa/images/victoria-university-of-wellington-hero.jpg" // Placeholder for VUW image
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Canterbury",
-          "description": "Located in Christchurch, known for its excellence in engineering, science, and education programs.",
-          "url": "https://www.canterbury.ac.nz/",
-          "image": "https://www.canterbury.ac.nz/assets/hero-images/UC-Campus.jpg" // Placeholder for Uni of Canterbury image
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "CollegeOrUniversity",
-          "name": "Massey University",
-          "description": "A multi-campus university (Auckland, Wellington, Palmerston North) leading in veterinary science, agriculture, and design.",
-          "url": "https://www.massey.ac.nz/",
-          "image": "https://www.massey.ac.nz/assets/massey/images/massey-university-logo-and-buildings.jpg" // Placeholder for Massey University image
-        }
-      }
-    ]
+    alternates: { canonical: pageUrl },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: "New Zealand Student Visa Guidance for Indian Students",
+      description: "Understand New Zealand student visa preparation, common documents, financial planning and application steps with Global Visa Internationals.",
+      url: pageUrl,
+      siteName: "Global Visa Internationals",
+      type: "website",
+      locale: "en_IN",
+      images: [{ url: heroImageAbsolute, width: 1200, height: 630, alt: "New Zealand student visa guidance for Indian students" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@GLOBALVISA1505",
+      title: "New Zealand Student Visa Guidance",
+      description: "Plan your New Zealand study journey with guidance on documents, funds, admissions and visa preparation.",
+      images: [heroImageAbsolute],
+    },
   };
+}
 
+export const viewport = { width: "device-width", initialScale: 1, themeColor: "#ffffff", colorScheme: "light" };
+
+const benefits = [
+  { icon: "01", title: "Recognised qualifications", text: "Explore universities and education providers offering programmes across business, technology, health, engineering, sciences and the arts." },
+  { icon: "02", title: "Supportive study environment", text: "Learn in a multicultural setting with student support services and opportunities to experience Māori and New Zealand culture." },
+  { icon: "03", title: "Practical learning", text: "Compare programmes that may include research, projects, placements or industry-focused learning, depending on the course." },
+  { icon: "04", title: "Future planning", text: "Understand the study-to-work options that may be available for your qualification and circumstances. Eligibility rules apply." },
+];
+
+const documents = [
+  "Valid passport and identity details",
+  "Offer of Place from an eligible New Zealand education provider",
+  "Completed student visa application and required photographs",
+  "Evidence of tuition fee payment or an accepted payment arrangement, as applicable",
+  "Evidence of funds for living expenses and onward or return travel, as required",
+  "Bank statements, sponsor evidence or scholarship documents supporting your funds",
+  "Academic transcripts, certificates and relevant education records",
+  "Evidence of accommodation arrangements, if requested or applicable",
+  "Medical examination, chest X-ray or police certificates, if required",
+  "Evidence of insurance and English-language ability, where applicable",
+  "A clear explanation of your study plans and genuine intention to study",
+  "Certified translations for documents that are not in English, where required",
+];
+
+const steps = [
+  ["Choose a course and provider", "Compare programme content, entry requirements, tuition fees, location and career relevance. Check that the provider and course are eligible for your intended visa route."],
+  ["Apply for admission", "Submit the education provider's application and provide the academic, identity and English-language evidence requested."],
+  ["Receive your Offer of Place", "Review the offer carefully, including course dates, fees, conditions and any next steps required by the provider."],
+  ["Plan your finances", "Prepare evidence for tuition, living expenses and travel using the current instructions published by Immigration New Zealand."],
+  ["Prepare the visa application", "Complete the correct online application and collect supporting documents. Arrange medical checks, police certificates or insurance if required."],
+  ["Submit and monitor", "Pay the applicable fee, submit the application and respond to any requests from Immigration New Zealand within the stated deadline."],
+  ["Check the visa conditions before travel", "If approved, review the visa's validity, permitted work conditions, study details and entry requirements before making final travel plans."],
+];
+
+const costs = [
+  { title: "Tuition fees", text: "Fees vary by institution, qualification, subject and course length. Confirm the exact amount with your chosen provider." },
+  { title: "Living expenses", text: "Budget for accommodation, groceries, local transport, utilities, phone costs and personal spending. Costs differ by city and lifestyle." },
+  { title: "Visa and application costs", text: "Check the current application fee and any applicable levy directly on the official Immigration New Zealand website." },
+  { title: "Insurance and healthcare", text: "International students generally need to meet applicable insurance requirements. Confirm the policy rules for your course and visa." },
+  { title: "Travel and set-up", text: "Allow for flights, initial accommodation, deposits, winter clothing and other costs when you first arrive." },
+  { title: "Study materials", text: "Include books, equipment, software, lab or course materials and any programme-specific expenses in your budget." },
+];
+
+const universities = [
+  ["University of Auckland", "A broad range of research-led programmes", "https://www.auckland.ac.nz/"],
+  ["University of Otago", "Known for health sciences and a wide range of disciplines", "https://www.otago.ac.nz/"],
+  ["Victoria University of Wellington", "Programmes in a capital-city setting", "https://www.wgtn.ac.nz/"],
+  ["University of Canterbury", "Options across engineering, science, arts and more", "https://www.canterbury.ac.nz/"],
+  ["Massey University", "Programmes across multiple campuses and study modes", "https://www.massey.ac.nz/"],
+  ["University of Waikato", "Study options across business, computing, education and sciences", "https://www.waikato.ac.nz/"],
+];
+
+const faqs = [
+  ["What is a New Zealand Fee Paying Student Visa?", "It is a student visa route for eligible students paying to study with an approved New Zealand education provider. Eligibility, evidence and visa conditions depend on the applicant and course. Check the official Immigration New Zealand guidance before applying."],
+  ["What documents are commonly required?", "Common evidence may include a valid passport, Offer of Place, tuition and living-cost evidence, application details and health or character documents if required. Your personal checklist depends on your circumstances and the current official instructions."],
+  ["How much money do I need to show?", "The amount and acceptable evidence depend on the course, duration and current Immigration New Zealand rules. Use the official website to confirm the latest living-cost and travel-fund requirements before submitting your application."],
+  ["Can I work while studying in New Zealand?", "Some student visas allow work, but this is not automatic for every student. Check the exact work conditions printed on your visa and the current official rules before accepting employment."],
+  ["Do I need IELTS for a New Zealand student visa?", "English-language evidence may be required by your education provider or programme, but there is not one universal IELTS score for every course and visa applicant. Confirm the entry criteria directly with your provider."],
+  ["How long does visa processing take?", "Processing times vary with application volume, season, case complexity and whether the application is complete. Check the latest processing information from Immigration New Zealand and apply with enough time before your course begins."],
+  ["Can a consultant guarantee visa approval?", "No. Only the relevant New Zealand authorities make visa decisions. A consultant can help organise information and prepare an application, but cannot guarantee approval or a processing timeframe."],
+  ["Where should I check the latest rules and fees?", "Use the official Immigration New Zealand website at immigration.govt.nz and your education provider's official website. Requirements, fees and visa conditions can change."],
+];
+
+export default function NewZealandStudentVisaPage() {
   const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.globalvisainternationals.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "New Zealand Student Visa", // Updated name
-        "item": pageUrl
-      }
-    ]
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.globalvisainternationals.com" },
+      { "@type": "ListItem", position: 2, name: "Student Visa", item: "https://www.globalvisainternationals.com/Visa/student-visa" },
+      { "@type": "ListItem", position: 3, name: "New Zealand Student Visa", item: pageUrl },
+    ],
+  };
+  const faqJsonLd = {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })),
+  };
+  const serviceJsonLd = {
+    "@context": "https://schema.org", "@type": "ProfessionalService",
+    name: "Global Visa Internationals", url: "https://www.globalvisainternationals.com",
+    telephone: "+91-7022213466", areaServed: { "@type": "Country", name: "India" },
+    serviceType: ["New Zealand student visa guidance", "Study abroad consultation", "Student visa document preparation guidance"],
   };
 
-  const educationConsultancyJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Global Visa Internationals",
-    "url": "https://www.globalvisainternationals.com",
-    "logo": "https://www.globalvisainternationals.com/gvilogo.png",
-    "description": "Global Visa Internationals provides New Zealand Student Visa Assistance for Indian students — expert help with Fee Paying Student Visa, financial proof (NZD $20,000/year), Offer of Place guidance, medicals, police certificates, SOPs, and university admissions.", // Updated description
-    "keywords": "New Zealand student visa, Fee Paying Student Visa New Zealand, New Zealand study visa, financial requirements New Zealand, New Zealand student visa for Indian students, apply for New Zealand student visa, Post Study Work Visa New Zealand", // Updated keywords
-    "telephone": "+91-7022213466",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG Road",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560025",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 12.9716,
-      "longitude": 77.5946
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "IN"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "10:00",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/globalvisainternationals/",
-      "https://www.instagram.com/globalvisa_internationals/",
-      "https://www.linkedin.com/company/global-visa-internationals/",
-      "https://x.com/GLOBALVISA1505",
-      "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals"
-    ],
-    "serviceType": [
-      "New Zealand Student Visa Assistance", // Updated service
-      "Fee Paying Student Visa Consultation", // Updated service
-      "Financial Proof & Offer of Place Guidance", // Updated service
-      "University Admission Guidance for Indian Students in New Zealand" // Updated service
-    ],
-    "potentialAction": {
-      "@type": "Action",
-      "name": "Book a Consultation",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${pageUrl}#contact`,
-        "inLanguage": "en-IN",
-        "actionPlatform": [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform"
-        ]
-      }
-    }
-  };
   return (
-    <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="robots" content={metadata.robots} />
-        <link rel="canonical" href={pageUrl} />
+    <main className={styles.page}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
 
-        {/* Open Graph */}
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
-        <meta property="og:site_name" content={metadata.openGraph.siteName} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:site" content={metadata.twitter.site} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-
-        {/* Geo & Mobile SEO */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="ICBM" content="12.9716,77.5946" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="format-detection" content="telephone=no" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationConsultancyJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(TopUniversitiesList) }}
-        />
-
-      </Head>
-      <div className={styles.imageContainer}>
-        <img src={metadata.images} alt="New-Zeland Image" className={styles.VisaImage} />
-      </div>
-
-      <div className={styles.VisaSec}>
-
-
-        <div className={styles.VisaData}>
-          <h1 className={styles.Title}>New Zealand Student Visa: A Comprehensive Guide for International Students</h1>
-          <p>Dreaming of pursuing world-class education amidst the breathtaking landscapes of Aotearoa, the Land of the Long White Cloud? New Zealand has become a coveted destination for international students seeking academic excellence and a unique cultural experience. Navigating the student visa process is your crucial first step. This in-depth guide will illuminate the path to obtaining your New Zealand student visa in 2025, providing you with essential information to kickstart your Kiwi adventure.</p>
-          <h3 className={styles.subTitle}>Why New Zealand Beckons International Students:</h3>
-          <p>New Zealand offers a compelling blend of academic rigor and an enviable lifestyle. Here's why it consistently attracts students from around the globe:</p>
-
-          <ul>
-            <li><strong>Globally Recognized Education System:</strong> New Zealand's universities and institutes consistently rank high internationally, offering cutting-edge research and innovative teaching methodologies across diverse disciplines. </li>
-            <br />
-            <li><strong>A Spectrum of Academic Opportunities:</strong> Whether your passion lies in the arts, sciences, technology, or business, New Zealand provides a vast array of programs tailored to diverse academic pursuits and career aspirations.</li>
-            <br />
-            <li> <strong>Valuable Work Experience:</strong> International students on eligible visas can gain practical experience by working up to 20 hours per week during term time and full-time during scheduled breaks, helping to offset living costs and build valuable skills.</li>
-            <br />
-            <li><strong>Unparalleled Quality of Life:</strong> Renowned for its safety, welcoming communities, and stunning natural beauty, New Zealand offers a high quality of life and a supportive environment for international students.</li>
-            <br />
-            <li><strong>Potential Pathways to the Future:</strong> Depending on your qualifications and field of study, New Zealand offers post-study work opportunities, allowing you to gain international work experience and potentially explore long-term residency options.</li>
-          </ul>
-
-
-
-
-          <h3 className={styles.subTitle}> Understanding the New Zealand Student Visa Landscape in 2025:</h3>
-          <p>Navigating the different visa categories is essential. Here's an overview of the primary New Zealand student visa types:</p>
-          <ul>
-            <li><strong>The Fee-Paying Student Visa:</strong> This is the most common route for individuals enrolling in full-time courses lasting longer than three months at an approved New Zealand educational institution (up to four years). It typically grants the right to work part-time.</li>
-            <br />
-            <li><strong>The Pathway Student Visa:</strong> Designed for students undertaking a sequence of up to three consecutive programs with a single approved education provider, with a total study duration not exceeding five years. This visa also usually permits part-time work.</li>
-            <br />
-            <li><strong>The Exchange Student Visa:</strong> For students participating in officially recognized exchange programs for a duration of up to four years</li></ul>
-
-          <p>In addition to these, there are specific visas for students enrolled in English language courses, vocational training, and postgraduate research programs. Each visa type has its own set of requirements and conditions, so it's crucial to choose the one that aligns with your academic goals.</p>
-          <p>In 2025, the New Zealand government is expected to continue its commitment to attracting international students, with policies aimed at streamlining the visa application process and enhancing support services for newcomers.</p>
-
-          <h3 className={styles.subTitle}>Key Eligibility Criteria for Your New Zealand Student Visa Application:</h3>
-          <p>Meeting the eligibility requirements is paramount for a successful visa application. Generally, you will need to demonstrate</p>
-          <p>To successfully apply for a New Zealand student visa, you must meet specific eligibility criteria:</p>
-
-          <ul>
-            <li><strong>Age Requirement:</strong> You must be at least 18 years old at the time of application. If you are under 18, you will need a guardian or parent to support your application.</li>
-            <br />
-            <li><strong>Acceptance at an Approved Institution:</strong> You must enroll in a course at a registered and accredited New Zealand education provider, such as a university, polytechnic, or private training establishment.</li>
-            <br />
-            <li><strong>Sufficient Financial Resources:</strong> Evidence of having adequate funds to cover tuition fees, living expenses (approximately NZD 15,000 per year), and travel costs during your study period is mandatory.</li>
-            <br />
-            <li>A Confirmed Offer of Place: You must possess a formal Letter of Acceptance from a New Zealand education provider that is recognized and approved by the New Zealand Qualifications Authority (NZQA) or the Ministry of Education.</li>
-            <br />
-            <li>Demonstrable Financial Capacity: You need to provide robust evidence of sufficient funds to cover your tuition fees for the duration of your study and living expenses (currently set at [Contact Global Visa Internationals for the latest official amount] per year of study). This can be through personal savings, financial guarantees from sponsors, or scholarship awards.</li>
-            <br />
-            <li>Evidence of Tuition Fee Payment: You will need to provide proof that your tuition fees have been paid in full or that you have secured a scholarship that covers them.</li>
-            <br />
-            <li>Adherence to Health Standards: You must meet New Zealand's health requirements, which may involve undergoing a medical examination by an approved panel physician, especially for stays exceeding 24 months or if you are over 17 years old.</li>
-            <br />
-            <li>Good Character Standing: You are required to demonstrate good character, which may involve providing a police clearance certificate from your country of origin and any other country where you have resided for a significant period.</li>
-            <br />
-            <li>Valid Travel Documentation: Your passport must have a validity of at least three months beyond your intended stay in New Zealand.</li>
-            <br />
-            <li>Genuine Intention to Study: You must satisfy the authorities that your primary intention for being in New Zealand is to undertake genuine study.</li>
-            <br />
-            <li>Sufficient Funds for Return Travel: You may be required to show evidence of funds to purchase a return air ticket to your home country.</li>
-            <br />
-            <li>English Language Proficiency: While not always a universal requirement, a strong command of English is crucial for academic success and daily life. Your chosen institution may have specific English language requirements (e.g., IELTS score of [Contact Global Visa Internationals for typical score ranges]).</li>
-          </ul>
-          <p>In addition to these general requirements, specific institutions may have additional criteria or documentation requests. Always check with your chosen institution for any unique requirements.</p>
-          <p className={styles.note}> By Seeing all Details Getting Confuse! <br />Dont Wory We are hear Contact Global Visa internationals, We are the Experts in New-Zeland Student Visa Processing Contact Us Now, We will Guide you through entire Visa process, Make your Visa Process Stress Free Dont Let Your Stops Due to lengthy Visa process , Contact Us now for free Consultation</p>
-
-
-          <h3 className={styles.subTitle}>Essential Documents for Your New Zealand Student Visa Application:</h3>
-          <p>Meticulous preparation of your documents is key. Here's a general list of what you'll likely need:</p>
-          <ol><li>A fully completed student visa application form (usually submitted online via the Immigration New Zealand website).</li>
-            <br />
-            <li>Your original, valid passport and clear copies of the identification pages.</li>
-            <br />
-            <li>Two recent passport-sized photographs that meet the specified requirements.</li>
-            <br />
-            <li>The official Letter of Acceptance from your chosen New Zealand education provider.</li>
-            <br />
-            <li>Official evidence of your tuition fee payment.</li>
-            <br />
-            <li>Comprehensive proof of sufficient funds for living expenses <strong>(detailed bank statements, sponsor letters with supporting financial documentation, official scholarship award letters).</strong></li>
-            <br />
-            <li>Your medical certificate (e-medical) obtained from an Immigration New Zealand-approved panel physician.</li>
-            <br />
-            <li>A police clearance certificate(s) from your home country and any other country where you have lived for <strong> [Contact Global Visa Internationals for specific duration requirements].</strong> </li>
-            <br />
-            <li>Official academic transcripts and degree/diploma certificates from your previous educational institutions.</li>
-            <br />
-            <li>Details of your employment history (if applicable).</li>
-            <br />
-            <li>A well-written statement of purpose outlining your academic goals and reasons for choosing to study in New Zealand.</li>
-            <br />
-            <li>Evidence of your English language proficiency <strong>(e.g., IELTS test report form)</strong>, if required by your institution.</li>
-            <br />
-            <li>Details of your travel insurance coverage.</li></ol>
-          <h3>Navigating the New Zealand Student Visa Application Process:</h3>
-          <p>Here's a step-by-step overview of the application journey:</p>
-          <ol>
-            <li><strong>Select Your Program and Institution:</strong> Thoroughly research and choose a program and an NZQA-approved institution that aligns with your academic and career objectives.</li>
-            <br />
-            <li><strong>Secure Your Offer of Place:</strong> Apply to your chosen institution. Upon successful admission, you will receive an official Letter of Acceptance.</li>
-            <br />
-            <li><strong>Meticulously Prepare Your Documentation:</strong> Gather all the required documents, ensuring accuracy and completeness. Any non-English documents must be accompanied by certified translations.</li>
-            <br />
-            <li><strong>Arrange Tuition Fee Payment:</strong> Make the necessary tuition fee payment as outlined in your Letter of Acceptance.</li>
-            <br />
-            <li><strong>Complete the Online Visa Application:</strong> Visit the official Immigration New Zealand website and create an account. Fill out the online student visa application form (INZ 1012) with accurate details.</li>
-            <br />
-            <li><strong>Upload Your Supporting Documents:</strong> Upload all the prepared documents in the specified digital format.</li>
-            <br />
-            <li><strong>Pay the Visa Application Fee:</strong> The current visa application fee is <strong>[Contact Global Visa Internationals for the current official fee].</strong></li>
-            <br />
-            <li><strong>Submit Your Application:</strong> Once you have carefully reviewed all information and uploaded all documents, submit your online application.</li>
-            <br />
-            <li><strong>Undergo Medical Assessment and Obtain Police Clearance:</strong> If required based on your intended duration of stay and age, schedule your medical examination with an approved panel physician and obtain the necessary police clearance certificate(s). You may need to submit these separately.</li>
-            <br />
-            <li><strong>Await the Visa Decision: </strong> Processing times can vary depending on various factors. Regularly monitor the status of your application through your online Immigration New Zealand account.</li>
-            <br />
-            <li><strong>Receive Your Visa Outcome:</strong> If your application is successful, you will receive a visa label in your passport or an electronic visa notification. Carefully review the conditions attached to your visa.</li>
-            <br />
-            <li><strong>Plan Your Travel to New Zealand: </strong>Make your travel arrangements, ensuring you have all necessary travel documents for your arrival in New Zealand.</li>
-
-          </ol>
-
-          <div className={styles.container}>
-            <h1 className={styles.heading}>Understanding the Costs: Investing in Your New Zealand Education</h1>
-            <p className={styles.description}>
-              Planning your finances is a crucial step when considering studying in New Zealand. Here's a breakdown of expected costs in INR (approximate as of 2025):
-            </p>
-
-            <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>Expense Category</th>
-                  <th>Details</th>
-                  <th>Estimated Cost (INR)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Tuition Fees</td>
-                  <td>Undergraduate, postgraduate & PhD program costs</td>
-                  <td>
-                    UG: ₹11.2–₹16.3 lakhs/year<br />
-                    PG: ₹13.3–₹18.9 lakhs/year<br />
-                    PhD: Often similar to domestic fees
-                  </td>
-                </tr>
-                <tr>
-                  <td>Living Expenses</td>
-                  <td>Accommodation, food, transport & personal costs</td>
-                  <td>Approx. ₹10.2 lakhs/year</td>
-                </tr>
-                <tr>
-                  <td>Visa Application Fee</td>
-                  <td>Fee for student visa application</td>
-                  <td>₹38,000</td>
-                </tr>
-                <tr>
-                  <td>Health Insurance</td>
-                  <td>Required for entire stay</td>
-                  <td>₹30,000 – ₹61,000/year</td>
-                </tr>
-                <tr>
-                  <td>Accommodation</td>
-                  <td>University halls, homestays, shared rentals</td>
-                  <td>₹10,000 – ₹25,500/week</td>
-                </tr>
-                <tr>
-                  <td>Transportation</td>
-                  <td>Public transport, walking, cycling</td>
-                  <td>₹5,100 – ₹7,700/month</td>
-                </tr>
-                <tr>
-                  <td>Part-Time Employment</td>
-                  <td>Minimum wage work during study</td>
-                  <td>₹1,200/hour (approx.)</td>
-                </tr>
-                <tr>
-                  <td>IVL Levy</td>
-                  <td>One-time fee with visa</td>
-                  <td>₹5,100</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <p className={styles.note}>
-              <strong>Note:</strong> Costs are approximate and based on an illustrative exchange rate of ₹51 per 1 NZD. Actual rates vary daily. For accurate INR values, check the latest exchange rate. Your expenses may differ based on your lifestyle, city, and course. Always refer to official university and Immigration New Zealand websites for updated fees and requirements.
-            </p>
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <p className={styles.eyebrow}>YOUR NEW ZEALAND STUDY JOURNEY STARTS HERE</p>
+          <h1>New Zealand Student Visa Guidance for Indian Students</h1>
+          <p className={styles.heroText}>Planning to study in Aotearoa New Zealand? Get organised with guidance on course planning, your Offer of Place, financial evidence, supporting documents and the student visa application process.</p>
+          <div className={styles.heroActions}>
+            <a className={styles.primaryButton} href="#enquiry">Book a Consultation <span aria-hidden="true">→</span></a>
+            <a className={styles.secondaryButton} href="#application-process">Explore the Process</a>
           </div>
-          <h2 className={styles.subTitle}>Important Considerations Regarding Costs:</h2>
-          <ul>
-            <li><strong>Fluctuations:</strong> These figures are estimates for 2025 and are subject to change based on institutional policies, government regulations, and economic factors. Always refer to the official websites of universities and Immigration New Zealand for the most accurate and up-to-date information.</li>
-            <br />
-            <li><strong>Regional Differences:</strong> The cost of living can vary significantly between different cities and regions in New Zealand. Auckland and Wellington are typically more expensive than smaller towns.</li>
-            <br />
-            <li><strong>Personal Spending:</strong> Your individual spending habits will significantly impact your actual living expenses. Budgeting and careful financial management are crucial for international students.</li>
-            <br />
-            <li><strong>Additional Costs:</strong> Remember to factor in other potential costs such as textbooks, course materials, internet and phone bills, social activities, and travel within New Zealand.</li>
-            <br />
-            <li><strong>Scholarships and Funding:</strong> Explore available scholarships and grants to help offset the costs of tuition and living expenses. These can be offered by the New Zealand government, educational institutions, or external organizations.</li>
-            <br />
-            <li><strong>Currency Exchange Rates:</strong> Keep in mind that currency exchange rates between your home country and New Zealand can fluctuate, affecting the actual cost of your studies and living expenses in your local currency</li>
-            <br /></ul>
-          <p><strong>To get precise and personalized cost estimates based on your chosen program and preferred location, and for the most current information on tuition fees, living expenses, visa application fees, and available scholarships, it is highly recommended to contact Global Visa Internationals.</strong> They can provide tailored guidance and up-to-date details relevant to your specific situation</p>
-          <p>
-            At Global Visa Internationals, we provide expert assistance to individuals navigating the newzeland immigration process. Whether you aim to study, work, or settle in the newzeland, our team is here to guide you every step of the way. Contact us today to explore your best immigration options!</p>
-
-
-          <h2>Frequently Asked Questions (FAQs)</h2>
-          <h3>1. What is the processing time for a New Zealand student visa?</h3>
-          <p>The processing time for a New Zealand student visa can vary based on several factors, including the volume of applications and the completeness of your documentation. Generally, it takes around 4 to 8 weeks. However, it's advisable to apply well in advance of your intended start date.</p>
-          <h3>2. Can I work while studying in New Zealand?</h3>
-          <p>Yes, most student visa holders can work up to 20 hours per week during the academic year and full-time during scheduled breaks. However, specific work rights depend on your visa type and the conditions attached to it.</p>
-          <h3>3. What are the visa requirements for international students?</h3>
-          <p>The visa requirements for international students vary depending on your academic program and the duration of your stay in New Zealand. Generally, you will need a New Zealand student visa, which can be obtained through the New Zealand Immigration Service.</p>
-          <h3>4. How do I apply for a New Zealand student visa?</h3>
-          <p>To apply for a New Zealand student visa, you will need to complete the New Zealand Immigration Application Form and submit all required documents. This process typically involves an interview with a New Zealand Immigration Officer.</p>
-          <h3>5. What are the costs associated with studying in New Zealand?</h3>
-          <p>The costs of studying in New Zealand can vary significantly based on your chosen program and institution. Tuition fees typically range from NZD 22,000 to NZD 32,000 per year, while living expenses can range from NZD 15,000 to NZD 20,000 per year.</p>
-          <h3>6. Can I extend my student visa?</h3>
-          <p>Yes, you can apply for an extension of your student visa if you wish to continue your studies in New Zealand. However, you must meet the eligibility criteria and provide valid reasons for the extension.</p>
-          <h3>7. What happens if my student visa application is declined?</h3>
-          <p>If your student visa application is declined, you will receive a letter explaining the reasons for the decision. You may have the option to appeal the decision or reapply with additional documentation.</p>
-          <h3>8. Do I need health insurance while studying in New Zealand?</h3>
-          <p>Yes, it is mandatory for international students to have health insurance while studying in New Zealand. This ensures that you are covered for any medical expenses during your stay.</p>
-          <h3>9. Can I bring my family with me on a student visa?</h3>
-          <p>Yes, you can bring your partner and dependent children with you on a student visa. However, they will need to apply for their own visas and meet the necessary requirements.</p>
-          <h3>10. What is the minimum IELTS score required for a New Zealand student visa?</h3>
-          <p>The minimum IELTS score required for a New Zealand student visa varies depending on the institution and program. Generally, a score of 6.0 to 7.0 is acceptable for most universities.</p>
-          <h3>11. Can I apply for a student visa if I have a criminal record?</h3>
-          <p>If you have a criminal record, it is advisable to consult with a lawyer or immigration specialist to determine if you can apply for a student visa. Some countries have specific rules regarding criminal records.</p>
-          <h3>12. Can I study part-time while working in New Zealand?</h3>
-          <p>Yes, you can study part-time while working in New Zealand. However, the total number of hours you work per week must not exceed the maximum allowed by your visa. It is essential to consult with your visa sponsor and the New Zealand Immigration Service for specific guidelines.</p>
-          <h3>13. What are the benefits of studying in New Zealand?</h3>
-          <p>Studying in New Zealand offers numerous benefits, including a high-quality education system, a multicultural environment, opportunities for practical work experience, and the chance to explore the country's stunning landscapes and rich culture.</p>
-          <h3>14. What are the visa requirements for studying in New Zealand?</h3>
-          <p>The visa requirements for studying in New Zealand depend on your academic program and the duration of your stay. Generally, you will need a New Zealand student visa, which can be obtained through the New Zealand Immigration Service.</p>
-          <h3>15. Can I study in New Zealand while working?</h3>
-          <p>Yes, you can study in New Zealand while working. However, it is important to ensure that your work hours do not exceed the maximum allowed by your visa.</p>
-          <h3>16. What are the requirements for a New Zealand student visa?</h3>
-          <p>The requirements for a New Zealand student visa include proof of acceptance into an approved educational institution, sufficient funds to cover tuition and living expenses, health insurance, and a valid passport.</p>
-          <h3>17. What are the visa requirements for a New Zealand student visa?</h3>
-          <p>The visa requirements for a New Zealand student visa include proof of acceptance into an approved educational institution, sufficient funds to cover tuition and living expenses, health insurance, and a valid passport.</p>
-          <h3>18. Can I apply for a student visa if I have a criminal record?</h3>
-          <p>If you have a criminal record, it is advisable to consult with a lawyer or immigration specialist to determine if you can apply for a student visa. Some countries have specific rules regarding criminal records.</p>
-          <h3>19. Can I study in New Zealand while working?</h3>
-          <p>Yes, you can study in New Zealand while working. However, it is important to ensure that your work hours do not exceed the maximum allowed by your visa.</p>
-          <h3>20. What are the visa requirements for studying in New Zealand?</h3>
-          <p>The visa requirements for studying in New Zealand depend on your academic program and the duration of your stay. Generally, you will need a New Zealand student visa, which can be obtained through the New Zealand Immigration Service.</p>
-          <h3>21. Can I study in New Zealand while working?</h3>
-          <p>Yes, you can study in New Zealand while working. However, it is important to ensure that your work hours do not exceed the maximum allowed by your visa.</p>
-          <h3>22. What are the visa requirements for studying in New Zealand?</h3>
-          <p>The visa requirements for studying in New Zealand depend on your academic program and the duration of your stay. Generally, you will need a New Zealand student visa, which can be obtained through the New Zealand Immigration Service.</p>
-
-
-          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
+          <p className={styles.heroNote}>Requirements vary by applicant and course. Always verify the latest rules with Immigration New Zealand.</p>
         </div>
-
-        <div className={styles.formSection}>
-          <VisaForm />
+        <div className={styles.heroImageWrap}>
+          <img src={heroImage} alt="New Zealand student visa guidance for international students" className={styles.heroImage} fetchPriority="high" width="1200" height="630" />
+          <div className={styles.imageBadge}><span className={styles.badgeIcon} aria-hidden="true">✦</span><span><strong>Personalised guidance</strong><small>From course planning to application</small></span></div>
         </div>
-      </div>
+      </section>
 
-    </>
+      <nav className={styles.quickNav} aria-label="On this page">
+        <a href="#why-new-zealand">Why New Zealand</a><a href="#destinations">Universities</a><a href="#requirements">Requirements</a><a href="#documents">Documents</a><a href="#application-process">Steps</a><a href="#costs">Costs</a><a href="#faqs">FAQs</a>
+      </nav>
+
+      <section className={styles.introSection}>
+        <SectionHeading className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>START WITH A CLEAR PLAN</p>
+          <h2>Understand your New Zealand student visa journey</h2>
+        </SectionHeading>
+        <p className={styles.lead}>New Zealand offers a variety of study options, from undergraduate degrees to postgraduate study and specialist qualifications. A strong application starts with choosing the right course, understanding the provider's requirements and preparing clear supporting evidence.</p>
+        <p>There is no single checklist that fits every applicant. The visa route and supporting documents depend on your course, education provider, duration of study and personal circumstances. Use this page as a planning guide and confirm final requirements through official sources.</p>
+      </section>
+
+      <section className={styles.featureGrid} id="why-new-zealand">
+        {benefits.map((item) => <article className={styles.featureCard} key={item.title}><span className={styles.featureIcon}>{item.icon}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
+      </section>
+
+      <section className={styles.contentSection} id="destinations">
+        <SectionHeading className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>EXPLORE YOUR OPTIONS</p>
+          <h2>Universities to research in New Zealand</h2>
+          <p>Compare course content, entry requirements, tuition fees, location and student support before deciding where to apply.</p>
+        </SectionHeading>
+        <div className={styles.universityGrid}>
+          {universities.map(([name, detail, url]) => <a href={url} target="_blank" rel="noreferrer" key={name}><strong>{name}</strong><span>{detail}</span><span className={styles.cardLink}>Visit official website ↗</span></a>)}
+        </div>
+        <p className={styles.notice}>This is a starting list, not a ranking or endorsement. Check each provider's official website for current programmes, entry criteria and fees.</p>
+      </section>
+
+      <section className={`${styles.contentSection} ${styles.softSection}`} id="requirements">
+        <SectionHeading className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>BEFORE YOU APPLY</p>
+          <h2>Common New Zealand student visa requirements</h2>
+          <p>Your application should show that you meet the requirements for the specific visa you are applying for.</p>
+        </SectionHeading>
+        <div className={styles.checkGrid}>
+          {[
+            ["Offer of Place", "An offer from an eligible education provider, with course and enrolment details that meet the visa rules."],
+            ["Financial evidence", "Evidence that meets current requirements for tuition, living expenses and travel, with a clear and credible source of funds."],
+            ["Health and character", "Medical checks, chest X-rays or police certificates may be requested depending on your circumstances and intended stay."],
+            ["Genuine study plans", "Information about your course choice, education background, future plans and intention to comply with visa conditions."],
+            ["Identity and supporting records", "A valid passport and accurate, consistent information across application forms and supporting documents."],
+            ["Provider-specific conditions", "Meet any admission, English-language, tuition-payment or insurance requirements that apply to your programme."],
+          ].map(([title, description]) => <article className={styles.checkItem} key={title}><span aria-hidden="true">✓</span><div><h3>{title}</h3><p>{description}</p></div></article>)}
+        </div>
+        <p className={styles.notice}>Do not rely on old figures or generic online checklists for financial thresholds, fees, work rights or medical requirements. Confirm the current rules on the official Immigration New Zealand website.</p>
+      </section>
+
+      <section className={styles.contentSection} id="documents">
+        <SectionHeading className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>GET ORGANISED</p>
+          <h2>Documents to prepare for a New Zealand student visa</h2>
+          <p>Use this general checklist to start gathering records. Your final document list may differ depending on the visa route and your individual situation.</p>
+        </SectionHeading>
+        <ul className={styles.documentList}>{documents.map((document) => <li key={document}><span aria-hidden="true">✓</span>{document}</li>)}</ul>
+      </section>
+
+      <section className={`${styles.contentSection} ${styles.softSection}`} id="application-process">
+        <SectionHeading className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>STEP BY STEP</p>
+          <h2>How to prepare your student visa application</h2>
+          <p>Working through the process in order can help you identify missing information early and reduce avoidable delays.</p>
+        </SectionHeading>
+        <ol className={styles.steps}>{steps.map(([title, description], index) => <li key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{description}</p></div></li>)}</ol>
+        <a className={styles.inlineLink} href="https://www.immigration.govt.nz/" target="_blank" rel="noreferrer">Check official Immigration New Zealand guidance ↗</a>
+      </section>
+
+      <section className={styles.ctaBand}>
+        <div><p className={styles.eyebrow}>NEED HELP GETTING ORGANISED?</p><h2>Prepare your next steps with confidence</h2><p>Get support to organise your study plans and understand the documents you may need before submitting your application.</p></div>
+        <a className={styles.lightButton} href="#enquiry">Talk to our team <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section className={styles.contentSection} id="costs">
+        <SectionHeading className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>PLAN YOUR BUDGET</p>
+          <h2>Costs to consider when studying in New Zealand</h2>
+          <p>Build a realistic budget for your full study period rather than looking at tuition alone.</p>
+        </SectionHeading>
+        <div className={styles.costGrid}>{costs.map((item, index) => <article key={item.title}><span aria-hidden="true">{["◎", "⌂", "＄", "＋", "✈", "▤"][index]}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
+        <p className={styles.notice}>Costs, exchange rates, visa fees and financial evidence thresholds can change. Ask your provider for a tuition estimate and use official sources for the current visa fee and funds requirement.</p>
+      </section>
+
+      <section className={`${styles.contentSection} ${styles.softSection}`}>
+        <SectionHeading className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>WHY GLOBAL VISA INTERNATIONALS?</p>
+          <h2>Guidance to help you stay organised</h2>
+        </SectionHeading>
+        <div className={styles.benefitGrid}>
+          <article><h3>Application preparation</h3><p>Understand the stages of the process and create a checklist based on your study plans.</p></article>
+          <article><h3>Document organisation</h3><p>Review whether your supporting records are clear, consistent and ready to be checked against official requirements.</p></article>
+          <article><h3>Study planning support</h3><p>Keep course selection, finances, documents and application timing connected in one practical plan.</p></article>
+        </div>
+        <p className={styles.disclaimer}>Global Visa Internationals is an independent consultancy and is not Immigration New Zealand, a university or a government authority. Visa decisions are made solely by the relevant authorities. No approval or processing time can be guaranteed.</p>
+      </section>
+
+      <section className={`${styles.contentSection} ${styles.faqSection}`} id="faqs">
+        <SectionHeading className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>COMMON QUESTIONS</p>
+          <h2>New Zealand student visa FAQs</h2>
+        </SectionHeading>
+        {faqs.map(([question, answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}
+      </section>
+
+      <section className={styles.enquirySection} id="enquiry">
+        <div className={styles.enquiryIntro}><p className={styles.eyebrow}>LET'S PLAN YOUR NEXT STEP</p><h2>Speak with Global Visa Internationals</h2><p>Tell us about your intended course and study timeline. Our team can help you understand the preparation process and identify the next steps to research.</p><a className={styles.phoneLink} href="tel:+917022213466">Call +91 70222 13466</a></div>
+        <div className={styles.formCard}><VisaForm /></div>
+      </section>
+      <footer className={styles.footer}><p>Information on this page is general guidance, not legal advice. Always check the latest student visa rules, fees and conditions with Immigration New Zealand and your chosen education provider.</p></footer>
+    </main>
   );
 }

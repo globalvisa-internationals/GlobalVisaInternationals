@@ -1,160 +1,65 @@
-import VisaForm from '@/Components/VisaForm';
-import styles from '@/Components/Visa.module.css';
-import ReviewCarousel from '@/Components/ReviewCarousel';
+import React from "react";
+import VisaForm from "@/Components/VisaForm";
+import styles from "./AustraliaStudentVisa.module.css";
+import { SectionHeading, DocumentChecklist } from "../StudentVisaCommon"; 
 import { ReviewSchema } from "@/Components/ReviewSchema";
-import Script from 'next/script';
+import ReviewCarousel from "@/Components/ReviewCarousel";
 
-// ✅ SERVER-SIDE SEO metadata (next/head is not needed now)
-export const metadata = {
-  title: "Australia Student Visa Consultants | Global Visa Internationals",
-  description:
-    "Apply for your Australia Student Visa (subclass 500) with Global Visa Internationals. Expert guidance on study permit process, GTE requirements, costs, and top universities for Indian students.",
-  keywords:
-    "Australia student visa, subclass 500 visa, Australian study visa, study in Australia for Indian students, apply for Australia student visa, GTE Australia, Australia student visa requirements, Australia study permit from India, australia study visa consultant, australia student visa agency, study in australia without ielts, student visa australia cost, 485 visa australia, apply for student visa australia, australia without ielts study visa 2023, graduate visa australia, apply for australia study visa",
-  robots: "index, follow",
-  images: "https://www.globalvisainternationals.com/student-visa/Australia-student-Visa-ASSISTANCE.webp",
-  alternates: {
-    canonical: "https://www.globalvisainternationals.com/Visa/student-visa/australia",
-  },
-  openGraph: {
-    title: "Australia Student Visa: Application, Requirements & Study Tips",
+const pageUrl = "https://www.globalvisainternationals.com/visa/student-visa/australia";
+const imageUrl = "https://www.globalvisainternationals.com/student-visa/Australia-student-Visa-ASSISTANCE.webp";
+const officialVisaUrl = "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500";
+
+export async function generateMetadata() {
+  return {
+    title: "Australia Student Visa Consultants in India | Global Visa Internationals",
     description:
-      "Plan your education in Australia with expert visa support. Learn about subclass 500 visa process, GTE requirements, tuition fees, and best universities for Indian students.",
-    url: "https://www.globalvisainternationals.com/Visa/student-visa/australia",
-    siteName: "Global Visa Internationals",
-    images: [
-      {
-        url: "https://www.globalvisainternationals.com/student-visa/Australia-student-Visa-ASSISTANCE.webp",
-        width: 1200,
-        height: 630,
-        alt: "Australia Student Visa Banner",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@GLOBALVISA1505",
-    title: "Australia Student Visa: Apply, Requirements & Top Universities",
-    description:
-      "Study in Australia with a valid student visa (subclass 500). Get expert help from Global Visa Internationals on GTE, tuition fees, and top universities for Indian students.",
-    images: [
-      "https://www.globalvisainternationals.com/student-visa/Australia-student-Visa-ASSISTANCE.webp",
-    ],
-  },
-};
+      "Planning to study in Australia from India? Get guidance on Student visa (subclass 500) eligibility, Genuine Student criteria, documents, costs and application steps.",
+    alternates: { canonical: pageUrl },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: "Australia Student Visa Guidance for Indian Students",
+      description:
+        "Understand the Australian Student visa (subclass 500) process and get personalised application guidance from Global Visa Internationals.",
+      url: pageUrl,
+      siteName: "Global Visa Internationals",
+      type: "website",
+      locale: "en_IN",
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: "Australia student visa guidance for Indian students" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Australia Student Visa Guidance | Global Visa Internationals",
+      description: "Explore subclass 500 visa requirements, documents and application steps for studying in Australia.",
+      images: [imageUrl],
+    },
+  };
+}
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
-// ✅ PAGE COMPONENT
-export default function Australia() {
-  const pageUrl = metadata.alternates.canonical;
-
-  const TopUniversitiesList = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Top Universities in Australia for International Students",
-    description:
-      "Popular Australian universities frequently chosen by Indian students applying for a student visa subclass 500. Helpful when planning admissions, GTE preparation, and post-study work opportunities.",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        item: {
-          "@type": "CollegeOrUniversity",
-          name: "University of Melbourne",
-          description:
-            "One of Australia's top-ranked universities, known for research and global employability.",
-          url: "https://www.unimelb.edu.au/",
-          image:
-            "https://about.unimelb.edu.au/__data/assets/image/0021/243563/UniversitySquare-hero.jpg",
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        item: {
-          "@type": "CollegeOrUniversity",
-          name: "Australian National University (ANU)",
-          description:
-            "Renowned for academic excellence and located in Canberra, a popular choice for international students.",
-          url: "https://www.anu.edu.au/",
-          image:
-            "https://www.anu.edu.au/files/styles/anu_full_920_518/public/story/anu-campus-hero.jpg",
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        item: {
-          "@type": "CollegeOrUniversity",
-          name: "University of Sydney",
-          description:
-            "Historic Australian university with world-class facilities and diverse programs.",
-          url: "https://www.sydney.edu.au/",
-          image:
-            "https://www.sydney.edu.au/content/dam/corporate/images/about-us/our-campus/camperdown-darlington-campus.jpg",
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        item: {
-          "@type": "CollegeOrUniversity",
-          name: "University of Queensland",
-          description:
-            "Leading Australian research university located in Brisbane with strong industry links.",
-          url: "https://www.uq.edu.au/",
-          image: "https://about.uq.edu.au/files/43658/UQ-Great-Court.jpg",
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 5,
-        item: {
-          "@type": "CollegeOrUniversity",
-          name: "Monash University",
-          description:
-            "Known for innovation, global research, and high employability of graduates.",
-          url: "https://www.monash.edu/",
-          image:
-            "https://www.monash.edu/__data/assets/image/0015/2333991/monash-campus.jpg",
-        },
-      },
-    ],
-  };
-
+export default function AustraliaStudentVisaPage() {
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.globalvisainternationals.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Australia Student Visa",
-        item: pageUrl,
-      },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.globalvisainternationals.com" },
+      { "@type": "ListItem", position: 2, name: "Student Visa", item: "https://www.globalvisainternationals.com/visa/student-visa" },
+      { "@type": "ListItem", position: 3, name: "Australia Student Visa", item: pageUrl },
     ],
   };
 
-  const educationConsultancyJsonLd = {
+  const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Global Visa Internationals",
     url: "https://www.globalvisainternationals.com",
     logo: "https://www.globalvisainternationals.com/gvilogo.png",
-    description:
-      "Global Visa Internationals provides Australia Student Visa Assistance for Indian students — expert help with subclass 500 visa, GTE requirements, proof of funds, OSHC guidance, biometrics, medicals, police certificates, SOPs, and university admissions.",
+    description: "Independent education and visa consultancy offering guidance to students planning to study abroad.",
     telephone: "+91-7022213466",
     address: {
       "@type": "PostalAddress",
@@ -164,541 +69,216 @@ export default function Australia() {
       postalCode: "560025",
       addressCountry: "IN",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 12.9716,
-      longitude: 77.5946,
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "IN",
-    },
+    areaServed: { "@type": "Country", name: "IN" },
     sameAs: [
       "https://www.facebook.com/globalvisainternationals/",
       "https://www.instagram.com/globalvisa_internationals/",
       "https://www.linkedin.com/company/global-visa-internationals/",
       "https://x.com/GLOBALVISA1505",
       "https://www.youtube.com/@globalVisaInternationals",
-      "https://www.google.com/maps/place/Global+Visa+Internationals",
     ],
   };
 
-  // ✅ Combine all schemas
-  const allSchemas = [
-    breadcrumbJsonLd,
-    educationConsultancyJsonLd,
-    TopUniversitiesList,
-  ];
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Which visa do international students usually need to study in Australia?",
+        acceptedAnswer: { "@type": "Answer", text: "Many international students apply for the Student visa (subclass 500). Eligibility and requirements depend on the applicant and course. Check the Australian Department of Home Affairs website for current rules." },
+      },
+      {
+        "@type": "Question",
+        name: "What is the Genuine Student requirement?",
+        acceptedAnswer: { "@type": "Answer", text: "The Genuine Student requirement asks applicants to explain their circumstances, reasons for choosing the course and Australia, and how the course benefits them. Applicants should answer the current application questions truthfully and provide supporting evidence." },
+      },
+      {
+        "@type": "Question",
+        name: "How many hours can a student visa holder work in Australia?",
+        acceptedAnswer: { "@type": "Answer", text: "Student visa holders can generally work up to 48 hours per fortnight while their course is in session, subject to visa conditions and exceptions. Check the current official guidance and your own visa conditions." },
+      },
+      {
+        "@type": "Question",
+        name: "How much does an Australian Student visa cost?",
+        acceptedAnswer: { "@type": "Answer", text: "The visa application charge can change and may depend on the applicant's circumstances. Check the Department of Home Affairs visa pricing estimator before lodging an application." },
+      },
+      {
+        "@type": "Question",
+        name: "Can a consultant guarantee my Australian student visa will be approved?",
+        acceptedAnswer: { "@type": "Answer", text: "No consultant can guarantee a visa outcome. The Australian Department of Home Affairs assesses each application under the applicable rules." },
+      },
+    ],
+  };
 
   return (
-    <main className={styles.visaContainer}>
-      {/* Inject structured data scripts into <head> */}
-      {allSchemas.map((schema, index) => (
-        <Script
-          key={index}
-          id={`structured-data-${index}`}
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-
-      <div className={styles.imageContainer}>
-        <img src='/student-visa/Australia-student-Visa-ASSISTANCE.webp' alt="Australia Image" className={styles.VisaImage} />
-      </div>
-
-      <div className={styles.VisaSec}>
-
-
-        <div className={styles.VisaData}>
-          <h1 className={styles.Title}>Australia Student Visa Assistence | Global Visa Internationals</h1>
-
-          <p>Choosing the right Australia study visa consultant can be the difference between a smooth visa process and a stressful one. At our agency, we specialise in guiding Indian students through every step of the Australia student visa journey, from eligibility checks to final approvals. Our team has helped hundreds of students secure their student visa for Australia from India, including those applying for the 485 visa Australia after graduation.</p>
-          <p>We understand the unique needs of students applying from India, Fiji, and other regions, as well as those transitioning from a student visa to partner visa Australia. Whether you want to study in Australia without IELTS or apply for a visa 500 Australia, our personalised approach ensures your application is accurate, complete, and ready for quick processing.</p>
-          <p>Many of our clients choose us because we are recognised as one of the best consultants for Australia study visa services. Our in-depth knowledge of immigration Australia student visa policies and our connections with top universities allow us to offer you faster admissions and visa approvals.</p>
-
-          <h3>Our End-to-End Student Visa Application Support</h3>
-          <p>When you apply for an Australia student visa with us, you get more than just basic assistance — you get a strategic partner in your education journey. We offer full-cycle support that ensures no detail is overlooked, whether you’re applying for a student visa for Australia from India or renewing your visa for further studies.</p>
-          <ul>
-            <li>Application Guidance for All Study Levels - From helping you apply to study in Australia to preparing your student dependent visa Australia or student spouse visa Australia documents, our team ensures each form, attachment, and statement meets immigration requirements. We also arrange financial documentation, lodge online applications, and book your VFS Global or biometric appointments.</li>
-            <li>Specialised Visa Categories - We handle all types of student applications, including masters in Australia without IELTS, schooling visa Australia, graduate visa Australia, and visa 500 Australia. If you’re looking to work while you study, we also explain Australia student visa working hours regulations and your working rights in Australia for international students.</li>
-            <li>IELTS-Free Study Pathways - Many students benefit from our expertise in Australia without IELTS study visa 2022 and Australia without IELTS study visa 2023 programs. We know exactly which schools in Australia without IELTS and universities accept alternative English proficiency proof, ensuring your eligibility without extra hurdles.</li>
-            <li>Online & In-Person Services - Whether you prefer to apply for student visa Australia online or submit through our local partner offices, we offer flexibility to match your schedule. We assist clients nationwide and even support applicants from other countries, such as student visa Australia from Fiji or student visa in Australia for Filipino students.</li>
-          </ul>
-
-
-          <h3>MARA-Registered Migration Agents - Legal, Trustworthy Guidance</h3>
-          <p>One of the most important factors in choosing an Australia student visa agency is knowing your application will be handled legally and ethically. Our team works closely with MARA-registered migration agents, ensuring every piece of advice and every application step complies with Australian immigration law. Whether you’re applying for a student spouse visa Australia, a student partner visa Australia, or transitioning from a visa student Australia 2022 to a post-study work pathway, we guide you every step of the way with complete transparency.</p>
-          <p>This legal oversight is especially important for students applying for complex visa categories like the global talent visa Australia 2023, a student visa in Australia for Filipino applicants, or those switching from a student visa Australia from Fiji to another visa type. With our legal framework and compliance-first approach, you avoid costly mistakes, unnecessary delays, and rejection risks.</p>
-          <p>Our commitment to trust and accuracy has made us a top choice for the best agent for Australia student visa services. We don’t just process paperwork — we educate you about your working rights in Australia for international students, what’s allowed on your Australia student visa working hours, and how to remain compliant while studying.</p>
-
-          <h4>Why our MARA-registered guidance makes a difference:</h4>
-
-          <ul>
-            <li>100% Legal Compliance - Every application meets current Australian migration regulations.</li>
-            <li>Case-Specific Strategies - Tailored solutions for visas like partner, dependent, and graduate categories.</li>
-            <li>Error-Free Submissions - Reduced chance of rejection or costly appeals.</li>
-            <li>Clear Communication - We explain each step, from eligibility to visa cost estimators.</li>
-            <li>Future Pathway Advice - Guidance for moving from student visas to work or residency options.</li>
-          </ul>
-          <p>With us, you can apply for your Australia study visa knowing your case is in safe, experienced hands — backed by official MARA accreditation.</p>
-
-
-          <h3>Visa Cost Estimators & Processing Timelines</h3>
-
-          <p>Many students worry about the student visa Australia cost, but we make it simple and transparent. Our visa cost estimator breaks down every expense — from the base Visa 500 Australia application fee to Overseas Student Health Cover (OSHC), biometric appointments, and any additional document translation or courier costs. Whether you’re applying for the cheapest student visa Australia option or aiming for top-tier universities, you’ll have a clear financial roadmap before you even start the application.</p>
-          <p>Processing times can vary depending on the visa type and your specific situation. For example, a schooling visa in Australia with parents often takes longer than a straightforward student working visa Australia application. We track and update you on every stage, so whether you apply Australia study visa online or through our local offices, you’ll always know your expected timeline.</p>
-          <p>We also guide students applying under special categories such as student visa Perth or student visa Melbourne, ensuring you understand any regional processing requirements or priority pathways. This tailored approach makes your journey both stress-free and financially predictable.</p>
-          <h3>What you can expect with our cost & timeline guidance:</h3>
-
-          <ul>
-            <li><strong>Detailed Fee Breakdown -</strong>  Covering application charges, OSHC, medicals, and biometrics.</li>
-            <li><strong>Accurate Time Estimates -</strong> Based on the latest Department of Home Affairs data.</li>
-            <li><strong>Special Category Insights -</strong>From graduate visa Australia to partner and dependent visas.</li>
-            <li><strong>Budget Planning Support -</strong> Helping you manage tuition, living costs, and visa expenses together.</li>
-            <li><strong>Real-Time Updates -</strong> We notify you of any changes in fees or processing times.</li>
-          </ul>
-          <p>With our support, you’ll never be left guessing about costs or timelines — every step is planned so you can focus on your study in Australia journey.</p>
-
-          <h3>VFS & Biometric Appointment Assistance</h3>
-          <p>Once your apply for Australia study visa documents are ready, the next step is your VFS Global biometric appointment. We handle the booking, confirm your slot, and guide you on what to bring — including passport photo requirements, ID documents, and security protocols at the center.</p>
-          <p>This service is essential whether you’re applying through student visa agents Melbourne, working with a student visa agent Sydney, or managing the process remotely. For students applying from abroad — such as the Australia visit visa from UK for international students — we ensure you meet every biometric and document submission deadline without stress.</p>
-          <p>Our team also supports families applying for a student dependent visa Australia or handling partner visa cancellation Australia cases, making sure all biometric data is recorded accurately to avoid costly delays.</p>
-          <section>
-            <h3>What we handle for you:</h3>
-            <ul>
-              <li>Booking your VFS Global biometric appointment on time.</li>
-              <li>Sending you a checklist of required documents and ID proofs.</li>
-              <li>Advising on photo and fingerprint requirements.</li>
-              <li>Coordinating with your student visa Australia application timeline.</li>
-            </ul>
-
-            Assisting in rescheduling if travel or emergencies occur.
-          </section>
-
-
-          <p>By working with us, you avoid common mistakes that lead to delays or refusals. You’ll have a clear understanding of your student visa Australia cost, eligibility, and post-study work options — all while staying fully compliant with Australian immigration laws.</p>
-          <p className={styles.note}>At Global Visa Internationals, we understand that the process of obtaining a student visa can be overwhelming. That's why we're here to provide you with expert guidance and support every step of the way. Our team of experienced professionals is dedicated to helping you navigate the complexities of the visa application process, ensuring that you have all the necessary documentation and information to make your journey smooth and successful.</p>
-
-          <p>Imagine yourself thriving in Australia's world-renowned educational environment! From bustling metropolitan cities like Sydney and Melbourne to the serene beauty of Perth and Brisbane, Australia offers a diverse range of study locations and lifestyles. An Australian student visa is your key to unlocking a transformative educational experience that can shape your future.</p>
-
-          <p>At Global Visa Internationals, we recognize that the journey to obtaining an Australian student visa involves careful planning and a thorough understanding of the requirements. Our dedicated team of education and visa specialists is committed to providing you with the expert guidance and unwavering support you need to navigate this process with confidence. We aim to simplify the complexities, allowing you to focus on the exciting prospect of your studies.</p>
-
-          <p>With our extensive knowledge of the Australian education system and visa regulations, we are here to help you every step of the way. Whether you're interested in pursuing a diploma, bachelor's degree, or postgraduate studies, we will assist you in selecting the right course and institution that aligns with your aspirations.</p>
-
-          <h3 className={styles.subTitle}>Why Australia Stands Out for International Students</h3>
-          <p>Choosing Australia for your education offers a multitude of compelling advantages:</p>
-          <ul>
-            <li><strong>Globally Acclaimed Educational Institutions:</strong> Australian universities consistently rank among the top in the world for research, teaching quality, and graduate outcomes across various disciplines.</li><br />
-            <li><strong>Extensive Range of Courses and Specializations:</strong> Whether you're interested in STEM fields, humanities, business, arts, or vocational studies, Australia offers a vast array of programs tailored to your specific interests and career aspirations.</li><br />
-            <li><strong>Potential for Post-Study Pathways:</strong> Depending on your qualification and other criteria, the Australian government offers various post-study work visa options, providing a pathway to gain valuable international work experience and potentially permanent residency.</li><br />
-            <li><strong>A Rich Tapestry of Cultures:</strong> Experience Australia's vibrant multicultural society, where you'll interact with students and people from all corners of the globe, fostering a truly enriching and global perspective.</li>
-            <br />
-            <li><strong>Unparalleled Quality of Life and Safety:</strong> Australia consistently ranks high for its quality of life, safety, and healthcare system, providing a secure and supportive environment for international students.</li>
-            <br />
-            <li><strong>Breathtaking Natural Beauty and Outdoor Adventures:</strong> From the iconic Great Barrier Reef to the rugged Outback and pristine beaches, Australia offers incredible opportunities for exploration and adventure outside of your studies.</li><br />
-            <li><strong>Supportive Environment for International Students:</strong> Australian institutions and communities actively support international students with various services, including orientation programs, academic assistance, and social activities.</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>Understanding the Australian Student Visa (Subclass 500)</h3>
-          <p>The Australian student visa (Subclass 500) is designed for international students who wish to study full-time in a registered course at an Australian educational institution. This visa allows you to live, work, and study in Australia for the duration of your course. Here are some key points to consider:</p>
-          <ul>
-            <li><strong>Eligibility Criteria:</strong> To be eligible for the Subclass 500 visa, you must be enrolled in a full-time course of study at a registered Australian institution. You must also meet health and character requirements, provide proof of sufficient funds, and demonstrate English language proficiency.</li>
-            <li><strong>Visa Duration:</strong> The duration of your student visa will depend on the length of your course. Generally, the visa is granted for the duration of your course plus an additional period for travel and preparation.</li>
-            <li><strong>Work Rights:</strong> As a student visa holder, you are allowed to work part-time (up to 40 hours per fortnight) during your studies and full-time during scheduled breaks. This provides an excellent opportunity to gain work experience and support your living expenses.</li>
-            <li><strong>Family Members:</strong> You may be able to include family members in your visa application, allowing them to accompany you during your studies in Australia.</li>
-            <li><strong>Health Insurance:</strong> It is mandatory to have Overseas Student Health Cover (OSHC) for the duration of your stay in Australia. This insurance covers medical expenses and ensures you have access to healthcare services.</li>
-            <li><strong>Visa Conditions:</strong> Your student visa may have specific conditions, such as maintaining enrolment, attending classes regularly, and adhering to work hour restrictions.</li>
-            <li><strong>Post-Study Work Opportunities:</strong> After completing your studies, you may be eligible for a post-study work visa, allowing you to gain valuable work experience in Australia.</li>
-            <li><strong>Pathway to Permanent Residency:</strong> Depending on your qualifications and work experience, you may have pathways to apply for permanent residency in Australia after completing your studies.</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>The Importance of the Genuine Temporary Entrant (GTE) Requirement</h3>
-          <p>The Genuine Temporary Entrant (GTE) requirement is a crucial aspect of the Australian student visa application process. It is designed to ensure that applicants genuinely intend to study in Australia temporarily and will return to their home country after completing their studies. To meet the GTE requirement, you must provide a statement addressing your intentions, ties to your home country, and reasons for choosing Australia as your study destination.</p>
-          <p>At Global Visa Internationals, we understand the significance of the GTE requirement and can assist you in crafting a compelling GTE statement that highlights your genuine intentions and strengthens your visa application.</p>
-
-          <h3 className={styles.subTitle}>The Role of Overseas Student Health Cover (OSHC)</h3>
-          <p>Overseas Student Health Cover (OSHC) is a mandatory health insurance requirement for international students studying in Australia. It provides coverage for medical expenses, hospital visits, and other healthcare services during your stay. Having OSHC ensures that you have access to necessary medical care without incurring significant out-of-pocket expenses.</p>
-          <p>At Global Visa Internationals, we can guide you in selecting the right OSHC provider and plan that suits your needs, ensuring you have peace of mind while studying in Australia.</p>
-          <h3 className={styles.subTitle}>The Importance of a Well-Prepared Visa Application</h3>
-          <p>Submitting a well-prepared visa application is essential for a successful outcome. The Australian Department of Home Affairs assesses applications based on various factors, including your financial capacity, English language proficiency, and adherence to visa conditions. A comprehensive and accurate application increases your chances of obtaining the student visa.</p>
-          <p>At Global Visa Internationals, we specialize in preparing and submitting student visa applications. Our team will work closely with you to gather the necessary documentation, complete the application forms accurately, and ensure that your application meets all requirements.</p>
-
-          <h3 className={styles.subTitle}>The Benefits of Choosing Global Visa Internationals</h3>
-          <p>At Global Visa Internationals, we are committed to providing you with the highest level of service and support throughout your Australian student visa journey. Here are some of the key benefits of choosing us:</p>
-          <ul>
-            <li><strong>Expert Guidance:</strong> Our team of experienced professionals has in-depth knowledge of the Australian education system and visa regulations, ensuring you receive accurate and up-to-date information.</li>
-            <li><strong>Personalized Support:</strong> We understand that every student's situation is unique. We offer personalized consultations to assess your individual needs and provide tailored solutions.</li>
-            <li><strong>Comprehensive Services:</strong> From course selection to visa application submission, we offer a full range of services to support you at every stage of your journey.</li>
-            <li><strong>Timely Updates:</strong> We keep you informed about the progress of your application and any changes in visa regulations, ensuring you are always in the loop.</li>
-            <li><strong>Post-Study Support:</strong> Our commitment to your success doesn't end with your visa approval. We provide ongoing support for post-study work opportunities and pathways to permanent residency.</li>
-            <li><strong>Client-Centric Approach:</strong> Your satisfaction is our priority. We strive to provide exceptional customer service and support, making your experience with us as smooth and stress-free as possible.</li>
-            <li><strong>Proven Track Record:</strong> We have a successful track record of assisting students in obtaining their Australian student visas and achieving their educational goals.</li>
-            <li><strong>Ethical Practices:</strong> We adhere to the highest ethical standards in our services, ensuring transparency and integrity in all our interactions.</li>
-            <li><strong>Access to Resources:</strong> We provide access to valuable resources, including scholarship opportunities, university information, and career guidance.</li>
-            <li><strong>Network of Partnerships:</strong> Our strong relationships with educational institutions and industry partners enable us to provide you with exclusive opportunities and insights.</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>Key Aspects of the Australian Student Visa (Subclass 500)</h3>
-          <p>The Student Visa (Subclass 500) is specifically designed for individuals who wish to undertake full-time study in a registered course of study in Australia. Successful applicants generally need to demonstrate:</p>
-          <ul>
-            <li><strong>Genuine Temporary Entrant (GTE) Requirement: </strong>You must demonstrate a genuine intention to stay in Australia temporarily for the purpose of study and that you will return to your home country upon completion of your studies. This is a crucial aspect assessed through your application and supporting documentation.</li>
-            <li><strong>Financial Capacity:</strong> You will need to provide evidence that you have sufficient funds to cover your tuition fees for the duration of your stay, living expenses for yourself and any accompanying family members, and travel costs to and from Australia. Specific financial requirements are set by the Department of Home Affairs..</li>
-            <li><strong>English Language Proficiency:</strong> Depending on your chosen course and nationality, you may need to provide evidence of your English language proficiency through recognized tests such as IELTS, TOEFL iBT, PTE Academic, or Cambridge English. Minimum score requirements vary.</li>
-            <li><strong>Health and Character Requirements: </strong>You will be required to undergo a medical examination by a panel doctor and provide police clearance certificates from your country of origin and any other country where you have resided for a significant period.</li>
-            <li><strong>Confirmation of Enrolment (CoE):</strong> You must be accepted into a full-time registered course of study by a registered Australian education provider and obtain a Confirmation of Enrolment (CoE) as proof of your acceptance.</li>
-            <li><strong>Overseas Student Health Cover (OSHC):</strong> You are generally required to have Overseas Student Health Cover (OSHC) for the duration of your stay in Australia to cover medical and hospital expenses.</li>
-            <li><strong>Visa Application Charges:</strong> There is a fee associated with lodging your student visa application. The amount can vary and is subject to change.</li>
-            <li><strong>Potential for Visa Conditions:</strong> Your student visa may have specific conditions attached, such as limitations on working hours, requirements to maintain enrolment, and restrictions on changing courses.</li>
-
-          </ul>
-
-          <h3 className={styles.subTitle}>Navigating the Application Process</h3>
-          <p>The Australian student visa application typically involves several stages, includin</p>
-          <ul>
-            <li>Choosing your course and education provider.</li>
-            <li>Receiving and accepting your Confirmation of Enrolment (CoE).</li>
-            <li>Gathering the required documentation.</li>
-            <li>Submitting your visa application online through the Department of Home Affairs.</li>
-            <li>Undergoing any required health examinations and biometric data collection.</li>
-          </ul>
-
-
-
-
-
-          <h3 className={styles.subTitle}>A Closer Look at the Student Visa Application Journey</h3>
-          <p>The process of applying for an Australian student visa typically involves these key steps:</p>
-          <ul>
-            <li><strong>Thorough Course and Institution Selection:</strong> Carefully research and choose a registered course and education provider in Australia that aligns with your academic and career goals.</li>
-            <li><strong>Securing Your Offer and Confirmation of Enrolment (CoE):</strong> Apply to your chosen institution and, upon acceptance, receive your Letter of Offer and subsequently your Confirmation of Enrolment (CoE).</li>
-            <li><strong>Meticulous Document Gathering and Preparation:</strong> This involves collecting a range of documents, including your passport, academic transcripts, financial evidence, English language test results (if required), GTE statement, and other supporting documents as specified by the Department of Home Affairs.</li>
-            <li><strong>Online Visa Application Submission:</strong> Lodge your student visa application online through the ImmiAccount portal of the Department of Home Affairs. This requires careful completion of the application form and uploading all required documents.</li>
-            <li><strong>Health Assessment and Biometrics:</strong> You may be required to undergo a medical examination by an approved panel doctor and provide your biometric data (fingerprints and photograph).</li>
-            <li><strong>Visa Interview (Potentially): </strong>In some cases, the Department of Home Affairs may request an interview to further assess your application</li>
-            <li>Visa Grant Notification: Once your application is assessed and approved, you will receive a notification of your visa grant.</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>Top Courses to Study in Australia (High Demand & Future Growth)</h3>
-          <p>Australia's strong economy and focus on innovation drive demand for graduates in various fields. Here are some of the top courses international students are pursuing:</p>
-          <ul>
-            <li><strong>Healthcare and Medicine:</strong> With an aging population and continuous advancements, courses like Nursing, Medicine, Allied Health (Physiotherapy, Occupational Therapy, Medical Imaging), and Public Health offer excellent career prospects.</li>
-            <br />
-            <li><strong>Engineering:</strong> Australia's infrastructure development and technological advancements create high demand for Civil, Mechanical, Electrical, Mining, and Software Engineers.</li>
-            <br />
-            <li><strong>Information Technology (IT):</strong> The booming tech industry needs skilled professionals in areas like Cybersecurity, Data Science, Artificial Intelligence (AI), Software Development, and Cloud Computing.</li>
-            <br />
-            <li><strong>Business and Management:</strong> MBA programs, Master's in Finance, Marketing, Human Resources, and International Business are highly sought after for leadership roles across various sectors.</li>
-            <br />
-            <li><strong>Accounting and Finance:</strong> Strong regulatory frameworks and a thriving business environment drive demand for qualified Accountants and Finance professionals.</li>
-            <br />
-            <li><strong>Education:</strong> With a growing population, there are opportunities in Early Childhood, Primary, and Secondary Education.</li>
-            <br />
-            <li><strong>Social Work and Community Services:</strong> Professionals in this field are crucial for supporting Australia's diverse communities.</li>
-            <br />
-            <li><strong>Environmental Science and Sustainability:</strong> With increasing focus on environmental issues, courses in this area are gaining importance.</li>
-            <br />
-            <li><strong>Tourism and Hospitality Management:</strong> Australia's thriving tourism industry offers opportunities in hotel management, event management, and tourism operations.</li>
-            <br />
-            <li><strong>Architecture and Urban Planning:</strong> As cities grow and evolve, skilled architects and urban planners are in demand.</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>Best Scholarships in Australia for International Students</h3>
-          <p>Financing your education is a key consideration. Australia offers various scholarships for international students:</p>
-          <ul>
-            <li><strong>Australia Awards Scholarships:</strong> These prestigious scholarships, funded by the Australian Government, offer comprehensive financial support to eligible students from developing countries for study in a wide range of fields.</li>
-            <li><strong>University-Specific Scholarships:</strong> Many Australian universities offer their own scholarships for international students based on academic merit, specific programs, or country of origin. Examples include:
-              <ul>
-                <li><strong>University of Melbourne:</strong> Offers various graduate and undergraduate scholarships.</li>
-                <li><strong>University of Sydney:</strong> Provides international student scholarships across different faculties.</li>
-                <li><strong>Australian National University (ANU):</strong> Offers a range of scholarships for international students at all levels.</li>
-                <li><strong>Queensland University of Technology (QUT):</strong> Provides scholarships for high-achieving international students.</li>
-                <li><strong>Monash University:</strong> Offers various scholarships based on merit and financial need.</li></ul></li>
-            <li><strong>External Scholarships:</strong> Organizations and foundations in your home country or internationally may also offer scholarships for studying in Australia.</li>
-            <li><strong>Research Training Program (RTP) Scholarships: </strong>For higher degree research students (Masters by Research and PhD), the Australian Government provides RTP scholarships to support tuition fees and living costs.</li>
-          </ul>
-
-          <h3 className={styles.subTitle}>Types of Australian Student Visas</h3>
-          <p>The primary visa for international students undertaking formal studies in Australia is the Student Visa (Subclass 500). This visa allows you to stay in Australia for the duration of your registered course(s). Key aspects include:</p>
-          <ul>
-            <li><strong>Primary Applicant:</strong> The main person enrolled in the course.</li>
-            <li><strong>Dependent Family Members:</strong> In certain circumstances, partners and dependent children of the primary student visa holder may be eligible to apply for a dependent visa to join them in Australia.</li>
-            <li><strong>Guardian Visa (Subclass 590):</strong> This visa allows a parent or legal guardian to accompany a student under 18 years of age studying in Australia.</li>
-            <li><strong>Training Visa (Subclass 407):</strong> While not strictly a "student visa," this visa can be relevant for structured workplace-based training required as part of a course.</li>
-            <strong>Navigating the specific requirements and conditions of each visa subclass can be complex. Contact Global Visa Internationals for accurate and up-to-date information tailored to your situation.</strong>
-          </ul>
-
-          <h3 className={styles.subTitle}>The Australian Education Model: A Focus on Quality and Practical Application</h3>
-          <p>The Australian education system is highly regarded globally for its quality assurance frameworks and focus on practical learning:</p>
-          <ul>
-            <li><strong>Tertiary Education Quality and Standards Agency (TEQSA):</strong> This independent national regulator ensures the quality of higher education and vocational education and training (VET) providers.</li>
-            <br />
-            <li><strong>Australian Qualifications Framework (AQF):</strong> A national framework that standardizes qualifications across different education and training sectors, making it easier to understand and compare qualifications.</li>
-            <br />
-            <li><strong>Emphasis on Practical Skills:</strong> Many courses incorporate practical components such as internships, industry placements, and project-based learning to equip students with job-ready skills.</li>
-            <br />
-            <li><strong>Research-Intensive Universities: </strong>Australian universities are actively involved in cutting-edge research across various disciplines, offering opportunities for postgraduate research students.</li>
-            <br />
-            <li><strong>Student Support Services: </strong>Universities and colleges provide a range of support services for international students, including academic advising, career counseling, accommodation assistance, and social activities.</li>
-          </ul>
-
-
-          <h3 className={styles.subTitle}>Top Universities in Australia: Excellence in Education and Research</h3>
-          <p>Australia boasts several world-leading universities consistently ranked among the top globally:</p>
-          <ol>
-            <strong><li>The University of Melbourne</li>
-
-              <li>The University of Sydney</li>
-
-              <li>Australian National University (ANU)</li>
-
-              <li>The University of Queensland (UQ)</li>
-
-              <li>Monash University</li>
-
-              <li>The University of New South Wales (UNSW Sydney)</li>
-
-              <li>The University of Adelaide</li>
-
-              <li>The University of Western Australia (UWA)</li>
-
-              <li>Queensland University of Technology (QUT)</li>
-
-              <li>University of Technology Sydney (UTS)</li></strong>
-          </ol>
-          <strong><p>Promising Career Opportunities in Australia for International Graduates</p></strong>
-
-          <p>Australia's strong economy offers diverse career opportunities for international graduates in various sectors, particularly in areas of high demand mentioned earlier (Healthcare, Engineering, IT, etc.).</p>
-
-          <ul>
-            <li><strong>Post-Study Work Visa (Subclass 485):</strong> This visa allows eligible international students to stay and work in Australia for a period after graduation, providing valuable work experience. Different streams exist with varying eligibility criteria and durations.</li>br
-
-            <li><strong>Skilled Migration Pathways:</strong> For graduates with qualifications and skills in specific high-demand occupations, there are pathways to permanent residency through skilled migration programs.</li><br />
-            <li><strong>Employer Sponsorship:</strong> Some employers may sponsor eligible international graduates for temporary or permanent positions.</li>
-          </ul>
-          <p><b>Understanding the post-study work visa options and skilled migration pathways is crucial for your long-term career goals in Australia. Contact Global Visa Internationals for expert advice.</b></p>
-          <div className={styles.container}>
-            <h1 className={styles.heading}>
-              Cost of Education and Living in Australia: Planning Your Finances
-            </h1>
-            <p className={styles.intro}>
-              The cost of studying and living in Australia varies depending on the course, university, and location. Here's a general overview:
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <p className={styles.eyebrow}>YOUR STUDY ABROAD JOURNEY STARTS HERE</p>
+            <h1>Australia Student Visa Guidance for Indian Students</h1>
+            <p className={styles.heroText}>
+              Planning to study in Australia? Get clear guidance on Student visa (subclass 500)
+              requirements, Genuine Student criteria, supporting documents and application steps
+              from Global Visa Internationals.
             </p>
-
-            <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>Category</th>
-                  <th>Estimated Cost (AUD)</th>
-                  <th>Estimated Cost (INR)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Tuition Fees (UG & PG)</td>
-                  <td>AUD 20,000 - 50,000/year</td>
-                  <td>₹11 - ₹27.5 lakhs/year</td>
-                </tr>
-                <tr>
-                  <td>Living Expenses</td>
-                  <td>AUD 24,505/year</td>
-                  <td>₹13.5 lakhs/year (approx.)</td>
-                </tr>
-                <tr>
-                  <td>Accommodation</td>
-                  <td>AUD 150 - 450/week</td>
-                  <td>₹8,200 - ₹24,750/week</td>
-                </tr>
-                <tr>
-                  <td>Visa Application Fee</td>
-                  <td>AUD 710 (subclass 500)</td>
-                  <td>₹39,000 (approx.)</td>
-                </tr>
-                <tr>
-                  <td>OSHC (Health Cover)</td>
-                  <td>AUD 500 - 700/year</td>
-                  <td>₹27,500 - ₹38,500/year</td>
-                </tr>
-                <tr>
-                  <td>Study Materials</td>
-                  <td>AUD 500 - 1,000/year</td>
-                  <td>₹27,500 - ₹55,000/year</td>
-                </tr>
-                <tr>
-                  <td>Local Travel</td>
-                  <td>AUD 30 - 60/week</td>
-                  <td>₹1,650 - ₹3,300/week</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <p className={styles.note}>
-              <strong>Note:</strong> Costs are approximate and based on an exchange rate of ₹55 per 1 AUD. Actual rates may vary. Always refer to official sources for accurate information.
-            </p>
+            <div className={styles.heroActions}>
+              <a className={styles.primaryButton} href="#enquiry">Book a Consultation <span aria-hidden="true">→</span></a>
+              <a className={styles.secondaryButton} href="#application-process">Explore the Process</a>
+            </div>
+            <p className={styles.heroNote}>Practical application support. Clear next steps. No guarantee of approval.</p>
           </div>
+          <div className={styles.heroImageWrap}>
+            <img
+              src="/student-visa/Australia-student-Visa-ASSISTANCE.webp"
+              alt="Australia student visa and study abroad guidance"
+              className={styles.heroImage}
+              fetchPriority="high"
+              width="1200"
+              height="630"
+            />
+            <div className={styles.imageBadge}>
+              <span className={styles.badgeIcon} aria-hidden="true">✦</span>
+              <span><strong>Personalised guidance</strong><small>From planning to application</small></span>
+            </div>
+          </div>
+        </section>
 
+        <nav className={styles.quickNav} aria-label="On this page">
+          <a href="#requirements">Requirements</a><a href="#documents">Documents</a><a href="#application-process">Application steps</a><a href="#costs">Costs</a><a href="#universities">Universities</a><a href="#faqs">FAQs</a>
+        </nav>
 
+        <section className={styles.introSection}>
+          <SectionHeading className={styles.sectionHeading}>
+            <p className={styles.eyebrow}>STUDY IN AUSTRALIA</p>
+            <h2>Plan your Australian education with a clear visa checklist</h2>
+          </SectionHeading>
+          <p className={styles.lead}>
+            Australia offers higher education, vocational training and English-language study options
+            for international students. Before applying, compare courses and providers, understand the
+            current visa rules and prepare documents that accurately reflect your study plans and finances.
+          </p>
+          <p>
+            Global Visa Internationals provides consultancy support to students from India who are
+            exploring Australian education. We can help you organise documents, understand application
+            stages and identify questions to resolve before lodging. The visa decision is made by the
+            Australian Department of Home Affairs.
+          </p>
+        </section>
 
-          <h3 className={styles.subTitle}>Your Dedicated Pathway to Studying in Australia Starts Here</h3>
-          <p>While this detailed overview provides valuable insights, the specific requirements, documentation, and processes for your Australian student visa application can be highly individualized and subject to evolving regulations.</p>
-          <p>At Global Visa Internationals, we are committed to providing you with personalized support and expert guidance tailored to your unique situation. Our experienced team is here to assist you in every step of the process, ensuring that you have the best chance of success in obtaining your Australian student visa.</p>
-          <p>Contact us today to schedule a consultation and take the first step towards realizing your dream of studying in Australia. Your future awaits, and we are here to help you make it a reality!</p>
-          <p>While this detailed overview provides valuable insights, the specific requirements, documentation, and processes for your Australian student visa application can be highly individualized and subject to evolving regulations.</p>
-          <p className={styles.note}>Avoid the pitfalls and complexities of navigating the Australian student visa system on your own.</p>
-          <p className={styles.note}>At Global Visa Internationals, we are committed to providing you with personalized support and expert guidance tailored to your unique situation. Our experienced team is here to assist you in every step of the process, ensuring that you have the best chance of success in obtaining your Australian student visa.</p>
-          <p>Partner with the experienced professionals at Global Visa Internationals to ensure a seamless and successful visa application journey. Our expert consultants offer:</p>
+        <section className={styles.featureGrid} aria-label="Our guidance services">
+          <article className={styles.featureCard}><span className={styles.featureIcon}>01</span><h3>Course and provider planning</h3><p>Compare course options, entry criteria, tuition and how a programme fits your goals.</p></article>
+          <article className={styles.featureCard}><span className={styles.featureIcon}>02</span><h3>Genuine Student preparation</h3><p>Organise clear, truthful responses and supporting evidence for your circumstances.</p></article>
+          <article className={styles.featureCard}><span className={styles.featureIcon}>03</span><h3>Document checklist</h3><p>Review common documents and identify missing or inconsistent information before applying.</p></article>
+          <article className={styles.featureCard}><span className={styles.featureIcon}>04</span><h3>Application guidance</h3><p>Understand the online application, health cover, health checks and follow-up steps that may apply.</p></article>
+        </section>
 
+        <section id="requirements" className={styles.contentSection}>
+          <SectionHeading className={styles.sectionHeading}><p className={styles.eyebrow}>BEFORE YOU APPLY</p><h2>Australia Student visa (subclass 500) requirements</h2></SectionHeading>
+          <p>Requirements depend on your course, education provider, location and personal circumstances. Common items to check include:</p>
+          <div className={styles.checkGrid}>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Confirmation of Enrolment (CoE)</h3><p>For most applicants, a valid CoE for the intended registered course is needed when the visa is decided.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Genuine Student requirement</h3><p>Answer the application questions honestly and explain your circumstances, course choice and study plans.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Financial capacity</h3><p>Prepare evidence that meets current requirements for tuition, living costs, travel and any eligible family members.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>English language evidence</h3><p>Provide an approved test result or evidence of an applicable exemption if required for your case.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Overseas Student Health Cover</h3><p>Arrange OSHC for the required period unless an exemption applies.</p></div></div>
+            <div className={styles.checkItem}><span>✓</span><div><h3>Health, character and identity</h3><p>Meet applicable health and character requirements and provide a valid passport and requested evidence.</p></div></div>
+          </div>
+          <p className={styles.notice}>Visa rules can change. In particular, Home Affairs announced Student visa rule changes effective 2 October 2026. Check the official visa page for the rules that apply to your location and circumstances before applying.</p>
+        </section>
 
-          <ul>
-            <li><strong>Comprehensive Eligibility Assessment: </strong>We will thoroughly evaluate your individual circumstances to determine your eligibility for the most suitable student visa pathway.</li><br />
-            <li><strong>Personalized Document Checklist and Guidance:</strong> We will provide you with a tailored list of required documents and guide you on how to prepare them correctly to meet the stringent requirements.</li>
-            <br />
-            <li><strong>Expert Assistance with the Online Application:</strong> We will meticulously guide you through the online application process, ensuring accurate completion of all forms and proper document uploads</li>
-            <br />
-            <li><strong>GTE Statement Guidance:</strong> We will provide expert advice and support in crafting a compelling Genuine Temporary Entrant (GTE) statement that effectively addresses the Department's criteria.</li>
-            <br />
-            <li><strong>Liaison with Educational Institutions (if needed):</strong> We can assist with communication and coordination with your chosen Australian education provider.</li>
-            <br />
-            <li><strong>Support with Health and Character Requirements:</strong> We can provide guidance on the medical examination and police clearance certificate processes.</li>
-            <br />
-            <li><strong>Ongoing Support and Updates: </strong>We will keep you informed throughout the application process and address any queries or concerns you may have promptly.</li></ul>
+        <section id="documents" className={`${styles.contentSection} ${styles.softSection}`}>
+          <SectionHeading className={styles.sectionHeading}><p className={styles.eyebrow}>GET ORGANISED</p><h2>Documents to prepare for an Australian student visa</h2></SectionHeading>
+          <p>Your individual checklist may differ. The application system and Department of Home Affairs instructions determine which evidence you must provide.</p>
+          <DocumentChecklist className={styles.documentList}>
+            <li>Valid passport and identity details</li>
+            <li>Confirmation of Enrolment (CoE)</li>
+            <li>Academic records and previous qualifications</li>
+            <li>Financial evidence and supporting records</li>
+            <li>Genuine Student responses and relevant evidence</li>
+            <li>Approved English test result or exemption evidence, if required</li>
+            <li>Overseas Student Health Cover (OSHC) details</li>
+            <li>Health, character or additional documents if requested</li>
+            <li>Details of any family members included, where permitted</li>
+            <li>Application fee payment confirmation</li>
+          </DocumentChecklist>
+        </section>
 
-          <p className={styles.note}>Don't let the complexities of the visa process deter you from pursuing your academic dreams in Australia. Contact Global Visa Internationals today and let us be your trusted partner in making your Australian education a reality!</p>
-
-
-          <h3>Frequently Asked Questions (FAQs)</h3>
-          <ol>
-            <h4>
-              <li>What is the duration of the Australian student visa?</li>
-            </h4>
-            <p>The duration of the student visa typically aligns with the length of your course of study, plus an additional period for travel. Generally, it can range from a few months to several years, depending on your program.</p>
-            <h4>
-              <li>Can I work while on a student visa in Australia?</li>
-            </h4>
-            <p>Yes, student visa holders are generally allowed to work part-time while studying. However, there are specific work hour restrictions during the semester and holidays.</p>
-            <h4>
-              <li>Can I bring my family with me on a student visa?</li>
-            </h4>
-            <p>Yes, you may be able to include eligible family members in your student visa application. They may also be granted work rights while you study.</p>
-            <h4>
-              <li>What happens if my visa application is refused?</li>
-            </h4>
-            <p>If your visa application is refused, you may have the option to appeal the decision or reapply. The specific course of action will depend on the reasons for the refusal.</p>
-            <h4>
-              <li>How long does it take to process a student visa application?</li>
-            </h4>
-            <p>Processing times can vary based on several factors, including the complexity of your application and the volume of applications being processed. It's advisable to apply well in advance of your intended course start date.</p>
-            <h4>
-              <li>Can I change my course or education provider while on a student visa?</li>
-            </h4>
-            <p>Yes, you can change your course or education provider, but you must comply with the conditions of your visa and notify the Department of Home Affairs.</p>
-            <h4>
-              <li>Do I need Overseas Student Health Cover (OSHC)?</li>
-            </h4>
-            <p>Yes, most student visa holders are required to have Overseas Student Health Cover (OSHC) for the duration of their stay in Australia. This health insurance covers medical expenses and hospital treatment.</p>
-            <h4>
-              <li>Can I apply for permanent residency after studying in Australia?</li>
-            </h4>
-            <p>Yes, depending on your qualifications and other factors, you may be eligible to apply for a post-study work visa or other pathways to permanent residency after completing your studies.</p>
-            <h4>
-              <li>What is the cost of the student visa application?</li>
-            </h4>
-            <p>The visa application fee varies based on the type of visa and your circumstances. It's essential to check the current fees on the Department of Home Affairs website.</p>
-            <h4>
-              <li>How can Global Visa Internationals assist me with my student visa application?</li></h4>
-            <p>Global Visa Internationals offers expert guidance and support throughout the entire student visa application process. Our team will help you with document preparation, application submission, and addressing any challenges that may arise.</p>
-
-            <h4>
-              <li>What if I have a gap in my education or work experience?</li>
-            </h4>
-            <p>Having a gap in your education or work experience is not necessarily a barrier to obtaining a student visa. However, you may need to provide a valid explanation and demonstrate your genuine intention to study.</p>
-            <h4>
-              <li>Can I apply for a student visa if I have previously been refused a visa?</li>
-            </h4>
-            <p>Yes, you can apply for a student visa even if you have previously been refused a visa. However, you will need to address the reasons for the previous refusal in your new application.</p>
-            <h4>
-              <li>What if I want to study in Australia but am currently outside the country?</li>
-            </h4>
-            <p>You can apply for a student visa from outside Australia. You will need to provide the required documentation and meet the visa criteria.</p>
-            <h4>
-              <li>Can I apply for a student visa if I am over 50 years old?</li>
-            </h4>
-            <p>Yes, there is no upper age limit for applying for a student visa. However, you may need to provide additional documentation to demonstrate your genuine intention to study.</p>
-            <h4>
-              <li>How can I ensure my student visa application is successful?</li>
-            </h4>
-            <p>To increase your chances of a successful application, ensure that you meet all the visa requirements, provide accurate and complete documentation, and demonstrate your genuine intention to study in Australia. Seeking professional assistance from Global Visa Internationals can also help.</p>
-            <h4>
-              <li>What if I want to study in Australia but have a criminal record?</li>
-            </h4>
-            <p>Having a criminal record may affect your student visa application. You will need to disclose any criminal history and may be required to provide additional documentation or undergo a character assessment.</p>
-            <h4>
-              <li>Can I apply for a student visa if I have health issues?</li>
-            </h4>
-            <p>Having health issues does not automatically disqualify you from obtaining a student visa. However, you may need to undergo a medical examination and provide evidence of your health status.</p>
-            <h4>
-              <li>What if I want to study in Australia but do not meet the English language requirements?</li>
-            </h4>
-            <p>If you do not meet the English language requirements, you may need to take an English language proficiency test or enroll in an English language course before applying for a student visa.</p>
-            <h4>
-              <li>Can I apply for a student visa if I have previously studied in Australia?</li>
-            </h4>
-            <p>Yes, you can apply for a student visa even if you have previously studied in Australia. However, you will need to provide documentation of your previous studies and explain your reasons for returning.</p>
-            <h4>
-              <li> How can I contact Global Visa Internationals for assistance with my student visa application?</li>
-            </h4>
-            <p>You can contact Global Visa Internationals through our website or by phone. Our team is ready to assist you with your student visa application and answer any questions you may have.</p>
-            <h4>
-              <li>What if I want to study in Australia but have a low academic score?</li>
-            </h4>
-            <p>Having a low academic score may affect your chances of obtaining a student visa. However, you can still apply and provide additional documentation to demonstrate your genuine intention to study and your commitment to improving your academic performance.</p>
-            <h4>
-              <li>Can I apply for a student visa if I have previously been refused a visa for another country?</li>
-            </h4>
-            <p>Yes, you can apply for a student visa even if you have previously been refused a visa for another country. However, you will need to address the reasons for the previous refusal in your new application.</p>
-            <h4>
-              <li>What if I want to study in Australia but have a low IELTS score?</li>
-            </h4>
-            <p>If you have a low IELTS score, you may need to retake the test or consider enrolling in an English language course before applying for a student visa. Some institutions may also offer alternative English language proficiency tests.</p>
-            <h4>
-              <li>Can I apply for a student visa if I have a history of visa violations?</li>
-            </h4>
-            <p>Having a history of visa violations may affect your chances of obtaining a student visa. You will need to disclose any previous visa violations and may be required to provide additional documentation or undergo a character assessment.</p>
-            <h4>
-              <li>How can I ensure my student visa application is processed quickly?</li>
-            </h4>
-            <p>To ensure a quick processing time, submit a complete and accurate application with all required documentation. Applying well in advance of your intended course start date can also help.</p>
-            <h4>
-              <li>What if I want to study in Australia but have a low bank balance?</li>
-            </h4>
-            <p>If you have a low bank balance, you may need to provide additional documentation to demonstrate your financial capacity. This could include sponsorship letters, proof of income, or other financial support.</p>
-            <h4>
-              <li>Can I apply for a student visa if I have previously been refused a visa for Australia?</li>
-
-            </h4>
-            <p>Yes, you can apply for a student visa even if you have previously been refused a visa for Australia. However, you will need to address the reasons for the previous refusal in your new application.</p>
-            <h4>
-              <li>How can I contact Global Visa Internationals for assistance with my student visa application?</li>
-            </h4>
-            <p>You can contact Global Visa Internationals through our website or by phone. Our team is ready to assist you with your student visa application and answer any questions you may have.</p>
-            <h4>
-              <li>What if I want to study in Australia but have a low academic score?</li>
-            </h4>
-            <p>Having a low academic score may affect your chances of obtaining a student visa. However, you can still apply and provide additional documentation to demonstrate your genuine intention to study and your commitment to improving your academic performance.</p>
+        <section id="application-process" className={styles.contentSection}>
+          <SectionHeading className={styles.sectionHeading}><p className={styles.eyebrow}>STEP BY STEP</p><h2>How to apply for an Australia Student visa</h2><p className={styles.lead}>Use this overview to organise your preparation. Always follow the current Department of Home Affairs instructions for your own case.</p></SectionHeading>
+          <ol className={styles.steps}>
+            <li><span>1</span><div><h3>Choose a suitable course and provider</h3><p>Compare entry requirements, course content, tuition, location and the provider’s registration.</p></div></li>
+            <li><span>2</span><div><h3>Apply for admission and obtain your CoE</h3><p>Follow the institution’s admissions process and retain the official enrolment documents.</p></div></li>
+            <li><span>3</span><div><h3>Check the current visa rules</h3><p>Confirm application-location rules, Genuine Student questions, financial evidence and family-member eligibility.</p></div></li>
+            <li><span>4</span><div><h3>Prepare your evidence</h3><p>Gather identity, education, financial, English-language and OSHC evidence that applies to you.</p></div></li>
+            <li><span>5</span><div><h3>Lodge online and complete requested checks</h3><p>Submit through the official process, pay the applicable charge and complete any health or biometrics steps if instructed.</p></div></li>
+            <li><span>6</span><div><h3>Monitor messages and visa conditions</h3><p>Check your account and respond to requests by their deadlines. If granted, read and follow every visa condition.</p></div></li>
           </ol>
+        </section>
 
-          <p className={styles.note}> This service is provided by Global Visa Internationals, an independent consultancy. We are not affiliated with the Australian Government or any embassy.</p>
-        </div>
+        <section className={styles.ctaBand}><div><p className={styles.eyebrow}>NEED HELP PLANNING?</p><h2>Talk through your Australia study plans with our team</h2><p>Share your goals and questions to understand the consultancy support available for your next steps.</p></div><a className={styles.lightButton} href="#enquiry">Request a Consultation <span aria-hidden="true">→</span></a></section>
 
-        <div className={styles.formSection}>
-          <VisaForm />
-        </div>
-      </div>
-      <section>
-        <ReviewSchema />
-        <ReviewCarousel />
-      </section>
-    </main>
+        <section id="costs" className={styles.contentSection}>
+          <SectionHeading className={styles.sectionHeading}><p className={styles.eyebrow}>PLAN YOUR BUDGET</p><h2>Understanding the cost of studying in Australia</h2></SectionHeading>
+          <p>Your total budget depends on the course, institution, city, accommodation and personal needs. Calculate the full cost before making commitments, using current information from your provider and official sources.</p>
+          <div className={styles.costGrid}>
+            <article><span aria-hidden="true">▤</span><h3>Tuition and course fees</h3><p>Ask your institution for current tuition, deposits, materials and any course-specific charges.</p></article>
+            <article><span aria-hidden="true">⌂</span><h3>Living expenses</h3><p>Budget for accommodation, food, utilities, local travel, phone service and everyday needs.</p></article>
+            <article><span aria-hidden="true">＋</span><h3>Visa and other costs</h3><p>Include the visa application charge, OSHC, health checks, travel and document-related expenses.</p></article>
+          </div>
+          <p className={styles.notice}>The Department of Home Affairs lists the Student visa (subclass 500) application charge from AUD 2,500 as of July 2026, with limited concessions. Charges can change and additional applicant charges may apply. Confirm the exact price in the official visa pricing estimator before lodging.</p>
+          <p><a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/fees-and-charges/current-visa-pricing" target="_blank" rel="noreferrer">Check current official visa fees ↗</a></p>
+        </section>
+
+        <section id="universities" className={`${styles.contentSection} ${styles.softSection}`}>
+          <SectionHeading className={styles.sectionHeading}><p className={styles.eyebrow}>EXPLORE YOUR OPTIONS</p><h2>Australian universities to research</h2></SectionHeading>
+          <p>Compare course content, entry criteria, tuition, location, scholarships and student support. These are examples to research, not a ranking or a guarantee of admission.</p>
+          <div className={styles.universityGrid}>
+            <a href="https://www.unimelb.edu.au/" target="_blank" rel="noreferrer"><strong>University of Melbourne</strong><span>Melbourne, Victoria ↗</span></a>
+            <a href="https://www.anu.edu.au/" target="_blank" rel="noreferrer"><strong>Australian National University</strong><span>Canberra, ACT ↗</span></a>
+            <a href="https://www.sydney.edu.au/" target="_blank" rel="noreferrer"><strong>University of Sydney</strong><span>Sydney, New South Wales ↗</span></a>
+            <a href="https://www.uq.edu.au/" target="_blank" rel="noreferrer"><strong>University of Queensland</strong><span>Brisbane, Queensland ↗</span></a>
+            <a href="https://www.monash.edu/" target="_blank" rel="noreferrer"><strong>Monash University</strong><span>Melbourne, Victoria ↗</span></a>
+            <a href="https://www.unsw.edu.au/" target="_blank" rel="noreferrer"><strong>UNSW Sydney</strong><span>Sydney, New South Wales ↗</span></a>
+          </div>
+        </section>
+
+        <section className={styles.contentSection}>
+          <SectionHeading className={styles.sectionHeading}><p className={styles.eyebrow}>WHY GLOBAL VISA INTERNATIONALS?</p><h2>Guidance tailored to your study plans</h2></SectionHeading>
+          <div className={styles.benefitGrid}>
+            <article><h3>Clear explanations</h3><p>Understand the application stages and the evidence that may be relevant to your circumstances.</p></article>
+            <article><h3>Organised preparation</h3><p>Work through a checklist and identify missing or inconsistent information before submission.</p></article>
+            <article><h3>Personal attention</h3><p>Discuss your academic background, study goals and questions with our consultancy team.</p></article>
+          </div>
+          <p className={styles.disclaimer}>Global Visa Internationals is an independent consultancy and is not part of the Australian Government or the Department of Home Affairs. Consultancy support does not guarantee admission, visa approval or any immigration outcome. If you need immigration assistance, check the Australian Government’s guidance on who can legally provide it.</p>
+        </section>
+
+        <section id="faqs" className={`${styles.contentSection} ${styles.faqSection}`}>
+          <SectionHeading className={styles.sectionHeading}><p className={styles.eyebrow}>COMMON QUESTIONS</p><h2>Australia student visa FAQs</h2></SectionHeading>
+          <details><summary>Which visa do I usually need to study in Australia?</summary><p>Many international students apply for the Student visa (subclass 500). Requirements depend on the course and your circumstances. See the <a href={officialVisaUrl} target="_blank" rel="noreferrer">official subclass 500 visa page</a>.</p></details>
+          <details><summary>What is the Genuine Student (GS) requirement?</summary><p>Applicants answer questions about their circumstances, reasons for choosing the course and Australia, and the value of the course to their future. Answer truthfully and provide relevant supporting evidence. The former Genuine Temporary Entrant (GTE) requirement is not the current student-visa test.</p></details>
+          <details><summary>How many hours can I work on a Student visa?</summary><p>Student visa holders can generally work up to 48 hours per fortnight while their course is in session, subject to exceptions and visa conditions. Research-degree students may have different rules. Check your visa conditions and current official guidance.</p></details>
+          <details><summary>Do I need Overseas Student Health Cover?</summary><p>Most student visa applicants must maintain OSHC for the required period unless an exemption applies. Confirm the rules for your circumstances.</p></details>
+          <details><summary>How much is the Student visa application fee?</summary><p>The charge can change and additional charges may apply. Check the Department of Home Affairs’ <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/fees-and-charges/current-visa-pricing" target="_blank" rel="noreferrer">current visa pricing page</a> before applying.</p></details>
+          <details><summary>Can I bring family members with me?</summary><p>Eligibility to include family members depends on your circumstances and current rules. Changes effective 2 October 2026 affect who may apply from within Australia and whether family members can be included. Check the official guidance before making plans.</p></details>
+          <details><summary>Can a consultant guarantee approval?</summary><p>No. Only the Department of Home Affairs decides visa applications. Professional support cannot guarantee approval or a particular processing time.</p></details>
+          <details><summary>Where can I find official requirements?</summary><p>Visit the <a href={officialVisaUrl} target="_blank" rel="noreferrer">Australian Department of Home Affairs Student visa page</a> for current eligibility, application rules and conditions.</p></details>
+        </section>
+
+        <section id="enquiry" className={styles.enquirySection}>
+          <div className={styles.enquiryIntro}><p className={styles.eyebrow}>LET’S PLAN YOUR NEXT STEP</p><h2>Enquire about Australia student visa guidance</h2><p>Complete the form and the Global Visa Internationals team can follow up about your study plans.</p><a className={styles.phoneLink} href="tel:+917022213466">Call us: +91 70222 13466</a></div>
+          <div className={styles.formCard}><VisaForm /></div>
+        </section>
+
+        <footer className={styles.footer}><p>Information on this page is general and may change. Always verify current visa requirements, charges and conditions with the Australian Department of Home Affairs and your chosen education provider before applying.</p></footer>
+
+        <section className={styles.reviews} aria-label="Client reviews"><ReviewSchema /><ReviewCarousel /></section>
+      </main>
+    </>
   );
 }

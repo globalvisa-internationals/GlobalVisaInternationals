@@ -1,6 +1,7 @@
 import React from "react";
 import VisaForm from "@/Components/VisaForm";
 import styles from "./CanadaStudentVisa.module.css";
+import { SectionHeading, DocumentChecklist } from "../StudentVisaCommon"; 
 import { ReviewSchema } from "@/Components/ReviewSchema";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 
@@ -204,10 +205,10 @@ export default function CanadaStudentVisaPage() {
         </nav>
 
         <section className={styles.introSection}>
-          <div className={styles.sectionHeading}>
+          <SectionHeading className={styles.sectionHeading}>
             <p className={styles.eyebrow}>STUDY IN CANADA</p>
             <h2>Make your study permit application easier to understand</h2>
-          </div>
+          </SectionHeading>
           <p className={styles.lead}>
             Canada offers a wide range of college and university programmes for
             international students. Before applying, it is important to choose
@@ -247,10 +248,10 @@ export default function CanadaStudentVisaPage() {
         </section>
 
         <section id="requirements" className={styles.contentSection}>
-          <div className={styles.sectionHeading}>
+          <SectionHeading className={styles.sectionHeading}>
             <p className={styles.eyebrow}>BEFORE YOU APPLY</p>
             <h2>Canada student visa requirements for Indian students</h2>
-          </div>
+          </SectionHeading>
           <p>
             Most international students need a Canadian study permit to study
             in Canada. The exact requirements depend on your course, institution
@@ -271,16 +272,16 @@ export default function CanadaStudentVisaPage() {
         </section>
 
         <section id="documents" className={`${styles.contentSection} ${styles.softSection}`}>
-          <div className={styles.sectionHeading}>
+          <SectionHeading className={styles.sectionHeading}>
             <p className={styles.eyebrow}>GET ORGANISED</p>
             <h2>Documents to prepare for a study permit application</h2>
-          </div>
+          </SectionHeading>
           <p>
             Your checklist may include the following documents. Not every item
             applies to every applicant, and immigration authorities may request
             additional information.
           </p>
-          <ul className={styles.documentList}>
+          <DocumentChecklist className={styles.documentList}>
             <li>Valid passport or travel document</li>
             <li>Letter of acceptance from your Canadian institution</li>
             <li>Proof of funds and supporting financial records</li>
@@ -289,15 +290,15 @@ export default function CanadaStudentVisaPage() {
             <li>Study plan and other supporting explanations, where appropriate</li>
             <li>Biometrics, medical or police documents, if requested or required</li>
             <li>Application forms and fee-payment confirmation</li>
-          </ul>
+          </DocumentChecklist>
         </section>
 
         <section id="application-process" className={styles.contentSection}>
-          <div className={styles.sectionHeading}>
+          <SectionHeading className={styles.sectionHeading}>
             <p className={styles.eyebrow}>STEP BY STEP</p>
             <h2>How to apply for a Canada study permit</h2>
             <p className={styles.lead}>Use this overview to plan your next steps. Always follow the current instructions for your own application.</p>
-          </div>
+          </SectionHeading>
           <ol className={styles.steps}>
             <li><span>1</span><div><h3>Choose your course and institution</h3><p>Research programmes, admission criteria, tuition fees and whether the institution is a designated learning institution.</p></div></li>
             <li><span>2</span><div><h3>Receive your letter of acceptance</h3><p>Complete the institution’s admission process and keep your official acceptance documents.</p></div></li>
@@ -318,10 +319,10 @@ export default function CanadaStudentVisaPage() {
         </section>
 
         <section id="costs" className={styles.contentSection}>
-          <div className={styles.sectionHeading}>
+          <SectionHeading className={styles.sectionHeading}>
             <p className={styles.eyebrow}>PLAN YOUR BUDGET</p>
             <h2>Understanding the cost of studying in Canada</h2>
-          </div>
+          </SectionHeading>
           <p>
             Your total budget depends on your institution, programme, city and
             personal needs. Before making financial commitments, calculate the
@@ -341,10 +342,10 @@ export default function CanadaStudentVisaPage() {
         </section>
 
         <section id="universities" className={`${styles.contentSection} ${styles.softSection}`}>
-          <div className={styles.sectionHeading}>
+          <SectionHeading className={styles.sectionHeading}>
             <p className={styles.eyebrow}>EXPLORE YOUR OPTIONS</p>
             <h2>Popular universities to research in Canada</h2>
-          </div>
+          </SectionHeading>
           <p>
             Start by comparing course content, admission requirements, tuition,
             location and student support. These well-known institutions are
@@ -361,10 +362,10 @@ export default function CanadaStudentVisaPage() {
         </section>
 
         <section className={styles.contentSection}>
-          <div className={styles.sectionHeading}>
+          <SectionHeading className={styles.sectionHeading}>
             <p className={styles.eyebrow}>WHY GLOBAL VISA INTERNATIONALS?</p>
             <h2>Guidance tailored to your study plans</h2>
-          </div>
+          </SectionHeading>
           <div className={styles.benefitGrid}>
             <article><h3>Clear explanations</h3><p>Understand the main application stages and the documents you may need to prepare.</p></article>
             <article><h3>Organised preparation</h3><p>Work through a checklist and identify missing or inconsistent information before submission.</p></article>
@@ -379,10 +380,10 @@ export default function CanadaStudentVisaPage() {
         </section>
 
         <section id="faqs" className={`${styles.contentSection} ${styles.faqSection}`}>
-          <div className={styles.sectionHeading}>
+          <SectionHeading className={styles.sectionHeading}>
             <p className={styles.eyebrow}>COMMON QUESTIONS</p>
             <h2>Canada student visa FAQs</h2>
-          </div>
+          </SectionHeading>
           <details><summary>Do I need a study permit to study in Canada?</summary><p>Most foreign nationals need a study permit, although exceptions can apply. Check the official Government of Canada rules for your course and circumstances.</p></details>
           <details><summary>What documents may be required?</summary><p>Common documents may include an acceptance letter, proof of identity, proof of financial support and a PAL/TAL where required. Your personal checklist may include additional items.</p></details>
           <details><summary>How much money must I show?</summary><p>The required amount depends on current IRCC rules, tuition, living expenses and family members accompanying you. Verify the current amount on the official website before applying.</p></details>

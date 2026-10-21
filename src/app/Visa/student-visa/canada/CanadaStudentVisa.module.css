@@ -88,8 +88,6 @@
 .checkItem > span { display: grid; flex: 0 0 28px; place-items: center; width: 28px; height: 28px; border-radius: 50%; color: #176a4b; background: #e4f6ed; font-weight: 900; }
 .notice { padding: 1rem 1.15rem; border-left: 4px solid #76a6ef; border-radius: 0 10px 10px 0; color: #4b5d73; background: #f0f6ff; font-size: .9rem; }
 .softSection { width: 100%; padding-right: max(24px, calc((100% - 1120px) / 2)); padding-left: max(24px, calc((100% - 1120px) / 2)); background: var(--soft); }
-.documentList { display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem 2rem; padding-left: 1.2rem; color: #53647a; }
-.documentList li { padding-left: .2rem; }
 .steps { display: grid; gap: 1.2rem; max-width: 900px; margin: 2rem 0 0; padding: 0; list-style: none; }
 .steps li { display: flex; align-items: flex-start; gap: 1rem; }
 .steps li > span { display: grid; flex: 0 0 44px; place-items: center; width: 44px; height: 44px; border-radius: 14px; color: white; background: var(--blue); font-weight: 800; box-shadow: 0 6px 15px #2458a626; }

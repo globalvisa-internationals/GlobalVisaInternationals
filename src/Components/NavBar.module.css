@@ -1,22 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-
+/* ------------------------------------------------------------------
+   Fallback tokens – your global CSS variables still win if defined
+------------------------------------------------------------------- */
 .navContainer {
+  --nb-bg: var(--nav-bg, #0b1f3a);
+  --nb-bg-2: #12305a;
+  --nb-accent: var(--accent, #ffb703);
+  --nb-text: #eef3fb;
+  --nb-muted: rgba(238, 243, 251, 0.75);
+  --nb-border: rgba(255, 255, 255, 0.1);
+  --nb-radius: 12px;
+  --nb-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 70px;
-  margin-bottom: 10px;
+  height: 72px;
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--nav-bg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 1000000000;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+
+  background: linear-gradient(135deg, var(--nb-bg) 0%, var(--nb-bg-2) 100%);
+  border-bottom: 1px solid var(--nb-border);
+  box-shadow: 0 8px 30px rgba(3, 12, 30, 0.35);
+}
+
+/* thin accent line along the bottom edge */
+.navContainer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--nb-accent),
+    transparent
+  );
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .navBar {
@@ -24,7 +55,20 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 95%;
+  max-width: 96%;
+  height: 100%;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--nb-ease), filter 0.3s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
 }
 
 .logo {
@@ -32,183 +76,354 @@
   height: auto;
 }
 
-/* Navigation Links */
+/* ------------------------------------------------------------------
+   Links
+------------------------------------------------------------------- */
 .navLinks {
   display: flex;
   justify-content: center;
-  gap: 12px;
   align-items: center;
+  gap: 4px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navLinks a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 6px 5px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.navLinks a:hover,
-.navLinks a:focus {
-  background-color: var(--background);
-  color: var(--accent);
-  font-weight: bold;
-  transform: translateY(-1px);
-}
-
-/* Dropdown Menu */
-.submenuContainer {
-  position: relative;
-}
-
+.navLinks > li > a,
 .submenuToggle {
-  background: none;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  color: var(--nb-text);
+  font-family: inherit;
+  font-size: inherit;
   font-weight: 500;
+  letter-spacing: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.25s ease, background-color 0.25s ease;
 }
 
+/* animated underline */
+.navLinks > li > a::after,
+.submenuToggle::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--nb-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--nb-ease);
+}
+
+.navLinks > li > a:hover,
+.navLinks > li > a:focus-visible,
 .submenuToggle:hover,
-.submenuToggle:focus {
-  color: var(--primary);
+.submenuToggle:focus-visible,
+.submenuToggle[aria-expanded="true"] {
+  color: var(--nb-accent);
+  background-color: rgba(255, 255, 255, 0.06);
+  outline: none;
+}
+
+.navLinks > li > a:hover::after,
+.navLinks > li > a:focus-visible::after,
+.submenuToggle:hover::after,
+.submenuToggle:focus-visible::after,
+.submenuToggle[aria-expanded="true"]::after {
+  transform: scaleX(1);
+}
+
+.dropdownIcon {
+  font-size: 9px;
+  opacity: 0.8;
+  transition: transform 0.3s var(--nb-ease);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* ------------------------------------------------------------------
+   Dropdown
+------------------------------------------------------------------- */
+.submenuContainer {
+  position: relative;
 }
 
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
-  background: var(--nav-bg);
-  min-width: max-content;
-  border-radius: 10px;
+  min-width: 200px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+
+  background: linear-gradient(
+    160deg,
+    rgba(18, 48, 90, 0.97),
+    rgba(11, 31, 58, 0.98)
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--nb-border);
+  border-radius: var(--nb-radius);
+  box-shadow: 0 18px 40px rgba(2, 8, 20, 0.45);
+
   visibility: hidden;
   opacity: 0;
-  padding: 0;
-  transition: all 0.2s ease;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.3s var(--nb-ease),
+    visibility 0.25s;
+}
+
+/* invisible bridge so the menu doesn't close while the mouse travels down */
+.submenu::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+/* little notch pointing at the toggle */
+.submenu::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 22px;
+  width: 12px;
+  height: 12px;
+  background: rgba(18, 48, 90, 0.97);
+  border-left: 1px solid var(--nb-border);
+  border-top: 1px solid var(--nb-border);
+  transform: rotate(45deg);
 }
 
 .submenuOpen {
   visibility: visible;
   opacity: 1;
-  padding: 10px;
-  padding-top: 20px;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .submenu li {
-
   list-style: none;
   text-align: left;
 }
 
 .submenu li a {
   display: block;
-  color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  color: var(--nb-muted);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    padding-left 0.25s var(--nb-ease);
 }
 
-.submenu li a:hover {
-  background-color: var(--background);
-  color: var(--accent);
-  font-weight: bold;
+.submenu li a:hover,
+.submenu li a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--nb-accent);
+  padding-left: 20px;
+  outline: none;
 }
 
-/* Mobile Navigation */
+/* ------------------------------------------------------------------
+   Mobile toggle button (hidden on desktop)
+------------------------------------------------------------------- */
 .menu {
   display: none;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
-  background: none;
-  border: none;
-  position: fixed;
-  right: 30px;
-  top: 15px;
-  z-index: 11000000;
-}
-
-.menu span {
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--nb-border);
+  border-radius: 10px;
   color: #ffffff;
-  height: 3px;
-  width: 28px;
-  margin: 5px 0;
-  border-radius: 3px;
+  position: fixed;
+  right: 16px;
+  top: 8px;
+  z-index: 11000000;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-/* Desktop Dropdown Behavior */
-@media screen and (min-width: 769px) {
-  .submenu {
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-  }
+.menu:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
 
-  .submenuContainer:hover .submenu {
-    display: block;
+.menu:active {
+  transform: scale(0.94);
+}
+
+.menuOpen {
+  background: var(--nb-accent);
+  color: #0b1f3a;
+}
+
+/* ------------------------------------------------------------------
+   Desktop tweaks
+------------------------------------------------------------------- */
+@media screen and (min-width: 769px) {
+  .submenuContainer:hover .submenu,
+  .submenuContainer:focus-within .submenu {
+    visibility: visible;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    }
+  }
 }
 
-/* Mobile View */
-@media screen and (max-width: 768px) {
-  .logo {
-    width: 120px;
-    height: auto;
-    margin-left: 15px;
-    padding-top: 10px;
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  .navContainer {
+    font-size: 12px;
   }
 
+  .navLinks > li > a,
+  .submenuToggle {
+    padding: 10px 8px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Mobile
+------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
   .navContainer {
     height: 60px;
-    background-color: var(--nav-bg);
-    border-radius: 0;
   }
 
-  .submenu {
-    position: relative;
-    justify-content: left;
+  .logo {
+    width: 105px;
+    margin-left: 10px;
+  }
+
+  .menu {
+    display: flex;
+    top: 8px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: min(320px, 88vw);
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 12px;
+    z-index: 999;
+
+    background: linear-gradient(170deg, var(--nb-bg-2), var(--nb-bg));
+    border-left: 1px solid var(--nb-border);
+    border-bottom: 1px solid var(--nb-border);
+    border-bottom-left-radius: 16px;
+    box-shadow: -10px 16px 40px rgba(2, 8, 20, 0.5);
+
+    opacity: 0;
+    transform: translateX(24px);
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.35s var(--nb-ease),
+      visibility 0.3s;
+  }
+
+  .showMenu {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  .navLinks > li > a,
+  .submenuToggle {
     width: 100%;
-    background: var(--submenu-bg);
+    justify-content: space-between;
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+
+  .navLinks > li > a::after,
+  .submenuToggle::after {
+    display: none;
+  }
+
+  .navLinks > li > a:hover,
+  .submenuToggle:hover,
+  .submenuToggle[aria-expanded="true"] {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  /* accordion-style submenu */
+  .submenu {
+    position: static;
+    width: 100%;
+    min-width: 0;
     max-height: 0;
     overflow: hidden;
+    padding: 0 0 0 10px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-left: 2px solid rgba(255, 183, 3, 0.35);
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transform: none;
     visibility: hidden;
     opacity: 0;
+    transition: max-height 0.35s var(--nb-ease), opacity 0.25s ease,
+      padding 0.25s ease, visibility 0.25s;
+  }
+
+  .submenu::before,
+  .submenu::after {
+    display: none;
   }
 
   .submenuOpen {
     visibility: visible;
     opacity: 1;
-    max-height: fit-content;
-    overflow-y: auto;
+    max-height: 600px;
+    padding: 6px 0 6px 10px;
+    margin: 2px 0 6px 14px;
   }
 
-  .menu {
-    display: flex;
-    color: #ffffff;
+  .submenu li a {
+    padding: 10px 12px;
   }
+}
 
-  .navLinks {
-    position: fixed;
-    top: 45px;
-    right: 0;
-    width: 200px;
-    background: var(--nav-bg);
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none;
-    padding: 10px;
-    z-index: 999;
-    border-bottom-left-radius: 8px;
-  }
-
-  .showMenu {
-    opacity: 1;
-    pointer-events: all;
+/* respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .navContainer *,
+  .navContainer *::before,
+  .navContainer *::after {
+    transition: none !important;
   }
 }
