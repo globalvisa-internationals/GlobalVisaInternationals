@@ -1,635 +1,779 @@
-import styles from '@/Components/Visa.module.css';
-import { ReviewSchema } from "@/Components/ReviewSchema";
+// app/Visa/business-visa/canada/page.js  (SERVER component)
+// Save the CSS file next to this one as visaPage.module.css.
+// This uses its own stylesheet, so the shared Visa.module.css (used by your other visa pages) is untouched.
+
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Rocket, Briefcase, Landmark, Building2, TrendingUp, Globe, Lightbulb, Shield, Users,
+  Award, Clock, FileText, Heart, MapPin, Info, Phone, MessageCircle, ChevronRight,
+  ArrowRight, CheckCircle, Coins, Languages,
+} from "lucide-react";
+import styles from "./visaPage.module.css";
+import VisaForm from "@/Components/VisaForm";
 import ReviewCarousel from "@/Components/ReviewCarousel";
-import React from 'react';
-import Script from 'next/script';
-import VisaForm from '@/Components/VisaForm';
+import { ReviewSchema } from "@/Components/ReviewSchema";
 
+// ───────────────────────────────────────────────────────────────────────────
+// FACTS TO KEEP CURRENT: update these when you refresh the page content
+// ───────────────────────────────────────────────────────────────────────────
+const SITE_URL = "https://www.globalvisainternationals.com";
+const PAGE_PATH = "/Visa/business-visa/canada";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const HERO_IMG_PATH = "/business-visa/Canada_Business_Visa_ASSISTANCE.webp";
+const HERO_IMG_URL = `${SITE_URL}${HERO_IMG_PATH}`;
+const PHONE = "+917022213466";
+const WHATSAPP = "917022213466";
+const FOUNDING_YEAR = 2016;
+const YEARS = new Date().getFullYear() - FOUNDING_YEAR;
 
+const FEES_AS_OF = "June 2025"; // ⚠ fees below date from then. Re-check on Canada.ca and update.
+const DATE_PUBLISHED = "2025-01-10";
+const DATE_MODIFIED = "2025-11-04"; // update ONLY when you genuinely revise the content
+
+// ───────────────────────────────────────────────────────────────────────────
+// METADATA
+// ───────────────────────────────────────────────────────────────────────────
 export const metadata = {
-  metadataBase: new URL('https://www.globalvisainternationals.com'),
-  title:
-    'Canada Business Visa Assistance from India | Requirements, Process & Cost',
+  metadataBase: new URL(SITE_URL),
+  title: "Canada Business Visa from India: Requirements, Cost & Process",
   description:
-    'Apply for a Canada Business Visa with expert help from Global Visa Internationals. Learn about business visa requirements, eligibility, fees, and the application process.',
-  keywords: [
-    'Canada business visa',
-    'apply business visa Canada',
-    'Canada business visa from India',
-    'Canada investor visa',
-    'Canada startup visa',
-    'business migration to Canada',
-  ],
-  authors: [{ name: 'Global Visa Internationals' }],
-  robots: 'index, follow',
-  viewport: 'width=device-width, initial-scale=1',
-
-  alternates: {
-    canonical: 'https://www.globalvisainternationals.com/Visa/business-visa/canada',
-  },
+    "Apply for a Canada Business Visa from India with expert help. Compare the Start-up Visa, Self-Employed and PNP routes, fees, requirements and the application process.",
+  alternates: { canonical: PAGE_URL },
+  authors: [{ name: "Global Visa Internationals" }],
+  robots: { index: true, follow: true, googleBot: { "max-image-preview": "large", "max-snippet": -1 } },
   openGraph: {
-    title: 'Apply for Canada Business Visa | Global Visa Internationals',
+    title: "Canada Business Visa Assistance from India | Global Visa Internationals",
     description:
-      'Get expert guidance to apply for a Canada Business Visa from India. Explore requirements, visa types like Start-Up and Investor visas, and application costs.',
-    url: 'https://www.globalvisainternationals.com/Visa/business-visa/canada',
-    type: 'website',
-    siteName: 'Global Visa Internationals',
-    locale: 'en_IN',
-    alternateLocale: 'en_CA',
-    images: [
-      {
-        url: 'https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Canada Business Visa Banner',
-      },
-    ],
+      "Expert guidance on the Start-up Visa, Self-Employed and Provincial Nominee routes: requirements, costs and the full application process.",
+    url: PAGE_URL,
+    type: "website",
+    siteName: "Global Visa Internationals",
+    locale: "en_IN",
+    images: [{ url: HERO_IMG_URL, width: 1200, height: 630, alt: "Canada Business Visa assistance from Global Visa Internationals" }],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Canada Business Visa | Application, Cost & Requirements',
-    description:
-      'Apply for a Canada Business Visa with Global Visa Internationals. We help Indian entrepreneurs and investors with the entire visa process.',
-    images: [
-      'https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp',
-    ],
-    site: 'https://www.globalvisainternationals.com/Visa/business-visa/canada',
-  },
-  icons: {
-    icon: '/favicon.ico',
-  },
-  other: {
-    'geo.region': 'CA',
-    'geo.placename': 'Toronto',
-    'geo.region:2': 'IN-KA', // unique key for duplicate field
-    'geo.placename:2': 'Bengaluru',
-    ICBM: '12.9716,77.5946',
+    card: "summary_large_image",
+    title: "Canada Business Visa from India | Cost, Requirements & Process",
+    description: "Start-up Visa, Self-Employed and PNP routes explained, with expert help for Indian entrepreneurs and investors.",
+    site: "@GLOBALVISA1505",
+    creator: "@GLOBALVISA1505",
+    images: [HERO_IMG_URL],
   },
 };
 
-export default function Canada_Business_Visa_Assistance() {
+// ───────────────────────────────────────────────────────────────────────────
+// CONTENT (your original text, organised into sections)
+// ───────────────────────────────────────────────────────────────────────────
+const TOC = [
+  ["pathways", "Visa pathways"],
+  ["requirements", "Requirements"],
+  ["cost", "Cost & fees"],
+  ["why-canada", "Why Canada"],
+  ["cities", "Top cities"],
+  ["tips", "Application tips"],
+  ["beyond", "Business planning"],
+  ["why-gvi", "Why GVI"],
+  ["faq", "FAQ"],
+];
+
+const FACTS = [
+  { Icon: Briefcase, value: "4", label: "Main pathways", sub: "Start-up, Self-Employed, PNP, ICT" },
+  { Icon: Award, value: "PR", label: "Route to residency", sub: "Most programs lead to permanent residence" },
+  { Icon: Languages, value: "CLB 4–5", label: "Typical language level", sub: "IELTS, CELPIP, TEF or TCF" },
+  { Icon: Coins, value: "CAD 150K+", label: "Typical PNP investment", sub: "Varies by province and stream" },
+];
+
+const PATHWAYS = [
+  {
+    Icon: Rocket,
+    name: "Start-up Visa Program",
+    tag: "Permanent residence",
+    desc: "For entrepreneurs with innovative business ideas that can create jobs for Canadians and compete globally. You need a Letter of Support from a designated organization (venture capital fund, angel investor group or business incubator).",
+    req: "A qualifying business and a Letter of Support, sufficient settlement funds (based on LICO), English or French at CLB 5, and meeting health and character requirements.",
+  },
+  {
+    Icon: Briefcase,
+    name: "Self-Employed Persons Program",
+    tag: "Permanent residence",
+    desc: "For people with relevant experience in cultural activities or athletics who intend and are able to make a significant contribution to the cultural or athletic life of Canada as self-employed persons.",
+    req: "Relevant experience, the intention and ability to be self-employed in Canada, enough points on the selection grid, language ability (not pass/fail), settlement funds, and meeting health and character requirements.",
+  },
+  {
+    Icon: Landmark,
+    name: "Provincial Nominee Programs (Business streams)",
+    tag: "Provincial nomination",
+    desc: "Many provinces and territories run their own entrepreneur and investor streams. These often involve an Expression of Interest (EOI), a business plan, a minimum investment, and sometimes a temporary work permit stage before permanent residency.",
+    req: "Varies by province: typically a minimum net worth, an investment of CAD 150,000 to CAD 1 million+, a detailed business plan, active management, job creation, and language (CLB 4 or 5) and education requirements. Examples: OINP Entrepreneur Stream and BC PNP Entrepreneur Immigration.",
+  },
+  {
+    Icon: Building2,
+    name: "Intra-Company Transfer (ICT) Work Permit",
+    tag: "Temporary work permit",
+    desc: "Lets multinational companies transfer executives, senior managers or specialized-knowledge workers from a foreign branch to a Canadian branch or affiliate. Not a direct path to PR, but the Canadian work experience can later support programs like Express Entry.",
+    req: "Senior executive, senior manager or specialized-knowledge worker; at least one year of continuous employment with the company; a qualifying relationship between the Canadian and foreign companies. No LMIA required.",
+  },
+];
+
+const REQUIREMENTS = [
+  ["Age", "At least 18 years old. No specific upper age limit for most programs, though younger applicants may score more points in some programs.", "Age is a factor in selection criteria for some programs (e.g., Self-Employed Persons, some PNPs)."],
+  ["Business Plan/Concept", "Comprehensive, viable, and often innovative business plan (for Start-up and PNP Entrepreneur streams).", "Must demonstrate potential for economic benefit to Canada (e.g., job creation, innovation)."],
+  ["Investment Funds / Net Worth", "Specific thresholds vary by visa stream.", "From a secured commitment for the Start-up Visa to significant net worth and investment for some PNP Entrepreneur streams (e.g., CAD 150,000 to CAD 1,000,000+). Must be legally acquired."],
+  ["Business/Management Experience", "Demonstrable successful business ownership, senior management, or relevant self-employment experience.", "Crucial for showing you can execute your business plan or manage operations."],
+  ["English/French Language", "Minimum CLB 5 for the Start-up Visa; CLB 4/5 common for PNP Entrepreneur streams.", "Required for most permanent residence pathways, with points for higher proficiency. Must be from an IRCC-approved test."],
+  ["Health & Character", "Must meet Canada's health and character requirements.", "Medical exams and police certificates are mandatory for all applicants and dependents."],
+  ["Genuine Intent", "Clear intention to establish or participate in a qualifying business or investment in Canada.", "Shown through detailed plans, market research and demonstrable commitment. Interviews may be conducted."],
+];
+
+const FEES = [
+  ["Start-up Visa (Principal Applicant)", "CAD 2,075", "₹1,24,500"],
+  ["Start-up Visa (Spouse/Partner)", "CAD 1,325", "₹79,500"],
+  ["Start-up Visa (Dependent Child)", "CAD 225", "₹13,500"],
+  ["Self-Employed Persons Program", "CAD 1,650", "₹99,000"],
+  ["Provincial Nominee Program (Business Streams)", "CAD 1,215 – 3,500+ (approx.)", "₹72,900 – ₹2,10,000+"],
+  ["Intra-Company Transfer (ICT) Work Permit (Employer Compliance Fee)", "CAD 230", "₹13,800"],
+  ["Open Work Permit Holder Fee (if applicable)", "CAD 100", "₹6,000"],
+  ["Right of Permanent Residence Fee (RPRF, for PR applications)", "CAD 575 (per adult)", "₹34,500"],
+];
+
+const OTHER_COSTS = [
+  ["Right of Permanent Residence Fee (RPRF)", "An additional fee for successful permanent residence applicants (CAD 575 per adult)."],
+  ["Biometrics Fee", "Required for most applicants, typically CAD 85 for one person or CAD 170 for a family."],
+  ["Language Tests (IELTS/CELPIP/TEF/TCF)", "Required for most principal applicants and often adult dependents. Typically INR 17,000 to 20,000 per test (about CAD 280 to 330)."],
+  ["Educational Credential Assessment (ECA)", "Required for most PR applications if your education was obtained outside Canada. Typically CAD 200 to 300."],
+  ["Medical Examination", "Required for all applicants and dependents. Generally INR 5,000 to 8,000 per person in India (about CAD 80 to 130)."],
+  ["Police Certificates", "Needed from every country you have lived in for 6 months or more over the last 10 years since turning 18. Costs vary by issuing authority."],
+  ["Translation Fees", "Certified translations are needed for any supporting documents not in English or French."],
+  ["Settlement Funds / Business Investment", "A crucial requirement for most economic programs. For the Start-up Visa you need a commitment from a designated organization. Many PNP business streams require a minimum investment (e.g., CAD 150,000 to 500,000+)."],
+  ["Consultancy Fees (if applicable)", "Professional fees vary with the services provided, including business plan assistance, provincial nomination guidance and application management. Contact us for a transparent breakdown."],
+];
+
+const EXAMPLE_COSTS = [
+  ["Visa Application Charge (Start-up Visa)", "CAD 2,075"],
+  ["Right of Permanent Residence Fee (RPRF)", "CAD 575"],
+  ["Biometrics Fee", "CAD 85"],
+  ["English Language Test", "~CAD 300"],
+  ["Educational Credential Assessment (ECA)", "~CAD 250"],
+  ["Medical Exam", "~CAD 100"],
+  ["Police Certificates", "Variable"],
+];
+
+const BENEFITS = [
+  { Icon: TrendingUp, title: "Strong & Stable Economy", text: "A resilient, diverse economy that performs well globally, giving business operations and investments a secure base." },
+  { Icon: Globe, title: "Strategic Location & Global Access", text: "Bordering the United States, with access to major international trade routes and a thriving global economic zone." },
+  { Icon: Landmark, title: "Pro-Business Environment", text: "Government support for business and innovation, with incentives, a streamlined regulatory framework and funding programs." },
+  { Icon: Lightbulb, title: "Skilled Workforce & Innovation", text: "A highly educated, skilled workforce and a strong culture of research, development and innovation." },
+  { Icon: Heart, title: "High Quality of Life", text: "Among the top countries for quality of life: safe, welcoming multicultural cities, natural beauty and excellent social infrastructure." },
+  { Icon: Building2, title: "World-Class Infrastructure", text: "Advanced telecommunications, efficient transport networks and modern commercial facilities." },
+  { Icon: Award, title: "Clear Path to Permanent Residency", text: "Many business immigration programs offer a pathway to permanent residency and full rights in your new home." },
+];
+
+const CITIES = [
+  ["Toronto, Ontario", "Canada's largest city and financial capital. A major hub for finance, technology, international trade and creative industries, with a large talent pool."],
+  ["Vancouver, British Columbia", "A gateway to the Asia-Pacific, known for its tech sector, film industry and natural resources, with a growing innovation ecosystem."],
+  ["Montreal, Quebec", "A unique North American hub with strong aerospace, IT and pharmaceutical sectors. Its bilingual (English and French) environment offers distinct advantages."],
+  ["Calgary, Alberta", "The heart of Canada's energy sector, diversifying rapidly into technology, finance and logistics, with a lower cost of living than the coastal cities."],
+  ["Ottawa, Ontario", "The capital, known for its government sector, technology industry (especially cybersecurity and telecommunications) and research institutions."],
+  ["Edmonton, Alberta", "A growing economic centre with strengths in energy, manufacturing and health sciences, and a good quality of life."],
+  ["Halifax, Nova Scotia", "A growing Atlantic hub in ocean technology, clean energy and an emerging tech sector, with potential for region-specific immigration programs."],
+];
+
+const TIPS = [
+  ["Develop a Robust Business Plan", "For entrepreneur and start-up visas, a comprehensive, well-researched and realistic plan showing innovation, viability, scalability and benefit to the Canadian economy is critical."],
+  ["Secure Required Support or Nomination", "The Start-up Visa needs a Letter of Support from a designated angel investor group, venture capital fund or business incubator. PNP business streams need a provincial nomination."],
+  ["Demonstrate Genuine Intent", "Clearly show your commitment to establishing or investing in a business in Canada and your active role in managing it."],
+  ["Meet Financial Requirements Strictly", "Be able to show the required settlement funds, business capital and/or investment funds for your chosen stream."],
+  ["Gather Documents Early & Accurately", "Applications need extensive financial, business and personal documents. Start well in advance and make sure everything is accurate and complete."],
+  ["Meet Language Requirements", "Most streams need a minimum level of English or French. Plan to take an approved test (IELTS, CELPIP, TEF or TCF) if you haven't already."],
+  ["Maintain a Clean Record", "A clean financial and criminal record is essential for Canadian immigration."],
+  ["Seek Professional Guidance", "The process is complex and needs meticulous preparation. Experienced professionals can help optimise your application and improve your chances."],
+];
+
+const BEYOND = [
+  { Icon: TrendingUp, title: "Market Research & Local Regulations", points: ["Research the Canadian market for your business or investment: regulations, competition, industry trends and opportunities.", "Make sure your proposal is commercially viable and aligns with Canada's economic needs and, for a PNP, regional demands."] },
+  { Icon: Users, title: "Networking & Local Connections", points: ["Build a network through local business associations, chambers of commerce and industry groups.", "Local connections provide insights, partnerships and support for your venture."] },
+  { Icon: FileText, title: "Legal & Financial Advice", points: ["Work with Canadian legal and financial professionals on tax, business registration, employment law and compliance.", "We can connect you with trusted partners for these specialised services."] },
+  { Icon: Heart, title: "Cultural Integration", points: ["Learn Canadian business culture, which values collaboration, diversity and work-life balance.", "Embrace the multicultural lifestyle, natural landscapes and strong community spirit."] },
+];
+
+const STAY_TIPS = [
+  ["Stay Updated", "Immigration policies and business regulations change. Regularly check Canada.ca and the relevant provincial government sites."],
+  ["Be Patient & Persistent", "The process can be lengthy because of the thorough assessment. Patience and a positive outlook are key."],
+  ["Prepare for an Interview", "Some streams, especially PNPs, may require an interview. Be ready to discuss your business plan, experience and intentions in detail."],
+  ["Maintain Valid Documents", "Keep your passport and all required documents valid throughout the application and beyond."],
+  ["Embrace the Adventure", "Starting a business in a new country is full of challenges and opportunities. Learn from the experience and enjoy building your new life in Canada."],
+];
+
+const WHY_GVI = [
+  { Icon: Shield, title: "Specialised Canada Business Visa Expertise", text: "Deep knowledge of the Start-up Visa, Self-Employed Program and PNP business streams, so you get the pathway that fits your profile and goals." },
+  { Icon: FileText, title: "Business Plan & Funding Guidance", text: "Help developing compliant business plans, and guidance on securing support from designated organizations or meeting investment criteria." },
+  { Icon: CheckCircle, title: "Meticulous Document Preparation", text: "We guide you through financial records, business proofs and language-test requirements, saving you time and stress." },
+  { Icon: Clock, title: "Up-to-Date Knowledge", text: "We track visa regulation and program changes so your application stays accurate, compliant and complete." },
+  { Icon: Award, title: "Focused on Your Outcome", text: "A careful approach and a deep understanding of the immigration landscape, aimed at the best chance of success." },
+  { Icon: Globe, title: "Support Beyond the Application", text: "Guidance on language proficiency, the Canadian business environment and settlement advice." },
+];
+
+// Shown on the page AND used for FAQ schema, so they always match
+const FAQS = [
+  { q: "What types of Canada Business Visas are available?", a: "Canada offers the Start-up Visa Program, the Self-Employed Persons Program and Provincial Nominee Program (PNP) entrepreneur streams. Companies can also transfer senior staff to Canada on an Intra-Company Transfer (ICT) work permit." },
+  { q: "How much does a Canada Business Visa cost from India?", a: `Government fees depend on the program: about CAD 1,215 to 3,500+ for PNP business streams, CAD 1,650 for the Self-Employed Persons Program and CAD 2,075 for a Start-up Visa principal applicant (figures as of ${FEES_AS_OF}). Budget separately for biometrics, language tests, medicals, credential assessment and consultancy fees.` },
+  { q: "Who is eligible for a Canada Business Visa?", a: "Eligible candidates include entrepreneurs, self-employed individuals and investors with a solid business plan, proof of funds and relevant experience, who also meet Canada's health and character requirements." },
+  { q: "What language level do I need?", a: "The Start-up Visa needs a minimum of CLB 5. PNP entrepreneur streams commonly ask for CLB 4 or 5. Results must come from an IRCC-approved test (IELTS, CELPIP, TEF or TCF)." },
+  { q: "Does a Canada Business Visa lead to permanent residence?", a: "The Start-up Visa, Self-Employed Persons Program and PNP business streams are permanent-residence pathways. The ICT work permit is temporary, but the Canadian experience can support a later PR application, for example through Express Entry." },
+  { q: "How much do I need to invest?", a: "It depends on the program. The Start-up Visa requires a commitment from a designated organization plus settlement funds. Many PNP business streams require a minimum investment, typically from CAD 150,000 to CAD 1 million or more." },
+];
+
+const SERVICE_OFFERS = [
+  "Start-Up Visa Application Guidance",
+  "Self-Employed Visa Support",
+  "PNP Entrepreneur Stream Application",
+  "Intra-Company Transfer Work Permit Support",
+];
+
+// ───────────────────────────────────────────────────────────────────────────
+// STRUCTURED DATA: one connected graph
+// ───────────────────────────────────────────────────────────────────────────
+function StructuredData() {
+  const org = `${SITE_URL}/#organization`;
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": org,
+        name: "Global Visa Internationals",
+        url: SITE_URL,
+        logo: `${SITE_URL}/gvilogo.png`,
+        image: HERO_IMG_URL,
+        telephone: "+91-7022213466",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "GF-9, Business Point, MG Road",
+          addressLocality: "Bengaluru",
+          addressRegion: "Karnataka",
+          postalCode: "560025",
+          addressCountry: "IN",
+        },
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "10:00",
+          closes: "18:00",
+        },
+        areaServed: { "@type": "Country", name: "India" },
+        sameAs: [
+          "https://www.facebook.com/globalvisainternationals/",
+          "https://www.instagram.com/globalvisa_internationals/",
+          "https://www.linkedin.com/company/global-visa-internationals/",
+          "https://x.com/GLOBALVISA1505",
+          "https://www.youtube.com/@globalVisaInternationals",
+        ],
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${PAGE_URL}#webpage`,
+        url: PAGE_URL,
+        name: metadata.title,
+        description: metadata.description,
+        inLanguage: "en-IN",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        primaryImageOfPage: { "@type": "ImageObject", url: HERO_IMG_URL },
+        breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+        mainEntity: { "@id": `${PAGE_URL}#service` },
+        datePublished: DATE_PUBLISHED,
+        dateModified: DATE_MODIFIED,
+      },
+      {
+        "@type": "Service",
+        "@id": `${PAGE_URL}#service`,
+        name: "Canada Business Visa Application Assistance",
+        serviceType: "Canada Business Visa Application Assistance",
+        provider: { "@id": org },
+        areaServed: { "@type": "Country", name: "India" },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Canada Business Visa Services",
+          itemListElement: SERVICE_OFFERS.map((name) => ({
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name },
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Canada Business Visa", item: PAGE_URL },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${PAGE_URL}#faq`,
+        mainEntity: FAQS.map(({ q, a }) => ({
+          "@type": "Question",
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
+        })),
+      },
+    ],
+  };
+
   return (
-    <>
-      {/* ✅ Structured Data (JSON-LD) - Complete SEO Setup */}
-      <Script
-        id="all-schema-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            [
-              // 🔹 1. Organization Schema
-              // 🔹 1. Organization Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Global Visa Internationals",
-                "url": "https://www.globalvisainternationals.com",
-                "logo": "https://www.globalvisainternationals.com/logo.png",
-                "image": "https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp",
-                "hasMap": "https://www.mappls.com/digipin/4P3-J4J-8849",
-                "sameAs": [
-                  "https://www.facebook.com/globalvisainternationals/",
-                  "https://www.instagram.com/globalvisa_internationals/",
-                  "https://www.linkedin.com/company/global-visa-internationals/",
-                  "https://x.com/GLOBALVISA1505",
-                  "https://www.youtube.com/@globalVisaInternationals",
-                  "https://www.google.com/maps/place/Global+Visa+Internationals"
-                ],
-                "contactPoint": [
-                  {
-                    "@type": "ContactPoint",
-                    "telephone": "+91-7022213466",
-                    "contactType": "Customer Service",
-                    "areaServed": "IN",
-                    "availableLanguage": ["English", "Hindi"]
-                  }
-                ],
-                "department": {
-                  "@type": "Organization",
-                  "name": "Canada Business Visa Assistance Department",
-                  "url": "https://www.globalvisainternationals.com/Visa/business-visa/canada",
-                  "description": "Dedicated support team for Canada Business Visa applications, providing document verification, application filing, and personalized consultation."
-                }
-              },
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, "\\u003c") }}
+    />
+  );
+}
 
-              // 🔹 2. LocalBusiness Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "LocalBusiness",
-                "name": "Global Visa Internationals",
-                "image": "https://www.globalvisainternationals.com/business-visa/Canada_Business_Visa_ASSISTANCE.webp",
-                "url": "https://www.globalvisainternationals.com/Visa/business-visa/canada",
-                "telephone": "+91-7022213466",
-                "priceRange": "₹₹₹",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "MG Road",
-                  "addressLocality": "Bengaluru",
-                  "addressRegion": "KA",
-                  "postalCode": "560025",
-                  "addressCountry": "IN"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 12.9716,
-                  "longitude": 77.5946
-                },
-                "hasMap": "https://www.google.com/maps/place/Global+Visa+Internationals",
-                "openingHours": "Mo-Sa 10:00-18:00",
-                "areaServed": {
-                  "@type": "Country",
-                  "name": "India"
-                },
-                "hasMap": "https://www.mappls.com/digipin/4P3-J4J-8849",
-                "sameAs": [
-                  "https://www.facebook.com/globalvisainternationals/",
-                  "https://www.instagram.com/globalvisa_internationals/",
-                  "https://www.linkedin.com/company/global-visa-internationals/",
-                  "https://x.com/GLOBALVISA1505",
-                  "https://www.youtube.com/@globalVisaInternationals",
-                  "https://www.google.com/maps/place/Global+Visa+Internationals"
-                ],
-                "description": "Get expert assistance for Canada Business Visa applications from India. Global Visa Internationals helps investors, entrepreneurs, and business owners with documentation, appointments, and smooth visa approval."
-              },
+const SectionHead = ({ hid, kicker, title, sub }) => (
+  <div className={styles.sectionHead}>
+    <p className={styles.kicker}>{kicker}</p>
+    <h2 id={hid} className={styles.h2}>{title}</h2>
+    {sub && <p className={styles.sub}>{sub}</p>}
+  </div>
+);
 
-              // 🔹 3. WebSite + SearchAction Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                "url": "https://www.globalvisainternationals.com",
-                "name": "Global Visa Internationals",
-                "potentialAction": {
-                  "@type": "SearchAction",
-                  "target": "https://www.globalvisainternationals.com/search?q={search_term_string}",
-                  "query-input": "required name=search_term_string"
-                }
-              },
+// ───────────────────────────────────────────────────────────────────────────
+// PAGE
+// ───────────────────────────────────────────────────────────────────────────
+export default function CanadaBusinessVisa() {
+  return (
+    <div className={styles.page}>
+      <StructuredData />
 
-              // 🔹 4. WebPage / Article Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "name": "Canada Business Visa Assistance from India",
-                "url": "https://www.globalvisainternationals.com/Visa/business-visa/canada",
-                "description":
-                  "Apply for a Canada Business Visa with expert help from Global Visa Internationals. Learn about visa requirements, eligibility, documentation, and the application process.",
-                "inLanguage": "en-IN",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Global Visa Internationals",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.globalvisainternationals.com/logo.png"
-                  }
-                },
-                "datePublished": "2025-01-10",
-                "dateModified": "2025-11-04"
-              },
+      {/* ══ HERO ═══════════════════════════════════════════════════════════ */}
+      <header className={styles.hero}>
+        <div className={`${styles.orb} ${styles.orb1}`} aria-hidden="true" />
+        <div className={`${styles.orb} ${styles.orb2}`} aria-hidden="true" />
+        <div className={`${styles.container} ${styles.heroGrid}`}>
+          <div className={styles.heroText}>
+            <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
+              <Link href="/">Home</Link>
+              <ChevronRight size={14} aria-hidden="true" />
+              <span aria-current="page">Canada Business Visa</span>
+            </nav>
 
-              // 🔹 5. BreadcrumbList Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://www.globalvisainternationals.com"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Business Visa",
-                    "item": "https://www.globalvisainternationals.com/Visa/business-visa/canada"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Canada Business Visa"
-                  }
-                ]
-              },
+            <p className={styles.eyebrow}>Canada Business Visa Assistance</p>
+            <h1 className={styles.h1}>
+              Canada Business Visa Assistance <span>from India</span>
+            </h1>
+            <p className={styles.heroLead}>
+              Expand your business or invest in Canada&apos;s thriving economy. We guide Indian
+              entrepreneurs, investors and business owners through the Start-up Visa,
+              Self-Employed, Provincial Nominee and ICT routes.
+            </p>
 
-              // 🔹 6. Service Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "Service",
-                "serviceType": "Canada Business Visa Application Assistance",
-                "provider": {
-                  "@type": "Organization",
-                  "name": "Global Visa Internationals",
-                  "url": "https://www.globalvisainternationals.com"
-                },
-                "areaServed": {
-                  "@type": "Country",
-                  "name": "India"
-                },
-                "hasOfferCatalog": {
-                  "@type": "OfferCatalog",
-                  "name": "Business Visa Services",
-                  "itemListElement": [
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Start-Up Visa Application Guidance"
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Self-Employed Visa Support"
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "PNP Entrepreneur Stream Application"
-                      }
-                    }
-                  ]
-                }
-              },
+            <div className={styles.heroActions}>
+              <a href="#consultation" className={styles.btnPrimary}>
+                Free Assessment <ArrowRight size={16} aria-hidden="true" />
+              </a>
+              <a
+                href={`https://wa.me/${WHATSAPP}?text=Hi%2C%20I%20need%20help%20with%20a%20Canada%20Business%20Visa`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.btnGhost}
+              >
+                <MessageCircle size={16} aria-hidden="true" /> WhatsApp Us
+              </a>
+            </div>
 
-              // 🔹 7. FAQPage Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "What types of Canada Business Visas are available?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Canada offers the Start-Up Visa Program, Self-Employed Visa, and various Provincial Nominee Program (PNP) entrepreneur streams depending on the province."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How much does a Canada Business Visa cost from India?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Costs vary depending on visa type. Expect government processing fees starting from CAD 1,540, plus biometrics, documentation, and consulting charges."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Who is eligible for a Canada Business Visa?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Eligible candidates include entrepreneurs, self-employed individuals, or investors with a solid business plan, proof of funds, and relevant experience."
-                    }
-                  }
-                ]
-              },
+            <ul className={styles.chips}>
+              {["Start-up Visa", "Self-Employed", "PNP Entrepreneur", "ICT Work Permit"].map((t) => (
+                <li key={t}>
+                  <CheckCircle size={14} aria-hidden="true" /> {t}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              // 🔹 8. AggregateRating / Review Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Global Visa Internationals",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.9",
-                  "reviewCount": "185"
-                },
-                "review": [
-                  {
-                    "@type": "Review",
-                    "author": "Suman Sharma",
-                    "reviewBody":
-                      "Professional and smooth experience. Got my Canada Business Visa approved quickly with their help.",
-                    "reviewRating": {
-                      "@type": "Rating",
-                      "ratingValue": "5"
-                    }
-                  }
-                ]
-              },
-
-              // 🔹 9. ContactPoint / PotentialAction Schema
-              {
-                "@context": "https://schema.org",
-                "@type": "ContactPoint",
-                "telephone": "+91-7022213466",
-                "contactType": "Book Visa Consultation",
-                "url": "https://www.globalvisainternationals.com/contact",
-                "availableLanguage": ["English", "Hindi"]
-              }
-            ])
-        }}
-      />
-
-
-      {/* ✅ PAGE CONTENT */}
-      <div className={styles.imageContainer}>
-        <img src="/business-visa/Canada_Business_Visa_ASSISTANCE.webp" alt="Canada Business Visa Assistance Image" className={styles.VisaImage} />
-      </div>
-      <div class={styles.VisaSec}>
-        <div class={styles.VisaData}>
-          <h1 class={styles.VisaGuide}> Canada Business Visas Assistance | Global Visa Internationals</h1>
-          <p>Dreaming of expanding your business horizons or investing in a thriving, welcoming economy? Canada, a land of robust economic growth, strategic global connections, and abundant opportunities, is calling! Securing a Canada Business Visa opens doors to an exceptional environment for entrepreneurs, investors, and business professionals. It's more than just a visa; it's a chance to establish a brighter future for your enterprise and potentially your family in the Great White North.</p>
-
-          <h3 class={styles.subTitle}>Why Choose Canada for Business? What Makes It So Special?</h3>
-          <p>Canada isn't just another country; it's a promise of significant business potential. Here's what makes it a premier destination for business immigration:</p>
-
-
-
-          <ul>
-            <li><strong>Strong & Stable Economy:</strong> Canada boasts a resilient and diverse economy, consistently performing well on the global stage. This stability provides a secure environment for business operations and investments.</li>
-            <li><strong>Strategic Location & Global Access:</strong> Bordering the United States and with access to major international trade routes, Canada offers valuable trade links and opportunities within a thriving global economic zone.</li>
-            <li><strong>Pro-Business Environment:</strong> The Canadian government actively supports business and innovation, offering various incentives, a streamlined regulatory framework, and funding programs designed to foster growth and attract foreign investment.</li>
-            <li><strong>Skilled Workforce & Innovation:</strong> Access to a highly educated and skilled workforce, coupled with a strong focus on research and development and a culture of innovation, makes Canada an ideal place for forward-thinking businesses.</li>
-            <li><strong>High Quality of Life:</strong> Beyond business, Canada consistently ranks among the top countries globally for its high quality of life, offering pristine natural environments, safe and welcoming multicultural cities, and excellent social infrastructure, which is a significant draw for business owners and their families.</li>
-            <li><strong>Access to World-Class Infrastructure:</strong> Benefit from state-of-the-art infrastructure, including advanced telecommunications, efficient transport networks, and modern commercial facilities.</li>
-            <li><strong>Clear Path to Permanent Residency:</strong> Many Canadian business immigration programs offer a clear pathway to permanent residency, allowing successful business migrants to eventually gain full rights and privileges in their new home.</li>
-          </ul>
-
-
-
-          <h3 class={styles.subTitle}>Key Canadian Cities and Regions for Business Visa Seekers</h3>
-          <p>While business opportunities exist nationwide, some cities and regions are particularly attractive for foreign investors and entrepreneurs due to their economic vibrancy, innovation ecosystems, and support systems. Consider these top destinations for your Canada business journey:</p>
-          <ol>
-            <li><strong>Toronto, Ontario:</strong> Canada's largest city and financial capital. A major hub for finance, technology, international trade, and creative industries. Offers diverse opportunities and a large talent pool.</li>
-            <br />
-            <li><strong>Vancouver, British Columbia:</strong> A gateway to the Asia-Pacific, known for its strong tech sector, film industry, and natural resources. Offers a vibrant lifestyle and growing innovation ecosystem.</li>
-            <br />
-            <li><strong>Montreal, Quebec:</strong> A unique North American hub with a strong aerospace, IT, and pharmaceutical sector. Bilingual environment (English and French) offers distinct advantages.</li>
-            <br />
-            <li><strong>Calgary, Alberta:</strong> The heart of Canada's energy sector, also diversifying rapidly into technology, finance, and logistics. Offers a robust economy and lower cost of living than major coastal cities.</li>
-            <li><strong>Ottawa, Ontario:</strong> The capital city, known for its strong government sector, technology industry (especially cybersecurity and telecommunications), and research institutions.</li>
-            <li><strong>Edmonton, Alberta:</strong> A growing economic center with strengths in energy, manufacturing, and health sciences. Offers a dynamic business environment and good quality of life.</li>
-            <li><strong>Halifax, Nova Scotia:</strong> A growing Atlantic hub with strengths in ocean technology, clean energy, and an emerging tech sector. Offers a more relaxed pace of life and potential for regional specific immigration programs.</li>
-          </ol>
-
-
-
-
-          <h2 class={styles.subTitle}>Tailor Your Canada Business Visa Pathway: Find Your Best Fit!</h2>
-          <p>Feeling overwhelmed by the options for a Canada Business Visa? Don't worry! We can help you navigate the various Canadian immigration programs for entrepreneurs and investors. Take our quick assessment to discover your ideal Canada business visa route – it's designed to point you in the right direction! Contact Global Visa Internationals today for a personalized assessment.</p>
-
-
-
-
-
-          <h2 class={styles.subTitle}>Understanding the Cost of Canada Business Visas in 2025</h2>
-          <p>Investing in your future in Canada is a significant step, and understanding the financial aspects is crucial. The total cost of applying for a Canada Business Visa can vary based on the specific visa subclass, the number of applicants, and other associated expenses. Here's a general breakdown of potential costs for business immigration to Canada based on current figures (as of June 2025, subject to change by Immigration, Refugees and Citizenship Canada (IRCC)):</p>
-
-          <h3>Estimated Core Application Costs (Processing Fees)</h3>
-          <p>These are the official fees paid to IRCC for key business and investment migration visas.</p>
-          <table class={styles.table}>
-            <thead>
-              <tr>
-                <th>Visa Type</th>
-                <th>Estimated Cost (CAD)</th>
-                <th>Approx. Cost (INR, @ ₹60/CAD)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Start-up Visa (Principal Applicant)</td>
-                <td>CAD 2,075</td>
-                <td>₹1,24,500</td>
-              </tr>
-              <tr>
-                <td>Start-up Visa (Spouse/Partner)</td>
-                <td>CAD 1,325</td>
-                <td>₹79,500</td>
-              </tr>
-              <tr>
-                <td>Start-up Visa (Dependent Child)</td>
-                <td>CAD 225</td>
-                <td>₹13,500</td>
-              </tr>
-              <tr>
-                <td>Self-Employed Persons Program</td>
-                <td>CAD 1,650</td>
-                <td>₹99,000</td>
-              </tr>
-              <tr>
-                <td>Provincial Nominee Program (PNP - Business Streams)</td>
-                <td>CAD 1,215 - CAD 3,500+ (approx.)</td>
-                <td>₹72,900 - ₹2,10,000+</td>
-              </tr>
-              <tr>
-                <td>Intra-Company Transfer (ICT) Work Permit (Employer Compliance Fee)</td>
-                <td>CAD 230</td>
-                <td>₹13,800</td>
-              </tr>
-              <tr>
-                <td>Open Work Permit Holder Fee (if applicable)</td>
-                <td>CAD 100</td>
-                <td>₹6,000</td>
-              </tr>
-              <tr>
-                <td>Right of Permanent Residence Fee (RPRF - for PR applications)</td>
-                <td>CAD 575 (per adult)</td>
-                <td>₹34,500</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <p><em>*Note: These are application processing fees only and do not include other associated costs or the mandatory investment amounts/settlement funds. Fees are subject to change by IRCC and provincial governments. Provincial Nominee Program business streams often have their own specific application fees in addition to federal fees.</em></p>
-
-          <h3>Other Associated Costs for Canada Business Visas</h3>
-          <ul>
-            <li><strong>Right of Permanent Residence Fee (RPRF):</strong> This is an additional fee for successful permanent residence applicants (CAD 575 per adult).</li>
-            <br />
-            <li><strong>Biometrics Fee:</strong> Required for most applicants, typically CAD 85 for a single person or CAD 170 for a family.</li>
-            <br />
-            <li><strong>English/French Language Proficiency Tests (IELTS/CELPIP/TEF/TCF):</strong> Required for most principal applicants and often for adult dependents to meet language requirements. Cost is typically around INR 17,000-20,000 per test (approximately CAD 280-330).</li>
-            <br />
-            <li><strong>Educational Credential Assessment (ECA):</strong> Required for most permanent residence applications if your education was obtained outside Canada. Costs vary by organization, typically CAD 200-300.</li>
-            <br />
-            <li><strong>Medical Examination:</strong> A medical exam is required for all applicants and their dependents to ensure you meet health requirements for Canadian immigration. The cost varies by clinic and location in India, generally INR 5,000-8,000 per person (approximately CAD 80-130).</li>
-            <br />
-            <li><strong>Police Certificates:</strong> You'll need police certificates from every country you've lived in for 6 months or more over the last 10 years since turning 18. Costs vary depending on the issuing authority in each country.</li>
-            <br />
-            <li><strong>Translation Fees:</strong> If any of your supporting documents are not in English or French, you'll need certified translations. Costs for these services will vary.</li>
-            <br />
-            <li><strong>Settlement Funds / Business Investment:</strong> A crucial requirement for most economic immigration programs. You must demonstrate sufficient funds to support yourself and your family upon arrival in Canada, or funds required for your proposed business/investment. The amount varies significantly by program and family size. For the Start-up Visa, you need to secure a commitment from a designated organization. Many Provincial Nominee Program business streams require a minimum investment (e.g., CAD 150,000 - CAD 500,000+).</li>
-            <br />
-            <li><strong>Consultancy Fees (if applicable):</strong> If you choose to leverage the expertise of an immigration consultant like Global Visa Internationals, their professional fees will be an additional cost. These fees vary based on the comprehensive services provided to guide you through your Canada business visa journey, including business plan assistance, provincial nomination guidance, and application management. We encourage you to contact Global Visa Internationals for a transparent breakdown of all costs.</li>
-          </ul>
-
-
-
-          <h2 class={styles.subTitle}>Example Estimated Total Out-of-Pocket Costs (for a single applicant, excluding consultancy fees and required business/investment funds/settlement funds):</h2>
-          <ul>
-            <li>Visa Application Charge (VAC - Start-up Visa): CAD 2,075</li>
-            <li>Right of Permanent Residence Fee (RPRF): CAD 575</li>
-            <li>Biometrics Fee: CAD 85</li>
-            <li>English Language Test: ~CAD 300</li>
-            <li>Educational Credential Assessment (ECA): ~CAD 250</li>
-            <li>Medical Exam: ~CAD 100</li>
-            <li>Police Certificates: Variable</li>
-            <li>Total Estimated Out-of-Pocket Costs (excluding business/investment funds/settlement funds): Approximately CAD 3,385 - CAD 3,700 (approximately INR 2.03 Lakhs - ₹2.22 Lakhs) + Required Business/Investment Funds/Settlement Funds.</li>
-          </ul>
-          <p>Please remember, these are rough estimates, and actual costs can vary. It's always essential to check the official IRCC website (Canada.ca) and relevant provincial government websites for the most up-to-date fees and requirements. For a personalized cost breakdown and detailed guidance on financial requirements, reach out to Global Visa Internationals!</p>
-
-
-
-          <h2 class={styles.subTitle}>Tips for a Successful Canada Business Visa Application: Your Pathway to Success</h2>
-          <ol>
-            <li><strong>Develop a Robust Business Plan:</strong> For entrepreneur and start-up visas, a comprehensive, well-researched, and realistic business plan demonstrating innovation, viability, scalability, and benefit to the Canadian economy is critical.</li>
-            <li><strong>Secure Required Support/Nomination:</strong> For the Start-up Visa, you need a Letter of Support from a designated angel investor group, venture capital fund, or business incubator. For PNP business streams, you need a provincial nomination.</li>
-            <li><strong>Demonstrate Genuine Intent:</strong> Clearly articulate your commitment to establishing or investing in a business in Canada and your active participation in its management.</li>
-            <li><strong>Meet Financial Requirements Strictly:</strong> Ensure you can clearly demonstrate the required settlement funds (for permanent residence applications), business capital, and/or investment funds as stipulated by your chosen visa subclass.</li>
-            <li><strong>Gather Documents Early & Accurately:</strong> Canadian business visa applications require extensive detailed financial, business, and personal documentation. Start collecting all required documents well in advance and ensure they are accurate and complete.</li>
-            <li><strong>Meet English/French Language Requirements:</strong> Most Canadian business visa streams require a minimum level of English or French proficiency. Plan to take an approved language test (IELTS, CELPIP, TEF, or TCF) if you haven't already.</li>
-            <li><strong>Maintain a Clean Record:</strong> A clean financial and criminal record is essential for Canadian immigration.</li>
-            <li><strong>Seek Professional Guidance:</strong> The Canada Business Visa process is complex and requires meticulous preparation. Consulting with experienced immigration professionals like Global Visa Internationals is crucial to navigate the intricacies, optimize your application, and maximize your chances of success.</li>
-          </ol>
-
-
-          <h2 class={styles.subTitle}>Top Considerations for Your Canada Business Venture: Beyond the Visa Application</h2>
-          <ul>
-            <li><strong>Market Research & Local Regulations:</strong>
-              <ul>
-                <li>Thoroughly research the Canadian market for your intended business or investment. Understand local regulations, competition, industry trends, and opportunities.</li>
-                <li>Ensure your business proposal is commercially viable and aligns with Canada's economic needs and priorities, and regional specific demands if applying through a PNP.</li>
-              </ul>
-            </li>
-            <li><strong>Networking & Local Connections:</strong>
-              <ul>
-                <li>Building a network within your industry in Canada can be invaluable. Connect with local business associations, chambers of commerce, and industry-specific groups.</li>
-                <li>Local connections can provide crucial insights, facilitate partnerships, and offer support for your business venture.</li>
-              </ul>
-            </li>
-            <li><strong>Legal & Financial Advice:</strong>
-              <ul>
-                <li>Engage with Canadian legal and financial professionals to understand tax implications, business registration, employment law, and compliance requirements.</li>
-                <li>Global Visa Internationals can connect you with trusted partners for these specialized services.</li>
-              </ul>
-            </li>
-            <li><strong>Cultural Integration:</strong>
-              <ul>
-                <li>Familiarize yourself with Canadian business culture and practices. Understanding the local way of doing business, which values collaboration, diversity, and work-life balance, can significantly aid your success.</li>
-                <li>Embrace the diverse and welcoming Canadian lifestyle, known for its multiculturalism, stunning natural landscapes, and strong community spirit.</li>
-              </ul>
-            </li>
-          </ul>
-
-
-          <h2 class={styles.subTitle}>Additional Tips for Your Canada Business Journey: Making the Most of Your Visa</h2>
-          <ol>
-            <li><strong>Stay Updated:</strong> Canadian immigration policies and business regulations can change. Regularly check official government websites (Canada.ca) and relevant provincial government sites for the latest information.</li>
-            <li><strong>Be Patient & Persistent:</strong> The Canada Business Visa application process can be lengthy due to its thorough assessment. Patience, persistence, and a positive outlook are key.</li>
-            <li><strong>Prepare for Interview (if applicable):</strong> Some business visa streams, especially Provincial Nominee Programs, may require an interview. Be prepared to discuss your business plan, experience, and intentions in detail.</li>
-            <li><strong>Maintain Valid Documents:</strong> Ensure your passport and all other required documents remain valid throughout the entire application process and beyond.</li>
-            <li><strong>Embrace the Adventure:</strong> Starting a business or investing in a new country is a significant step, full of challenges and incredible opportunities. Embrace the journey, learn from new experiences, and enjoy building your new life and enterprise in Canada! Let Global Visa Internationals guide you every step of the way.</li>
-          </ol>
-
-
-
-          <h2 class={styles.subTitle}>Applying for Canada Business Visas: Your Pathways to Opportunity</h2>
-          <p>Navigating the various routes for Canada Business Visas can seem daunting, but we're here to simplify it. Immigration, Refugees and Citizenship Canada (IRCC) and various provincial governments offer several key pathways for entrepreneurs and investors seeking to establish a presence:</p>
-          <ul>
-            <li><strong>Start-up Visa Program:</strong>
-              <ul>
-                <li>This permanent residence program is for entrepreneurs with innovative business ideas that can create jobs for Canadians and compete globally. You must get a Letter of Support from a designated organization (venture capital fund, angel investor group, or business incubator).</li>
-                <li><strong>Key Requirements:</strong> A qualifying business and a Letter of Support from a designated organization, sufficient settlement funds (based on LICO), meeting English or French language requirements (CLB 5), and meeting health and character requirements.</li>
-              </ul>
-            </li>
-            <li><strong>Self-Employed Persons Program:</strong>
-              <ul>
-                <li>This permanent residence program is for individuals with relevant experience in cultural activities or athletics who intend and are able to make a significant contribution to the cultural or athletic life of Canada as a self-employed person.</li>
-                <li><strong>Key Requirements:</strong> Relevant experience, intention and ability to be self-employed in Canada, score sufficient points on a selection grid, meeting English or French language requirements (though not a pass/fail), sufficient settlement funds, and meeting health and character requirements.</li>
-              </ul>
-            </li>
-            <li><strong>Provincial Nominee Programs (PNPs) - Business/Entrepreneur Streams:</strong>
-              <ul>
-                <li>Many Canadian provinces and territories have their own PNPs with specific streams for entrepreneurs and investors. These often involve an Expression of Interest (EOI), a business plan, a minimum investment, and sometimes a temporary work permit stage before permanent residency.</li>
-                <li><strong>Key Requirements (varies by province):</strong> Typically include a minimum net worth, a minimum investment amount (e.g., CAD 150,000 to CAD 1 million+), a detailed business plan, active management involvement, job creation, and meeting language (CLB 4 or 5) and educational requirements. Examples include Ontario Immigrant Nominee Program (OINP) Entrepreneur Stream, British Columbia Provincial Nominee Program (BC PNP) Entrepreneur Immigration, etc.</li>
-              </ul>
-            </li>
-            <li><strong>Intra-Company Transfer (ICT) Work Permit:</strong>
-              <ul>
-                <li>This temporary work permit allows multinational companies to transfer highly skilled workers (executives, senior managers, or specialized knowledge workers) from a foreign branch to a Canadian branch or affiliate. While not a direct path to permanent residency, it can provide a pathway for skilled professionals to gain Canadian work experience, which can later assist in applying for permanent residency through programs like Express Entry.</li>
-                <li><strong>Key Requirements:</strong> Must be a senior executive, senior manager, or specialized knowledge worker, must have been employed continuously by the company for at least one year, and the Canadian and foreign companies must have a qualifying relationship. No Labour Market Impact Assessment (LMIA) is required.</li>
-              </ul>
-            </li>
-          </ul>
-
-
-          <p><strong>Key Requirements (General for Canada Business Visa Programs for 2025 - Varies by Visa Type):</strong></p>
-          <table class={styles.table}>
-            <thead>
-              <tr>
-                <th>Factor</th>
-                <th>Requirement (General)</th>
-                <th>Notes for Canada Business Visa</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Age</strong></td>
-                <td>At least 18 years old. No specific upper age limit for most programs, though younger applicants may score more points in some programs.</td>
-                <td>Age is a factor in selection criteria for some programs (e.g., Self-Employed Persons, some PNPs).</td>
-              </tr>
-              <tr>
-                <td><strong>Business Plan/Concept</strong></td>
-                <td>Comprehensive, viable, and often innovative business plan (for Start-up, PNP Entrepreneur streams).</td>
-                <td>Must demonstrate potential for economic benefit to Canada (e.g., job creation, innovation).</td>
-              </tr>
-              <tr>
-                <td><strong>Investment Funds / Net Worth</strong></td>
-                <td>Specific thresholds vary by visa stream.</td>
-                <td>From secured commitment for Start-up Visa to significant net worth and investment for some PNP Entrepreneur streams (e.g., CAD 150,000 - CAD 1,000,000+). Must be legally acquired.</td>
-              </tr>
-              <tr>
-                <td><strong>Business/Management Experience</strong></td>
-                <td>Demonstrable successful business ownership, senior management, or relevant self-employment experience.</td>
-                <td>Crucial for demonstrating your ability to execute your business plan or manage operations.</td>
-              </tr>
-              <tr>
-                <td><strong>English/French Language</strong></td>
-                <td>Minimum CLB 5 for Start-up Visa; CLB 4/5 common for PNP Entrepreneur streams.</td>
-                <td>Required for most permanent residence pathways and points are awarded for higher proficiency. Must be from an IRCC-approved test.</td>
-              </tr>
-              <tr>
-                <td><strong>Health & Character</strong></td>
-                <td>Must meet Canada's health and character requirements.</td>
-                <td>Medical exams and police certificates are mandatory for all applicants and dependents.</td>
-              </tr>
-              <tr>
-                <td><strong>Genuine Intent</strong></td>
-                <td>Clear intention to establish or participate in a qualifying business/investment in Canada.</td>
-                <td>Evidenced through detailed plans, market research, and demonstrable commitment. Interviews may be conducted.</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Providing accurate information and all necessary documents, especially regarding your business history and financial standing, is paramount to avoid delays or even rejection of your Canada Business Visa application. That's where expert guidance from Global Visa Internationals comes in handy!</p>
-
-
-
-
-          <h2 class={styles.subTitle}>Why Choose Global Visa Internationals? Your Trusted Partner for Canada Business Visas</h2>
-          <p>At Global Visa Internationals, we understand that securing a Canada Business Visa can be a complex and highly strategic process. That's why we're dedicated to making your journey to Canada business immigration smooth and successful. We offer comprehensive support, making us the preferred choice for aspiring business migrants and investors:</p>
-          <ul>
-            <li><strong>Specialized Canada Business Visa Expertise:</strong> Our team of experienced Canada Business Visa consultants possesses in-depth knowledge of the various business and investment streams, including the Start-up Visa, Self-Employed Program, and diverse Provincial Nominee Program business streams, helping you identify the most suitable pathway for your profile and objectives.</li>
-            <li><strong>Tailored Business Plan & Funding Guidance:</strong> We provide expert assistance in developing robust and compliant business plans that meet IRCC and provincial government requirements and highlight your venture's potential. We also guide you through the intricacies of securing support from designated organizations or understanding investment criteria.</li>
-            <li><strong>Meticulous Document Preparation:</strong> Say goodbye to paperwork headaches! We handle the intricacies, guide you through each step, and assist with meticulous document preparation, including financial records, business proofs, and language test requirements, saving you invaluable time and stress.</li>
-            <li><strong>Up-to-Date Knowledge:</strong> The world of Canadian immigration is constantly evolving. We stay rigorously up-to-date with the latest visa regulations and program changes to ensure your application is always accurate, compliant, and complete.</li>
-            <li><strong>High Success Rate:</strong> Your success is our priority. We are committed to maximizing your chances of a successful Canada Business Visa outcome with our meticulous approach and deep understanding of the immigration landscape.</li>
-            <li><strong>Additional Services:</strong> Beyond core application support, we offer valuable services like guidance on language proficiency, insights into the Canadian business environment, and essential settlement advice to help your business thrive in Canada.</li>
-          </ul>
-          <p>We at Global Visa Internationals are proud to be India's finest visa consultants. We're dedicated to turning your dreams of establishing or investing in a business in Canada into reality. With over 11+ years of experience as leading visa consultants in Bangalore, we have successfully processed over 55,000+ visas and offered over 75,000 expert visa advice sessions to date. You can confidently rely on our vast experience in Canada business immigration consulting in India.</p>
-          <p>Don't let the complexities of the Canada Business Visa process deter your entrepreneurial spirit! Let Global Visa Internationals be your trusted partner in navigating the application and planning your exciting new business venture and life in Canada. Contact us today for a free consultation and take the first step towards your Canada business dream!</p>
+          <div className={styles.heroMedia}>
+            <Image
+              src={HERO_IMG_PATH}
+              alt="Canada business visa assistance from Global Visa Internationals"
+              fill
+              priority
+              sizes="(min-width: 1024px) 520px, 92vw"
+              className={styles.heroImg}
+            />
+            <span className={styles.heroBadge}>
+              <Award size={16} aria-hidden="true" /> {YEARS}+ years helping clients
+            </span>
+          </div>
         </div>
-        <div className={styles.formSection}>
+
+        <svg className={styles.wave} viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0 40C240 80 480 0 720 30s480 50 720 10V80H0Z" fill="#fff" />
+        </svg>
+      </header>
+
+      {/* Key facts, floating over the hero edge */}
+      <div className={styles.factsWrap}>
+        <ul className={styles.facts}>
+          {FACTS.map(({ Icon, value, label, sub }) => (
+            <li key={label}>
+              <Icon className={styles.factIcon} aria-hidden="true" />
+              <strong>{value}</strong>
+              <span className={styles.factLabel}>{label}</span>
+              <span className={styles.factSub}>{sub}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* ══ ARTICLE + STICKY FORM ══════════════════════════════════════════ */}
+      <div className={`${styles.container} ${styles.layout}`}>
+        <article className={styles.article}>
+          {/* Intro */}
+          <section className={styles.intro}>
+            <p>
+              Dreaming of expanding your business horizons or investing in a thriving, welcoming
+              economy? Canada, a land of robust economic growth, strategic global connections and
+              abundant opportunities, is calling. A Canada Business Visa opens doors to an
+              exceptional environment for entrepreneurs, investors and business professionals. It
+              is more than just a visa: it is a chance to build a brighter future for your
+              enterprise and potentially your family.
+            </p>
+          </section>
+
+          {/* Table of contents */}
+          <nav className={styles.toc} aria-label="On this page">
+            <p className={styles.tocTitle}>On this page</p>
+            <ul>
+              {TOC.map(([id, label]) => (
+                <li key={id}>
+                  <a href={`#${id}`}>{label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Pathways */}
+          <section id="pathways" className={styles.block} aria-labelledby="pathways-h">
+            <SectionHead
+              hid="pathways-h"
+              kicker="Visa Pathways"
+              title="Canada Business Visa Pathways: Find Your Best Fit"
+              sub="IRCC and the provinces offer several routes for entrepreneurs and investors. Here is how they differ."
+            />
+            <div className={styles.pathways}>
+              {PATHWAYS.map(({ Icon, name, tag, desc, req }) => (
+                <article key={name} className={styles.pathway}>
+                  <div className={styles.pathwayHead}>
+                    <span className={styles.pathwayIcon}><Icon size={24} aria-hidden="true" /></span>
+                    <div>
+                      <h3>{name}</h3>
+                      <span className={styles.tag}>{tag}</span>
+                    </div>
+                  </div>
+                  <p>{desc}</p>
+                  <div className={styles.reqBox}>
+                    <strong>Key requirements</strong>
+                    <p>{req}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <aside className={styles.assess}>
+              <div>
+                <h3>Not sure which route fits you?</h3>
+                <p>
+                  Take our quick assessment to find your best Canada business visa route. Contact
+                  Global Visa Internationals for a personalised assessment.
+                </p>
+              </div>
+              <a href="#consultation" className={styles.btnPrimary}>
+                Get my free assessment <ArrowRight size={16} aria-hidden="true" />
+              </a>
+            </aside>
+          </section>
+
+          {/* Requirements */}
+          <section id="requirements" className={styles.block} aria-labelledby="requirements-h">
+            <SectionHead
+              hid="requirements-h"
+              kicker="Eligibility"
+              title="Canada Business Visa Requirements"
+              sub="General requirements. The exact criteria vary by visa type."
+            />
+            <div className={styles.tableWrap} role="region" aria-label="Requirements table" tabIndex={0}>
+              <table className={styles.table}>
+                <thead>
+                  <tr>
+                    <th scope="col">Factor</th>
+                    <th scope="col">Requirement (general)</th>
+                    <th scope="col">Notes for Canada Business Visa</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {REQUIREMENTS.map(([f, r, n]) => (
+                    <tr key={f}>
+                      <th scope="row">{f}</th>
+                      <td>{r}</td>
+                      <td>{n}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className={styles.footnote}>
+              Accurate information and complete documents, especially about your business history
+              and financial standing, are essential to avoid delays or refusal.
+            </p>
+          </section>
+
+          {/* Cost */}
+          <section id="cost" className={styles.block} aria-labelledby="cost-h">
+            <SectionHead
+              hid="cost-h"
+              kicker="Cost & Fees"
+              title="Canada Business Visa Cost: Fees & Expenses"
+              sub={`Figures as of ${FEES_AS_OF}, shown for reference only. Always confirm current fees on Canada.ca.`}
+            />
+
+            <h3 className={styles.h3}>Core application (processing) fees</h3>
+            <div className={styles.tableWrap} role="region" aria-label="Fees table" tabIndex={0}>
+              <table className={styles.table}>
+                <thead>
+                  <tr>
+                    <th scope="col">Visa type</th>
+                    <th scope="col">Estimated cost (CAD)</th>
+                    <th scope="col">Approx. cost (INR, @ ₹60/CAD)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {FEES.map(([t, c, i]) => (
+                    <tr key={t}>
+                      <th scope="row">{t}</th>
+                      <td>{c}</td>
+                      <td>{i}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className={styles.footnote}>
+              These are application processing fees only. They do not include other associated
+              costs or the mandatory investment and settlement funds. Fees are subject to change by
+              IRCC and provincial governments, and PNP business streams often have their own
+              application fees in addition to federal fees.
+            </p>
+
+            <h3 className={styles.h3}>Other costs to plan for</h3>
+            <ul className={styles.costGrid}>
+              {OTHER_COSTS.map(([t, d]) => (
+                <li key={t}>
+                  <strong>{t}</strong>
+                  <span>{d}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className={styles.callout}>
+              <div className={styles.calloutHead}>
+                <Info size={20} aria-hidden="true" />
+                <h3>Example out-of-pocket costs for a single Start-up Visa applicant</h3>
+              </div>
+              <p className={styles.calloutSub}>
+                Excluding consultancy fees and the required business, investment or settlement funds.
+              </p>
+              <ul className={styles.exampleList}>
+                {EXAMPLE_COSTS.map(([t, v]) => (
+                  <li key={t}>
+                    <span>{t}</span>
+                    <b>{v}</b>
+                  </li>
+                ))}
+              </ul>
+              <div className={styles.total}>
+                <span>Estimated total (excluding business, investment and settlement funds)</span>
+                <b>CAD 3,385 – 3,700 (about ₹2.03 – ₹2.22 lakh)</b>
+              </div>
+              <p className={styles.calloutNote}>
+                These are rough estimates and actual costs vary. Check the official IRCC website
+                (Canada.ca) and provincial government sites for current fees and requirements. For
+                a personalised cost breakdown, reach out to Global Visa Internationals.
+              </p>
+            </div>
+          </section>
+
+          {/* Why Canada */}
+          <section id="why-canada" className={styles.block} aria-labelledby="why-canada-h">
+            <SectionHead
+              hid="why-canada-h"
+              kicker="Why Canada"
+              title="Why Choose Canada for Business?"
+              sub="Canada is a promise of significant business potential. Here is what makes it a premier destination for business immigration."
+            />
+            <ul className={styles.cards}>
+              {BENEFITS.map(({ Icon, title, text }) => (
+                <li key={title} className={styles.card}>
+                  <span className={styles.cardIcon}><Icon size={24} aria-hidden="true" /></span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Cities */}
+          <section id="cities" className={styles.block} aria-labelledby="cities-h">
+            <SectionHead
+              hid="cities-h"
+              kicker="Where to Start"
+              title="Key Canadian Cities for Business Visa Seekers"
+              sub="Opportunities exist nationwide, but these cities stand out for their economic vibrancy and support systems."
+            />
+            <ol className={styles.cities}>
+              {CITIES.map(([name, text]) => (
+                <li key={name}>
+                  <span className={styles.cityPin}><MapPin size={18} aria-hidden="true" /></span>
+                  <div>
+                    <h3>{name}</h3>
+                    <p>{text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          {/* Tips */}
+          <section id="tips" className={styles.block} aria-labelledby="tips-h">
+            <SectionHead
+              hid="tips-h"
+              kicker="Application Tips"
+              title="Tips for a Successful Canada Business Visa Application"
+            />
+            <ol className={styles.steps}>
+              {TIPS.map(([title, text]) => (
+                <li key={title}>
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          {/* Beyond the visa */}
+          <section id="beyond" className={styles.block} aria-labelledby="beyond-h">
+            <SectionHead
+              hid="beyond-h"
+              kicker="Beyond the Visa"
+              title="Top Considerations for Your Canada Business Venture"
+            />
+            <div className={styles.twoCol}>
+              {BEYOND.map(({ Icon, title, points }) => (
+                <div key={title} className={styles.card}>
+                  <span className={styles.cardIcon}><Icon size={24} aria-hidden="true" /></span>
+                  <h3>{title}</h3>
+                  <ul className={styles.bullets}>
+                    {points.map((p) => <li key={p}>{p}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <h3 className={styles.h3}>Making the most of your visa</h3>
+            <ul className={styles.costGrid}>
+              {STAY_TIPS.map(([t, d]) => (
+                <li key={t}>
+                  <strong>{t}</strong>
+                  <span>{d}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Why GVI */}
+          <section id="why-gvi" className={styles.block} aria-labelledby="why-gvi-h">
+            <SectionHead
+              hid="why-gvi-h"
+              kicker="Why Us"
+              title="Why Choose Global Visa Internationals?"
+              sub="Your trusted partner for Canada Business Visas."
+            />
+            <ul className={styles.cards}>
+              {WHY_GVI.map(({ Icon, title, text }) => (
+                <li key={title} className={styles.card}>
+                  <span className={styles.cardIcon}><Icon size={24} aria-hidden="true" /></span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ul>
+            <p className={styles.about}>
+              With {YEARS}+ years of experience as visa consultants in Bangalore, Global Visa
+              Internationals has guided thousands of clients through complex immigration
+              processes. You can rely on our experience in Canada business immigration consulting
+              in India. Don&apos;t let the complexity of the process deter your entrepreneurial
+              spirit: contact us today for a free consultation and take the first step towards your
+              Canada business goals.
+            </p>
+          </section>
+
+          {/* FAQ */}
+          <section id="faq" className={styles.block} aria-labelledby="faq-h">
+            <SectionHead
+              hid="faq-h" kicker="FAQ" title="Canada Business Visa: Frequently Asked Questions" />
+            <div className={styles.faq}>
+              {FAQS.map(({ q, a }, i) => (
+                <details key={q} open={i === 0}>
+                  <summary>
+                    <span>{q}</span>
+                    <ChevronRight size={18} aria-hidden="true" />
+                  </summary>
+                  <p>{a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          {/* Final CTA */}
+          <section className={styles.cta} aria-labelledby="cta-h">
+            <h2 id="cta-h">Ready to Start Your Canada Business Journey?</h2>
+            <p>Talk to a visa specialist and get a clear, personalised route for your business profile.</p>
+            <div className={styles.ctaButtons}>
+              <a href={`tel:${PHONE}`} className={styles.ctaPrimary}>
+                <Phone size={16} aria-hidden="true" /> Call for a Free Consultation
+              </a>
+              <a href="#consultation" className={styles.ctaSecondary}>
+                Fill the Assessment Form
+              </a>
+            </div>
+          </section>
+        </article>
+
+        {/* Sticky form: VisaForm already renders its own card */}
+        <aside id="consultation" className={styles.aside} aria-label="Free consultation form">
           <VisaForm />
-        </div>
+        </aside>
       </div>
 
-      <section>
-        <ReviewSchema />
-        <ReviewCarousel />
+      {/* ══ REVIEWS ════════════════════════════════════════════════════════ */}
+      <section className={styles.reviews} aria-label="Client reviews">
+        <div className={styles.container}>
+          <ReviewSchema />
+          <ReviewCarousel />
+        </div>
       </section>
-    </>
+
+      {/* Mobile quick-contact bar */}
+      <nav aria-label="Quick contact" className={styles.mobileBar}>
+        <a href={`tel:${PHONE}`}><Phone size={16} aria-hidden="true" /> Call</a>
+        <a
+          href={`https://wa.me/${WHATSAPP}?text=Hi%2C%20I%20need%20help%20with%20a%20Canada%20Business%20Visa`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.mbWhatsapp}
+        >
+          <MessageCircle size={16} aria-hidden="true" /> WhatsApp
+        </a>
+        <a href="#consultation" className={styles.mbQuote}>Free Quote</a>
+      </nav>
+    </div>
   );
 }
