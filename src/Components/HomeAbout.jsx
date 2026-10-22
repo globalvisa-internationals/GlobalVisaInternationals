@@ -468,11 +468,11 @@ export default function HomeAbout() {
           style={{ backgroundImage: 'linear-gradient(rgba(3,131,201,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(3,131,201,0.05) 1px,transparent 1px)', backgroundSize: '48px 48px' }} />
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-4">
           {[
-            ['👥', '30+ Yrs', 'Combined professional expertise'],
+            ['👥', '12+ Yrs', 'Combined professional expertise'],
             ['🌎', '45+', 'Countries served'],
             ['📋', '20+', 'Visa categories covered'],
             ['✈️', '75,000+', 'Successful approvals'],
-            ['📅', 'Since 2016', 'Trusted across India'],
+            ['📅', 'Since 2015', 'Trusted across India'],
           ].map(([icon, val, desc]) => (
             <div key={val} className="text-center bg-white/5 border border-white/8 rounded-2xl py-6 px-4 hover:bg-white/8 transition-colors">
               <div className="text-3xl mb-3">{icon}</div>
