@@ -19,7 +19,7 @@ export const metadata = {
         'Global Visa Internationals',
     ],
     author: 'Global Visa Internationals Team',
-    date: '2026-10-15',
+    date: '2026-10-23',
     image: '/BlogImages/Moving to Australia from India.png',
     category: 'Immigration News & Updates',
     faq: [
