@@ -9,7 +9,7 @@ import {
   Award, Clock, FileText, Heart, MapPin, Info, Phone, MessageCircle, ChevronRight,
   ArrowRight, CheckCircle, Coins, Languages,
 } from "lucide-react";
-import styles from "./visaPage.module.css";
+import styles from "./visapage.module.css";
 import VisaForm from "@/Components/VisaForm";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 import { ReviewSchema } from "@/Components/ReviewSchema";
