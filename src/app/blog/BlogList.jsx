@@ -1,174 +1,146 @@
-//src\app\blog\BlogList.jsx
+// src/app/blog/BlogList.jsx
 'use client';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-
-const categories = [
-  'All',
-  'Study Abroad',
-  'Work & PR',
-  'Tourism & Travel',
-  'Visa Information',
-  'Culture & Lifestyle',
-  'Immigration News & Updates',
-];
-const POSTS_PER_PAGE = 9;
+import { useMemo, useRef, useState } from 'react';
+import BlogHero from '@/components/blog/BlogHero';
+import SearchBar from '@/components/blog/SearchBar';
+import CategoryTabs from '@/components/blog/CategoryTabs';
+import FeaturedPost from '@/components/blog/FeaturedPost';
+import PostCard from '@/components/blog/PostCard';
+import Pagination from '@/components/blog/Pagination';
+import CtaBanner from '@/components/blog/CtaBanner';
+import { CATEGORIES, POSTS_PER_PAGE } from '@/lib/blog-config';
 
 export default function BlogList({ posts }) {
-  const [filteredCategory, setFilteredCategory] = useState('All');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [isMobile, setIsMobile] = useState(false);
+  const [query, setQuery] = useState('');
+  const [category, setCategory] = useState('All');
+  const [page, setPage] = useState(1);
+  const gridRef = useRef(null);
 
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const handleCategoryChange = (category) => {
-    setFilteredCategory(category);
-    setCurrentPage(1);
-  };
-
-  const filteredPosts =
-    filteredCategory === 'All'
-      ? posts
-      : posts.filter((post) => post.category === filteredCategory);
-
-  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
-  const paginatedPosts = filteredPosts.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
+  const sorted = useMemo(
+    () => [...posts].sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0)),
+    [posts]
   );
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-24 sm:py-32">
-      {/* Mobile category dropdown */}
-      {isMobile && (
-        <div className="mb-6">
-          <select
-            value={filteredCategory}
-            onChange={(e) => handleCategoryChange(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-800"
-            aria-label="Filter by category"
-          >
-            {categories.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
+  const counts = useMemo(() => {
+    const c = { All: sorted.length };
+    sorted.forEach((p) => {
+      c[p.category] = (c[p.category] || 0) + 1;
+    });
+    return c;
+  }, [sorted]);
 
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Blog grid */}
-        <div className="flex-1">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {paginatedPosts.map((post, idx) => (
-              <motion.article
-                key={post.slug}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: idx * 0.05 }}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <Link href={`/blog/${post.slug}`} className="block relative h-48 w-full">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority={idx < 3}
-                  />
-                </Link>
-                <div className="p-5">
-                  <h2 className="text-lg font-bold text-gray-900 line-clamp-2 mb-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-teal-700 transition">
-                      {post.title}
-                    </Link>
-                  </h2>
-                  <div className="flex justify-between text-xs text-gray-500 mb-3">
-                    <span>👤 {post.author}</span>
-                    <span>
-                      📅 {new Date(post.date).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric',
-                      })}
-                    </span>
-                  </div>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-block mt-2 text-teal-700 font-semibold text-sm hover:underline"
-                  >
-                    Read more →
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
+  // Only show categories that actually have posts (plus "All").
+  const visibleCategories = CATEGORIES.filter((c) => c === 'All' || counts[c] > 0);
+
+  const q = query.trim().toLowerCase();
+  const filtered = useMemo(() => {
+    return sorted.filter((p) => {
+      if (category !== 'All' && p.category !== category) return false;
+      if (!q) return true;
+      const hay = [
+        p.title,
+        p.excerpt,
+        p.author,
+        p.category,
+        ...(Array.isArray(p.keywords) ? p.keywords : [p.keywords]),
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+      return q.split(/\s+/).every((term) => hay.includes(term));
+    });
+  }, [sorted, category, q]);
+
+  const isDefaultView = category === 'All' && !q;
+  const featured = isDefaultView && page === 1 ? filtered[0] : null;
+  // In the default view the first post is the featured one and is excluded from the grid.
+  const pool = isDefaultView ? filtered.slice(1) : filtered;
+
+  const totalPages = Math.max(1, Math.ceil(pool.length / POSTS_PER_PAGE));
+  const safePage = Math.min(page, totalPages);
+  const pagePosts = pool.slice((safePage - 1) * POSTS_PER_PAGE, safePage * POSTS_PER_PAGE);
+
+  const goToPage = (p) => {
+    setPage(p);
+    gridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  const onSearch = (v) => {
+    setQuery(v);
+    setPage(1);
+  };
+  const onCategory = (c) => {
+    setCategory(c);
+    setPage(1);
+  };
+  const reset = () => {
+    setQuery('');
+    setCategory('All');
+    setPage(1);
+  };
+
+  return (
+    <>
+      <BlogHero />
+
+      {/* Sticky toolbar: search + categories. Adjust `top-*` to match your navbar height. */}
+      <div className="sticky top-16 z-30 border-b border-slate-200 bg-white/90 backdrop-blur sm:top-20">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:gap-6">
+          <div className="lg:w-[380px] lg:shrink-0">
+            <SearchBar value={query} onChange={onSearch} />
+          </div>
+          <div className="min-w-0 flex-1">
+            <CategoryTabs
+              categories={visibleCategories}
+              active={category}
+              counts={counts}
+              onChange={onCategory}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14">
+        <FeaturedPost post={featured} />
+
+        <section ref={gridRef} aria-labelledby="latest-heading" className="scroll-mt-40">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-2">
+            <h2 id="latest-heading" className="text-2xl font-extrabold text-[#002B5B]">
+              {isDefaultView ? 'Latest articles' : category !== 'All' && !q ? category : 'Search results'}
+            </h2>
+            <p aria-live="polite" className="text-sm text-slate-500">
+              {filtered.length} {filtered.length === 1 ? 'article' : 'articles'}
+              {q && <> for “{query.trim()}”</>}
+              {q && category !== 'All' && <> in {category}</>}
+            </p>
           </div>
 
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex justify-center gap-2 mt-10 flex-wrap">
-              <button
-                onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-                disabled={currentPage === 1}
-                className="px-4 py-2 bg-gray-200 rounded-md disabled:opacity-50 hover:bg-gray-300 transition"
-              >
-                ← Prev
-              </button>
-              {[...Array(totalPages)].map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentPage(i + 1)}
-                  className={`px-4 py-2 rounded-md transition ${currentPage === i + 1
-                    ? 'bg-teal-700 text-white'
-                    : 'bg-gray-200 hover:bg-gray-300'
-                    }`}
-                >
-                  {i + 1}
-                </button>
+          {pagePosts.length > 0 ? (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {pagePosts.map((post, i) => (
+                <PostCard key={post.slug} post={post} priority={i < 3 && !featured && safePage === 1} />
               ))}
-              <button
-                onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
-                disabled={currentPage === totalPages}
-                className="px-4 py-2 bg-gray-200 rounded-md disabled:opacity-50 hover:bg-gray-300 transition"
-              >
-                Next →
-              </button>
             </div>
+          ) : (
+            !featured && (
+              <div className="rounded-3xl border border-dashed border-slate-300 bg-white px-6 py-16 text-center">
+                <p className="text-lg font-semibold text-slate-800">No articles found</p>
+                <p className="mt-1 text-slate-500">Try a different keyword or browse another category.</p>
+                <button
+                  type="button"
+                  onClick={reset}
+                  className="mt-5 rounded-full bg-[#002B5B] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#057A7E]"
+                >
+                  Clear filters
+                </button>
+              </div>
+            )
           )}
-        </div>
 
-        {/* Desktop sidebar */}
-        {!isMobile && (
-          <aside className="w-64 shrink-0 sticky top-24 self-start">
-            <div className="bg-white p-5 rounded-xl shadow-sm border">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Categories</h3>
-              <ul className="space-y-2">
-                {categories.map((cat) => (
-                  <li
-                    key={cat}
-                    onClick={() => handleCategoryChange(cat)}
-                    className={`cursor-pointer px-3 py-2 rounded-full text-sm text-center transition ${filteredCategory === cat
-                      ? 'bg-teal-700 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-teal-100'
-                      }`}
-                  >
-                    {cat}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
-        )}
+          <Pagination page={safePage} totalPages={totalPages} onChange={goToPage} />
+        </section>
+
+        <CtaBanner className="mt-16" />
       </div>
-    </div>
+    </>
   );
 }

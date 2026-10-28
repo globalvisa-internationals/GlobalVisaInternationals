@@ -1,9 +1,10 @@
 // app/Visa/business-visa/canada/page.js  (SERVER component)
-// Save the CSS file next to this one as visaPage.module.css.
-// This uses its own stylesheet, so the shared Visa.module.css (used by your other visa pages) is untouched.
+// Save visapage.module.css next to this file (it replaces the old one).
+// All SEO (metadata, schema, headings, FAQ, anchors) is kept; only layout/design changed.
 
 import Image from "next/image";
 import Link from "next/link";
+import { Fraunces, Inter } from "next/font/google";
 import {
   Rocket, Briefcase, Landmark, Building2, TrendingUp, Globe, Lightbulb, Shield, Users,
   Award, Clock, FileText, Heart, MapPin, Info, Phone, MessageCircle, ChevronRight,
@@ -14,6 +15,9 @@ import VisaForm from "@/Components/VisaForm";
 import ReviewCarousel from "@/Components/ReviewCarousel";
 import { ReviewSchema } from "@/Components/ReviewSchema";
 
+const display = Fraunces({ subsets: ["latin"], display: "swap", variable: "--font-display" });
+const body = Inter({ subsets: ["latin"], display: "swap", variable: "--font-body" });
+
 // ───────────────────────────────────────────────────────────────────────────
 // FACTS TO KEEP CURRENT: update these when you refresh the page content
 // ───────────────────────────────────────────────────────────────────────────
@@ -22,8 +26,8 @@ const PAGE_PATH = "/Visa/business-visa/canada";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 const HERO_IMG_PATH = "/business-visa/Canada_Business_Visa_ASSISTANCE.webp";
 const HERO_IMG_URL = `${SITE_URL}${HERO_IMG_PATH}`;
-const PHONE = "+917022213466";
-const WHATSAPP = "917022213466";
+const PHONE = "+91 7022213466";
+const WHATSAPP = "91 7022213466";
 const FOUNDING_YEAR = 2016;
 const YEARS = new Date().getFullYear() - FOUNDING_YEAR;
 
@@ -32,7 +36,7 @@ const DATE_PUBLISHED = "2025-01-10";
 const DATE_MODIFIED = "2025-11-04"; // update ONLY when you genuinely revise the content
 
 // ───────────────────────────────────────────────────────────────────────────
-// METADATA
+// METADATA (unchanged)
 // ───────────────────────────────────────────────────────────────────────────
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -63,7 +67,7 @@ export const metadata = {
 };
 
 // ───────────────────────────────────────────────────────────────────────────
-// CONTENT (your original text, organised into sections)
+// CONTENT (identical text to your original)
 // ───────────────────────────────────────────────────────────────────────────
 const TOC = [
   ["pathways", "Visa pathways"],
@@ -231,7 +235,7 @@ const SERVICE_OFFERS = [
 ];
 
 // ───────────────────────────────────────────────────────────────────────────
-// STRUCTURED DATA: one connected graph
+// STRUCTURED DATA: one connected graph (WebSite node added so isPartOf resolves)
 // ───────────────────────────────────────────────────────────────────────────
 function StructuredData() {
   const org = `${SITE_URL}/#organization`;
@@ -268,6 +272,14 @@ function StructuredData() {
           "https://x.com/GLOBALVISA1505",
           "https://www.youtube.com/@globalVisaInternationals",
         ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: "Global Visa Internationals",
+        inLanguage: "en-IN",
+        publisher: { "@id": org },
       },
       {
         "@type": "WebPage",
@@ -327,9 +339,9 @@ function StructuredData() {
   );
 }
 
-const SectionHead = ({ hid, kicker, title, sub }) => (
+const SectionHead = ({ hid, num, kicker, title, sub }) => (
   <div className={styles.sectionHead}>
-    <p className={styles.kicker}>{kicker}</p>
+    <p className={styles.kicker}><b>{num}</b> {kicker}</p>
     <h2 id={hid} className={styles.h2}>{title}</h2>
     {sub && <p className={styles.sub}>{sub}</p>}
   </div>
@@ -340,14 +352,22 @@ const SectionHead = ({ hid, kicker, title, sub }) => (
 // ───────────────────────────────────────────────────────────────────────────
 export default function CanadaBusinessVisa() {
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page} ${display.variable} ${body.variable}`}>
       <StructuredData />
 
-      {/* ══ HERO ═══════════════════════════════════════════════════════════ */}
+      {/* ══ HERO: full-bleed photo, headline left, enquiry form docked right ═ */}
       <header className={styles.hero}>
-        <div className={`${styles.orb} ${styles.orb1}`} aria-hidden="true" />
-        <div className={`${styles.orb} ${styles.orb2}`} aria-hidden="true" />
-        <div className={`${styles.container} ${styles.heroGrid}`}>
+        <Image
+          src={HERO_IMG_PATH}
+          alt="Canada business visa assistance from Global Visa Internationals"
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroBg}
+        />
+        <div className={styles.heroShade} aria-hidden="true" />
+
+        <div className={`${styles.container} ${styles.heroInner}`}>
           <div className={styles.heroText}>
             <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
               <Link href="/">Home</Link>
@@ -357,27 +377,13 @@ export default function CanadaBusinessVisa() {
 
             <p className={styles.eyebrow}>Canada Business Visa Assistance</p>
             <h1 className={styles.h1}>
-              Canada Business Visa Assistance <span>from India</span>
+              Canada Business Visa Assistance <em>from India</em>
             </h1>
             <p className={styles.heroLead}>
               Expand your business or invest in Canada&apos;s thriving economy. We guide Indian
               entrepreneurs, investors and business owners through the Start-up Visa,
               Self-Employed, Provincial Nominee and ICT routes.
             </p>
-
-            <div className={styles.heroActions}>
-              <a href="#consultation" className={styles.btnPrimary}>
-                Free Assessment <ArrowRight size={16} aria-hidden="true" />
-              </a>
-              <a
-                href={`https://wa.me/${WHATSAPP}?text=Hi%2C%20I%20need%20help%20with%20a%20Canada%20Business%20Visa`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.btnGhost}
-              >
-                <MessageCircle size={16} aria-hidden="true" /> WhatsApp Us
-              </a>
-            </div>
 
             <ul className={styles.chips}>
               {["Start-up Visa", "Self-Employed", "PNP Entrepreneur", "ICT Work Permit"].map((t) => (
@@ -386,89 +392,95 @@ export default function CanadaBusinessVisa() {
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div className={styles.heroMedia}>
-            <Image
-              src={HERO_IMG_PATH}
-              alt="Canada business visa assistance from Global Visa Internationals"
-              fill
-              priority
-              sizes="(min-width: 1024px) 520px, 92vw"
-              className={styles.heroImg}
-            />
-            <span className={styles.heroBadge}>
+            <div className={styles.heroActions}>
+              <a
+                href={`https://wa.me/${WHATSAPP}?text=Hi%2C%20I%20need%20help%20with%20a%20Canada%20Business%20Visa`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.btnGhost}
+              >
+                <MessageCircle size={16} aria-hidden="true" /> WhatsApp Us
+              </a>
+              <a href={`tel:${PHONE}`} className={styles.btnGhost}>
+                <Phone size={16} aria-hidden="true" /> Call Now
+              </a>
+            </div>
+
+            <p className={styles.since}>
               <Award size={16} aria-hidden="true" /> {YEARS}+ years helping clients
-            </span>
+            </p>
           </div>
-        </div>
 
-        <svg className={styles.wave} viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-          <path d="M0 40C240 80 480 0 720 30s480 50 720 10V80H0Z" fill="#fff" />
-        </svg>
+          <aside id="consultation" className={styles.formDock} aria-label="Free consultation form">
+            <VisaForm />
+          </aside>
+        </div>
       </header>
 
-      {/* Key facts, floating over the hero edge */}
-      <div className={styles.factsWrap}>
-        <ul className={styles.facts}>
+      {/* Key facts band */}
+      <section className={styles.statBand} aria-label="Key facts">
+        <ul className={`${styles.container} ${styles.statGrid}`}>
           {FACTS.map(({ Icon, value, label, sub }) => (
             <li key={label}>
-              <Icon className={styles.factIcon} aria-hidden="true" />
-              <strong>{value}</strong>
-              <span className={styles.factLabel}>{label}</span>
-              <span className={styles.factSub}>{sub}</span>
+              <Icon className={styles.statIcon} aria-hidden="true" />
+              <div>
+                <strong className={styles.statValue}>{value}</strong>
+                <span className={styles.statLabel}>{label}</span>
+                <span className={styles.statSub}>{sub}</span>
+              </div>
             </li>
           ))}
         </ul>
-      </div>
+      </section>
 
-      {/* ══ ARTICLE + STICKY FORM ══════════════════════════════════════════ */}
-      <div className={`${styles.container} ${styles.layout}`}>
+      {/* ══ BODY: left rail (contents) + article ═══════════════════════════ */}
+      <div className={`${styles.container} ${styles.shell}`}>
+        <nav className={styles.rail} aria-label="On this page">
+          <p className={styles.railTitle}>On this page</p>
+          <ol className={styles.railList}>
+            {TOC.map(([id, label]) => (
+              <li key={id}>
+                <a href={`#${id}`}>{label}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+
         <article className={styles.article}>
-          {/* Intro */}
-          <section className={styles.intro}>
-            <p>
-              Dreaming of expanding your business horizons or investing in a thriving, welcoming
-              economy? Canada, a land of robust economic growth, strategic global connections and
-              abundant opportunities, is calling. A Canada Business Visa opens doors to an
-              exceptional environment for entrepreneurs, investors and business professionals. It
-              is more than just a visa: it is a chance to build a brighter future for your
-              enterprise and potentially your family.
-            </p>
-          </section>
+          <p className={styles.lead}>
+            Dreaming of expanding your business horizons or investing in a thriving, welcoming
+            economy? Canada, a land of robust economic growth, strategic global connections and
+            abundant opportunities, is calling. A Canada Business Visa opens doors to an
+            exceptional environment for entrepreneurs, investors and business professionals. It
+            is more than just a visa: it is a chance to build a brighter future for your
+            enterprise and potentially your family.
+          </p>
 
-          {/* Table of contents */}
-          <nav className={styles.toc} aria-label="On this page">
-            <p className={styles.tocTitle}>On this page</p>
-            <ul>
-              {TOC.map(([id, label]) => (
-                <li key={id}>
-                  <a href={`#${id}`}>{label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Pathways */}
+          {/* 01 Pathways */}
           <section id="pathways" className={styles.block} aria-labelledby="pathways-h">
             <SectionHead
               hid="pathways-h"
+              num="01"
               kicker="Visa Pathways"
               title="Canada Business Visa Pathways: Find Your Best Fit"
               sub="IRCC and the provinces offer several routes for entrepreneurs and investors. Here is how they differ."
             />
-            <div className={styles.pathways}>
-              {PATHWAYS.map(({ Icon, name, tag, desc, req }) => (
-                <article key={name} className={styles.pathway}>
-                  <div className={styles.pathwayHead}>
-                    <span className={styles.pathwayIcon}><Icon size={24} aria-hidden="true" /></span>
-                    <div>
-                      <h3>{name}</h3>
+            <div className={styles.routes}>
+              {PATHWAYS.map(({ Icon, name, tag, desc, req }, i) => (
+                <article key={name} className={styles.route}>
+                  <div className={styles.routeNum} aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className={styles.routeBody}>
+                    <div className={styles.routeTop}>
+                      <span className={styles.routeIcon}><Icon size={22} aria-hidden="true" /></span>
                       <span className={styles.tag}>{tag}</span>
                     </div>
+                    <h3>{name}</h3>
+                    <p>{desc}</p>
                   </div>
-                  <p>{desc}</p>
-                  <div className={styles.reqBox}>
+                  <div className={styles.routeReq}>
                     <strong>Key requirements</strong>
                     <p>{req}</p>
                   </div>
@@ -490,16 +502,17 @@ export default function CanadaBusinessVisa() {
             </aside>
           </section>
 
-          {/* Requirements */}
+          {/* 02 Requirements */}
           <section id="requirements" className={styles.block} aria-labelledby="requirements-h">
             <SectionHead
               hid="requirements-h"
+              num="02"
               kicker="Eligibility"
               title="Canada Business Visa Requirements"
               sub="General requirements. The exact criteria vary by visa type."
             />
-            <div className={styles.tableWrap} role="region" aria-label="Requirements table" tabIndex={0}>
-              <table className={styles.table}>
+            <div className={styles.tableWrap}>
+              <table className={styles.ledger}>
                 <thead>
                   <tr>
                     <th scope="col">Factor</th>
@@ -511,8 +524,8 @@ export default function CanadaBusinessVisa() {
                   {REQUIREMENTS.map(([f, r, n]) => (
                     <tr key={f}>
                       <th scope="row">{f}</th>
-                      <td>{r}</td>
-                      <td>{n}</td>
+                      <td data-label="Requirement">{r}</td>
+                      <td data-label="Notes">{n}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -524,42 +537,74 @@ export default function CanadaBusinessVisa() {
             </p>
           </section>
 
-          {/* Cost */}
+          {/* 03 Cost */}
           <section id="cost" className={styles.block} aria-labelledby="cost-h">
             <SectionHead
               hid="cost-h"
+              num="03"
               kicker="Cost & Fees"
               title="Canada Business Visa Cost: Fees & Expenses"
               sub={`Figures as of ${FEES_AS_OF}, shown for reference only. Always confirm current fees on Canada.ca.`}
             />
 
-            <h3 className={styles.h3}>Core application (processing) fees</h3>
-            <div className={styles.tableWrap} role="region" aria-label="Fees table" tabIndex={0}>
-              <table className={styles.table}>
-                <thead>
-                  <tr>
-                    <th scope="col">Visa type</th>
-                    <th scope="col">Estimated cost (CAD)</th>
-                    <th scope="col">Approx. cost (INR, @ ₹60/CAD)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {FEES.map(([t, c, i]) => (
-                    <tr key={t}>
-                      <th scope="row">{t}</th>
-                      <td>{c}</td>
-                      <td>{i}</td>
-                    </tr>
+            <div className={styles.costLayout}>
+              <div>
+                <h3 className={styles.h3}>Core application (processing) fees</h3>
+                <div className={styles.tableWrap}>
+                  <table className={styles.ledger}>
+                    <thead>
+                      <tr>
+                        <th scope="col">Visa type</th>
+                        <th scope="col">Estimated cost (CAD)</th>
+                        <th scope="col">Approx. cost (INR, @ ₹60/CAD)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {FEES.map(([t, c, i]) => (
+                        <tr key={t}>
+                          <th scope="row">{t}</th>
+                          <td data-label="CAD">{c}</td>
+                          <td data-label="INR">{i}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className={styles.footnote}>
+                  These are application processing fees only. They do not include other associated
+                  costs or the mandatory investment and settlement funds. Fees are subject to change by
+                  IRCC and provincial governments, and PNP business streams often have their own
+                  application fees in addition to federal fees.
+                </p>
+              </div>
+
+              <aside className={styles.receipt}>
+                <div className={styles.receiptHead}>
+                  <Info size={18} aria-hidden="true" />
+                  <h3>Example out-of-pocket costs for a single Start-up Visa applicant</h3>
+                </div>
+                <p className={styles.receiptSub}>
+                  Excluding consultancy fees and the required business, investment or settlement funds.
+                </p>
+                <ul className={styles.receiptList}>
+                  {EXAMPLE_COSTS.map(([t, v]) => (
+                    <li key={t}>
+                      <span>{t}</span>
+                      <b>{v}</b>
+                    </li>
                   ))}
-                </tbody>
-              </table>
+                </ul>
+                <div className={styles.receiptTotal}>
+                  <span>Estimated total (excluding business, investment and settlement funds)</span>
+                  <b>CAD 3,385 – 3,700 (about ₹2.03 – ₹2.22 lakh)</b>
+                </div>
+                <p className={styles.receiptNote}>
+                  These are rough estimates and actual costs vary. Check the official IRCC website
+                  (Canada.ca) and provincial government sites for current fees and requirements. For
+                  a personalised cost breakdown, reach out to Global Visa Internationals.
+                </p>
+              </aside>
             </div>
-            <p className={styles.footnote}>
-              These are application processing fees only. They do not include other associated
-              costs or the mandatory investment and settlement funds. Fees are subject to change by
-              IRCC and provincial governments, and PNP business streams often have their own
-              application fees in addition to federal fees.
-            </p>
 
             <h3 className={styles.h3}>Other costs to plan for</h3>
             <ul className={styles.costGrid}>
@@ -570,47 +615,21 @@ export default function CanadaBusinessVisa() {
                 </li>
               ))}
             </ul>
-
-            <div className={styles.callout}>
-              <div className={styles.calloutHead}>
-                <Info size={20} aria-hidden="true" />
-                <h3>Example out-of-pocket costs for a single Start-up Visa applicant</h3>
-              </div>
-              <p className={styles.calloutSub}>
-                Excluding consultancy fees and the required business, investment or settlement funds.
-              </p>
-              <ul className={styles.exampleList}>
-                {EXAMPLE_COSTS.map(([t, v]) => (
-                  <li key={t}>
-                    <span>{t}</span>
-                    <b>{v}</b>
-                  </li>
-                ))}
-              </ul>
-              <div className={styles.total}>
-                <span>Estimated total (excluding business, investment and settlement funds)</span>
-                <b>CAD 3,385 – 3,700 (about ₹2.03 – ₹2.22 lakh)</b>
-              </div>
-              <p className={styles.calloutNote}>
-                These are rough estimates and actual costs vary. Check the official IRCC website
-                (Canada.ca) and provincial government sites for current fees and requirements. For
-                a personalised cost breakdown, reach out to Global Visa Internationals.
-              </p>
-            </div>
           </section>
 
-          {/* Why Canada */}
+          {/* 04 Why Canada: bento grid */}
           <section id="why-canada" className={styles.block} aria-labelledby="why-canada-h">
             <SectionHead
               hid="why-canada-h"
+              num="04"
               kicker="Why Canada"
               title="Why Choose Canada for Business?"
               sub="Canada is a promise of significant business potential. Here is what makes it a premier destination for business immigration."
             />
-            <ul className={styles.cards}>
+            <ul className={styles.bento}>
               {BENEFITS.map(({ Icon, title, text }) => (
-                <li key={title} className={styles.card}>
-                  <span className={styles.cardIcon}><Icon size={24} aria-hidden="true" /></span>
+                <li key={title} className={styles.tile}>
+                  <span className={styles.tileIcon}><Icon size={22} aria-hidden="true" /></span>
                   <h3>{title}</h3>
                   <p>{text}</p>
                 </li>
@@ -618,57 +637,58 @@ export default function CanadaBusinessVisa() {
             </ul>
           </section>
 
-          {/* Cities */}
+          {/* 05 Cities: horizontal scroll rail */}
           <section id="cities" className={styles.block} aria-labelledby="cities-h">
             <SectionHead
               hid="cities-h"
+              num="05"
               kicker="Where to Start"
               title="Key Canadian Cities for Business Visa Seekers"
               sub="Opportunities exist nationwide, but these cities stand out for their economic vibrancy and support systems."
             />
-            <ol className={styles.cities}>
-              {CITIES.map(([name, text]) => (
-                <li key={name}>
-                  <span className={styles.cityPin}><MapPin size={18} aria-hidden="true" /></span>
-                  <div>
+            <div className={styles.cityScroll} role="region" aria-label="Key Canadian cities" tabIndex={0}>
+              <ol className={styles.cityRail}>
+                {CITIES.map(([name, text]) => (
+                  <li key={name} className={styles.cityCard}>
+                    <span className={styles.cityPin}><MapPin size={18} aria-hidden="true" /></span>
                     <h3>{name}</h3>
                     <p>{text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </section>
 
-          {/* Tips */}
+          {/* 06 Tips: timeline */}
           <section id="tips" className={styles.block} aria-labelledby="tips-h">
             <SectionHead
               hid="tips-h"
+              num="06"
               kicker="Application Tips"
               title="Tips for a Successful Canada Business Visa Application"
             />
-            <ol className={styles.steps}>
+            <ol className={styles.timeline}>
               {TIPS.map(([title, text]) => (
                 <li key={title}>
-                  <div>
-                    <h3>{title}</h3>
-                    <p>{text}</p>
-                  </div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
                 </li>
               ))}
             </ol>
           </section>
 
-          {/* Beyond the visa */}
+          {/* 07 Beyond the visa */}
           <section id="beyond" className={styles.block} aria-labelledby="beyond-h">
             <SectionHead
               hid="beyond-h"
+              num="07"
               kicker="Beyond the Visa"
               title="Top Considerations for Your Canada Business Venture"
             />
             <div className={styles.twoCol}>
               {BEYOND.map(({ Icon, title, points }) => (
                 <div key={title} className={styles.card}>
-                  <span className={styles.cardIcon}><Icon size={24} aria-hidden="true" /></span>
+                  <span className={styles.cardIcon}><Icon size={22} aria-hidden="true" /></span>
                   <h3>{title}</h3>
                   <ul className={styles.bullets}>
                     {points.map((p) => <li key={p}>{p}</li>)}
@@ -678,7 +698,7 @@ export default function CanadaBusinessVisa() {
             </div>
 
             <h3 className={styles.h3}>Making the most of your visa</h3>
-            <ul className={styles.costGrid}>
+            <ul className={styles.pills}>
               {STAY_TIPS.map(([t, d]) => (
                 <li key={t}>
                   <strong>{t}</strong>
@@ -688,18 +708,19 @@ export default function CanadaBusinessVisa() {
             </ul>
           </section>
 
-          {/* Why GVI */}
-          <section id="why-gvi" className={styles.block} aria-labelledby="why-gvi-h">
+          {/* 08 Why GVI: dark panel */}
+          <section id="why-gvi" className={`${styles.block} ${styles.darkPanel}`} aria-labelledby="why-gvi-h">
             <SectionHead
               hid="why-gvi-h"
+              num="08"
               kicker="Why Us"
               title="Why Choose Global Visa Internationals?"
               sub="Your trusted partner for Canada Business Visas."
             />
-            <ul className={styles.cards}>
+            <ul className={styles.gviGrid}>
               {WHY_GVI.map(({ Icon, title, text }) => (
-                <li key={title} className={styles.card}>
-                  <span className={styles.cardIcon}><Icon size={24} aria-hidden="true" /></span>
+                <li key={title}>
+                  <Icon size={22} aria-hidden="true" />
                   <h3>{title}</h3>
                   <p>{text}</p>
                 </li>
@@ -715,10 +736,14 @@ export default function CanadaBusinessVisa() {
             </p>
           </section>
 
-          {/* FAQ */}
+          {/* 09 FAQ */}
           <section id="faq" className={styles.block} aria-labelledby="faq-h">
             <SectionHead
-              hid="faq-h" kicker="FAQ" title="Canada Business Visa: Frequently Asked Questions" />
+              hid="faq-h"
+              num="09"
+              kicker="FAQ"
+              title="Canada Business Visa: Frequently Asked Questions"
+            />
             <div className={styles.faq}>
               {FAQS.map(({ q, a }, i) => (
                 <details key={q} open={i === 0}>
@@ -746,11 +771,6 @@ export default function CanadaBusinessVisa() {
             </div>
           </section>
         </article>
-
-        {/* Sticky form: VisaForm already renders its own card */}
-        <aside id="consultation" className={styles.aside} aria-label="Free consultation form">
-          <VisaForm />
-        </aside>
       </div>
 
       {/* ══ REVIEWS ════════════════════════════════════════════════════════ */}

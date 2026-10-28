@@ -1,11 +1,21 @@
 // src/app/blog/[slug]/page.jsx
-import { getPostBySlug, getAllPosts } from '@/lib/blog';
-import { notFound } from 'next/navigation';
-import Script from 'next/script';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
+import { getPostBySlug, getAllPosts } from '@/lib/blog';
+import { SITE, absoluteUrl, formatDate, getReadingTime, toListPost } from '@/lib/blog-config';
+import { buildPostGraph } from '@/lib/blog-schema';
+import JsonLd from '@/components/blog/JsonLd';
+import Breadcrumbs from '@/components/blog/Breadcrumbs';
+import CategoryBadge from '@/components/blog/CategoryBadge';
+import ReadingProgress from '@/components/blog/ReadingProgress';
+import TableOfContents from '@/components/blog/TableOfContents';
+import ShareButtons from '@/components/blog/ShareButtons';
+import AuthorCard from '@/components/blog/AuthorCard';
+import FaqSection from '@/components/blog/FaqSection';
+import RelatedPosts from '@/components/blog/RelatedPosts';
+import CtaBanner from '@/components/blog/CtaBanner';
 
-
-// ✅ Required for Next.js 15+ – viewport must be exported separately
+// Next.js 15+: viewport is exported separately from metadata.
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -20,39 +30,46 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-  if (!post) return { title: 'Not Found' };
+  if (!post) return { title: 'Not Found', robots: { index: false } };
 
-  const baseUrl = 'https://www.globalvisainternationals.com';
-  const imageUrl = post.image ? `${baseUrl}${post.image}` : `${baseUrl}/default-og.jpg`;
+  const url = `${SITE.url}/blog/${slug}`;
+  const description = post.excerpt || post.description || '';
+  const image = absoluteUrl(post.image);
+  const author = post.author || SITE.name;
+  const keywords = Array.isArray(post.keywords) ? post.keywords : post.keywords ? [post.keywords] : [];
 
   return {
     title: post.title || 'Untitled',
-    description: post.excerpt || post.description || '',
-    authors: [{ name: post.author || 'Global Visa Internationals' }],
-    keywords: post.keywords || [],
-    alternates: { canonical: `${baseUrl}/blog/${slug}` },
+    description,
+    authors: [{ name: author }],
+    keywords,
+    category: post.category,
+    alternates: { canonical: url },
     openGraph: {
       title: post.title,
-      description: post.excerpt || post.description,
-      url: `${baseUrl}/blog/${slug}`,
-      siteName: 'Global Visa Internationals',
+      description,
+      url,
+      siteName: SITE.name,
+      locale: 'en_IN',
       type: 'article',
       publishedTime: post.date,
-      authors: [post.author],
-      images: [{ url: imageUrl, width: 1200, height: 630 }],
+      modifiedTime: post.updatedAt || post.date,
+      authors: [author],
+      section: post.category,
+      tags: keywords,
+      images: [{ url: image, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.excerpt || post.description,
-      images: [imageUrl],
-      creator: post.twitter?.creator || '@GLOBALVISA1505',
+      description,
+      images: [image],
+      creator: post.twitter?.creator || SITE.twitter,
     },
-    // Add other metadata like robots, etc.
     robots: {
       index: true,
       follow: true,
-      googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+      googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
     },
   };
 }
@@ -62,161 +79,111 @@ export default async function BlogPostPage({ params }) {
   const post = await getPostBySlug(slug);
   if (!post || !post.Content) notFound();
 
-
-  // Destructure all possible metadata with fallbacks
   const {
     title = 'Untitled',
-    image = '/default-og.jpg',
-    author = 'Global Visa Internationals',
-    date = new Date().toISOString(),
+    image = SITE.defaultOg,
+    author = SITE.name,
+    date,
     category = 'Blog',
-    keywords = [],
     excerpt = '',
-    faq = [],           // Optional FAQ array: [{ question, answer }]
+    faq = [],
   } = post;
 
-  const baseUrl = 'https://www.globalvisainternationals.com';
-  const imageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`;
-  const postUrl = `${baseUrl}/blog/${slug}`;
-  const imagePath = image?.startsWith('/') ? image : `/${image || 'default-og.jpg'}`;
+  const postUrl = `${SITE.url}/blog/${slug}`;
+  const imagePath = image.startsWith('/') || image.startsWith('http') ? image : `/${image}`;
+  const readingTime = getReadingTime(post);
 
-  // ----- 1. Organization Schema (global) -----
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Global Visa Internationals',
-    url: baseUrl,
-    logo: `${baseUrl}/gvilogo.png`,
-    sameAs: [
-      'https://www.facebook.com/globalvisainternationals/',
-      'https://www.instagram.com/globalvisa_internationals/',
-      'https://www.linkedin.com/company/global-visa-internationals/',
-      'https://x.com/GLOBALVISA1505',
-      'https://www.youtube.com/@globalVisaInternationals',
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+91-7022-213-466',
-      contactType: 'customer service',
-      email: 'operations@globalvisainternationals.com',
-      availableLanguage: ['English', 'Hindi'],
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'GF-9, Business Point, Brigade Road',
-      addressLocality: 'Bangalore',
-      postalCode: '560025',
-      addressCountry: 'IN',
-    },
-  };
-
-  // ----- 2. Article Schema (dynamic) -----
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title,
-    description: excerpt,
-    image: imageUrl,
-    author: { '@type': 'Person', name: author },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Global Visa Internationals',
-      logo: { '@type': 'ImageObject', url: `${baseUrl}/gvilogo.png` },
-    },
-    datePublished: date,
-    dateModified: date,
-    mainEntityOfPage: postUrl,
-    keywords: Array.isArray(keywords) ? keywords.join(', ') : keywords,
-    articleSection: category,
-    inLanguage: 'en-IN',
-  };
-
-  // ----- 3. BreadcrumbList Schema -----
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${baseUrl}/blog` },
-      { '@type': 'ListItem', position: 3, name: title, item: postUrl },
-    ],
-  };
-
-  // ----- 4. WebPage Schema (enhances SEO) -----
-  const webpageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: title,
-    description: excerpt,
-    url: postUrl,
-    publisher: organizationSchema,
-    mainEntity: articleSchema,
-    breadcrumb: breadcrumbSchema,
-    primaryImageOfPage: imageUrl,
-    datePublished: date,
-    dateModified: date,
-  };
-
-  // ----- 5. FAQPage Schema (optional, if post provides faq array) -----
-  let faqSchema = null;
-  if (Array.isArray(faq) && faq.length > 0) {
-    faqSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faq.map((item) => ({
-        '@type': 'Question',
-        name: item.question,
-        acceptedAnswer: { '@type': 'Answer', text: item.answer },
-      })),
-    };
-  }
+  // Related: same category first, then most recent others.
+  const all = (await getAllPosts()).filter((p) => p.slug !== slug);
+  const related = [
+    ...all.filter((p) => p.category === category),
+    ...all.filter((p) => p.category !== category),
+  ]
+    .slice(0, 3)
+    .map(toListPost);
 
   return (
     <>
-      {/* All structured data scripts */}
-      <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }} />
-      {faqSchema && <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+      <JsonLd data={buildPostGraph({ post: { ...post, title, image, author, category, faq }, slug })} />
+      <ReadingProgress targetId="post-body" />
 
-      <article className="w-full max-w-3xl min-w-0 mx-auto px-4 py-8 sm:px-6 sm:py-12 font-sans text-gray-800 mt-16">
-        <header className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{title}</h1>
-          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 border-b pb-4">
-            <span className="font-semibold">Category:</span> {category}
-            <span className="text-gray-400">|</span>
-            <span className="font-semibold">Author:</span> {author}
-            <span className="text-gray-400">|</span>
-            <span className="font-semibold">Date:</span>
-            <time dateTime={date}>{new Date(date).toLocaleDateString()}</time>
+      <article className="pb-16">
+        {/* Header */}
+        <header className="border-b border-slate-200 bg-white">
+          <div className="mx-auto max-w-4xl px-4 pb-10 pt-28 sm:px-6 sm:pb-14 sm:pt-36">
+            <Breadcrumbs
+              items={[
+                { name: 'Home', href: '/' },
+                { name: 'Blog', href: '/blog' },
+                { name: title },
+              ]}
+            />
+            <CategoryBadge className="mt-6">{category}</CategoryBadge>
+            <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-[#002B5B] sm:text-5xl">
+              {title}
+            </h1>
+            {excerpt && <p className="mt-4 text-lg leading-relaxed text-slate-600">{excerpt}</p>}
+
+            <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500">
+              <span className="font-semibold text-slate-800">{author}</span>
+              {date && (
+                <>
+                  <span aria-hidden="true">•</span>
+                  <time dateTime={date}>{formatDate(date)}</time>
+                </>
+              )}
+              {readingTime && (
+                <>
+                  <span aria-hidden="true">•</span>
+                  <span>{readingTime}</span>
+                </>
+              )}
+            </div>
           </div>
         </header>
-        {image && (
-          <div className="my-6 rounded-xl overflow-hidden shadow-md relative w-full h-[220px] sm:h-96">
+
+        {/* Hero image (aspect matches 1200x630 OG image so nothing is cropped badly) */}
+        <div className="mx-auto max-w-5xl px-4 pt-8 sm:px-6">
+          <div className="relative aspect-[1200/630] w-full overflow-hidden rounded-3xl bg-slate-100 shadow-lg">
             <Image
               src={imagePath}
               alt={title}
               fill
-              className="object-contain"
               priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
             />
           </div>
-        )}
-
-        <div className="prose prose-sm sm:prose-base lg:prose-lg prose-teal max-w-none">
-          <post.Content />
         </div>
 
-        <footer className="mt-12 pt-6 border-t text-center">
-          <div className="bg-teal-50 p-6 rounded-xl">
-            <h3 className="text-xl font-bold text-teal-800">Ready to start your journey?</h3>
-            <p className="text-gray-700 mt-2">Contact Global Visa Internationals for expert guidance.</p>
-            <a href="/contact" className="inline-block mt-4 bg-teal-700 text-white px-6 py-2 rounded-md hover:bg-teal-800 transition">
-              Talk to an Expert →
-            </a>
+        {/* Body + TOC */}
+        <div className="mx-auto mt-10 max-w-6xl px-4 sm:px-6">
+          <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-14">
+            <div className="min-w-0">
+              <TableOfContents targetId="post-body" />
+
+              <div
+                id="post-body"
+                className="prose prose-base max-w-none sm:prose-lg prose-headings:font-extrabold prose-headings:text-[#002B5B] prose-a:text-[#057A7E] prose-a:no-underline hover:prose-a:underline prose-img:rounded-2xl"
+              >
+                <post.Content />
+              </div>
+
+              <ShareButtons url={postUrl} title={title} className="mt-10 border-t border-slate-200 pt-6" />
+              <AuthorCard author={author} className="mt-6" />
+              <FaqSection faq={faq} className="mt-12" />
+            </div>
+
+            <aside className="hidden lg:block">
+              <TableOfContents targetId="post-body" variant="desktop" />
+            </aside>
           </div>
-        </footer>
+        </div>
+
+        <div className="mx-auto mt-16 max-w-6xl px-4 sm:px-6">
+          <RelatedPosts posts={related} />
+          <CtaBanner className="mt-16" />
+        </div>
       </article>
     </>
   );
