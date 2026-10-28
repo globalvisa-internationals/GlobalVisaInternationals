@@ -1,13 +1,13 @@
 // src/app/blog/BlogList.jsx
 'use client';
 import { useMemo, useRef, useState } from 'react';
-import BlogHero from '@/components/blog/BlogHero';
-import SearchBar from '@/components/blog/SearchBar';
-import CategoryTabs from '@/components/blog/CategoryTabs';
-import FeaturedPost from '@/components/blog/FeaturedPost';
-import PostCard from '@/components/blog/PostCard';
-import Pagination from '@/components/blog/Pagination';
-import CtaBanner from '@/components/blog/CtaBanner';
+import BlogHero from '@/Components/blog/BlogHero';
+import SearchBar from '@/Components/blog/SearchBar';
+import CategoryTabs from '@/Components/blog/CategoryTabs';
+import FeaturedPost from '@/Components/blog/FeaturedPost';
+import PostCard from '@/Components/blog/PostCard';
+import Pagination from '@/Components/blog/Pagination';
+import CtaBanner from '@/Components/blog/CtaBanner';
 import { CATEGORIES, POSTS_PER_PAGE } from '@/lib/blog-config';
 
 export default function BlogList({ posts }) {

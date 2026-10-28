@@ -1,7 +1,7 @@
 // src/app/blog/page.jsx
 import { getAllPosts } from '@/lib/blog';
 import BlogList from './BlogList';
-import JsonLd from '@/components/blog/JsonLd';
+import JsonLd from '@/Components/blog/JsonLd';
 import { SITE, absoluteUrl, toListPost } from '@/lib/blog-config';
 import { buildListGraph } from '@/lib/blog-schema';
 

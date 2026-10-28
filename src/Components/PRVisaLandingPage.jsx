@@ -1,5 +1,5 @@
 import Image from "next/image";
-import VisaForm from "@/components/VisaForm";
+import VisaForm from "@/Components/VisaForm";
 import styles from "./PRVisaLandingPage.module.css";
 
 function JsonLd({ data }) {

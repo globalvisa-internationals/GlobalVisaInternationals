@@ -4,16 +4,16 @@ import { notFound } from 'next/navigation';
 import { getPostBySlug, getAllPosts } from '@/lib/blog';
 import { SITE, absoluteUrl, formatDate, getReadingTime, toListPost } from '@/lib/blog-config';
 import { buildPostGraph } from '@/lib/blog-schema';
-import JsonLd from '@/components/blog/JsonLd';
-import Breadcrumbs from '@/components/blog/Breadcrumbs';
-import CategoryBadge from '@/components/blog/CategoryBadge';
-import ReadingProgress from '@/components/blog/ReadingProgress';
-import TableOfContents from '@/components/blog/TableOfContents';
-import ShareButtons from '@/components/blog/ShareButtons';
-import AuthorCard from '@/components/blog/AuthorCard';
-import FaqSection from '@/components/blog/FaqSection';
-import RelatedPosts from '@/components/blog/RelatedPosts';
-import CtaBanner from '@/components/blog/CtaBanner';
+import JsonLd from '@/Components/blog/JsonLd';
+import Breadcrumbs from '@/Components/blog/Breadcrumbs';
+import CategoryBadge from '@/Components/blog/CategoryBadge';
+import ReadingProgress from '@/Components/blog/ReadingProgress';
+import TableOfContents from '@/Components/blog/TableOfContents';
+import ShareButtons from '@/Components/blog/ShareButtons';
+import AuthorCard from '@/Components/blog/AuthorCard';
+import FaqSection from '@/Components/blog/FaqSection';
+import RelatedPosts from '@/Components/blog/RelatedPosts';
+import CtaBanner from '@/Components/blog/CtaBanner';
 
 // Next.js 15+: viewport is exported separately from metadata.
 export const viewport = {
