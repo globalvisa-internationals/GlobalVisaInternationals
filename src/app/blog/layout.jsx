@@ -1,12 +1,11 @@
-//src\app\blog\layout.jsx
-"use client";
-
-import Script from "next/script";
+// src/app/blog/layout.jsx
+// No "use client" needed: next/script works in Server Components.
+import Script from 'next/script';
 
 export default function BlogLayout({ children }) {
   return (
     <>
-      {/* SWG Script */}
+      {/* Google Subscribe with Google (SWG) */}
       <Script
         id="swg-basic"
         strategy="afterInteractive"
@@ -25,7 +24,8 @@ export default function BlogLayout({ children }) {
         `}
       </Script>
 
-      {children}
+      {/* div, not main: your root layout likely already renders <main> */}
+      <div className="min-h-screen bg-slate-50/60">{children}</div>
     </>
   );
 }

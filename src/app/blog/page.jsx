@@ -1,36 +1,45 @@
-//GlobalVisaInternationals\src\app\blog\page.jsx
+// src/app/blog/page.jsx
 import { getAllPosts } from '@/lib/blog';
 import BlogList from './BlogList';
+import JsonLd from '@/components/blog/JsonLd';
+import { SITE, absoluteUrl, toListPost } from '@/lib/blog-config';
+import { buildListGraph } from '@/lib/blog-schema';
 
+const title = 'Blog – Visa, Immigration & Study Abroad Guides';
+const description =
+  'Expert articles on visas, immigration, study abroad, work permits and travel from Global Visa Internationals. Practical, up-to-date guidance for your move abroad.';
 
-export async function generateMetadata() {
-  const pageTitle = "Blog - Global Visa Internationals";
-  const pageDescription = "Explore insightful articles and updates on visas, immigration services, and more at Global Visa Internationals.";
-
-  return {
-    title: pageTitle,
-    description: pageDescription,
-    openGraph: {
-      title: pageTitle,
-      description: pageDescription,
-      url: "https://www.globalvisainternationals.com/blog",
-      images: [
-        {
-          url: "https://www.globalvisainternationals.com/images",
-          alt: "Blog on Global Visa Internationals",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: pageTitle,
-      description: pageDescription,
-      images: ["https://www.globalvisainternationals.com/images"],
-    },
-  };
-}
+export const metadata = {
+  title,
+  description,
+  alternates: { canonical: `${SITE.url}/blog` },
+  openGraph: {
+    title,
+    description,
+    url: `${SITE.url}/blog`,
+    siteName: SITE.name,
+    type: 'website',
+    locale: 'en_IN',
+    images: [{ url: absoluteUrl(SITE.defaultOg), width: 1200, height: 630, alt: 'Global Visa Internationals Blog' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: [absoluteUrl(SITE.defaultOg)],
+    creator: SITE.twitter,
+  },
+  robots: { index: true, follow: true },
+};
 
 export default async function BlogPage() {
-  const posts = await getAllPosts();
-  return <BlogList posts={posts} />;
+  const all = await getAllPosts();
+  const posts = all.map(toListPost);
+
+  return (
+    <>
+      <JsonLd data={buildListGraph({ posts })} />
+      <BlogList posts={posts} />
+    </>
+  );
 }

@@ -18,7 +18,7 @@ import { ReviewSchema } from "@/Components/ReviewSchema";
 // ───────────────────────────────────────────────────────────────────────────
 const SITE_URL = "https://www.globalvisainternationals.com";
 const PAGE_URL = `${SITE_URL}/about-us`;
-const FOUNDING_YEAR = 2014; // if you started earlier, change this one number
+const FOUNDING_YEAR = 2016; // if you started earlier, change this one number
 const YEARS = new Date().getFullYear() - FOUNDING_YEAR;
 const PHONE = "+917022213466";
 const WHATSAPP = "917022213466";
