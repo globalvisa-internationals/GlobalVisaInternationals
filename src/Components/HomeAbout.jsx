@@ -1,745 +1,244 @@
-'use client';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import React from 'react';
-import {
-  FaCheckCircle, FaStar, FaArrowRight, FaPlayCircle,
-  FaChevronLeft, FaChevronRight, FaPhone, FaWhatsapp,
-  FaEnvelope, FaMapMarkerAlt, FaPassport, FaGlobe,
-  FaShieldAlt, FaHandshake, FaClock, FaAward,
-  FaQuoteLeft, FaAngleRight, FaTimes,
-} from 'react-icons/fa';
-import ReviewCarousel from './ReviewCarousel';
-import VisaForm from './VisaForm';
+"use client";
 
-// ─── GALLERY CAROUSEL ─────────────────────────────────────────────────────────
-const GalleryCarousel = ({ slides = [], autoSlide = true, interval = 4000 }) => {
-  const [cur, setCur] = useState(0);
-  const timerRef = useRef(null);
+import { useState } from "react";
+import Link from "next/link";
+import { FaArrowRight, FaCheckCircle, FaGlobeAsia, FaGraduationCap, FaPlaneDeparture, FaPassport, FaBriefcase, FaUsers, FaWhatsapp, FaMapMarkerAlt, FaRegClock } from "react-icons/fa";
+import VisaForm from "./VisaForm";
+import ReviewCarousel from "./ReviewCarousel";
 
-  const advance = useCallback((dir) => {
-    clearInterval(timerRef.current);
-    setCur(p => (p + dir + slides.length) % slides.length);
-    if (autoSlide) {
-      timerRef.current = setInterval(() => setCur(p => (p + 1) % slides.length), interval);
-    }
-  }, [slides.length, autoSlide, interval]);
-
-  useEffect(() => {
-    if (!autoSlide || !slides.length) return;
-    timerRef.current = setInterval(() => setCur(p => (p + 1) % slides.length), interval);
-    return () => clearInterval(timerRef.current);
-  }, [autoSlide, slides.length, interval]);
-
-  if (!slides.length) return null;
-
-  const prev = (cur - 1 + slides.length) % slides.length;
-  const next = (cur + 1) % slides.length;
-
-  return (
-    <div className="relative select-none">
-      <div className="flex items-center justify-center gap-4 h-[320px] md:h-[420px] overflow-hidden px-4">
-        {/* Prev */}
-        <div className="hidden md:block flex-shrink-0 w-[260px] h-[200px] opacity-40 scale-90 origin-right transition-all duration-500 rounded-xl overflow-hidden cursor-pointer"
-          onClick={() => advance(-1)}>
-          <img src={slides[prev]} alt="" className="w-full h-full object-cover" />
-        </div>
-        {/* Active */}
-        <div className="flex-shrink-0 w-full max-w-[480px] md:max-w-[580px] h-[280px] md:h-[380px] transition-all duration-500 rounded-2xl overflow-hidden shadow-2xl shadow-navy/20 ring-1 ring-white/20">
-          <img src={slides[cur]} alt={`Gallery ${cur + 1}`} className="w-full h-full object-cover" loading="lazy" />
-        </div>
-        {/* Next */}
-        <div className="hidden md:block flex-shrink-0 w-[260px] h-[200px] opacity-40 scale-90 origin-left transition-all duration-500 rounded-xl overflow-hidden cursor-pointer"
-          onClick={() => advance(1)}>
-          <img src={slides[next]} alt="" className="w-full h-full object-cover" />
-        </div>
-      </div>
-
-      {/* Controls */}
-      <div className="flex items-center justify-center gap-6 mt-6">
-        <button onClick={() => advance(-1)} aria-label="Previous"
-          className="w-9 h-9 rounded-full border border-slate-200 hover:border-[#0383C9] text-slate-400 hover:text-[#0383C9] flex items-center justify-center transition-colors">
-          <FaChevronLeft className="text-sm" />
-        </button>
-        <div className="flex gap-2">
-          {slides.map((_, i) => (
-            <button key={i} onClick={() => { clearInterval(timerRef.current); setCur(i); }}
-              className={`rounded-full transition-all duration-300 ${i === cur ? 'w-6 h-2 bg-[#0383C9]' : 'w-2 h-2 bg-slate-200 hover:bg-slate-300'}`}
-              aria-label={`Slide ${i + 1}`} />
-          ))}
-        </div>
-        <button onClick={() => advance(1)} aria-label="Next"
-          className="w-9 h-9 rounded-full border border-slate-200 hover:border-[#0383C9] text-slate-400 hover:text-[#0383C9] flex items-center justify-center transition-colors">
-          <FaChevronRight className="text-sm" />
-        </button>
-      </div>
-    </div>
-  );
-};
-
-// ─── INLINE FAQ ───────────────────────────────────────────────────────────────
-const InlineFAQ = ({ faqs = [] }) => {
-  const [open, setOpen] = useState(0);
-  return (
-    <div className="space-y-2">
-      {faqs.map(({ question, answer }, i) => (
-        <div key={i} className="border border-slate-100 rounded-xl overflow-hidden">
-          <button onClick={() => setOpen(open === i ? -1 : i)}
-            className={`w-full text-left px-5 py-4 flex items-center justify-between gap-4 transition-colors text-sm font-semibold font-body
-              ${open === i ? 'bg-[#0383C9]/5 text-[#0383C9]' : 'bg-white text-[#0B1E33] hover:bg-slate-50'}`}>
-            <span>{question}</span>
-            <FaChevronRight className={`text-xs flex-shrink-0 transition-transform duration-200 ${open === i ? 'rotate-90' : ''}`} />
-          </button>
-          {open === i && (
-            <div className="px-5 py-4 bg-white border-t border-slate-100">
-              <p className="text-slate-600 text-sm leading-relaxed font-body">{answer}</p>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-};
-
-// ─── SCROLL REVEAL ────────────────────────────────────────────────────────────
-const Reveal = ({ children, delay = 0, className = '' }) => {
-  const [visible, setVisible] = useState(false);
-  const ref = useRef(null);
-  useEffect(() => {
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold: 0.08 });
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
-  }, []);
-  return (
-    <div ref={ref} className={`transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}>
-      {children}
-    </div>
-  );
-};
-
-// ─── SERVICE CARD DATA ────────────────────────────────────────────────────────
-const VISA_SERVICES = [
-  { name: 'Tourist Visa', img: '/svg/Tourist-Visa.webp', desc: 'Seamless tourist & visitor visa assistance worldwide.', links: [['Canada', '/Visa/tourist-visa/canada'], ['Australia', '/Visa/tourist-visa/australia'], ['USA', '/Visa/tourist-visa/usa'], ['UK', '/Visa/tourist-visa/united-kingdom'], ['Europe', '/Visa/tourist-visa/europe'], ['Japan', '/Visa/tourist-visa/japan'], ['Dubai', '/Visa/tourist-visa/dubai'], ['Singapore', '/Visa/tourist-visa/singapore']] },
-  { name: 'Business Visa', img: '/svg/business-visa.webp', desc: 'Professional support for global business travel.', links: [['Canada', '/Visa/business-visa/canada'], ['Australia', '/Visa/business-visa/australia'], ['UK', '/Visa/business-visa/uk'], ['Europe', '/Visa/business-visa/europe'], ['New Zealand', '/Visa/business-visa/new-zealand']] },
-  { name: 'PR Visa', img: '/svg/PR-Visa.webp', desc: 'Expert permanent residency pathways for Canada & Australia.', links: [['Canada', '/Visa/permanent-residency-visa/canada-pr-visa'], ['Australia', '/Visa/permanent-residency-visa/australia-pr-visa']] },
-  { name: 'Student Visa', img: '/svg/student-visa.webp', desc: 'Study abroad made simple — from application to approval.', links: [['Canada', '/Visa/student-visa/canada'], ['Australia', '/Visa/student-visa/australia'], ['USA', '/Visa/student-visa/usa'], ['UK', '/Visa/student-visa/uk'], ['Europe', '/Visa/student-visa/europe'], ['New Zealand', '/Visa/student-visa/new-zealand']] },
-  { name: 'Dependent Visa', img: '/svg/Dependent Visa.webp', desc: 'Reunite your family across international borders.', links: [['Canada', '/Visa/Dependent/canada'], ['Australia', '/Visa/Dependent/australia'], ['UK', '/Visa/Dependent/uk'], ['Europe', '/Visa/Dependent/europe'], ['New Zealand', '/Visa/Dependent/new-zealand']] },
-  { name: 'Refusal Visa', img: '/svg/refusal visa.webp', desc: 'Overcome past refusals with our reapplication strategy.', links: [['Canada', '/Visa/refusal-visa/canada'], ['Australia', '/Visa/refusal-visa/australia'], ['USA', '/Visa/refusal-visa/usa'], ['UK', '/Visa/refusal-visa/uk'], ['Europe', '/Visa/refusal-visa/europe'], ['Japan', '/Visa/refusal-visa/japan'], ['Dubai', '/Visa/refusal-visa/dubai'], ['Singapore', '/Visa/refusal-visa/singapore']] },
-];
-const ServiceCard = ({ s }) => {
-  const [flipped, setFlipped] = useState(false);
-  return (
-    <div className="w-full max-w-[280px] mx-auto h-[400px] cursor-pointer" style={{ perspective: '1000px' }}
-      onMouseEnter={() => setFlipped(true)} onMouseLeave={() => setFlipped(false)}>
-      <div className="relative w-full h-full transition-transform duration-500"
-        style={{ transformStyle: 'preserve-3d', transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
-        {/* Front */}
-        <div className="absolute inset-0 bg-white rounded-2xl border border-slate-100 shadow-md flex flex-col items-center justify-center p-6 text-center"
-          style={{ backfaceVisibility: 'hidden' }}>
-          <div className="w-24 h-24 rounded-2xl bg-[#0383C9]/8 flex items-center justify-center mb-5">
-            <img src={s.img} alt={s.name} className="w-14 h-14 object-contain" />
-          </div>
-          <h3 className="font-display text-[#0B1E33] text-xl font-semibold mb-3">{s.name}</h3>
-          <p className="text-slate-500 text-sm leading-relaxed font-body px-2">{s.desc}</p>
-          <div className="mt-5 text-[11px] font-bold uppercase tracking-widest text-[#0383C9] font-body">Hover to explore</div>
-        </div>
-        {/* Back (unchanged) */}
-        <div className="absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-5 overflow-y-auto"
-          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)', background: 'linear-gradient(135deg,#0B1E33,#0383C9)' }}>
-          <h3 className="font-display text-white text-base font-semibold mb-4">{s.name}</h3>
-          <div className="w-full space-y-1.5">
-            {s.links.map(([label, href]) => (
-              <a key={label} href={href}
-                className="flex items-center justify-between bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-colors font-body">
-                {label} <FaAngleRight className="text-[10px]" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// ─── PAGE DATA ────────────────────────────────────────────────────────────────
-const MVV_CARDS = [
-  { title: 'Our Mission', img: '/gviVMV/mission-icon.png', accent: '#0383C9', text: 'To provide clear, ethical visa and immigration guidance — helping students, professionals and families navigate international processes with accuracy and confidence.' },
-  { title: 'Our Vision', img: '/gviVMV/vision-icon.png', accent: '#1A9612', text: 'To be a globally recognised consultancy known for transparent processes, regulatory compliance, and consistent client support across every visa category.' },
-  { title: 'Our Values', img: '/gviVMV/values-icon.png', accent: '#0261A1', text: 'Transparency, accountability, empathy and a client-first culture guide every interaction — grounded in ethical advisory and deep respect for immigration regulations.' },
+const services = [
+  { title: "Tourist Visa", desc: "Plan your next holiday with clear guidance on documents and application steps.", icon: FaPlaneDeparture, href: "/Visa/tourist-visa" },
+  { title: "Student Visa", desc: "Get help understanding study visa requirements, timelines and paperwork.", icon: FaGraduationCap, href: "/Visa/student-visa" },
+  { title: "Permanent Residency", desc: "Explore skilled migration and permanent residency pathways.", icon: FaGlobeAsia, href: "/Visa/permanent-residency-visa" },
+  { title: "Business Visa", desc: "Prepare for business travel with an organised application checklist.", icon: FaBriefcase, href: "/Visa/business-visa" },
+  { title: "Dependent Visa", desc: "Understand the documents and steps for joining family overseas.", icon: FaUsers, href: "/Visa/dependent-visa" },
+  { title: "Visa Refusal Support", desc: "Review the refusal reasons and understand possible next steps.", icon: FaPassport, href: "/Visa/visa-refusal" },
 ];
 
-const FAQS = [
-  { question: 'My visa was refused. Can I reapply?', answer: 'Yes — address the specific refusal reasons with corrected documentation and a stronger application. Our specialists review your case at no cost.' },
-  { question: 'How do I qualify for the Canada PR Visa?', answer: 'You need an eligible occupation under NOC 0, A or B. We assess your CRS score, Express Entry profile, and provincial nominee options to find the best pathway.' },
-  { question: 'Can my spouse work on a dependent visa?', answer: 'It varies by country. Many nations grant open work rights automatically; others require a separate permit. We advise based on your specific destination.' },
-  { question: 'Can I work on a student visa?', answer: 'In most countries, yes — up to 20 hours per week during term and full-time during official semester breaks.' },
-  { question: 'How long is the Portugal Job Seeker Visa valid?', answer: 'Initially valid for 120 days, extendable by an additional 60 days if you have not yet secured employment.' },
-  { question: 'Who is eligible for an Austrian job seeker visa?', answer: 'Non-EU citizens with a recognised higher education degree from Austria or an accredited foreign institution, plus sufficient financial means.' },
+const steps = [
+  ["01", "Tell us your plans", "Share your destination, travel purpose and preferred timeline."],
+  ["02", "Understand your checklist", "Get guidance on the documents and requirements relevant to your case."],
+  ["03", "Prepare your application", "Organise your paperwork and review the application before submission."],
 ];
 
-const GALLERY_SLIDES = [
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop',
-  '/gallery/1.jpg', '/gallery/2.jpg', '/gallery/3.jpg', './gallery/4.jpg',
-  '/gallery/5.jpg', '/gallery/6.jpg', '/gallery/7.jpg',
+const faqs = [
+  ["Which visa should I apply for?", "It depends on your destination, purpose of travel, eligibility and personal circumstances. Our team can help you understand the relevant options."],
+  ["Can you guarantee visa approval?", "No. Visa decisions are made by the relevant embassy, consulate or immigration authority. We provide application guidance, not a guarantee of approval."],
+  ["What documents do I need?", "Requirements vary by country and visa type. We help you identify the applicable checklist for your circumstances."],
 ];
 
-// ═════════════════════════════════════════════════════════════════════════════
-// MAIN COMPONENT
-// ═════════════════════════════════════════════════════════════════════════════
 export default function HomeAbout() {
-  const ticker = ['USA Visa 🇺🇸', 'Canada Visa 🇨🇦', 'UK Visa 🇬🇧', 'Australia Visa 🇦🇺', 'Germany Visa 🇩🇪', 'France Visa 🇫🇷', 'Italy Visa 🇮🇹', 'Spain Visa 🇪🇸', 'Singapore Visa 🇸🇬', 'Dubai Visa 🇦🇪', 'New Zealand Visa 🇳🇿', 'Japan Visa 🇯🇵'];
+  const [openFaq, setOpenFaq] = useState(0);
 
   return (
-    <>
-      {/* ── GLOBAL CSS ─────────────────────────────────────────────────────── */}
+    <div className="gvi-v2">
       <style jsx global>{`
-        @keyframes gviFloat  { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-14px)} }
-        @keyframes gviTicker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-        .gvi-float-a { animation: gviFloat 5s ease-in-out infinite; }
-        .gvi-float-b { animation: gviFloat 6.5s ease-in-out 0.8s infinite; }
-        .gvi-float-c { animation: gviFloat 5.8s ease-in-out 1.6s infinite; }
-        .gvi-float-d { animation: gviFloat 7s   ease-in-out 0.4s infinite; }
-        .gvi-float-e { animation: gviFloat 6s   ease-in-out 2s   infinite; }
-        .gvi-ticker  { animation: gviTicker 32s linear infinite; }
-        .font-display { font-family: 'Cormorant Garamond', serif; }
-        .font-body    { font-family: 'DM Sans', sans-serif; }
-        .gvi-section-pad { padding-top: 5rem; padding-bottom: 5rem; }
-        @media (min-width:768px) { .gvi-section-pad { padding-top: 7rem; padding-bottom: 7rem; } }
+        .gvi-v2{--ink:#173b32;--green:#1e5b49;--mint:#e6f0e9;--cream:#fbf8f1;--orange:#d97745;--muted:#66756d;--line:#e5e5dc;color:var(--ink);font-family:inherit;background:#fff}
+        .gvi-v2 *{box-sizing:border-box}
+        .gvi-v2 a{color:inherit;text-decoration:none}
+        .gvi-v2 .wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+        .gvi-v2 .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:800;color:var(--green)}
+        .gvi-v2 .eyebrow:before{content:"";width:24px;height:2px;background:var(--orange)}
+        .gvi-v2 .hero{background:var(--cream);position:relative;overflow:hidden;padding:62px 0 54px}
+        .gvi-v2 .hero:after{content:"";position:absolute;right:-150px;top:-190px;width:480px;height:480px;border:1px solid #e9e4d8;border-radius:50%;box-shadow:0 0 0 55px #f8f4eb,0 0 0 110px #faf6ee;pointer-events:none}
+        .gvi-v2 .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(350px,.82fr);gap:54px;align-items:center;position:relative;z-index:1}
+        .gvi-v2 h1,.gvi-v2 h2,.gvi-v2 h3{margin:0;color:var(--ink)}
+        .gvi-v2 h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.045em;font-size:clamp(42px,5vw,68px);line-height:1.04;margin:20px 0}
+        .gvi-v2 h1 em{font-style:italic;color:var(--orange)}
+        .gvi-v2 .hero-copy>p{font-size:17px;line-height:1.8;color:#53665d;max-width:570px;margin:0 0 25px}
+        .gvi-v2 .actions{display:flex;gap:12px;flex-wrap:wrap}
+        .gvi-v2 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:5px;padding:14px 20px;font-weight:750;font-size:14px;transition:transform .2s,background .2s}
+        .gvi-v2 .btn:hover{transform:translateY(-2px)}
+        .gvi-v2 .btn-primary{background:var(--green);color:#fff!important}
+        .gvi-v2 .btn-secondary{border:1px solid #cbd7ce;background:transparent;color:var(--ink)}
+        .gvi-v2 .trustline{display:flex;gap:18px;flex-wrap:wrap;margin-top:27px;color:#586d62;font-size:12px;font-weight:700}
+        .gvi-v2 .trustline span{display:flex;align-items:center;gap:7px}
+        .gvi-v2 .trustline svg{color:var(--green)}
+        .gvi-v2 .hero-right{position:relative;min-width:0}
+        .gvi-v2 .hero-photo{height:390px;border-radius:180px 180px 8px 8px;overflow:hidden;background:linear-gradient(145deg,#dce9df,#f0d6bf);position:relative;box-shadow:0 22px 50px #244c3b18}
+        .gvi-v2 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+        .gvi-v2 .photo-fallback{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:35px;background:linear-gradient(150deg,#dce9df,#f4dfca);color:var(--green)}
+        .gvi-v2 .photo-fallback svg{font-size:52px;margin-bottom:14px}
+        .gvi-v2 .photo-fallback strong{font:500 28px Georgia,serif}
+        .gvi-v2 .photo-fallback span{margin-top:8px;font-size:13px}
+        .gvi-v2 .float-note{position:absolute;left:-28px;bottom:26px;background:#fff;border:1px solid #eee8dd;border-radius:8px;padding:16px 18px;box-shadow:0 14px 35px #173b3214;max-width:220px}
+        .gvi-v2 .float-note b{display:block;font-family:Georgia,serif;font-size:21px;font-weight:500;margin-bottom:4px}
+        .gvi-v2 .float-note span{font-size:12px;color:var(--muted);line-height:1.5;display:block}
+        .gvi-v2 .form-panel{position:sticky;top:95px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;box-shadow:0 15px 45px #173b3210}
+        .gvi-v2 .form-panel h2{font:500 25px Georgia,serif;margin-bottom:6px}
+        .gvi-v2 .form-panel>p{color:var(--muted);font-size:13px;line-height:1.6;margin:0 0 14px}
+        .gvi-v2 .form-panel form{margin:0}
+        .gvi-v2 .form-panel input,.gvi-v2 .form-panel select,.gvi-v2 .form-panel textarea{max-width:100%}
+        .gvi-v2 .form-panel button{max-width:100%}
+        .gvi-v2 .proof{padding:19px 0;border-bottom:1px solid var(--line)}
+        .gvi-v2 .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+        .gvi-v2 .proof-item{display:flex;align-items:center;gap:12px;padding:8px 0}
+        .gvi-v2 .proof-icon{width:42px;height:42px;display:grid;place-items:center;background:var(--mint);border-radius:50%;font-size:18px;color:var(--green);flex-shrink:0}
+        .gvi-v2 .proof-item b{display:block;font-size:13px;margin-bottom:3px}
+        .gvi-v2 .proof-item span{display:block;color:var(--muted);font-size:11px;line-height:1.4}
+        .gvi-v2 .section{padding:82px 0}
+        .gvi-v2 .section-head{max-width:670px;margin-bottom:34px}
+        .gvi-v2 .section-head h2{font:500 clamp(32px,4vw,46px)/1.12 Georgia,'Times New Roman',serif;letter-spacing:-.03em;margin:14px 0}
+        .gvi-v2 .section-head p{font-size:15px;line-height:1.8;color:var(--muted);margin:0}
+        .gvi-v2 .services{background:#fff}
+        .gvi-v2 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+        .gvi-v2 .service-card{border:1px solid var(--line);padding:26px;border-radius:7px;min-height:220px;transition:border-color .2s,transform .2s,box-shadow .2s}
+        .gvi-v2 .service-card:hover{border-color:#a9c5b4;transform:translateY(-4px);box-shadow:0 14px 30px #173b320b}
+        .gvi-v2 .service-icon{width:48px;height:48px;display:grid;place-items:center;background:var(--mint);color:var(--green);font-size:21px;border-radius:50%;margin-bottom:20px}
+        .gvi-v2 .service-card h3{font:500 24px Georgia,serif;margin-bottom:9px}
+        .gvi-v2 .service-card p{color:var(--muted);font-size:13px;line-height:1.75;margin:0 0 18px}
+        .gvi-v2 .text-link{display:inline-flex;gap:9px;align-items:center;color:var(--green)!important;font-size:12px;font-weight:800}
+        .gvi-v2 .about{background:var(--cream)}
+        .gvi-v2 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+        .gvi-v2 .about-art{min-height:390px;position:relative;display:flex;align-items:center;justify-content:center;background:#e2ece4;border-radius:8px;overflow:hidden}
+        .gvi-v2 .about-art:before,.gvi-v2 .about-art:after{content:"";position:absolute;border:1px solid #b7cbbd;border-radius:50%;width:280px;height:280px}
+        .gvi-v2 .about-art:after{width:380px;height:380px}
+        .gvi-v2 .about-art-inner{position:relative;z-index:1;text-align:center;padding:30px}
+        .gvi-v2 .about-art-inner svg{font-size:52px;color:var(--green);margin-bottom:18px}
+        .gvi-v2 .about-art-inner strong{display:block;font:500 35px/1.1 Georgia,serif;max-width:280px}
+        .gvi-v2 .about-art-inner span{display:block;color:#62786b;font-size:12px;margin-top:12px}
+        .gvi-v2 .about-copy h2{font:500 clamp(32px,4vw,46px)/1.12 Georgia,serif;letter-spacing:-.03em;margin:15px 0}
+        .gvi-v2 .about-copy>p{color:var(--muted);font-size:14px;line-height:1.9}
+        .gvi-v2 .check-list{list-style:none;padding:0;margin:22px 0;display:grid;gap:13px}
+        .gvi-v2 .check-list li{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#42584d;line-height:1.6}
+        .gvi-v2 .check-list svg{color:var(--green);flex-shrink:0;margin-top:2px}
+        .gvi-v2 .process{background:#fff}
+        .gvi-v2 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+        .gvi-v2 .step{border-top:1px solid #cbd8ce;padding-top:21px}
+        .gvi-v2 .step-no{font:italic 30px Georgia,serif;color:var(--orange)}
+        .gvi-v2 .step h3{font:500 24px Georgia,serif;margin:13px 0 9px}
+        .gvi-v2 .step p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}
+        .gvi-v2 .reviews{background:var(--cream)}
+        .gvi-v2 .reviews .section-head{text-align:center;margin-left:auto;margin-right:auto}
+        .gvi-v2 .reviews .section-head .eyebrow{justify-content:center}
+        .gvi-v2 .faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:65px}
+        .gvi-v2 .faq-title h2{font:500 clamp(32px,4vw,46px)/1.12 Georgia,serif;letter-spacing:-.03em;margin:15px 0}
+        .gvi-v2 .faq-title p{font-size:14px;line-height:1.8;color:var(--muted)}
+        .gvi-v2 .faq-item{border-bottom:1px solid var(--line)}
+        .gvi-v2 .faq-question{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;background:none;border:0;padding:20px 0;color:var(--ink);font:500 18px Georgia,serif;cursor:pointer}
+        .gvi-v2 .faq-question span:last-child{color:var(--orange);font:400 24px Arial}
+        .gvi-v2 .faq-answer{color:var(--muted);font-size:13px;line-height:1.8;padding:0 25px 20px 0}
+        .gvi-v2 .contact-band{background:var(--green);color:#fff;padding:45px 0}
+        .gvi-v2 .contact-row{display:flex;justify-content:space-between;align-items:center;gap:30px}
+        .gvi-v2 .contact-row h2{font:500 clamp(27px,3vw,38px) Georgia,serif;color:#fff;margin:0 0 8px}
+        .gvi-v2 .contact-row p{color:#d9e8df;font-size:13px;margin:0;line-height:1.6}
+        .gvi-v2 .contact-row .btn{background:#fff;color:var(--green)!important;white-space:nowrap}
+        @media(max-width:900px){.gvi-v2 .hero-grid{grid-template-columns:1fr;gap:35px}.gvi-v2 .hero-right{display:grid;grid-template-columns:.8fr 1fr;gap:18px;align-items:center}.gvi-v2 .hero-photo{height:350px}.gvi-v2 .float-note{left:10px;bottom:15px}.gvi-v2 .proof-grid{grid-template-columns:repeat(2,1fr)}.gvi-v2 .about-grid{gap:35px}.gvi-v2 .faq-grid{gap:35px}}
+        @media(max-width:650px){.gvi-v2 .wrap{width:min(100% - 28px,1180px)}.gvi-v2 .hero{padding:42px 0}.gvi-v2 h1{font-size:43px}.gvi-v2 .hero-right{display:flex;flex-direction:column;align-items:stretch}.gvi-v2 .hero-photo{height:280px;border-radius:140px 140px 8px 8px}.gvi-v2 .float-note{left:12px;bottom:12px}.gvi-v2 .form-panel{position:static;top:auto;width:100%}.gvi-v2 .section{padding:58px 0}.gvi-v2 .proof-grid{gap:8px}.gvi-v2 .proof-item{align-items:flex-start;gap:8px}.gvi-v2 .proof-icon{width:34px;height:34px;font-size:15px}.gvi-v2 .service-grid{grid-template-columns:1fr}.gvi-v2 .service-card{min-height:0;padding:22px}.gvi-v2 .about-grid,.gvi-v2 .faq-grid{grid-template-columns:1fr}.gvi-v2 .about-art{min-height:270px}.gvi-v2 .steps-grid{grid-template-columns:1fr;gap:25px}.gvi-v2 .contact-row{align-items:flex-start;flex-direction:column}.gvi-v2 .contact-row .btn{white-space:normal}.gvi-v2 .trustline{gap:12px}.gvi-v2 .section-head h2,.gvi-v2 .about-copy h2,.gvi-v2 .faq-title h2{font-size:35px}}
       `}</style>
 
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 1  HERO — ink navy, form right, editorial headline left
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#0B1E33] overflow-hidden font-body" style={{ minHeight: '100vh' }}>
-
-        {/* Fine grid overlay */}
-        <div className="absolute inset-0 pointer-events-none"
-          style={{ backgroundImage: 'linear-gradient(rgba(3,131,201,0.055) 1px,transparent 1px),linear-gradient(90deg,rgba(3,131,201,0.055) 1px,transparent 1px)', backgroundSize: '64px 64px' }} />
-
-        {/* Glow blooms */}
-        <div className="absolute top-[-15%] right-[-8%] w-[640px] h-[640px] rounded-full pointer-events-none opacity-60"
-          style={{ background: 'radial-gradient(circle,rgba(3,131,201,0.14),transparent 65%)' }} />
-        <div className="absolute bottom-0 left-[-5%] w-[480px] h-[480px] rounded-full pointer-events-none"
-          style={{ background: 'radial-gradient(circle,rgba(26,150,18,0.07),transparent 65%)' }} />
-
-        {/* Vertical rule */}
-        <div className="absolute top-0 bottom-0 right-[33%] w-px pointer-events-none hidden lg:block"
-          style={{ background: 'linear-gradient(to bottom,transparent,rgba(3,131,201,0.18) 20%,rgba(3,131,201,0.18) 80%,transparent)' }} />
-
-        {/* Floating flags */}
-        {[['🇺🇸', 'gvi-float-a', 'top-[18%]', 'left-[5%]'], ['🇨🇦', 'gvi-float-b', 'top-[24%]', 'right-[5%]'], ['🇬🇧', 'gvi-float-c', 'top-[65%]', 'left-[4%]'], ['🇦🇺', 'gvi-float-d', 'top-[58%]', 'right-[4%]'], ['🇪🇺', 'gvi-float-e', 'top-[78%]', 'right-[15%]']].map(([flag, cls, top, side]) => (
-          <div key={flag} className={`absolute text-3xl pointer-events-none select-none ${cls} ${top} ${side}`}
-            style={{ filter: 'drop-shadow(0 4px 10px rgba(0,0,0,0.4))' }}>{flag}</div>
-        ))}
-
-        {/* Topbar */}
-        <div className="relative z-10 flex items-center justify-between px-6 lg:px-16 pt-5 pb-4 border-b border-white/6">
-          <img src="https://www.globalvisainternationals.com/Global-Visa-Internationals-Logo.svg"
-            alt="Global Visa Internationals" className="h-9 brightness-200" />
-          <div className="hidden md:flex items-center gap-2 bg-[#1A9612]/15 border border-[#1A9612]/25 rounded-full px-3 py-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1A9612] animate-pulse" />
-            <span className="text-[#4ADE80] text-[10px] font-bold tracking-widest uppercase">Consultations Open</span>
-          </div>
-          <a href="tel:+917022213466"
-            className="flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">
-            <FaPhone className="text-[10px]" /> Call Now
-          </a>
-        </div>
-
-        {/* Hero grid */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-14 lg:py-20 grid lg:grid-cols-[1fr_420px] gap-12 xl:gap-20 items-start">
-
-          {/* Left */}
-          <div>
-            <div className="inline-flex items-center gap-2 border border-[#0383C9]/35 bg-[#0383C9]/10 rounded-full px-4 py-1.5 mb-7">
-              <FaStar className="text-amber-400 text-[10px]" />
-              <span className="text-[#3AABDF] text-[10px] font-bold tracking-widest uppercase">Trusted Visa Experts Since 2016 · Bangalore</span>
+      <section className="hero">
+        <div className="wrap hero-grid">
+          <div className="hero-copy">
+            <span className="eyebrow">Your journey, thoughtfully guided</span>
+            <h1>Big plans.<br />New places.<br /><em>Clearer next steps.</em></h1>
+            <p>Planning to study, travel, work or build a future abroad? Get practical visa application guidance shaped around your destination and goals.</p>
+            <div className="actions">
+              <a className="btn btn-primary" href="#visa-enquiry">Start your enquiry <FaArrowRight /></a>
+              <a className="btn btn-secondary" href="https://wa.me/917022213466" target="_blank" rel="noreferrer"><FaWhatsapp /> Chat on WhatsApp</a>
             </div>
-
-            <h1 className="font-display text-white leading-[1.1] mb-5">
-              <span className="block text-4xl md:text-5xl xl:text-[3.4rem] font-semibold">Your Global Journey</span>
-              <span className="block text-4xl md:text-5xl xl:text-[3.4rem] font-semibold italic"
-                style={{ WebkitTextStroke: '1.5px rgba(3,131,201,0.75)', color: 'transparent' }}>
-                Starts Here.
-              </span>
-            </h1>
-
-            <h2 className="text-white/60 text-base md:text-lg font-light leading-relaxed max-w-lg mb-3 font-body">
-              Premier visa consultancy in Bangalore for{' '}
-              {['USA', 'UK', 'Canada', 'Schengen', 'Australia', 'New Zealand', 'Japan'].map((c, i, a) => (
-                <span key={c}><span className="text-white font-semibold">{c}</span>{i < a.length - 1 ? (i === a.length - 2 ? ' & ' : ', ') : ''}</span>
-              ))} visas.
-            </h2>
-            <p className="text-white/50 text-sm font-light leading-relaxed max-w-md mb-9 font-body">
-              11+ years of expertise. 75,000+ clients successfully guided through complex immigration processes by MARA & ICCRC certified consultants.
-            </p>
-
-            {/* Stats strip */}
-            <div className="flex gap-px bg-white/6 border border-white/8 rounded-2xl overflow-hidden w-fit mb-9">
-              {[['11+', 'Years'], ['75K+', 'Visas'], ['98%', 'Success'], ['45+', 'Countries']].map(([val, lbl], i) => (
-                <div key={lbl} className={`px-6 py-4 text-center ${i > 0 ? 'border-l border-white/8' : ''}`}>
-                  <div className="font-display text-white text-2xl font-semibold leading-none">{val}</div>
-                  <div className="text-white/40 text-[10px] mt-1 tracking-wide font-body uppercase">{lbl}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              <a href="#consultation"
-                className="inline-flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white font-semibold text-sm px-7 py-3.5 rounded-xl transition-all shadow-xl shadow-[#0383C9]/30 hover:-translate-y-px font-body">
-                Free Consultation <FaArrowRight className="text-xs" />
-              </a>
-              <a href="#testimonials"
-                className="inline-flex items-center gap-2.5 bg-white/8 border border-white/18 hover:bg-white/14 text-white font-medium text-sm px-7 py-3.5 rounded-xl transition-colors font-body">
-                <div className="w-6 h-6 bg-white/15 rounded-full flex items-center justify-center">
-                  <FaPlayCircle className="text-[10px]" />
-                </div>
-                Success Stories
-              </a>
-            </div>
-
-            {/* Trust chips */}
-            <div className="flex flex-wrap gap-4 text-xs text-white/45 font-body">
-              {['MARA & ICCRC Licensed', 'Transparent Pricing', 'Personalised Case Handling', 'Interview Coaching', '24/7 Support'].map(t => (
-                <span key={t} className="flex items-center gap-1.5">
-                  <FaCheckCircle className="text-[#1A9612] text-[10px]" /> {t}
-                </span>
-              ))}
+            <div className="trustline">
+              <span><FaCheckCircle /> Personalised guidance</span>
+              <span><FaCheckCircle /> Clear document checklists</span>
+              <span><FaCheckCircle /> Step-by-step support</span>
             </div>
           </div>
-
-          {/* Right — form */}
-          <div className="w-full lg:sticky lg:top-6">
-            <div className="bg-white rounded-2xl shadow-2xl shadow-black/35 overflow-hidden">
-              <div className="bg-gradient-to-br from-[#0B1E33] via-[#0D2E52] to-[#0383C9] px-7 py-6 relative">
-                <div className="absolute inset-0 opacity-10"
-                  style={{ backgroundImage: 'radial-gradient(circle at 80% 40%,white,transparent 60%)' }} />
-                <img src="https://www.globalvisainternationals.com/Global-Visa-Internationals-Logo.svg"
-                  alt="GVI" className="h-8 mb-4 brightness-200 relative" />
-                {/* <h2 className="font-display text-white text-xl font-semibold mb-1 relative">Free Visa Assessment</h2> */}
-                <p className="text-white/65 text-xs font-body relative">Personalised consultation within 24 hours</p>
-                <div className="inline-flex items-center gap-1.5 mt-3 bg-amber-400/15 border border-amber-400/25 rounded-full px-3 py-1 relative">
-                  <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse" />
-                  <span className="text-amber-300 text-[9px] font-bold tracking-wide uppercase font-body">Limited slots available</span>
-                </div>
-              </div>
-              <div className="px-7 py-6">
-                <VisaForm />
-              </div>
+          <div className="hero-right">
+            <div className="hero-photo">
+              <img src="/GVI_Banner.webp" alt="Travel and visa guidance for international destinations" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+              <div className="photo-fallback"><FaGlobeAsia /><strong>Your next chapter<br />starts somewhere.</strong><span>Let’s make the process clearer.</span></div>
             </div>
-
-            {/* WhatsApp */}
-            <a href="https://wa.me/917022213466?text=Hi%20GVI%2C%20I%20need%20visa%20assistance"
-              target="_blank" rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 mt-3 w-full py-3 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold text-sm rounded-xl transition-colors shadow-lg shadow-[#25D366]/20 font-body">
-              <FaWhatsapp className="text-base" /> WhatsApp Us Instantly
-            </a>
+            <div className="float-note"><b>One step at a time</b><span>Understand your options, prepare your documents and move forward with confidence.</span></div>
+          </div>
+          <div className="form-panel" id="visa-enquiry">
+            <h2>Let’s talk about your plans</h2>
+            <p>Share a few details and our team can guide you on the next step.</p>
+            <VisaForm />
           </div>
         </div>
+      </section>
 
-        {/* Ticker */}
-        <div className="relative z-10 bg-[#061424] border-t border-white/8 py-3 overflow-hidden">
-          <div className="gvi-ticker flex gap-10 whitespace-nowrap">
-            {[...ticker, ...ticker].map((c, i) => (
-              <span key={i} className="inline-flex items-center gap-2.5 text-white/45 text-xs font-semibold font-body">
-                <span className="w-1 h-1 bg-[#0383C9] rounded-full" />{c}
-              </span>
+      <section className="proof">
+        <div className="wrap proof-grid">
+          <div className="proof-item"><div className="proof-icon"><FaPassport /></div><div><b>Visa guidance</b><span>Support for different visa goals</span></div></div>
+          <div className="proof-item"><div className="proof-icon"><FaMapMarkerAlt /></div><div><b>Bengaluru based</b><span>Local team, global destinations</span></div></div>
+          <div className="proof-item"><div className="proof-icon"><FaRegClock /></div><div><b>Clear next steps</b><span>Know what to prepare next</span></div></div>
+          <div className="proof-item"><div className="proof-icon"><FaCheckCircle /></div><div><b>Document focused</b><span>Organised application preparation</span></div></div>
+        </div>
+      </section>
+
+      <section className="section services">
+        <div className="wrap">
+          <div className="section-head">
+            <span className="eyebrow">How we can help</span>
+            <h2>Find the guidance that fits your journey.</h2>
+            <p>Every destination and visa category has its own requirements. Start with the service that best matches your plans.</p>
+          </div>
+          <div className="service-grid">
+            {services.map(({title, desc, icon: Icon, href}) => (
+              <Link className="service-card" href={href} key={title}>
+                <div className="service-icon"><Icon /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                <span className="text-link">Explore service <FaArrowRight /></span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 2  TRUST BAR
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#F4F7FB] border-b border-slate-200 font-body">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-          {[
-            [FaShieldAlt, 'MARA & ICCRC Certified'],
-            [FaAward, '98% Visa Approval Rate'],
-            [FaClock, 'Fast-Track Processing'],
-            [FaHandshake, 'Zero Hidden Fees'],
-            [FaGlobe, '45+ Countries Covered'],
-            [FaPassport, 'Refusal Recovery Experts'],
-          ].map(([Icon, text]) => (
-            <div key={text} className="flex items-center gap-2 text-[#0B1E33] text-[11px] font-semibold">
-              <Icon className="text-[#0383C9] text-sm" /> {text}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 3  ABOUT — editorial two-column with timeline signature
-      ════════════════════════════════════════════════════════════════════ */}
-      <section id="about" className="gvi-section-pad bg-white font-body">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-
-            {/* Left — image + floating cards */}
-            <Reveal>
-              <div className="relative">
-                <div className="rounded-2xl overflow-hidden aspect-[4/5] shadow-xl shadow-[#0B1E33]/10">
-                  <img src="https://www.globalvisainternationals.com/images/story.webp"
-                    alt="GVI team" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E33]/55 to-transparent" />
-                </div>
-
-                {/* Floating stat cards */}
-                <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl shadow-xl p-5 border border-slate-100">
-                  <div className="font-display text-[#0B1E33] text-2xl font-bold">75,000+</div>
-                  <div className="text-xs text-slate-500 mt-0.5 font-body">Visas Approved</div>
-                  <div className="flex mt-2 gap-0.5">
-                    {[...Array(5)].map((_, i) => <FaStar key={i} className="text-amber-400 text-[10px]" />)}
-                  </div>
-                </div>
-
-                <div className="absolute -top-4 -left-4 bg-[#0B1E33] rounded-xl shadow-lg px-4 py-3">
-                  <div className="font-display text-white text-xl font-bold">98%</div>
-                  <div className="text-[10px] text-white/60 font-body">Success Rate</div>
-                </div>
-              </div>
-            </Reveal>
-
-            {/* Right — copy + timeline */}
-            <Reveal delay={120}>
-              <div>
-                <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">
-                  About Us
-                </span>
-                <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold leading-tight mb-5">
-                  Bangalore's Trusted<br />Visa Consultancy<br />
-                  <em className="not-italic text-[#0383C9]">Since 2016</em>
-                </h2>
-                <div className="w-10 h-0.5 bg-[#0383C9] rounded mb-6" />
-                <p className="text-slate-600 text-base leading-relaxed mb-4 font-body">
-                  Global Visa Internationals was founded on Brigade Road, Bangalore, with a single purpose: making international visa applications straightforward, transparent, and successful for every client.
-                </p>
-                <p className="text-slate-600 text-sm leading-relaxed mb-8 font-body">
-                  From first-time travellers to international students and senior executives, our MARA & ICCRC certified consultants deliver end-to-end support — document review, embassy filing, interview coaching, and post-visa guidance — with complete pricing transparency.
-                </p>
-
-                {/* Archival timeline — signature element */}
-                <div className="relative pl-8 space-y-6 mb-8">
-                  {/* Continuous left border */}
-                  <div className="absolute left-[11px] top-2 bottom-2 w-px bg-gradient-to-b from-[#0383C9] via-[#0383C9]/50 to-transparent" />
-                  {[
-                    ['2016', 'Founded on Brigade Road, Bangalore'],
-                    ['2018', 'Reached 10,000 successful visa approvals'],
-                    ['2021', 'Expanded to 20+ specialist visa categories'],
-                    ['2024', '75,000+ visa success stories and counting'],
-                  ].map(([yr, txt]) => (
-                    <div key={yr} className="flex items-start gap-4 relative">
-                      <div className="absolute -left-8 top-0.5 w-[22px] h-[22px] rounded-full border-2 border-[#0383C9] bg-white flex items-center justify-center">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#0383C9]" />
-                      </div>
-                      <div>
-                        <div className="text-[10px] font-black text-[#0383C9] uppercase tracking-widest font-body mb-0.5">{yr}</div>
-                        <div className="text-sm text-slate-600 font-body">{txt}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  <a href="#consultation"
-                    className="inline-flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all shadow-lg shadow-[#0383C9]/25 hover:-translate-y-px font-body">
-                    Book Free Consultation <FaArrowRight className="text-xs" />
-                  </a>
-                  <a href="#testimonials"
-                    className="inline-flex items-center gap-2 border border-[#0383C9]/30 text-[#0383C9] hover:bg-[#0383C9]/5 font-semibold text-sm px-6 py-3 rounded-xl transition-colors font-body">
-                    View Success Stories
-                  </a>
-                </div>
-              </div>
-            </Reveal>
+      <section className="section about">
+        <div className="wrap about-grid">
+          <div className="about-art"><div className="about-art-inner"><FaGlobeAsia /><strong>A world of possibilities.</strong><span>Start with the right information.</span></div></div>
+          <div className="about-copy">
+            <span className="eyebrow">About Global Visa Internationals</span>
+            <h2>Good decisions begin with clear information.</h2>
+            <p>Visa applications can feel complicated when requirements, documents and timelines vary by country. We help you understand the process and prepare with a clearer plan.</p>
+            <ul className="check-list">
+              <li><FaCheckCircle /> Guidance based on your destination and purpose</li>
+              <li><FaCheckCircle /> Help understanding document requirements</li>
+              <li><FaCheckCircle /> Practical support through application preparation</li>
+            </ul>
+            <Link className="btn btn-primary" href="/about-us">Get to know us <FaArrowRight /></Link>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 4  STATS DARK BAND
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0B1E33] py-16 overflow-hidden relative font-body">
-        <div className="absolute inset-0 pointer-events-none"
-          style={{ backgroundImage: 'linear-gradient(rgba(3,131,201,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(3,131,201,0.05) 1px,transparent 1px)', backgroundSize: '48px 48px' }} />
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-4">
-          {[
-            ['👥', '12+ Yrs', 'Combined professional expertise'],
-            ['🌎', '45+', 'Countries served'],
-            ['📋', '20+', 'Visa categories covered'],
-            ['✈️', '75,000+', 'Successful approvals'],
-            ['📅', 'Since 2015', 'Trusted across India'],
-          ].map(([icon, val, desc]) => (
-            <div key={val} className="text-center bg-white/5 border border-white/8 rounded-2xl py-6 px-4 hover:bg-white/8 transition-colors">
-              <div className="text-3xl mb-3">{icon}</div>
-              <div className="font-display text-white text-xl font-bold mb-1">{val}</div>
-              <div className="text-white/45 text-[10px] leading-snug font-body">{desc}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 5  WHY GVI
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="gvi-section-pad bg-[#F4F7FB] font-body">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-14">
-            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">
-              Why Choose Us
-            </span>
-            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold mb-3">
-              Why 75,000+ Indians Choose GVI
-            </h2>
-            <div className="w-10 h-0.5 bg-[#0383C9] mx-auto rounded mb-5" />
-            <p className="text-slate-500 text-base max-w-xl mx-auto font-body">
-              Local Bangalore expertise combined with global immigration intelligence — for students, professionals and families.
-            </p>
+      <section className="section process">
+        <div className="wrap">
+          <div className="section-head">
+            <span className="eyebrow">A simple process</span>
+            <h2>From first question to prepared application.</h2>
+            <p>Know what happens next with a practical, easy-to-follow approach.</p>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Complete services card */}
-            <Reveal>
-              <div className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-lg hover:shadow-[#0383C9]/6 transition-all h-full">
-                <div className="flex items-center gap-3 mb-6 pb-5 border-b border-slate-100">
-                  <div className="w-11 h-11 rounded-xl bg-[#0383C9] flex items-center justify-center flex-shrink-0">
-                    <FaPassport className="text-white text-base" />
-                  </div>
-                  <h3 className="font-display text-[#0B1E33] text-xl font-semibold">Complete Visa Services Under One Roof</h3>
-                </div>
-                <ul className="space-y-3">
-                  {['Student Visa Documentation & University Application Support', 'Tourist & Visitor Visa Processing for Indians', 'Business Visa Assistance for International Travel', 'Permanent Residency Guidance — Canada, Australia, UK', 'Family & Dependent Visa Applications', 'Visa Refusal Review & Reapplication Strategy', 'Profile Evaluation & Country Eligibility Check'].map((txt) => (
-                    <li key={txt} className="flex items-start gap-3">
-                      <div className="w-4 h-4 rounded-full bg-[#1A9612]/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <FaCheckCircle className="text-[#1A9612] text-[9px]" />
-                      </div>
-                      <span className="text-slate-600 text-sm font-body">{txt}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-
-            {/* Destinations card */}
-            <Reveal delay={100}>
-              <div className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm hover:shadow-lg hover:shadow-[#0383C9]/6 transition-all h-full">
-                <div className="flex items-center gap-3 mb-6 pb-5 border-b border-slate-100">
-                  <div className="w-11 h-11 rounded-xl bg-amber-500 flex items-center justify-center flex-shrink-0">
-                    <FaGlobe className="text-white text-base" />
-                  </div>
-                  <h3 className="font-display text-[#0B1E33] text-xl font-semibold">Top Visa Destinations We Specialise In</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-2.5">
-                  {[['🇨🇦', 'Canada', 'Tourist, Student, PR'], ['🇦🇺', 'Australia', 'Visitor, PR, Work'], ['🇬🇧', 'United Kingdom', 'Student, Tourist'], ['🇺🇸', 'USA', 'B1/B2 Visitor'], ['🇪🇺', 'Europe', 'Schengen Visa'], ['🇯🇵', 'Japan', 'Tourist, Short-Term'], ['🇨🇳', 'China', 'Business, Visitor'], ['🇸🇬', 'Singapore', 'Short-Term Pass']].map(([flag, name, svc]) => (
-                    <div key={name} className="flex items-center gap-2.5 p-2.5 bg-[#F4F7FB] rounded-xl border border-slate-100">
-                      <span className="text-xl">{flag}</span>
-                      <div>
-                        <div className="text-[#0B1E33] font-bold text-xs font-body">{name}</div>
-                        <div className="text-slate-400 text-[10px] font-body">{svc}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4 text-xs text-slate-500 font-body flex items-center gap-2">
-                  <FaGlobe className="text-[#0383C9] text-xs" />
-                  Global visa assistance for 45+ countries worldwide
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Certification badge */}
-          <div className="mt-8 flex items-center justify-center gap-4 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-[#0383C9] flex items-center justify-center flex-shrink-0">
-              <span className="text-white text-xl">🏆</span>
-            </div>
-            <p className="text-slate-700 text-sm font-body">
-              <strong className="font-semibold text-[#0B1E33]">Certified Immigration Consultancy</strong> — Awarded for Excellence in Visa Processing
-            </p>
+          <div className="steps-grid">
+            {steps.map(([no,title,desc]) => <div className="step" key={no}><span className="step-no">{no}</span><h3>{title}</h3><p>{desc}</p></div>)}
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 6  SERVICES — horizontal scroll cards
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="gvi-section-pad bg-white font-body">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-12">
-            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">Our Services</span>
-            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold mb-3">
-              Visa Solutions for Every Journey
-            </h2>
-            <div className="w-10 h-0.5 bg-[#0383C9] mx-auto rounded mb-5" />
-            <p className="text-slate-500 text-base max-w-xl mx-auto font-body">
-              Hover any card to explore destination options. Certified support for every visa category.
-            </p>
-          </div>
-
-          {/* Grid: 1 column on mobile → 2 columns on small tablets → 3 columns on desktop (2 rows for 6 cards) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
-            {VISA_SERVICES.map(s => <ServiceCard key={s.name} s={s} />)}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 7  GALLERY
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="gvi-section-pad bg-[#F4F7FB] font-body">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-12">
-            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">Gallery</span>
-            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold">
-              Our Success Gallery
-            </h2>
-          </div>
-          <GalleryCarousel slides={GALLERY_SLIDES} autoSlide={true} interval={4000} />
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 8  MISSION / VISION / VALUES
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="gvi-section-pad bg-white font-body">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-14">
-            <span className="inline-block text-[#0B1E33]/60 text-[10px] font-black uppercase tracking-[.18em] bg-[#0B1E33]/6 px-4 py-1.5 rounded-full mb-5 font-body">Our Foundation</span>
-            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold">
-              Mission, Vision & Values
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-7">
-            {MVV_CARDS.map(({ title, img, accent, text }, i) => (
-              <Reveal key={title} delay={i * 80}>
-                <div className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-[#0B1E33]/6 transition-all duration-300 text-center group h-full"
-                  style={{ borderTop: `3px solid ${accent}` }}>
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5"
-                    style={{ background: `${accent}12` }}>
-                    <img src={img} alt={title} className="w-9 h-9 object-contain" />
-                  </div>
-                  <h3 className="font-display text-base font-semibold mb-3" style={{ color: accent }}>{title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed font-body">{text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 9  TESTIMONIALS
-      ════════════════════════════════════════════════════════════════════ */}
-      <section id="testimonials" className="gvi-section-pad bg-[#F4F7FB] font-body">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-12">
-            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">Testimonials</span>
-            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold mb-3">
-              What Our Clients Say
-            </h2>
-            <div className="w-10 h-0.5 bg-[#0383C9] mx-auto rounded" />
-          </div>
+      <section className="section reviews">
+        <div className="wrap">
+          <div className="section-head"><span className="eyebrow">Experiences shared</span><h2>Hear from people who worked with us.</h2><p>Read customer feedback to learn about their experience with our guidance and service.</p></div>
           <ReviewCarousel />
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 10  FAQ + MAP
-      ════════════════════════════════════════════════════════════════════ */}
-      <section id="consultation" className="gvi-section-pad bg-white font-body">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-14">
-            <span className="inline-block text-[#0383C9] text-[10px] font-black uppercase tracking-[.18em] bg-[#0383C9]/8 px-4 py-1.5 rounded-full mb-5 font-body">Find Us</span>
-            <h2 className="font-display text-[#0B1E33] text-3xl md:text-4xl font-semibold mb-3">
-              Frequently Asked Questions
-            </h2>
-            <div className="w-10 h-0.5 bg-[#0383C9] mx-auto rounded" />
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
-            {/* FAQ */}
-            <Reveal>
-              <InlineFAQ faqs={FAQS} />
-
-              {/* Contact chips */}
-              {[
-                [FaPhone, 'Call', '+91 7022213466', 'tel:+917022213466', '#1A9612'],
-                [FaWhatsapp, 'WhatsApp', 'Chat Now', 'https://wa.me/9197022213466', '#25D366'],
-                [FaEnvelope, 'Email', 'operations@globalvisainternationals.com', 'mailto:operations@globalvisainternationals.com', '#0383C9'],
-                [FaMapMarkerAlt, 'Office', 'Brigade Road, BLR', 'https://maps.google.com/?q=Global+Visa+Internationals', '#DC2626'],
-              ].map(([Icon, label, value, href, color]) => (
-                <a key={label} href={href}
-                  target={href.startsWith('http') ? '_blank' : undefined}
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 bg-[#F4F7FB] hover:bg-white border border-slate-100 hover:border-[#0383C9]/25 hover:shadow-sm rounded-xl p-3 transition-all group">
-                  <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: `${color}15` }}>
-                    <Icon style={{ color: color, fontSize: 13 }} />
-                  </div>
-                  <div>
-                    <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400 font-body">{label}</div>
-                    <div className="text-xs font-semibold text-[#0B1E33] font-body">{value}</div>
-                  </div>
-                </a>
-              ))}
-            </Reveal>
-
-            {/* Map */}
-            <Reveal delay={100}>
-              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-lg shadow-[#0B1E33]/6 h-[520px]">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248836.22452855774!2d77.32600623281249!3d12.967628000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d5613d9a4b%3A0xea0b2fbdf4f08876!2sGlobal%20Visa%20Internationals!5e0!3m2!1sen!2sin!4v1781089488359!5m2!1sen!2sin"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Global Visa Internationals Office — Brigade Road, Bangalore"
-                />
-
-              </div>
-            </Reveal>
+      <section className="section">
+        <div className="wrap faq-grid">
+          <div className="faq-title"><span className="eyebrow">Helpful answers</span><h2>Questions before you begin?</h2><p>Here are a few common questions. Your exact requirements depend on the country and visa category.</p></div>
+          <div>
+            {faqs.map(([q,a],i) => <div className="faq-item" key={q}><button className="faq-question" onClick={() => setOpenFaq(openFaq === i ? -1 : i)} aria-expanded={openFaq === i}><span>{q}</span><span>{openFaq === i ? "−" : "+"}</span></button>{openFaq === i && <div className="faq-answer">{a}</div>}</div>)}
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════
-          § 11  FINAL CTA BAND
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#0B1E33] py-20 overflow-hidden font-body">
-        <div className="absolute inset-0 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse at 50% 100%,rgba(245,166,35,0.06),transparent 65%)' }} />
-        <div className="relative max-w-2xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 rounded-full px-4 py-1.5 mb-6">
-            <span className="w-1.5 h-1.5 bg-[#1A9612] rounded-full animate-pulse" />
-            <span className="text-white/55 text-[10px] font-bold tracking-widest uppercase">Join 75,000+ successful applicants</span>
-          </div>
-          <h2 className="font-display text-white text-3xl md:text-4xl font-semibold leading-tight mb-4">
-            Ready to Open Doors<br />
-            <em className="not-italic text-[#3AABDF]">Across the World?</em>
-          </h2>
-          <p className="text-white/50 text-sm mb-9 leading-relaxed font-body max-w-md mx-auto">
-            Book your free consultation today and let Global Visa Internationals handle the complexity — you focus on the journey ahead.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="#consultation"
-              className="inline-flex items-center gap-2 bg-[#0383C9] hover:bg-[#0261A1] text-white font-semibold text-sm px-8 py-3.5 rounded-xl transition-all shadow-xl shadow-[#0383C9]/30 hover:-translate-y-px font-body">
-              Book Free Consultation <FaArrowRight className="text-xs" />
-            </a>
-            <a href="tel:+917022213466"
-              className="inline-flex items-center gap-2 bg-white/8 border border-white/18 hover:bg-white/14 text-white font-medium text-sm px-8 py-3.5 rounded-xl transition-colors font-body">
-              <FaPhone className="text-xs" /> Call Now
-            </a>
-          </div>
+      <section className="contact-band">
+        <div className="wrap contact-row">
+          <div><h2>Have a destination in mind?</h2><p>Tell us where you want to go and what you want to achieve. We’ll help you understand a sensible next step.</p></div>
+          <a className="btn" href="https://wa.me/917022213466" target="_blank" rel="noreferrer"><FaWhatsapp /> Talk to our team <FaArrowRight /></a>
         </div>
       </section>
-
-      <style jsx global>{`
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-      `}</style>
-    </>
+    </div>
   );
 }
