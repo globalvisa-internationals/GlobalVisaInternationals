@@ -11,7 +11,7 @@ export const metadata = {
 
   // OPTIMIZED: Added "(2026)" to signal up-to-date visa rules. 
   // Kept "Bangalore" for local SEO.
-  title: "Schengen Visa Agents Bangalore (2026 Rules) | GVI",
+  title: "Schengen Visa Consultants in Bangalore (2026 Rules) | GVI", 
 
   description:
     "Schengen tourist & business visa help in Bangalore: 2026 requirements, documents, €90 visa fee and VFS appointment support. Free eligibility check on WhatsApp.",
